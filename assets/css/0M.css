@@ -1,0 +1,448 @@
+/*
+ * Magen VIP - Personal Cyber Shield CSS
+ * Inspired by osmo.supply
+ * Font: Heebo
+ * Features: Animated gradient background, responsive design, and RTL support.
+ */
+
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+  --color-background-dark: #121212;
+  --color-background-medium: #1a1a1a;
+  --color-background-light: #282828;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+  --color-accent: #d97706; /* Burnt Orange/Rust */
+  --color-accent-hover: #f97316;
+  --font-family-base: 'Heebo', sans-serif;
+  --max-width: 960px;
+  --border-radius: 8px;
+  --transition-speed: 0.3s ease;
+}
+
+/* ------------------- */
+/* Reset & Base Styles */
+/* ------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-dark);
+  line-height: 1.7;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+
+  /* Animated Gradient Background */
+  background: linear-gradient(-45deg, #1a1a1a, #2c1a0e, #121212, #232323);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------------- */
+/* Typography          */
+/* ------------------- */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font size */
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: var(--color-accent);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 65ch; /* Improve readability */
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover, a:focus {
+  color: var(--color-accent-hover);
+}
+
+ul {
+  list-style-position: inside;
+  padding-inline-start: 1.5rem; /* Logical property for LTR/RTL */
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+strong {
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+
+/* ------------------- */
+/* Layout              */
+/* ------------------- */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+section {
+    text-align: center;
+}
+
+main > section:not(.hero) .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------- */
+/* Header & Footer     */
+/* ------------------- */
+.site-header, .site-footer {
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.site-header .container,
+.site-footer .container {
+    padding: 1rem 0;
+}
+
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+main {
+    padding-top: 60px; /* Offset for fixed header */
+}
+
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.language-switcher a {
+    color: var(--color-text-secondary);
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.language-switcher a.active {
+    color: var(--color-text-primary);
+    background-color: var(--color-background-light);
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+/* Hero Section */
+.hero .container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: 20ch;
+}
+
+.hero h2 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+  margin-top: 1rem;
+}
+
+/* Accordion (for Personas & FAQ) */
+.accordion {
+  width: 100%;
+  max-width: 720px;
+  text-align: start; /* Logical property for LTR/RTL */
+}
+
+.accordion details {
+  background: var(--color-background-medium);
+  border: 1px solid var(--color-background-light);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.accordion summary {
+  padding: 1.5rem;
+  cursor: pointer;
+  list-style: none; /* Hide default marker */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color var(--transition-speed);
+}
+
+.accordion summary:hover {
+    background-color: var(--color-background-light);
+}
+
+.accordion summary h3 {
+    margin-bottom: 0;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none; /* Hide default marker for Safari */
+}
+
+/* Custom Accordion Marker */
+.accordion summary::after {
+  content: '+';
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  transition: transform var(--transition-speed);
+}
+
+.accordion details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--color-background-light);
+}
+
+.accordion-content h4 {
+    color: var(--color-accent);
+    margin-top: 1rem;
+}
+
+
+/* How It Works Steps */
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.step {
+  padding: 2rem;
+  background-color: var(--color-background-medium);
+  border: 1px solid var(--color-background-light);
+  border-radius: var(--border-radius);
+}
+.step h3 {
+    color: var(--color-accent);
+}
+
+/* Why Us Section */
+.why-us ul {
+    text-align: start; /* Aligns list items left in LTR, right in RTL */
+    max-width: 60ch;
+    margin-top: 2rem;
+    list-style-type: '✓ '; /* Custom list bullet */
+    padding-inline-start: 2rem;
+}
+
+.why-us li {
+    padding-inline-start: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+
+/* CTA and Contact Buttons */
+.cta-button, .contact-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50px;
+  background-color: var(--color-accent);
+  color: var(--color-background-dark);
+  transition: all var(--transition-speed);
+  border: 2px solid transparent;
+}
+
+.cta-button:hover, .contact-btn:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50px;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  background-color: transparent;
+  transition: all var(--transition-speed);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-background-dark);
+}
+
+.btn .icon {
+  display: inline-flex;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.btn .label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-background-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta .container p {
+    margin-top: 1rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* ------------------- */
+/* Responsive Design   */
+/* ------------------- */
+@media (min-width: 768px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ------------------- */
+/* RTL Compatibility   */
+/* ------------------- */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] section,
+[dir="rtl"] .accordion {
+  text-align: right;
+}
+
+[dir="rtl"] ul {
+  padding-inline-start: 0;
+  padding-inline-end: 1.5rem;
+}
+
+[dir="rtl"] .language-switcher {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .why-us ul {
+    text-align: right;
+}
+
+[dir="rtl"] .why-us li {
+    padding-inline-start: 0;
+    padding-inline-end: 0.5rem;
+}
+
+/* === Animated burnt‑orange gradient background ========================= */
+:root{
+  --bg-orange-1:#3a1905;
+  --bg-orange-2:#c45a11;
+  --bg-orange-3:#9e3b00;
+  --bg-orange-4:#531f0a;
+}
+.animated-bg{
+  background: linear-gradient(120deg,var(--bg-orange-1),var(--bg-orange-2),var(--bg-orange-3),var(--bg-orange-4));
+  background-size:400% 400%;
+  animation: gradientShift 18s ease-in-out infinite;
+}
+@keyframes gradientShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@media (prefers-reduced-motion: reduce){
+  .animated-bg{animation:none}
+}
+
