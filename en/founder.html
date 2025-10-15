@@ -101,60 +101,63 @@
             border-top: 0;
         }
 
-        .logos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            align-items: center;
-            margin: 18px 0;
+        .media-grid {
+            display: grid;
+            gap: 20px;
+            margin: 24px 0 0;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            list-style: none;
+            padding: 0;
         }
 
-        .logos a {
+        .media-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--bg);
+            text-decoration: none;
+            color: var(--ink);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .media-card:focus-visible,
+        .media-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 32px rgba(11, 11, 12, 0.08);
+            border-color: rgba(11, 11, 12, 0.2);
+        }
+
+        .media-card img {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .media-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .media-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .media-card__cta {
+            margin-top: auto;
+            font-weight: 600;
+            color: var(--ink);
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 12px;
-            border: 1px solid var(--line);
-            border-radius: 10px;
-            text-decoration: none;
-            color: var(--muted);
-            font-weight: 600;
+            gap: 6px;
         }
 
-        .logos img,
-        .media-list img {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-            filter: grayscale(100%);
-        }
-
-        .media-list {
-            margin: 14px 0 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .media-list li {
-            padding: 10px 0;
-            border-top: 1px solid var(--line);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .media-list li:first-child {
-            border-top: 0;
-        }
-
-        .media-list strong {
-            color: var(--ink);
-        }
-
-        .media-list a {
-            color: var(--ink);
-            text-decoration: underline;
+        .media-card__cta::after {
+            content: '↗';
+            font-size: 0.9rem;
         }
 
         .cta {
@@ -208,7 +211,7 @@
                             <a href="/en/commercial-spying.html">Commercial Spying</a>
                         </div>
                     </details>
-                    <a href="/en/founder.html" aria-current="page" class="active">Company</a>
+                    <a href="/en/founder.html" aria-current="page" class="active">The Founder</a>
                 </nav>
                 <nav class="language-switcher" aria-label="Language selection">
                     <a href="/he/founder.html">🇮🇱 <span lang="he" dir="rtl">עברית</span></a>
@@ -250,69 +253,86 @@
                 <h2>Media &amp; Public Recognition</h2>
                 <p class="muted">Positioned as a go‑to analyst on spyware controversies, Israel–Iran cyber confrontation, and critical‑infrastructure risk.</p>
 
-                <div class="logos" aria-label="as-seen-in">
-                    <a href="https://www.washingtonpost.com/politics/2022/07/25/iran-israel-cyber-war/" target="_blank" rel="noopener" aria-label="The Washington Post">
-                        <img src="https://www.washingtonpost.com/wp-stat/assets/img/washingtonpost-black-400.png" alt="The Washington Post logo">
-                        The Washington Post
-                    </a>
-                    <a href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1" target="_blank" rel="noopener" aria-label="AP News">
-                        <img src="https://apnews.com/images/ap-default-logo-1200x1200.png" alt="AP News logo">
-                        AP News
-                    </a>
-                    <a href="https://www.lefigaro.fr/international/tensions-diplomatiques-autour-du-logiciel-espion-pegasus-20210719" target="_blank" rel="noopener" aria-label="Le Figaro">
-                        <img src="https://www.lefigaro.fr/assets/img/figaro-logo.svg" alt="Le Figaro logo">
-                        Le Figaro
-                    </a>
-                    <a href="https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/" target="_blank" rel="noopener" aria-label="la Repubblica">
-                        <img src="https://www.repubblica.it/static/images/repubblica/logo-repubblica.svg" alt="la Repubblica logo">
-                        la Repubblica
-                    </a>
-                    <a href="https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635" target="_blank" rel="noopener" aria-label="The Jerusalem Post">
-                        <img src="https://www.jpost.com/resizer/s0JzV7n1HULICwhuH6ynjgJv1n4=/arc-anglerfish-arc2-prod-jpost.s3.amazonaws.com/public/3ZRH2VNJOZAVIDHWQVFSXBE5BE.png" alt="The Jerusalem Post logo">
-                        The Jerusalem Post
-                    </a>
-                    <a href="https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html" target="_blank" rel="noopener" aria-label="RAI 1 - Codice">
-                        <img src="https://static2.rai.it/includes2013/img/rai_logo.png" alt="RAI 1 – Codice logo">
-                        RAI 1 – Codice
-                    </a>
-                </div>
-
-                <ul class="media-list" aria-label="selected-coverage">
+                <ul class="media-grid" aria-label="Selected coverage">
                     <li>
-                        <img src="https://www.washingtonpost.com/wp-stat/assets/img/washingtonpost-black-400.png" alt="The Washington Post logo">
-                        <strong>The Washington Post</strong> — analysis on the Iran–Israel cyber confrontation. <a href="https://www.washingtonpost.com/politics/2022/07/25/iran-israel-cyber-war/" target="_blank" rel="noopener">Link</a>
+                        <a class="media-card" href="https://www.washingtonpost.com/politics/2022/07/25/iran-israel-cyber-war/" target="_blank" rel="noopener" aria-label="Read The Washington Post coverage on the Iran–Israel cyber confrontation">
+                            <img src="../assets/img/logos/washington-post.svg" alt="The Washington Post logo">
+                            <h3>The Washington Post</h3>
+                            <p>Analysis on the Iran–Israel cyber confrontation.</p>
+                            <span class="media-card__cta">View coverage</span>
+                        </a>
                     </li>
                     <li>
-                        <img src="https://apnews.com/images/ap-default-logo-1200x1200.png" alt="AP News logo">
-                        <strong>AP News</strong> — quoted on the Iran steel‑sector cyberattack. <a href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1" target="_blank" rel="noopener">Link</a>
+                        <a class="media-card" href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1" target="_blank" rel="noopener" aria-label="Read the AP News piece quoting Dr. Tabansky on the Iran steel-sector cyberattack">
+                            <img src="../assets/img/logos/ap-news.svg" alt="AP News logo">
+                            <h3>AP News</h3>
+                            <p>Quoted on the Iran steel-sector cyberattack.</p>
+                            <span class="media-card__cta">View coverage</span>
+                        </a>
                     </li>
                     <li>
-                        <img src="https://www.lefigaro.fr/assets/img/figaro-logo.svg" alt="Le Figaro logo">
-                        <strong>Le Figaro</strong> — quoted during the Pegasus disclosures. <a href="https://www.lefigaro.fr/international/tensions-diplomatiques-autour-du-logiciel-espion-pegasus-20210719" target="_blank" rel="noopener">Link</a>
+                        <a class="media-card" href="https://www.lefigaro.fr/international/tensions-diplomatiques-autour-du-logiciel-espion-pegasus-20210719" target="_blank" rel="noopener" aria-label="Read the Le Figaro interview from the Pegasus disclosures">
+                            <img src="../assets/img/logos/le-figaro.svg" alt="Le Figaro logo">
+                            <h3>Le Figaro</h3>
+                            <p>Quoted during the Pegasus disclosures.</p>
+                            <span class="media-card__cta">View coverage</span>
+                        </a>
                     </li>
                     <li>
-                        <img src="https://www.jpost.com/resizer/s0JzV7n1HULICwhuH6ynjgJv1n4=/arc-anglerfish-arc2-prod-jpost.s3.amazonaws.com/public/3ZRH2VNJOZAVIDHWQVFSXBE5BE.png" alt="The Jerusalem Post logo">
-                        <strong>The Jerusalem Post</strong> — feature on Pegasus allegations. <a href="https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635" target="_blank" rel="noopener">Link</a>
+                        <a class="media-card" href="https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635" target="_blank" rel="noopener" aria-label="Read The Jerusalem Post feature on Pegasus allegations">
+                            <img src="../assets/img/logos/jerusalem-post.svg" alt="The Jerusalem Post logo">
+                            <h3>The Jerusalem Post</h3>
+                            <p>Feature on Pegasus allegations.</p>
+                            <span class="media-card__cta">View coverage</span>
+                        </a>
                     </li>
                     <li>
-                        <img src="https://www.repubblica.it/static/images/repubblica/logo-repubblica.svg" alt="la Repubblica logo">
-                        <strong>la Repubblica</strong> — assessment on the Israel–Iran cyber front. <a href="https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/" target="_blank" rel="noopener">Link</a>
+                        <a class="media-card" href="https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/" target="_blank" rel="noopener" aria-label="Read the la Repubblica analysis on the Israel–Iran cyber front">
+                            <img src="../assets/img/logos/la-repubblica.svg" alt="la Repubblica logo">
+                            <h3>la Repubblica</h3>
+                            <p>Assessment on the Israel–Iran cyber front.</p>
+                            <span class="media-card__cta">View coverage</span>
+                        </a>
                     </li>
                     <li>
-                        <img src="https://static2.rai.it/includes2013/img/rai_logo.png" alt="RAI 1 – Codice logo">
-                        <strong>RAI 1 – Codice</strong> — on‑air expert segment; episode page on RaiPlay. <a href="https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html" target="_blank" rel="noopener">Link</a>
+                        <a class="media-card" href="https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html" target="_blank" rel="noopener" aria-label="View the RAI 1 – Codice on-air expert segment">
+                            <img src="../assets/img/logos/rai-1-codice.svg" alt="RAI 1 – Codice logo">
+                            <h3>RAI 1 – Codice</h3>
+                            <p>On-air expert segment; episode page on RaiPlay.</p>
+                            <span class="media-card__cta">View coverage</span>
+                        </a>
                     </li>
                 </ul>
             </section>
 
             <section class="cta" aria-label="cta" id="contact">
                 <h3>Schedule a Consultation</h3>
-                <div class="btns">
-                    <a class="btn cta-whatsapp" href="https://wa.me/972533366276" target="_blank" rel="noopener">WhatsApp</a>
-                    <a class="btn cta-signal" href="https://signal.me/#p/972533366276" target="_blank" rel="noopener">Signal</a>
-                </div>
+                <p class="muted">Coordinate a confidential session directly with Dr. Tabansky. Use the secure messaging options in the footer or request an alternative channel.</p>
             </section>
         </div>
     </main>
+    <footer class="site-footer">
+        <div class="container">
+            <section class="cta" aria-label="Get in touch">
+                <h2>Ready for Elite Protection</h2>
+                <p class="cta-intro">Discuss your threat landscape, harden your devices, and regain control of your digital life.</p>
+            </section>
+            <nav class="footer-contact-links" aria-label="Direct messaging options">
+                <a href="https://wa.me/972533366276" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="Chat on WhatsApp" rel="noopener noreferrer">
+                    <span aria-hidden="true" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.4C339.4 51.5 283.7 25.1 223.9 25c-53.7-.1-105.7 15.6-150.9 44.4-44.5 28.5-79.6 67.8-100.2 113.8-21.7 48.5-27.1 101.4-16 153.2L0 448l96.7-31.3c23.6 13.5 49.3 22.3 77.1 26.2h0c60.3 7.8 122.1-12.7 166.5-54.6 44.5-41.9 66.8-98.1 63.6-154.2-.3-6.6-.1-13.2-0.4-19.8l-1-2.9 0.4-1.2h0C401.2 112.1 392.8 103.1 380.9 97.4zM223.9 434.3c-26.2 0-52.1-5.9-76.3-17.4l-5.6-3.3-56.818.4 18.8-55.4-3.6-5.9C85.3 331.4 75 291.2 75 249c0-84.3 68.5-152.8 152.8-152.8 41.1 0 79.7 16.1 108.1 44.4 28.4 28.4 44.4 67 44.4 108.1 0 84.3-68.5 152.8-152.8 152.8zM318.3 277.6c-2.4-1.2-14.4-7.1-16.6-7.9-2.2-.8-3.8-.8-5.4 1.2s-6.3 7.9-7.7 9.5c-1.4 1.6-2.8 1.8-5.2 0.6-2.4-1.2-10.3-3.8-19.6-12.1-7.2-6.5-12.1-14.5-13.5-16.9-1.4-2.4-.1-3.7 1.1-4.8 1-1.1 2.2-2.8 3.3-4.2 1.1-1.4 1.4-2.4.8-4.2-.7-1.8-5.4-13-7.4-17.8s-4.1-4-5.6-4.1c-1.4-.1-3 .1-4.6.1-1.6 0-4.2.6-6.3 3.1-2.2 2.5-8.4 8.2-8.4 20s8.6 23.2 9.8 24.8c1.2 1.6 17.1 26.2 41.4 36.5 5.8 2.5 10.3 4.1 13.8 5.2 6.1 2 11.6 1.7 16 1 4.8-0.9 14.4-5.9 16.4-11.6.4-1.1 1.4-2.1 2.1-3.1 2-2.42-4.5 1.4-5.7z"></path></svg>
+                    </span>
+                    <span class="label">WhatsApp +972533366276</span>
+                </a>
+                <a href="https://signal.me/#p/+972533366276" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="Chat on Signal" rel="noopener noreferrer">
+                    <span aria-hidden="true" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8Zm123.683,293.033a32.029,32.029,0,0,1-22.628,9.367,31.013,31.013,0,0,1-13.6-3.033l-15.333-7.667a15.98,15.98,0,0,0-15.033,1.433l-34.9,25.133a15.992,15.992,0,0,1-18.234,0l-57.866-41.333a15.992,15.992,0,0,0-18.234,0l-57.867,41.333a15.992,15.992,0,0,1-18.234,0l-34.9-25.133a15.98,15.98,0,0,0-15.033,1.433l-15.333,7.667a31.043,31.043,0,0,1-13.6,3.033,32.029,32.029,0,0,1-22.628-9.367,32.029,32.029,0,0,1-9.367-22.628V206.5a32.029,32.029,0,0,1,9.367-22.628,32.029,32.029,0,0,1,22.628-9.367h246.6a32.029,32.029,0,0,1,22.628,9.367,32.029,32.029,0,0,1,9.367,22.628Z"></path></svg>
+                    </span>
+                    <span class="label">Signal +972533366276</span>
+                </a>
+            </nav>
+            <p>&copy; 2024 Personal Cyber Shield. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
