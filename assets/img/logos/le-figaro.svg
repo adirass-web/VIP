@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" role="img" aria-labelledby="title">
+  <title id="title">Le Figaro logo</title>
+  <rect width="180" height="60" rx="8" fill="#0c2d83" />
+  <text x="50%" y="50%" fill="#fff" font-family="'Arial Black', Arial, sans-serif" font-size="26" text-anchor="middle" dominant-baseline="middle">
+    LE FIGARO
+  </text>
+</svg>
