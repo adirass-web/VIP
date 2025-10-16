@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title-signal">
+  <title id="title-signal">Signal</title>
+  <circle cx="256" cy="256" r="240" fill="#3a76f0"/>
+  <path d="M256 136c-66.274 0-120 45.344-120 101.248 0 31.84 17.9 60.416 46.848 79.84l-12.416 58.72 63.52-30.272c7.392 1.088 14.944 1.664 22.048 1.664 66.274 0 120-45.344 120-101.248S322.274 136 256 136z" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="208" fill="none" stroke="#ffffff" stroke-width="16" stroke-dasharray="26 26" stroke-linecap="round"/>
+</svg>
