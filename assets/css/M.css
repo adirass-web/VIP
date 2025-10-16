@@ -163,6 +163,14 @@ main > section:not(.hero) .container {
     padding: 1rem 0;
 }
 
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -461,6 +469,10 @@ main {
   margin: 0;
 }
 
+.site-footer .cta {
+  max-width: 60ch;
+}
+
 /* ------------------- */
 /* Components          */
 /* ------------------- */
@@ -663,43 +675,6 @@ main {
     margin-top: 2rem;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.proof-strip .container {
-  padding: 2rem 0;
-  gap: 1.5rem;
-}
-
-.proof-heading {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-}
-
-.proof-logos {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.75rem;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.proof-logos li {
-  list-style: none;
-}
-
-.logo-text {
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-primary);
-  opacity: 0.75;
-  font-size: 0.95rem;
-  white-space: nowrap;
 }
 
 .nav-subpage-links {
