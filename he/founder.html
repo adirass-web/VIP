@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>על המייסד — מגן VIP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/M.css">
+    <style>
+        .founder-wrapper {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        .founder-wrapper section {
+            text-align: right;
+        }
+
+        .founder-wrapper header {
+            margin-bottom: 24px;
+            text-align: right;
+        }
+
+        .founder-wrapper h1 {
+            font-size: 34px;
+            line-height: 1.2;
+            margin: 0 0 12px;
+        }
+
+        .founder-wrapper h2,
+        .founder-wrapper h3 {
+        }
+
+        .founder-wrapper h2 {
+            font-size: 22px;
+            margin: 0 0 12px;
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        @media (min-width: 860px) {
+            .founder-grid {
+                grid-template-columns: 1fr 1.1fr;
+            }
+        }
+
+        .founder-lede {
+            font-size: 18px;
+            margin: 0 0 14px;
+        }
+
+        .card {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 18px;
+            background: var(--color-background-medium);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .founder-photo-credit {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+            margin: 8px 0 0;
+        }
+
+        ul.clean {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px;
+        }
+
+        ul.clean li {
+            padding: 10px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        ul.clean li:first-child {
+            border-top: 0;
+        }
+
+        .media-grid {
+            display: grid;
+            gap: 20px;
+            margin: 24px 0 0;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            list-style: none;
+            padding: 0;
+        }
+
+        .media-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            background: var(--color-background-light);
+            text-decoration: none;
+            color: var(--color-text-primary);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            text-align: right;
+        }
+
+        .media-card:focus-visible,
+        .media-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .media-card img {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .media-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .media-card p {
+            margin: 0;
+            color: var(--color-text-secondary);
+        }
+
+        .media-card__cta {
+            margin-top: auto;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .media-card__cta::after {
+            content: '↗';
+            font-size: 0.9rem;
+        }
+
+        .cta {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 26px;
+            padding-top: 18px;
+            text-align: right;
+        }
+
+        .cta h3 {
+            margin-top: 0;
+        }
+
+        .muted {
+            color: var(--color-text-secondary);
+        }
+
+        .small {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="founder-page">
+    <a class="skip-link" href="#main-content">דלג לתוכן הראשי</a>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <nav class="main-nav" aria-label="תפריט ראשי">
+                    <a href="/he/">בית</a>
+                    <details class="nav-group">
+                        <summary>מצבי לחץ נפוצים</summary>
+                        <div class="nav-submenu">
+                            <a href="/he/separation-divorce.html">פרידה, גירושין, גט</a>
+                            <a href="/he/business-dispute.html">פירוק שותפות עסקית</a>
+                            <a href="/he/inheritance-clash.html">סכסוך ירושה</a>
+                            <a href="/he/commercial-spying.html">ריגול מסחרי</a>
+                        </div>
+                    </details>
+                    <a href="/he/founder.html" aria-current="page" class="active">המייסד</a>
+                </nav>
+                <nav class="language-switcher" aria-label="בחירת שפה">
+                    <a href="/en/founder.html">🇬🇧 <span lang="en" dir="ltr">English</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1" role="main">
+        <div class="founder-wrapper" id="about-founder">
+            <header>
+                <h1>על המייסד</h1>
+                <h2>הגנת סייבר פרטית לאנשים בסיכון גבוה — בהובלת ד"ר ליאור טבנסקי</h2>
+            </header>
+
+            <section class="founder-grid" aria-label="פתיח">
+                <div>
+                    <p class="founder-lede">ד"ר ליאור טבנסקי הוא סמכות בינלאומית לעמידות סייבר, שנבחר למשימות רגישות שבהן דיסקרטיות, מהירות ותוצאות חשובים יותר מסיסמאות. שני עשורים של עבודה מעשית בישראל, אסיה, אירופה ואפריקה מחברים את ההובלה האסטרטגית שלו לניסיון תפעולי מוכח.</p>
+                </div>
+                <aside class="card small muted" aria-label="עובדות">
+                    <a href="https://www.linkedin.com/in/ltaba" target="_blank" rel="noopener" aria-label="LinkedIn: Dr. Lior Tabansky">
+                        <img src="/assets/img/lior-tabansky-kfir-ziv-bw-sq-86.jpg" alt="ד"ר ליאור טבנסקי">
+                    </a>
+                    <p class="small muted founder-photo-credit">צילום: כפיר זיו</p>
+                </aside>
+            </section>
+
+            <section aria-label="תחומי מומחיות">
+                <h2>תחומי מומחיות מרכזיים</h2>
+                <ul class="clean">
+                    <li><strong>שיקול דעת אסטרטגי תחת לחץ.</strong> ניתוח מנקודת מבט היריב עם תמיכה בקבלת החלטות בדרג הנהלה.</li>
+                    <li><strong>מסגרות סייבר מוכחות.</strong> שימוש בשיטות ברמת מדינה שנבדקו על ידי סוכנויות ביטחון וחברות Fortune 500.</li>
+                    <li><strong>אומנות מקצועית מדויקת.</strong> התאמת פתרונות מיטביים מתוך היכרות עמוקה ורחבה עם החזית הטכנולוגית.</li>
+                    <li><strong>שיקול דעת של מצבי משבר.</strong> חשיבה של צוות אדום המשולבת בהבנה משפטית וברוגע ניהולי.</li>
+                </ul>
+            </section>
+
+            <section aria-label="תקשורת והכרה">
+                <h2>תקשורת והכרה ציבורית</h2>
+                <p class="muted">הכתובת המועדפת לניתוח מחלוקות ריגול-סייבר, העימות בין ישראל לאיראן וסיכוני תשתיות קריטיות.</p>
+
+                <ul class="media-grid" aria-label="סיקור נבחר">
+                    <li>
+                        <a class="media-card" href="https://www.washingtonpost.com/politics/2022/07/25/iran-israel-cyber-war/" target="_blank" rel="noopener" aria-label="קריאת הכתבה ב-The Washington Post על העימות הקיברנטי בין איראן לישראל">
+                            <img src="../assets/img/logos/washington-post.svg" alt="The Washington Post logo">
+                            <h3>The Washington Post</h3>
+                            <p>ניתוח על העימות הקיברנטי בין איראן לישראל.</p>
+                            <span class="media-card__cta">לצפייה בכתבה</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="media-card" href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1" target="_blank" rel="noopener" aria-label="קריאת הידיעה של AP News על מתקפת הסייבר בתעשיית הפלדה האיראנית">
+                            <img src="../assets/img/logos/ap-news.svg" alt="AP News logo">
+                            <h3>AP News</h3>
+                            <p>התייחסות למתקפת הסייבר על תעשיית הפלדה באיראן.</p>
+                            <span class="media-card__cta">לצפייה בכתבה</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="media-card" href="https://www.lefigaro.fr/international/tensions-diplomatiques-autour-du-logiciel-espion-pegasus-20210719" target="_blank" rel="noopener" aria-label="קריאת הראיון ב-Le Figaro על חשיפות פגסוס">
+                            <img src="../assets/img/logos/le-figaro.svg" alt="Le Figaro logo">
+                            <h3>Le Figaro</h3>
+                            <p>ציטוט בעקבות חשיפות פגסוס.</p>
+                            <span class="media-card__cta">לצפייה בכתבה</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="media-card" href="https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635" target="_blank" rel="noopener" aria-label="קריאת הפרופיל ב-The Jerusalem Post על פרשת פגסוס">
+                            <img src="../assets/img/logos/jerusalem-post.svg" alt="The Jerusalem Post logo">
+                            <h3>The Jerusalem Post</h3>
+                            <p>פרופיל על פרשת פגסוס.</p>
+                            <span class="media-card__cta">לצפייה בכתבה</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="media-card" href="https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/" target="_blank" rel="noopener" aria-label="קריאת הניתוח של la Repubblica על חזית הסייבר ישראל–איראן">
+                            <img src="../assets/img/logos/la-repubblica.svg" alt="la Repubblica logo">
+                            <h3>la Repubblica</h3>
+                            <p>הערכת מצב על חזית הסייבר ישראל–איראן.</p>
+                            <span class="media-card__cta">לצפייה בכתבה</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="media-card" href="https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html" target="_blank" rel="noopener" aria-label="צפייה במקטע המומחה בתוכנית Codice של RAI 1">
+                            <img src="../assets/img/logos/rai-1-codice.svg" alt="RAI 1 – Codice logo">
+                            <h3>RAI 1 – Codice</h3>
+                            <p>קטע מומחה בשידור; דף הפרק ב-RaiPlay.</p>
+                            <span class="media-card__cta">לצפייה בכתבה</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="cta" aria-label="תיאום ייעוץ" id="contact">
+                <h3>לתאם ייעוץ</h3>
+                <p class="muted">תאמו מפגש חסוי ישירות עם ד"ר טבנסקי. השתמשו בערוצי המסרים המאובטחים בתחתית העמוד או בקשו ערוץ חלופי.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <section class="cta" aria-label="יצירת קשר">
+                <h2>מוכנים להגנה עילית</h2>
+                <p class="cta-intro">שוחחו על נוף האיומים שלכם, הקשיחו מכשירים והחזירו שליטה בחיים הדיגיטליים.</p>
+            </section>
+            <nav class="footer-contact-links" aria-label="אפשרויות יצירת קשר ישיר">
+                <a href="https://wa.me/972533366276" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="צ׳אט ב-WhatsApp" rel="noopener noreferrer">
+                    <span aria-hidden="true" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.4C339.4 51.5 283.7 25.1 223.9 25c-53.7-.1-105.7 15.6-150.9 44.4-44.5 28.5-79.6 67.8-100.2 113.8-21.7 48.5-27.1 101.4-16 153.2L0 448l96.7-31.3c23.6 13.5 49.3 22.3 77.1 26.2h0c60.3 7.8 122.1-12.7 166.5-54.6 44.5-41.9 66.8-98.1 63.6-154.2-.3-6.6-.1-13.2-0.4-19.8l-1-2.9 0.4-1.2h0C401.2 112.1 392.8 103.1 380.9 97.4zM223.9 434.3c-26.2 0-52.1-5.9-76.3-17.4l-5.6-3.3-56.818.4 18.8-55.4-3.6-5.9C85.3 331.4 75 291.2 75 249c0-84.3 68.5-152.8 152.8-152.8 41.1 0 79.7 16.1 108.1 44.4 28.4 28.4 44.4 67 44.4 108.1 0 84.3-68.5 152.8-152.8 152.8zM318.3 277.6c-2.4-1.2-14.4-7.1-16.6-7.9-2.2-.8-3.8-.8-5.4 1.2s-6.3 7.9-7.7 9.5c-1.4 1.6-2.8 1.8-5.2 0.6-2.4-1.2-10.3-3.8-19.6-12.1-7.2-6.5-12.1-14.5-13.5-16.9-1.4-2.4-.1-3.7 1.1-4.8 1-1.1 2.2-2.8 3.3-4.2 1.1-1.4 1.4-2.4.8-4.2-.7-1.8-5.4-13-7.4-17.8s-4.1-4-5.6-4.1c-1.4-.1-3 .1-4.6.1-1.6 0-4.2.6-6.3 3.1-2.2 2.5-8.4 8.2-8.4 20s8.6 23.2 9.8 24.8c1.2 1.6 17.1 26.2 41.4 36.5 5.8 2.5 10.3 4.1 13.8 5.2 6.1 2 11.6 1.7 16 1 4.8-0.9 14.4-5.9 16.4-11.6.4-1.1 1.4-2.1 2.1-3.1 2-2.4 2-4.5 1.4-5.7z"></path></svg>
+                    </span>
+                    <span class="label">WhatsApp +972533366276</span>
+                </a>
+                <a href="https://signal.me/#p/+972533366276" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="צ׳אט ב-Signal" rel="noopener noreferrer">
+                    <span aria-hidden="true" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8Zm123.683,293.033a32.029,32.029,0,0,1-22.628,9.367,31.013,31.013,0,0,1-13.6-3.033l-15.333-7.667a15.98,15.98,0,0,0-15.033,1.433l-34.9,25.133a15.992,15.992,0,0,1-18.234,0l-57.866-41.333a15.992,15.992,0,0,0-18.234,0l-57.867,41.333a15.992,15.992,0,0,1-18.234,0l-34.9-25.133a15.98,15.98,0,0,0-15.033,1.433l-15.333,7.667a31.043,31.043,0,0,1-13.6,3.033,32.029,32.029,0,0,1-22.628-9.367,32.029,32.029,0,0,1-9.367-22.628V206.5a32.029,32.029,0,0,1,9.367-22.628,32.029,32.029,0,0,1,22.628-9.367h246.6a32.029,32.029,0,0,1,22.628,9.367,32.029,32.029,0,0,1,9.367,22.628Z"></path></svg>
+                    </span>
+                    <span class="label">Signal +972533366276</span>
+                </a>
+            </nav>
+            <p>&copy; 2024 מגן סייבר אישי | Personal Cyber Shield. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+</body>
+</html>
