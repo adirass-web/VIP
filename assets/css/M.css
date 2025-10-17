@@ -723,6 +723,22 @@ main {
   margin-bottom: 2rem;
 }
 
+.personas-intro {
+  max-width: 56ch;
+  margin-bottom: 2rem;
+  color: var(--color-text-secondary);
+}
+
+.scenario-details .container {
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.5rem;
+}
+
+.scenario-details .nav-subpage-links {
+  justify-content: flex-start;
+}
+
 .nav-subpage-link {
   padding: 0.5rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -737,6 +753,33 @@ main {
   color: var(--color-text-primary);
   border-color: var(--color-accent);
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-toggle {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.faq-toggle::after {
+  content: '+';
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.faq-toggle[aria-expanded="true"]::after {
+  content: '–';
+}
+
+.faq-toggle:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
 }
 
 
@@ -760,6 +803,15 @@ main {
 [dir="rtl"] section,
 [dir="rtl"] .accordion {
   text-align: right;
+}
+
+[dir="rtl"] .scenario-details .container {
+  align-items: flex-end;
+  text-align: right;
+}
+
+[dir="rtl"] .scenario-details .nav-subpage-links {
+  justify-content: flex-end;
 }
 
 [dir="rtl"] ul {

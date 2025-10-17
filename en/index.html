@@ -60,78 +60,12 @@
        <section class="personas">
             <div class="container">
                 <h2>Common High-Pressure Situations</h2>
-                <div class="nav-subpage-links">
-                    <a href="/en/separation-divorce.html" class="nav-subpage-link">Separation &amp; Divorce</a>
-                    <a href="/en/business-dispute.html" class="nav-subpage-link">Business Dispute</a>
-                    <a href="/en/inheritance-clash.html" class="nav-subpage-link">Inheritance Clash</a>
-                    <a href="/en/commercial-spying.html" class="nav-subpage-link">Commercial Spying</a>
-                </div>
-                <div class="accordion">
-                    <details>
-                        <summary>
-                            <h3>Separation &amp; Divorce</h3>
-                        </summary>
-                        <div class="accordion-content">
-                            <h4>The emotional intensity is hard to overstate. They are already snooping. Once they get in, they will:</h4>
-                            <ul>
-                                <li>Abuse sensitive photos or messages</li>
-                                <li>Track your location and movements</li>
-                                <li>Smear your reputation</li>
-                                <li>Manipulate your emotions</li>
-                                <li>Steal money and assets</li>
-                                <li>Hijack your cloud backups</li>
-                            </ul>
-                            <p><strong>Every hour you stay exposed is an hour you risk losing control.</strong></p>
-                        </div>
-                    </details>
-                    <details>
-                        <summary>
-                            <h3>Business Dispute</h3>
-                        </summary>
-                        <div class="accordion-content">
-                            <h4>Greed, betrayal, and desperation make former partners ruthless. Once they get into your personal devices, they will:</h4>
-                            <ul>
-                                <li>Raid your personal cloud accounts</li>
-                                <li>Weaponize your private communications</li>
-                                <li>Sabotage your financial standing</li>
-                                <li>Harvest trade secrets from your phone</li>
-                                <li>Expose sensitive strategy to sway negotiations</li>
-                            </ul>
-                            <p><strong>Every hour you stay exposed is an hour you risk losing control.</strong></p>
-                        </div>
-                    </details>
-                    <details>
-                        <summary>
-                            <h3>Inheritance Clash</h3>
-                        </summary>
-                        <div class="accordion-content">
-                            <h4>Justice, assets, and your children’s future are on the line. Once rivals access your phone, they will:</h4>
-                            <ul>
-                                <li>Unravel your strategy</li>
-                                <li>Seize control over documents, messages, wills</li>
-                                <li>Gain access to attorney communications</li>
-                                <li>Locate and grab hidden assets before you do</li>
-                                <li>Manipulate family members by twisting your private information</li>
-                            </ul>
-                            <p><strong>Every hour you stay exposed is an hour you risk losing control.</strong></p>
-                        </div>
-                    </details>
-                    <details>
-                        <summary>
-                            <h3>Commercial Spying</h3>
-                        </summary>
-                        <div class="accordion-content">
-                            <h4>The competition is brutal. Your personal phone isn't as protected as your corporate servers. Once competitors access your personal accounts, they will:</h4>
-                            <ul>
-                                <li>Unravel your strategy</li>
-                                <li>Steal your clients</li>
-                                <li>Leak your M&amp;A plans to sabotage the deal</li>
-                                <li>Steal your intellectual property and R&amp;D</li>
-                                <li>Preempt your market strategy and product launches</li>
-                            </ul>
-                            <p><strong>Every hour you stay exposed is an hour you risk losing control.</strong></p>
-                        </div>
-                    </details>
+                <p class="personas-intro">Choose the scenario that matches your reality to see how we neutralise the risks and harden your devices.</p>
+                <div class="nav-subpage-links" role="list">
+                    <a href="/en/separation-divorce.html" class="nav-subpage-link" role="listitem">Separation &amp; Divorce</a>
+                    <a href="/en/business-dispute.html" class="nav-subpage-link" role="listitem">Business Dispute</a>
+                    <a href="/en/inheritance-clash.html" class="nav-subpage-link" role="listitem">Inheritance Clash</a>
+                    <a href="/en/commercial-spying.html" class="nav-subpage-link" role="listitem">Commercial Spying</a>
                 </div>
             </div>
         </section>
@@ -175,8 +109,12 @@
 
         <section class="faq">
             <div class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="accordion">
+                <h2>
+                    <button type="button" class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="faq-list-en">
+                        Frequently Asked Questions
+                    </button>
+                </h2>
+                <div class="accordion" id="faq-list-en" hidden>
                     <details>
                         <summary>Can you hack my partner back?</summary>
                         <p>No. We provide premium, 100% legal defense services tailored for discerning individuals facing high-risk situations.</p>
@@ -251,6 +189,35 @@
             var selectedImage = heroImages[randomIndex];
 
             hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
+        })();
+
+        (function () {
+            var toggles = document.querySelectorAll('[data-faq-toggle]');
+            if (!toggles.length) return;
+
+            toggles.forEach(function (toggle) {
+                var targetId = toggle.getAttribute('aria-controls');
+                if (!targetId) return;
+                var target = document.getElementById(targetId);
+                if (!target) return;
+
+                toggle.addEventListener('click', function () {
+                    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!expanded));
+
+                    if (expanded) {
+                        target.hidden = true;
+                        target.querySelectorAll('details').forEach(function (detailsEl) {
+                            detailsEl.open = false;
+                        });
+                    } else {
+                        target.hidden = false;
+                        target.querySelectorAll('details').forEach(function (detailsEl) {
+                            detailsEl.open = true;
+                        });
+                    }
+                });
+            });
         })();
     </script>
 
