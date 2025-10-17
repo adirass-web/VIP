@@ -232,5 +232,22 @@
             <p>&copy; 2024 מגן סייבר אישי | Personal Cyber Shield. כל הזכויות שמורות.</p>
         </div>
     </footer>
+    <script>
+        (function () {
+            var hero = document.querySelector('.hero');
+            if (!hero) return;
+
+            var heroImages = [
+                'https://images.pexels.com/photos/17875569/pexels-photo-17875569.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop',
+                'https://images.pexels.com/photos/17626727/pexels-photo-17626727.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop',
+                'https://images.pexels.com/photos/5356632/pexels-photo-5356632.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop'
+            ];
+
+            var randomIndex = Math.floor(Math.random() * heroImages.length);
+            var selectedImage = heroImages[randomIndex];
+
+            hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
+        })();
+    </script>
 </body>
 </html>
