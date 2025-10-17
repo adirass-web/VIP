@@ -177,50 +177,6 @@
             </div>
         </section>
 
-        <section class="proof-strip" aria-label="As Seen In">
-            <div class="container">
-                <p class="proof-heading">As Seen In</p>
-                <ul class="proof-logos">
-                    <li>
-                        <a href="https://www.washingtonpost.com/politics/2022/07/25/iran-israel-cyber-war/" target="_blank" rel="noopener">
-                            <img src="https://www.washingtonpost.com/wp-stat/assets/img/washingtonpost-black-400.png" alt="The Washington Post logo">
-                            <span class="logo-text">The Washington Post</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1" target="_blank" rel="noopener">
-                            <img src="https://apnews.com/images/ap-default-logo-1200x1200.png" alt="AP News logo">
-                            <span class="logo-text">AP News</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.lefigaro.fr/international/tensions-diplomatiques-autour-du-logiciel-espion-pegasus-20210719" target="_blank" rel="noopener">
-                            <img src="https://www.lefigaro.fr/assets/img/figaro-logo.svg" alt="Le Figaro logo">
-                            <span class="logo-text">Le Figaro</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/" target="_blank" rel="noopener">
-                            <img src="https://www.repubblica.it/static/images/repubblica/logo-repubblica.svg" alt="la Repubblica logo">
-                            <span class="logo-text">la Repubblica</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confrontו---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html" target="_blank" rel="noopener">
-                            <img src="https://static2.rai.it/includes2013/img/rai_logo.png" alt="RAI 1 – Codice logo">
-                            <span class="logo-text">RAI 1 – Codice</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635" target="_blank" rel="noopener">
-                            <img src="https://www.jpost.com/resizer/s0JzV7n1HULICwhuH6ynjgJv1n4=/arc-anglerfish-arc2-prod-jpost.s3.amazonaws.com/public/3ZRH2VNJOZAVIDHWQVFSXBE5BE.png" alt="The Jerusalem Post logo">
-                            <span class="logo-text">The Jerusalem Post</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
         <section class="faq">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
@@ -271,18 +227,36 @@
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
                     </span>
-                    <span class="label">WhatsApp +972533366276</span>
+                    <span class="label">WhatsApp</span>
                 </a>
                 <a href="https://signal.me/#p/+972533366276" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="Chat on Signal" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
                     </span>
-                    <span class="label">Signal +972533366276</span>
+                    <span class="label">Signal</span>
                 </a>
             </nav>
             <p>&copy; 2024 Personal Cyber Shield. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            var hero = document.querySelector('.hero');
+            if (!hero) return;
+
+            var heroImages = [
+                'https://images.pexels.com/photos/17875569/pexels-photo-17875569.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop',
+                'https://images.pexels.com/photos/17626727/pexels-photo-17626727.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop',
+                'https://images.pexels.com/photos/5356632/pexels-photo-5356632.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop'
+            ];
+
+            var randomIndex = Math.floor(Math.random() * heroImages.length);
+            var selectedImage = heroImages[randomIndex];
+
+            hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
+        })();
+    </script>
 
 </body>
 </html>
