@@ -29,10 +29,6 @@
             margin: 0 0 12px;
         }
 
-        .founder-wrapper h2,
-        .founder-wrapper h3 {
-        }
-
         .founder-wrapper h2 {
             font-size: 22px;
             margin: 0 0 12px;
@@ -41,38 +37,98 @@
         .founder-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 18px;
+            gap: 28px;
         }
 
         @media (min-width: 860px) {
             .founder-grid {
-                grid-template-columns: 2.1fr 1fr;
+                grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+                align-items: stretch;
             }
         }
 
+        .founder-portrait {
+            position: relative;
+            overflow: hidden;
+            border-radius: 22px;
+            min-height: 420px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), rgba(10, 10, 10, 0.65));
+            box-shadow: 0 28px 38px rgba(0, 0, 0, 0.35);
+        }
+
+        .founder-portrait::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(18, 18, 18, 0.15) 0%, rgba(18, 18, 18, 0.65) 65%, rgba(18, 18, 18, 0.85) 100%);
+        }
+
+        .founder-portrait img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .founder-portrait figcaption {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 26px 28px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.75);
+            background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.55));
+        }
+
+        .founder-bio {
+            display: grid;
+            gap: 22px;
+        }
+
         .founder-lede {
-            font-size: 18px;
-            margin: 0 0 14px;
+            font-size: 1.05rem;
+            margin: 0;
+            color: var(--color-text-secondary);
         }
 
         .card {
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 18px;
-            background: var(--color-background-medium);
+            border-radius: 18px;
+            padding: 20px 22px;
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
         }
 
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            display: block;
+        .founder-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 14px 0 0;
+            display: grid;
+            gap: 10px;
         }
 
-        .founder-photo-credit {
-            font-size: 14px;
+        .founder-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
             color: var(--color-text-secondary);
-            margin: 8px 0 0;
+        }
+
+        .founder-highlights li::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            margin-top: 6px;
+            border-radius: 999px;
+            background: var(--color-accent);
+            flex-shrink: 0;
         }
 
         ul.clean {
@@ -94,59 +150,123 @@
             display: grid;
             gap: 20px;
             margin: 24px 0 0;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             list-style: none;
             padding: 0;
         }
 
+        @media (min-width: 720px) {
+            .media-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+        }
+
         .media-card {
+            position: relative;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            padding: 18px;
+            gap: 18px;
+            padding: 26px 24px;
+            border-radius: 22px;
+            background: rgba(20, 20, 20, 0.82);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            background: var(--color-background-light);
+            box-shadow: 0 24px 40px rgba(0, 0, 0, 0.28);
             text-decoration: none;
             color: var(--color-text-primary);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .media-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.08), transparent 55%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .media-card:focus-visible,
         .media-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
-            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-6px);
+            border-color: rgba(255, 255, 255, 0.22);
+            box-shadow: 0 28px 52px rgba(0, 0, 0, 0.4);
         }
 
-        .media-card img {
-            width: 120px;
+        .media-card:focus-visible::before,
+        .media-card:hover::before {
+            opacity: 1;
+        }
+
+        .media-card__masthead {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 14px 18px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+            max-width: 220px;
+        }
+
+        .media-card__masthead img {
+            width: 160px;
+            max-width: 100%;
             height: auto;
             object-fit: contain;
         }
 
-        .media-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
+        .media-card__body {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 6px;
         }
 
-        .media-card p {
+        .media-card__body h3 {
+            margin: 0;
+            font-size: 1.18rem;
+            letter-spacing: 0.01em;
+            color: var(--color-text-primary);
+        }
+
+        .media-card__body p {
             margin: 0;
             color: var(--color-text-secondary);
+            line-height: 1.45;
         }
 
         .media-card__cta {
-            margin-top: auto;
+            position: relative;
+            z-index: 1;
             font-weight: 600;
             color: var(--color-text-primary);
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            font-size: 0.95rem;
+            margin-top: auto;
         }
 
         .media-card__cta::after {
             content: '↗';
             font-size: 0.9rem;
+        }
+
+        @media (min-width: 720px) {
+            .media-card {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .media-card__body {
+                flex: 1;
+            }
+
+            .media-card__cta {
+                margin-inline-start: auto;
+            }
         }
 
         .cta {
@@ -224,15 +344,21 @@
             </header>
 
             <section class="founder-grid" aria-label="opening">
-                <div>
+                <figure class="founder-portrait">
+                    <img src="../assets/img/Lior%20Tabansky%20by%20Kfir%20Ziv%2086_Rebua_edited.jpg" alt="Dr. Lior Tabansky">
+                    <figcaption>Photo: Kfir Ziv</figcaption>
+                </figure>
+                <div class="founder-bio">
                     <p class="founder-lede">Dr. Lior Tabansky is a global cyber‑resilience authority selected for sensitive engagements where discretion, speed, and outcomes matter more than buzzwords. With two decades of hands‑on work across Israel, Asia, Europe, and Africa, his leadership anchors thought leadership in practical, operational experience.</p>
+                    <div class="card" aria-label="Founder's operating style">
+                        <h3>Operating Principles</h3>
+                        <ul class="founder-highlights">
+                            <li>Handpicked for high-stakes situations that demand executive discretion.</li>
+                            <li>Bridges strategic judgment with field-tested cyber defense execution.</li>
+                            <li>Delivers calm, outcome-driven counsel to leaders navigating complex threats.</li>
+                        </ul>
+                    </div>
                 </div>
-                <aside class="card small muted" aria-label="facts">
-                    <a href="https://www.linkedin.com/in/ltaba" target="_blank" rel="noopener" aria-label="LinkedIn: Dr. Lior Tabansky">
-                        <img src="../assets/img/lior-tabansky-kfir-ziv-bw-sq-86.jpg" alt="Dr. Tabansky">
-                    </a>
-                    <p class="small muted founder-photo-credit">Photo: Kfir Ziv</p>
-                </aside>
             </section>
 
             <section aria-label="core-expertise">
@@ -252,49 +378,73 @@
                 <ul class="media-grid" aria-label="Selected coverage">
                     <li>
                         <a class="media-card" href="https://www.washingtonpost.com/politics/2022/07/25/iran-israel-cyber-war/" target="_blank" rel="noopener" aria-label="Read The Washington Post coverage on the Iran–Israel cyber confrontation">
-                            <img src="https://www.washingtonpost.com/wp-stat/assets/img/washingtonpost-black-400.png" alt="The Washington Post logo">
-                            <h3>The Washington Post</h3>
-                            <p>Analysis on the Iran–Israel cyber confrontation.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/Washington%20Post_Logo_4.png" alt="" aria-hidden="true">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>The Washington Post</h3>
+                                <p>Analysis on the Iran–Israel cyber confrontation.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1" target="_blank" rel="noopener" aria-label="Read the AP News piece quoting Dr. Tabansky on the Iran steel-sector cyberattack">
-                            <img src="https://apnews.com/images/ap-default-logo-1200x1200.png" alt="AP News logo">
-                            <h3>AP News</h3>
-                            <p>Quoted on the Iran steel-sector cyberattack.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/AP_ICON_512x512.png" alt="" aria-hidden="true">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>AP News</h3>
+                                <p>Quoted on the Iran steel-sector cyberattack.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.lefigaro.fr/international/tensions-diplomatiques-autour-du-logiciel-espion-pegasus-20210719" target="_blank" rel="noopener" aria-label="Read the Le Figaro interview from the Pegasus disclosures">
-                            <img src="https://www.lefigaro.fr/assets/img/figaro-logo.svg" alt="Le Figaro logo">
-                            <h3>Le Figaro</h3>
-                            <p>Quoted during the Pegasus disclosures.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/fi.png" alt="" aria-hidden="true">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>Le Figaro</h3>
+                                <p>Quoted during the Pegasus disclosures.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635" target="_blank" rel="noopener" aria-label="Read The Jerusalem Post feature on Pegasus allegations">
-                            <img src="https://www.jpost.com/resizer/s0JzV7n1HULICwhuH6ynjgJv1n4=/arc-anglerfish-arc2-prod-jpost.s3.amazonaws.com/public/3ZRH2VNJOZAVIDHWQVFSXBE5BE.png" alt="The Jerusalem Post logo">
-                            <h3>The Jerusalem Post</h3>
-                            <p>Feature on Pegasus allegations.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/8ec6b8ffe0ad6e45e72f8592d6e537da.png" alt="" aria-hidden="true">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>The Jerusalem Post</h3>
+                                <p>Feature on Pegasus allegations.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/" target="_blank" rel="noopener" aria-label="Read the la Repubblica analysis on the Israel–Iran cyber front">
-                            <img src="https://www.repubblica.it/static/images/repubblica/logo-repubblica.svg" alt="la Repubblica logo">
-                            <h3>la Repubblica</h3>
-                            <p>Assessment on the Israel–Iran cyber front.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/la%20rep.png" alt="" aria-hidden="true">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>la Repubblica</h3>
+                                <p>Assessment on the Israel–Iran cyber front.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html" target="_blank" rel="noopener" aria-label="View the RAI 1 – Codice on-air expert segment">
-                            <img src="https://static2.rai.it/includes2013/img/rai_logo.png" alt="RAI 1 – Codice logo">
-                            <h3>RAI 1 – Codice</h3>
-                            <p>On-air expert segment; episode page on RaiPlay.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/Newsweek_.png" alt="" aria-hidden="true">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>RAI 1 – Codice</h3>
+                                <p>On-air expert segment; episode page on RaiPlay.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
@@ -314,17 +464,17 @@
                 <p class="cta-intro">Discuss your threat landscape, harden your devices, and regain control of your digital life.</p>
             </section>
             <nav class="footer-contact-links" aria-label="Direct messaging options">
-                <a href="https://wa.me/972533366276" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="Chat on WhatsApp" rel="noopener noreferrer">
+                <a href="https://wa.me/972533366276" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="Chat on WhatsApp" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
                     </span>
-                    <span class="label">WhatsApp +972533366276</span>
+                    <span class="label">WhatsApp</span>
                 </a>
-                <a href="https://signal.me/#p/+972533366276" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="Chat on Signal" rel="noopener noreferrer">
+                <a href="https://signal.me/#p/+972533366276" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="Chat on Signal" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
                     </span>
-                    <span class="label">Signal +972533366276</span>
+                    <span class="label">Signal</span>
                 </a>
             </nav>
             <p>&copy; 2024 Personal Cyber Shield. All rights reserved.</p>
