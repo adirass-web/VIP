@@ -276,6 +276,11 @@ main > section:not(.hero) .container {
   z-index: 10;
 }
 
+[dir="rtl"] .main-nav .nav-submenu {
+  right: 0;
+  left: auto;
+}
+
 .main-nav details[open] .nav-submenu {
   display: flex;
 }
@@ -328,6 +333,16 @@ main > section:not(.hero) .container {
 
 main {
     padding-top: 60px; /* Offset for fixed header */
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    position: sticky;
+  }
+
+  main {
+    padding-top: 0;
+  }
 }
 
 .skip-link {
