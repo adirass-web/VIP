@@ -100,48 +100,67 @@
         }
 
         .media-card {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            background: var(--color-background-light);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 16px;
+            padding: 22px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(10, 10, 10, 0.35));
             text-decoration: none;
             color: var(--color-text-primary);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
         .media-card:focus-visible,
         .media-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
-            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 22px 42px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.32);
         }
 
-        .media-card img {
-            width: 120px;
+        .media-card__masthead {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: rgba(12, 12, 12, 0.55);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .media-card__masthead img {
+            width: 140px;
+            max-width: 100%;
             height: auto;
             object-fit: contain;
         }
 
-        .media-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
+        .media-card__body {
+            display: grid;
+            gap: 6px;
         }
 
-        .media-card p {
+        .media-card__body h3 {
+            margin: 0;
+            font-size: 1.18rem;
+            letter-spacing: 0.01em;
+        }
+
+        .media-card__body p {
             margin: 0;
             color: var(--color-text-secondary);
+            line-height: 1.45;
         }
 
         .media-card__cta {
-            margin-top: auto;
             font-weight: 600;
             color: var(--color-text-primary);
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            font-size: 0.95rem;
         }
 
         .media-card__cta::after {
@@ -252,49 +271,73 @@
                 <ul class="media-grid" aria-label="Selected coverage">
                     <li>
                         <a class="media-card" href="https://www.washingtonpost.com/politics/2022/07/25/iran-israel-cyber-war/" target="_blank" rel="noopener" aria-label="Read The Washington Post coverage on the Iran–Israel cyber confrontation">
-                            <img src="../assets/img/logos/washington-post.svg" alt="The Washington Post logo">
-                            <h3>The Washington Post</h3>
-                            <p>Analysis on the Iran–Israel cyber confrontation.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/logos/washington-post.svg" alt="The Washington Post logo">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>The Washington Post</h3>
+                                <p>Analysis on the Iran–Israel cyber confrontation.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://apnews.com/article/technology-middle-east-iran-dubai-b0404963ae23e5008439a0b607952de1" target="_blank" rel="noopener" aria-label="Read the AP News piece quoting Dr. Tabansky on the Iran steel-sector cyberattack">
-                            <img src="../assets/img/logos/ap-news.svg" alt="AP News logo">
-                            <h3>AP News</h3>
-                            <p>Quoted on the Iran steel-sector cyberattack.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/logos/ap-news.svg" alt="AP News logo">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>AP News</h3>
+                                <p>Quoted on the Iran steel-sector cyberattack.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.lefigaro.fr/international/tensions-diplomatiques-autour-du-logiciel-espion-pegasus-20210719" target="_blank" rel="noopener" aria-label="Read the Le Figaro interview from the Pegasus disclosures">
-                            <img src="../assets/img/logos/le-figaro.svg" alt="Le Figaro logo">
-                            <h3>Le Figaro</h3>
-                            <p>Quoted during the Pegasus disclosures.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/logos/le-figaro.svg" alt="Le Figaro logo">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>Le Figaro</h3>
+                                <p>Quoted during the Pegasus disclosures.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.jpost.com/israel-news/nso-surveillance-and-the-double-edged-sword-of-the-start-up-nation-674635" target="_blank" rel="noopener" aria-label="Read The Jerusalem Post feature on Pegasus allegations">
-                            <img src="../assets/img/logos/jerusalem-post.svg" alt="The Jerusalem Post logo">
-                            <h3>The Jerusalem Post</h3>
-                            <p>Feature on Pegasus allegations.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/logos/jerusalem-post.svg" alt="The Jerusalem Post logo">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>The Jerusalem Post</h3>
+                                <p>Feature on Pegasus allegations.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.repubblica.it/tecnologia/sicurezza/2020/05/20/news/israele_vs_iran_il_nuovo_fronte_di_guerra_e_il_cyberspazio-257140929/" target="_blank" rel="noopener" aria-label="Read the la Repubblica analysis on the Israel–Iran cyber front">
-                            <img src="../assets/img/logos/la-repubblica.svg" alt="la Repubblica logo">
-                            <h3>la Repubblica</h3>
-                            <p>Assessment on the Israel–Iran cyber front.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/logos/la-repubblica.svg" alt="la Repubblica logo">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>la Repubblica</h3>
+                                <p>Assessment on the Israel–Iran cyber front.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
                     <li>
                         <a class="media-card" href="https://www.raiplay.it/video/2017/08/Cybersicurezza-esperti-a-confronto---18082017-753fa4f2-2a8e-4437-827f-7e2053734062.html" target="_blank" rel="noopener" aria-label="View the RAI 1 – Codice on-air expert segment">
-                            <img src="../assets/img/logos/rai-1-codice.svg" alt="RAI 1 – Codice logo">
-                            <h3>RAI 1 – Codice</h3>
-                            <p>On-air expert segment; episode page on RaiPlay.</p>
+                            <div class="media-card__masthead">
+                                <img src="../assets/img/logos/rai-1-codice.svg" alt="RAI 1 – Codice logo">
+                            </div>
+                            <div class="media-card__body">
+                                <h3>RAI 1 – Codice</h3>
+                                <p>On-air expert segment; episode page on RaiPlay.</p>
+                            </div>
                             <span class="media-card__cta">View coverage</span>
                         </a>
                     </li>
