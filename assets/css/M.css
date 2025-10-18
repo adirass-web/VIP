@@ -847,6 +847,29 @@ main {
     padding-inline-end: 0.5rem;
 }
 
+.rtl-centered {
+  text-align: center;
+}
+
+.rtl-centered section,
+.rtl-centered .accordion {
+  text-align: center;
+}
+
+.rtl-centered .scenario-details .container {
+  align-items: center;
+  text-align: center;
+}
+
+.rtl-centered .scenario-details .nav-subpage-links {
+  justify-content: center;
+}
+
+.rtl-centered ul {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
 /* === Animated burnt‑orange gradient background ========================= */
 :root{
   --bg-orange-1:#3a1905;
