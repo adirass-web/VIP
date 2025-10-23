@@ -297,29 +297,35 @@
     <header class="site-header">
         <div class="container">
             <div class="header-content">
-                <nav class="main-nav" aria-label="תפריט ראשי">
-                    <a href="/he/">בית</a>
-                    <details class="nav-group">
-                        <summary>מצבי לחץ נפוצים</summary>
-                        <div class="nav-submenu">
-                            <a href="/he/separation-divorce.html">פרידה, גירושין, גט</a>
-                            <a href="/he/business-dispute.html">פירוק שותפות עסקית</a>
-                            <a href="/he/inheritance-clash.html">סכסוך ירושה</a>
-                            <a href="/he/commercial-spying.html">ריגול מסחרי</a>
-                        </div>
-                    </details>
-                    <a href="/he/founder.html" aria-current="page" class="active">המייסד</a>
-                </nav>
-                <nav class="language-switcher" aria-label="בחירת שפה">
-                    <a href="/he/founder.html" aria-current="page" class="active">
-                        <img src="../assets/img/icons/flag-il.svg" alt="" aria-hidden="true">
-                        <span lang="he" dir="rtl">עברית</span>
-                    </a>
-                    <a href="/en/founder.html">
-                        <img src="../assets/img/icons/flag-uk.svg" alt="" aria-hidden="true">
-                        <span lang="en" dir="ltr">English</span>
-                    </a>
-                </nav>
+                <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation">
+                    <span class="nav-toggle-icon" aria-hidden="true"></span>
+                    <span class="sr-only">תפריט</span>
+                </button>
+                <div class="header-navigation" id="site-navigation" data-nav-menu>
+                    <nav class="language-switcher" aria-label="בחירת שפה">
+                        <a href="/he/founder.html" aria-current="page" class="active">
+                            <img src="../assets/img/icons/flag-il.svg" alt="" aria-hidden="true">
+                            <span lang="he" dir="rtl">עברית</span>
+                        </a>
+                        <a href="/en/founder.html">
+                            <img src="../assets/img/icons/flag-uk.svg" alt="" aria-hidden="true">
+                            <span lang="en" dir="ltr">English</span>
+                        </a>
+                    </nav>
+                    <nav class="main-nav" aria-label="תפריט ראשי">
+                        <a href="/he/">בית</a>
+                        <details class="nav-group">
+                            <summary>מצבי לחץ נפוצים</summary>
+                            <div class="nav-submenu">
+                                <a href="/he/separation-divorce.html">פרידה, גירושין, גט</a>
+                                <a href="/he/business-dispute.html">פירוק שותפות עסקית</a>
+                                <a href="/he/inheritance-clash.html">סכסוך ירושה</a>
+                                <a href="/he/commercial-spying.html">ריגול מסחרי</a>
+                            </div>
+                        </details>
+                        <a href="/he/founder.html" aria-current="page" class="active">המייסד</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -475,5 +481,6 @@
             <p>&copy; 2024 מגן סייבר אישי | Personal Cyber Shield. כל הזכויות שמורות.</p>
         </div>
     </footer>
+    <script src="../assets/js/navigation.js"></script>
 </body>
 </html>
