@@ -114,13 +114,15 @@
             if (!hero) return;
 
             var heroImages = [
-                'https://images.unsplash.com/photo-Lr6EUvV3qn4?auto=format&fit=crop&w=1600&h=900'
+                'https://source.unsplash.com/Lr6EUvV3qn4/1600x900'
             ];
 
             var randomIndex = Math.floor(Math.random() * heroImages.length);
             var selectedImage = heroImages[randomIndex];
 
-            hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
+            var imageValue = 'url("' + selectedImage + '")';
+            hero.style.setProperty('--hero-background-image', imageValue);
+            hero.style.backgroundImage = imageValue;
         })();
     </script>
 </body>

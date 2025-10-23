@@ -115,13 +115,15 @@
             if (!hero) return;
 
             var heroImages = [
-                'https://images.pexels.com/photos/6669872/pexels-photo-6669872.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop'
+                'https://images.pexels.com/photos/6669872/pexels-photo-6669872.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=900'
             ];
 
             var randomIndex = Math.floor(Math.random() * heroImages.length);
             var selectedImage = heroImages[randomIndex];
 
-            hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
+            var imageValue = 'url("' + selectedImage + '")';
+            hero.style.setProperty('--hero-background-image', imageValue);
+            hero.style.backgroundImage = imageValue;
         })();
     </script>
 </body>
