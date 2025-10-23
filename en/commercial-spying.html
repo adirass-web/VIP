@@ -15,23 +15,29 @@
     <header class="site-header">
         <div class="container">
             <div class="header-content">
-                <nav class="main-nav" aria-label="Main navigation">
-                    <a href="/en/">Home</a>
-                    <a href="/en/separation-divorce.html">Separation &amp; Divorce</a>
-                    <a href="/en/business-dispute.html">Business Dispute</a>
-                    <a href="/en/inheritance-clash.html">Inheritance Clash</a>
-                    <a href="/en/commercial-spying.html" aria-current="page" class="active">Commercial Spying</a>
-                </nav>
-                <nav class="language-switcher" aria-label="Language selection">
-                    <a href="/en/commercial-spying.html" aria-current="page" class="active">
-                        <img src="../assets/img/icons/flag-uk.svg" alt="" aria-hidden="true">
-                        <span>English</span>
-                    </a>
-                    <a href="/he/commercial-spying.html">
-                        <img src="../assets/img/icons/flag-il.svg" alt="" aria-hidden="true">
-                        <span lang="he" dir="rtl">עברית</span>
-                    </a>
-                </nav>
+                <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation">
+                    <span class="nav-toggle-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+                <div class="header-navigation" id="site-navigation" data-nav-menu>
+                    <nav class="language-switcher" aria-label="Language selection">
+                        <a href="/en/commercial-spying.html" aria-current="page" class="active">
+                            <img src="../assets/img/icons/flag-uk.svg" alt="" aria-hidden="true">
+                            <span>English</span>
+                        </a>
+                        <a href="/he/commercial-spying.html">
+                            <img src="../assets/img/icons/flag-il.svg" alt="" aria-hidden="true">
+                            <span lang="he" dir="rtl">עברית</span>
+                        </a>
+                    </nav>
+                    <nav class="main-nav" aria-label="Main navigation">
+                        <a href="/en/">Home</a>
+                        <a href="/en/separation-divorce.html">Separation &amp; Divorce</a>
+                        <a href="/en/business-dispute.html">Business Dispute</a>
+                        <a href="/en/inheritance-clash.html">Inheritance Clash</a>
+                        <a href="/en/commercial-spying.html" aria-current="page" class="active">Commercial Spying</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -101,5 +107,6 @@
             <p>&copy; 2024 Personal Cyber Shield. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../assets/js/navigation.js"></script>
 </body>
 </html>
