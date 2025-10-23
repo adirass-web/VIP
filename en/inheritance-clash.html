@@ -108,5 +108,20 @@
         </div>
     </footer>
     <script src="../assets/js/navigation.js"></script>
+    <script>
+        (function () {
+            var hero = document.querySelector('.hero');
+            if (!hero) return;
+
+            var heroImages = [
+                'https://images.pexels.com/photos/6296925/pexels-photo-6296925.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop'
+            ];
+
+            var randomIndex = Math.floor(Math.random() * heroImages.length);
+            var selectedImage = heroImages[randomIndex];
+
+            hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
+        })();
+    </script>
 </body>
 </html>

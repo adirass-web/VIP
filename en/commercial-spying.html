@@ -108,5 +108,20 @@
         </div>
     </footer>
     <script src="../assets/js/navigation.js"></script>
+    <script>
+        (function () {
+            var hero = document.querySelector('.hero');
+            if (!hero) return;
+
+            var heroImages = [
+                'https://images.unsplash.com/photo-5sNKqv2ckUo?auto=format&fit=crop&w=1600&h=900'
+            ];
+
+            var randomIndex = Math.floor(Math.random() * heroImages.length);
+            var selectedImage = heroImages[randomIndex];
+
+            hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
+        })();
+    </script>
 </body>
 </html>
