@@ -21,11 +21,15 @@
                 </button>
                 <div class="header-navigation" id="site-navigation" data-nav-menu>
                     <nav class="language-switcher" aria-label="בחירת שפה">
-                        <a href="/en/commercial-spying.html">
+                        <a href="/en/commercial-spying.html" data-lang-option="en">
                             <img src="../assets/img/icons/flag-uk.svg" alt="" aria-hidden="true">
                             <span lang="en" dir="ltr">English</span>
                         </a>
-                        <a href="/he/commercial-spying.html" aria-current="page" class="active">
+                        <a href="/ru/commercial-spying.html" data-lang-option="ru">
+                            <img src="../assets/img/icons/flag-ru.svg" alt="" aria-hidden="true">
+                            <span lang="ru" dir="ltr">Русский</span>
+                        </a>
+                        <a href="/he/commercial-spying.html" aria-current="page" class="active" data-lang-option="he">
                             <img src="../assets/img/icons/flag-il.svg" alt="" aria-hidden="true">
                             <span lang="he" dir="rtl">עברית</span>
                         </a>
@@ -86,13 +90,13 @@
                 <p>התייעץ על המצב שלך בדיסקרטיות ישירות עם ד"ר טבנסקי.</p>
             </section>
             <nav class="footer-contact-links" aria-label="אפשרויות מסרים ישירים">
-                <a href="https://wa.me/972533366276" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="צ׳אט ב-WhatsApp" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">
+                <a href="https://wa.me/972533366276?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F/%D7%AA%20%D7%91%D7%91%D7%93%D7%99%D7%A7%D7%AA%20%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA.%20%D7%90%D7%A4%D7%A9%D7%A8%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%94%D7%99%D7%95%D7%9D/%D7%9E%D7%97%D7%A8%3F" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="צ׳אט ב-WhatsApp" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
                     </span>
                     <span class="label">WhatsApp</span>
                 </a>
-                <a href="https://signal.me/#p/+972533366276" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="צ׳אט ב-Signal" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">
+                <a href="https://signal.me/#p/+972533366276?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F/%D7%AA%20%D7%91%D7%91%D7%93%D7%99%D7%A7%D7%AA%20%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA.%20%D7%90%D7%A4%D7%A9%D7%A8%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%94%D7%99%D7%95%D7%9D/%D7%9E%D7%97%D7%A8%3F" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="צ׳אט ב-Signal" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
                     </span>
@@ -108,6 +112,7 @@
         </div>
     </footer>
     <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/language.js"></script>
     <script>
         (function () {
             var hero = document.querySelector('.hero');
