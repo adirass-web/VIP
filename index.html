@@ -9,10 +9,24 @@
   <script>
     (function () {
       var paths = { he: '/he/', ru: '/ru/', en: '/en/' };
-      if (window.languageUtils) {
-        window.languageUtils.redirectIfBetter({ paths: paths, skipIfStored: true });
+      var fallback = setTimeout(function () { window.location.replace(paths.he); }, 1500);
+
+      function route() {
+        if (window.languageUtils) {
+          try {
+            window.languageUtils.redirectIfBetter({ paths: paths, skipIfStored: true });
+          } finally {
+            clearTimeout(fallback);
+          }
+        } else {
+          window.location.replace(paths.he);
+        }
+      }
+
+      if (document.readyState === 'complete') {
+        route();
       } else {
-        window.location.replace(paths.he);
+        window.addEventListener('load', route);
       }
     })();
   </script>
