@@ -1,7 +1,23 @@
 <!doctype html>
-<meta charset="utf-8">
-<title>Magen — Hebrew default</title>
-<link rel="canonical" href="/he/">
-<meta http-equiv="refresh" content="0; url=/he/">
-<script>location.replace('/he/');</script>
-<p>Redirecting to <a href="/he/">Hebrew homepage</a>…</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magen — language selection</title>
+  <link rel="canonical" href="/">
+  <script src="/assets/js/language.js"></script>
+  <script>
+    (function () {
+      var paths = { he: '/he/', ru: '/ru/', en: '/en/' };
+      if (window.languageUtils) {
+        window.languageUtils.redirectIfBetter({ paths: paths, skipIfStored: true });
+      } else {
+        window.location.replace(paths.he);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to your language…</p>
+</body>
+</html>
