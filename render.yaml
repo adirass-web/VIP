@@ -3,8 +3,3 @@ services:
     name: magenvip
     staticPublishPath: .
     buildCommand: ""
-    routes:
-      - type: redirect
-        source: "/"
-        destination: "/he"
-        statusCode: 308

@@ -315,11 +315,15 @@
                 </button>
                 <div class="header-navigation" id="site-navigation" data-nav-menu>
                     <nav class="language-switcher" aria-label="Language selection">
-                        <a href="/en/founder.html" aria-current="page" class="active">
+                        <a href="/en/founder.html" aria-current="page" class="active" data-lang-option="en">
                             <img src="../assets/img/icons/flag-uk.svg" alt="" aria-hidden="true">
                             <span>English</span>
                         </a>
-                        <a href="/he/founder.html">
+                        <a href="/ru/" data-lang-option="ru">
+                            <img src="../assets/img/icons/flag-ru.svg" alt="" aria-hidden="true">
+                            <span lang="ru" dir="ltr">Русский</span>
+                        </a>
+                        <a href="/he/founder.html" data-lang-option="he">
                             <img src="../assets/img/icons/flag-il.svg" alt="" aria-hidden="true">
                             <span lang="he" dir="rtl">עברית</span>
                         </a>
@@ -477,13 +481,13 @@
                 <p>Discuss your situation confidentially directly with Dr. Tabansky:</p>
             </section>
             <nav class="footer-contact-links" aria-label="Direct messaging options">
-                <a href="https://wa.me/972533366276" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="Chat on WhatsApp" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">
+                <a href="https://wa.me/972533366276?text=Hello%2C%20I%27d%20like%20a%20private%20device%20check.%20Can%20we%20schedule%20today%20or%20tomorrow%3F" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="Chat on WhatsApp" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
                     </span>
                     <span class="label">WhatsApp</span>
                 </a>
-                <a href="https://signal.me/#p/+972533366276" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="Chat on Signal" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">
+                <a href="https://signal.me/#p/+972533366276?text=Hello%2C%20I%27d%20like%20a%20private%20device%20check.%20Can%20we%20schedule%20today%20or%20tomorrow%3F" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="Chat on Signal" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">
                     <span aria-hidden="true" class="icon">
                         <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
                     </span>
@@ -499,5 +503,6 @@
         </div>
     </footer>
     <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/language.js"></script>
 </body>
 </html>
