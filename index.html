@@ -12,15 +12,9 @@
       var fallback = setTimeout(function () { window.location.replace(paths.he); }, 1500);
 
       function route() {
-        if (window.languageUtils) {
-          try {
-            window.languageUtils.redirectIfBetter({ paths: paths, skipIfStored: true });
-          } finally {
-            clearTimeout(fallback);
-          }
-        } else {
-          window.location.replace(paths.he);
-        }
+        clearTimeout(fallback);
+        var preferred = (window.languageUtils && window.languageUtils.detectPreferred()) || 'he';
+        window.location.replace(paths[preferred] || paths.he);
       }
 
       if (document.readyState === 'complete') {
