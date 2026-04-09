@@ -613,6 +613,16 @@ main {
   white-space: nowrap;
 }
 
+.hero-cta {
+  margin-top: 2rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
 .why-trust-link {
   color: var(--color-accent);
   text-decoration: underline;
