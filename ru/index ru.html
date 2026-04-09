@@ -69,7 +69,7 @@
     </header>
 
     <main id="main-content" tabindex="-1" role="main">
-        <section class="hero">
+        <section class="hero" data-hero-img="https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1280&h=720&fit=crop&q=80&fm=webp">
             <div class="container">
                 <h1>Ваш телефон знает все.</h1>
                 <h2>Фотографии. Местоположение. Чаты. Финансы. Желания.
@@ -231,50 +231,7 @@
 
     <script src="../assets/js/navigation.js"></script>
     <script src="../assets/js/language.js"></script>
-    <script>
-        (function () {
-            var hero = document.querySelector('.hero');
-            if (!hero) return;
-
-            var heroImages = [
-                'https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1600&h=900&fit=crop&q=80'
-            ];
-
-            var randomIndex = Math.floor(Math.random() * heroImages.length);
-            var selectedImage = heroImages[randomIndex].replace('w=1600', 'w=' + (window.innerWidth < 768 ? 800 : 1600));
-
-            hero.style.setProperty('--hero-background-image', 'url("' + selectedImage + '")');
-        })();
-
-        (function () {
-            var toggles = document.querySelectorAll('[data-faq-toggle]');
-            if (!toggles.length) return;
-
-            toggles.forEach(function (toggle) {
-                var targetId = toggle.getAttribute('aria-controls');
-                if (!targetId) return;
-                var target = document.getElementById(targetId);
-                if (!target) return;
-
-                toggle.addEventListener('click', function () {
-                    var expanded = toggle.getAttribute('aria-expanded') === 'true';
-                    toggle.setAttribute('aria-expanded', String(!expanded));
-
-                    if (expanded) {
-                        target.hidden = true;
-                        target.querySelectorAll('details').forEach(function (detailsEl) {
-                            detailsEl.open = false;
-                        });
-                    } else {
-                        target.hidden = false;
-                        target.querySelectorAll('details').forEach(function (detailsEl) {
-                            detailsEl.open = true;
-                        });
-                    }
-                });
-            });
-        })();
-    </script>
+    <script src="../assets/js/hero.js" defer></script>
 
 </body>
 </html>
