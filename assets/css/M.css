@@ -16,13 +16,13 @@
 /* ============================= */
 :root {
   /* --- Colors: surfaces --- */
-  --color-background-dark:   #121212;
-  --color-background-medium: #1a1a1a;
-  --color-background-light:  #282828;
+  --color-background-dark:   #111111;
+  --color-background-medium: #1c1c1c;
+  --color-background-light:  #2a2a2a;
 
   /* --- Colors: text --- */
   --color-text-primary:   #e0e0e0;
-  --color-text-secondary: #a0a0a0;
+  --color-text-secondary: #b0b0b0;
 
   /* --- Colors: accent --- */
   --color-accent:       #d97706;   /* Burnt orange */
@@ -34,8 +34,8 @@
   --color-accent-badge:   rgba(217, 119, 6, 0.14);
   --color-accent-border:  rgba(217, 119, 6, 0.35);
   --color-accent-glow:    rgba(217, 119, 6, 0.25);
-  --color-border:         rgba(255, 255, 255, 0.08);
-  --color-border-subtle:  rgba(255, 255, 255, 0.06);
+  --color-border:         rgba(255, 255, 255, 0.10);
+  --color-border-subtle:  rgba(255, 255, 255, 0.07);
   --color-overlay-light:  rgba(255, 255, 255, 0.04);
   --color-overlay-medium: rgba(255, 255, 255, 0.05);
 
@@ -82,11 +82,11 @@
   --radius-2xl: 22px;
   --radius-pill: 999px;
 
-  /* --- Shadows --- */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --shadow-md: 0 14px 40px rgba(0, 0, 0, 0.22);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.35);
-  --shadow-xl: 0 28px 52px rgba(0, 0, 0, 0.4);
+  /* --- Shadows (warm-tinted for dark-on-dark visibility) --- */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 14px 40px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.45), 0 4px 16px rgba(217, 119, 6, 0.04);
+  --shadow-xl: 0 28px 52px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(217, 119, 6, 0.06);
 
   /* --- Z-Index --- */
   --z-dropdown: 10;
@@ -126,7 +126,7 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
 
   /* Static dark gradient — no animation on mobile (saves battery, prevents jank) */
-  background: linear-gradient(-45deg, #1a1a1a, #2c1a0e, #121212, #232323);
+  background: linear-gradient(-45deg, #1c1c1c, #1f1a16, #111111, #1e1e1e);
 }
 
 /* Desktop: enable gradient animation */
@@ -194,19 +194,27 @@ h2 {
 }
 
 h3 {
-  font-size: var(--text-lg);         /* 1.25rem / 20px */
+  font-size: var(--text-xl);         /* 1.35rem / 21.6px — bumped for hierarchy gap */
   font-weight: 700;
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
+  color: var(--color-accent);        /* accent separates h4 from body text */
 }
 
 /* --- Body text --- */
 p {
   margin-bottom: var(--space-4);
   color: var(--color-text-secondary);
+}
+
+/* Readability cap — only on direct section content, not inside tight components */
+section > .container > p,
+.accordion-content p,
+.cta p,
+.threat-assessment p {
   max-width: 65ch;                    /* optimal readability (45–90ch range) */
 }
 
@@ -288,6 +296,19 @@ section {
   text-align: center;
 }
 
+/* Major section breaks: hero→content, content→footer-CTA */
+.cta .container,
+.site-footer .container {
+  padding-top: var(--space-12);              /* 3rem — extra air before final CTA & footer */
+}
+
+@media (min-width: 768px) {
+  .cta .container,
+  .site-footer .container {
+    padding-top: var(--space-20);            /* 5rem desktop */
+  }
+}
+
 main > section:not(.hero) .container {
   display: flex;
   flex-direction: column;
@@ -340,7 +361,7 @@ main > section:not(.hero) .container {
   top: 0;
   width: 100%;
   z-index: var(--z-header);
-  background-color: rgba(18, 18, 18, 0.8);
+  background-color: rgba(17, 17, 17, 0.82);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -606,8 +627,10 @@ main {
   display: flex;
   align-items: center;
   padding: var(--space-2) var(--space-3);
+  padding-inline-start: var(--space-6);   /* indent nested links */
   border-radius: var(--radius-md);
-  background-color: var(--color-background-light);
+  background-color: transparent;          /* mobile: no card-within-card */
+  border-inline-start: 2px solid var(--color-accent-border);
   color: var(--color-text-secondary);
   font-weight: 600;
   min-height: 44px;                      /* touch target */
@@ -644,7 +667,9 @@ main {
 
   .main-nav .nav-submenu a {
     padding: var(--space-2) var(--space-4);
+    padding-inline-start: var(--space-4);  /* reset mobile indent */
     border-radius: 0;
+    border-inline-start: none;             /* reset mobile accent border */
     background-color: transparent;
     min-height: 0;
     display: block;
@@ -712,7 +737,7 @@ main {
 /* ============================= */
 
 .site-footer {
-  background-color: rgba(18, 18, 18, 0.8);
+  background-color: rgba(17, 17, 17, 0.82);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -872,6 +897,21 @@ main {
   margin-top: var(--space-8);
 }
 
+/* Hero CTAs: bigger, bolder than footer placement */
+.hero-cta .footer-contact-link {
+  padding: var(--space-4) var(--space-8);
+  min-height: 52px;
+  font-size: 1.1rem;
+  border-color: var(--color-accent-border);
+  background-color: var(--color-background-medium);
+}
+
+.hero-cta .footer-contact-link:hover,
+.hero-cta .footer-contact-link:focus {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
 .section-subtitle {
   font-size: var(--text-md);
   color: var(--color-text-secondary);
@@ -916,9 +956,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-2) var(--space-6);
-  padding-top: var(--space-3);
-  padding-bottom: var(--space-3);
+  gap: var(--space-3) var(--space-6);        /* row gap bumped: 12px (was 8px) */
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
 }
 
 .risk-barrier-pill {
@@ -982,15 +1022,16 @@ main {
 }
 
 .hero h1 {
-  max-width: 20ch;
+  max-width: 26ch;                           /* wider for Hebrew glyphs + natural line breaks */
 }
 
 .hero h2 {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 400;
-  color: var(--color-text-secondary);
-  max-width: 60ch;
+  font-size: clamp(1.05rem, 3vw, 1.5rem);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  max-width: 55ch;
   margin-top: var(--space-4);
+  opacity: 0.88;                             /* softer than h1 without killing readability */
 }
 
 /* ============================= */
@@ -1385,7 +1426,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(220deg, rgba(18, 18, 18, 0.15) 0%, rgba(18, 18, 18, 0.65) 65%, rgba(18, 18, 18, 0.85) 100%);
+  background: linear-gradient(220deg, rgba(17, 17, 17, 0.15) 0%, rgba(17, 17, 17, 0.65) 65%, rgba(17, 17, 17, 0.85) 100%);
 }
 
 .founder-portrait img {
@@ -1766,6 +1807,7 @@ ul.clean li:first-child {
 .highlight-tier {
   background: var(--color-accent-subtle);
   border-inline: 1px solid var(--color-accent-border);
+  box-shadow: inset 0 0 40px rgba(217, 119, 6, 0.03);  /* subtle warm glow on recommended column */
 }
 
 /* Status badges (✔ / —) */
