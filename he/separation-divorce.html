@@ -56,7 +56,7 @@
     </header>
 
     <main id="main-content" tabindex="-1" role="main">
-        <section class="hero">
+        <section class="hero" data-hero-img="https://images.unsplash.com/photo-1752346102864-3a5f3bbe982e?w=1280&h=720&fit=crop&q=80&fm=webp">
             <div class="container">
                 <h1>לפני שמוסרים מסמכים או מיילים — נועלים את המכשיר והחשבונות ביום אחד.</h1>
                 <h2>פנים-אל-פנים בלבד. אין ענן &bull; אין גישה מרחוק &bull; אין לוגים.</h2>
@@ -256,22 +256,6 @@
     </footer>
     <script src="../assets/js/navigation.js"></script>
     <script src="../assets/js/language.js"></script>
-    <script>
-        (function () {
-            var hero = document.querySelector('.hero');
-            if (!hero) return;
-
-            var heroImages = [
-                'https://images.unsplash.com/photo-1752346102864-3a5f3bbe982e?w=1600&h=900&fit=crop&q=80'
-            ];
-
-            var randomIndex = Math.floor(Math.random() * heroImages.length);
-            var selectedImage = heroImages[randomIndex].replace('w=1600', 'w=' + (window.innerWidth < 768 ? 800 : 1600));
-
-            var imageValue = 'url("' + selectedImage + '")';
-            hero.style.setProperty('--hero-background-image', imageValue);
-            hero.style.backgroundImage = imageValue;
-        })();
-    </script>
+    <script src="../assets/js/hero.js" defer></script>
 </body>
 </html>
