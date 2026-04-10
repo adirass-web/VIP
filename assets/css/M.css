@@ -282,7 +282,7 @@ strong {
 
 @media (min-width: 768px) {
   .container {
-    padding: var(--space-12) 0;
+    padding: var(--space-6) 0;
   }
 }
 
@@ -1076,7 +1076,11 @@ main {
 /* ============================= */
 
 .faq {
-  padding-block: var(--space-4);
+  padding-block: 0;
+}
+
+.faq .container {
+  padding-block: var(--space-2) var(--space-4);
 }
 
 .faq h2 {
