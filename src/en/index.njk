@@ -1,0 +1,141 @@
+---
+layout: layouts/base.njk
+permalink: "/en/index.html"
+slug: ""
+page_id: "index"
+title: "Personal Cyber Shield | Elite Digital Protection"
+description: "Elite, in-person digital security for high-risk personal and business disputes. We harden your devices and accounts to protect your digital life."
+meta_keywords: "personal privacy, personal cybersecurity, digital protection, device hardening, high-risk disputes, divorce, separation, inheritance, business dispute"
+og_description: "Elite, in-person digital security for high-risk individuals facing disputes, divorce, or corporate espionage."
+og_image: "https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1200&h=630&fit=crop&q=80"
+canonical: "https://www.magenvip.tech/en/"
+heroImg: "https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1280&h=720&fit=crop&q=80&fm=webp"
+---
+{% set t = i18n[locale] %}
+        <section class="hero" data-hero-img="{{ heroImg }}">
+            <div class="container">
+                <h1>Your Phone Knows Everything.</h1>
+                <h2>Photos. Locations. Chats. Finances. Desires.
+                Everything can be twisted and used against you.</h2>
+                <nav class="footer-contact-links hero-cta" aria-label="{{ t.hero_cta_label }}">
+                    <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'hero'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon">
+                            <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
+                        </span>
+                        <span class="label">WhatsApp</span>
+                    </a>
+                    <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'hero'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon">
+                            <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
+                        </span>
+                        <span class="label">Signal</span>
+                    </a>
+                </nav>
+                            <p class="photo-credit">Photo: <a href="https://unsplash.com/@miquel_parera_mila?utm_source=magenvip&utm_medium=referral" target="_blank" rel="noopener noreferrer">Miquel Parera</a> / <a href="https://unsplash.com/photos/photo-1609159758419-12a8e90934c6" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2>What Happens on Protection Day</h2>
+                <div class="steps">
+                    <div class="step">
+                        <h3>Your Threat Map</h3>
+                        <p>Face-to-face: mapping every device, account, and communication channel at risk — tailored to your specific situation.</p>
+                    </div>
+                    <div class="step">
+                        <h3>Full Hardening</h3>
+                        <p>Hundreds of device, app, and account configurations in your presence. Hardware key issued. Access locked down.</p>
+                    </div>
+                    <div class="step">
+                        <h3>Training + Leak Check</h3>
+                        <p>You leave with a phone that cannot be breached, accounts that cannot be accessed, and a communications channel your attorney can trust.</p>
+                    </div>
+                </div>
+                <p class="scarcity-note">Dr. Tabansky works with 3–6 clients per month. Availability by appointment.</p>
+            </div>
+        </section>
+
+        <section class="personas">
+            <div class="container">
+                <h2>Common High-Pressure Situations</h2>
+                <p class="personas-intro">Choose the scenario that matches your reality to see how we neutralise the risks and harden your devices.</p>
+                <div class="nav-subpage-links" role="list">
+                    <a href="/en/separation-divorce.html" class="nav-subpage-link" role="listitem">
+                        Separation &amp; Divorce
+                        <span class="subpage-outcome">Lock down evidence, devices, and accounts before the other side gets to them.</span>
+                    </a>
+                    <a href="/en/business-dispute.html" class="nav-subpage-link" role="listitem">
+                        Business Dispute
+                        <span class="subpage-outcome">Prevent leaks, control files and email, and stabilise your negotiating position.</span>
+                    </a>
+                    <a href="/en/inheritance-clash.html" class="nav-subpage-link" role="listitem">
+                        Inheritance Clash
+                        <span class="subpage-outcome">Protect wills, powers of attorney, and attorney communications from manipulation.</span>
+                    </a>
+                    <a href="/en/commercial-spying.html" class="nav-subpage-link" role="listitem">
+                        Commercial Spying
+                        <span class="subpage-outcome">Secure IP, executive communications, and sensitive negotiations.</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <div class="container">
+                <h2><a href="/en/founder.html">Why Trust Us?</a></h2>
+                <ul>
+                    <li>
+                        <a class="why-trust-link" href="/en/founder.html">Leading Israeli expert with two decades of international cyber warfare experience</a>
+                    </li>
+                    <li>Hardening and protection playbooks trusted by security agencies and Fortune 500 companies</li>
+                    <li>No remote access—everything stays on your device</li>
+                    <li>Completely confidential, face-to-face service</li>
+                    <li>At the end: a signed Certificate of Hardening — professional confirmation for your file.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>
+                    <button type="button" class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="{{ t.faq_list_id }}">
+                        Frequently Asked Questions
+                    </button>
+                </h2>
+                <div class="accordion" id="{{ t.faq_list_id }}" hidden>
+                    <details>
+                        <summary>Can you hack my partner back?</summary>
+                        <p>No. We provide premium, 100% legal defense services tailored for discerning individuals facing high-risk situations.</p>
+                    </details>
+                    <details>
+                        <summary>Is this like an antivirus?</summary>
+                        <p>No. Antivirus software, VPNs, and password managers are generic tools. Our service provides elite, tailored digital hardening specifically for you, ensuring a much higher level of security and privacy.</p>
+                    </details>
+                    <details>
+                        <summary>Do you copy my data?</summary>
+                        <p>Never. Your privacy is our top priority. We use no cloud, no remote access, and no logs. All your data remains securely on your devices.</p>
+                    </details>
+                    <details>
+                        <summary>Can this be done online?</summary>
+                        <p>No. Remote access is a backdoor into your digital life. We believe it defeats the purpose of true security.</p>
+                    </details>
+                    <details>
+                        <summary>Will it be difficult to use my computer and phone?</summary>
+                        <p>Absolutely not. Your devices will function normally. We implement seamless, proactive security settings that prevent common attacks, and we ensure you have the knowledge to maintain this protection effortlessly.</p>
+                    </details>
+                    <details>
+                        <summary>Will you teach me what to do in daily life?</summary>
+                        <p>Yes. Education is an integrated and core component of our in-person service. We empower you with the practical knowledge to protect yourself from common threats and confidently maintain your digital life every day.</p>
+                    </details>
+                    <details>
+                        <summary>Can I do this myself?</summary>
+                        <p>A <strong>Do-It-Yourself (DIY)</strong> approach is possible, and excellent public resources exist for those starting out (such as the <a href="https://ssd.eff.org/" target="_blank">EFF's Surveillance Self-Defense Guide</a>). However, for individuals in high-risk situations, DIY often becomes a challenging and high-stakes journey fraught with potential pitfalls and unforeseen issues. Our professional service delivers an <strong>expert, reliable, and swift solution</strong>, eliminating the unnecessary risk and extensive time investment of trial and error.</p>
+                    </details>
+                    <details>
+                        <summary>How much does it cost?</summary>
+                        <p>The Personal Shield starts at ₪15,000. An initial Threat Assessment costs ₪3,500 and is credited in full toward any protection tier purchased within 14 days.</p>
+                    </details>
+                </div>
+            </div>
+        </section>

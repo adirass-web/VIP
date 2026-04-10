@@ -1,0 +1,114 @@
+{% set t = i18n[locale] %}
+{% set enLink = "/en/" + (slug + ".html" if slug else "") %}
+{% set heLink = "/he/" + (slug + ".html" if slug else "") %}
+{% set ruLink = "/ru/" + (slug + ".html" if slug else "") %}
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    {% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords }}">{% endif %}
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ t.og_site_name }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ og_description if og_description else description }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:image" content="{{ og_image }}">
+    <meta property="og:locale" content="{{ og_locale }}">
+    <link rel="canonical" href="{{ canonical }}">
+
+    <title>{{ title }}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/M.css">
+</head>
+<body{% if body_class %} class="{{ body_class }}"{% endif %}>
+
+    <a class="skip-link" href="#main-content">{{ t.skip_link }}</a>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/{{ locale }}/" class="site-logo" aria-label="{{ t.logo_label }}">{{ t.logo_text }} <span class="site-logo-accent">{{ t.logo_accent }}</span></a>
+                <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation">
+                    <span class="nav-toggle-icon" aria-hidden="true"></span>
+                    <span class="sr-only">{{ t.menu_label }}</span>
+                </button>
+                <div class="header-navigation" id="site-navigation" data-nav-menu>
+                    <nav class="language-switcher" aria-label="{{ t.lang_switcher_label }}">
+                        <a href="{{ enLink }}"{% if locale == "en" %} aria-current="page" class="active"{% endif %} data-lang-option="en">
+                            <img src="../assets/img/icons/flag-uk.svg" alt="" aria-hidden="true">
+                            <span{% if locale != "en" %} lang="en" dir="ltr"{% endif %}>{{ t.lang_en }}</span>
+                        </a>
+                        <a href="{{ ruLink }}"{% if locale == "ru" %} aria-current="page" class="active"{% endif %} data-lang-option="ru">
+                            <img src="../assets/img/icons/flag-ru.svg" alt="" aria-hidden="true">
+                            <span lang="ru" dir="ltr">{{ t.lang_ru }}</span>
+                        </a>
+                        <a href="{{ heLink }}"{% if locale == "he" %} aria-current="page" class="active"{% endif %} data-lang-option="he">
+                            <img src="../assets/img/icons/flag-il.svg" alt="" aria-hidden="true">
+                            <span lang="he" dir="rtl">{{ t.lang_he }}</span>
+                        </a>
+                    </nav>
+                    <nav class="main-nav" aria-label="{{ t.main_nav_label }}">
+                        <a href="/{{ locale }}/"{% if page_id == "index" %} aria-current="page" class="active"{% endif %}>{{ t.nav_home }}</a>
+                        <details class="nav-group">
+                            <summary>{{ t.nav_situations }}</summary>
+                            <div class="nav-submenu">
+                                <a href="/{{ locale }}/separation-divorce.html">{{ t.nav_separation }}</a>
+                                <a href="/{{ locale }}/business-dispute.html">{{ t.nav_business }}</a>
+                                <a href="/{{ locale }}/inheritance-clash.html">{{ t.nav_inheritance }}</a>
+                                <a href="/{{ locale }}/commercial-spying.html">{{ t.nav_spying }}</a>
+                            </div>
+                        </details>
+                        <a href="/{{ locale }}/founder.html">{{ t.nav_founder }}</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1" role="main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <section class="cta" id="contact">
+                <h2>{{ t.footer_cta_h2 }}</h2>
+                <p class="cta-intro">{{ t.footer_cta_intro }}</p>
+                <p>{{ t.footer_cta_p2 }}</p>
+            </section>
+            <nav class="footer-contact-links" aria-label="{{ t.footer_cta_nav_label }}">
+                <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">
+                    <span aria-hidden="true" class="icon">
+                        <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
+                    </span>
+                    <span class="label">WhatsApp</span>
+                </a>
+                <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">
+                    <span aria-hidden="true" class="icon">
+                        <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
+                    </span>
+                    <span class="label">Signal</span>
+                </a>
+            </nav>
+            <div class="footer-bottom"><p class="footer-legal">
+                <a href="/terms.html">{{ t.footer_terms }}</a>
+                <span aria-hidden="true">•</span>
+                <a href="/privacy.html">{{ t.footer_privacy }}</a>
+            </p>
+            <p>{{ t.footer_copyright }}</p></div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/hero.js" defer></script>
+
+</body>
+</html>
