@@ -1203,11 +1203,13 @@ main {
   font-size: var(--text-base);
   color: var(--color-text-secondary);
   max-width: 55ch;
+  margin-inline: auto;
   margin-block-end: var(--space-1);
 }
 
 .cta p {
   max-width: 55ch;
+  margin-inline: auto;
 }
 
 
@@ -1762,6 +1764,16 @@ main {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.media-card__masthead--tall {
+  padding: var(--space-6) var(--space-4) var(--space-3);
+  background: var(--color-bg-light);
+  justify-content: center;
+}
+
+.media-card__masthead--tall img {
+  max-height: 2.5rem;
 }
 
 .media-card__body {
