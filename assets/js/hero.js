@@ -14,7 +14,7 @@
     'w=' + (window.innerWidth < 768 ? 640 : 1280)
   );
 
-  hero.style.setProperty('--hero-background-image', 'url("' + img + '")');
+  hero.style.setProperty('--hero-bg', 'url("' + img + '")');
 })();
 
 (function () {
