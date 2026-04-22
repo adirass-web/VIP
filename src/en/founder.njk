@@ -8,6 +8,7 @@ og_image: "https://images.pexels.com/photos/17875569/pexels-photo-17875569.jpeg?
 canonical: "https://www.magenvip.tech/en/founder.html"
 body_class: "founder-page"
 ---
+{% set t = i18n[locale] %}
         <div class="founder-wrapper" id="about-founder">
             <header>
                 <h1>About the Founder</h1>
@@ -144,7 +145,22 @@ body_class: "founder-page"
             </section>
 
             <section class="cta" aria-label="cta" id="contact">
-                <h3>Get a Free Consultation</h3>
-                <p class="muted">Coordinate a confidential session. Use the secure messaging options in the footer to reach Dr. Tabansky.</p>
+                <h3>Book a Confidential Consultation</h3>
+                <p class="muted">Protection starts at ₪15,000. Discuss your situation directly with Dr. Tabansky — slots are limited.</p>
+                <p class="scarcity-note">3–6 clients per month. Appointment required.</p>
+                <nav class="footer-contact-links hero-cta" aria-label="{{ t.hero_cta_label }}">
+                    <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'founder-cta'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon">
+                            <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
+                        </span>
+                        <span class="label">WhatsApp</span>
+                    </a>
+                    <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'founder-cta'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon">
+                            <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
+                        </span>
+                        <span class="label">Signal</span>
+                    </a>
+                </nav>
             </section>
         </div>
