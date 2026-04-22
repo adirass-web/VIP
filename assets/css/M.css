@@ -25,6 +25,7 @@
   /* Text */
   --color-text-primary:   #eaeaee;
   --color-text-secondary: #9898a8;
+  --color-text-muted:     #9898a8;
 
   /* Accent */
   --color-accent:       #c2650a;
@@ -84,6 +85,7 @@
 
     --color-text-primary:   #1a1a1e;
     --color-text-secondary: #5a5a68;
+    --color-text-muted:     #5a5a68;
 
     --color-accent:       #b35a08;
     --color-accent-hover: #984d06;

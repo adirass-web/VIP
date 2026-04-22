@@ -137,7 +137,7 @@ heroImg: "https://images.unsplash.com/photo-1752346102864-3a5f3bbe982e?w=1280&h=
 
         <section class="scenario-cta">
             <div class="container">
-                <p class="scenario-cta-heading">Ready to protect yourself?</p>
+                <h2 class="scenario-cta-heading">Ready to protect yourself?</h2>
                 <p class="scarcity-note">Dr. Tabansky works with 3–6 clients per month. Availability by appointment.</p>
                 <nav class="footer-contact-links hero-cta" aria-label="{{ t.hero_cta_label }}">
                     <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'post-table'}})}catch(e){}">
@@ -161,6 +161,20 @@ heroImg: "https://images.unsplash.com/photo-1752346102864-3a5f3bbe982e?w=1280&h=
                 <h2>Not sure about the scope? Start with a Threat Assessment.</h2>
                 <p>A one-hour diagnostic session, face-to-face or secured. Dr. Tabansky maps your digital exposure and delivers a written report with precise recommendations.</p>
                 <span class="threat-assessment-price">₪3,500 — credited in full toward any protection tier purchased within 14 days.</span>
+                <nav class="footer-contact-links hero-cta" aria-label="{{ t.hero_cta_label }}">
+                    <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'threat-assessment'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon">
+                            <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
+                        </span>
+                        <span class="label">WhatsApp</span>
+                    </a>
+                    <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'threat-assessment'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon">
+                            <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
+                        </span>
+                        <span class="label">Signal</span>
+                    </a>
+                </nav>
             </div>
         </section>
 
