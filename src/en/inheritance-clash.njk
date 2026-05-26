@@ -239,11 +239,11 @@ heroImg: "https://images.unsplash.com/photo-1601718881445-f9a54de369d2?w=1280&h=
                     </div>
                 </div>
                 <nav class="footer-contact-links hero-cta" aria-label="Contact for ongoing protection">
-                    <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" rel="noopener noreferrer">
+                    <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'ongoing-protection'}})}catch(e){}">
                         <span aria-hidden="true" class="icon"><img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true"></span>
                         <span class="label">WhatsApp</span>
                     </a>
-                    <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" rel="noopener noreferrer">
+                    <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'ongoing-protection'}})}catch(e){}">
                         <span aria-hidden="true" class="icon"><img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true"></span>
                         <span class="label">Signal</span>
                     </a>
