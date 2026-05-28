@@ -22,6 +22,8 @@
   "signal_label": "Chat on Signal",
   "wa_url": "https://wa.me/972533366276?text=Hello%2C%20I%27d%20like%20a%20private%20device%20check.%20Can%20we%20schedule%20today%20or%20tomorrow%3F",
   "signal_url": "https://signal.me/#p/+972533366276?text=Hello%2C%20I%27d%20like%20a%20private%20device%20check.%20Can%20we%20schedule%20today%20or%20tomorrow%3F",
+  "wa_url_bare": "https://wa.me/972533366276",
+  "signal_url_bare": "https://signal.me/#p/+972533366276",
   "footer_cta_nav_label": "Direct messaging options",
   "footer_cta_h2": "Get your Personal Cyber Shield.",
   "footer_cta_intro": "Protect yourself before they get in and twist your private life against you and your loved ones.",
