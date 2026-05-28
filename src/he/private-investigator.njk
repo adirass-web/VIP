@@ -1,0 +1,267 @@
+---
+layout: layouts/base.njk
+permalink: "/he/private-investigator.html"
+slug: "private-investigator"
+title: "הגנה ממחקר פרטי | מגן VIP"
+description: "מה מחקר פרטי יכול לגלות על הטלפון, החשבונות והמיקום שלך — ואיך סוגרים את כל הדלתות ביום אחד."
+og_description: "מחקר פרטי אינו צריך לפרוץ. הוא משתמש בגישה שכבר הענקת. הנה מה שחשוף ואיך נועלים את הכל."
+og_image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200&h=630&fit=crop&q=80"
+canonical: "https://www.magenvip.tech/he/private-investigator.html"
+heroImg: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1280&h=720&fit=crop&q=80&fm=webp"
+meta_keywords: "הגנה מחוקר פרטי, מחקר פרטי גירושין, הגנת פרטיות, אבטחת מכשיר, חשיפה דיגיטלית"
+body_class: "rtl-centered"
+page_schema: |
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "האם מחקר פרטי יכול לפרוץ לטלפון שלי?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "לא באופן חוקי. פריצה מרחוק לטלפון ללא הסכמה היא עבירה פלילית בישראל. הסיכון האמיתי הוא גישה שהוענקה בתוך הזוגיות ולא בוטלה: חשבון iCloud משותף, שיתוף מיקום פעיל, WhatsApp Web פתוח על מחשב שנשאר בבית, או אפליקציות משפחה שממשיכות לשדר."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "מה מחקר פרטי יכול לגלות עלי חוקית?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "מחקר פרטי יכול לתעד: מיקום בזמן אמת דרך אפליקציות שיתוף שלא כובו, תמונות מאלבום משותף בענן, היסטוריית מיקומים מחשבון Google משפחתי, וכל מידע הגלוי בחשבון שהרשאותיו לא בוטלו. המכנה המשותף: גישה שנוצרה מרצון בתוך מערכת היחסים."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "מה עלי לעשות אם אני חושד שמחקר פרטי עוקב אחרי?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ראשית — אל תמחק כלום. מחיקת תוכן לפני הליך משפטי עלולה להיחשב להשמדת ראיות. שנית, אל תשתף מידע רגיש דרך ערוצים שאינך בטוח שהם מאובטחים — כולל עם עורך הדין שלך. שלישית, בצע ביקורת על כל מכשיר וחשבון עם מומחה לפני שתקבל כל החלטה."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "כמה עולה הגנה ממחקר פרטי?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "הערכת איום — שלוש שעות פנים מול פנים עם דו\"ח כתוב — עולה 3,500 שקל ומזוכה במלואה לכל מסלול הגנה תוך 14 יום. מסלול המגן האישי (15,000 שקל) כולל נעילה מלאה של מכשיר ראשי, כל החשבונות, ומפתח חומרה שמונע גישה גם אם הסיסמה נחשפת."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם הפגישה עם ד\"ר טבנסקי סודית?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "לחלוטין. אין טפסים, אין CRM, אין צד שלישי. יצירת קשר ופגישה דרך WhatsApp או Signal בלבד — מוצפן מקצה לקצה. ד\"ר טבנסקי אינו מנהל רישום שמות לקוחות. כל מה שנאמר בפגישה נשאר בפגישה."
+        }
+      }
+    ]
+  }
+---
+{% set t = i18n[locale] %}
+
+<section class="hero" data-hero-img="{{ heroImg }}">
+    <div class="container">
+        <h1>מחקר פרטי אינו צריך לפרוץ לטלפון שלך.</h1>
+        <h2>הוא משתמש בגישה שכבר נתת — ומעולם לא ביטלת.</h2>
+        <p class="hero-anchor">כל אפליקציית שיתוף, כל חשבון ענן, כל מכשיר שנשאר בבית — הם הדלת הפתוחה.</p>
+        <nav class="footer-contact-links hero-cta" aria-label="קביעת ייעוץ">
+            <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'hero'}})}catch(e){}">
+                <span aria-hidden="true" class="icon">
+                    <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
+                </span>
+                <span class="label">WhatsApp</span>
+            </a>
+            <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'hero'}})}catch(e){}">
+                <span aria-hidden="true" class="icon">
+                    <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
+                </span>
+                <span class="label">Signal</span>
+            </a>
+        </nav>
+    </div>
+</section>
+
+<section class="risk-barriers" aria-label="ערבויות אבטחה">
+    <div class="container">
+        <span class="risk-barrier-pill">אין ענן</span>
+        <span class="risk-barrier-pill">אין גישה מרחוק</span>
+        <span class="risk-barrier-pill">אין לוגים</span>
+        <span class="risk-barrier-pill">עבודה רק בנוכחותך</span>
+    </div>
+</section>
+
+<section class="scenario-details">
+    <div class="container">
+        <h2>מה מחקר פרטי יכול לגלות עלייך?</h2>
+        <p>מחקר פרטי בסכסוך גירושין או עסקי אינו יכול לפרוץ לטלפון שלך מרחוק — זו עבירה פלילית. הסיכון האמיתי הוא גישה שהוענקה בתוך הזוגיות ומעולם לא בוטלה: שיתוף מיקום פעיל, חשבון ענן משותף, מכשיר שנשאר בבית. הדלת כבר פתוחה — צריך רק לסגור אותה.</p>
+        <ul>
+            <li><strong>מיקום בזמן אמת</strong> — שיתוף מיקום ב-WhatsApp, Find My, Google Maps או אפליקציות משפחה שלא כובו ממשיכות לשדר את תנועותיך.</li>
+            <li><strong>חשבונות ענן</strong> — גיבויי iCloud, Google Drive, Dropbox שאינם מוגנים ב-MFA חזק נגישים דרך אישורים ישנים.</li>
+            <li><strong>אלבומי תמונות משותפים</strong> — אלבום iCloud או Google Photos משותף שלא הוסר ממשיך לשדר תמונות, מיקומים ותאריכים.</li>
+            <li><strong>מכשירי בית חכם</strong> — מצלמות, פעמוני דלת ורמקולים חכמים שנרשמו על שמו עדיין שולחים לו התראות.</li>
+            <li><strong>חשבונות משפחתיים</strong> — Apple Family Sharing, Google Family Link, Netflix — חשיפת פעילות שוטפת, הרגלים ולפעמים קניות.</li>
+            <li><strong>GPS של הרכב</strong> — חשבון ספק GPS המשותף עדיין מציג את מיקום הרכב בזמן אמת.</li>
+        </ul>
+        <p><strong>כל אחד מהאלה הוא ראיה חוקית לגמרי בהליך משפטי.</strong></p>
+    </div>
+</section>
+
+<section class="real-risk" aria-label="כיצד הדליפה מגיעה בפועל">
+    <div class="container">
+        <h2>המחקר שנעשה בלי שידעת</h2>
+        <p class="real-risk-intro">אף אחד מהמקרים הבאים לא כלל פריצה טכנית. לא שכרו האקר. לא פוצחו סיסמאות. בכל מקרה, הגישה כבר הייתה שם — ממתינה.</p>
+        <div class="vignette-grid">
+
+            <div class="vignette">
+                <span class="vignette-app">Google Maps — שיתוף מיקום</span>
+                <h3>שלוש שנות מיקום על מסך אחד</h3>
+                <p>שנתיים לפני הפרידה הם הפעילו שיתוף מיקום ב-Google Maps כדי לתאם איסוף ילדים. הוא שכח שהיא עוד רואה את המיקום שלו. היא לא שכחה. במשך חודשים לאחר שעזב את הבית, היא ידעה היכן הוא נמצא בכל שעה: עם מי הוא נפגש, אם הוא ישן בכתובת שסיפר לבית המשפט, ואם לא. כשהוא הבין — כבר הוגשו המסמכים.</p>
+                <span class="vignette-source">מבוסס על מקרה אמיתי, הפרטים הוסתרו כדי להגן על זהותם של המעורבים.</span>
+            </div>
+
+            <div class="vignette">
+                <span class="vignette-app">iCloud — אלבום משותף</span>
+                <h3>הצילומים שהמשיכו לעלות</h3>
+                <p>לפני חמש שנים פתחו אלבום iCloud משותף לחופשות ואירועי המשפחה. אחרי הפרידה היא עברה לדירה חדשה. הטלפון שלה המשיך לגבות לאלבום אוטומטית. כל תמונה שצילמה — כולל פגישה עם עורכת הדין שלה בבית קפה ותמונות מתוך מסמכים שצילמה — הופיעה על הטלפון שלו תוך שניות. הוא ראה את כל ההכנות שלה להליך לפני שדיברו עם בית המשפט.</p>
+                <span class="vignette-source">מבוסס על מקרה אמיתי, הפרטים הוסתרו כדי להגן על זהותם של המעורבים.</span>
+            </div>
+
+            <div class="vignette">
+                <span class="vignette-app">GPS רכב — חשבון ספק</span>
+                <h3>הרכב שמעד עליה</h3>
+                <p>הרכב שלה היה רשום על שמו. מערכת ה-GPS של הרכב — שהופעלה לפני שנים לצורך גילוי גניבה — שלחה התראות מיקום לאפליקציה בטלפון שלו. הוא עקב אחר תנועותיה בזמן שהיא פגשה עדים, ביקרה בבנק ועברה בין כתובות שלא הייתה אמורה לדעת עליהן. היא גילתה זאת רק כשעורך הדין שלו ציטט מידע שיכול היה להגיע רק מעקיבה פיזית — או דיגיטלית.</p>
+                <span class="vignette-source">מבוסס על מקרה אמיתי, הפרטים הוסתרו כדי להגן על זהותם של המעורבים.</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="scenario-details">
+    <div class="container">
+        <h2>מה סוגרים ביום ההגנה</h2>
+        <p>כל נקודת גישה שנפתחה בתוך מערכת היחסים — נסקרת ונסגרת בנוכחותך, ביום אחד.</p>
+        <ul>
+            <li>ביטול כל שיתופי המיקום הפעילים בכל האפליקציות</li>
+            <li>הסרה מחשבונות משפחתיים: Apple, Google, Microsoft, Samsung ואחרים</li>
+            <li>אבטחת חשבונות ענן עם MFA חזק ומפתח חומרה — הסרת גישה לסיסמאות ישנות</li>
+            <li>סגירת אלבומי תמונות ומסמכים משותפים</li>
+            <li>בדיקת מכשירי בית חכם ומצלמות — זיהוי ואלגוריתם ניתוק</li>
+            <li>בדיקת חשבונות GPS ורכב חכם — ביטול גישה שנותרה</li>
+            <li>הגדרת ערוץ תקשורת מאובטח עם עורך הדין שלך</li>
+            <li>תעודת הקשחה חתומה — תיעוד מלא של כל פעולה, לתיק המשפטי שלך</li>
+        </ul>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container">
+        <h2>
+            <button type="button" class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="faq-list-pi-he">
+                שאלות נפוצות
+            </button>
+        </h2>
+        <div class="accordion" id="faq-list-pi-he" hidden>
+
+            <details>
+                <summary>האם מחקר פרטי יכול לפרוץ לטלפון שלי?</summary>
+                <p>לא באופן חוקי. פריצה מרחוק לטלפון ללא הסכמה היא עבירה פלילית בישראל. הסיכון האמיתי הוא גישה שהוענקה בתוך הזוגיות ולא בוטלה: חשבון iCloud משותף, שיתוף מיקום פעיל, WhatsApp Web פתוח על מחשב שנשאר בבית, או אפליקציות משפחה שממשיכות לשדר. זו הדלת שאנחנו סוגרים.</p>
+            </details>
+
+            <details>
+                <summary>מה מחקר פרטי יכול לגלות עלי חוקית?</summary>
+                <p>מחקר פרטי יכול לתעד: מיקום בזמן אמת דרך אפליקציות שיתוף שלא כובו, תמונות מאלבום משותף בענן, היסטוריית מיקומים מחשבון Google משפחתי, ופעילות בכל חשבון שהרשאותיו לא בוטלו. המכנה המשותף: גישה שנוצרה מרצון בתוך מערכת היחסים, ומעולם לא נסגרה.</p>
+            </details>
+
+            <details>
+                <summary>מה עלי לעשות אם אני חושד שמחקר פרטי עוקב אחרי?</summary>
+                <p>ראשית — אל תמחק כלום. מחיקת תוכן לפני הליך משפטי עלולה להיחשב להשמדת ראיות. שנית, אל תשתף מידע רגיש דרך ערוצים שאינך בטוח שהם מאובטחים — כולל עם עורך הדין שלך. שלישית, בצע ביקורת על כל מכשיר וחשבון עם מומחה לפני שתקבל כל החלטה.</p>
+            </details>
+
+            <details>
+                <summary>כמה עולה הגנה ממחקר פרטי?</summary>
+                <p>הערכת איום — שלוש שעות פנים מול פנים עם דו"ח כתוב — עולה ₪3,500 ומזוכה במלואה לכל מסלול הגנה תוך 14 יום. מסלול המגן האישי (₪15,000) כולל נעילה מלאה של מכשיר ראשי, כל החשבונות, ומפתח חומרה שמונע גישה גם אם הסיסמה נחשפת.</p>
+            </details>
+
+            <details>
+                <summary>האם הפגישה עם ד"ר טבנסקי סודית?</summary>
+                <p>לחלוטין. אין טפסים, אין CRM, אין צד שלישי. יצירת קשר ופגישה דרך WhatsApp או Signal בלבד — מוצפן מקצה לקצה. ד"ר טבנסקי אינו מנהל רישום שמות לקוחות. כל מה שנאמר בפגישה נשאר בפגישה.</p>
+            </details>
+
+            <details>
+                <summary>האם ניתן להגיע לפגישה מבלי שבן/בת הזוג ידע?</summary>
+                <p>כן. הפגישה מתקיימת במקום בחירתך. אין אישורים בדוא"ל, אין חיובים בשם מגן VIP בכרטיס האשראי, ואין תיעוד שיכול להיות מיורט. תואם אך ורק דרך WhatsApp או Signal בטלפון שאתה בוחר.</p>
+            </details>
+
+        </div>
+        <p class="faq-more"><a href="/he/faq.html">כל השאלות הנפוצות ←</a></p>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <div class="container">
+        <h2>מה קורה ביום ההגנה</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>מיפוי החשיפה שלך</h3>
+                <p>פנים-אל-פנים: מיפוי כל מכשיר, חשבון וערוץ תקשורת שעלול לשמש נגדך — מותאם למצב הספציפי שלך.</p>
+            </div>
+            <div class="step">
+                <h3>נעילה מלאה</h3>
+                <p>כל נקודת גישה נסגרת בנוכחותך. מפתח חומרה מונפק ומותקן. שיתופי מיקום, חשבונות ענן ואפליקציות משפחה — מנותקים.</p>
+            </div>
+            <div class="step">
+                <h3>ערוץ מאובטח + תיעוד</h3>
+                <p>יוצאים עם ערוץ תקשורת מוגן לך ולעורך הדין שלך — ותעודת הקשחה חתומה לתיק המשפטי.</p>
+            </div>
+        </div>
+        <p class="scarcity-note">ד"ר טבנסקי עובד עם 3–6 לקוחות בחודש. זמינות בתיאום מראש.</p>
+    </div>
+</section>
+
+<section class="threat-assessment">
+    <div class="container">
+        <h2>לא בטוח מה חשוף? התחל עם הערכת איום.</h2>
+        <p>שלוש שעות פנים-אל-פנים. ד"ר טבנסקי ממפה את כל החשיפות הדיגיטליות שלך ומפיק דו"ח כתוב עם המלצות מדויקות.</p>
+        <span class="threat-assessment-price">₪3,500 — מזוכה במלואו לכל מסלול הגנה שנרכש תוך 14 יום.</span>
+        <nav class="footer-contact-links hero-cta" aria-label="הזמינו ייעוץ">
+            <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'threat-assessment'}})}catch(e){}">
+                <span aria-hidden="true" class="icon">
+                    <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
+                </span>
+                <span class="label">WhatsApp</span>
+            </a>
+            <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'threat-assessment'}})}catch(e){}">
+                <span aria-hidden="true" class="icon">
+                    <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
+                </span>
+                <span class="label">Signal</span>
+            </a>
+        </nav>
+    </div>
+</section>
+
+<section class="other-scenarios">
+    <div class="container">
+        <h2>מצבים נוספים שאנו מגנים עליהם</h2>
+        <div class="nav-subpage-links" role="list">
+            <a href="/he/separation-divorce.html" class="nav-subpage-link" role="listitem">
+                גירושין ופרידה
+                <span class="subpage-outcome">נעילת ראיות, מכשירים וחשבונות לפני שהצד השני מגיע אליהם.</span>
+            </a>
+            <a href="/he/business-dispute.html" class="nav-subpage-link" role="listitem">
+                סכסוך עסקי
+                <span class="subpage-outcome">מניעת דליפות, שליטה בקבצים ובמייל, ייצוב עמדת המשא ומתן.</span>
+            </a>
+            <a href="/he/inheritance-clash.html" class="nav-subpage-link" role="listitem">
+                סכסוך ירושה
+                <span class="subpage-outcome">הגנה על צוואות, ייפויי כוח ותקשורת עם עורכי דין.</span>
+            </a>
+            <a href="/he/commercial-spying.html" class="nav-subpage-link" role="listitem">
+                ריגול מסחרי
+                <span class="subpage-outcome">אבטחת קניין רוחני, תקשורת מנהלים ומשא ומתן רגיש.</span>
+            </a>
+        </div>
+    </div>
+</section>

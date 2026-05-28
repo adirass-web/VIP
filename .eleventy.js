@@ -5,6 +5,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
+  eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy("llms.txt");
   // Root HTML pages: language redirect, 404, legal
   eleventyConfig.addPassthroughCopy("index.html");
   eleventyConfig.addPassthroughCopy("404.html");

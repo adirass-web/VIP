@@ -1,0 +1,55 @@
+# Magen VIP — Personal Cyber Shield
+
+> Elite in-person digital security for individuals in high-stakes personal and business disputes. Dr. Lior Tabansky hardens devices, accounts, and communications for clients facing divorce, business disputes, inheritance conflicts, and commercial espionage. Available in Hebrew, English, and Russian.
+
+Magen VIP is not a remote or software-based security product. All work is performed in person, in the client's presence, with no remote access, no cloud storage, and no third-party systems. Every session concludes with a signed Certificate of Hardening for the client's legal file.
+
+## Who this is for
+
+- Individuals in divorce or separation proceedings who need to secure their devices, accounts, and communications before the other side does
+- Business partners or shareholders in active disputes who need to prevent data leaks and stabilise their negotiating position
+- Family members in inheritance conflicts where wills, powers of attorney, and attorney communications are at risk
+- Executives and business owners facing commercial espionage or client theft
+
+## Services
+
+- [Separation & Divorce — He](/he/separation-divorce.html): הגנה דיגיטלית לאנשים בהליכי גירושין — אבטחת מכשירים, נעילת חשבונות, הגנה על ראיות ותקשורת עם עורך דין.
+- [Separation & Divorce — En](/en/separation-divorce.html): Digital security for individuals in divorce proceedings — device hardening, account lockdown, evidence protection, secure attorney communications.
+- [Business Dispute — He](/he/business-dispute.html): הגנה על נתוני חברה, תקשורת ועמדה במשא ומתן בסכסוכי שותפים ובעלי מניות.
+- [Business Dispute — En](/en/business-dispute.html): Protecting company data, communications, and negotiating position during partner or shareholder disputes.
+- [Inheritance Clash — He](/he/inheritance-clash.html): אבטחת צוואות, ייפויי כוח ותקשורת משפטית מניסיונות מניפולציה.
+- [Inheritance Clash — En](/en/inheritance-clash.html): Securing wills, powers of attorney, and attorney communications from manipulation.
+- [Commercial Spying — He](/he/commercial-spying.html): הגנה על קניין רוחני, תקשורת מנהלים ומשא ומתן רגיש מפני ריגול עסקי.
+- [Commercial Spying — En](/en/commercial-spying.html): Protecting intellectual property, executive communications, and sensitive negotiations from corporate espionage.
+
+## The expert
+
+- [Dr. Lior Tabansky — He](/he/founder.html): שני עשורים של ייעוץ לממשלות וסוכנויות בנושא מבצעי סייבר בישראל, אסיה, אירופה ואפריקה.
+- [Dr. Lior Tabansky — En](/en/founder.html): Two decades advising governments and intelligence agencies on cyber operations across Israel, Asia, Europe, and Africa. The same person who advises at the national level assesses your threat and hardens your devices.
+
+## Pricing
+
+All prices in Israeli Shekel (ILS). Sessions are in-person in Israel.
+
+- Threat Assessment: ₪3,500 — three-hour face-to-face diagnostic, written report with precise recommendations. Credited in full toward any protection tier within 14 days.
+- Personal Shield: ₪15,000 — one person, primary device, and all accounts. Hardware security key included.
+- Extended Shield: ₪32,000 — adds home network, vehicle systems, and all connected devices.
+- Inner Circle Shield: ₪38,000 — typically three people fully hardened (e.g. individual + spouse + business partner, or family unit).
+- Sovereign Shield: ₪95,000 — adds physical counter-surveillance and ongoing threat monitoring.
+- Annual Threat Monitoring: available to all past clients.
+- Priority Retainer: available to all past clients.
+
+## FAQ
+
+- [FAQ — He](/he/faq.html): שאלות נפוצות על שירותים, סודיות, מתודולוגיה ותמחור.
+- [FAQ — En](/en/faq.html): Common questions about services, confidentiality, methodology, and pricing.
+
+## Contact
+
+Contact is via WhatsApp or Signal only: +972-53-336-6276. No contact forms, no CRM, no third-party systems. All communications are end-to-end encrypted by design.
+
+## Languages
+
+- Hebrew: /he/
+- English: /en/
+- Russian: /ru/
