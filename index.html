@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magen — language selection</title>
+  <link rel="canonical" href="/">
+  <script src="/assets/js/language.js"></script>
+  <script>
+    (function () {
+      var paths = { he: '/he/', ru: '/ru/', en: '/en/' };
+      var fallback = setTimeout(function () { window.location.replace(paths.he); }, 1500);
+
+      function route() {
+        clearTimeout(fallback);
+        var preferred = (window.languageUtils && window.languageUtils.detectPreferred()) || 'he';
+        window.location.replace(paths[preferred] || paths.he);
+      }
+
+      if (document.readyState === 'complete') {
+        route();
+      } else {
+        window.addEventListener('load', route);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to your language…</p>
+</body>
+</html>
