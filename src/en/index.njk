@@ -35,6 +35,30 @@ heroImg: "https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1280&h=
             </div>
         </section>
 
+        <section class="real-risk" aria-label="How digital exposure actually works">
+            <div class="container">
+                <h2>The Breach Arrives as a Login</h2>
+                <p class="real-risk-intro">The most common digital exposure in a personal dispute doesn't involve a hacker, a virus, or a sophisticated attack. It involves access that was granted inside a relationship — and never revoked when the relationship changed.</p>
+                <div class="vignette-grid">
+
+                    <div class="vignette">
+                        <span class="vignette-app">WhatsApp Web</span>
+                        <h3>The session nobody logged out</h3>
+                        <p>He moved out in March. The desktop computer stayed. His WhatsApp Web session was still active on the shared home PC — every message he sent and received visible on the screen, including his conversations with his attorney about which accounts he planned to move before proceedings formalised. She took screenshots for four weeks before he realised the session was still open.</p>
+                        <span class="vignette-source">Based on a true case, details obfuscated to protect the identities of those involved.</span>
+                    </div>
+
+                    <div class="vignette">
+                        <span class="vignette-app">PlayStation Family Account → OneDrive</span>
+                        <h3>The gaming account that connected everything</h3>
+                        <p>They had set up a PlayStation family account so the children could play online. That account was linked to his Microsoft account, which was part of a Microsoft family group. His OneDrive — where he had been moving financial documents and records of an account she didn't know existed — was accessible through the same family group. She found it while looking for a school project the children had saved. He had believed it was private.</p>
+                        <span class="vignette-source">Based on a true case, details obfuscated to protect the identities of those involved.</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <section class="personas">
             <div class="container">
                 <h2>Common High-Pressure Situations</h2>
@@ -81,30 +105,6 @@ heroImg: "https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1280&h=
             </div>
         </section>
 
-        <section class="real-risk" aria-label="How digital exposure actually works">
-            <div class="container">
-                <h2>The Breach Arrives as a Login</h2>
-                <p class="real-risk-intro">The most common digital exposure in a personal dispute doesn't involve a hacker, a virus, or a sophisticated attack. It involves access that was granted inside a relationship — and never revoked when the relationship changed.</p>
-                <div class="vignette-grid">
-
-                    <div class="vignette">
-                        <span class="vignette-app">WhatsApp Web</span>
-                        <h3>The session nobody logged out</h3>
-                        <p>He moved out in March. The desktop computer stayed. His WhatsApp Web session was still active on the shared home PC — every message he sent and received visible on the screen, including his conversations with his attorney about which accounts he planned to move before proceedings formalised. She took screenshots for four weeks before he realised the session was still open.</p>
-                        <span class="vignette-source">Based on a true case, details obfuscated to protect the identities of those involved.</span>
-                    </div>
-
-                    <div class="vignette">
-                        <span class="vignette-app">PlayStation Family Account → OneDrive</span>
-                        <h3>The gaming account that connected everything</h3>
-                        <p>They had set up a PlayStation family account so the children could play online. That account was linked to his Microsoft account, which was part of a Microsoft family group. His OneDrive — where he had been moving financial documents and records of an account she didn't know existed — was accessible through the same family group. She found it while looking for a school project the children had saved. He had believed it was private.</p>
-                        <span class="vignette-source">Based on a true case, details obfuscated to protect the identities of those involved.</span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <section class="why-us">
             <div class="container">
                 <h2>Why Trust Us?</h2>
@@ -125,6 +125,16 @@ heroImg: "https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1280&h=
                 <h2>Not sure what you need? Start with a Threat Assessment.</h2>
                 <p>A three-hour, face-to-face diagnostic. Dr. Tabansky maps your full digital exposure and delivers a written report with precise recommendations. ₪3,500 — credited in full if you proceed to any protection tier within 14 days.</p>
                 <a href="/en/separation-divorce.html#tiers" class="threat-assessment-link">See protection tiers &rarr;</a>
+                <nav class="footer-contact-links" aria-label="{{ t.hero_cta_label }}">
+                    <a href="{{ t.wa_url_bare }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'threat-assessment'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon"><img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true"></span>
+                        <span class="label">WhatsApp</span>
+                    </a>
+                    <a href="{{ t.signal_url_bare }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'threat-assessment'}})}catch(e){}">
+                        <span aria-hidden="true" class="icon"><img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true"></span>
+                        <span class="label">Signal</span>
+                    </a>
+                </nav>
             </div>
         </section>
 
