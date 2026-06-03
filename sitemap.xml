@@ -41,6 +41,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.magenvip.tech/en/private-investigator.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.magenvip.tech/en/faq.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -85,6 +92,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.magenvip.tech/he/private-investigator.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.magenvip.tech/he/faq.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -128,6 +142,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.magenvip.tech/ru/private-investigator.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://www.magenvip.tech/ru/faq.html</loc>
     <lastmod>2026-05-28</lastmod>
