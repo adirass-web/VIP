@@ -28,19 +28,19 @@
   --color-text-muted:     #9898a8;
 
   /* Accent */
-  --color-accent:       #c2650a;
-  --color-accent-hover: #e88d2e;
+  --color-accent:       #C8892A;
+  --color-accent-hover: #D4A040;
 
   /* Accent-alpha */
-  --color-accent-subtle: rgba(194, 101, 10, 0.08);
-  --color-accent-strong: rgba(194, 101, 10, 0.35);
+  --color-accent-subtle: rgba(200, 137, 42, 0.08);
+  --color-accent-strong: rgba(200, 137, 42, 0.35);
 
   /* White-alpha */
   --color-border: rgba(255, 255, 255, 0.10);
 
   /* Typography */
-  --font-heading:    'Frank Ruhl Libre', 'Noto Serif Hebrew', Georgia, serif;
-  --font-family:     'Assistant', 'Inter', 'Heebo', sans-serif;
+  --font-heading:    'Spectral SC', 'Frank Ruhl Libre', 'Noto Serif Hebrew', Georgia, serif;
+  --font-family:     'Inter', 'Assistant', 'Heebo', sans-serif;
   --text-xs:   0.75rem;
   --text-sm:   0.85rem;
   --text-base: 1rem;
@@ -48,7 +48,7 @@
   --text-lg:   1.35rem;
   --text-xl:   1.6rem;
   --text-2xl:  clamp(1.8rem, 5vw, 2.5rem);
-  --text-3xl:  clamp(2.2rem, 6vw, 3.5rem);
+  --text-3xl:  clamp(2.4rem, 6.5vw, 4rem);
   --leading-tight:   1.2;
   --leading-normal:  1.5;
   --leading-relaxed: 1.7;
@@ -66,7 +66,7 @@
   --radius-pill: 999px;
 
   /* Transition */
-  --ease: 0.25s ease;
+  --ease: 0.2s ease-out;
 
   /* Layout */
   --max-width: 1080px;
@@ -87,11 +87,11 @@
     --color-text-secondary: #5a5a68;
     --color-text-muted:     #5a5a68;
 
-    --color-accent:       #b35a08;
-    --color-accent-hover: #984d06;
+    --color-accent:       #8C6218;
+    --color-accent-hover: #6E4D12;
 
-    --color-accent-subtle: rgba(179, 90, 8, 0.06);
-    --color-accent-strong: rgba(179, 90, 8, 0.25);
+    --color-accent-subtle: rgba(140, 98, 24, 0.06);
+    --color-accent-strong: rgba(140, 98, 24, 0.25);
 
     --color-border: rgba(0, 0, 0, 0.10);
   }
@@ -110,6 +110,24 @@
   padding: 0;
 }
 
+
+
+/* ============================= */
+/* Focus + Reduced Motion        */
+/* ============================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -195,13 +213,13 @@ h1 {
 
 h2 {
   font-size: var(--text-2xl);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-accent);
 }
 
 h3 {
   font-size: var(--text-xl);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text-primary);
 }
 
