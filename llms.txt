@@ -20,11 +20,19 @@ Magen VIP is not a remote or software-based security product. All work is perfor
 - [Inheritance Clash — He](/he/inheritance-clash.html): אבטחת צוואות, ייפויי כוח ותקשורת משפטית מניסיונות מניפולציה.
 - [Inheritance Clash — En](/en/inheritance-clash.html): Securing wills, powers of attorney, and attorney communications from manipulation.
 - [Commercial Spying — He](/he/commercial-spying.html): הגנה על קניין רוחני, תקשורת מנהלים ומשא ומתן רגיש מפני ריגול עסקי.
+- [Separation & Divorce — Ru](/ru/separation-divorce.html): Цифровая защита при разводе — блокировка устройств, аккаунтов и доказательств до того, как другая сторона доберётся до них.
+- [Business Dispute — Ru](/ru/business-dispute.html): Защита данных компании, переписки и переговорной позиции в спорах партнёров и акционеров.
+- [Inheritance Clash — Ru](/ru/inheritance-clash.html): Защита завещаний, доверенностей и адвокатской переписки от манипуляций.
+- [Commercial Spying — Ru](/ru/commercial-spying.html): Защита интеллектуальной собственности, переписки руководства и конфиденциальных переговоров от промышленного шпионажа.
 - [Commercial Spying — En](/en/commercial-spying.html): Protecting intellectual property, executive communications, and sensitive negotiations from corporate espionage.
+- [Private Investigator Defence — He](/he/private-investigator.html): סגירת כל נקודות הגישה שמחקר פרטי מנצל — מיקום, ענן ומכשירים — ביום אחד.
+- [Private Investigator Defence — En](/en/private-investigator.html): Closing every access point a private investigator exploits — location sharing, cloud accounts, and devices — in one day.
+- [Private Investigator Defence — Ru](/ru/private-investigator.html): Закрытие всех точек доступа, которые использует частный детектив — геолокация, облако и устройства — за один день.
 
 ## The expert
 
 - [Dr. Lior Tabansky — He](/he/founder.html): שני עשורים של ייעוץ לממשלות וסוכנויות בנושא מבצעי סייבר בישראל, אסיה, אירופה ואפריקה.
+- [Dr. Lior Tabansky — Ru](/ru/founder.html): Два десятилетия консультирования правительств и спецслужб по кибероперациям. Тот же специалист, который работает на национальном уровне, оценивает вашу угрозу и защищает ваши устройства.
 - [Dr. Lior Tabansky — En](/en/founder.html): Two decades advising governments and intelligence agencies on cyber operations across Israel, Asia, Europe, and Africa. The same person who advises at the national level assesses your threat and hardens your devices.
 
 ## Pricing
@@ -42,6 +50,7 @@ All prices in Israeli Shekel (ILS). Sessions are in-person in Israel.
 ## FAQ
 
 - [FAQ — He](/he/faq.html): שאלות נפוצות על שירותים, סודיות, מתודולוגיה ותמחור.
+- [FAQ — Ru](/ru/faq.html): Часто задаваемые вопросы об услугах, конфиденциальности, методологии и ценах.
 - [FAQ — En](/en/faq.html): Common questions about services, confidentiality, methodology, and pricing.
 
 ## Contact
