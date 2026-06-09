@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - vault-redesign
   workflow_dispatch:
 
 jobs:
