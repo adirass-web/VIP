@@ -144,14 +144,10 @@ section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
 .faq details[open] summary::after{content:"\2212"}
 .faq details p{padding:0 0 1.4rem;color:var(--ink-dim);font-size:.96rem;max-width:none}
 .faq-more{margin-top:1.6rem;font-size:.88rem;color:var(--gold-ink)}
-
-.site-footer{padding:var(--s-section) 0 3rem;text-align:center;position:relative;overflow:hidden}
-.site-footer .seal-lg{display:flex;justify-content:center;margin-bottom:1.6rem}
-.site-footer h2{font-size:var(--t-h2);margin-bottom:1rem}
-.site-footer .sub{color:var(--ink-dim);max-width:48ch;margin:0 auto 2.2rem}
-.foot-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.2rem}
-.foot-legal{border-top:1px solid var(--hairline);padding-top:1.8rem;font-size:.8rem;color:var(--ink-faint);display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;align-items:center}
-
-/* situation-page components */
-.vectors{list-style:none;margin-top:1rem;max-width:var(--w-prose)}
-.vectors li{padding:1.1rem 0;border-top:1px solid var(--
+/* FAQ page — grouped, collapsed-by-default, expand/collapse all */
+.faq-controls{display:flex;justify-content:flex-end;margin-bottom:1.5rem}
+.faq-toggle-all{font-family:var(--font-body);font-size:.78rem;letter-spacing:.04em;color:var(--gold-ink);background:none;border:1px solid var(--hairline-strong);border-radius:var(--r-1);padding:.5rem .9rem;min-height:40px;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;transition:border-color var(--ease),color var(--ease)}
+.faq-toggle-all:hover{border-color:var(--gold);color:var(--ink)}
+.faq-group{margin-bottom:2.6rem}
+.faq-group:last-child{margin-bottom:0}
+.faq-group-title{font-family:var(--font-display);font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gol
