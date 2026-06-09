@@ -1,64 +1,59 @@
-# Magen VIP — Personal Cyber Shield
+# מגן · Personal Cyber Shield
 
-> Elite in-person digital security for individuals in high-stakes personal and business disputes. Dr. Lior Tabansky hardens devices, accounts, and communications for clients facing divorce, business disputes, inheritance conflicts, and commercial espionage. Available in Hebrew, English, and Russian.
+> Personal Cyber Shield (מגן סייבר אישי) is an in-person, single-practitioner private cyber defense service for individuals in high-stakes personal disputes — divorce and separation, business and shareholder disputes, inheritance conflicts, commercial espionage, and private-investigator surveillance. Dr. Lior Tabansky maps a client's full digital exposure and hardens every device, account, and channel in a single in-person day. No remote access, no cloud, no logs, no app. Every engagement ends with a signed Certificate of Hardening for the client's legal file.
 
-Magen VIP is not a remote or software-based security product. All work is performed in person, in the client's presence, with no remote access, no cloud storage, and no third-party systems. Every session concludes with a signed Certificate of Hardening for the client's legal file.
+The core idea: in a personal dispute the damaging exposure is rarely a hacker. It is ordinary access — a still-logged-in session, a shared family plan, location sharing, a reused password — granted inside a relationship and never closed when the relationship changed. Nobody has to hack anything.
+
+The English site is live now. Hebrew and Russian are in preparation.
 
 ## Who this is for
 
-- Individuals in divorce or separation proceedings who need to secure their devices, accounts, and communications before the other side does
-- Business partners or shareholders in active disputes who need to prevent data leaks and stabilise their negotiating position
-- Family members in inheritance conflicts where wills, powers of attorney, and attorney communications are at risk
-- Executives and business owners facing commercial espionage or client theft
+- Individuals in divorce or separation who need to secure devices, accounts, and communications — whether planning ahead or already exposed
+- Business partners and shareholders in active disputes who need to close shared access and protect their negotiating position
+- Family members in inheritance conflicts where wills, powers of attorney, and accounts were entrusted to others
+- Executives and owners facing commercial espionage or departing-insider data loss
+- Anyone who expects, or already senses, private-investigator surveillance
+- Attorneys who refer clients and need a documented security posture for the file
 
 ## Services
 
-- [Separation & Divorce — He](/he/separation-divorce.html): הגנה דיגיטלית לאנשים בהליכי גירושין — אבטחת מכשירים, נעילת חשבונות, הגנה על ראיות ותקשורת עם עורך דין.
-- [Separation & Divorce — En](/en/separation-divorce.html): Digital security for individuals in divorce proceedings — device hardening, account lockdown, evidence protection, secure attorney communications.
-- [Business Dispute — He](/he/business-dispute.html): הגנה על נתוני חברה, תקשורת ועמדה במשא ומתן בסכסוכי שותפים ובעלי מניות.
-- [Business Dispute — En](/en/business-dispute.html): Protecting company data, communications, and negotiating position during partner or shareholder disputes.
-- [Inheritance Clash — He](/he/inheritance-clash.html): אבטחת צוואות, ייפויי כוח ותקשורת משפטית מניסיונות מניפולציה.
-- [Inheritance Clash — En](/en/inheritance-clash.html): Securing wills, powers of attorney, and attorney communications from manipulation.
-- [Commercial Spying — He](/he/commercial-spying.html): הגנה על קניין רוחני, תקשורת מנהלים ומשא ומתן רגיש מפני ריגול עסקי.
-- [Separation & Divorce — Ru](/ru/separation-divorce.html): Цифровая защита при разводе — блокировка устройств, аккаунтов и доказательств до того, как другая сторона доберётся до них.
-- [Business Dispute — Ru](/ru/business-dispute.html): Защита данных компании, переписки и переговорной позиции в спорах партнёров и акционеров.
-- [Inheritance Clash — Ru](/ru/inheritance-clash.html): Защита завещаний, доверенностей и адвокатской переписки от манипуляций.
-- [Commercial Spying — Ru](/ru/commercial-spying.html): Защита интеллектуальной собственности, переписки руководства и конфиденциальных переговоров от промышленного шпионажа.
-- [Commercial Spying — En](/en/commercial-spying.html): Protecting intellectual property, executive communications, and sensitive negotiations from corporate espionage.
-- [Private Investigator Defence — He](/he/private-investigator.html): סגירת כל נקודות הגישה שמחקר פרטי מנצל — מיקום, ענן ומכשירים — ביום אחד.
-- [Private Investigator Defence — En](/en/private-investigator.html): Closing every access point a private investigator exploits — location sharing, cloud accounts, and devices — in one day.
-- [Private Investigator Defence — Ru](/ru/private-investigator.html): Закрытие всех точек доступа, которые использует частный детектив — геолокация, облако и устройства — за один день.
+- [Separation & Divorce](/en/separation-divorce.html): When a marriage ends, the access doesn't. We close the devices, accounts, and shared plans that stay open — in person, in a day, before any of it reaches court.
+- [Business Dispute](/en/business-dispute.html): When a partnership ends, the shared access rarely ends with it. We close the files, email, and channels that years of trust left open.
+- [Inheritance Clash](/en/inheritance-clash.html): The access was given in good faith; the dispute turns it into a weapon. We close the accounts, devices, and documents others were once trusted with.
+- [Commercial Spying](/en/commercial-spying.html): Sensitive files usually leave with someone who was simply allowed in. We secure leadership's devices, accounts, and communications.
+- [Private Investigator Defence](/en/private-investigator.html): A private investigator rarely hacks anything — they use the doors you left open. We close location, cloud, device, and vehicle access in a single day.
 
-## The expert
+## Why us / the method
 
-- [Dr. Lior Tabansky — He](/he/founder.html): שני עשורים של ייעוץ לממשלות וסוכנויות בנושא מבצעי סייבר בישראל, אסיה, אירופה ואפריקה.
-- [Dr. Lior Tabansky — Ru](/ru/founder.html): Два десятилетия консультирования правительств и спецслужб по кибероперациям. Тот же специалист, который работает на национальном уровне, оценивает вашу угрозу и защищает ваши устройства.
-- [Dr. Lior Tabansky — En](/en/founder.html): Two decades advising governments and intelligence agencies on cyber operations across Israel, Asia, Europe, and Africa. The same person who advises at the national level assesses your threat and hardens your devices.
+- [Why us](/en/why-us.html): Dr. Lior Tabansky works with each client directly — two decades advising governments and agencies on cyber operations across Israel, Asia, Europe, and Africa. Hardening is applied in person, on standards used by government agencies (NSA, NIST, NCSC). The same person who assesses your threat does the work, from first assessment to signed Certificate of Hardening.
 
 ## Pricing
 
-All prices in Israeli Shekel (ILS). Sessions are in-person in Israel.
+All prices in Israeli Shekel (ILS); sessions are in person in Israel (international by arrangement). Single fixed prices.
 
-- Threat Assessment: ₪3,500 — three-hour face-to-face diagnostic, written report with precise recommendations. Credited in full toward any protection tier within 14 days.
-- Personal Shield: ₪15,000 — one person, primary device, and all accounts. Hardware security key included.
-- Extended Shield: ₪32,000 — adds home network, vehicle systems, and all connected devices.
-- Inner Circle Shield: ₪38,000 — typically three people fully hardened (e.g. individual + spouse + business partner, or family unit).
-- Sovereign Shield: ₪95,000 — adds physical counter-surveillance and ongoing threat monitoring.
-- Annual Threat Monitoring: available to all past clients.
-- Priority Retainer: available to all past clients.
+- [Pricing](/en/pricing.html)
+- Threat Assessment: ₪3,500 — a three-hour in-person diagnostic and written report; credited in full toward any protection tier within 14 days. (Entry point, not a tier.)
+- Personal Shield: ₪15,000 — one person, primary device, and all accounts.
+- Extended Shield: ₪32,000 — adds home network, vehicle, and connected devices.
+- Inner Circle Shield: ₪38,000 — typically three people fully hardened together.
+- Sovereign Shield: ₪95,000 — adds physical counter-surveillance and ongoing monitoring.
+- Annual Threat Monitoring: ₪6,000/year (past clients) — leak scanning, breach alerts, one in-person check.
+- Priority Retainer: ₪12,000/year (past clients) — eight-business-hour response, three in-person check-ins.
+
+## For attorneys
+
+- [For attorneys](/en/attorneys.html): What the Certificate of Hardening gives the file, and how referral works. The work is defensive only — no investigations, no expert testimony.
 
 ## FAQ
 
-- [FAQ — He](/he/faq.html): שאלות נפוצות על שירותים, סודיות, מתודולוגיה ותמחור.
-- [FAQ — Ru](/ru/faq.html): Часто задаваемые вопросы об услугах, конфиденциальности, методологии и ценах.
-- [FAQ — En](/en/faq.html): Common questions about services, confidentiality, methodology, and pricing.
+- [FAQ](/en/faq.html): Confidentiality, what happens on the day, who does the work, pricing, and what comes after.
 
 ## Contact
 
-Contact is via WhatsApp or Signal only: +972-53-336-6276. No contact forms, no CRM, no third-party systems. All communications are end-to-end encrypted by design.
+Contact is via WhatsApp or Signal only: +972-53-336-6276. No contact forms, no CRM, no third-party systems. End-to-end encrypted by design.
 
 ## Languages
 
-- Hebrew: /he/
-- English: /en/
-- Russian: /ru/
+- English: /en/ (live)
+- Hebrew: /he/ — in preparation
+- Russian: /ru/ — in preparation
