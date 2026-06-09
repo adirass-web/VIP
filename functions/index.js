@@ -10,17 +10,16 @@
 const SUPPORTED = ['he', 'en', 'ru'];
 const DEFAULT_LOCALE = 'he';
 
+// TEMPORARY (vault-redesign): EN-only public site. The root always sends to /en/
+// until HE/RU are translated to the new design. Restore detectLocale() routing then.
 export async function onRequest(context) {
   const { request } = context;
 
-  // Don't redirect non-GET requests (e.g. HEAD from health checks)
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     return context.next();
   }
 
-  const locale = detectLocale(request.headers.get('Accept-Language') || '');
-  const destination = new URL(`/${locale}/`, request.url);
-
+  const destination = new URL('/en/', request.url);
   return Response.redirect(destination.toString(), 302);
 }
 
