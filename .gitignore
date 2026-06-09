@@ -2,3 +2,4 @@ node_modules/
 _site/
 .claude/
 Session-Handoff-*.md
+node_modules/
