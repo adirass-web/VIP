@@ -26,3 +26,9 @@ Robust, reviewable process for this site. Approved 2026-06-07.
 ## Deploy facts
 - CI: `.github/workflows/deploy.yml` → `cloudflare/pages-action` → project `magenvip`, account `cfd055f2f8175d13377bd64e9620ea36`.
 - The `vault-redesign` branch is in the workflow trigger so it builds a preview; remove that trigger line at merge.
+
+## Default working tree (avoids OneDrive truncation)
+**Edit in the git clone outside OneDrive, not in the synced folder.**
+- Clone (or reuse) `/tmp/vip-push`; symlink `node_modules` from the synced checkout if needed (`ln -s <synced>/node_modules node_modules`).
+- Make all edits here, build to a temp dir (`npx @11ty/eleventy --output=/tmp/cvsite`), verify, commit, push.
+- Treat the OneDrive copy as a read-only backup. Permanent fix: move the repo to a non-synced path (e.g. `C:\dev\magentech`) and re-point the Cowork folder there.
