@@ -1,172 +1,124 @@
 ---
-layout: layouts/base.njk
+layout: layouts/vault.njk
 permalink: "/en/index.html"
 slug: ""
 page_id: "index"
-title: "Private Cyber Defense | Magen VIP"
-description: "Elite, in-person digital security for high-risk personal and business disputes. We harden your devices and accounts to protect your digital life."
-meta_keywords: "personal privacy, personal cybersecurity, digital protection, device hardening, high-risk disputes, divorce, separation, inheritance, business dispute"
-og_description: "Elite, in-person digital security for high-risk individuals facing disputes, divorce, or corporate espionage."
-og_image: "https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1200&h=630&fit=crop&q=80"
+title: "Personal Cyber Shield — private digital protection in high-stakes disputes"
+description: "When a divorce, business split, or inheritance turns contested, your devices become evidence. Dr. Lior Tabansky finds how you're exposed and closes it — in person, in a day."
+og_description: "When your private life is contested, the first move is closing the doors you didn't know were open. In person, in a day."
 canonical: "https://www.magenvip.tech/en/"
-heroImg: "https://images.unsplash.com/photo-1609159758419-12a8e90934c6?w=1280&h=720&fit=crop&q=80&fm=webp"
 ---
-{% set t = i18n[locale] %}
-        <section class="hero" data-hero-img="{{ heroImg }}">
-            <div class="container">
-                <h1>Your Phone Knows Everything.</h1>
-                <h2>Photos. Locations. Chats. Finances. Desires.
-                Everything can be twisted and used against you.</h2>
-                <nav class="footer-contact-links hero-cta" aria-label="{{ t.hero_cta_label }}">
-                    <a href="{{ t.wa_url }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'hero'}})}catch(e){}">
-                        <span aria-hidden="true" class="icon">
-                            <img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
-                        </span>
-                        <span class="label">WhatsApp</span>
-                    </a>
-                    <a href="{{ t.signal_url }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'hero'}})}catch(e){}">
-                        <span aria-hidden="true" class="icon">
-                            <img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true">
-                        </span>
-                        <span class="label">Signal</span>
-                    </a>
-                </nav>
-                            <p class="photo-credit">Photo: <a href="https://unsplash.com/@miquel_parera_mila?utm_source=magenvip&utm_medium=referral" target="_blank" rel="noopener noreferrer">Miquel Parera</a> / <a href="https://unsplash.com/photos/photo-1609159758419-12a8e90934c6" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
-            </div>
-        </section>
+{# og_image intentionally omitted — self-hosted, on-brand OG image is Track 3b (replaces the former Unsplash hot-link). #}
 
-        <section class="real-risk" aria-label="How digital exposure actually works">
-            <div class="container">
-                <h2>The Breach Arrives as a Login</h2>
-                <p class="real-risk-intro">The most common digital exposure in a personal dispute doesn't involve a hacker, a virus, or a sophisticated attack. It involves access that was granted inside a relationship — and never revoked when the relationship changed.</p>
-                <div class="vignette-grid">
+<section class="hero">
+    <div class="field" id="hero-field" aria-hidden="true"></div>
+    <div class="wrap">
+        <p class="hero-kicker">Your phone knows everything.</p>
+        <h1>When your private life is contested, the first move is closing the doors you didn't know were open.</h1>
+        <p class="sub">In a separation, a business split, or a contested estate, the person across from you rarely needs to break in. We find how you're exposed and shut it — discreetly, in person, in a single day.</p>
+        <div class="hero-cta">
+            <a class="btn" href="#contact">Speak with us</a>
+            <a class="btn ghost" href="#pricing">See protection &amp; pricing</a>
+        </div>
+        <p class="trust">In person only · No remote access · No cloud · No logs · No app</p>
+    </div>
+</section>
 
-                    <div class="vignette">
-                        <span class="vignette-app">WhatsApp Web</span>
-                        <h3>The session nobody logged out</h3>
-                        <p>He moved out in March. The desktop computer stayed. His WhatsApp Web session was still active on the shared home PC — every message he sent and received visible on the screen, including his conversations with his attorney about which accounts he planned to move before proceedings formalised. She took screenshots for four weeks before he realised the session was still open.</p>
-                        <span class="vignette-source">Based on a true case, details obfuscated to protect the identities of those involved.</span>
-                    </div>
+<section class="band" id="stakes">
+    <div class="wrap">
+        <div class="head">
+            <span class="eyebrow">How exposure really happens</span>
+            <h2>Nobody had to hack anything.</h2>
+            <p class="lede">The most damaging exposure in a personal dispute almost never involves a hacker, a virus, or a stolen password. It involves ordinary access — granted inside a relationship, and never closed when the relationship changed. A spouse, a business partner, or the investigator they hired rarely needs to break in. They only need a door left open.</p>
+        </div>
+        <div class="vigs">
+            <article class="vig">
+                <h3>The session nobody logged out</h3>
+                <p>He was careful about the divorce. He changed his passcode, stopped using the shared calendar, told his lawyer everything by phone. What he forgot was the desktop in the study — the one the children used for homework — where, months before, he'd scanned a code to read WhatsApp on the bigger screen. The session never closed. Every evening, while he typed to his attorney about which accounts to move before the filing, the same words surfaced on a screen in the house he no longer lived in. She read them for four weeks. He learned this in mediation, when her lawyer quoted him back to himself.</p>
+                <span class="src">Based on a true case; details changed to protect those involved.</span>
+            </article>
+            <article class="vig">
+                <h3>The toy that connected everything</h3>
+                <p>They'd set up the PlayStation years earlier, a family account so the kids could play online together. No one thought of it as anything but a toy. But the console was tied to his Microsoft family group, and the family group reached quietly into his OneDrive — the same drive where he'd been moving statements for an account she didn't know existed. She found it on a Sunday, looking for a school project the children had saved. The folder was just sitting there, between a science poster and a birthday list.</p>
+                <span class="src">Based on a true case; details changed to protect those involved.</span>
+            </article>
+        </div>
+    </div>
+</section>
 
-                    <div class="vignette">
-                        <span class="vignette-app">PlayStation Family Account → OneDrive</span>
-                        <h3>The gaming account that connected everything</h3>
-                        <p>They had set up a PlayStation family account so the children could play online. That account was linked to his Microsoft account, which was part of a Microsoft family group. His OneDrive — where he had been moving financial documents and records of an account she didn't know existed — was accessible through the same family group. She found it while looking for a school project the children had saved. He had believed it was private.</p>
-                        <span class="vignette-source">Based on a true case, details obfuscated to protect the identities of those involved.</span>
-                    </div>
+<section class="band" id="why">
+    <div class="wrap cred">
+        <div class="cred-lead">
+            <span class="eyebrow">Why us</span>
+            <h2>One person maps your exposure and closes it.</h2>
+            <p>You work with Dr. Lior Tabansky directly — two decades advising governments and agencies on cyber operations across Israel, Asia, Europe, and Africa. The same person who assesses your risk does the hardening. No junior technicians, no handoffs, no account you'll never speak to.</p>
+        </div>
+        <ul class="cred-list">
+            <li>Built on the <b>NSA, NIST, and NCSC standards</b> used by agencies and global enterprises.</li>
+            <li><b>No remote access, no cloud, no logs, no app</b> — nothing of ours lives on your devices, and a backdoor for a security provider is a backdoor for anyone.</li>
+            <li>Contact through <b>WhatsApp or Signal only.</b> No forms, no CRM, no third parties.</li>
+            <li>It ends with a signed <b>Certificate of Hardening</b> — formal documentation of every measure applied, for your attorney and your legal file.</li>
+        </ul>
+    </div>
+</section>
 
-                </div>
-            </div>
-        </section>
+<section class="band" id="situations">
+    <div class="wrap">
+        <div class="head">
+            <span class="eyebrow">Common situations</span>
+            <h2>Find the situation you're in.</h2>
+            <p>Whether you're planning ahead or already worried, start where your life actually is.</p>
+        </div>
+        <div class="sits">
+            <a class="sit" href="/en/separation-divorce.html"><span><span class="t">Separation &amp; Divorce</span><span class="o">Secure evidence, devices, and accounts before the other side reaches them.</span></span><span class="arr" aria-hidden="true">&rarr;</span></a>
+            <a class="sit" href="/en/business-dispute.html"><span><span class="t">Business Dispute</span><span class="o">Keep files, email, and your negotiating position under your control.</span></span><span class="arr" aria-hidden="true">&rarr;</span></a>
+            <a class="sit" href="/en/inheritance-clash.html"><span><span class="t">Inheritance Clash</span><span class="o">Protect wills, powers of attorney, and your lawyer's advice from interference.</span></span><span class="arr" aria-hidden="true">&rarr;</span></a>
+            <a class="sit" href="/en/commercial-spying.html"><span><span class="t">Commercial Spying</span><span class="o">Secure intellectual property, executive communication, and sensitive talks.</span></span><span class="arr" aria-hidden="true">&rarr;</span></a>
+            <a class="sit" href="/en/private-investigator.html"><span><span class="t">Private Investigator Defence</span><span class="o">Close every access point an investigator uses — location, cloud, devices — in a day.</span></span><span class="arr" aria-hidden="true">&rarr;</span></a>
+        </div>
+    </div>
+</section>
 
-        <section class="personas">
-            <div class="container">
-                <h2>Common High-Pressure Situations</h2>
-                <p class="personas-intro">Choose the scenario that matches your reality to see how we neutralise the risks and harden your devices.</p>
-                <div class="nav-subpage-links" role="list">
-                    <a href="/en/separation-divorce.html" class="nav-subpage-link" role="listitem">
-                        Separation &amp; Divorce
-                        <span class="subpage-outcome">Lock down evidence, devices, and accounts before the other side gets to them.</span>
-                    </a>
-                    <a href="/en/business-dispute.html" class="nav-subpage-link" role="listitem">
-                        Business Dispute
-                        <span class="subpage-outcome">Prevent leaks, control files and email, and stabilise your negotiating position.</span>
-                    </a>
-                    <a href="/en/inheritance-clash.html" class="nav-subpage-link" role="listitem">
-                        Inheritance Clash
-                        <span class="subpage-outcome">Protect wills, powers of attorney, and attorney communications from manipulation.</span>
-                    </a>
-                    <a href="/en/commercial-spying.html" class="nav-subpage-link" role="listitem">
-                        Commercial Spying
-                        <span class="subpage-outcome">Secure IP, executive communications, and sensitive negotiations.</span>
-                    </a>
-                    <a href="/en/private-investigator.html" class="nav-subpage-link" role="listitem">
-                        Private Investigator Defence
-                        <span class="subpage-outcome">Close every access point a private investigator exploits — location, cloud, and devices — in one day.</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+<section class="band" id="method">
+    <div class="wrap">
+        <div class="head">
+            <span class="eyebrow">The method</span>
+            <h2>One day, in person. Then it's closed.</h2>
+        </div>
+        <div class="steps">
+            <div class="step"><h3>Your threat map</h3><p>Face to face, we map every device, account, and channel at risk — and, where it matters, how the exposure is happening now.</p></div>
+            <div class="step"><h3>Full hardening</h3><p>Hundreds of settings applied in your presence. You receive a physical security key — it blocks account access even if a password is already known.</p></div>
+            <div class="step"><h3>Handover</h3><p>You leave with a phone that can't be quietly reached, accounts that can't be entered, and a channel your attorney can trust.</p></div>
+        </div>
+        <p class="scarcity">Dr. Tabansky works with one or two clients a month. By appointment.</p>
+    </div>
+</section>
 
-        <section class="how-it-works">
-            <div class="container">
-                <h2>What Happens on Protection Day</h2>
-                <div class="steps">
-                    <div class="step">
-                        <h3>Your Threat Map</h3>
-                        <p>Face-to-face: mapping every device, account, and communication channel at risk — tailored to your specific situation.</p>
-                    </div>
-                    <div class="step">
-                        <h3>Full Hardening</h3>
-                        <p>Hundreds of device, app, and account configurations applied in your presence. Hardware key issued — a physical token that blocks account access even if your password is compromised. Access locked down.</p>
-                    </div>
-                    <div class="step">
-                        <h3>Training + Leak Check</h3>
-                        <p>You leave with a phone that cannot be breached, accounts that cannot be accessed, and a communications channel your attorney can trust.</p>
-                    </div>
-                </div>
-                <p class="scarcity-note">Dr. Tabansky works with 1–2 clients per month. Availability by appointment.</p>
-            </div>
-        </section>
+<section class="band onramp" id="pricing">
+    <div class="medal" id="onramp-medal" aria-hidden="true"></div>
+    <div class="wrap inner">
+        <div>
+            <span class="eyebrow">Start here</span>
+            <h2>Not sure how exposed you are? Begin with a Threat Assessment.</h2>
+            <p>A three-hour, in-person diagnostic. Dr. Tabansky maps your full exposure and gives you a written report with precise recommendations — your first concrete step, whether you act today or simply want to know where you stand.</p>
+        </div>
+        <div class="card">
+            <span class="lab">Threat Assessment</span>
+            <div class="amt">₪3,500</div>
+            <p class="credit">Credited in full toward any protection tier within 14 days.</p>
+            <a class="btn" href="#contact">Book the assessment</a>
+            <a class="all" href="/en/pricing.html">See the four protection tiers &rarr;</a>
+        </div>
+    </div>
+</section>
 
-        <section class="why-us">
-            <div class="container">
-                <h2>Why Trust Us?</h2>
-                <ul>
-                    <li><strong>Dr. Lior Tabansky — directly.</strong> Two decades advising governments and agencies on cyber operations across Israel, Asia, Europe, and Africa. The same person assesses your threat and hardens your devices.</li>
-                    <li>Hardening built on NSA, NIST, and NCSC standards — the same frameworks used by government agencies and global enterprises.</li>
-                    <li>No remote access, no cloud, no logs — a backdoor for a security provider is a backdoor for anyone.</li>
-                    <li>Completely confidential. Contact via WhatsApp or Signal only — no forms, no CRM, no third parties.</li>
-                    <li>Protection from ₪15,000 (Personal Shield) to ₪95,000 (Sovereign Shield). Annual Threat Monitoring and Priority Retainer available to all past clients.</li>
-                    <li>At the end: a signed Certificate of Hardening — formal documentation of every measure applied, for your attorney and legal file.</li>
-                </ul>
-                <a href="/en/founder.html" class="why-us-link">The Method — how it works &rarr;</a>
-            </div>
-        </section>
-
-        <section class="threat-assessment">
-            <div class="container">
-                <h2>Not sure what you need? Start with a Threat Assessment.</h2>
-                <p>A three-hour, face-to-face diagnostic. Dr. Tabansky maps your full digital exposure and delivers a written report with precise recommendations. ₪3,500 — credited in full if you proceed to any protection tier within 14 days.</p>
-                <a href="/en/separation-divorce.html#tiers" class="threat-assessment-link">See protection tiers &rarr;</a>
-                <nav class="footer-contact-links" aria-label="{{ t.hero_cta_label }}">
-                    <a href="{{ t.wa_url_bare }}" target="_blank" class="footer-contact-link footer-contact-link--whatsapp" aria-label="{{ t.wa_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp',location:'threat-assessment'}})}catch(e){}">
-                        <span aria-hidden="true" class="icon"><img src="../assets/img/icons/whatsapp.svg" alt="" aria-hidden="true"></span>
-                        <span class="label">WhatsApp</span>
-                    </a>
-                    <a href="{{ t.signal_url_bare }}" target="_blank" class="footer-contact-link footer-contact-link--signal" aria-label="{{ t.signal_label }}" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal',location:'threat-assessment'}})}catch(e){}">
-                        <span aria-hidden="true" class="icon"><img src="../assets/img/icons/signal.svg" alt="" aria-hidden="true"></span>
-                        <span class="label">Signal</span>
-                    </a>
-                </nav>
-            </div>
-        </section>
-
-        <section class="faq">
-            <div class="container">
-                <h2>
-                    <button type="button" class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="{{ t.faq_list_id }}">
-                        Frequently Asked Questions
-                    </button>
-                </h2>
-                <div class="accordion" id="{{ t.faq_list_id }}" hidden>
-                    <details>
-                        <summary>Can you hack my partner back?</summary>
-                        <p>No. The work is entirely defensive — hardening your own devices and accounts. We never touch anyone else's.</p>
-                    </details>
-                    <details>
-                        <summary>Can this be done online or remotely?</summary>
-                        <p>No. Remote access is a backdoor into your device — giving it to a security provider is no different from giving it to anyone else. Everything is done in person, in your presence, on your timeline.</p>
-                    </details>
-                    <details>
-                        <summary>Is the consultation confidential?</summary>
-                        <p>Yes, completely. No notes are shared with anyone. Contact via WhatsApp or Signal is end-to-end encrypted — nothing passes through a contact form or third-party system.</p>
-                    </details>
-                    <details>
-                        <summary>How much does it cost?</summary>
-                        <p>Four tiers: Personal Shield (₪15,000) covers one person, primary device, and all accounts. Extended Shield (₪32,000) adds home network, vehicle, and connected devices. Inner Circle Shield (₪38,000) covers typically three people fully hardened. Sovereign Shield (₪95,000) adds physical counter-surveillance and ongoing monitoring. A Threat Assessment costs ₪3,500 — credited in full toward any tier within 14 days.</p>
-                    </details>
-                </div>
-                <p class="faq-more"><a href="/en/faq.html">See all questions &rarr;</a></p>
-            </div>
-        </section>
+<section class="band faq" id="faq">
+    <div class="wrap">
+        <div class="head"><span class="eyebrow">Questions</span><h2>What people ask first.</h2></div>
+        <details open><summary>Can you hack my partner back?</summary><p>No. The work is entirely defensive: we harden your own devices and accounts. We never touch anyone else's.</p></details>
+        <details><summary>Can this be done remotely?</summary><p>No. Remote access is itself a door into your device; handing it to a security provider is no safer than handing it to anyone else. Everything is done in person.</p></details>
+        <details><summary>Is this confidential?</summary><p>Completely. Nothing is shared. WhatsApp and Signal are end-to-end encrypted; nothing passes through a form or a third party.</p></details>
+        <details><summary>What does it cost?</summary><p>Four protection tiers. Personal Shield is ₪15,000; Sovereign Shield, the most comprehensive, is ₪95,000. A Threat Assessment is ₪3,500, credited in full toward any tier within 14 days. Full pricing is on the pricing page.</p></details>
+        <p class="faq-more"><a href="/en/faq.html">See all questions &rarr;</a></p>
+    </div>
+</section>
