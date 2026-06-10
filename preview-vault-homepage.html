@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PREVIEW — Magen VIP · The Vault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&family=Spectral+SC:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --bg-2:#0e0e11; --bg-3:#131317;
+  --ink:#ECEAE3; --ink-dim:#9b9890; --ink-faint:#6f6d67;
+  --gold:#C8892A; --gold-bright:#D4A040;
+  --line:rgba(255,255,255,.09); --line-strong:rgba(255,255,255,.16);
+  --serif:'Spectral',Georgia,serif;
+  --sc:'Spectral SC',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --prose:62ch; --wide:1120px;
+  --s-section:clamp(4.5rem,9vw,8rem);
+  --ease:.25s cubic-bezier(.2,.6,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans); color:var(--ink); background:var(--bg);
+  line-height:1.7; letter-spacing:.005em; -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--gold);color:#0a0a0b}
+a{color:inherit;text-decoration:none}
+.wrap{width:90%;max-width:var(--wide);margin:0 auto}
+.eyebrow{
+  font-family:var(--sc); font-size:.8rem; letter-spacing:.18em;
+  color:var(--gold); text-transform:uppercase; display:inline-flex; align-items:center; gap:.7em;
+  margin-bottom:1.4rem;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);opacity:.7}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.01em}
+p{max-width:var(--prose)}
+
+/* top hairline */
+.topline{height:2px;background:linear-gradient(90deg,var(--gold),transparent 55%)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:.65rem;font-family:var(--sc);letter-spacing:.08em;font-size:1.05rem}
+.monogram{
+  width:30px;height:30px;border:1px solid var(--gold);display:grid;place-items:center;
+  font-family:var(--serif);font-size:.85rem;color:var(--gold);letter-spacing:0;
+}
+.brand b{font-weight:500}
+.brand span{color:var(--gold)}
+.menu{display:flex;gap:2rem;align-items:center;font-size:.86rem;color:var(--ink-dim)}
+.menu a{transition:color var(--ease)}
+.menu a:hover{color:var(--ink)}
+.btn{
+  font-family:var(--sans);font-size:.84rem;letter-spacing:.02em;
+  padding:.62rem 1.15rem;border:1px solid var(--gold);color:var(--bg);background:var(--gold);
+  border-radius:2px;transition:background var(--ease),color var(--ease);white-space:nowrap;
+}
+.btn:hover{background:var(--gold-bright);border-color:var(--gold-bright)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold);background:transparent}
+.menu .btn{color:var(--bg)}
+.menu .btn:hover{color:var(--bg)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{padding:clamp(5rem,12vw,9rem) 0 clamp(4rem,8vw,7rem)}
+.hero-motif{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:24ch}
+.hero h1{font-size:clamp(2.7rem,7vw,5rem);margin-bottom:1.6rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .sub{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-dim);max-width:46ch;line-height:1.55;margin-bottom:2.4rem;font-family:var(--serif)}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.hero-note{margin-top:1.8rem;font-size:.8rem;color:var(--ink-faint);letter-spacing:.02em}
+
+/* generic section */
+section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--line)}
+.section-head{max-width:var(--prose);margin-bottom:3rem}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:1rem}
+.section-head p{color:var(--ink-dim)}
+.lede{font-family:var(--serif);font-size:1.15rem;color:var(--ink-dim)}
+
+/* stakes / vignettes */
+.vignettes{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1rem}
+@media(min-width:820px){.vignettes{grid-template-columns:1fr 1fr}}
+.vig{background:var(--bg);padding:2.4rem clamp(1.6rem,3vw,2.6rem)}
+.vig .app{font-family:var(--sc);font-size:.72rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.vig h3{font-size:1.4rem;margin:.9rem 0 1rem;color:var(--ink)}
+.vig p{font-size:.96rem;color:var(--ink-dim);max-width:none}
+.vig .src{display:block;margin-top:1.2rem;font-size:.76rem;color:var(--ink-faint);font-style:italic}
+
+/* credibility */
+.cred{display:grid;gap:3rem}
+@media(min-width:900px){.cred{grid-template-columns:.85fr 1.15fr;align-items:start}}
+.cred-lead h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:1.2rem}
+.cred-lead .who{font-family:var(--sc);font-size:.8rem;letter-spacing:.12em;color:var(--ink-dim);text-transform:uppercase}
+.cred-list{list-style:none;display:grid;gap:0}
+.cred-list li{padding:1.3rem 0;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:1.2rem;font-size:.98rem;color:var(--ink-dim)}
+.cred-list li:last-child{border-bottom:1px solid var(--line)}
+.cred-list .k{font-family:var(--serif);font-size:1.4rem;color:var(--gold);line-height:1}
+.cred-list b{color:var(--ink);font-weight:500}
+
+/* situations */
+.situations{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.sit{background:var(--bg);padding:1.8rem 2rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1.5rem;transition:background var(--ease)}
+.sit:hover{background:var(--bg-3)}
+.sit .t{font-family:var(--serif);font-size:1.35rem;color:var(--ink)}
+.sit .o{font-size:.9rem;color:var(--ink-dim);margin-top:.35rem;max-width:62ch}
+.sit .arrow{color:var(--gold);font-size:1.3rem;transition:transform var(--ease)}
+.sit:hover .arrow{transform:translateX(5px)}
+
+/* protection day steps */
+.steps{display:grid;gap:2.4rem;counter-reset:step}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:2.6rem}}
+.step{counter-increment:step;border-top:1px solid var(--gold);padding-top:1.4rem}
+.step::before{content:"0" counter(step);font-family:var(--serif);font-size:1.1rem;color:var(--gold);display:block;margin-bottom:.8rem;letter-spacing:.05em}
+.step h3{font-size:1.3rem;color:var(--ink);margin-bottom:.7rem}
+.step p{font-size:.94rem;color:var(--ink-dim);max-width:none}
+.scarcity{margin-top:3rem;font-size:.86rem;color:var(--ink-faint);font-style:italic;font-family:var(--serif)}
+
+/* threat assessment / pricing onramp */
+.onramp{background:var(--bg-2)}
+.onramp .inner{display:grid;gap:2.4rem;align-items:center}
+@media(min-width:860px){.onramp .inner{grid-template-columns:1.3fr 1fr}}
+.onramp h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:1rem}
+.onramp p{color:var(--ink-dim)}
+.price-card{border:1px solid var(--line-strong);padding:2.2rem;border-radius:3px;background:var(--bg)}
+.price-card .label{font-family:var(--sc);font-size:.76rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.price-card .amt{font-family:var(--serif);font-size:2.6rem;color:var(--ink);margin:.6rem 0 .2rem}
+.price-card .amt small{font-size:.95rem;color:var(--ink-dim)}
+.price-card .credit{font-size:.86rem;color:var(--ink-dim);margin:.8rem 0 1.6rem;max-width:none}
+.price-card a.all{display:inline-block;margin-top:1.2rem;font-size:.84rem;color:var(--gold);border-bottom:1px solid var(--line-strong);padding-bottom:2px}
+
+/* faq */
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:1.3rem 0;font-family:var(--serif);font-size:1.15rem;color:var(--ink);display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 1.4rem;color:var(--ink-dim);font-size:.96rem}
+.faq-more{margin-top:1.6rem;font-size:.88rem;color:var(--gold)}
+
+/* footer */
+footer{padding:var(--s-section) 0 3rem;text-align:center}
+footer .eyebrow{justify-content:center}
+footer h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:1rem}
+footer .sub{color:var(--ink-dim);max-width:50ch;margin:0 auto 2.4rem}
+.foot-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem}
+.foot-legal{border-top:1px solid var(--line);padding-top:2rem;font-size:.8rem;color:var(--ink-faint);display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.foot-legal a:hover{color:var(--ink-dim)}
+
+.preview-flag{position:fixed;bottom:14px;right:14px;z-index:99;background:var(--gold);color:#0a0a0b;font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .7rem;border-radius:2px;opacity:.85}
+@media(max-width:720px){
+  .menu a:not(.btn){display:none}
+  .sit{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="monogram">MV</span><b>Magen <span>VIP</span></b></a>
+    <nav class="menu">
+      <a href="#situations">Situations</a>
+      <a href="#why">Why Us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="#contact">Speak with Dr. Tabansky</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-motif" viewBox="0 0 1200 600" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="g" cx="78%" cy="40%" r="55%">
+        <stop offset="0%" stop-color="#C8892A" stop-opacity=".10"/>
+        <stop offset="100%" stop-color="#C8892A" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1200" height="600" fill="url(#g)"/>
+    <g fill="none" stroke="#C8892A" stroke-opacity=".22" stroke-width="1">
+      <path d="M880 300 l90 -52 90 52 0 104 -90 52 -90 -52 z"/>
+      <path d="M880 300 l90 -52 90 52 0 104 -90 52 -90 -52 z" transform="translate(0,0) scale(1.5)" transform-origin="970 352" opacity=".5"/>
+      <circle cx="970" cy="352" r="150"/>
+      <circle cx="970" cy="352" r="220" stroke-opacity=".12"/>
+    </g>
+    <path d="M970 300 v-34 a32 32 0 0 1 64 0" fill="none" stroke="#C8892A" stroke-opacity=".3" stroke-width="1.5"/>
+    <rect x="938" y="300" width="64" height="46" rx="4" fill="none" stroke="#C8892A" stroke-opacity=".3" stroke-width="1.5"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">Private Cyber Defense · In person only</span>
+      <h1>Your phone knows <em>everything.</em></h1>
+      <p class="sub">Photos, locations, chats, finances, desires — all of it can be turned against you. We close every door before someone walks through it.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Speak with Dr. Tabansky</a>
+        <a class="btn ghost" href="#pricing">See protection &amp; pricing</a>
+      </div>
+      <p class="hero-note">No remote access · No cloud · No logs · WhatsApp &amp; Signal only</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE STAKES -->
+<section class="band" id="stakes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The stakes</span>
+      <h2>The breach arrives as a login.</h2>
+      <p class="lede">The most common exposure in a personal dispute isn’t a hacker or a virus. It’s access granted inside a relationship — and never revoked when the relationship changed.</p>
+    </div>
+    <div class="vignettes">
+      <div class="vig">
+        <span class="app">WhatsApp Web</span>
+        <h3>The session nobody logged out</h3>
+        <p>He moved out in March; the desktop stayed. His WhatsApp Web session was still live on the shared home PC — every message visible, including conversations with his attorney about which accounts to move before proceedings. She took screenshots for four weeks before he realised.</p>
+        <span class="src">Based on a true case. Details obfuscated to protect those involved.</span>
+      </div>
+      <div class="vig">
+        <span class="app">PlayStation → OneDrive</span>
+        <h3>The gaming account that connected everything</h3>
+        <p>A PlayStation family account, set up so the children could play, was linked to his Microsoft family group — and through it, his OneDrive, where he kept records of an account she didn’t know existed. She found it looking for a school project. He had believed it was private.</p>
+        <span class="src">Based on a true case. Details obfuscated to protect those involved.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US / CREDIBILITY (moved up: authority before catalog) -->
+<section class="band" id="why">
+  <div class="wrap cred">
+    <div class="cred-lead">
+      <span class="eyebrow">Why us</span>
+      <h2>One person assesses your threat and hardens your devices.</h2>
+      <p class="who">Dr. Lior Tabansky — two decades advising governments and agencies on cyber operations across Israel, Asia, Europe and Africa.</p>
+    </div>
+    <ul class="cred-list">
+      <li><span class="k">01</span><span><b>Directly with Dr. Tabansky.</b> The same person who assesses your exposure does the hardening. No junior technicians, no handoffs.</span></li>
+      <li><span class="k">02</span><span><b>Government-grade standards.</b> Built on NSA, NIST and NCSC frameworks — the same used by agencies and global enterprises.</span></li>
+      <li><span class="k">03</span><span><b>No remote access, no cloud, no logs.</b> A backdoor for a security provider is a backdoor for anyone.</span></li>
+      <li><span class="k">04</span><span><b>Completely confidential.</b> Contact via WhatsApp or Signal only — no forms, no CRM, no third parties.</span></li>
+      <li><span class="k">05</span><span><b>A signed Certificate of Hardening.</b> Formal documentation of every measure applied, for your attorney and legal file.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SITUATIONS -->
+<section class="band" id="situations">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Situations</span>
+      <h2>Common high-pressure situations.</h2>
+      <p>Choose the scenario that matches your reality to see how we neutralise the risk.</p>
+    </div>
+    <div class="situations">
+      <a class="sit" href="#"><span><span class="t">Separation &amp; Divorce</span><span class="o">Lock down evidence, devices and accounts before the other side gets to them.</span></span><span class="arrow">→</span></a>
+      <a class="sit" href="#"><span><span class="t">Business Dispute</span><span class="o">Prevent leaks, control files and email, stabilise your negotiating position.</span></span><span class="arrow">→</span></a>
+      <a class="sit" href="#"><span><span class="t">Inheritance Clash</span><span class="o">Protect wills, powers of attorney and attorney communications from manipulation.</span></span><span class="arrow">→</span></a>
+      <a class="sit" href="#"><span><span class="t">Commercial Spying</span><span class="o">Secure IP, executive communications and sensitive negotiations.</span></span><span class="arrow">→</span></a>
+      <a class="sit" href="#"><span><span class="t">Private Investigator Defence</span><span class="o">Close every access point a PI exploits — location, cloud, devices — in one day.</span></span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROTECTION DAY -->
+<section class="band" id="method">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The method</span>
+      <h2>What happens on Protection Day.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Your Threat Map</h3><p>Face-to-face: mapping every device, account and channel at risk — tailored to your specific situation.</p></div>
+      <div class="step"><h3>Full Hardening</h3><p>Hundreds of configurations applied in your presence. A physical hardware key issued — it blocks account access even if your password is compromised.</p></div>
+      <div class="step"><h3>Training + Leak Check</h3><p>You leave with a phone that cannot be breached, accounts that cannot be accessed, and a channel your attorney can trust.</p></div>
+    </div>
+    <p class="scarcity">Dr. Tabansky works with one to two clients per month. Availability by appointment.</p>
+  </div>
+</section>
+
+<!-- ONRAMP: THREAT ASSESSMENT → PRICING -->
+<section class="band onramp" id="pricing">
+  <div class="wrap inner">
+    <div>
+      <span class="eyebrow">Start here</span>
+      <h2>Not sure what you need? Begin with a Threat Assessment.</h2>
+      <p>A three-hour, face-to-face diagnostic. Dr. Tabansky maps your full digital exposure and delivers a written report with precise recommendations — your first concrete step.</p>
+    </div>
+    <div class="price-card">
+      <span class="label">Threat Assessment</span>
+      <div class="amt">₪3,500</div>
+      <p class="credit">Credited in full toward any protection tier within 14 days.</p>
+      <a class="btn" href="#contact">Book the assessment</a>
+      <a class="all" href="#">See all five protection tiers →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="band faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Questions</span>
+      <h2>What people ask first.</h2>
+    </div>
+    <details open><summary>Can you hack my partner back?</summary><p>No. The work is entirely defensive — hardening your own devices and accounts. We never touch anyone else’s.</p></details>
+    <details><summary>Can this be done online or remotely?</summary><p>No. Remote access is a backdoor into your device; giving it to a security provider is no different from giving it to anyone else. Everything is done in person, in your presence.</p></details>
+    <details><summary>Is the consultation confidential?</summary><p>Completely. Nothing is shared. Contact via WhatsApp or Signal is end-to-end encrypted — nothing passes through a form or third-party system.</p></details>
+    <details><summary>How much does it cost?</summary><p>Five tiers from Personal Shield (₪15,000) to Sovereign Shield (₪95,000). A Threat Assessment is ₪3,500, credited in full toward any tier within 14 days.</p></details>
+    <p class="faq-more"><a href="#">See all questions →</a></p>
+  </div>
+</section>
+
+<!-- CONTACT FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Confidential</span>
+    <h2>Get your Personal Cyber Shield.</h2>
+    <p class="sub">Protect yourself before they get in and turn your private life against you and the people you love.</p>
+    <div class="foot-cta">
+      <a class="btn" href="#">WhatsApp</a>
+      <a class="btn ghost" href="#">Signal</a>
+    </div>
+    <div class="foot-legal">
+      <a href="#">Terms of Use</a><span>·</span><a href="#">Privacy</a><span>·</span><span>© 2026 Magen VIP — Personal Cyber Shield</span>
+    </div>
+  </div>
+</footer>
+
+<div class="preview-flag">Preview · The Vault</div>
+</body>
+</html>

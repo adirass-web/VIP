@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Cyber Shield — private digital protection in high-stakes disputes</title>
+<meta name="description" content="When a divorce, business split, or inheritance turns contested, your devices become evidence. Dr. Lior Tabansky finds how you're exposed and closes it — in person, in a day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-0:#0B0A09; --bg-1:#131210; --bg-2:#1B1916;
+  --ink:#ECE9E4; --ink-dim:#9D968D; --ink-faint:#6F6A63;
+  --gold:#C8892A; --gold-hover:#D4A040; --gold-ink:#D9A246;
+  --hairline:rgba(236,233,228,.10); --hairline-strong:rgba(236,233,228,.18);
+  --hairline-gold:rgba(200,137,42,.45); --gold-wash:rgba(200,137,42,.07);
+  --font-display:'Playfair Display','David Libre',Georgia,serif;
+  --font-he:'David Libre',serif;
+  --font-body:'Inter',sans-serif;
+  --t-hero:clamp(2.5rem,6vw,4.4rem); --t-h2:clamp(1.9rem,3.6vw,2.7rem);
+  --t-h3:1.35rem; --t-lede:1.18rem;
+  --s-4:1rem;--s-6:1.5rem;--s-8:2rem;--s-10:2.5rem;--s-12:3rem;--s-16:4rem;--s-20:5rem;--s-24:6rem;
+  --s-section:clamp(4.5rem,9vw,8rem);
+  --r-1:2px; --ease:.25s cubic-bezier(.2,.6,.2,1);
+  --w-max:1120px; --w-prose:64ch;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg-0:#F6F2EA; --bg-1:#EFEBE2; --bg-2:#E6E1D7;
+    --ink:#1B1916; --ink-dim:#5D5850; --ink-faint:#8A847A;
+    --gold:#8C6218; --gold-hover:#6E4D12; --gold-ink:#8C6218;
+    --hairline:rgba(27,25,22,.12); --hairline-strong:rgba(27,25,22,.22);
+    --hairline-gold:rgba(140,98,24,.5); --gold-wash:rgba(140,98,24,.06);
+  }
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg-0);color:var(--ink);font-family:var(--font-body);line-height:1.7;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--bg-0)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:90%;max-width:var(--w-max);margin:0 auto}
+.eyebrow{font-family:var(--font-display);font-style:normal;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink);display:inline-flex;align-items:center;gap:.7em;margin-bottom:1.3rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold-ink);opacity:.7}
+h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+p{max-width:var(--w-prose)}
+.btn{font-family:var(--font-body);font-size:.85rem;letter-spacing:.02em;padding:.7rem 1.3rem;border:1px solid var(--gold);background:var(--gold);color:var(--bg-0);border-radius:var(--r-1);transition:background var(--ease),border-color var(--ease);display:inline-block;white-space:nowrap}
+.btn:hover{background:var(--gold-hover);border-color:var(--gold-hover)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--hairline-strong)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold-ink);background:transparent}
+.topline{height:2px;background:linear-gradient(90deg,var(--gold),transparent 60%)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg-0) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand .mark{width:34px;height:34px;flex-shrink:0}
+.brand .name{font-family:var(--font-he);font-size:1.5rem;font-weight:500;line-height:1}
+.menu{display:flex;gap:1.9rem;align-items:center;font-size:.85rem;color:var(--ink-dim)}
+.menu a:not(.btn){transition:color var(--ease)}
+.menu a:not(.btn):hover{color:var(--ink)}
+.menu .btn{color:var(--bg-0)}
+.lang{font-size:.78rem;color:var(--ink-faint);display:flex;gap:.6rem}
+.lang a.on{color:var(--gold-ink)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--hairline)}
+.hero .field{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero .wrap{position:relative;z-index:1;padding:clamp(4.5rem,11vw,8rem) 0 clamp(3.5rem,7vw,6rem)}
+.hero-kicker{font-family:var(--font-display);font-size:.92rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:1.5rem}
+.hero h1{font-size:var(--t-hero);max-width:20ch;margin-bottom:1.6rem}
+.hero .sub{font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.4rem);font-style:italic;color:var(--ink-dim);max-width:42ch;line-height:1.5;margin-bottom:2.3rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.trust{margin-top:1.9rem;font-size:.78rem;letter-spacing:.04em;color:var(--ink-faint)}
+
+/* sections */
+section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
+.head{max-width:var(--w-prose);margin-bottom:3rem}
+.head h2{font-size:var(--t-h2);margin-bottom:1rem}
+.lede{font-family:var(--font-display);font-size:var(--t-lede);color:var(--ink-dim);font-style:italic}
+
+/* vignettes */
+.vigs{display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline)}
+@media(min-width:840px){.vigs{grid-template-columns:1fr 1fr}}
+.vig{background:var(--bg-0);padding:2.4rem clamp(1.6rem,3vw,2.6rem)}
+.vig h3{font-size:1.3rem;margin-bottom:1rem}
+.vig p{font-size:.97rem;color:var(--ink-dim);max-width:none}
+.vig .src{display:block;margin-top:1.3rem;font-size:.78rem;color:var(--ink-faint);font-style:italic}
+
+/* why us */
+.cred{display:grid;gap:3rem}
+@media(min-width:900px){.cred{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.cred-lead h2{font-size:var(--t-h2);margin-bottom:1.2rem}
+.cred-lead p{color:var(--ink-dim);font-size:.97rem}
+.cred-list{list-style:none}
+.cred-list li{padding:1.25rem 0;border-top:1px solid var(--hairline);font-size:.97rem;color:var(--ink-dim)}
+.cred-list li:last-child{border-bottom:1px solid var(--hairline)}
+.cred-list b{color:var(--ink);font-weight:500}
+.cred-link{display:inline-block;margin-top:1.6rem;color:var(--gold-ink);font-size:.9rem;border-bottom:1px solid var(--hairline-gold);padding-bottom:2px}
+
+/* situations */
+.sits{display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline)}
+.sit{background:var(--bg-0);padding:1.7rem 2rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1.4rem;transition:background var(--ease)}
+.sit:hover{background:var(--bg-1)}
+.sit .t{font-family:var(--font-display);font-size:1.3rem;color:var(--ink)}
+.sit .o{font-size:.9rem;color:var(--ink-dim);margin-top:.3rem;max-width:66ch}
+.sit .arr{color:var(--gold-ink);font-size:1.2rem;transition:transform var(--ease)}
+.sit:hover .arr{transform:translateX(5px)}
+
+/* method */
+.steps{display:grid;gap:2.4rem;counter-reset:s}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:2.6rem}}
+.step{counter-increment:s;border-top:1px solid var(--gold);padding-top:1.3rem}
+.step::before{content:"0" counter(s);font-family:var(--font-display);font-size:1.1rem;color:var(--gold-ink);display:block;margin-bottom:.7rem}
+.step h3{font-size:1.25rem;margin-bottom:.6rem}
+.step p{font-size:.93rem;color:var(--ink-dim);max-width:none}
+.scarcity{margin-top:3rem;font-family:var(--font-display);font-style:italic;font-size:.95rem;color:var(--ink-faint)}
+
+/* onramp */
+.onramp{background:var(--bg-1);position:relative;overflow:hidden}
+.onramp .medal{position:absolute;right:-60px;top:50%;transform:translateY(-50%);z-index:0;opacity:.5;pointer-events:none}
+.onramp .inner{position:relative;z-index:1;display:grid;gap:2.4rem;align-items:center}
+@media(min-width:860px){.onramp .inner{grid-template-columns:1.25fr .75fr}}
+.onramp h2{font-size:var(--t-h2);margin-bottom:1rem}
+.onramp p{color:var(--ink-dim)}
+.card{border:1px solid var(--hairline-strong);background:var(--bg-0);padding:2.2rem;border-radius:var(--r-1)}
+.card .lab{font-family:var(--font-display);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
+.card .amt{font-family:var(--font-display);font-size:2.6rem;color:var(--ink);margin:.5rem 0 .3rem}
+.card .credit{font-size:.86rem;color:var(--ink-dim);margin-bottom:1.5rem;max-width:none}
+.card .all{display:inline-block;margin-top:1.1rem;font-size:.84rem;color:var(--gold-ink);border-bottom:1px solid var(--hairline-gold);padding-bottom:2px}
+
+/* faq */
+.faq details{border-top:1px solid var(--hairline)}
+.faq details:last-child{border-bottom:1px solid var(--hairline)}
+.faq summary{cursor:pointer;list-style:none;padding:1.3rem 0;font-family:var(--font-display);font-size:1.13rem;color:var(--ink);display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold-ink);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 1.4rem;color:var(--ink-dim);font-size:.96rem}
+.faq-more{margin-top:1.6rem;font-size:.88rem;color:var(--gold-ink)}
+
+/* footer */
+footer{padding:var(--s-section) 0 3rem;text-align:center;position:relative;overflow:hidden}
+footer .seal-lg{display:flex;justify-content:center;margin-bottom:1.6rem}
+footer h2{font-size:var(--t-h2);margin-bottom:1rem}
+footer .sub{color:var(--ink-dim);max-width:48ch;margin:0 auto 2.2rem}
+.foot-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.2rem}
+.foot-legal{border-top:1px solid var(--hairline);padding-top:1.8rem;font-size:.8rem;color:var(--ink-faint);display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;align-items:center}
+.flag{position:fixed;bottom:14px;right:14px;z-index:99;background:var(--gold);color:var(--bg-0);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .6rem;border-radius:2px;opacity:.85}
+@media(max-width:760px){.menu a:not(.btn),.lang{display:none}.sit{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="מגן — Personal Cyber Shield — home">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="var(--gold)" stroke-width="2"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="1" opacity=".5"/>
+        <g fill="none" stroke="var(--gold)" transform="translate(50 51) scale(.6) translate(-50 -55)">
+          <path d="M24 35 L50 26 L76 35" stroke-width="9"/>
+          <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="7"/>
+          <path d="M55 81 C48 77 43 71 40 64" stroke-width="8"/>
+          <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
+        </g>
+      </svg>
+      <span class="name">מגן</span>
+    </a>
+    <nav class="menu">
+      <a href="#situations">Situations</a>
+      <a href="#why">Why us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <span class="lang"><a class="on">EN</a><a>HE</a><a>RU</a></span>
+      <a class="btn" href="#contact">Speak with us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="field" id="hero-field" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-kicker">Your phone knows everything.</div>
+    <h1>When your private life is contested, the first move is closing the doors you didn't know were open.</h1>
+    <p class="sub">In a separation, a business split, or a contested estate, the person across from you rarely needs to break in. We find how you're exposed and shut it — discreetly, in person, in a single day.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#contact">Speak with us</a>
+      <a class="btn ghost" href="#pricing">See protection &amp; pricing</a>
+    </div>
+    <p class="trust">In person only · No remote access · No cloud · No logs · No app</p>
+  </div>
+</section>
+
+<section class="band" id="stakes">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">How exposure really happens</span>
+      <h2>Nobody had to hack anything.</h2>
+      <p class="lede">The most damaging exposure in a personal dispute almost never involves a hacker, a virus, or a stolen password. It involves ordinary access — granted inside a relationship, and never closed when the relationship changed. A spouse, a business partner, or the investigator they hired rarely needs to break in. They only need a door left open.</p>
+    </div>
+    <div class="vigs">
+      <div class="vig">
+        <h3>The session nobody logged out</h3>
+        <p>He was careful about the divorce. He changed his passcode, stopped using the shared calendar, told his lawyer everything by phone. What he forgot was the desktop in the study — the one the children used for homework — where, months before, he'd scanned a code to read WhatsApp on the bigger screen. The session never closed. Every evening, while he typed to his attorney about which accounts to move before the filing, the same words surfaced on a screen in the house he no longer lived in. She read them for four weeks. He learned this in mediation, when her lawyer quoted him back to himself.</p>
+        <span class="src">Based on a true case; details changed to protect those involved.</span>
+      </div>
+      <div class="vig">
+        <h3>The toy that connected everything</h3>
+        <p>They'd set up the PlayStation years earlier, a family account so the kids could play online together. No one thought of it as anything but a toy. But the console was tied to his Microsoft family group, and the family group reached quietly into his OneDrive — the same drive where he'd been moving statements for an account she didn't know existed. She found it on a Sunday, looking for a school project the children had saved. The folder was just sitting there, between a science poster and a birthday list.</p>
+        <span class="src">Based on a true case; details changed to protect those involved.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="why">
+  <div class="wrap cred">
+    <div class="cred-lead">
+      <span class="eyebrow">Why us</span>
+      <h2>One person maps your exposure and closes it.</h2>
+      <p>You work with Dr. Lior Tabansky directly — two decades advising governments and agencies on cyber operations across Israel, Asia, Europe, and Africa. The same person who assesses your risk does the hardening. No junior technicians, no handoffs, no account you'll never speak to.</p>
+    </div>
+    <ul class="cred-list">
+      <li>Built on the <b>NSA, NIST, and NCSC standards</b> used by agencies and global enterprises.</li>
+      <li><b>No remote access, no cloud, no logs, no app</b> — nothing of ours lives on your devices, and a backdoor for a security provider is a backdoor for anyone.</li>
+      <li>Contact through <b>WhatsApp or Signal only.</b> No forms, no CRM, no third parties.</li>
+      <li>It ends with a signed <b>Certificate of Hardening</b> — formal documentation of every measure applied, for your attorney and your legal file.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="situations">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Common situations</span>
+      <h2>Find the situation you're in.</h2>
+      <p>Whether you're planning ahead or already worried, start where your life actually is.</p>
+    </div>
+    <div class="sits">
+      <a class="sit" href="#"><span><span class="t">Separation &amp; Divorce</span><span class="o">Secure evidence, devices, and accounts before the other side reaches them.</span></span><span class="arr">&rarr;</span></a>
+      <a class="sit" href="#"><span><span class="t">Business Dispute</span><span class="o">Keep files, email, and your negotiating position under your control.</span></span><span class="arr">&rarr;</span></a>
+      <a class="sit" href="#"><span><span class="t">Inheritance Clash</span><span class="o">Protect wills, powers of attorney, and your lawyer's advice from interference.</span></span><span class="arr">&rarr;</span></a>
+      <a class="sit" href="#"><span><span class="t">Commercial Spying</span><span class="o">Secure intellectual property, executive communication, and sensitive talks.</span></span><span class="arr">&rarr;</span></a>
+      <a class="sit" href="#"><span><span class="t">Private Investigator Defence</span><span class="o">Close every access point an investigator uses — location, cloud, devices — in a day.</span></span><span class="arr">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="method">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">The method</span>
+      <h2>One day, in person. Then it's closed.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Your threat map</h3><p>Face to face, we map every device, account, and channel at risk — and, where it matters, how the exposure is happening now.</p></div>
+      <div class="step"><h3>Full hardening</h3><p>Hundreds of settings applied in your presence. You receive a physical security key — it blocks account access even if a password is already known.</p></div>
+      <div class="step"><h3>Handover</h3><p>You leave with a phone that can't be quietly reached, accounts that can't be entered, and a channel your attorney can trust.</p></div>
+    </div>
+    <p class="scarcity">Dr. Tabansky works with one or two clients a month. By appointment.</p>
+  </div>
+</section>
+
+<section class="band onramp" id="pricing">
+  <div class="medal" id="onramp-medal" aria-hidden="true"></div>
+  <div class="wrap inner">
+    <div>
+      <span class="eyebrow">Start here</span>
+      <h2>Not sure how exposed you are? Begin with a Threat Assessment.</h2>
+      <p>A three-hour, in-person diagnostic. Dr. Tabansky maps your full exposure and gives you a written report with precise recommendations — your first concrete step, whether you act today or simply want to know where you stand.</p>
+    </div>
+    <div class="card">
+      <span class="lab">Threat Assessment</span>
+      <div class="amt">₪3,500</div>
+      <p class="credit">Credited in full toward any protection tier within 14 days.</p>
+      <a class="btn" href="#contact">Book the assessment</a>
+      <a class="all" href="#">See the four protection tiers &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="band faq" id="faq">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Questions</span><h2>What people ask first.</h2></div>
+    <details open><summary>Can you hack my partner back?</summary><p>No. The work is entirely defensive: we harden your own devices and accounts. We never touch anyone else's.</p></details>
+    <details><summary>Can this be done remotely?</summary><p>No. Remote access is itself a door into your device; handing it to a security provider is no safer than handing it to anyone else. Everything is done in person.</p></details>
+    <details><summary>Is this confidential?</summary><p>Completely. Nothing is shared. WhatsApp and Signal are end-to-end encrypted; nothing passes through a form or a third party.</p></details>
+    <details><summary>What does it cost?</summary><p>Four protection tiers. Personal Shield is ₪15,000; Sovereign Shield, the most comprehensive, is ₪95,000. A Threat Assessment is ₪3,500, credited in full toward any tier within 14 days. Full pricing is on the pricing page.</p></details>
+    <p class="faq-more"><a href="#">See all questions &rarr;</a></p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="seal-lg">
+      <svg width="64" height="64" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="var(--gold)" stroke-width="2"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="1" opacity=".5"/>
+        <g fill="none" stroke="var(--gold)" transform="translate(50 51) scale(.6) translate(-50 -55)">
+          <path d="M24 35 L50 26 L76 35" stroke-width="9"/>
+          <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="7"/>
+          <path d="M55 81 C48 77 43 71 40 64" stroke-width="8"/>
+          <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
+        </g>
+      </svg>
+    </div>
+    <span class="eyebrow" style="justify-content:center">Confidential</span>
+    <h2>Get your Personal Cyber Shield.</h2>
+    <p class="sub">Speak with us directly, before your private life is used against you.</p>
+    <div class="foot-cta">
+      <a class="btn" href="#">WhatsApp</a>
+      <a class="btn ghost" href="#">Signal</a>
+    </div>
+    <div class="foot-legal">
+      <a href="#">Terms of Use</a><span>·</span><a href="#">Privacy</a><span>·</span>
+      <span>In person only · No cloud · No logs · No app</span><span>·</span>
+      <span>© 2026 מגן — Personal Cyber Shield</span>
+    </div>
+  </div>
+</footer>
+
+<div class="flag">Reference · The Vault</div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+const GOLD=getComputedStyle(document.documentElement).getPropertyValue('--gold').trim()||"#C8892A";
+function groove(cx,cy,R,a1,n1,p1,a2,n2,p2){let d="";for(let t=0;t<=720;t++){const th=t*Math.PI/360;const r=R+a1*Math.sin(n1*th+p1)+a2*Math.sin(n2*th+p2);d+=(t?"L":"M")+(cx+r*Math.cos(th)).toFixed(2)+" "+(cy+r*Math.sin(th)).toFixed(2)}return d+"Z"}
+function path(svg,d,w,op){const p=document.createElementNS(NS,"path");p.setAttribute("d",d);p.setAttribute("fill","none");p.setAttribute("stroke",GOLD);p.setAttribute("stroke-width",w);p.setAttribute("opacity",op);svg.appendChild(p)}
+/* hero field — grooves off-canvas right, ≤10% */
+(function(){const f=document.getElementById("hero-field");const svg=document.createElementNS(NS,"svg");svg.setAttribute("width","100%");svg.setAttribute("height","100%");svg.setAttribute("viewBox","0 0 900 460");svg.setAttribute("preserveAspectRatio","xMaxYMid slice");
+ for(let i=0;i<46;i++){const R=70+i*10;const cx=985+4*Math.sin(i*0.4),cy=230+4*Math.cos(i*0.33);path(svg,groove(cx,cy,R,3.4,13,i*0.5,1.6,29,-i*0.27),0.5,0.085)}
+ f.appendChild(svg);})();
+/* onramp medallion — turned disc */
+(function(){const m=document.getElementById("onramp-medal");const svg=document.createElementNS(NS,"svg");svg.setAttribute("width","300");svg.setAttribute("height","300");svg.setAttribute("viewBox","0 0 400 400");
+ for(let i=0;i<36;i++){const R=64+i*(180/36);const cx=200+3.2*Math.sin(i*0.35),cy=200+3.2*Math.cos(i*0.28);path(svg,groove(cx,cy,R,2.4,11,i*0.42,1.0,23,-i*0.21),0.5,0.4)}
+ m.appendChild(svg);})();
+</script>
+</body>
+</html>
