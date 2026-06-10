@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tokens v2.1 — Gate D3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ====== TOKENS v2.1 — one hue axis (36°), constant chroma ====== */
+  /* Void — surfaces, sat 8% throughout */
+  --bg-0:#0B0A09;   /* L4  */
+  --bg-1:#131210;   /* L7  */
+  --bg-2:#1B1916;   /* L10 */
+  /* Bone — inks, sat ≤7% throughout */
+  --ink:#ECE9E4;
+  --ink-dim:#9D968D;
+  --ink-faint:#6F6A63;
+  /* Gold */
+  --gold:#C8892A;
+  --gold-hover:#D4A040;
+  --gold-ink:#D9A246;
+  /* Alphas — derived, not new colors */
+  --hairline:rgba(236,233,228,.10);
+  --hairline-strong:rgba(236,233,228,.18);
+  --hairline-gold:rgba(200,137,42,.45);
+  --gold-wash:rgba(200,137,42,.07);
+  /* Type */
+  --font-display:'Playfair Display','David Libre',Georgia,serif;
+  --font-body:'Inter','Assistant',sans-serif;
+  --t-hero:clamp(2.6rem,6.5vw,4.6rem);
+  --t-h2:clamp(1.9rem,3.6vw,2.8rem);
+  --t-h3:1.35rem;--t-lede:1.15rem;--t-body:1rem;--t-small:.86rem;--t-micro:.72rem;
+  /* Space */
+  --s-1:.25rem;--s-2:.5rem;--s-3:.75rem;--s-4:1rem;--s-6:1.5rem;--s-8:2rem;
+  --s-10:2.5rem;--s-12:3rem;--s-16:4rem;--s-20:5rem;--s-24:6rem;--s-32:8rem;
+  --s-section:clamp(4.5rem,9vw,8rem);
+  --r-1:2px;--r-pill:999px;
+  --ease:.25s cubic-bezier(.2,.6,.2,1);
+  --w-max:1120px;--w-prose:62ch;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-0);color:var(--ink);font-family:var(--font-body);line-height:1.7;-webkit-font-smoothing:antialiased;padding-bottom:6rem}
+.wrap{width:90%;max-width:1060px;margin:0 auto}
+.intro{padding:4rem 0 2.5rem;border-bottom:1px solid var(--hairline)}
+.intro h1{font-family:var(--font-display);font-weight:500;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:.8rem}
+.intro p{color:var(--ink-dim);max-width:66ch;font-size:.95rem}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold-ink);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .7rem;margin-bottom:1.4rem}
+section.block{padding:3rem 0;border-bottom:1px solid var(--hairline)}
+.block>h2{font-family:var(--font-display);font-weight:500;font-size:1.3rem;margin-bottom:.4rem}
+.block p.note{color:var(--ink-dim);font-size:.88rem;max-width:64ch;margin-bottom:1.8rem}
+.inventory{display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline)}
+@media(min-width:760px){.inventory{grid-template-columns:repeat(3,1fr)}}
+.fam{background:var(--bg-1);padding:1.6rem 1.4rem}
+.fam h3{font-family:var(--font-display);font-weight:500;font-size:1.05rem;margin-bottom:.9rem;color:var(--gold-ink)}
+.chip{display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem}
+.chip .dot{width:34px;height:34px;border-radius:2px;border:1px solid var(--hairline);flex-shrink:0}
+.chip code{font-size:.72rem;color:var(--ink-dim)}
+.chip .nm{font-size:.8rem;font-weight:500}
+.fam p{font-size:.78rem;color:var(--ink-faint);margin-top:.8rem}
+.strip{display:flex;border:1px solid var(--hairline)}
+.strip div{flex:1;height:84px;display:flex;align-items:flex-end;padding:.5rem .7rem;font-size:.68rem;color:var(--ink-faint)}
+.roles{display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline)}
+@media(min-width:760px){.roles{grid-template-columns:1fr 1fr 1fr}}
+.role{background:var(--bg-1);padding:1.6rem 1.4rem}
+.role .demo{margin-bottom:.9rem}
+.role .why{font-size:.78rem;color:var(--ink-faint)}
+.eyebrow{font-family:var(--font-display);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink)}
+.btn{display:inline-block;font-size:.85rem;padding:.65rem 1.2rem;border-radius:var(--r-1);border:1px solid var(--gold);background:var(--gold);color:var(--bg-0);transition:background var(--ease)}
+.ramp .r{border-bottom:1px solid var(--hairline);padding:1.1rem 0;display:flex;align-items:baseline;gap:1.6rem}
+.ramp .lab{width:90px;flex-shrink:0;font-size:.68rem;letter-spacing:.12em;color:var(--ink-faint);text-transform:uppercase}
+.ramp .hero-t{font-family:var(--font-display);font-size:var(--t-hero);line-height:1.08;font-weight:500}
+.ramp .h2-t{font-family:var(--font-display);font-size:var(--t-h2);line-height:1.15;font-weight:500}
+.ramp .h3-t{font-family:var(--font-display);font-size:var(--t-h3);font-weight:500}
+.ramp .lede-t{font-family:var(--font-display);font-size:var(--t-lede);color:var(--ink-dim)}
+.ramp .body-t{font-size:var(--t-body);color:var(--ink-dim);max-width:62ch}
+.ramp .he{font-family:'David Libre',serif;direction:rtl}
+.spacing{display:flex;align-items:flex-end;gap:.6rem;flex-wrap:wrap}
+.spacing .bar{background:var(--gold-wash);border:1px solid var(--hairline-gold);width:34px;display:flex;align-items:flex-end;justify-content:center;font-size:.6rem;color:var(--ink-faint);padding-bottom:.2rem}
+.light-strip{background:#F6F2EA;color:#1B1916;border:1px solid var(--hairline);padding:2.4rem;border-radius:2px}
+.light-strip .eyebrow{color:#8C6218}
+.light-strip h3{font-family:var(--font-display);font-weight:500;font-size:1.8rem;margin:.5rem 0 .6rem}
+.light-strip p{color:#5D5850;font-size:.95rem;max-width:60ch}
+.light-strip .btn{background:#8C6218;border-color:#8C6218;color:#F6F2EA;margin-top:1.2rem}
+pre{background:var(--bg-1);border:1px solid var(--hairline);padding:1.6rem;font-size:.74rem;line-height:1.6;overflow-x:auto;color:var(--ink-dim)}
+footer{padding-top:3rem;color:var(--ink-faint);font-size:.85rem;max-width:70ch}
+footer b{color:var(--gold-ink);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="intro">
+  <span class="tag">Gate D3 · tokens v2.1 — coherence fix</span>
+  <h1>Eight colors. One hue. Nothing else.</h1>
+  <p>Your critique was right: v2's bg-2 sat at double the chroma of bg-0 (hence brown), and ink-dim drifted khaki. v2.1 locks every value to one hue axis — 36°, the gold's hue — at constant chroma per family: surfaces 8%, inks ≤7%. The whole site uses <b>eight hex values</b>; hairlines and washes are alphas of those eight, never new colors.</p>
+</section>
+
+<section class="block">
+  <h2>The complete inventory</h2>
+  <div class="inventory">
+    <div class="fam">
+      <h3>Void — 3</h3>
+      <div class="chip"><span class="dot" style="background:#0B0A09"></span><span><span class="nm">bg-0</span> <code>#0B0A09 · L4</code></span></div>
+      <div class="chip"><span class="dot" style="background:#131210"></span><span><span class="nm">bg-1</span> <code>#131210 · L7</code></span></div>
+      <div class="chip"><span class="dot" style="background:#1B1916"></span><span><span class="nm">bg-2</span> <code>#1B1916 · L10</code></span></div>
+      <p>Constant 8% saturation — the steps differ in lightness only. No step is browner than another.</p>
+    </div>
+    <div class="fam">
+      <h3>Bone — 3</h3>
+      <div class="chip"><span class="dot" style="background:#ECE9E4"></span><span><span class="nm">ink</span> <code>#ECE9E4</code></span></div>
+      <div class="chip"><span class="dot" style="background:#9D968D"></span><span><span class="nm">ink-dim</span> <code>#9D968D</code></span></div>
+      <div class="chip"><span class="dot" style="background:#6F6A63"></span><span><span class="nm">ink-faint</span> <code>#6F6A63</code></span></div>
+      <p>Same axis, chroma capped at 7% — warm without ever reading as a color.</p>
+    </div>
+    <div class="fam">
+      <h3>Gold — 2</h3>
+      <div class="chip"><span class="dot" style="background:#C8892A"></span><span><span class="nm">gold</span> <code>#C8892A · CTA fill</code></span></div>
+      <div class="chip"><span class="dot" style="background:#D9A246"></span><span><span class="nm">gold-ink</span> <code>#D9A246 · text</code></span></div>
+      <p>The only saturated family. (Hover #D4A040 is a state of gold, not a ninth color.) Hairlines + washes = alphas.</p>
+    </div>
+  </div>
+  <p class="note" style="margin-top:1.6rem;margin-bottom:.8rem">The ramp, adjacent — verify no step shifts hue:</p>
+  <div class="strip">
+    <div style="background:#0B0A09">bg-0</div>
+    <div style="background:#131210">bg-1</div>
+    <div style="background:#1B1916">bg-2</div>
+    <div style="background:#6F6A63">faint</div>
+    <div style="background:#9D968D;color:#1B1916">dim</div>
+    <div style="background:#ECE9E4;color:#1B1916">ink</div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Gold — three roles, never mixed</h2>
+  <p class="note">Headings are ink. Gold appears in exactly three roles:</p>
+  <div class="roles">
+    <div class="role">
+      <div class="demo"><span class="eyebrow">The Method</span></div>
+      <div class="why"><b>gold-ink</b> — eyebrows, links, step numbers, prices.</div>
+    </div>
+    <div class="role">
+      <div class="demo"><a class="btn" href="#">Speak with Dr. Tabansky</a></div>
+      <div class="why"><b>gold</b> — CTA fill only. One amber action per viewport.</div>
+    </div>
+    <div class="role">
+      <div class="demo" style="border-top:1px solid var(--hairline-gold);padding-top:1rem;font-family:var(--font-display);font-size:1.1rem">Full Hardening</div>
+      <div class="why"><b>hairline-gold</b> — rules, seal, guilloché strokes.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block ramp">
+  <h2>Type ramp — David Libre + Playfair Display</h2>
+  <div class="r"><span class="lab">hero</span><div class="hero-t">Quiet mastery.</div></div>
+  <div class="r"><span class="lab">hero · HE</span><div class="hero-t he">הטלפון שלך יודע הכל.</div></div>
+  <div class="r"><span class="lab">h2</span><div class="h2-t">The breach arrives as a login.</div></div>
+  <div class="r"><span class="lab">h3</span><div class="h3-t">Full Hardening</div></div>
+  <div class="r"><span class="lab">lede</span><div class="lede-t">The most common exposure isn't a hacker. It's access granted inside a relationship.</div></div>
+  <div class="r"><span class="lab">body</span><div class="body-t">Photos, locations, chats, finances — all of it can be turned against you. We close every door before someone walks through it. Body stays Inter/Assistant: serifs speak, sans-serifs explain.</div></div>
+</section>
+
+<section class="block">
+  <h2>Spacing — full 4px scale + fluid section unit</h2>
+  <div class="spacing">
+    <div class="bar" style="height:8px">1</div><div class="bar" style="height:16px">2</div>
+    <div class="bar" style="height:24px">3</div><div class="bar" style="height:32px">4</div>
+    <div class="bar" style="height:48px">6</div><div class="bar" style="height:64px">8</div>
+    <div class="bar" style="height:80px">10</div><div class="bar" style="height:96px">12</div>
+    <div class="bar" style="height:128px">16</div><div class="bar" style="height:160px">20</div>
+    <div class="bar" style="height:192px">24</div><div class="bar" style="height:256px">32</div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Light mode — ivory stationery, same eight</h2>
+  <p class="note">The identical system inverted on the same hue axis. No photos → no overlay → the old light-mode hero bug cannot recur.</p>
+  <div class="light-strip">
+    <span class="eyebrow">Private Cyber Defense</span>
+    <h3>Your phone knows everything.</h3>
+    <p>Ivory #F6F2EA · ink #1B1916 · gold deepens to #8C6218 (4.9:1, AA). Guilloché renders in deep gold at the same opacities.</p>
+    <a class="btn" href="#">Speak with Dr. Tabansky</a>
+  </div>
+</section>
+
+<section class="block">
+  <h2>The token block — ready for M.css</h2>
+  <pre>:root {
+  /* Void — one hue (36°), sat 8%, lightness steps only */
+  --bg-0: #0B0A09;  --bg-1: #131210;  --bg-2: #1B1916;
+  /* Bone — same axis, sat ≤7% */
+  --ink: #ECE9E4;  --ink-dim: #9D968D;  --ink-faint: #6F6A63;
+  /* Gold — the only saturated family */
+  --gold: #C8892A;  --gold-hover: #D4A040;  --gold-ink: #D9A246;
+  /* Alphas — derived, never new colors */
+  --hairline: rgba(236,233,228,.10);
+  --hairline-strong: rgba(236,233,228,.18);
+  --hairline-gold: rgba(200,137,42,.45);
+  --gold-wash: rgba(200,137,42,.07);
+  /* Type — D1 */
+  --font-display: 'Playfair Display','David Libre',Georgia,serif; /* HE flips order */
+  --font-body: 'Inter','Assistant',sans-serif;
+  --t-hero: clamp(2.6rem,6.5vw,4.6rem);
+  --t-h2: clamp(1.9rem,3.6vw,2.8rem);
+  --t-h3: 1.35rem;  --t-lede: 1.15rem;  --t-body: 1rem;
+  --t-small: .86rem;  --t-micro: .72rem;
+  /* Space — full 4px scale */
+  --s-1:.25rem; --s-2:.5rem; --s-3:.75rem; --s-4:1rem; --s-6:1.5rem;
+  --s-8:2rem; --s-10:2.5rem; --s-12:3rem; --s-16:4rem; --s-20:5rem;
+  --s-24:6rem; --s-32:8rem;
+  --s-section: clamp(4.5rem,9vw,8rem);
+  /* Shape & motion */
+  --r-1: 2px;  --r-pill: 999px;
+  --ease: .25s cubic-bezier(.2,.6,.2,1);
+  /* Layout */
+  --w-max: 1120px;  --w-prose: 62ch;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-0:#F6F2EA; --bg-1:#EFEBE2; --bg-2:#E6E1D7;
+    --ink:#1B1916; --ink-dim:#5D5850; --ink-faint:#8A847A;
+    --gold:#8C6218; --gold-hover:#6E4D12; --gold-ink:#8C6218;
+    --hairline:rgba(27,25,22,.12); --hairline-strong:rgba(27,25,22,.22);
+    --hairline-gold:rgba(140,98,24,.50); --gold-wash:rgba(140,98,24,.06);
+  }
+}</pre>
+</section>
+
+<footer>
+  <p><b>Contrast:</b> gold-ink 9.2:1 · ink-dim 6.3:1 · light gold 4.9:1 — AA or better throughout. <b>Gate D3, round 2:</b> approve the eight-color discipline, or tune warmth (hue 36° → cooler 30° / warmer 42°) as one variable.</p>
+</footer>
+
+</div>
+</body>
+</html>

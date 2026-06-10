@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Variants — palette warmth + guilloché dials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@500&family=Playfair+Display:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{ --line:rgba(236,233,228,.12); }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0B0A09;color:#ECE9E4;font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:6rem}
+.wrap{width:92%;max-width:1100px;margin:0 auto}
+.intro{padding:3.5rem 0 2rem;border-bottom:1px solid var(--line)}
+.intro h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:.7rem}
+.intro p{color:#9D968D;max-width:64ch;font-size:.93rem}
+.tag{display:inline-block;border:1px solid #C8892A;color:#D9A246;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .7rem;margin-bottom:1.2rem}
+section.block{padding:3rem 0;border-bottom:1px solid var(--line)}
+.block>h2{font-family:'Playfair Display',serif;font-weight:500;font-size:1.25rem;margin-bottom:.3rem}
+.block>p.note{color:#9D968D;font-size:.86rem;max-width:64ch;margin-bottom:1.8rem}
+
+.hues{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(min-width:780px){.hues{grid-template-columns:repeat(3,1fr)}}
+.huecol{padding:1.6rem 1.3rem}
+.huecol h3{font-family:'Playfair Display',serif;font-weight:500;font-size:1rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:baseline}
+.huecol h3 small{color:#6F6A63;font-size:.7rem;letter-spacing:.1em}
+.sw{display:flex;align-items:center;gap:.7rem;margin-bottom:.4rem}
+.sw .dot{width:30px;height:30px;border-radius:3px;border:1px solid var(--line);flex-shrink:0}
+.sw code{font-size:.68rem;color:#9D968D}
+.mock{margin-top:1.2rem;border:1px solid var(--line);border-radius:3px;padding:1.4rem 1.3rem}
+.mock .eye{font-family:'Playfair Display',serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem}
+.mock h4{font-family:'Playfair Display',serif;font-weight:500;font-size:1.3rem;margin-bottom:.5rem;line-height:1.2}
+.mock p{font-size:.82rem;margin-bottom:1rem}
+.mock .btn{display:inline-block;font-size:.78rem;padding:.5rem 1rem;border-radius:2px}
+.mock .rule{height:1px;margin:1rem 0 0}
+
+.lab{display:grid;gap:1.4rem}
+.dial{border:1px solid var(--line);border-radius:4px;padding:1.4rem}
+.dial h3{font-family:'Playfair Display',serif;font-weight:500;font-size:1.05rem;margin-bottom:.2rem}
+.dial p{color:#9D968D;font-size:.82rem;margin-bottom:1.2rem;max-width:70ch}
+.samples{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.samp{background:#11100E;display:flex;flex-direction:column;align-items:center;gap:.7rem;padding:1.4rem .6rem}
+.samp .lbl{font-size:.7rem;letter-spacing:.08em;color:#9D968D;text-transform:uppercase}
+.samp .lbl b{color:#D9A246;font-weight:500}
+footer{padding-top:2.5rem;color:#6F6A63;font-size:.84rem;max-width:72ch}
+footer b{color:#D9A246;font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="intro">
+  <span class="tag">Variants · choose the dials</span>
+  <h1>Palette warmth &amp; guilloché dials</h1>
+  <p>Top: the same eight-colour system at three hue axes — cooler 30°, current 36°, warmer 42° — saturation and lightness held identical, so only warmth changes. Below: the four guilloché dials, each shown low / current / high with everything else fixed, so you can read one variable at a time.</p>
+</section>
+
+<section class="block">
+  <h2>Palette warmth — 30° · 36° · 42°</h2>
+  <p class="note">Watch the surfaces and the gold. 30° edges toward ash/grey-brown (more sober); 42° edges toward amber/tobacco (more candlelit). 36° is the current lock.</p>
+  <div class="hues" id="hues"></div>
+</section>
+
+<section class="block">
+  <h2>Guilloché dials — low / current / high</h2>
+  <p class="note">First three dials act on the turned disc (medallion); the fourth on the band. Current setting is the middle sample in each row.</p>
+  <div class="lab" id="lab"></div>
+</section>
+
+<footer>
+  <p><b>How to answer:</b> give me a hue (30 / 36 / 42) and one value per dial (e.g. "density high, drift current, wander low, band current"). I'll lock the tokens + guilloché parameters into the Design Brief and the gates close.</p>
+</footer>
+
+</div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+function hsl(h,s,l){return `hsl(${h} ${s}% ${l}%)`}
+/* token spec: [name, sat, light] on a shared hue */
+const TOK=[
+  ["bg-0",8,4],["bg-1",8,7],["bg-2",8,11],
+  ["ink",10,90],["ink-dim",9,59],["ink-faint",8,41],
+  ["gold",64,48],["gold-ink",62,57]
+];
+const HUES=[[30,"cooler — ash"],[36,"current"],[42,"warmer — amber"]];
+const huesEl=document.getElementById("hues");
+HUES.forEach(([h,label])=>{
+  const col=document.createElement("div");col.className="huecol";
+  const c={}; TOK.forEach(([n,s,l])=>c[n]=hsl(h,s,l));
+  let sw="";
+  TOK.forEach(([n,s,l])=>{ sw+=`<div class="sw"><span class="dot" style="background:${hsl(h,s,l)}"></span><code>${n} · ${h}° ${s}% ${l}%</code></div>`; });
+  col.innerHTML=`<h3>${h}° <small>${label}</small></h3>${sw}
+    <div class="mock" style="background:${c['bg-0']}">
+      <div class="eye" style="color:${c['gold-ink']}">Private cyber defense</div>
+      <h4 style="color:${c['ink']}">Your phone knows everything.</h4>
+      <p style="color:${c['ink-dim']}">We find how you're exposed and shut it — in a day.</p>
+      <span class="btn" style="background:${c['gold']};color:${c['bg-0']}">Speak with us</span>
+      <div class="rule" style="background:${c['gold']};opacity:.5"></div>
+    </div>`;
+  huesEl.appendChild(col);
+});
+
+/* guilloché generators */
+function svgEl(s){const e=document.createElementNS(NS,"svg");e.setAttribute("width",s);e.setAttribute("height",s);e.setAttribute("viewBox","0 0 200 200");return e}
+function addPath(svg,d,w,op){const p=document.createElementNS(NS,"path");p.setAttribute("d",d);p.setAttribute("fill","none");p.setAttribute("stroke","#C8892A");p.setAttribute("stroke-width",w);p.setAttribute("opacity",op);svg.appendChild(p)}
+function groove(cx,cy,R,a1,n1,p1,a2,n2,p2){let d="";for(let t=0;t<=720;t++){const th=t*Math.PI/360;const r=R+a1*Math.sin(n1*th+p1)+a2*Math.sin(n2*th+p2);d+=(t?"L":"M")+(cx+r*Math.cos(th)).toFixed(2)+" "+(cy+r*Math.sin(th)).toFixed(2)}return d+"Z"}
+function disc(size,{rings,drift,wander}){
+  const svg=svgEl(size);
+  for(let i=0;i<rings;i++){
+    const R=20+i*(78/rings);
+    const cx=100+wander*Math.sin(i*0.35), cy=100+wander*Math.cos(i*0.28);
+    addPath(svg,groove(cx,cy,R,2.4,11,i*drift,1.0,23,-i*drift*0.5),0.5,0.42);
+  }
+  return svg;
+}
+function bandSvg(size,{lines,crowd}){
+  const e=document.createElementNS(NS,"svg");e.setAttribute("width","100%");e.setAttribute("height",size);e.setAttribute("viewBox","0 0 300 90");
+  for(let j=0;j<lines;j++){
+    let d="";const base=12+j*(66/lines);
+    for(let x=0;x<=300;x+=4){const y=base+crowd*Math.sin(x/60+j*0.5)+crowd*0.45*Math.sin(x/19+j*0.2);d+=(x?"L":"M")+x+" "+y.toFixed(2)}
+    const p=document.createElementNS(NS,"path");p.setAttribute("d",d);p.setAttribute("fill","none");p.setAttribute("stroke","#C8892A");p.setAttribute("stroke-width",.5);p.setAttribute("opacity",.3);e.appendChild(p);
+  }
+  return e;
+}
+const S=150;
+const DIALS=[
+  {key:"Groove density", desc:"How many concentric grooves fill the disc — sparse and airy vs. dense and metallic.",
+   gen:v=>disc(S,{rings:v,drift:0.42,wander:3.2}), vals:[[20,"low"],[36,"current"],[54,"high"]]},
+  {key:"Phase drift (shimmer)", desc:"How much each ring's wave is offset from its neighbour — low is calm and concentric, high shimmers like engine-turned metal.",
+   gen:v=>disc(S,{rings:36,drift:v,wander:3.2}), vals:[[0.15,"low"],[0.42,"current"],[0.85,"high"]]},
+  {key:"Centre wander (irregularity)", desc:"How far the centre of each ring drifts — zero is a perfect target, high is hand-engraved and organic.",
+   gen:v=>disc(S,{rings:36,drift:0.42,wander:v}), vals:[[0,"low"],[3.2,"current"],[7,"high"]]},
+  {key:"Band crowding", desc:"How tightly the parallel lines bunch and release — low is a quiet ribbon, high is a dense woven strip.",
+   gen:v=>bandSvg(90,{lines:v.l,crowd:v.c}), vals:[[{l:11,c:4},"low"],[{l:16,c:6},"current"],[{l:24,c:8.5},"high"]]}
+];
+const lab=document.getElementById("lab");
+DIALS.forEach(d=>{
+  const div=document.createElement("div");div.className="dial";
+  div.innerHTML=`<h3>${d.key}</h3><p>${d.desc}</p>`;
+  const row=document.createElement("div");row.className="samples";
+  d.vals.forEach(([v,label])=>{
+    const cell=document.createElement("div");cell.className="samp";
+    cell.appendChild(d.gen(v));
+    const lab2=document.createElement("div");lab2.className="lbl";
+    lab2.innerHTML = label==="current"?`<b>current</b>`:label;
+    cell.appendChild(lab2);
+    row.appendChild(cell);
+  });
+  div.appendChild(row);lab.appendChild(div);
+});
+</script>
+</body>
+</html>

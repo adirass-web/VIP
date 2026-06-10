@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guilloché System v2 — Gate D2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@500&family=Playfair+Display:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0A09; --bg-1:#131210;
+  --ink:#ECE9E4; --dim:#9D968D; --faint:#6F6A63;
+  --gold:#C8892A; --gold-ink:#D9A246; --line:rgba(236,233,228,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:6rem}
+.wrap{width:90%;max-width:1060px;margin:0 auto}
+.intro{padding:4rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.intro h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:.8rem}
+.intro p{color:var(--dim);max-width:66ch;font-size:.95rem}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold-ink);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .7rem;margin-bottom:1.4rem}
+section.block{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+.block h2{font-family:'Playfair Display',serif;font-weight:500;font-size:1.3rem;margin-bottom:.4rem}
+.block p.note{color:var(--dim);font-size:.88rem;max-width:64ch;margin-bottom:2rem}
+.stage{border:1px solid var(--line);background:var(--bg-1);display:flex;align-items:center;justify-content:center;padding:2.5rem 1.5rem;overflow:hidden}
+.stage.tall{min-height:300px}
+.hero-demo{position:relative;width:100%;min-height:340px;display:flex;align-items:center;border:1px solid var(--line);background:var(--bg-1);overflow:hidden}
+.hero-demo .field{position:absolute;inset:0;pointer-events:none}
+.hero-demo .content{position:relative;z-index:1;padding:3rem;max-width:30ch}
+.hero-demo h3{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin-bottom:.9rem}
+.hero-demo h3 em{color:var(--gold-ink)}
+.hero-demo p{color:var(--dim);font-size:.95rem}
+.rules{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+@media(min-width:760px){.rules{grid-template-columns:1fr 1fr}}
+.rule{background:var(--bg);padding:1.1rem 1.4rem;font-size:.85rem;color:var(--dim)}
+.rule b{color:var(--gold-ink);font-weight:500;display:block;margin-bottom:.2rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+footer{padding-top:3rem;color:var(--faint);font-size:.85rem;max-width:70ch}
+footer b{color:var(--gold-ink);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="intro">
+  <span class="tag">Gate D2 · guilloché v2 — interference, not flowers</span>
+  <h1>Engine-turned, round two</h1>
+  <p>Rebuilt on your critique. The structure is no longer symmetric waves or rosettes: every motif is now <em>interference between near-identical engraved lines</em> — concentric grooves with drifting phase and a wandering center (turned metal), and bands of near-parallel lines that bunch and separate. No helix, no mandala. Same rules as before (approved); same parametric production path.</p>
+</section>
+
+<section class="block">
+  <h2>1 · The medallion — turned disc</h2>
+  <p class="note">Dense concentric grooves, each ring minutely out of phase with its neighbor, center wandering a few units per ring. Reads as engraved metal catching light. The II·b seal (peaked roof) knocked out at center.</p>
+  <div class="stage tall"><div id="medallion"></div></div>
+</section>
+
+<section class="block">
+  <h2>2 · The band — drifting line field</h2>
+  <p class="note">Sixteen near-parallel lines, small shared undulation, per-line phase drift — they crowd and release like an engraved ribbon. No crossings, no helix.</p>
+  <div class="stage"><div id="band" style="width:100%"></div></div>
+</section>
+
+<section class="block">
+  <h2>3 · The field — hero background</h2>
+  <p class="note">The groove structure centered far off-canvas right, cropped — asymmetry by framing. ≤ 10% opacity; the prose column stays untouched.</p>
+  <div class="hero-demo">
+    <div class="field" id="field"></div>
+    <div class="content">
+      <h3>Your phone knows <em>everything.</em></h3>
+      <p>Photos, locations, chats, finances — all of it can be turned against you. We close every door before someone walks through it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <h2>Usage rules — unchanged (approved)</h2>
+  <div class="rules">
+    <div class="rule"><b>Color</b>Gold strokes only, on the two darkest surfaces.</div>
+    <div class="rule"><b>Opacity</b>Medallion ≤ 40% · band ≤ 32% · field ≤ 10%.</div>
+    <div class="rule"><b>Placement</b>Never behind body text. Fields anchor to an edge.</div>
+    <div class="rule"><b>Hierarchy</b>One motif per viewport.</div>
+    <div class="rule"><b>Motion</b>None.</div>
+    <div class="rule"><b>Production</b>Parametric SVG, self-hosted. Parameters recorded for regeneration.</div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Gate D2, round 2:</b> the dials — groove density, phase drift (how much shimmer), center wander (how irregular), band crowding. Each is one parameter. Tokens v2.1 (coherent palette) is the companion file.</p>
+</footer>
+
+</div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+const GOLD="#C8892A";
+function svgEl(w,h,vb,par){const s=document.createElementNS(NS,"svg");s.setAttribute("width",w);s.setAttribute("height",h);s.setAttribute("viewBox",vb);if(par)s.setAttribute("preserveAspectRatio",par);return s}
+function addPath(svg,d,w,op){const p=document.createElementNS(NS,"path");p.setAttribute("d",d);p.setAttribute("fill","none");p.setAttribute("stroke",GOLD);p.setAttribute("stroke-width",w);p.setAttribute("opacity",op);svg.appendChild(p)}
+function groovePath(cx,cy,R,a1,n1,p1,a2,n2,p2){
+  let d="";
+  for(let t=0;t<=720;t++){
+    const th=t*Math.PI/360;
+    const r=R + a1*Math.sin(n1*th+p1) + a2*Math.sin(n2*th+p2);
+    const x=cx+r*Math.cos(th), y=cy+r*Math.sin(th);
+    d+=(t?"L":"M")+x.toFixed(2)+" "+y.toFixed(2);
+  }
+  return d+"Z";
+}
+
+/* 1 — medallion: turned disc with wandering center */
+(function(){
+  const svg=svgEl(360,360,"0 0 400 400");
+  for(let i=0;i<36;i++){
+    const R=64+i*2.4;
+    const cx=200+3.2*Math.sin(i*0.35), cy=200+3.2*Math.cos(i*0.28);
+    const d=groovePath(cx,cy,R, 3.1,11,i*0.42, 1.3,23,-i*0.21);
+    addPath(svg,d,0.5,0.34);
+  }
+  // seal knockout
+  const disk=document.createElementNS(NS,"circle");
+  disk.setAttribute("cx",200);disk.setAttribute("cy",200);disk.setAttribute("r",58);
+  disk.setAttribute("fill","#131210");svg.appendChild(disk);
+  const ring=(r,w,o)=>{const c=document.createElementNS(NS,"circle");c.setAttribute("cx",200);c.setAttribute("cy",200);c.setAttribute("r",r);c.setAttribute("fill","none");c.setAttribute("stroke",GOLD);c.setAttribute("stroke-width",w);if(o)c.setAttribute("opacity",o);svg.appendChild(c)};
+  ring(58,2.2);ring(51,1,".5");
+  // final II·b mem, peaked roof
+  const g=document.createElementNS(NS,"g");
+  g.setAttribute("transform","translate(200 204) scale(.95) translate(-50 -57)");
+  g.setAttribute("stroke",GOLD);g.setAttribute("fill","none");
+  [["M24 35 L50 26 L76 35",9],
+   ["M72 33.6 V48 C72 62 64 74 54 83",7],
+   ["M55 81 C48 77 43 71 40 64",8],
+   ["M30 35 V50 C30 55 28 59 26 63",6]
+  ].forEach(([d,w])=>{const p=document.createElementNS(NS,"path");p.setAttribute("d",d);p.setAttribute("stroke-width",w);g.appendChild(p)});
+  svg.appendChild(g);
+  document.getElementById("medallion").appendChild(svg);
+})();
+
+/* 2 — band: drifting near-parallel lines */
+(function(){
+  const svg=svgEl("100%",100,"0 0 900 100");
+  for(let j=0;j<16;j++){
+    let d="";
+    for(let x=0;x<=900;x+=4){
+      const y=14+j*4.6 + 5.5*Math.sin(x/85+j*0.52) + 2.6*Math.sin(x/27+j*0.18+1.3);
+      d+=(x?"L":"M")+x+" "+y.toFixed(2);
+    }
+    addPath(svg,d,0.5,0.30);
+  }
+  document.getElementById("band").appendChild(svg);
+})();
+
+/* 3 — field: grooves centered off-canvas right */
+(function(){
+  const svg=svgEl("100%","100%","0 0 900 400","xMaxYMid slice");
+  for(let i=0;i<46;i++){
+    const R=70+i*9.5;
+    const cx=985+4*Math.sin(i*0.4), cy=200+4*Math.cos(i*0.33);
+    const d=groovePath(cx,cy,R, 3.4,13,i*0.5, 1.6,29,-i*0.27);
+    addPath(svg,d,0.5,0.095);
+  }
+  document.getElementById("field").appendChild(svg);
+})();
+</script>
+</body>
+</html>
