@@ -259,3 +259,14 @@ section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
 .compare-all>summary::after{content:"+";font-size:1.2rem;margin-inline-start:auto}
 .compare-all[open]>summary::after{content:"\2212"}
 .compare-all .cmp-wrap{margin-top:.4rem}
+
+/* pricing — add-ons list + unit note */
+.unit-note{font-size:.88rem;color:var(--ink-dim);background:var(--gold-wash);border:1px solid var(--hairline-gold);border-radius:var(--r-1);padding:.9rem 1.2rem;margin-bottom:1.8rem;max-width:none}
+.unit-note b{color:var(--ink);font-weight:500}
+.addon-list{list-style:none;border-top:1px solid var(--hairline);margin-top:1rem}
+.addon-list li{display:grid;grid-template-columns:1fr auto;column-gap:1.5rem;align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--hairline)}
+.addon-list .an{font-family:var(--font-display);font-size:1.12rem;color:var(--ink)}
+.addon-list .ap{font-family:var(--font-display);color:var(--gold-ink);font-size:1.15rem;text-align:end;white-space:nowrap}
+.addon-list .ad{grid-column:1 / -1;color:var(--ink-dim);font-size:.88rem;margin-top:.25rem;max-width:64ch}
+.addon-list .ap small{display:block;font-family:var(--font-body);font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin-top:.1rem}
+.tier-note{font-size:.78rem;color:var(--ink-faint);margin-top:-.6rem;margin-bottom:1rem}
