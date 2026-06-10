@@ -1,0 +1,145 @@
+{% set t = i18n[locale] %}
+{% set enLink = "/en/" + (slug + ".html" if slug else "") %}
+{% set heLink = "/he/" + (slug + ".html" if slug else "") %}
+{% set ruLink = "/ru/" + (slug + ".html" if slug else "") %}
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    {% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords }}">{% endif %}
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ t.og_site_name or 'מגן · Personal Cyber Shield' }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ og_description if og_description else description }}">
+    <meta property="og:url" content="{{ canonical }}">
+    {% set ogImg = og_image or 'https://www.magenvip.tech/assets/img/og-default.png' %}
+    <meta property="og:image" content="{{ ogImg }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="{{ og_locale }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ og_description if og_description else description }}">
+    <meta name="twitter:image" content="{{ ogImg }}">
+    <link rel="canonical" href="{{ canonical }}">
+    {# EN-only public site (vault-redesign). HE/RU hreflang restored when translated. #}
+    <link rel="alternate" hreflang="en" href="https://www.magenvip.tech{{ enLink }}">
+    <link rel="alternate" hreflang="x-default" href="https://www.magenvip.tech{{ enLink }}">
+
+    <title>{{ title }}</title>
+
+    {# Self-hosted fonts (Track 3b) — no third-party font call. #}
+    <link rel="preload" href="../assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/vault.css">
+</head>
+<body{% if body_class %} class="{{ body_class }}"{% endif %}>
+
+    <a class="skip-link" href="#main-content">{{ t.skip_link or 'Skip to main content' }}</a>
+
+    <header class="site-header">
+        <div class="wrap nav">
+            <a class="brand" href="/{{ locale }}/" aria-label="מגן — Personal Cyber Shield — {{ t.nav_home or 'Home' }}">
+                <svg class="mark seal" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
+                    <g fill="none" transform="translate(50 51) scale(.6) translate(-50 -55)">
+                        <path d="M24 35 L50 26 L76 35" stroke-width="9"/>
+                        <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="7"/>
+                        <path d="M55 81 C48 77 43 71 40 64" stroke-width="8"/>
+                        <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
+                    </g>
+                </svg>
+                <span class="name">מגן</span>
+            </a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
+            <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
+                <a href="/{{ locale }}/#situations">{{ t.nav_situations or 'Situations' }}</a>
+                <a href="/{{ locale }}/why-us.html">{{ t.nav_why or 'Why us' }}</a>
+                <a href="/{{ locale }}/whats-included.html">{{ t.nav_whats_included or "What's included" }}</a>
+                <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
+                <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
+                <a class="btn" href="#contact">{{ t.cta_speak or 'Speak with us' }}</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1" role="main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <section class="foot-contact" id="contact">
+            <div class="wrap">
+                <div class="seal-lg">
+                    <svg class="seal" width="56" height="56" viewBox="0 0 100 100" aria-hidden="true">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
+                        <g fill="none" transform="translate(50 51) scale(.6) translate(-50 -55)">
+                            <path d="M24 35 L50 26 L76 35" stroke-width="9"/>
+                            <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="7"/>
+                            <path d="M55 81 C48 77 43 71 40 64" stroke-width="8"/>
+                            <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
+                        </g>
+                    </svg>
+                </div>
+                <span class="eyebrow" style="justify-content:center">{{ t.footer_eyebrow or 'Confidential' }}</span>
+                <h2>{{ t.footer_cta_h2 or 'Get your Personal Cyber Shield.' }}</h2>
+                <p class="sub">{{ t.footer_cta_intro or 'Speak with us directly, before your private life is used against you.' }}</p>
+                <nav class="foot-cta" aria-label="{{ t.footer_cta_nav_label or 'Direct messaging options' }}">
+                    <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">WhatsApp</a>
+                    <a class="btn ghost" href="{{ t.signal_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">Signal</a>
+                </nav>
+            </div>
+        </section>
+
+        <div class="foot-bar">
+            <div class="wrap foot-bar-inner">
+                <div class="foot-brand">
+                    <svg class="mark seal" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke-width="3"/>
+                        <g fill="none" transform="translate(50 51) scale(.58) translate(-50 -55)">
+                            <path d="M24 35 L50 26 L76 35" stroke-width="10"/>
+                            <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="8"/>
+                            <path d="M55 81 C48 77 43 71 40 64" stroke-width="9"/>
+                            <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="7"/>
+                        </g>
+                    </svg>
+                    <span class="fb-name">מגן <span class="fb-tag">Personal Cyber Shield</span></span>
+                </div>
+                <nav class="foot-col" aria-label="Site">
+                    <h3>Explore</h3>
+                    <a href="/{{ locale }}/#situations">Situations</a>
+                    <a href="/{{ locale }}/why-us.html">Why us</a>
+                    <a href="/{{ locale }}/whats-included.html">What's included</a>
+                    <a href="/{{ locale }}/pricing.html">Pricing</a>
+                    <a href="/{{ locale }}/faq.html">FAQ</a>
+                    <a href="/{{ locale }}/attorneys.html">For attorneys</a>
+                </nav>
+                <nav class="foot-col" aria-label="Legal">
+                    <h3>Legal</h3>
+                    <a href="/terms.html">{{ t.footer_terms or 'Terms of Use' }}</a>
+                    <a href="/privacy.html">{{ t.footer_privacy or 'Privacy' }}</a>
+                </nav>
+            </div>
+            <div class="wrap foot-meta">
+                <span>{{ t.trust_line or 'In person only · No remote access · No cloud · No logs · No app' }}</span>
+                <span>{{ t.footer_copyright or '© 2026 מגן · Personal Cyber Shield' }}</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function(){
+      var b=document.querySelector('[data-nav-toggle]'),m=document.getElementById('site-menu');
+      if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);});}
+    })();
+    </script>
+    <script src="../assets/js/guilloche.js" defer></script>
+
+</body>
+</html>

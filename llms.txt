@@ -1,0 +1,61 @@
+# מגן · Personal Cyber Shield
+
+> Personal Cyber Shield (מגן סייבר אישי) is an in-person, single-practitioner private cyber defense service for individuals in high-stakes personal disputes — divorce and separation, business and shareholder disputes, inheritance conflicts, commercial espionage, and private-investigator surveillance. Dr. Lior Tabansky maps a client's full digital exposure and hardens every device, account, and channel in a single in-person day. No remote access, no cloud, no logs, no app. Every engagement ends with a signed Certificate of Hardening for the client's legal file.
+
+The core idea: in a personal dispute the damaging exposure is rarely a hacker. It is ordinary access — a still-logged-in session, a shared family plan, location sharing, a reused password — granted inside a relationship and never closed when the relationship changed. Nobody has to hack anything.
+
+The English site is live now. Hebrew and Russian are in preparation.
+
+## Who this is for
+
+- Individuals in divorce or separation who need to secure devices, accounts, and communications — whether planning ahead or already exposed
+- Business partners and shareholders in active disputes who need to close shared access and protect their negotiating position
+- Family members in inheritance conflicts where wills, powers of attorney, and accounts were entrusted to others
+- Executives and owners facing commercial espionage or departing-insider data loss
+- Anyone who expects, or already senses, private-investigator surveillance
+- Anyone leaving a controlling or abusive relationship who needs tracking, stalkerware, and shared access closed safely
+- Attorneys who refer clients and need a documented security posture for the file
+
+## Services
+
+- [Separation & Divorce](/en/separation-divorce.html): When a marriage ends, the access doesn't. We close the devices, accounts, and shared plans that stay open — in person, in a day, before any of it reaches court.
+- [Business Dispute](/en/business-dispute.html): When a partnership ends, the shared access rarely ends with it. We close the files, email, and channels that years of trust left open.
+- [Inheritance Clash](/en/inheritance-clash.html): The access was given in good faith; the dispute turns it into a weapon. We close the accounts, devices, and documents others were once trusted with.
+- [Commercial Spying](/en/commercial-spying.html): Sensitive files usually leave with someone who was simply allowed in. We secure leadership's devices, accounts, and communications.
+- [Private Investigator Defence](/en/private-investigator.html): A private investigator rarely hacks anything — they use the doors you left open. We close location, cloud, device, and vehicle access in a single day.
+- [Leaving a Controlling Relationship](/en/leaving-controlling-relationship.html): Stalking and coercive control after a relationship — stalkerware, location trackers, shared accounts, and smart-home access. We find and close what's tracking you, on your timeline, planned around your safety.
+
+## Why us / the method
+
+- [Why us](/en/why-us.html): Dr. Lior Tabansky works with each client directly — two decades advising governments and agencies on cyber operations across Israel, Asia, Europe, and Africa. Hardening is applied in person, on standards used by government agencies (NSA, NIST, NCSC). The same person who assesses your threat does the work, from first assessment to signed Certificate of Hardening.
+
+## Pricing
+
+All prices in Israeli Shekel (ILS); sessions are in person in Israel (international by arrangement). Single fixed prices.
+
+- [Pricing](/en/pricing.html)
+- Threat Assessment: ₪3,500 — a three-hour in-person diagnostic and written report; credited in full toward any protection tier within 14 days. (Entry point, not a tier.)
+- Personal Shield: ₪15,000 — one person, primary device, and all accounts.
+- Extended Shield: ₪32,000 — adds home network, vehicle, and connected devices.
+- Inner Circle Shield: ₪38,000 — typically three people fully hardened together.
+- Sovereign Shield: ₪95,000 — adds physical counter-surveillance and ongoing monitoring.
+- Annual Threat Monitoring: ₪6,000/year (past clients) — leak scanning, breach alerts, one in-person check.
+- Priority Retainer: ₪12,000/year (past clients) — eight-business-hour response, three in-person check-ins.
+
+## For attorneys
+
+- [For attorneys](/en/attorneys.html): What the Certificate of Hardening gives the file, and how referral works. The work is defensive only — no investigations, no expert testimony.
+
+## FAQ
+
+- [FAQ](/en/faq.html): Confidentiality, what happens on the day, who does the work, pricing, and what comes after.
+
+## Contact
+
+Contact is via WhatsApp or Signal only: +972-53-336-6276. No contact forms, no CRM, no third-party systems. End-to-end encrypted by design.
+
+## Languages
+
+- English: /en/ (live)
+- Hebrew: /he/ — in preparation
+- Russian: /ru/ — in preparation

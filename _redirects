@@ -1,0 +1,5 @@
+# vault-redesign — EN-only public site (temporary). HE/RU hidden until translated.
+/he/*  /en/  302
+/ru/*  /en/  302
+# Retired page → new IA (permanent)
+/en/founder.html  /en/why-us.html  301

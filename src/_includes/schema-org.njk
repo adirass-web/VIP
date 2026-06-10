@@ -1,0 +1,104 @@
+{#
+  Base structured data — injected in <head> via base.njk.
+  Provides ProfessionalService + Person (Dr. Tabansky) on every page.
+  Page-specific schemas (FAQPage, Service) are added per .njk file via a
+  `page_schema` front-matter block rendered after this one.
+#}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.magenvip.tech/#organization",
+      "name": "Personal Cyber Shield",
+      "alternateName": ["מגן סייבר אישי", "מגן"],
+      "url": "https://www.magenvip.tech",
+      "description": "Elite in-person digital security for individuals in high-stakes personal and business disputes. Device hardening, account lockdown, and communications security by Dr. Lior Tabansky.",
+      "slogan": "Personal Cyber Shield",
+      "areaServed": [
+        { "@type": "Country", "name": "Israel" }
+      ],
+      "availableLanguage": ["Hebrew", "English", "Russian"],
+      "priceRange": "₪₪₪₪",
+      "knowsAbout": [
+        "Personal cybersecurity",
+        "Device hardening",
+        "Account security",
+        "Digital counter-intelligence",
+        "Divorce digital security",
+        "Business dispute data protection",
+        "Commercial espionage prevention"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Protection Tiers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Threat Assessment",
+            "description": "Three-hour face-to-face diagnostic. Written report with precise recommendations. Credited in full toward any tier within 14 days.",
+            "price": "3500",
+            "priceCurrency": "ILS"
+          },
+          {
+            "@type": "Offer",
+            "name": "Personal Shield",
+            "description": "One person, primary device, and all accounts. Hardware security key included.",
+            "price": "14000",
+            "priceCurrency": "ILS"
+          },
+          {
+            "@type": "Offer",
+            "name": "Home Shield",
+            "description": "Adds the home network and connected environment; the vehicle is a separate add-on.",
+            "price": "33000",
+            "priceCurrency": "ILS"
+          },
+          {
+            "@type": "Offer",
+            "name": "Inner Circle Shield",
+            "description": "Typically three people fully hardened.",
+            "price": "38000",
+            "priceCurrency": "ILS"
+          },
+          {
+            "@type": "Offer",
+            "name": "Sovereign Shield",
+            "description": "Adds physical counter-surveillance and ongoing threat monitoring.",
+            "price": "95000",
+            "priceCurrency": "ILS"
+          }
+        ]
+      },
+      "founder": { "@id": "https://www.magenvip.tech/en/founder.html#person" },
+      "employee": { "@id": "https://www.magenvip.tech/en/founder.html#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.magenvip.tech/en/founder.html#person",
+      "name": "Lior Tabansky",
+      "honorificPrefix": "Dr.",
+      "givenName": "Lior",
+      "familyName": "Tabansky",
+      "jobTitle": "Personal Cybersecurity Expert",
+      "description": "Two decades advising governments and intelligence agencies on cyber operations across Israel, Asia, Europe, and Africa.",
+      "knowsAbout": [
+        "Cybersecurity",
+        "Device hardening",
+        "Intelligence operations",
+        "Digital counter-intelligence",
+        "Personal privacy"
+      ],
+      "worksFor": { "@id": "https://www.magenvip.tech/#organization" },
+      "url": "https://www.magenvip.tech/{{ locale }}/founder.html",
+      "sameAs": []
+    }
+  ]
+}
+</script>
+{% if page_schema %}
+<script type="application/ld+json">
+{{ page_schema | safe }}
+</script>
+{% endif %}

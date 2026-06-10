@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מגן — Wordmark Lockups · Gate N2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0A09; --bg-2:#11100E;
+  --ink:#ECE8DF; --dim:#9C968A; --faint:#6E6960;
+  --gold:#C8892A; --line:rgba(236,232,223,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:6rem}
+.wrap{width:90%;max-width:1060px;margin:0 auto}
+.intro{padding:4rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.intro h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:.8rem}
+.intro p{color:var(--dim);max-width:64ch;font-size:.95rem}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .7rem;margin-bottom:1.4rem}
+.option{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+.opt-head{display:flex;align-items:baseline;gap:1.2rem;margin-bottom:.4rem}
+.opt-head .n{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.8rem}
+.opt-head h2{font-family:'Playfair Display',serif;font-weight:500;font-size:1.3rem}
+.opt-note{color:var(--dim);font-size:.88rem;max-width:62ch;margin-bottom:2rem}
+.stage{border:1px solid var(--line);background:var(--bg-2);display:flex;align-items:center;justify-content:center;min-height:260px;padding:3rem 1.5rem}
+.he{font-family:'David Libre',serif}
+.la{font-family:'Playfair Display',serif}
+
+/* 1 — HE-primary stacked */
+.lock1{text-align:center}
+.lock1 .mark{font-size:5.2rem;line-height:1;font-weight:500}
+.lock1 .rule{width:120px;height:1px;background:var(--gold);margin:1.1rem auto}
+.lock1 .desc{font-family:'Playfair Display',serif;font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;color:var(--dim)}
+
+/* 2 — bilingual */
+.lock2{display:flex;align-items:center;gap:1.6rem}
+.lock2 .mark{font-size:4.2rem;line-height:1;font-weight:500}
+.lock2 .sep{width:1px;height:64px;background:var(--gold);opacity:.7}
+.lock2 .side{display:flex;flex-direction:column;gap:.3rem}
+.lock2 .latin{font-family:'Playfair Display',serif;font-size:1.5rem;letter-spacing:.30em;text-transform:uppercase}
+.lock2 .desc{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);font-family:Inter,sans-serif}
+
+/* 3 — sealed mem */
+.lock3{display:flex;align-items:center;gap:1.5rem}
+.lock3 .seal{width:84px;height:84px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;position:relative}
+.lock3 .seal::after{content:"";position:absolute;inset:5px;border:1px solid var(--gold);border-radius:50%;opacity:.45}
+.lock3 .seal span{font-family:'David Libre',serif;font-size:2.6rem;color:var(--gold);line-height:1;transform:translateY(-2px)}
+.lock3 .side{display:flex;flex-direction:column;gap:.2rem}
+.lock3 .mark{font-size:3.4rem;line-height:1.05;font-weight:500}
+.lock3 .desc{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+
+/* 4 — latin-led for EN/RU */
+.lock4{text-align:center}
+.lock4 .latin{font-family:'Playfair Display',serif;font-size:3rem;letter-spacing:.34em;text-transform:uppercase;line-height:1.1;padding-inline-start:.34em}
+.lock4 .he-small{font-family:'David Libre',serif;font-size:1.5rem;color:var(--gold);margin-top:.7rem}
+.lock4 .desc{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-top:.8rem}
+
+/* context strips */
+.ctx{margin-top:1.2rem;border:1px solid var(--line)}
+.ctx-bar{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.4rem;background:var(--bg)}
+.ctx-bar .menu{display:flex;gap:1.6rem;font-size:.78rem;color:var(--dim)}
+.ctx-bar .cta{border:1px solid var(--gold);background:var(--gold);color:var(--bg);font-size:.74rem;padding:.45rem .9rem;border-radius:2px}
+.ctx-label{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding:.5rem 1.4rem;border-bottom:1px solid var(--line);background:var(--bg-2)}
+.b1{display:flex;align-items:baseline;gap:.55rem}
+.b1 .he{font-size:1.5rem;font-weight:500;line-height:1}
+.b1 .d{font-family:'Playfair Display',serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.b3{display:flex;align-items:center;gap:.6rem}
+.b3 .seal{width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.b3 .seal span{font-family:'David Libre',serif;font-size:1.05rem;color:var(--gold);transform:translateY(-1px)}
+.b3 .he{font-size:1.35rem;font-weight:500}
+.b4{display:flex;align-items:baseline;gap:.55rem}
+.b4 .latin{font-family:'Playfair Display',serif;font-size:1rem;letter-spacing:.26em}
+.b4 .he{font-size:1.15rem;color:var(--gold)}
+footer{padding-top:3rem;color:var(--faint);font-size:.85rem;max-width:70ch}
+footer b{color:var(--gold);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="intro">
+  <span class="tag">Gate N2 · confirm name + lockup</span>
+  <h1>מגן — wordmark lockups</h1>
+  <p>Name candidate: <b>מגן</b>, standalone — "VIP" retired. David Libre carries the Hebrew mark; Playfair Display carries Latin. Rule across all options: the name never appears bare — the lockup (mark + descriptor) is what we own, since the word itself is common in Israel. Each option shows the mark at full size, then in a header strip at real-world scale.</p>
+</section>
+
+<!-- 1 -->
+<section class="option">
+  <div class="opt-head"><span class="n">1</span><h2>Hebrew-primary, stacked</h2></div>
+  <p class="opt-note">The Hebrew word IS the mark — on every locale, including EN/RU. Gold rule, English descriptor beneath. The most Hebrew-first statement; the descriptor translates per locale.</p>
+  <div class="stage">
+    <div class="lock1">
+      <div class="mark he">מגן</div>
+      <div class="rule"></div>
+      <div class="desc">Personal Cyber Shield</div>
+    </div>
+  </div>
+  <div class="ctx">
+    <div class="ctx-label">In context — header, EN page</div>
+    <div class="ctx-bar">
+      <div class="b1"><span class="he">מגן</span><span class="d">Personal Cyber Shield</span></div>
+      <div class="menu"><span>Situations</span><span>Why Us</span><span>Pricing</span><span>FAQ</span></div>
+      <span class="cta">Speak with Dr. Tabansky</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="option">
+  <div class="opt-head"><span class="n">2</span><h2>Bilingual pairing</h2></div>
+  <p class="opt-note">Hebrew and Latin given equal weight, divided by a gold hairline. Most legible for foreign clients at first contact; slightly busier as a mark.</p>
+  <div class="stage">
+    <div class="lock2">
+      <div class="mark he">מגן</div>
+      <div class="sep"></div>
+      <div class="side">
+        <span class="latin">Magen</span>
+        <span class="desc">Personal Cyber Shield</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="option">
+  <div class="opt-head"><span class="n">3</span><h2>The seal</h2></div>
+  <p class="opt-note">A double-ring seal holding the letter מ — the germ of the guilloché certificate language, usable as favicon, stamp on the Certificate of Hardening, and wax-seal motif. Wordmark beside it.</p>
+  <div class="stage">
+    <div class="lock3">
+      <div class="seal"><span>מ</span></div>
+      <div class="side">
+        <div class="mark he">מגן</div>
+        <div class="desc">Personal Cyber Shield</div>
+      </div>
+    </div>
+  </div>
+  <div class="ctx">
+    <div class="ctx-label">In context — header, EN page</div>
+    <div class="ctx-bar">
+      <div class="b3"><span class="seal"><span>מ</span></span><span class="he">מגן</span></div>
+      <div class="menu"><span>Situations</span><span>Why Us</span><span>Pricing</span><span>FAQ</span></div>
+      <span class="cta">Speak with Dr. Tabansky</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="option">
+  <div class="opt-head"><span class="n">4</span><h2>Latin-led for EN/RU, Hebrew as signature</h2></div>
+  <p class="opt-note">EN/RU pages lead with MAGEN in Playfair small caps; מגן appears beneath in gold as the authentic signature. HE pages invert (מגן leads). Most conventional; least distinctive.</p>
+  <div class="stage">
+    <div class="lock4">
+      <div class="latin">Magen</div>
+      <div class="he-small he">מגן</div>
+      <div class="desc">Personal Cyber Shield</div>
+    </div>
+  </div>
+  <div class="ctx">
+    <div class="ctx-label">In context — header, EN page</div>
+    <div class="ctx-bar">
+      <div class="b4"><span class="latin">MAGEN</span><span class="he">מגן</span></div>
+      <div class="menu"><span>Situations</span><span>Why Us</span><span>Pricing</span><span>FAQ</span></div>
+      <span class="cta">Speak with Dr. Tabansky</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Panel recommendation:</b> Option 3 (the seal) — it gives מגן the ownable visual signature the common word needs, seeds the entire guilloché/certificate system, and scales from favicon to the stamped Certificate of Hardening. Option 1 is the purist alternative. Confirming the name + one lockup closes Gate N2.</p>
+</footer>
+
+</div>
+</body>
+</html>
