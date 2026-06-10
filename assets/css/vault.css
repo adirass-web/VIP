@@ -270,3 +270,8 @@ section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
 .addon-list .ad{grid-column:1 / -1;color:var(--ink-dim);font-size:.88rem;margin-top:.25rem;max-width:64ch}
 .addon-list .ap small{display:block;font-family:var(--font-body);font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin-top:.1rem}
 .tier-note{font-size:.78rem;color:var(--ink-faint);margin-top:-.6rem;margin-bottom:1rem}
+
+/* situation safety callout (A-6 + future precautionary pages) */
+.safety{margin-top:1.6rem;padding:1.05rem 1.3rem;border:1px solid var(--hairline-gold);background:var(--gold-wash);border-radius:var(--r-1);font-size:.9rem;color:var(--ink-dim);max-width:var(--w-prose)}
+.safety b{color:var(--ink);font-weight:500}
+.safety a{color:var(--gold-ink);border-bottom:1px solid var(--hairline-gold);padding-bottom:1px}
