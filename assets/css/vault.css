@@ -283,7 +283,7 @@ section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
 
 /* Outcome vignettes — "What we found" section */
 .vigs--outcome{grid-template-columns:1fr!important}
-.vig--outcome{background:var(--gold-wash);border:1px solid var(--hairline-gold);border-top:3px solid var(--gold)}
+.vig--outcome{background:var(--gold-wash);border:1px solid var(--hairline-gold);border-top:3px solid var(--gold);max-width:var(--w-prose)}
 .vig--outcome::before{content:none}
 .vig--outcome .vig-field{position:absolute;inset-inline-end:-40px;bottom:-40px;width:160px;height:160px;pointer-events:none;color:var(--gold);z-index:0;opacity:.45}
-.vig--outcome h3,.vig--outcome p{position:relative;z-index:1}
+.vig--outcome h3,.vig--outcome 
