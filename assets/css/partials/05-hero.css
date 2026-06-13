@@ -1,0 +1,9 @@
+/* === Hero section ======================================================= */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--hairline)}
+.hero .field{position:absolute;inset:0;z-index:0;pointer-events:none;color:var(--gold)}
+.hero .wrap{position:relative;z-index:1;padding:clamp(4.5rem,11vw,8rem) 0 clamp(3.5rem,7vw,6rem)}
+.hero-kicker{font-family:var(--font-display);font-size:.92rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:1.5rem}
+.hero h1{font-size:var(--t-hero);max-width:20ch;margin-bottom:1.6rem}
+.hero .sub{font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.4rem);font-style:italic;color:var(--ink-dim);max-width:42ch;line-height:1.5;margin-bottom:2.3rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.trust{margin-top:1.9rem;font-size:.78rem;letter-spacing:.04em;color:var(--ink-faint)}

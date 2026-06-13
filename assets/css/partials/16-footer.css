@@ -1,0 +1,18 @@
+/* === Footer (contact band + compact bar) ================================ */
+.site-footer{position:relative;overflow:hidden}
+.foot-contact{padding:var(--s-section) 0 3rem;text-align:center}
+.foot-contact .seal-lg{display:flex;justify-content:center;margin-bottom:1.4rem}
+.foot-contact h2{font-size:var(--t-h2);margin-bottom:1rem}
+.foot-contact .sub{color:var(--ink-dim);max-width:48ch;margin:0 auto 2rem}
+.foot-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.foot-bar{background:var(--bg-1);border-top:1px solid var(--hairline);padding:2.4rem 0 2rem}
+.foot-bar-inner{display:grid;gap:1.8rem}
+@media(min-width:720px){.foot-bar-inner{grid-template-columns:1.6fr 1fr 1fr;align-items:start}}
+.foot-brand{display:flex;align-items:center;gap:.6rem}
+.foot-brand .mark{flex-shrink:0}
+.fb-name{font-family:var(--font-he);font-size:1.2rem;color:var(--ink-dim);line-height:1.1}
+.fb-tag{display:block;font-family:var(--font-body);font-size:.7rem;letter-spacing:.04em;color:var(--ink-faint);margin-top:.15rem}
+.foot-col h3{font-family:var(--font-display);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:500;margin-bottom:.7rem}
+.foot-col a{display:block;color:var(--ink-dim);font-size:.82rem;padding:.22rem 0;transition:color var(--ease)}
+.foot-col a:hover{color:var(--ink)}
+.foot-meta{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--hairline);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 1.4rem;font-size:.74rem;color:var(--ink-faint)}

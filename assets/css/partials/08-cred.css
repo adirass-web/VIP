@@ -1,0 +1,10 @@
+/* === Credentials / why-us section ====================================== */
+.cred{display:grid;gap:3rem}
+@media(min-width:900px){.cred{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.cred-lead h2{font-size:var(--t-h2);margin-bottom:1.2rem}
+.cred-lead p{color:var(--ink-dim);font-size:.97rem}
+.cred-list{list-style:none}
+.cred-list li{padding:1.25rem 0;border-top:1px solid var(--hairline);font-size:.97rem;color:var(--ink-dim)}
+.cred-list li:last-child{border-bottom:1px solid var(--hairline)}
+.cred-list b{color:var(--ink);font-weight:500}
+.cred-link{display:inline-block;margin-top:1.6rem;color:var(--gold-ink);font-size:.9rem;border-bottom:1px solid var(--hairline-gold);padding-bottom:2px}

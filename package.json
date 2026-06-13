@@ -4,7 +4,8 @@
   "description": "MagenVIP personal cyber shield — 3-language marketing site",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "node assets/css/build.js && eleventy --serve",
+    "prebuild": "node assets/css/build.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"

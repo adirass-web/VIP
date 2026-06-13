@@ -1,0 +1,16 @@
+/* === Situation landing page components ================================== */
+.vectors{list-style:none;margin-top:1rem;max-width:var(--w-prose)}
+.vectors li{padding:1.1rem 0;border-top:1px solid var(--hairline);font-size:.97rem;color:var(--ink-dim)}
+.vectors li:last-child{border-bottom:1px solid var(--hairline)}
+.vectors b{color:var(--ink);font-weight:500}
+.vectors-close{margin-top:1.4rem;font-family:var(--font-display);font-style:italic;color:var(--ink-dim);max-width:var(--w-prose)}
+.prose p{color:var(--ink-dim);margin-bottom:1.1rem;max-width:var(--w-prose)}
+.prose p:last-child{margin-bottom:0}
+.attorney{margin-top:1.6rem;padding:1.1rem 1.3rem;border-inline-start:2px solid var(--gold);background:var(--gold-wash);font-size:.92rem;color:var(--ink-dim);max-width:var(--w-prose)}
+.attorney a{color:var(--gold-ink);border-bottom:1px solid var(--hairline-gold);padding-bottom:1px}
+.otherlinks{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-size:.95rem;margin-top:.5rem}
+.otherlinks a{color:var(--gold-ink)}
+.otherlinks a:hover{color:var(--ink)}
+.safety{margin-top:1.6rem;padding:1.05rem 1.3rem;border:1px solid var(--hairline-gold);background:var(--gold-wash);border-radius:var(--r-1);font-size:.9rem;color:var(--ink-dim);max-width:var(--w-prose)}
+.safety b{color:var(--ink);font-weight:500}
+.safety a{color:var(--gold-ink);border-bottom:1px solid var(--hairline-gold);padding-bottom:1px}

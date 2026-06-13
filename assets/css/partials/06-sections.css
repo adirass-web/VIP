@@ -1,0 +1,5 @@
+/* === Shared section chrome (band, head, lede) =========================== */
+section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
+.head{max-width:var(--w-prose);margin-bottom:3rem}
+.head h2{font-size:var(--t-h2);margin-bottom:1rem}
+.lede{font-family:var(--font-display);font-size:var(--t-lede);color:var(--ink-dim);font-style:italic}

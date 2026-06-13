@@ -1,0 +1,72 @@
+/* === Pricing (comparison table + tier cards + add-ons) ================== */
+.assess-banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 1.5rem;border:1px solid var(--hairline-strong);border-radius:var(--r-1);background:var(--gold-wash);padding:1.3rem 1.5rem;margin-bottom:1.8rem}
+.assess-banner .ab-text{max-width:62ch}
+.assess-banner .ab-text b{font-family:var(--font-display);color:var(--ink);font-weight:500}
+.assess-banner .ab-text span{color:var(--ink-dim);font-size:.92rem;display:block;margin-top:.15rem}
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--hairline);border-radius:var(--r-1)}
+.cmp{width:100%;border-collapse:collapse;min-width:780px;font-size:.92rem}
+.cmp th,.cmp td{padding:.9rem 1.1rem;text-align:center;border-bottom:1px solid var(--hairline);vertical-align:middle}
+.cmp tbody tr:last-child td,.cmp tbody tr:last-child th{border-bottom:none}
+.cmp thead th{background:var(--bg-1);border-bottom:1px solid var(--hairline-strong);vertical-align:bottom}
+.cmp .feat{text-align:left;color:var(--ink-dim);font-weight:400;position:sticky;left:0;background:var(--bg-0);z-index:1;min-width:230px}
+.cmp thead .feat{background:var(--bg-1)}
+.cmp thead .feat span{font-family:var(--font-display);color:var(--ink);font-size:1.05rem}
+.cmp .tier-name{font-family:var(--font-display);font-size:1.12rem;color:var(--ink);font-weight:500;display:block;line-height:1.2}
+.cmp .tier-price{font-family:var(--font-display);color:var(--gold-ink);font-size:1.05rem;margin-top:.25rem;display:block}
+.cmp .col-featured{box-shadow:inset 0 3px 0 var(--gold)}
+.cmp .badge{display:inline-block;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);border:1px solid var(--hairline-gold);border-radius:var(--r-pill);padding:.12rem .55rem;margin-bottom:.5rem}
+.cmp .grp th{text-align:left;background:var(--bg-1);font-family:var(--font-display);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:500;padding-top:1rem;padding-bottom:.45rem}
+.cmp .yes{color:var(--gold);font-size:1.05rem;font-weight:600}
+.cmp .no{color:var(--ink-faint)}
+.cmp .val{color:var(--ink);font-size:.9rem}
+.cmp .row-cta td,.cmp .row-cta th{padding-top:1.3rem;padding-bottom:1.3rem;border-bottom:none}
+.cmp .row-cta .btn{font-size:.8rem;padding:.55rem 1rem;min-height:40px}
+.cmp-hint{display:none}
+@media(max-width:760px){.cmp-hint{display:block}.cmp-hint::before{content:"\2194  "}}
+.included{margin-top:1rem;list-style:none;columns:2;column-gap:2.5rem;max-width:var(--w-prose)}
+.included li{break-inside:avoid;padding:.5rem 0 .5rem 1.4rem;position:relative;color:var(--ink-dim);font-size:.95rem}
+.included li::before{content:"";position:absolute;inset-inline-start:0;top:.95rem;width:7px;height:7px;border:1px solid var(--gold);border-radius:50%}
+@media(max-width:600px){.included{columns:1}}
+.addons{margin-top:2.4rem;display:grid;gap:1px;background:var(--hairline);border:1px solid var(--hairline)}
+@media(min-width:700px){.addons{grid-template-columns:1fr 1fr}}
+.addon{background:var(--bg-0);padding:1.6rem}
+.addon h3{font-size:1.1rem;margin-bottom:.5rem}
+.addon p{color:var(--ink-dim);font-size:.92rem;max-width:none}
+
+/* Pricing v2 — protection-day process + tier cards + demoted compare */
+.process{list-style:none;border-top:1px solid var(--hairline);margin-top:1rem}
+.process>li{display:grid;grid-template-columns:2.2rem 1fr;gap:1.2rem;padding:1.25rem 0;border-bottom:1px solid var(--hairline);align-items:start}
+.process .n{font-family:var(--font-display);color:var(--gold-ink);font-size:1.05rem;line-height:1.35}
+.process h3{font-size:1.12rem;color:var(--ink);margin-bottom:.25rem;font-weight:500}
+.process p{color:var(--ink-dim);font-size:.93rem;max-width:64ch}
+.process .opt{display:inline-block;margin-left:.4rem;color:var(--gold-ink);font-style:italic;font-size:.78rem}
+.tiers-grid{display:grid;gap:1.2rem;margin-top:1.4rem;align-items:stretch}
+@media(min-width:680px){.tiers-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.tiers-grid{grid-template-columns:repeat(4,1fr)}}
+.tier-card{position:relative;border:1px solid var(--hairline);border-radius:var(--r-1);background:var(--bg-0);padding:1.9rem 1.5rem 1.6rem;display:flex;flex-direction:column}
+.tier-card.featured{border-color:var(--hairline-gold);background:var(--bg-1);box-shadow:inset 0 3px 0 var(--gold)}
+.tier-card .badge{position:absolute;top:-.7rem;inset-inline-start:1.5rem;background:var(--gold);color:var(--bg-0);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .6rem;border-radius:var(--r-pill);font-weight:500}
+.tier-card .tname{font-family:var(--font-display);font-size:1.2rem;color:var(--ink);font-weight:500}
+.tier-card .price{font-family:var(--font-display);font-size:2.1rem;color:var(--ink);margin:.4rem 0 .1rem;line-height:1}
+.tier-card .once{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+.tier-card .who{color:var(--ink-dim);font-size:.92rem;margin:.9rem 0 1rem;padding-bottom:1.1rem;border-bottom:1px solid var(--hairline);max-width:none}
+.tier-card .adds-label{font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:.7rem}
+.tier-card .adds{list-style:none;display:grid;gap:.5rem;margin-bottom:1.5rem}
+.tier-card .adds li{display:grid;grid-template-columns:auto 1fr;gap:.55rem;font-size:.88rem;color:var(--ink-dim);align-items:start;max-width:none}
+.tier-card .adds .ic{color:var(--gold);font-weight:700;line-height:1.45}
+.tier-card .btn{margin-top:auto;width:100%}
+.compare-all{margin-top:2.6rem;border-top:1px solid var(--hairline)}
+.compare-all>summary{cursor:pointer;list-style:none;padding:1.3rem 0;font-family:var(--font-display);font-size:1.05rem;color:var(--gold-ink);display:flex;align-items:center;gap:.6rem}
+.compare-all>summary::-webkit-details-marker{display:none}
+.compare-all>summary::after{content:"+";font-size:1.2rem;margin-inline-start:auto}
+.compare-all[open]>summary::after{content:"\2212"}
+.compare-all .cmp-wrap{margin-top:.4rem}
+.unit-note{font-size:.88rem;color:var(--ink-dim);background:var(--gold-wash);border:1px solid var(--hairline-gold);border-radius:var(--r-1);padding:.9rem 1.2rem;margin-bottom:1.8rem;max-width:none}
+.unit-note b{color:var(--ink);font-weight:500}
+.addon-list{list-style:none;border-top:1px solid var(--hairline);margin-top:1rem}
+.addon-list li{display:grid;grid-template-columns:1fr auto;column-gap:1.5rem;align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--hairline)}
+.addon-list .an{font-family:var(--font-display);font-size:1.12rem;color:var(--ink)}
+.addon-list .ap{font-family:var(--font-display);color:var(--gold-ink);font-size:1.15rem;text-align:end;white-space:nowrap}
+.addon-list .ad{grid-column:1 / -1;color:var(--ink-dim);font-size:.88rem;margin-top:.25rem;max-width:64ch}
+.addon-list .ap small{display:block;font-family:var(--font-body);font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin-top:.1rem}
+.tier-note{font-size:.78rem;color:var(--ink-faint);margin-top:-.6rem;margin-bottom:1rem}

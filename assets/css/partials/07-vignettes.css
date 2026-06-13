@@ -1,0 +1,15 @@
+/* === Story vignette cards (standard + outcome variant) ================== */
+.vigs{display:grid;gap:1.5rem;background:none;border:none}
+@media(min-width:840px){.vigs{grid-template-columns:1fr 1fr}}
+.vig{background:var(--bg-1);border:1px solid var(--hairline);border-top:3px solid var(--gold);border-radius:var(--r-1);padding:2.4rem clamp(1.6rem,3vw,2.6rem);position:relative;overflow:hidden}
+.vig::before{content:'\201C';font-family:var(--font-display);font-size:6rem;line-height:1;color:var(--gold);opacity:.15;position:absolute;top:.3rem;inset-inline-start:1.4rem;pointer-events:none;user-select:none}
+.vig h3{font-size:1.25rem;margin-bottom:.9rem;position:relative}
+.vig p{font-size:.97rem;color:var(--ink-dim);max-width:none;line-height:1.78;position:relative}
+.vig .src{display:block;margin-top:1.2rem;padding-top:.8rem;border-top:1px solid var(--hairline);font-size:.78rem;color:var(--ink-faint);font-style:italic}
+
+/* Outcome vignettes — "What we found" section */
+.vigs--outcome{grid-template-columns:1fr!important}
+.vig--outcome{background:var(--gold-wash);border:1px solid var(--hairline-gold);border-top:3px solid var(--gold);max-width:var(--w-prose)}
+.vig--outcome::before{content:none}
+.vig--outcome .vig-field{position:absolute;inset-inline-end:-40px;bottom:-40px;width:160px;height:160px;pointer-events:none;color:var(--gold);z-index:0;opacity:.45}
+.vig--outcome h3,.vig--outcome p{position:relative;z-index:1}

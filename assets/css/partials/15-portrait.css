@@ -1,0 +1,12 @@
+/* === Why-us portrait & principles ====================================== */
+.portrait-grid{display:grid;gap:2.5rem}
+@media(min-width:860px){.portrait-grid{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.portrait img{width:100%;height:auto;border:1px solid var(--hairline);border-radius:var(--r-1)}
+.portrait figcaption{margin-top:.6rem;font-size:.78rem;color:var(--ink-faint);font-style:italic}
+.portrait-body h3{font-size:1.3rem;margin:2rem 0 .8rem}
+.portrait-body h3:first-child{margin-top:0}
+.portrait-body p{color:var(--ink-dim);margin-bottom:1rem;max-width:var(--w-prose)}
+.principles{list-style:none;margin:.5rem 0}
+.principles li{padding:.9rem 0;border-top:1px solid var(--hairline);color:var(--ink-dim);font-size:.95rem}
+.verify{margin-top:1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.verify a{color:var(--gold-ink);font-size:.9rem;border-bottom:1px solid var(--hairline-gold);padding-bottom:2px;align-self:flex-start}

@@ -1,0 +1,16 @@
+/* === Site header & navigation (desktop + mobile) ======================== */
+.site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg-0) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand .mark{width:34px;height:34px;flex-shrink:0}
+.brand .name{font-family:var(--font-he);font-size:1.5rem;font-weight:500;line-height:1}
+.menu{display:flex;gap:1.9rem;align-items:center;font-size:.85rem;color:var(--ink-dim)}
+.menu a:not(.btn){transition:color var(--ease)}
+.menu a:not(.btn):hover{color:var(--ink)}
+.menu .btn{color:var(--bg-0)}
+.nav-toggle{display:none;background:none;border:1px solid var(--hairline-strong);border-radius:var(--r-1);padding:.5rem .7rem;color:var(--ink);cursor:pointer;font-size:.9rem;min-height:40px}
+@media(max-width:760px){
+  .menu{position:absolute;top:70px;inset-inline:0;flex-direction:column;align-items:flex-start;gap:1.1rem;background:var(--bg-1);border-bottom:1px solid var(--hairline);padding:1.4rem 5%;display:none}
+  .menu.open{display:flex}
+  .nav-toggle{display:inline-flex;align-items:center}
+}

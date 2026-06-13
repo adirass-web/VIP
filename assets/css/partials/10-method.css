@@ -1,0 +1,8 @@
+/* === Method / steps section ============================================= */
+.steps{display:grid;gap:2.4rem;counter-reset:s}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:2.6rem}}
+.step{counter-increment:s;border-top:1px solid var(--gold);padding-top:1.3rem}
+.step::before{content:"0" counter(s);font-family:var(--font-display);font-size:1.1rem;color:var(--gold-ink);display:block;margin-bottom:.7rem}
+.step h3{font-size:1.25rem;margin-bottom:.6rem}
+.step p{font-size:.93rem;color:var(--ink-dim);max-width:none}
+.scarcity{margin-top:3rem;font-family:var(--font-display);font-style:italic;font-size:.95rem;color:var(--ink-faint)}

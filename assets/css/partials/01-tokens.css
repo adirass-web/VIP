@@ -1,0 +1,26 @@
+/* === Design tokens (ITCSS: Settings) =================================== */
+:root{
+  --bg-0:#0B0A09; --bg-1:#131210; --bg-2:#1B1916;
+  --ink:#ECE9E4; --ink-dim:#9D968D; --ink-faint:#837D74; /* faint = 4.85:1 on bg-0 (WCAG AA) */
+  --gold:#C8892A; --gold-hover:#D4A040; --gold-ink:#D9A246;
+  --hairline:rgba(236,233,228,.10); --hairline-strong:rgba(236,233,228,.18);
+  --hairline-gold:rgba(200,137,42,.45); --gold-wash:rgba(200,137,42,.07);
+  --font-display:'Playfair Display','David Libre',Georgia,serif;
+  --font-he:'David Libre',serif;
+  --font-body:'Inter','Assistant',sans-serif;
+  --t-hero:clamp(2.5rem,6vw,4.4rem); --t-h2:clamp(1.9rem,3.6vw,2.7rem);
+  --t-h3:1.35rem; --t-lede:1.18rem;
+  --s-4:1rem;--s-6:1.5rem;--s-8:2rem;--s-10:2.5rem;--s-12:3rem;--s-16:4rem;--s-20:5rem;--s-24:6rem;
+  --s-section:clamp(4.5rem,9vw,8rem);
+  --r-1:2px; --r-pill:999px; --ease:.25s cubic-bezier(.2,.6,.2,1);
+  --w-max:1120px; --w-prose:64ch;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg-0:#F6F2EA; --bg-1:#EFEBE2; --bg-2:#E6E1D7;
+    --ink:#1B1916; --ink-dim:#5D5850; --ink-faint:#6E6960; /* faint = 4.88:1 on ivory (WCAG AA) */
+    --gold:#8C6218; --gold-hover:#6E4D12; --gold-ink:#8C6218;
+    --hairline:rgba(27,25,22,.12); --hairline-strong:rgba(27,25,22,.22);
+    --hairline-gold:rgba(140,98,24,.5); --gold-wash:rgba(140,98,24,.06);
+  }
+}
