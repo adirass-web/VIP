@@ -186,7 +186,7 @@ section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
 .cmp .val{color:var(--ink);font-size:.9rem}
 .cmp .row-cta td,.cmp .row-cta th{padding-top:1.3rem;padding-bottom:1.3rem;border-bottom:none}
 .cmp .row-cta .btn{font-size:.8rem;padding:.55rem 1rem;min-height:40px}
-.cmp-hint{margin-top:.7rem;font-size:.78rem;color:var(--ink-faint);display:none}
+.cmp-hint{margin-top:.7rem;font-size:.78rem;color:var(--ink-faint)}
 @media(max-width:760px){.cmp-hint::before{content:"\2194  "}}
 .included{margin-top:1rem;list-style:none;columns:2;column-gap:2.5rem;max-width:var(--w-prose)}
 .included li{break-inside:avoid;padding:.5rem 0 .5rem 1.4rem;position:relative;color:var(--ink-dim);font-size:.95rem}
@@ -259,37 +259,31 @@ section.band{padding:var(--s-section) 0;border-bottom:1px solid var(--hairline)}
 .tier-card .adds .ic{color:var(--gold);font-weight:700;line-height:1.45}
 .tier-card .btn{margin-top:auto;width:100%}
 .compare-all{margin-top:2.6rem;border-top:1px solid var(--hairline)}
-
-/* compare-all disclosure widget (was truncated) */
-.compare-all>summary{cursor:pointer;list-style:none;padding:1.3rem 0;font-family:var(--font-display);font-size:1rem;color:var(--ink-dim);display:flex;justify-content:space-between;gap:1rem;align-items:center;user-select:none}
+.compare-all>summary{cursor:pointer;list-style:none;padding:1.3rem 0;font-family:var(--font-display);font-size:1.05rem;color:var(--gold-ink);display:flex;align-items:center;gap:.6rem}
 .compare-all>summary::-webkit-details-marker{display:none}
-.compare-all>summary::after{content:"+";color:var(--gold-ink);font-size:1.2rem;line-height:1;margin-inline-start:auto}
+.compare-all>summary::after{content:"+";font-size:1.2rem;margin-inline-start:auto}
 .compare-all[open]>summary::after{content:"\2212"}
+.compare-all .cmp-wrap{margin-top:.4rem}
 
-/* add-on list */
+/* pricing — add-ons list + unit note */
+.unit-note{font-size:.88rem;color:var(--ink-dim);background:var(--gold-wash);border:1px solid var(--hairline-gold);border-radius:var(--r-1);padding:.9rem 1.2rem;margin-bottom:1.8rem;max-width:none}
+.unit-note b{color:var(--ink);font-weight:500}
 .addon-list{list-style:none;border-top:1px solid var(--hairline);margin-top:1rem}
-.addon-list li{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:.25rem 1rem;padding:1.25rem 0;border-bottom:1px solid var(--hairline);align-items:baseline}
-.an{font-family:var(--font-display);font-size:1.05rem;color:var(--ink);font-weight:500}
-.ap{font-family:var(--font-display);font-size:1.05rem;color:var(--gold-ink);text-align:right;white-space:nowrap}
-.ap small{font-size:.72rem;font-family:var(--font-body);color:var(--ink-faint);display:block;text-align:right}
-.ad{font-size:.9rem;color:var(--ink-dim);grid-column:1/-1}
+.addon-list li{display:grid;grid-template-columns:1fr auto;column-gap:1.5rem;align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--hairline)}
+.addon-list .an{font-family:var(--font-display);font-size:1.12rem;color:var(--ink)}
+.addon-list .ap{font-family:var(--font-display);color:var(--gold-ink);font-size:1.15rem;text-align:end;white-space:nowrap}
+.addon-list .ad{grid-column:1 / -1;color:var(--ink-dim);font-size:.88rem;margin-top:.25rem;max-width:64ch}
+.addon-list .ap small{display:block;font-family:var(--font-body);font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin-top:.1rem}
+.tier-note{font-size:.78rem;color:var(--ink-faint);margin-top:-.6rem;margin-bottom:1rem}
 
-/* misc pricing helpers */
-.unit-note{font-size:.93rem;color:var(--ink-dim);margin-bottom:1.6rem;max-width:var(--w-prose)}
-.tier-note{font-size:.83rem;color:var(--ink-faint);font-style:italic;margin-bottom:1rem}
+/* situation safety callout (A-6 + future precautionary pages) */
+.safety{margin-top:1.6rem;padding:1.05rem 1.3rem;border:1px solid var(--hairline-gold);background:var(--gold-wash);border-radius:var(--r-1);font-size:.9rem;color:var(--ink-dim);max-width:var(--w-prose)}
+.safety b{color:var(--ink);font-weight:500}
+.safety a{color:var(--gold-ink);border-bottom:1px solid var(--hairline-gold);padding-bottom:1px}
 
-/* === Task 3: section heading hierarchy ===
-   Demote eyebrow gold to ink-dim inside .head so the h2 reads first */
-.head .eyebrow{color:var(--ink-dim)}
-.head .eyebrow::before{background:var(--ink-dim);opacity:.5}
-
-/* === Task 4: Threat Assessment onramp — elevated visual treatment === */
-.onramp{background:var(--bg-1);border-top:2px solid var(--gold);border-bottom:1px solid var(--hairline-gold);position:relative;overflow:hidden}
-.onramp .card{border:1px solid var(--hairline-gold);border-top:3px solid var(--gold)}
-
-/* === Task 1: Founder photo placeholder === */
-.founder-photo-placeholder{width:100%;aspect-ratio:3/4;max-height:300px;background:var(--bg-1);border:1px dashed var(--hairline-strong);border-radius:var(--r-1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;margin-bottom:2rem;color:var(--ink-dim);font-family:var(--font-display);font-style:italic;font-size:.95rem;text-align:center;padding:1.5rem}
-.founder-photo-placeholder .fpp-note{font-size:.72rem;color:var(--ink-faint);font-family:var(--font-body);font-style:normal;letter-spacing:.05em;text-transform:uppercase}
-
-/* === Task 2: mobile table scroll hint (show only on small screens) === */
-@media(max-width:760px){.cmp-hint{display:block}.cmp-hint::before{content:"\2194\00a0 "}}
+/* Outcome vignettes — "What we found" section */
+.vigs--outcome{grid-template-columns:1fr!important}
+.vig--outcome{background:var(--gold-wash);border:1px solid var(--hairline-gold);border-top:3px solid var(--gold)}
+.vig--outcome::before{content:none}
+.vig--outcome .vig-field{position:absolute;inset-inline-end:-40px;bottom:-40px;width:160px;height:160px;pointer-events:none;color:var(--gold);z-index:0;opacity:.45}
+.vig--outcome h3,.vig--outcome p{position:relative;z-index:1}
