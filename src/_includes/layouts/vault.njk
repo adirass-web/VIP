@@ -14,8 +14,8 @@
     <meta property="og:site_name" content="{{ t.og_site_name or 'מגן · Personal Cyber Shield' }}">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ og_description if og_description else description }}">
-    <meta property="og:url" content="{{ canonical }}">
-    {% set ogImg = og_image or 'https://www.magenvip.tech/assets/img/og-default.png' %}
+    <meta property="og:url" content="{{ canonical | replace(site.prodUrl, site.url) }}">
+    {% set ogImg = (og_image or (site.url + '/assets/img/og-default.png')) | replace(site.prodUrl, site.url) %}
     <meta property="og:image" content="{{ ogImg }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -24,10 +24,10 @@
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ og_description if og_description else description }}">
     <meta name="twitter:image" content="{{ ogImg }}">
-    <link rel="canonical" href="{{ canonical }}">
+    <link rel="canonical" href="{{ canonical | replace(site.prodUrl, site.url) }}">
     {# EN-only public site (vault-redesign). HE/RU hreflang restored when translated. #}
-    <link rel="alternate" hreflang="en" href="https://www.magenvip.tech{{ enLink }}">
-    <link rel="alternate" hreflang="x-default" href="https://www.magenvip.tech{{ enLink }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ enLink }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enLink }}">
 
     <title>{{ title }}</title>
 

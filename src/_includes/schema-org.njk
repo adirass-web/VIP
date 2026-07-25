@@ -10,10 +10,10 @@
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://www.magenvip.tech/#organization",
+      "@id": "{{ site.url }}/#organization",
       "name": "Personal Cyber Shield",
       "alternateName": ["מגן סייבר אישי", "מגן"],
-      "url": "https://www.magenvip.tech",
+      "url": "{{ site.url }}",
       "description": "Private-client cyber protection for individuals in high-stakes personal disputes — separation and divorce, business and partner disputes, inheritance conflicts, and similar. One senior expert reviews what your personal digital life may expose and closes it, in person and discreetly. Founded by Dr. Lior Tabansky.",
       "slogan": "Private-client cyber protection.",
       "areaServed": [
@@ -61,12 +61,12 @@
           }
         ]
       },
-      "founder": { "@id": "https://www.magenvip.tech/en/why-us.html#person" },
-      "employee": { "@id": "https://www.magenvip.tech/en/why-us.html#person" }
+      "founder": { "@id": "{{ site.url }}/en/why-us.html#person" },
+      "employee": { "@id": "{{ site.url }}/en/why-us.html#person" }
     },
     {
       "@type": "Person",
-      "@id": "https://www.magenvip.tech/en/why-us.html#person",
+      "@id": "{{ site.url }}/en/why-us.html#person",
       "name": "Lior Tabansky",
       "honorificPrefix": "Dr.",
       "givenName": "Lior",
@@ -80,7 +80,7 @@
         "Digital counter-intelligence",
         "Personal privacy"
       ],
-      "worksFor": { "@id": "https://www.magenvip.tech/#organization" },
+      "worksFor": { "@id": "{{ site.url }}/#organization" },
       "url": "https://cyberdrtabansky.com",
       "sameAs": ["https://cyberdrtabansky.com"]
     }
