@@ -1,5 +1,0 @@
-services:
-  - type: static
-    name: magenvip
-    staticPublishPath: _site
-    buildCommand: npm install && npm run build

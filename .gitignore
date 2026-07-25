@@ -2,5 +2,9 @@ node_modules/
 _site/
 .claude/
 Session-Handoff-*.md
+
+# Junk / legacy — kept out of the repo
+VIP/
+_pricing-preview/
 node_modules/
 node_modules
