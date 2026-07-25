@@ -15,16 +15,16 @@
 
 # ── HTML pages: cache 1 hour, must revalidate ───────────────────────────────
 /*.html
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=300, must-revalidate
 
 /en/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=300, must-revalidate
 
 /he/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=300, must-revalidate
 
 /ru/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=300, must-revalidate
 
 # ── robots.txt + sitemap: short cache so changes propagate quickly ──────────
 /robots.txt
