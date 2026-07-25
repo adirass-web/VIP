@@ -1,10 +1,9 @@
-# Why Us — Copy Deck (PLACEHOLDER, media-heavy)
+# Why Us — Copy Deck (FINAL DRAFT v2 — understated proof)
 
 **Page:** Why Us · **URL:** `/en/why-us.html` · **File:** `src/en/why-us.njk` (layout `layouts/vault.njk`)
-**Spec:** J10 + C7 + D11 · **Source of truth:** `Copy_System_Brief.md`
-**Status:** ⚠ **PLACEHOLDER** — structure + safe copy in place; all founder facts marked `[PROOF]` pending `Handoff_Founder_Proof.md` (task #3). Built media-heavy to carry TV screenshots + press features as the primary high-end trust signal. Not QA-locked; final copy + claims pending proof.
-
-**Design intent:** this page should *feel* like a credibility wall. Lead the eye with the founder portrait, a clean press-logo strip, then a gallery of real TV stills / newspaper clippings with short captions. Restraint over hype — the features do the talking.
+**Spec:** J10 + C7 + D11 · **Source of truth:** `Copy_System_Brief.md` (supersedes the skill's interim "digital safety reset" → "private-client cyber protection")
+**Status:** ✅ Founder-directed revision 2026-07-25. Proof kept OFF this business site by design — one calm verifiable line + a link to `cyberdrtabansky.com`; no media wall, no portrait, no logo strip (discretion = the product). Trust is carried by the method. Awaiting final sign-off, then convert to `.njk` + independent reviewer pass.
+**Voice:** brand voice in hero + method; **first-person founder's note** carries the origin narrative — with the individual (no institution behind them) given equal weight to the corporate leader.
 
 ---
 
@@ -15,7 +14,7 @@ Why Personal Cyber Shield
 Why Us — Personal Cyber Shield
 
 ## 3. Meta description
-Led by a senior cybersecurity expert whose analysis has reached international press and broadcast. Private, in-person, and discreet — judgment, not a checklist.  *(confirm "international press and broadcast" against `[PROOF]`)*
+Organizations defend themselves. The people with the most to lose are left on factory defaults. Personal Cyber Shield brings that standard to the individual — one senior expert, in person, discreetly.
 
 ---
 
@@ -23,80 +22,112 @@ Led by a senior cybersecurity expert whose analysis has reached international pr
 
 **Kicker:** Why us
 
-**H1:** When the stakes are personal, you want judgment — not a checklist.
+**H1:** You never accepted the default on anything that mattered — except, quietly, your digital life.
 
-**Subhead:** Personal Cyber Shield is led by `[PROOF: Dr. LT / full name]`, a senior cybersecurity expert who brings the judgment usually reserved for the highest-stakes work to a private, personal problem: when a dispute turns adversarial, the most damaging exposure rarely looks like a hack.
+- *Alt:* Your organization is defended. You were left on factory defaults.
+
+**Subhead:** Every serious organization protects itself. The people with the most at stake — whether they run an institution or simply have a great deal to lose — run their personal digital lives on whatever their apps and devices came set to. Personal Cyber Shield closes that gap: one senior expert, in person, protecting you the way an organization protects itself.
 
 **Trust strip:** In person. With you present. No remote access. No cloud processing. No retained logs.
 
-**CTA:** `Book a Private Exposure Assessment — ₪3,500`
+**Primary CTA:** `Book a Private Exposure Assessment — ₪3,500`
+**Secondary CTA:** See pricing
 
 ---
 
 ## 5. Main sections
 
-### 5.1 Featured & trusted *(MEDIA WALL — primary trust signal)*
-**Design:** logo strip across the top, then a gallery of stills/clippings with one-line captions. Use existing repo assets in `assets/img/` and `assets/img/media/`.
+### 5.1 A note from Dr. Tabansky *(first person — the origin narrative)*
 
-**Press logo strip `[PROOF: confirm each outlet is citable]`:** Washington Post · Newsweek · Associated Press · NRC Handelsblad · The National Interest · La Repubblica · Le Figaro · RAI.
+**H2:** Why I built this.
 
-**Feature gallery (placeholders to drop your own screenshots/clippings):**
-- `[MEDIA: TV appearance still — outlet + topic caption]`
-- `[MEDIA: newspaper feature clipping — outlet + headline caption]`
-- `[MEDIA: TV appearance still — outlet + topic caption]`
-- `[MEDIA: newspaper feature clipping — outlet + headline caption]`
+For two decades I advised governments and investors on cybersecurity — across Israel, Europe, Asia, and Africa. Again and again I saw the same gap: the institution was defended, and the person was not.
 
-**Caption framing (safe):** "Sought by international media to explain cybersecurity" — *not* "world-leading"/"the only expert" unless `[PROOF]` supports it.
+The people who need this most are rarely institutions. They are individuals whose lives have turned adversarial — a separation or divorce, before it escalates; a founder breakup or partner dispute, where personal exposure becomes commercial leverage; an inheritance or estate conflict, where people who once had your trust still have access; someone leaving a controlling relationship; someone who senses another party knows something that should have stayed private. A company has an IT department and a security team. A person in the middle of one of these has no one.
 
-### 5.2 Why expert judgment matters
-Ordinary people cannot see their whole digital environment. The exposure that matters in a dispute may sit across devices, accounts, apps, settings, recovery paths, online trails, and habits — and which of those actually matters depends entirely on your situation. This is interpretation under pressure, not a checklist anyone can run.
+And it isn't for lack of standards. These are people who would never drive an unvetted car or accept a table they hadn't chosen — yet their digital lives run on the same factory settings as everyone else's: the accounts, devices, apps, and online trails a life quietly accumulates. Not because they didn't care, but because no one had ever shown them what was exposed, and no one's job was to close it.
 
-### 5.3 Why this is not checklist work
-A generic list can't tell you what's safe to change, in what order, or what a change might trigger. The value here is a senior expert reading *your* situation and resolving what matters — discreetly, and with you in the room.
+That is a market failure. Real personal protection doesn't scale — it depends on bespoke, hands-on work and on trust, the two things mass-market security can't manufacture. So the people who need it most have been left to handle it alone.
 
-### 5.4 About `[PROOF: Dr. LT / full name]`
-`[PROOF: short professional bio — 2–3 sentences, consumer-facing.]`
-`[PROOF: credentials / degrees.]`
-`[PROOF: senior cybersecurity roles — academic / government / enterprise, if factually supported.]`
-`[PROOF: publications / talks / advisory roles, if available.]`
-Portrait: `assets/img/Lior Tabansky by Kfir Ziv 86_Rebua_edited.webp` `[PROOF: confirm name/likeness usage]`.
-**Claims control:** use "senior cybersecurity expert," "brings expert judgment." Avoid "world's leading," "military-grade," "the only expert," "court-grade," "forensic certainty."
+I decided to serve them directly. One person, in your presence, with the standard an organization applies to itself — reviewing what your own digital life reveals and closing what can be closed, in person, at your pace.
 
-### 5.5 Why in person, and why no remote access, cloud, or logs
-Because the work is sensitive, it is done in person, with you present — nothing is accessed remotely, nothing is uploaded, and no log of your digital life is kept. Discretion isn't a feature here; it's the whole point.
+— *Dr. Lior Tabansky*
 
-### 5.6 Why this is not IT support — or investigation
-IT support fixes devices. Investigators look into other people. This does neither. It is a private reduction of *your own* digital exposure in a high-stakes situation — see [Why This Is Not IT Support] and [the boundaries](faq.html#boundaries).
+**Situation link-row** *(discreet, directly under the note — not inside it):*
+If one of these is your situation: [Separation & Divorce](/en/separation-divorce.html) · [Business Dispute](/en/business-dispute.html) · [Inheritance Conflict](/en/inheritance-clash.html) · [Leaving a Controlling Relationship](/en/leaving-controlling-relationship.html) · [They Know Something](/en/they-know-something.html)
+
+### 5.2 Who does the work
+**H3:** One person, start to finish.
+
+Personal Cyber Shield is private-client cyber protection: one senior expert, not a team. The same person handles your engagement from the first assessment to the final handover — Dr. Lior Tabansky, personally. Not handed off to a subcontractor.
+
+He has spent two decades advising governments and investors on cybersecurity, and is co-author of *Cybersecurity in Israel* (Springer, with Maj. Gen. Isaac Ben-Israel). His full professional record — research, academic positions, and media — is public, so you can verify it yourself.
+
+**Verify link:** The full record → `https://cyberdrtabansky.com`
+
+*(By design: no media wall, portrait, or logo strip on this site — discretion is the point. Everything is one click away on his personal site.)*
+
+### 5.3 Why it's done in person, with you present
+**H3:** Why in person.
+
+Most security help is remote. Someone connects from another place, changes settings you can't see, and often leaves a way back in. The moment anyone holds remote access to your device — even to help you — your privacy already depends on them.
+
+Here it is the opposite. The work is done in front of you, on your devices, on your timeline. Nothing is uploaded, nothing is kept, and no record of your digital life leaves the room. What changes, you watch change.
+
+### 5.4 What this is — and isn't
+**H3:** Judgment, not a checklist. Protection, not investigation.
+
+Your whole digital environment is hard to see from the inside: the exposure that matters may sit across devices, accounts, apps, settings, recovery paths, and old habits — and which of those matters depends entirely on your situation. That is interpretation under pressure, not a list anyone can run.
+
+This is not IT support, and it is not investigation. To be clear about the boundaries:
+
+- We don't reach anyone else, and we don't investigate the other side.
+- We don't reconstruct the past or produce evidence.
+- We don't give legal advice — we work alongside your lawyer and advisors, not in place of them.
+
+See [why this is not IT support](/en/not-it-support.html) and [the full boundaries](/en/faq.html#boundaries).
+
+### 5.5 By appointment
+**H3:** A small practice, on purpose.
+
+Dr. Tabansky takes a limited number of clients, by appointment. Most engagements begin the same way — with a Private Exposure Assessment: a private, in-person diagnostic that tells you what's exposed, what's most urgent, and what to do next. It's ₪3,500, credited in full toward a full package within 14 days.
 
 ---
 
 ## 6. CTA blocks
-- **Primary (hero, page end):** Book a Private Exposure Assessment — ₪3,500
+- **Primary (hero + page end):** Book a Private Exposure Assessment — ₪3,500
 - **Secondary:** See pricing
-- **Tertiary:** Discuss a client privately *(Attorneys)*
+- **Tertiary:** How the visit works *(→ /en/what-happens-during-the-visit.html)*
 
 ---
 
 ## 7. FAQ items (this page)
-- **Who actually does the work?** `[PROOF: Dr. LT / full name]` — personally, in person. This is not subcontracted technician labour.
-- **Is this just expensive IT support?** No — it's senior judgment applied to personal digital exposure when it could become leverage.
+- **Who actually does the work?** Dr. Lior Tabansky — personally and in person, from first assessment to final handover.
+- **Is this just expensive IT support?** No. It's senior judgment applied to your personal digital exposure, before it can become leverage.
 
 ---
 
 ## 8. Internal links
 Private Exposure Assessment · Pricing · What Happens During the Visit · Why This Is Not IT Support · Attorneys · Boundaries (FAQ #boundaries) · Contact (WhatsApp/Signal)
+**Situation link-row (under the note):** Separation & Divorce · Business Dispute · Inheritance Conflict · Leaving a Controlling Relationship · They Know Something
 
 ---
 
-## 9. Copy-risk checklist (J22) — provisional (page is a placeholder)
-- ₪3,500 assessment CTA present — **Pass**
-- No technical acronyms in hero — **Pass**
-- No frameworks in sales copy — **Pass**
-- No investigation/forensic/legal-advice/guarantee claims — **Pass**
+## 9. Copy-risk checklist (reviewer rubric)
+- Buyer situation clear (individual with something at stake, no security of their own) — **Pass**
+- ₪3,500 assessment CTA present (hero + close) — **Pass**
+- No technical acronyms in hero; no frameworks in sales copy (no NSA/NIST/NCSC) — **Pass**
+- No DIY checklist above the fold — **Pass**
+- No investigation / forensic / evidence / legal-advice / guarantee promises — **Pass**
+- No "Certificate of Hardening," no "one day then it's closed," no banned CTAs ("Speak with us") — **Pass**
 - Trust strip present — **Pass**
-- "world-leading / only expert" avoided unless substantiated — **Pass** (all such claims gated as `[PROOF]`)
-- Tone premium, calm, non-paranoid — **Pass**
-- Founder facts substantiated — **PENDING** (`[PROOF]` markers; needs `Handoff_Founder_Proof.md`)
-- Zero forbidden-vocab terms — **Pass** (pending final-copy reviewer scan once proof is in)
+- "world-leading / only expert / military-grade" avoided; credentials plain and verifiable — **Pass**
+- Pricing consistent with brief (₪3,500 credited) — **Pass**
+- Scope boundaries clear; works alongside lawyer — **Pass**
+- Tone premium / calm / non-paranoid; no urgency-scarcity pressure — **Pass**
+- Founder facts substantiated — **Pass** (sourced from cyberdrtabansky.com / LTPR; recorded in memory `reference-founder-tabansky`)
+- Independent reviewer pass — **DONE 2026-07-25** (verdict REVISE-light; all 6 items resolved: H1 smoothed, book corrected to co-author + title, "highest levels" softened, "subcontracted technician labor" removed/de-duped, §5.1/§5.2 wording aligned, category label surfaced once). **Now LOCK-ready.**
 
-**To finalize:** replace every `[PROOF]` / `[MEDIA]` marker with verified bio, credentials, citable outlets, and actual screenshots/clippings; confirm name/likeness; then run the reviewer subagent and lock.
+**Remaining (decided, for conversion):**
+- Page ships with **no portrait, no media wall, no logo strip** (founder decision) — the old `why-us.njk` portrait block + NSA/NIST + "Certificate of Hardening" copy are removed on conversion.
+- Geographic-reach + co-authorship claims verified against cyberdrtabansky.com.

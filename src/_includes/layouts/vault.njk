@@ -36,6 +36,9 @@
     <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/vault.css">
+
+    {# Structured data: Organization (Personal Cyber Shield) + Person (Dr. Tabansky). Per-page FAQ/Service appended via page_schema. #}
+    {% include "schema-org.njk" %}
 </head>
 <body{% if body_class %} class="{{ body_class }}"{% endif %}>
 
@@ -64,7 +67,7 @@
                 <a href="/{{ locale }}/what-happens-during-the-visit.html">{{ t.nav_what_happens or 'What happens' }}</a>
                 <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
                 <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
-                <a class="btn" href="#contact">{{ t.cta_speak or 'Speak with us' }}</a>
+                <a class="btn" href="#contact">{{ t.cta_speak or 'Book an assessment' }}</a>
             </nav>
         </div>
     </header>
@@ -90,7 +93,7 @@
                 </div>
                 <span class="eyebrow" style="justify-content:center">{{ t.footer_eyebrow or 'Confidential' }}</span>
                 <h2>{{ t.footer_cta_h2 or 'Get your Personal Cyber Shield.' }}</h2>
-                <p class="sub">{{ t.footer_cta_intro or 'Speak with us directly, before your private life is used against you.' }}</p>
+                <p class="sub">{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}</p>
                 <nav class="foot-cta" aria-label="{{ t.footer_cta_nav_label or 'Direct messaging options' }}">
                     <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">WhatsApp</a>
                     <a class="btn ghost" href="{{ t.signal_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">Signal</a>
