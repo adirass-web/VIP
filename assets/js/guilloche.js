@@ -57,4 +57,16 @@
     }
     medal.appendChild(m);
   }
+
+  // Outcome-vignette corner accent — small disc per .vig-field, clipped by card overflow:hidden
+  var vigFields = document.querySelectorAll(".vig-field");
+  vigFields.forEach(function (el, i) {
+    if (el.firstChild) return;
+    var v = svg("160", "160", "0 0 160 160");
+    for (var k = 0; k < 20; k++) {
+      var Rk = 16 + k * (52 / 20);
+      path(v, groove(80, 80, Rk, 1.6, 9, k * 0.48 + i * 0.3, 0.7, 19, -k * 0.20), 0.45, 0.38);
+    }
+    el.appendChild(v);
+  });
 })();
