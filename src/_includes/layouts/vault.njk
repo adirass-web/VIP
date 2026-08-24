@@ -9,7 +9,7 @@
     {% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords }}">{% endif %}
 
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ t.og_site_name or 'מגן · Personal Cyber Shield' }}">
+    <meta property="og:site_name" content="{{ t.og_site_name or 'Toza' }}">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ og_description if og_description else description }}">
     <meta property="og:url" content="{{ canonical | replace(site.prodUrl, site.url) }}">
@@ -42,7 +42,7 @@
 
     <header class="site-header">
         <div class="wrap nav">
-            <a class="brand" href="/{{ locale }}/" aria-label="מגן — Personal Cyber Shield — {{ t.nav_home or 'Home' }}">
+            <a class="brand" href="/{{ locale }}/" aria-label="Toza — {{ t.nav_home or 'Home' }}">
                 <svg class="mark seal" viewBox="0 0 100 100" aria-hidden="true">
                     <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
                     <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
@@ -53,7 +53,7 @@
                         <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
                     </g>
                 </svg>
-                <span class="name">מגן</span>
+                <span class="name">Toza</span>
             </a>
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
             <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
@@ -87,7 +87,7 @@
                     </svg>
                 </div>
                 <span class="eyebrow" style="justify-content:center">{{ t.footer_eyebrow or 'Confidential' }}</span>
-                <h2>{{ t.footer_cta_h2 or 'Get your Personal Cyber Shield.' }}</h2>
+                <h2>{{ t.footer_cta_h2 or 'Personal digital protection for your close circle.' }}</h2>
                 <p class="sub">{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}</p>
                 <nav class="foot-cta" aria-label="{{ t.footer_cta_nav_label or 'Direct messaging options' }}">
                     <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">WhatsApp</a>
@@ -108,7 +108,7 @@
                             <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="7"/>
                         </g>
                     </svg>
-                    <span class="fb-name">מגן <span class="fb-tag">Personal Cyber Shield</span></span>
+                    <span class="fb-name">Toza <span class="fb-tag">Personal digital protection for your close circle.</span></span>
                 </div>
                 <nav class="foot-col" aria-label="Site">
                     <h3>Explore</h3>
@@ -127,7 +127,7 @@
             </div>
             <div class="wrap foot-meta">
                 <span>{{ t.trust_line or 'In person only · No remote access · No cloud · No logs · No app' }}</span>
-                <span>{{ t.footer_copyright or '© 2026 מגן · Personal Cyber Shield' }}</span>
+                <span>{{ t.footer_copyright or '© 2026 Toza' }}</span>
             </div>
         </div>
     </footer>
