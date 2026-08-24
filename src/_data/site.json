@@ -1,5 +1,5 @@
 {
-  "url": "https://magenvip.pages.dev",
-  "prodUrl": "https://www.magenvip.tech",
-  "note": "url = the live base URL used for canonical/og/hreflang/schema/sitemap. Currently the temp Cloudflare Pages URL for soft launch. When the custom domain is attached, set url to the value of prodUrl (https://www.magenvip.tech) — that single change flips every absolute URL."
+  "url": "https://toza-site.pages.dev",
+  "prodUrl": "https://toza-site.pages.dev",
+  "note": "Temporary Cloudflare Pages URL for Toza. No custom canonical domain is configured yet."
 }
