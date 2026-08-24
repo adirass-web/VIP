@@ -1,0 +1,240 @@
+name: One-time Toza minimal rebrand
+
+on:
+  push:
+    branches:
+      - feature/toza-minimal-rebrand
+
+permissions:
+  contents: write
+
+env:
+  CLOUDFLARE_ACCOUNT_ID: cfd055f2f8175d13377bd64e9620ea36
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CF_PROJECT_NAME: toza-site
+
+jobs:
+  rebrand-build-deploy:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/toza-minimal-rebrand
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Ensure separate Cloudflare Pages project exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          API="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CF_PROJECT_NAME}"
+          if ! curl -fsS "$API" -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" > /tmp/toza-project.json; then
+            curl -fsS -X POST \
+              "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              --data "{\"name\":\"${CF_PROJECT_NAME}\",\"production_branch\":\"main\"}" \
+              > /tmp/toza-project.json
+          fi
+          jq -e '.success == true' /tmp/toza-project.json >/dev/null
+          SUBDOMAIN="$(jq -r '.result.subdomain' /tmp/toza-project.json)"
+          test -n "$SUBDOMAIN" && test "$SUBDOMAIN" != "null"
+          PAGE_URL="https://${SUBDOMAIN}"
+          echo "SUBDOMAIN=${SUBDOMAIN}" >> "$GITHUB_ENV"
+          echo "PAGE_URL=${PAGE_URL}" >> "$GITHUB_ENV"
+          echo "New Toza Pages project: ${PAGE_URL}"
+
+      - name: Apply minimal content rebrand only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          from pathlib import Path
+          import json, os, re
+
+          page_url = os.environ['PAGE_URL']
+          subdomain = os.environ['SUBDOMAIN']
+          descriptor = 'Personal digital protection for your close circle.'
+
+          files = [
+              Path('README.md'), Path('CONTRIBUTING.md'), Path('privacy.html'), Path('terms.html'),
+              Path('robots.txt'), Path('sitemap.xml'), Path('llms.txt'), Path('index.html'),
+              Path('src/_data/i18n/en.json'), Path('src/_includes/layouts/vault.njk'),
+              Path('src/_includes/schema-org.njk'),
+          ] + sorted(Path('src/en').glob('*.njk'))
+
+          replacements = [
+              ('https://www.magenvip.tech', page_url),
+              ('https://magenvip.pages.dev', page_url),
+              ('https://magenvip.tech', page_url),
+              ('www.magenvip.tech', subdomain),
+              ('magenvip.pages.dev', subdomain),
+              ('magenvip.tech', subdomain),
+              ('מגן · Personal Cyber Shield', 'Toza'),
+              ('מגן — Personal Cyber Shield', 'Toza'),
+              ('מגן סייבר אישי', 'Toza'),
+              ('Magen VIP', 'Toza'),
+              ('MagenVIP', 'Toza'),
+              ('Personal Cyber Shield', 'Toza'),
+          ]
+
+          for path in files:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              for old, new in replacements:
+                  text = text.replace(old, new)
+              # Remaining standalone Hebrew brand word only; HE/RU site content is not being created here.
+              text = text.replace('מגן', 'Toza')
+              text = text.replace('Toza · Toza', 'Toza')
+              text = text.replace('Toza — Toza —', 'Toza —')
+              text = text.replace('Get your Toza.', descriptor)
+              text = text.replace(
+                  '<span class="fb-name">Toza <span class="fb-tag">Toza</span></span>',
+                  '<span class="fb-name">Toza <span class="fb-tag">Personal digital protection for your close circle.</span></span>'
+              )
+              path.write_text(text, encoding='utf-8')
+
+          # EN shared brand strings: retain structure; change identity only.
+          p = Path('src/_data/i18n/en.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          data['footer_cta_h2'] = descriptor
+          data['footer_copyright'] = '© 2026 Toza'
+          data['og_site_name'] = 'Toza'
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          # Pages URL is the working absolute URL; no custom canonical domain yet.
+          p = Path('src/_data/site.json')
+          p.write_text(json.dumps({
+              'url': page_url,
+              'prodUrl': page_url,
+              'note': 'Temporary Cloudflare Pages URL for Toza. No custom canonical domain is configured yet.'
+          }, indent=2) + '\n', encoding='utf-8')
+
+          # Package metadata only; no dependency or framework changes.
+          p = Path('package.json')
+          pkg = json.loads(p.read_text(encoding='utf-8'))
+          pkg['name'] = 'toza-site'
+          pkg['description'] = 'Toza — personal digital protection for your close circle.'
+          p.write_text(json.dumps(pkg, indent=2) + '\n', encoding='utf-8')
+
+          p = Path('package-lock.json')
+          lock = json.loads(p.read_text(encoding='utf-8'))
+          lock['name'] = 'toza-site'
+          if isinstance(lock.get('packages'), dict) and '' in lock['packages']:
+              lock['packages']['']['name'] = 'toza-site'
+          p.write_text(json.dumps(lock, indent=2) + '\n', encoding='utf-8')
+
+          # Homepage: use the approved working descriptor without changing structure or design.
+          p = Path('src/en/index.njk')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace('<p class="hero-kicker">Private cyber protection</p>', f'<p class="hero-kicker">{descriptor}</p>')
+          text = text.replace('title: "Toza — private-client cyber protection in high-stakes disputes"', 'title: "Toza — Personal digital protection for your close circle"')
+          text = text.replace('Toza is private-client cyber protection:', 'Toza provides personal digital protection for your close circle:')
+          p.write_text(text, encoding='utf-8')
+
+          # Structured data: remove legacy aliases and use the working Toza descriptor.
+          p = Path('src/_includes/schema-org.njk')
+          text = p.read_text(encoding='utf-8')
+          text = re.sub(r'^\s*"alternateName": \[[^\n]+\],\n', '', text, flags=re.M)
+          text = text.replace('"slogan": "Private-client cyber protection."', '"slogan": "Personal digital protection for your close circle."')
+          p.write_text(text, encoding='utf-8')
+
+          # Machine-readable explainer: make the descriptor explicit while keeping offer architecture unchanged.
+          p = Path('llms.txt')
+          text = p.read_text(encoding='utf-8')
+          if text.startswith('# Toza'):
+              lines = text.splitlines()
+              for i, line in enumerate(lines):
+                  if line.startswith('> '):
+                      lines[i] = '> Toza provides personal digital protection for your close circle. It is an in-person, senior-expert service for people in high-stakes personal disputes and post-incident uncertainty.'
+                      break
+              text = '\n'.join(lines) + ('\n' if not text.endswith('\n') else '')
+          p.write_text(text, encoding='utf-8')
+
+          # Deploy only to the new Pages project. Existing magenvip project is not touched.
+          Path('.github/workflows/deploy.yml').write_text('''name: Deploy Toza to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    env:
+      CLOUDFLARE_ACCOUNT_ID: cfd055f2f8175d13377bd64e9620ea36
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_PROJECT_NAME: toza-site
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build site
+        run: npm run build
+      - name: Ensure Pages project exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          API="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CF_PROJECT_NAME}"
+          if ! curl -fsS "$API" -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" >/dev/null; then
+            curl -fsS -X POST \
+              "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              --data "{\\"name\\":\\"${CF_PROJECT_NAME}\\",\\"production_branch\\":\\"main\\"}" >/dev/null
+          fi
+      - name: Deploy to new Toza Pages project
+        run: npx --yes wrangler@latest pages deploy _site --project-name "$CF_PROJECT_NAME" --branch main --commit-hash "$GITHUB_SHA"
+''', encoding='utf-8')
+
+          # The one-time transformation workflow removes itself before the commit.
+          Path('.github/workflows/toza-rebrand-once.yml').unlink()
+          PY
+
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Identity residue check
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE 'Magen VIP|MagenVIP|Personal Cyber Shield|מגן|magenvip' \
+              README.md CONTRIBUTING.md package.json package-lock.json privacy.html terms.html robots.txt sitemap.xml llms.txt index.html src .github/workflows/deploy.yml; then
+            echo 'Unexpected old-brand text remains in content/config.' >&2
+            exit 1
+          fi
+
+      - name: Commit rebrand to feature branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Apply minimal Toza content rebrand'
+          git push origin HEAD:feature/toza-minimal-rebrand
+          echo "REBRAND_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Deploy feature preview to new Toza Pages project
+        run: npx --yes wrangler@latest pages deploy _site --project-name "$CF_PROJECT_NAME" --branch feature-toza-minimal-rebrand --commit-hash "$REBRAND_COMMIT"
