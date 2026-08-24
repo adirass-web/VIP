@@ -1,34 +1,20 @@
-# Contributing / Git workflow — מגן · Personal Cyber Shield
+# Contributing / Git workflow — Toza
 
-Robust, reviewable process for this site. Approved 2026-06-07.
+Robust, reviewable process for this site.
 
 ## Branches
-- **`main`** = production. Auto-deploys to Cloudflare Pages (`magenvip`) on every push. **Never commit directly to `main`.**
-- **Short-lived feature branches**, one per change: `feat/<thing>`, `fix/<thing>`, `style/<thing>`, `copy/<thing>`.
-- Current redesign lives on **`vault-redesign`** (one big PR until launch; squash-merge to go live).
+- **`main`** = production. Auto-deploys to the separate Cloudflare Pages project `toza-site` on every push. Never commit directly to `main`.
+- Use short-lived feature branches, one per change.
+- Open a PR into `main`; squash-merge when approved.
 
-## Flow (per change)
-1. Branch off `main`.
-2. Commit in small, logical chunks (Conventional Commits: `feat:`, `fix:`, `style:`, `copy:`, `ci:`, `docs:`).
-3. Push the branch → Cloudflare builds a **preview** at `https://<branch>.magenvip.pages.dev` (non-production).
-4. Open a **PR** into `main`. Review on the preview URL.
-5. **Squash-merge** when approved → production deploys in ~30s.
+## Verification
+- Run `npm ci` and `npm run build` before merging.
+- Verify JSON/config changes and inspect generated output for expected routes and content.
+- Do not change layout, responsive behavior, accessibility, or i18n as part of copy-only changes.
 
-## Operational rules (this repo)
-- **OneDrive lock:** never run git in the working folder. Clone to `/tmp/vip-push`, copy changed files in, commit, push.
-- **OneDrive write-truncation:** the editor occasionally saves a TRUNCATED file. After editing config / JSON / CSS / NJK, **verify** before pushing:
-  - JS/JSON: `node -c file` / `JSON.parse`.
-  - CSS/NJK: build to a clean temp dir — `npx @11ty/eleventy --output=/tmp/vsite` — and grep the output for expected markers + check `tail`.
-  - Prefer bash heredoc or Python for large config/CSS/NJK writes.
-- **Don't push** `package.json` / `package-lock.json` dependency additions used only for local tooling (fonts and og image are committed static assets; CI only needs 11ty).
-- Single prices only; never the indefinite article for the brand (see Positioning doc).
-
-## Deploy facts
-- CI: `.github/workflows/deploy.yml` → `cloudflare/pages-action` → project `magenvip`, account `cfd055f2f8175d13377bd64e9620ea36`.
-- The `vault-redesign` branch is in the workflow trigger so it builds a preview; remove that trigger line at merge.
-
-## Default working tree (avoids OneDrive truncation)
-**Edit in the git clone outside OneDrive, not in the synced folder.**
-- Clone (or reuse) `/tmp/vip-push`; symlink `node_modules` from the synced checkout if needed (`ln -s <synced>/node_modules node_modules`).
-- Make all edits here, build to a temp dir (`npx @11ty/eleventy --output=/tmp/cvsite`), verify, commit, push.
-- Treat the OneDrive copy as a read-only backup. Permanent fix: move the repo to a non-synced path (e.g. `C:\dev\magentech`) and re-point the Cowork folder there.
+## Current release constraints
+- EN is the only published content tree.
+- Fresh HE copy will be supplied and mirrored after EN is locked; RU follows HE.
+- `Why us` points to https://cyberdrtabansky.com.
+- There is no custom canonical domain yet; the current deployment target is the `toza-site` Cloudflare Pages project.
+- Personal Shield and Inner Circle Shield remain part of the offer architecture.

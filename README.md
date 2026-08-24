@@ -1,13 +1,16 @@
-# VIP
+# Toza
 
 Production Eleventy/Nunjucks marketing site.
 
 ## Current release
 
+- Brand: Toza.
+- Working descriptor: Personal digital protection for your close circle.
 - Public language: English only (`src/en/`).
 - Primary layout: `src/_includes/layouts/vault.njk`.
 - Current contact path: WhatsApp / Signal.
 - `Why us` points to the founder's professional site: https://cyberdrtabansky.com.
+- Deployment target: separate Cloudflare Pages project `toza-site`; no custom canonical domain yet.
 - Hebrew and Russian production pages are intentionally absent until fresh translations are supplied.
 
 ## Planned sequence

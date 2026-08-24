@@ -1,7 +1,7 @@
 {
-  "name": "magenvip",
+  "name": "toza-site",
   "version": "1.0.0",
-  "description": "MagenVIP personal cyber shield — 3-language marketing site",
+  "description": "Toza — personal digital protection for your close circle.",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
