@@ -1,3 +1,4 @@
+# One-time branch transformation. This file deletes itself after a successful run.
 name: One-time Toza minimal rebrand
 
 on:
@@ -91,7 +92,6 @@ jobs:
               text = path.read_text(encoding='utf-8')
               for old, new in replacements:
                   text = text.replace(old, new)
-              # Remaining standalone Hebrew brand word only; HE/RU site content is not being created here.
               text = text.replace('מגן', 'Toza')
               text = text.replace('Toza · Toza', 'Toza')
               text = text.replace('Toza — Toza —', 'Toza —')
@@ -102,7 +102,6 @@ jobs:
               )
               path.write_text(text, encoding='utf-8')
 
-          # EN shared brand strings: retain structure; change identity only.
           p = Path('src/_data/i18n/en.json')
           data = json.loads(p.read_text(encoding='utf-8'))
           data['footer_cta_h2'] = descriptor
@@ -110,7 +109,6 @@ jobs:
           data['og_site_name'] = 'Toza'
           p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          # Pages URL is the working absolute URL; no custom canonical domain yet.
           p = Path('src/_data/site.json')
           p.write_text(json.dumps({
               'url': page_url,
@@ -118,7 +116,6 @@ jobs:
               'note': 'Temporary Cloudflare Pages URL for Toza. No custom canonical domain is configured yet.'
           }, indent=2) + '\n', encoding='utf-8')
 
-          # Package metadata only; no dependency or framework changes.
           p = Path('package.json')
           pkg = json.loads(p.read_text(encoding='utf-8'))
           pkg['name'] = 'toza-site'
@@ -132,7 +129,6 @@ jobs:
               lock['packages']['']['name'] = 'toza-site'
           p.write_text(json.dumps(lock, indent=2) + '\n', encoding='utf-8')
 
-          # Homepage: use the approved working descriptor without changing structure or design.
           p = Path('src/en/index.njk')
           text = p.read_text(encoding='utf-8')
           text = text.replace('<p class="hero-kicker">Private cyber protection</p>', f'<p class="hero-kicker">{descriptor}</p>')
@@ -140,14 +136,12 @@ jobs:
           text = text.replace('Toza is private-client cyber protection:', 'Toza provides personal digital protection for your close circle:')
           p.write_text(text, encoding='utf-8')
 
-          # Structured data: remove legacy aliases and use the working Toza descriptor.
           p = Path('src/_includes/schema-org.njk')
           text = p.read_text(encoding='utf-8')
           text = re.sub(r'^\s*"alternateName": \[[^\n]+\],\n', '', text, flags=re.M)
           text = text.replace('"slogan": "Private-client cyber protection."', '"slogan": "Personal digital protection for your close circle."')
           p.write_text(text, encoding='utf-8')
 
-          # Machine-readable explainer: make the descriptor explicit while keeping offer architecture unchanged.
           p = Path('llms.txt')
           text = p.read_text(encoding='utf-8')
           if text.startswith('# Toza'):
@@ -159,7 +153,6 @@ jobs:
               text = '\n'.join(lines) + ('\n' if not text.endswith('\n') else '')
           p.write_text(text, encoding='utf-8')
 
-          # Deploy only to the new Pages project. Existing magenvip project is not touched.
           Path('.github/workflows/deploy.yml').write_text('''name: Deploy Toza to Cloudflare Pages
 
 on:
@@ -206,7 +199,6 @@ jobs:
         run: npx --yes wrangler@latest pages deploy _site --project-name "$CF_PROJECT_NAME" --branch main --commit-hash "$GITHUB_SHA"
 ''', encoding='utf-8')
 
-          # The one-time transformation workflow removes itself before the commit.
           Path('.github/workflows/toza-rebrand-once.yml').unlink()
           PY
 
