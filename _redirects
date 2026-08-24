@@ -1,5 +1,10 @@
-# vault-redesign — EN-only public site (temporary). HE/RU hidden until translated.
+# EN-only public site until fresh HE/RU mirrors are ready.
 /he/*  /en/  302
 /ru/*  /en/  302
-# Retired page → new IA (permanent)
-/en/founder.html  /en/why-us.html  301
+
+# Retired local authority pages now resolve to the founder's professional site.
+/en/why-us.html  https://cyberdrtabansky.com  301
+/en/founder.html  https://cyberdrtabansky.com  301
+
+# Retired standards-heavy page replaced by the current visit/process page.
+/en/whats-included.html  /en/what-happens-during-the-visit.html  301

@@ -1,7 +1,5 @@
 {% set t = i18n[locale] %}
 {% set enLink = "/en/" + (slug + ".html" if slug else "") %}
-{% set heLink = "/he/" + (slug + ".html" if slug else "") %}
-{% set ruLink = "/ru/" + (slug + ".html" if slug else "") %}
 <!DOCTYPE html>
 <html lang="{{ lang }}" dir="{{ dir }}">
 <head>
@@ -25,19 +23,17 @@
     <meta name="twitter:description" content="{{ og_description if og_description else description }}">
     <meta name="twitter:image" content="{{ ogImg }}">
     <link rel="canonical" href="{{ canonical | replace(site.prodUrl, site.url) }}">
-    {# EN-only public site (vault-redesign). HE/RU hreflang restored when translated. #}
+    {# EN-only public site. HE/RU hreflang is added only when fresh translated mirrors are published. #}
     <link rel="alternate" hreflang="en" href="{{ site.url }}{{ enLink }}">
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enLink }}">
 
     <title>{{ title }}</title>
 
-    {# Self-hosted fonts (Track 3b) — no third-party font call. #}
     <link rel="preload" href="../assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/vault.css">
 
-    {# Structured data: Organization (Personal Cyber Shield) + Person (Dr. Tabansky). Per-page FAQ/Service appended via page_schema. #}
     {% include "schema-org.njk" %}
 </head>
 <body{% if body_class %} class="{{ body_class }}"{% endif %}>
@@ -62,8 +58,7 @@
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
             <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
                 <a href="/{{ locale }}/#situations">{{ t.nav_situations or 'Situations' }}</a>
-                <a href="/{{ locale }}/why-us.html">{{ t.nav_why or 'Why us' }}</a>
-                <a href="/{{ locale }}/whats-included.html">{{ t.nav_whats_included or "What's included" }}</a>
+                <a href="https://cyberdrtabansky.com">{{ t.nav_why or 'Why us' }}</a>
                 <a href="/{{ locale }}/what-happens-during-the-visit.html">{{ t.nav_what_happens or 'What happens' }}</a>
                 <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
                 <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
@@ -118,8 +113,7 @@
                 <nav class="foot-col" aria-label="Site">
                     <h3>Explore</h3>
                     <a href="/{{ locale }}/#situations">Situations</a>
-                    <a href="/{{ locale }}/why-us.html">Why us</a>
-                    <a href="/{{ locale }}/whats-included.html">What's included</a>
+                    <a href="https://cyberdrtabansky.com">Why us</a>
                     <a href="/{{ locale }}/what-happens-during-the-visit.html">What happens</a>
                     <a href="/{{ locale }}/pricing.html">Pricing</a>
                     <a href="/{{ locale }}/faq.html">FAQ</a>
