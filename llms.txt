@@ -1,6 +1,6 @@
-# Personal Cyber Shield
+# Toza
 
-> Personal Cyber Shield is private-client cyber protection for people in high-stakes personal disputes or post-incident uncertainty. One senior cybersecurity expert works with the client directly, in person and in private, to find, explain, and reduce personal digital exposure before it becomes leverage.
+> Personal digital protection for your close circle. Toza is an in-person, senior-expert service for people in high-stakes personal disputes or post-incident uncertainty, helping them find, explain, and reduce personal digital exposure before it becomes leverage.
 
 The service is not generic IT support, remote helpdesk work, investigation, forensic reconstruction, legal evidence collection, monitoring, or SaaS.
 
