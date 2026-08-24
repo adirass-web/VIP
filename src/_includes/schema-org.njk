@@ -1,8 +1,8 @@
 {#
-  Base structured data — injected in <head> via base.njk.
-  Provides ProfessionalService + Person (Dr. Tabansky) on every page.
-  Page-specific schemas (FAQPage, Service) are added per .njk file via a
-  `page_schema` front-matter block rendered after this one.
+  Base structured data — injected in <head> via vault.njk.
+  Provides ProfessionalService + Person (Dr. Tabansky) on every EN page.
+  Page-specific schemas (FAQPage, Service) are added per .njk file via
+  a `page_schema` front-matter block rendered after this one.
 #}
 <script type="application/ld+json">
 {
@@ -14,19 +14,19 @@
       "name": "Personal Cyber Shield",
       "alternateName": ["מגן סייבר אישי", "מגן"],
       "url": "{{ site.url }}",
-      "description": "Private-client cyber protection for individuals in high-stakes personal disputes — separation and divorce, business and partner disputes, inheritance conflicts, and similar. One senior expert reviews what your personal digital life may expose and closes it, in person and discreetly. Founded by Dr. Lior Tabansky.",
+      "description": "Private-client cyber protection for individuals in high-stakes personal disputes and post-incident uncertainty. One senior expert reviews what a client's personal digital life may expose and reduces that exposure in person and discreetly.",
       "slogan": "Private-client cyber protection.",
       "areaServed": [
         { "@type": "Country", "name": "Israel" }
       ],
-      "availableLanguage": ["Hebrew", "English", "Russian"],
+      "availableLanguage": ["English"],
       "priceRange": "₪₪₪₪",
       "knowsAbout": [
         "Personal cybersecurity",
         "Personal digital privacy",
         "Account and device security",
         "Divorce and separation digital exposure",
-        "Business dispute data protection",
+        "Business dispute digital exposure",
         "Inheritance and estate digital exposure"
       ],
       "hasOfferCatalog": {
@@ -36,49 +36,48 @@
           {
             "@type": "Offer",
             "name": "Private Exposure Assessment",
-            "description": "A private, in-person diagnostic with a senior expert. Plain-English summary of what was reviewed, what is most urgent, and what should happen next. Credited in full toward a full package within 14 days.",
+            "description": "A private, in-person diagnostic with a senior expert. Plain-English summary of what was reviewed, what appears most urgent, and what should happen next. Credited in full toward a full package within 14 days.",
             "price": "3500",
             "priceCurrency": "ILS"
           },
           {
             "@type": "Offer",
             "name": "Personal Shield",
-            "description": "One person, one primary phone, and every account identified together — a full day of in-person expert work.",
+            "description": "One person, one primary phone, and every relevant account identified together during a full day of in-person expert work.",
             "price": "14000",
             "priceCurrency": "ILS"
           },
           {
             "@type": "Offer",
             "name": "Inner Circle Shield",
-            "description": "Typically several people fully protected. From ₪38,000, priced by scope.",
+            "description": "A multi-person engagement scoped after assessment. From ₪38,000.",
             "price": "38000",
             "priceCurrency": "ILS"
           },
           {
             "@type": "Offer",
             "name": "Bespoke Private Protection",
-            "description": "Fully scoped private protection for complex situations. Priced by arrangement."
+            "description": "Custom private protection for unusual or highly complex situations. Priced by arrangement."
           }
         ]
       },
-      "founder": { "@id": "{{ site.url }}/en/why-us.html#person" },
-      "employee": { "@id": "{{ site.url }}/en/why-us.html#person" }
+      "founder": { "@id": "https://cyberdrtabansky.com/#person" },
+      "employee": { "@id": "https://cyberdrtabansky.com/#person" }
     },
     {
       "@type": "Person",
-      "@id": "{{ site.url }}/en/why-us.html#person",
+      "@id": "https://cyberdrtabansky.com/#person",
       "name": "Lior Tabansky",
       "honorificPrefix": "Dr.",
       "givenName": "Lior",
       "familyName": "Tabansky",
-      "jobTitle": "Personal Cybersecurity Expert",
-      "description": "Two decades advising governments and intelligence agencies on cyber operations across Israel, Asia, Europe, and Africa.",
+      "jobTitle": "Cybersecurity Expert",
+      "description": "Senior cybersecurity expert, researcher, and advisor.",
       "knowsAbout": [
         "Cybersecurity",
-        "Device hardening",
-        "Intelligence operations",
-        "Digital counter-intelligence",
-        "Personal privacy"
+        "National cybersecurity",
+        "Cyber strategy and policy",
+        "Personal cyber protection"
       ],
       "worksFor": { "@id": "{{ site.url }}/#organization" },
       "url": "https://cyberdrtabansky.com",
