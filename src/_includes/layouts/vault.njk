@@ -1,5 +1,7 @@
 {% set t = i18n[locale] %}
-{% set enLink = "/en/" + (slug + ".html" if slug else "") %}
+{% set routeSuffix = slug + ".html" if slug else "" %}
+{% set enLink = "/en/" + routeSuffix %}
+{% set heLink = "/he/" + routeSuffix %}
 <!DOCTYPE html>
 <html lang="{{ lang }}" dir="{{ dir }}">
 <head>
@@ -23,14 +25,15 @@
     <meta name="twitter:description" content="{{ og_description if og_description else description }}">
     <meta name="twitter:image" content="{{ ogImg }}">
     <link rel="canonical" href="{{ canonical | replace(site.prodUrl, site.url) }}">
-    {# EN-only public site. HE/RU hreflang is added only when fresh translated mirrors are published. #}
     <link rel="alternate" hreflang="en" href="{{ site.url }}{{ enLink }}">
+    <link rel="alternate" hreflang="he" href="{{ site.url }}{{ heLink }}">
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enLink }}">
 
     <title>{{ title }}</title>
 
     <link rel="preload" href="../assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/vault.css">
 
@@ -53,7 +56,7 @@
                         <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
                     </g>
                 </svg>
-                <span class="name">Toza</span>
+                <span class="name" dir="ltr">Toza</span>
             </a>
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
             <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
@@ -90,8 +93,8 @@
                 <h2>{{ t.footer_cta_h2 or 'Personal digital protection for your close circle.' }}</h2>
                 <p class="sub">{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}</p>
                 <nav class="foot-cta" aria-label="{{ t.footer_cta_nav_label or 'Direct messaging options' }}">
-                    <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">WhatsApp</a>
-                    <a class="btn ghost" href="{{ t.signal_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">Signal</a>
+                    <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">{{ t.wa_label or 'WhatsApp' }}</a>
+                    <a class="btn ghost" href="{{ t.signal_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">{{ t.signal_label or 'Signal' }}</a>
                 </nav>
             </div>
         </section>
@@ -108,21 +111,21 @@
                             <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="7"/>
                         </g>
                     </svg>
-                    <span class="fb-name">Toza <span class="fb-tag">Personal digital protection for your close circle.</span></span>
+                    <span class="fb-name"><bdi dir="ltr">Toza</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
                 </div>
-                <nav class="foot-col" aria-label="Site">
-                    <h3>Explore</h3>
-                    <a href="/{{ locale }}/#situations">Situations</a>
-                    <a href="https://cyberdrtabansky.com">Why us</a>
-                    <a href="/{{ locale }}/what-happens-during-the-visit.html">What happens</a>
-                    <a href="/{{ locale }}/pricing.html">Pricing</a>
-                    <a href="/{{ locale }}/faq.html">FAQ</a>
-                    <a href="/{{ locale }}/attorneys.html">For attorneys</a>
+                <nav class="foot-col" aria-label="{{ t.footer_explore or 'Explore' }}">
+                    <h3>{{ t.footer_explore or 'Explore' }}</h3>
+                    <a href="/{{ locale }}/#situations">{{ t.nav_situations or 'Situations' }}</a>
+                    <a href="https://cyberdrtabansky.com">{{ t.nav_why or 'Why us' }}</a>
+                    <a href="/{{ locale }}/what-happens-during-the-visit.html">{{ t.nav_what_happens or 'What happens' }}</a>
+                    <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
+                    <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
+                    <a href="/{{ locale }}/attorneys.html">{{ t.nav_attorneys or 'For attorneys' }}</a>
                 </nav>
-                <nav class="foot-col" aria-label="Legal">
-                    <h3>Legal</h3>
-                    <a href="/terms.html">{{ t.footer_terms or 'Terms of Use' }}</a>
-                    <a href="/privacy.html">{{ t.footer_privacy or 'Privacy' }}</a>
+                <nav class="foot-col" aria-label="{{ t.footer_legal or 'Legal' }}">
+                    <h3>{{ t.footer_legal or 'Legal' }}</h3>
+                    <a href="/terms.html" hreflang="en">{{ t.footer_terms or 'Terms of Use' }}</a>
+                    <a href="/privacy.html" hreflang="en">{{ t.footer_privacy or 'Privacy' }}</a>
                 </nav>
             </div>
             <div class="wrap foot-meta">
@@ -136,6 +139,16 @@
     (function(){
       var b=document.querySelector('[data-nav-toggle]'),m=document.getElementById('site-menu');
       if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);});}
+      var faqToggle=document.querySelector('[data-faq-toggle-all]');
+      if(faqToggle){
+        var details=Array.prototype.slice.call(document.querySelectorAll('.faq details'));
+        faqToggle.addEventListener('click',function(){
+          var expand=faqToggle.getAttribute('aria-expanded')!=='true';
+          details.forEach(function(item){item.open=expand;});
+          faqToggle.setAttribute('aria-expanded',String(expand));
+          faqToggle.textContent=expand?(faqToggle.dataset.closeLabel||'Collapse all'):(faqToggle.dataset.openLabel||'Expand all');
+        });
+      }
     })();
     </script>
     <script src="../assets/js/guilloche.js" defer></script>

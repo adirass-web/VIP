@@ -1,0 +1,53 @@
+name: Verify Toza site
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: toza-verify-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify route, copy, RTL, links, and CI contracts
+        run: npm run verify:all
+
+      - name: Install Chromium for RTL visual checks
+        run: node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell
+
+      - name: Run RTL visual checks
+        run: npm run test:rtl-visual
+
+      - name: Upload visual test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rtl-visual-artifacts
+          path: |
+            test-results
+            playwright-report
+          if-no-files-found: ignore

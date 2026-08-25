@@ -1,5 +1,4 @@
-# EN-only public site until fresh HE/RU mirrors are ready.
-/he/*  /en/  302
+# Russian remains unpublished until its translated mirror is ready.
 /ru/*  /en/  302
 
 # Retired local authority pages now resolve to the founder's professional site.

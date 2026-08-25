@@ -1,9 +1,23 @@
-{#
-  Base structured data — injected in <head> via vault.njk.
-  Provides ProfessionalService + Person (Dr. Tabansky) on every EN page.
-  Page-specific schemas (FAQPage, Service) are added per .njk file via
-  a `page_schema` front-matter block rendered after this one.
-#}
+{# Base structured data — injected in <head> via vault.njk. #}
+{% if locale == "he" %}
+  {% set serviceDescription = "הגנה דיגיטלית אישית למעגל הקרוב שלך, עבור מצבים אישיים בעלי השלכות משמעותיות. מומחה בכיר בוחן מה החיים הדיגיטליים האישיים עלולים לחשוף ומצמצם את החשיפה פנים אל פנים ובדיסקרטיות." %}
+  {% set slogan = "הגנה דיגיטלית אישית למעגל הקרוב שלך." %}
+  {% set assessmentDescription = "בדיקת חשיפה וסיכון דיגיטלי אישי, פרטית ופנים אל פנים, עם מומחה בכיר. סיכום ברור של מה שנבדק, מה דחוף במיוחד ומה נכון לעשות בהמשך. מלוא העלות נזקפת לזכות חבילה מלאה בתוך 14 ימים." %}
+  {% set personalShieldDescription = "אדם אחד, טלפון ראשי אחד וכל חשבון רלוונטי שמזהים יחד במהלך יום עבודה מלא פנים אל פנים." %}
+  {% set innerCircleDescription = "טיפול לכמה אנשים, שהיקפו נקבע לאחר הבדיקה. החל מ־38,000 ₪." %}
+  {% set bespokeDescription = "הגנה פרטית מותאמת למצבים חריגים או מורכבים במיוחד. המחיר נקבע בתיאום אישי." %}
+  {% set personJobTitle = "מומחה סייבר" %}
+  {% set personDescription = "מומחה בכיר, חוקר ויועץ בתחום הסייבר." %}
+{% else %}
+  {% set serviceDescription = "Personal digital protection for your close circle, for people in high-stakes personal disputes and post-incident uncertainty. One senior expert reviews what a client's personal digital life may expose and reduces that exposure in person and discreetly." %}
+  {% set slogan = "Personal digital protection for your close circle." %}
+  {% set assessmentDescription = "A private, in-person diagnostic with a senior expert. Plain-English summary of what was reviewed, what appears most urgent, and what should happen next. Credited in full toward a full package within 14 days." %}
+  {% set personalShieldDescription = "One person, one primary phone, and every relevant account identified together during a full day of in-person expert work." %}
+  {% set innerCircleDescription = "A multi-person engagement scoped after assessment. From ₪38,000." %}
+  {% set bespokeDescription = "Custom private protection for unusual or highly complex situations. Priced by arrangement." %}
+  {% set personJobTitle = "Cybersecurity Expert" %}
+  {% set personDescription = "Senior cybersecurity expert, researcher, and advisor." %}
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -13,12 +27,12 @@
       "@id": "{{ site.url }}/#organization",
       "name": "Toza",
       "url": "{{ site.url }}",
-      "description": "Personal digital protection for your close circle, for people in high-stakes personal disputes and post-incident uncertainty. One senior expert reviews what a client's personal digital life may expose and reduces that exposure in person and discreetly.",
-      "slogan": "Personal digital protection for your close circle.",
+      "description": "{{ serviceDescription }}",
+      "slogan": "{{ slogan }}",
       "areaServed": [
         { "@type": "Country", "name": "Israel" }
       ],
-      "availableLanguage": ["English"],
+      "availableLanguage": ["English", "Hebrew"],
       "priceRange": "₪₪₪₪",
       "knowsAbout": [
         "Personal cybersecurity",
@@ -35,28 +49,28 @@
           {
             "@type": "Offer",
             "name": "Private Exposure Assessment",
-            "description": "A private, in-person diagnostic with a senior expert. Plain-English summary of what was reviewed, what appears most urgent, and what should happen next. Credited in full toward a full package within 14 days.",
+            "description": "{{ assessmentDescription }}",
             "price": "3500",
             "priceCurrency": "ILS"
           },
           {
             "@type": "Offer",
             "name": "Personal Shield",
-            "description": "One person, one primary phone, and every relevant account identified together during a full day of in-person expert work.",
+            "description": "{{ personalShieldDescription }}",
             "price": "14000",
             "priceCurrency": "ILS"
           },
           {
             "@type": "Offer",
             "name": "Inner Circle Shield",
-            "description": "A multi-person engagement scoped after assessment. From ₪38,000.",
+            "description": "{{ innerCircleDescription }}",
             "price": "38000",
             "priceCurrency": "ILS"
           },
           {
             "@type": "Offer",
             "name": "Bespoke Private Protection",
-            "description": "Custom private protection for unusual or highly complex situations. Priced by arrangement."
+            "description": "{{ bespokeDescription }}"
           }
         ]
       },
@@ -70,8 +84,8 @@
       "honorificPrefix": "Dr.",
       "givenName": "Lior",
       "familyName": "Tabansky",
-      "jobTitle": "Cybersecurity Expert",
-      "description": "Senior cybersecurity expert, researcher, and advisor.",
+      "jobTitle": "{{ personJobTitle }}",
+      "description": "{{ personDescription }}",
       "knowsAbout": [
         "Cybersecurity",
         "National cybersecurity",

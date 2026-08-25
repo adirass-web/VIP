@@ -1,8 +1,7 @@
 const path = require("path");
 
 module.exports = function (eleventyConfig) {
-  // TEMPORARY (vault-redesign): EN-only public site — HE/RU not built until translated.
-  eleventyConfig.ignores.add("src/he/**");
+  // Russian remains unpublished until its translated mirror is ready.
   eleventyConfig.ignores.add("src/ru/**");
 
   eleventyConfig.addPassthroughCopy("assets");
