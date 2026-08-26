@@ -105,3 +105,58 @@ test("Hebrew FAQ control expands and collapses its localized answers", async ({ 
   await expect(toggle).toHaveText("פתיחת כל התשובות");
   expect(await answers.evaluateAll((items) => items.every((item) => !item.open))).toBe(true);
 });
+
+test("Why Toza stays local before the explicit external profile link", async ({ page }, testInfo) => {
+  await page.goto(`${siteUrl}/en/why-us.html`);
+  await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
+  await expect(page.locator("h1")).toHaveText("Why I created Toza.");
+  if (await page.locator("[data-nav-toggle]").isVisible()) {
+    await page.locator("[data-nav-toggle]").click();
+  }
+  await expect(page.locator('#site-menu a[href="/en/why-us.html"]')).toBeVisible();
+  if (await page.locator("[data-nav-toggle]").isVisible()) {
+    await page.locator("[data-nav-toggle]").click();
+  }
+
+  const englishPortrait = page.locator('.portrait img[src="/assets/img/dr-tabansky-portrait-square-640.webp"]');
+  await expect(englishPortrait).toBeVisible();
+  expect(await englishPortrait.evaluate((image) => image.complete && image.naturalWidth === 640)).toBe(true);
+
+  const englishProfile = page.locator('.external-profile a[href="https://cyberdrtabansky.com"]');
+  await expect(englishProfile).toHaveAttribute("target", "_blank");
+  await expect(englishProfile).toContainText("View my professional profile");
+
+  const englishScreenshot = testInfo.outputPath(`why-toza-en-${testInfo.project.name}.png`);
+  await page.screenshot({ path: englishScreenshot, fullPage: true });
+  expect(fs.existsSync(englishScreenshot)).toBe(true);
+
+  await page.goto(`${siteUrl}/he/why-us.html`);
+  await expect(page.locator("html")).toHaveAttribute("lang", "he");
+  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
+  await expect(page.locator("h1")).toContainText("למה הקמתי את");
+  if (await page.locator("[data-nav-toggle]").isVisible()) {
+    await page.locator("[data-nav-toggle]").click();
+  }
+  await expect(page.locator('#site-menu a[href="/he/why-us.html"]')).toBeVisible();
+  if (await page.locator("[data-nav-toggle]").isVisible()) {
+    await page.locator("[data-nav-toggle]").click();
+  }
+
+  const hebrewPortrait = page.locator('.portrait img[src="/assets/img/dr-tabansky-portrait-square-640.webp"]');
+  await expect(hebrewPortrait).toBeVisible();
+  expect(await hebrewPortrait.evaluate((image) => image.complete && image.naturalWidth === 640)).toBe(true);
+
+  const hebrewProfile = page.locator('.external-profile a[href="https://cyberdrtabansky.com"]');
+  await expect(hebrewProfile).toHaveAttribute("target", "_blank");
+  await expect(hebrewProfile).toContainText("לפרופיל המקצועי שלי");
+
+  const bounds = await page.evaluate(() => ({
+    clientWidth: document.documentElement.clientWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+  }));
+  expect(bounds.scrollWidth).toBeLessThanOrEqual(bounds.clientWidth + 1);
+
+  const screenshot = testInfo.outputPath(`why-toza-${testInfo.project.name}.png`);
+  await page.screenshot({ path: screenshot, fullPage: true });
+  expect(fs.existsSync(screenshot)).toBe(true);
+});

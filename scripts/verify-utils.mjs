@@ -8,6 +8,7 @@ export const repoRoot = path.resolve(scriptsDir, "..");
 export const siteUrl = "https://toza-site.pages.dev";
 export const routes = Object.freeze([
   "index",
+  "why-us",
   "private-exposure-assessment",
   "what-happens-during-the-visit",
   "pricing",

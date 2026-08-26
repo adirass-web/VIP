@@ -36,7 +36,8 @@ See [FAQ and boundaries](/en/faq.html#boundaries) and [Why This Is Not IT Suppor
 
 ## Founder / professional record
 
-The founder's professional record is maintained at https://cyberdrtabansky.com.
+- [Why Toza](/en/why-us.html) explains why Dr. Lior Tabansky created the practice and how he works directly with each client.
+- The founder's full professional record is maintained at https://cyberdrtabansky.com.
 
 ## For attorneys
 
@@ -51,5 +52,5 @@ Current first contact is via WhatsApp or Signal. Send only a short neutral first
 ## Languages
 
 - English: `/en/` — live.
-- Hebrew: not published; a fresh mirrored translation will be added after the English source is locked.
+- Hebrew: `/he/` — live.
 - Russian: not published; a fresh mirrored translation will follow Hebrew.

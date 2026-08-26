@@ -9,7 +9,7 @@ Production Eleventy/Nunjucks marketing site.
 - Public language: English only (`src/en/`).
 - Primary layout: `src/_includes/layouts/vault.njk`.
 - Current contact path: WhatsApp / Signal.
-- `Why us` points to the founder's professional site: https://cyberdrtabansky.com.
+- `Why Toza` is a bilingual local founder note; its explicit external link opens the founder's professional site at https://cyberdrtabansky.com.
 - Deployment target: separate Cloudflare Pages project `toza-site`; no custom canonical domain yet.
 - Hebrew and Russian production pages are intentionally absent until fresh translations are supplied.
 

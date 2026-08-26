@@ -1,8 +1,7 @@
 # Russian remains unpublished until its translated mirror is ready.
 /ru/*  /en/  302
 
-# Retired local authority pages now resolve to the founder's professional site.
-/en/why-us.html  https://cyberdrtabansky.com  301
+# The retired founder route still resolves to the founder's professional site.
 /en/founder.html  https://cyberdrtabansky.com  301
 
 # Retired standards-heavy page replaced by the current visit/process page.
