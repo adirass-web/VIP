@@ -389,6 +389,14 @@ Visuals should help visitors understand that ordinary public and digital life co
 - Public presentation must explain accumulation and intervention without becoming operational attack instructions.
 - Each public chain must be complex enough to justify expert assessment and specific remediation.
 
+Selected prototype families:
+
+1. **Identity convergence** — public trails, correlated identifiers, reused credentials, and recovery paths combine across personal accounts.
+2. **Trust residue** — romantic or household trust, physical device sharing, sessions, credentials, and recovery roles continue after the relationship changes.
+3. **Personal/work crossover** — personal email or devices, reused identity/authentication paths, and shared business access allow personal exposure to become commercial leverage.
+
+Rejected for this first prototype: isolated feature/settings risks and life-pattern reconstruction as a primary chain.
+
 ### 5.5C Exposure-chain visual precedent — PROTOTYPE, NOT LOCKED
 
 - Trial the **method**, not the appearance, of Pentagram's Coeuraj system as a visual translation of the Attack Path model: a governed relational grammar in which rules, labels, and junctions follow explicit internal logic.
