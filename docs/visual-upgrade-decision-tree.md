@@ -375,6 +375,12 @@ Excluded unless the user later changes the rule:
 
 Visuals should help visitors understand that ordinary public and digital life contains relationships and traces they do not normally perceive. They are explanatory and atmospheric, not decorative filler.
 
+### 5.5A First post-hero visual role — LOCKED
+
+- The first section after the hero explains that ordinary life creates hidden exposure.
+- It precedes the intervention method, founder credentials, and detailed situation navigation.
+- Its job is to turn the hero headline into a credible, concrete realization rather than another marketing claim.
+
 ### 5.6 Image density — LOCKED
 
 - Home uses **two or three decisive ambient images**.
@@ -431,8 +437,8 @@ Resolve approximately in this order because later choices depend on earlier ones
 
 This is provisional until the remaining branches are resolved:
 
-1. Recognizable situations plus founder portrait.
-2. The overlooked truth: ordinary digital life reveals more than expected.
+1. Recognizable separation/divorce and business/founder-dispute cues plus founder portrait; primary headline: “Your digital life reveals more than you realize.”
+2. **Locked second screen:** ordinary life creates hidden exposure.
 3. The consequence when trust or alignment breaks.
 4. The action promise: find it and close what can be closed.
 5. The three-stage method: reveal, intervene, confirm.
