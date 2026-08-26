@@ -339,8 +339,10 @@ The upgrade may evolve the system, but changes must preserve the brand's discret
 
 - Do not create or generate images.
 - Do not create bespoke illustrations or exposure-map imagery.
-- Research and recommend existing references only.
+- Research and recommend existing photographic and image references only.
 - The user selects which inspirations or assets, if any, may be used.
+- Restrained code-native visual treatments are permitted: typography, rules, masks, and geometry.
+- Code-native treatments must remain part of the interface/layout system and must not become synthetic illustrative imagery.
 
 ### 5.2 Permitted research sources — LOCKED
 
@@ -410,7 +412,7 @@ Resolve approximately in this order because later choices depend on earlier ones
 
 1. Image density and photographic rhythm.
 2. Hero supporting hierarchy and exact first-screen composition; the primary headline is locked.
-3. Degree and type of visual “reveal” treatment using existing assets or code-native layout only.
+3. Exact visual “reveal” treatment using selected existing assets plus permitted code-native type, rules, masks, and geometry.
 4. Proof hierarchy after the problem is introduced.
 5. Method naming and public labels.
 6. Homepage section order and compression.
