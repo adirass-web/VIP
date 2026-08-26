@@ -251,7 +251,11 @@ Supporting feelings such as safety, calm, seriousness, and exclusivity must not 
 
 ### 2.3 Problem discovery — LOCKED
 
-Primary cognitive realization:
+Primary Home hero headline:
+
+> Your digital life reveals more than you realize.
+
+Underlying cognitive realization:
 
 > Your ordinary digital life reveals more than you realize.
 
@@ -405,7 +409,7 @@ No reference should be copied wholesale.
 Resolve approximately in this order because later choices depend on earlier ones:
 
 1. Image density and photographic rhythm.
-2. Hero information hierarchy and exact first-screen content.
+2. Hero supporting hierarchy and exact first-screen composition; the primary headline is locked.
 3. Degree and type of visual “reveal” treatment using existing assets or code-native layout only.
 4. Proof hierarchy after the problem is introduced.
 5. Method naming and public labels.
