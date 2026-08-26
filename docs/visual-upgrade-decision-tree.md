@@ -390,6 +390,14 @@ Visuals should help visitors understand that ordinary public and digital life co
 
 ## 6. Research workstream — OPEN
 
+### 6.0 Evidence rule — LOCKED
+
+- Do not invent typography, composition, graphic treatments, or a design language from scratch.
+- Every proposed direction must be anchored in identifiable existing examples and a formal documented method or principle.
+- For every recommendation, record: source, documented principle, visible precedent, exact relevance to Toza, what may be adapted, and what must be rejected.
+- References are evidence and inspiration, not permission to copy.
+- No design direction advances to implementation until the user selects from the researched references.
+
 Research must identify useful principles and existing references for:
 
 - Premium founder-led advisory and professional-service sites.
