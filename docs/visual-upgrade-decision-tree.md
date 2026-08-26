@@ -381,6 +381,14 @@ Visuals should help visitors understand that ordinary public and digital life co
 - It precedes the intervention method, founder credentials, and detailed situation navigation.
 - Its job is to turn the hero headline into a credible, concrete realization rather than another marketing claim.
 
+### 5.5B Exposure-chain visual precedent — PROTOTYPE, NOT LOCKED
+
+- Trial the **method**, not the appearance, of Pentagram's Coeuraj system: a governed relational grammar in which rules, labels, and junctions follow explicit internal logic.
+- Adapt it more quietly for three concrete exposure chains and pair it with selected ambient photography.
+- Do not copy Coeuraj's typography, density, brackets, red/black styling, or network aesthetic.
+- The user is not yet convinced. This direction must be tested against at least one researched alternative before adoption.
+- No site-wide design decision may be inferred from this prototype.
+
 ### 5.6 Image density — LOCKED
 
 - Home uses **two or three decisive ambient images**.
