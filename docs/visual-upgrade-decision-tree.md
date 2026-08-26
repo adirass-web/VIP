@@ -1,11 +1,11 @@
-# Toza Visual Upgrade — Decision Tree
+# Toza Project Decision Register
 
 Status: **Discovery in progress**  
 Branch: `design/visual-upgrade`  
 Owner: Dr. Lior Tabansky  
 Last updated: 2026-08-26
 
-This file is the single source of truth for the Toza visual upgrade. Future design, copy, image selection, layout, implementation, and QA decisions must trace back to this tree. Update this file when a decision changes; do not maintain competing decision records elsewhere.
+This file is the single source of truth for all durable Toza project decisions: business, market, offer, pricing, content, language, privacy, repository workflow, deployment, design, imagery, implementation, and QA. Future changes must trace back to this register. Update this file when a decision changes; do not maintain competing decision records elsewhere.
 
 ## Status key
 
@@ -13,6 +13,174 @@ This file is the single source of truth for the Toza visual upgrade. Future desi
 - **INHERITED** — established by the production repo or prior approved work.
 - **OPEN** — unresolved; implementation must wait where it depends on this choice.
 - **RESEARCH** — requires external reference research before selection.
+
+## 0. Project governance, publishing, and infrastructure
+
+### 0.1 Source of truth — LOCKED
+
+- Repository: `adirass-web/VIP`.
+- Production branch: `main`.
+- Active visual-upgrade branch: `design/visual-upgrade`.
+- This file is the only durable project decision register.
+- Working notes may exist temporarily, but they must not become competing policy documents.
+- The English production source remains the content source of truth for mirrored language work unless a language-specific decision is explicitly recorded here.
+
+### 0.2 Git and approval workflow — LOCKED
+
+- Never commit directly to `main`.
+- Use a short-lived feature branch and a pull request into `main`.
+- Repository verification runs automatically on feature-branch pushes and when a PR is opened, reopened, or marked ready.
+- Manual `workflow_dispatch` is intentionally disabled.
+- The user approves content/design; the working agent may then mark the PR ready and squash-merge it.
+- Roll back by revert or a corrective hotfix, never by rewriting published history.
+
+### 0.3 Build and deployment — LOCKED
+
+- Stack: Eleventy/Nunjucks.
+- Build output: `_site`.
+- Production host: `https://toza-site.pages.dev`.
+- Cloudflare Pages project: `toza-site`.
+- Every merge/push to `main` reruns the complete verification suite and deploys automatically.
+- The prior `magenvip` project is not a deployment target for Toza.
+- There is no custom canonical domain yet.
+
+### 0.4 Language publication — LOCKED
+
+- English and Hebrew production trees are live.
+- Russian remains unpublished and redirected until a complete approved mirror is ready.
+- English and Hebrew changes require structural, link, content, accessibility, and visual parity.
+- Hebrew must be genuinely RTL; it is not a mechanically mirrored afterthought.
+
+## 0A. Brand, naming, and voice
+
+### 0A.1 Brand naming — LOCKED
+
+- Brand name: **Toza**.
+- Use Latin-script `Toza` in Hebrew body copy and lockups; do not transliterate it.
+- Do not use transitional “formerly Magen” language.
+- English product names remain visible in Hebrew.
+- Lowercase `toza` is the governing wordmark expression.
+- Do not introduce `TOZA`, shields, monograms, or security clichés as the identity.
+
+### 0A.2 Working descriptor — LOCKED
+
+> Personal digital protection for your close circle.
+
+The descriptor may be refined only through an explicit recorded decision. It must not drift into enterprise cybersecurity, routine IT, counter-espionage, domestic-abuse support, wealth management, family-office, or generic privacy positioning.
+
+### 0A.3 Voice — LOCKED
+
+- Personal, discreet, controlled, authoritative, warm, precise, fast, restrained, and reliable.
+- Prefer plain, short, concrete statements.
+- Use calm confidence; do not manufacture fear.
+- Avoid military, surveillance, hacker, luxury, advocacy, or social-service language.
+- The founder narrative may use a warm first-person voice.
+- Avoid sweeping claims about “most crises,” and avoid the word `bespoke` as promotional decoration; retain **Bespoke Private Protection** only as the approved offer name.
+
+## 0B. Offer and pricing architecture
+
+### 0B.1 Entry offer — LOCKED
+
+- **Private Exposure Assessment — ₪3,500**.
+- Paid before scheduling.
+- Credited in full toward any full package begun within 14 days.
+- A private, in-person diagnostic and first phase of responsible intervention, not a sales call.
+- Delivers a brief plain-English summary of what was reviewed, what appears urgent, and what should happen next.
+- An attorney-friendly summary may be provided only with client authorization.
+
+### 0B.2 Full engagements — LOCKED
+
+- **Personal Shield — ₪14,000**: one person, one day, one primary phone, and every relevant account identified together.
+- **Inner Circle Shield — from ₪38,000**: multiple people on the client's side, coordinated by scope.
+- **Bespoke Private Protection — by arrangement**: severe, unusual, or highly complex situations.
+- “Every account” means every relevant account identified together; it is not a promise to find accounts the client does not surface.
+
+### 0B.3 Add-ons and continuity — LOCKED
+
+- Additional device: from ₪9,000.
+- Additional person: from ₪12,000.
+- Home network and router: from ₪5,000.
+- Vehicle access review: from ₪5,000.
+- Annual Shield Review: from ₪7,000 per year, only after a full package.
+- Priority Retainer: from ₪14,000 per year.
+- Any scope expansion requires client approval before work begins.
+- Home/Extended Shield and Sovereign Shield are retired and must not return.
+
+### 0B.4 Urgent and geographic pricing — LOCKED
+
+- Emergency handling within four hours in Central Israel: +₪4,200.
+- Urgent weekend or holiday handling: +₪5,800 all-in; it replaces rather than adds to the four-hour surcharge.
+- Outside Central Israel: by arrangement.
+
+## 0C. Delivery, privacy, and boundaries
+
+### 0C.1 Delivery promises — LOCKED
+
+- In person.
+- With the client present.
+- The client controls their credentials.
+- Explain meaningful changes in plain language before making them.
+- No remote control, cloud processing, retained logs, or hidden work.
+- Full-package clients receive a private dated record of work performed.
+
+### 0C.2 Initial contact — LOCKED
+
+- WhatsApp or Signal only.
+- Ask for a short, neutral first message.
+- Do not request passwords, screenshots, legal documents, intimate details, recovery codes, or detailed allegations in the first message.
+- No public intake form, CRM, chatbot, or third-party contact workflow at this stage.
+
+### 0C.3 Scope exclusions — LOCKED
+
+Toza is not:
+
+- Routine IT support or remote troubleshooting.
+- Enterprise cybersecurity.
+- Investigation of another person.
+- Forensic reconstruction.
+- Evidence collection.
+- Legal advice, legal opinion, or certification.
+- A guarantee that no exposure remains.
+- A domestic-abuse, advocacy, safety-planning, or social-service practice.
+
+Sensitive timing may require pausing or sequencing changes, but this must not reposition the business around domestic abuse or emergency support.
+
+## 0D. Content architecture and language rules
+
+### 0D.1 Core site logic — LOCKED
+
+- High-intent situation pages create problem recognition.
+- Home connects recognizable situations to the hidden digital layer, then presents active professional intervention.
+- The Private Exposure Assessment is the first commercial step.
+- Pricing is explicit.
+- Boundaries are prominent.
+- Attorneys have a dedicated referral path.
+- “Why This Is Not IT Support” remains the exact English page title.
+
+### 0D.2 Why Toza — LOCKED
+
+- `/en/why-us.html` and `/he/why-us.html` are local bilingual pages.
+- Do not restore the removed English 301 redirect.
+- The professional website remains a clearly labelled, explicit external link to `https://cyberdrtabansky.com`.
+- The page uses a warm, empathetic first-person founder note and the approved portrait.
+- Core founder logic: more than twenty years in cybersecurity; ordinary accounts, devices, permissions, and digital trails become consequential in crises; Toza provides direct, discreet, precise work before or during a crisis to restore clarity and control.
+
+### 0D.3 Hebrew — LOCKED
+
+- Home addresses the visitor in feminine singular.
+- Other pages/sections may use deliberate page-level or section-level gender choices.
+- Do not use `את/ה`, slash-heavy forms, or duplicate male/female landing pages.
+- Preserve Latin-script `Toza` and English product names with correct bidi handling.
+- Hebrew copy must sound native and intentional, not translated mechanically.
+
+### 0D.4 Content exclusions — LOCKED
+
+- Do not lead with technical detail or self-fix checklists.
+- Do not build broad SEO/local-SEO filler.
+- Do not make explicit domestic-abuse or safety-service framing a governing content theme.
+- Do not frame Toza as investigation, hacking, surveillance, cyberwar, or counter-espionage.
+- Do not hide material scope limits or pricing qualifications.
+
 
 ## 1. Business and market baseline
 
