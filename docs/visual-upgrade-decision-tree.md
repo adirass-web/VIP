@@ -295,13 +295,13 @@ The unfamiliar service category becomes credible through a clearly structured as
 
 Credentials, privacy architecture, deliverables, and experience support the method but do not substitute for it.
 
-### 3.2 Three-stage method — LOCKED IN PRINCIPLE
+### 3.2 Three-stage method — LOCKED IN PRINCIPLE AND POSITION
 
 1. **Reveal** — find the accounts, devices, permissions, services, and access paths that matter.
 2. **Intervene** — close access, change configurations, harden the environment, and make situation-specific protective changes.
 3. **Confirm** — verify what changed, identify what remains, and provide a clear record and next steps.
 
-The final public labels remain open to refinement. The method must make active intervention unmistakable and must not read as consulting only.
+The final public labels remain open to refinement. The method must make active intervention unmistakable and must not read as consulting only. It is the third Home screen, immediately after the compound exposure paths.
 
 ## 4. Desired visual experience
 
