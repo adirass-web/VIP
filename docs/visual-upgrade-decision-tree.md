@@ -397,6 +397,15 @@ Selected prototype families:
 
 Rejected for this first prototype: isolated feature/settings risks and life-pattern reconstruction as a primary chain.
 
+Consequence-label rule:
+
+- Name the endpoint of every path plainly.
+- Current prototype endpoints:
+  - Identity convergence: separate parts of your life become reachable through one identity.
+  - Trust residue: access and visibility survive after trust has ended.
+  - Personal/work crossover: personal exposure becomes business leverage.
+- Keep labels consequential but non-operational; do not reveal attack procedures.
+
 ### 5.5C Exposure-chain visual precedent — PROTOTYPE, NOT LOCKED
 
 - Trial the **method**, not the appearance, of Pentagram's Coeuraj system as a visual translation of the Attack Path model: a governed relational grammar in which rules, labels, and junctions follow explicit internal logic.
