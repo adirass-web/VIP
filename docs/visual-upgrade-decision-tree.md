@@ -381,9 +381,17 @@ Visuals should help visitors understand that ordinary public and digital life co
 - It precedes the intervention method, founder credentials, and detailed situation navigation.
 - Its job is to turn the hero headline into a credible, concrete realization rather than another marketing claim.
 
-### 5.5B Exposure-chain visual precedent — PROTOTYPE, NOT LOCKED
+### 5.5B Exposure complexity and formal model — LOCKED
 
-- Trial the **method**, not the appearance, of Pentagram's Coeuraj system: a governed relational grammar in which rules, labels, and junctions follow explicit internal logic.
+- Do not present isolated settings or single-feature risks; they trivialize the problem and imply a self-service fix.
+- The relevant problem is **compound exposure**: public online trails, identity correlation, username/password reuse, recovery paths, physical device sharing, personal email used for work, romantic or household trust, persistent sessions, and other ordinary elements combining into a consequential path.
+- Base the explanatory structure on the documented **Attack Tree / Attack Path** method: multiple AND/OR conditions combine toward a consequential exposure goal.
+- Public presentation must explain accumulation and intervention without becoming operational attack instructions.
+- Each public chain must be complex enough to justify expert assessment and specific remediation.
+
+### 5.5C Exposure-chain visual precedent — PROTOTYPE, NOT LOCKED
+
+- Trial the **method**, not the appearance, of Pentagram's Coeuraj system as a visual translation of the Attack Path model: a governed relational grammar in which rules, labels, and junctions follow explicit internal logic.
 - Adapt it more quietly for three concrete exposure chains and pair it with selected ambient photography.
 - Do not copy Coeuraj's typography, density, brackets, red/black styling, or network aesthetic.
 - The user is not yet convinced. This direction must be tested against at least one researched alternative before adoption.
