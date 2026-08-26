@@ -302,6 +302,14 @@ Credentials, privacy architecture, deliverables, and experience support the meth
 - Do not rely on unsupported authority language or tenure alone.
 - Keep the full professional site as an explicit external source rather than turning Home into a résumé.
 
+### 3.1B Founder proof format — LOCKED
+
+- Home presents exactly **three sourced proof points**.
+- Each point must link to or identify an authoritative source.
+- Follow with one sentence connecting the record to Toza's direct intervention method.
+- Keep an explicit external link to the complete professional profile.
+- Do not use an unsourced logo wall or turn Home into a career timeline.
+
 ### 3.2 Three-stage method — LOCKED IN PRINCIPLE AND POSITION
 
 1. **Map** — map the whole exposure: the accounts, devices, permissions, services, relationships, and access paths that matter.
