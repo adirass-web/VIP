@@ -297,11 +297,11 @@ Credentials, privacy architecture, deliverables, and experience support the meth
 
 ### 3.2 Three-stage method — LOCKED IN PRINCIPLE AND POSITION
 
-1. **Reveal** — find the accounts, devices, permissions, services, and access paths that matter.
-2. **Intervene** — close access, change configurations, harden the environment, and make situation-specific protective changes.
-3. **Confirm** — verify what changed, identify what remains, and provide a clear record and next steps.
+1. **Map** — map the whole exposure: the accounts, devices, permissions, services, relationships, and access paths that matter.
+2. **Close and harden** — close access, change configurations, harden the environment, and make situation-specific protective interventions.
+3. **Verify** — verify what changed, identify what remains, and provide a clear record and next steps.
 
-The final public labels remain open to refinement. The method must make active intervention unmistakable and must not read as consulting only. It is the third Home screen, immediately after the compound exposure paths.
+The public labels are locked as **Map · Close and harden · Verify**. The method must make active intervention unmistakable and must not read as consulting only. It is the third Home screen, immediately after the compound exposure paths.
 
 ## 4. Desired visual experience
 
@@ -461,7 +461,7 @@ Resolve approximately in this order because later choices depend on earlier ones
 2. Hero supporting hierarchy and exact first-screen composition; the primary headline is locked.
 3. Exact visual “reveal” treatment using selected existing assets plus permitted code-native type, rules, masks, and geometry.
 4. Proof hierarchy after the problem is introduced.
-5. Method naming and public labels.
+5. Method supporting copy and researched visual precedent; public labels are locked.
 6. Homepage section order and compression.
 7. Typography evolution.
 8. Color and contrast evolution.
