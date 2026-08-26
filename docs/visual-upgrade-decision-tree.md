@@ -295,6 +295,13 @@ The unfamiliar service category becomes credible through a clearly structured as
 
 Credentials, privacy architecture, deliverables, and experience support the method but do not substitute for it.
 
+### 3.1A Founder proof hierarchy — LOCKED
+
+- After the intervention method, the primary founder proof is a **verifiable professional record**.
+- Years of experience, Israeli cyber/research authority, and direct personal delivery are supporting evidence.
+- Do not rely on unsupported authority language or tenure alone.
+- Keep the full professional site as an explicit external source rather than turning Home into a résumé.
+
 ### 3.2 Three-stage method — LOCKED IN PRINCIPLE AND POSITION
 
 1. **Map** — map the whole exposure: the accounts, devices, permissions, services, relationships, and access paths that matter.
