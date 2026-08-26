@@ -59,6 +59,7 @@ for (const locale of ["en", "he"]) {
 const redirects = readText("_redirects");
 assert(!/^\/he\/\*/m.test(redirects), "Hebrew routes are still redirected away");
 assert(/^\/ru\/\*/m.test(redirects), "Russian publication guard was unexpectedly removed");
+assert(!/^\/en\/why-us\.html\s+/m.test(redirects), "The local English Why Toza route is still redirected away");
 
 assert(
   routes.every((route) => fileExists(`_site/he/${route}.html`)),

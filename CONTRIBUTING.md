@@ -15,6 +15,6 @@ Robust, reviewable process for this site.
 ## Current release constraints
 - EN is the only published content tree.
 - Fresh HE copy will be supplied and mirrored after EN is locked; RU follows HE.
-- `Why us` points to https://cyberdrtabansky.com.
+- `Why Toza` stays local in both languages; only its clearly labelled professional-profile link points to https://cyberdrtabansky.com.
 - There is no custom canonical domain yet; the current deployment target is the `toza-site` Cloudflare Pages project.
 - Personal Shield and Inner Circle Shield remain part of the offer architecture.
