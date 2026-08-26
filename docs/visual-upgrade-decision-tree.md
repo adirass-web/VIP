@@ -369,16 +369,12 @@ Excluded unless the user later changes the rule:
 
 Visuals should help visitors understand that ordinary public and digital life contains relationships and traces they do not normally perceive. They are explanatory and atmospheric, not decorative filler.
 
-### 5.6 Image density — OPEN
+### 5.6 Image density — LOCKED
 
-Choose among:
-
-- One signature crowd image.
-- Two or three decisive ambient images. **Current recommendation.**
-- A recurring image sequence.
-- Photography throughout most sections.
-
-Depends on external visual-reference research and Home-page narrative pacing.
+- Home uses **two or three decisive ambient images**.
+- Images create human context and deliberate pacing; they do not decorate every section.
+- The founder portrait is separate from this ambient-image allowance.
+- Exact placement and selection remain subject to external visual-reference research and user approval.
 
 ## 6. Research workstream — OPEN
 
