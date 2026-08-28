@@ -48,6 +48,9 @@ This file is the single source of truth for all durable Toza project decisions: 
 - Production host: `https://toza-site.pages.dev`.
 - Cloudflare Pages project: `toza-site`.
 - Every merge/push to `main` reruns the complete verification suite and deploys automatically.
+- Pull requests from branches in this repository use a separate Cloudflare Pages preview workflow. It runs the same verification and browser suite, then deploys to the existing `toza-site` project under the isolated branch alias `pr-<number>`.
+- The preview workflow has no `push` trigger, never deploys with `--branch main`, never creates or replaces a Pages project, and skips fork-originated pull requests because repository secrets are unavailable and must not be exposed.
+- The production workflow remains exclusively triggered by pushes to `main`; preview changes must not modify that trigger or deployment command.
 - The prior `magenvip` project is not a deployment target for Toza.
 - There is no custom canonical domain yet.
 

@@ -1,0 +1,69 @@
+name: Deploy Toza PR preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+
+permissions:
+  contents: read
+
+concurrency:
+  group: toza-pages-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    env:
+      CI: true
+      CLOUDFLARE_ACCOUNT_ID: cfd055f2f8175d13377bd64e9620ea36
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_PROJECT_NAME: toza-site
+      CF_PREVIEW_BRANCH: pr-${{ github.event.pull_request.number }}
+
+    steps:
+      - name: Checkout pull request head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify route, copy, RTL, links, and CI contracts
+        run: npm run verify:all
+
+      - name: Install Chromium for visual checks
+        run: node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell
+
+      - name: Run visual checks
+        run: npm run test:rtl-visual
+
+      - name: Deploy isolated Cloudflare Pages preview
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@4 pages deploy _site \
+            --project-name "$CF_PROJECT_NAME" \
+            --branch "$CF_PREVIEW_BRANCH" \
+            --commit-hash "${{ github.event.pull_request.head.sha }}"
+
+          preview_url="https://${CF_PREVIEW_BRANCH}.${CF_PROJECT_NAME}.pages.dev"
+          {
+            echo "### Cloudflare Pages preview"
+            echo "[$preview_url]($preview_url)"
+            echo ""
+            echo "This preview is isolated from the production branch and project URL."
+          } >> "$GITHUB_STEP_SUMMARY"

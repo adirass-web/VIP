@@ -36,4 +36,31 @@ assertIncludes(deploy, "wrangler@4", "Production deploy pinned Wrangler major");
 assert(!/pull_request:/i.test(deploy), "Production deploy must not run on pull requests");
 assert(!/wrangler@latest/i.test(deploy), "Production deploy must not use an unpinned Wrangler tag");
 
+const preview = readText(".github/workflows/preview.yml");
+assertIncludes(preview, "pull_request:", "Preview pull-request trigger");
+assert(!/^\s*push:/m.test(preview), "Preview workflow must never run from a push trigger");
+assertIncludes(
+  preview,
+  "github.event.pull_request.head.repo.full_name == github.repository",
+  "Preview same-repository guard",
+);
+assertIncludes(preview, "npm ci", "Preview dependency install");
+assertIncludes(preview, "npm run verify:all", "Preview verification suite");
+assertIncludes(
+  preview,
+  "node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell",
+  "Preview browser install",
+);
+assertIncludes(preview, "npm run test:rtl-visual", "Preview visual suite");
+assertIncludes(preview, "npx --yes wrangler@4 pages deploy _site", "Preview Wrangler deployment");
+assertIncludes(preview, 'CF_PROJECT_NAME: toza-site', "Preview project isolation");
+assertIncludes(
+  preview,
+  'CF_PREVIEW_BRANCH: pr-${{ github.event.pull_request.number }}',
+  "Preview PR-scoped branch",
+);
+assertIncludes(preview, '--branch "$CF_PREVIEW_BRANCH"', "Preview branch deployment");
+assert(!/--branch\s+["']?main\b/i.test(preview), "Preview workflow must never deploy the production branch");
+assert(!/pages\/projects[^\n]*POST|pages project create/i.test(preview), "Preview workflow must not create or replace a Pages project");
+
 console.log("CI CONTRACT VERIFIED");
