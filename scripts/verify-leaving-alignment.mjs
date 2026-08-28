@@ -1,4 +1,4 @@
-import { assertBanned, assertIncludes, sourceFor } from "./verify-utils.mjs";
+import { assert, assertBanned, assertIncludes, sourceFor } from "./verify-utils.mjs";
 
 const englishLeaving = sourceFor("en", "leaving-controlling-relationship");
 const hebrewLeaving = sourceFor("he", "leaving-controlling-relationship");
@@ -19,10 +19,9 @@ assertIncludes(
 );
 assertIncludes(hebrewLeaving, "גישה, נראות ושליטה", "Hebrew Leaving scope");
 assertIncludes(hebrewLeaving, "חשיפה דיגיטלית", "Hebrew Leaving service framing");
-assertIncludes(
-  englishHome,
-  "If you think they see more than they should, do not rush to change everything.",
-  "English home Leaving card",
+assert(
+  !englishHome.includes("If you think they see more than they should, do not rush to change everything."),
+  "Upgraded English home must not promote the retired Leaving route",
 );
 assertIncludes(
   hebrewHome,
