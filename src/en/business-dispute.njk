@@ -3,90 +3,105 @@ layout: layouts/vault.njk
 permalink: "/en/business-dispute.html"
 slug: "business-dispute"
 page_id: "business-dispute"
-title: "Business Dispute — Toza"
-description: "When business trust breaks, personal digital exposure can become commercial leverage. A private, in-person review of what your own digital life reveals. Start with a Private Exposure Assessment — ₪3,500."
-og_description: "In a founder breakup or partner dispute, the boundary between personal and commercial is thinner than it looks."
+visual_system: "evidence-ledger"
+body_class: "dossier-page"
+title: "Digital Exposure in Business or Founder Disputes | Toza"
+description: "Before a founder or business dispute moves, understand the personal digital exposure beneath your commercial position. Toza fixes what is urgent and hardens what matters."
+og_description: "Your legal and commercial position may depend on a digital one you have never examined. Understand the crossover before the dispute moves."
 canonical: "https://toza-site.pages.dev/en/business-dispute.html"
 ---
 
-<section class="hero">
-    <div class="field" id="hero-field" aria-hidden="true"></div>
-    <div class="wrap">
-        <p class="hero-kicker">Business dispute</p>
-        <h1>When business trust breaks, personal digital exposure can become commercial leverage.</h1>
-        <p class="sub">In a founder breakup, a partner dispute, or a commercial split, the boundary between your personal digital life and your negotiating position is thinner than it looks. A senior cybersecurity expert reviews what your own accounts, devices, and online trails reveal — in person, discreetly — and closes what can be closed.</p>
-        <div class="hero-cta">
-            <a class="btn" href="#contact">Book a Private Exposure Assessment — &#8362;3,500</a>
-            <a class="btn ghost" href="/en/what-happens-during-the-visit.html">How the visit works</a>
+<section class="dossier-hero situation-hero" aria-labelledby="business-title">
+    <div class="dossier-wrap dossier-hero-grid">
+        <div class="dossier-hero-copy">
+            <p class="dossier-kicker">Business or founder dispute</p>
+            <h1 id="business-title">You know your legal and commercial position. Do you know your digital one?</h1>
+            <p>In a founder breakup, partner dispute or commercial split, personal digital exposure can become commercial leverage. The boundary between your private life and your negotiating position is thinner than it appears.</p>
+            <p>Before negotiation, confrontation or broad access changes, Toza shows you where the personal and commercial paths cross, fixes what is urgent and hardens what matters. This is private protection for you, not a corporate security project.</p>
+            {% include "components/private-conversation-cta.njk" %}
         </div>
-        <p class="trust">In person · With you present · No remote access · No cloud processing · No retained logs</p>
+        <figure class="hero-portrait">
+            <img src="/assets/img/dr-tabansky-portrait-square-640.webp" width="640" height="640" loading="eager" fetchpriority="high" alt="Dr. Lior Tabansky">
+            <figcaption>Founder-delivered protection for the personal position beneath a business dispute.</figcaption>
+        </figure>
     </div>
 </section>
 
-<section class="band">
-    <div class="wrap">
-        <div class="head">
-            <span class="eyebrow">The situation</span>
-            <h2>The other side may still be able to reach in.</h2>
-            <p class="lede">A departing partner, a hostile shareholder, or the other side's advisors may know, copy, infer, or still reach personal accounts, documents, communications, devices, and online trails that overlap with the business. You may not know what is exposed, or whether old access was ever closed.</p>
+<section class="dossier-section" aria-labelledby="business-recognition-title">
+    <div class="dossier-wrap recognition-grid">
+        <div class="recognition-copy">
+            <p class="dossier-eyebrow"><span>01</span> Recognition</p>
+            <h2 id="business-recognition-title">The dispute may begin at work. The exposure often does not stay there.</h2>
+            <p>A personal email may recover a company account. One phone may hold private communications, business authentication and shared storage. Browser profiles, cloud services and old permissions may cross the same boundary. Access created during years of cooperation may no longer fit the relationship.</p>
+        </div>
+        <p class="recognition-pull">You do not need to assume hostile access to recognize that the overlap matters.</p>
+    </div>
+</section>
+
+<section class="dossier-section dossier-section--tint" aria-labelledby="crossover-title">
+    <div class="dossier-wrap">
+        <div class="single-ledger-intro">
+            <p class="dossier-eyebrow"><span>02</span> Compound exposure</p>
+            <h2 id="crossover-title">The leverage sits in the connections.</h2>
+            <p>Personal and commercial systems often look separate until one identity, device or recovery path connects them.</p>
+        </div>
+        <div class="ledger-stack">
+            {% set ledgerIndex = "01" %}
+            {% set ledgerLabel = "Personal/work crossover" %}
+            {% set ledgerConsequence = "Private exposure can affect control, confidentiality and negotiating leverage in the business dispute." %}
+            {% set ledgerItems = [
+                "A personal identity controls business recovery",
+                "The same phone authorizes private and commercial services",
+                "Shared storage and communications remain connected after alignment changes",
+                "Accounts that appear separate still depend on the same identity or recovery path",
+                "Public professional trails connect roles, relationships and personal identities"
+            ] %}
+            {% include "components/exposure-ledger.njk" %}
         </div>
     </div>
 </section>
 
-<section class="band">
-    <div class="wrap">
-        <div class="head">
-            <span class="eyebrow">What can become leverage</span>
-            <h2>The line between personal and commercial is rarely clean.</h2>
-            <p class="lede">A personal email tied to company logins, a shared drive, a phone that holds both, a recovery contact set years ago, an account a former partner still touches. In a dispute, any of that can quietly become leverage.</p>
-        </div>
-    </div>
-</section>
-
-<section class="band">
-    <div class="wrap">
-        <div class="head">
-            <span class="eyebrow">Not enterprise cyber</span>
-            <h2>This is not a corporate security project.</h2>
-            <p class="lede">It is not a corporate security audit, a SOC, or a compliance project. It is a private, personal review of your own exposure in an adversarial moment — calibrated to your situation, done in person, with you present.</p>
-        </div>
-    </div>
-</section>
-
-<section class="band onramp" id="pricing">
-    <div class="medal" id="onramp-medal" aria-hidden="true"></div>
-    <div class="wrap inner">
+<section class="dossier-section" aria-labelledby="business-timing-title">
+    <div class="dossier-wrap timing-grid">
         <div>
-            <span class="eyebrow">Start here</span>
-            <h2>Start with an assessment.</h2>
-            <p>The Private Exposure Assessment maps what matters in your situation and tells you what's most urgent and what to do next. Most individuals need Personal Shield — a full in-person reset for one person, &#8362;14,000. Severe, unusual, or highly complex situations route to Bespoke Private Protection, by arrangement after the assessment. Where you authorize it, we can coordinate with your lawyer or advisor — not forensic reconstruction, evidence collection, or legal advice.</p>
+            <p class="dossier-eyebrow"><span>03</span> Timing</p>
+            <h2 id="business-timing-title">Do not negotiate from a position you have never examined.</h2>
         </div>
-        <div class="card">
-            <span class="lab">Private Exposure Assessment</span>
-            <div class="amt">&#8362;3,500</div>
-            <p class="credit">Credited in full toward any full package within 14 days.</p>
-            <a class="btn" href="#contact">Book the assessment</a>
-            <a class="all" href="/en/pricing.html">See pricing &rarr;</a>
+        <div class="timing-copy">
+            <p>Changing one password or removing one visible permission rarely resolves the whole path. Acting without the full picture can lock you out, disrupt legitimate business access or leave the consequential exposure untouched.</p>
+            <p>The responsible sequence is to understand your own environment, contain anything urgent and then harden it methodically.</p>
         </div>
     </div>
 </section>
 
-<section class="band">
-    <div class="wrap cred">
-        <div class="cred-lead">
-            <span class="eyebrow">What this is not</span>
-            <h2>Clear boundaries.</h2>
-            <p>We do not investigate the other side, reconstruct what happened, collect evidence, or guarantee that no exposure remains. We reduce your own exposure.</p>
+<section class="dossier-section dossier-section--tint situation-method" aria-labelledby="business-method-title">
+    <div class="dossier-wrap">
+        <p class="dossier-eyebrow"><span>04</span> The intervention</p>
+        <h2 id="business-method-title">First understand it. Then close it methodically.</h2>
+        <p class="situation-method-intro">The Private Exposure Assessment is the first intervention. I map the exposure across one phone, one computer and the personal and commercial identities and apps that connect them. I diagnose what matters and close urgent paths that I can safely address.</p>
+        <div class="method-rows">
+            <article class="method-row"><span>01</span><h3>Map</h3><p>I reconstruct how personal identities, devices, business access, shared storage and recovery paths connect.</p></article>
+            <article class="method-row"><span>02</span><h3>Close and harden</h3><p>I harden the devices, identities and apps, configure two security keys, replace risky core accounts where necessary, and move essential identity, recovery and critical services.</p></article>
+            <article class="method-row"><span>03</span><h3>Verify</h3><p>I test every completed change, train you and finish the hardening checklist and private dated record.</p></article>
         </div>
-        <p class="faq-more"><a href="/en/faq.html#boundaries">See the boundaries &rarr;</a></p>
+        <p class="situation-method-close">Personal Shield completes the intervention. A typical engagement requires one or two working days, depending on the volume of data and apps, the complexity of the account relationships and the threat model.</p>
     </div>
 </section>
 
-<section class="band faq">
-    <div class="wrap">
-        <div class="head"><span class="eyebrow">Questions</span></div>
-        <details open><summary>Is this corporate cybersecurity?</summary><p>No — it's a private review of your own personal exposure where it overlaps with the dispute, not a company security project.</p></details>
-        <details><summary>Can you check whether my ex-partner still has access?</summary><p>We review your own accounts and access and close what can be closed; we don't investigate them.</p></details>
-        <details><summary>Can my lawyer be involved?</summary><p>Yes, with your permission — including a plain-English summary of the work performed.</p></details>
+{% set founderIndex = "05" %}
+{% include "components/founder-proof.njk" %}
+
+{% set assessmentContext = "business" %}
+{% set assessmentIndex = "06" %}
+{% include "components/assessment-offer.njk" %}
+
+<section class="final-conversion" aria-labelledby="business-final-title">
+    <div class="dossier-wrap">
+        <div>
+            <p class="dossier-eyebrow"><span>07</span> Before the dispute moves</p>
+            <h2 id="business-final-title">Understand the position others may already see.</h2>
+            <p>Contact Toza through WhatsApp or Signal with a short, neutral first message.</p>
+        </div>
+        {% include "components/private-conversation-cta.njk" %}
     </div>
 </section>

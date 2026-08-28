@@ -1,0 +1,60 @@
+<section class="dossier-section assessment-offer" id="assessment" aria-labelledby="assessment-title">
+    <div class="dossier-wrap">
+        <p class="dossier-eyebrow"><span>{{ assessmentIndex or '06' }}</span> Start here</p>
+        {% if assessmentContext == "home" %}
+        <header class="assessment-heading">
+            <div>
+                <p class="assessment-name">Private Exposure Assessment</p>
+                <h2 id="assessment-title">A serious first intervention.</h2>
+            </div>
+            <p class="assessment-price"><bdi dir="ltr">₪3,500</bdi></p>
+        </header>
+        <div class="assessment-body">
+            <p>The ₪3,500 Private Exposure Assessment begins the intervention. I examine one phone, one computer, the core identities and the relevant apps in the context of the threat you face. I map the exposure, diagnose what matters and close urgent paths that I can safely address during the assessment.</p>
+            <p>I explain every material change before I make it. I complete the assessment when the intake, diagnosis and approved urgent first aid are complete.</p>
+            <p class="assessment-emphasis">You do not leave with more worry. You leave knowing what I found, what I fixed, what remains and how I will complete the hardening.</p>
+            <p>You pay the ₪3,500 fee before scheduling. Begin Personal Shield within 14 days and the full assessment fee counts toward it.</p>
+        </div>
+        <div class="before-after" aria-label="What changes after the assessment">
+            <div><span>Before</span><p>You know something may be wrong, but not where the exposure begins or ends.</p></div>
+            <div><span>After</span><p>I have mapped the exposure, completed urgent first aid and made the next move clear.</p></div>
+        </div>
+        <aside class="urgent-note">
+            <p class="urgent-label">If it cannot wait</p>
+            <p>In-person response within four hours in Central Israel may be available. Weekend and holiday surcharge applies. <a href="/en/pricing.html">See exact urgent pricing.</a></p>
+        </aside>
+        <div class="visit-overview">
+            <p class="dossier-eyebrow"><span aria-hidden="true">→</span> What happens during the visit</p>
+            <h3>Bring me the problem.</h3>
+            <p>I reconstruct your digital position across the phone, computer, identities, apps, recovery paths and shared access. I close urgent paths during the assessment. Personal Shield then completes the intervention: I rebuild risky accounts, harden devices and identities, configure two security keys, move critical services, train you and verify the result. You do not leave with the same weak foundations hidden behind new passwords.</p>
+            <nav class="assessment-links" aria-label="Assessment details">
+                <a href="/en/what-happens-during-the-visit.html">See what happens during the visit</a>
+                <a href="/en/faq.html">Questions about credentials, authorization, privacy and scope</a>
+            </nav>
+        </div>
+        {% elif assessmentContext == "separation" %}
+        <header class="assessment-heading assessment-heading--situation">
+            <h2 id="assessment-title">Act before the digital overlap starts controlling what happens next.</h2>
+            <p class="assessment-price"><bdi dir="ltr">₪3,500</bdi></p>
+        </header>
+        <div class="assessment-body assessment-body--situation">
+            <p>For ₪3,500, I complete the intake, diagnosis and approved urgent first aid for one phone and one computer. I give you a brief plain-English summary whether or not you continue.</p>
+            <p>Begin Personal Shield within 14 days and the full assessment fee counts toward it.</p>
+            <p>You keep control of your credentials. Toza works only within your authorized digital environment. It does not investigate another person, reconstruct the past, collect evidence or provide legal advice.</p>
+        </div>
+        <p class="assessment-detail-link"><a href="/en/private-exposure-assessment.html">See the Private Exposure Assessment in detail</a></p>
+        {% else %}
+        <header class="assessment-heading assessment-heading--situation">
+            <h2 id="assessment-title">Establish your digital position.</h2>
+            <p class="assessment-price"><bdi dir="ltr">₪3,500</bdi></p>
+        </header>
+        <div class="assessment-body assessment-body--situation">
+            <p>For ₪3,500, I complete the intake, diagnosis and approved urgent first aid for one phone and one computer. I give you a brief plain-English summary whether or not you continue.</p>
+            <p>Begin Personal Shield within 14 days and the full assessment fee counts toward it.</p>
+            <p>Toza works only within your authorized digital environment. It is not enterprise cybersecurity, investigation, evidence collection, forensic reconstruction or legal advice. Coordination with your attorney or authorized adviser occurs only with your permission.</p>
+        </div>
+        <p class="assessment-detail-link"><a href="/en/private-exposure-assessment.html">See the Private Exposure Assessment in detail</a></p>
+        {% endif %}
+        {% include "components/private-conversation-cta.njk" %}
+    </div>
+</section>

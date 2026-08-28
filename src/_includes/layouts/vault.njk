@@ -31,11 +31,16 @@
 
     <title>{{ title }}</title>
 
+    {% if visual_system == "evidence-ledger" %}
+    <link rel="preload" href="../assets/fonts/david-libre-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+    {% else %}
     <link rel="preload" href="../assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+    {% endif %}
     <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/vault.css">
+    {% if visual_system == "evidence-ledger" %}<link rel="stylesheet" href="../assets/css/dossier.css">{% endif %}
 
     {% include "schema-org.njk" %}
 </head>
@@ -46,6 +51,7 @@
     <header class="site-header">
         <div class="wrap nav">
             <a class="brand" href="/{{ locale }}/" aria-label="Toza — {{ t.nav_home or 'Home' }}">
+                {% if visual_system != "evidence-ledger" %}
                 <svg class="mark seal" viewBox="0 0 100 100" aria-hidden="true">
                     <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
                     <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
@@ -56,7 +62,8 @@
                         <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
                     </g>
                 </svg>
-                <span class="name" dir="ltr">Toza</span>
+                {% endif %}
+                <span class="name" dir="ltr">{% if visual_system == "evidence-ledger" %}toza{% else %}Toza{% endif %}</span>
             </a>
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
             <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
@@ -65,7 +72,7 @@
                 <a href="/{{ locale }}/what-happens-during-the-visit.html">{{ t.nav_what_happens or 'What happens' }}</a>
                 <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
                 <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
-                <a class="btn" href="#contact">{{ t.cta_speak or 'Book an assessment' }}</a>
+                <a class="btn" href="#contact">{% if visual_system == "evidence-ledger" %}Request a private conversation{% else %}{{ t.cta_speak or 'Book an assessment' }}{% endif %}</a>
             </nav>
         </div>
     </header>
@@ -77,7 +84,7 @@
     <footer class="site-footer">
         <section class="foot-contact" id="contact">
             <div class="wrap">
-                <div class="seal-lg">
+                {% if visual_system != "evidence-ledger" %}<div class="seal-lg">
                     <svg class="seal" width="56" height="56" viewBox="0 0 100 100" aria-hidden="true">
                         <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
                         <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
@@ -88,20 +95,22 @@
                             <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
                         </g>
                     </svg>
-                </div>
-                <span class="eyebrow" style="justify-content:center">{{ t.footer_eyebrow or 'Confidential' }}</span>
-                <h2>{{ t.footer_cta_h2 or 'Personal digital protection for your close circle.' }}</h2>
-                <p class="sub">{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}</p>
+                </div>{% endif %}
+                <span class="eyebrow" style="justify-content:center">{% if visual_system == "evidence-ledger" %}Private and confidential{% else %}{{ t.footer_eyebrow or 'Confidential' }}{% endif %}</span>
+                <h2>{% if visual_system == "evidence-ledger" %}Request a private conversation.{% else %}{{ t.footer_cta_h2 or 'Personal digital protection for your close circle.' }}{% endif %}</h2>
+                <p class="sub">{% if visual_system == "evidence-ledger" %}Begin with a short, neutral message. I handle your inquiry personally.{% else %}{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}{% endif %}</p>
                 <nav class="foot-cta" aria-label="{{ t.footer_cta_nav_label or 'Direct messaging options' }}">
                     <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">{{ t.wa_label or 'WhatsApp' }}</a>
                     <a class="btn ghost" href="{{ t.signal_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">{{ t.signal_label or 'Signal' }}</a>
                 </nav>
+                {% if visual_system == "evidence-ledger" %}<p class="contact-guidance">Do not send passwords, recovery codes, screenshots, legal documents, intimate details or detailed allegations in the first message.</p>{% endif %}
             </div>
         </section>
 
         <div class="foot-bar">
             <div class="wrap foot-bar-inner">
                 <div class="foot-brand">
+                    {% if visual_system != "evidence-ledger" %}
                     <svg class="mark seal" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
                         <circle cx="50" cy="50" r="46" fill="none" stroke-width="3"/>
                         <g fill="none" transform="translate(50 51) scale(.58) translate(-50 -55)">
@@ -111,7 +120,8 @@
                             <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="7"/>
                         </g>
                     </svg>
-                    <span class="fb-name"><bdi dir="ltr">Toza</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
+                    {% endif %}
+                    <span class="fb-name"><bdi dir="ltr">{% if visual_system == "evidence-ledger" %}toza{% else %}Toza{% endif %}</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
                 </div>
                 <nav class="foot-col" aria-label="{{ t.footer_explore or 'Explore' }}">
                     <h3>{{ t.footer_explore or 'Explore' }}</h3>
@@ -129,7 +139,7 @@
                 </nav>
             </div>
             <div class="wrap foot-meta">
-                <span>{{ t.trust_line or 'In person only · No remote access · No cloud · No logs · No app' }}</span>
+                <span>{% if visual_system == "evidence-ledger" %}In person · With you present · No remote access · No cloud processing{% else %}{{ t.trust_line or 'In person only · No remote access · No cloud · No logs · No app' }}{% endif %}</span>
                 <span>{{ t.footer_copyright or '© 2026 Toza' }}</span>
             </div>
         </div>
@@ -151,7 +161,7 @@
       }
     })();
     </script>
-    <script src="../assets/js/guilloche.js" defer></script>
+    {% if visual_system != "evidence-ledger" %}<script src="../assets/js/guilloche.js" defer></script>{% endif %}
 
 </body>
 </html>
