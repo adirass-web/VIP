@@ -164,20 +164,23 @@
     {% if visual_system != "controlled-clarity" %}<script src="../assets/js/guilloche.js" defer></script>{% endif %}
     {% if visual_system == "controlled-clarity" and page_id == "index" %}
     <script>
-    /* Controlled Clarity (Home): whole-field background transitions.
-       The field colour lives on the page body and animates as the dominant
-       section changes (DSDHA device, Direction A palette). Colour only —
-       never text, never layout. Static under prefers-reduced-motion. */
+    /* Controlled Clarity (Home): whole-field background transitions +
+       Emergence dimming on ambient photography (when licensed slots render).
+       Colour only — never text, never layout. Static under reduced motion. */
     (function(){
       if(!window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
       var fields=document.querySelectorAll('[data-field]');
-      if(!('IntersectionObserver' in window)||!fields.length){return;}
+      var dimmables=document.querySelectorAll('.ambient-photo[data-dimmable]');
+      if(dimmables.length){document.body.classList.add('js-dim');}
+      if(!('IntersectionObserver' in window)||(!fields.length&&!dimmables.length)){return;}
       var observer=new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
-          if(entry.isIntersecting){document.body.dataset.activeField=entry.target.dataset.field;}
+          if(entry.target.hasAttribute('data-field')&&entry.isIntersecting){document.body.dataset.activeField=entry.target.dataset.field;}
+          if(entry.target.hasAttribute('data-dimmable')){entry.target.classList.toggle('is-inview',entry.isIntersecting);}
         });
       },{rootMargin:'-40% 0px -40% 0px',threshold:0});
       fields.forEach(function(el){observer.observe(el);});
+      dimmables.forEach(function(el){observer.observe(el);});
     })();
     </script>
     {% endif %}
