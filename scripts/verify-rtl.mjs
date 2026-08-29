@@ -35,6 +35,15 @@ assertBanned(
   "Shared stylesheet directional declarations",
 );
 
+const clarityCss = readText("assets/css/clarity.css");
+assertIncludes(clarityCss, "inset-inline-start", "Clarity RTL logical placement");
+assertIncludes(clarityCss, "border-inline-start", "Clarity RTL logical borders");
+assertBanned(
+  /(?:margin|padding|border)-(?:left|right)\s*:|(?:^|[;{])\s*(?:left|right)\s*:|text-align\s*:\s*(?:left|right)/m,
+  clarityCss,
+  "Clarity stylesheet directional declarations",
+);
+
 for (const route of routes) {
   const source = sourceFor("he", route);
   assert(source.includes('class="bidi-ltr"'), `he/${route}: mixed-direction values must use .bidi-ltr`);

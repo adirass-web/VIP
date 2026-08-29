@@ -3,93 +3,106 @@ layout: layouts/vault.njk
 permalink: "/en/separation-divorce.html"
 slug: "separation-divorce"
 page_id: "separation-divorce"
-title: "Separation & Divorce — Toza"
-description: "Before a divorce or separation escalates, review what your digital life may expose — in person, discreetly, with you present. Start with a Private Exposure Assessment — ₪3,500."
-og_description: "When a relationship turns adversarial, the most damaging exposure rarely looks like a hack. Review what your digital life may expose."
+visual_system: "controlled-clarity"
+body_class: "clarity-page"
+title: "Digital Exposure During Separation or Divorce | Toza"
+description: "Before separation or divorce moves, understand what your shared digital life still reveals. Toza finds the exposure, fixes what is urgent and hardens what matters."
+og_description: "A relationship can change in a day. Digital overlap rarely disappears with it. Understand what remains before you act."
 canonical: "https://toza-site.pages.dev/en/separation-divorce.html"
 ---
 
-<section class="hero">
-    <div class="field" id="hero-field" aria-hidden="true"></div>
-    <div class="wrap">
-        <p class="hero-kicker">Separation &amp; divorce</p>
-        <h1>Before divorce or separation escalates, review what your digital life may expose.</h1>
-        <p class="sub">When a relationship turns adversarial, the most damaging exposure rarely looks like a hack. It comes from the accounts, devices, apps, and online trails that two lives quietly shared. A senior cybersecurity expert helps you understand and reduce that exposure — in person, with you present — so you don't guess your way through it.</p>
-        <div class="hero-cta">
-            <a class="btn" href="#contact">Book a Private Exposure Assessment — &#8362;3,500</a>
-            <a class="btn ghost" href="/en/what-happens-during-the-visit.html">How the visit works</a>
+<section class="clarity-hero situation-hero" aria-labelledby="separation-title">
+    <div class="clarity-wrap clarity-hero-grid">
+        <div class="clarity-hero-copy">
+            <p class="clarity-kicker">Separation or divorce</p>
+            <h1 id="separation-title">Before separation or divorce moves, understand what your shared digital life still reveals.</h1>
+            <p>You built a life together. Your digital lives joined too.</p>
+            <p>Devices were shared. Accounts became connected. Recovery methods, cloud storage, permissions and everyday access accumulated quietly over years. The relationship can change in a day. That digital overlap rarely disappears with it.</p>
+            <p>Before confrontation, negotiation or broad account changes, Toza shows you what remains, fixes what is urgent and hardens what matters. Private, in person and with you present.</p>
+            {% include "components/private-conversation-cta.njk" %}
         </div>
-        <p class="trust">In person · With you present · No remote access · No cloud processing · No retained logs</p>
+        <figure class="hero-portrait">
+            <img src="/assets/img/dr-tabansky-portrait-square-640.webp" width="640" height="640" loading="eager" fetchpriority="high" alt="Dr. Lior Tabansky">
+            <figcaption>One senior expert, from the first assessment through full hardening.</figcaption>
+        </figure>
     </div>
 </section>
 
-<section class="band">
-    <div class="wrap">
-        <div class="head">
-            <span class="eyebrow">The situation</span>
-            <h2>You may not know what's exposed — or how.</h2>
-            <p class="lede">You may not know whether the other side can see, track, infer, or access private parts of your digital life — or whether they already have. You may suspect something but not know where to look, or fear that one wrong change will make things worse. That uncertainty, in the middle of a separation, is its own kind of pressure.</p>
+<section class="clarity-section" aria-labelledby="recognition-title">
+    <div class="clarity-wrap recognition-grid">
+        <div class="recognition-copy">
+            <p class="clarity-eyebrow"><span>01</span> Recognition</p>
+            <h2 id="recognition-title">The uncertainty is part of the pressure.</h2>
+            <p>You may suspect that something private is visible without knowing where it comes from. You may have changed passwords and still feel exposed. You may worry that one wrong move will alter the situation before you understand it.</p>
+        </div>
+        <p class="recognition-pull">That uncertainty, in the middle of a separation, is its own kind of pressure.</p>
+    </div>
+</section>
+
+<section class="clarity-section" data-field="mist" aria-labelledby="trust-title">
+    <div class="clarity-wrap">
+        <div class="single-ledger-intro">
+            <p class="clarity-eyebrow"><span>02</span> Compound exposure</p>
+            <h2 id="trust-title">Trust can end before access does.</h2>
+            <p>The serious exposure is rarely one setting. It is the combination.</p>
+        </div>
+        <div class="ledger-stack">
+            {% set ledgerIndex = "01" %}
+            {% set ledgerLabel = "Trust residue" %}
+            {% set ledgerConsequence = "Access and visibility can survive after trust has changed." %}
+            {% set ledgerItems = [
+                "A device once shared in good faith still carries a session or trusted status",
+                "A family or cloud service still connects accounts and information",
+                "A recovery role or contact remains connected to a core identity",
+                "Reused identifiers or credentials connect accounts that appear separate",
+                "Years of ordinary trails make the remaining access more consequential"
+            ] %}
+            {% include "components/exposure-ledger.njk" %}
         </div>
     </div>
 </section>
 
-<section class="band">
-    <div class="wrap">
-        <div class="head">
-            <span class="eyebrow">What can become leverage</span>
-            <h2>Ordinary access, quietly turned against you.</h2>
-            <p class="lede">In a separation, ordinary access can quietly become leverage: shared accounts and devices, family plans, cloud folders, location sharing, recovery settings, and the online trails of an ordinary life. You may not know whether what the other side seems to know came from hacking, ordinary access, a setting, an app, or a trail — and that is exactly the point.</p>
-        </div>
-    </div>
-</section>
-
-<section class="band">
-    <div class="wrap">
-        <div class="head">
-            <span class="eyebrow">Why guessing is risky</span>
-            <h2>Changing a few passwords is not cyber protection.</h2>
-            <p class="lede">One visible problem rarely tells you the full picture, and a partial or mistimed fix can leave real exposure in place — or, in a contested separation, escalate things. This is interpretation under pressure, not a checklist.</p>
-        </div>
-    </div>
-</section>
-
-<section class="band onramp" id="pricing">
-    <div class="medal" id="onramp-medal" aria-hidden="true"></div>
-    <div class="wrap inner">
+<section class="clarity-section" aria-labelledby="timing-title">
+    <div class="clarity-wrap timing-grid">
         <div>
-            <span class="eyebrow">Start here</span>
-            <h2>Start with an assessment.</h2>
-            <p>A private, in-person diagnostic that maps what matters in your situation and tells you what's most urgent and what to do next. If a full reset is needed, Personal Shield is the full in-person reset — one person, one day, one primary phone, every account identified together (every account we identify together as relevant to your exposure — not a promise to find accounts you don't surface). More people or complexity are scoped after the assessment.</p>
+            <p class="clarity-eyebrow"><span>03</span> Timing</p>
+            <h2 id="timing-title">Do not guess your way through it.</h2>
         </div>
-        <div class="card">
-            <span class="lab">Private Exposure Assessment</span>
-            <div class="amt">&#8362;3,500</div>
-            <p class="credit">Credited in full toward any full package within 14 days.</p>
-            <a class="btn" href="#contact">Book the assessment</a>
-            <a class="all" href="/en/pricing.html">See pricing &rarr;</a>
+        <div class="timing-copy">
+            <p>Changing everything at once can leave the real path untouched, lock you out or make a consequential change visible before you understand its effect.</p>
+            <p>This is interpretation under pressure, not a checklist. It does not require assuming that another person acted improperly. It requires understanding your own position before you act.</p>
         </div>
     </div>
 </section>
 
-<section class="band">
-    <div class="wrap cred">
-        <div class="cred-lead">
-            <span class="eyebrow">For your attorney &amp; the boundaries</span>
-            <h2>What you receive — and what this is not.</h2>
-            <p>Where you authorize it, you can receive a plain-English, attorney-friendly summary of the work performed. It is not a forensic report, legal evidence, or legal advice — and we coordinate with your counsel only with your permission. We do not investigate your spouse, reconstruct the past, collect material for legal proceedings, or guarantee that no exposure remains.</p>
+<section class="clarity-section situation-method" data-field="sand" aria-labelledby="separation-method-title">
+    <div class="clarity-wrap">
+        <p class="clarity-eyebrow"><span>04</span> The intervention</p>
+        <h2 id="separation-method-title">First understand it. Then close it methodically.</h2>
+        <p class="situation-method-intro">The Private Exposure Assessment is the first intervention. I map the exposure across one phone, one computer and the identities and apps that connect them. I diagnose what matters and close urgent paths that I can safely address.</p>
+        <div class="method-rows">
+            <article class="method-row"><span>01</span><h3>Map</h3><p>I reconstruct the household overlap across devices, identities, apps, shared services and recovery paths.</p></article>
+            <article class="method-row"><span>02</span><h3>Close and harden</h3><p>I harden the devices, identities and apps, configure two security keys, replace risky core accounts where necessary, and move essential access and recovery.</p></article>
+            <article class="method-row"><span>03</span><h3>Verify</h3><p>I test every completed change, train you and finish the hardening checklist and private dated record.</p></article>
         </div>
-        <ul class="cred-list">
-            <li><b>How to make contact:</b> WhatsApp or Signal — a short, neutral message only. Please don't send passwords, screenshots, legal documents, or detailed allegations in that first message.</li>
-        </ul>
-        <p class="faq-more"><a href="/en/faq.html#boundaries">See the boundaries &rarr;</a></p>
+        <p class="situation-method-close">Personal Shield completes the intervention. A typical engagement requires one or two working days, depending on the volume of data and apps, the complexity of the account relationships and the threat model.</p>
     </div>
 </section>
 
-<section class="band faq">
-    <div class="wrap">
-        <div class="head"><span class="eyebrow">Questions</span></div>
-        <details open><summary>Can you tell if my spouse is reading my messages?</summary><p>We review where you may be exposed and reduce it — we don't investigate or surveil another person.</p></details>
-        <details><summary>Will the other side know I made changes?</summary><p>In a contested separation, timing matters; we plan changes with you rather than rushing them.</p></details>
-        <details><summary>Can I get something for my lawyer?</summary><p>Yes, if you authorize it — a plain-English summary of the work performed, not legal evidence.</p></details>
+{% set founderIndex = "05" %}
+{% include "components/founder-proof.njk" %}
+
+{% set assessmentContext = "separation" %}
+{% set assessmentIndex = "06" %}
+{% include "components/assessment-offer.njk" %}
+
+<section class="final-conversion" aria-labelledby="separation-final-title">
+    <div class="clarity-wrap">
+        <div>
+            <p class="clarity-eyebrow"><span>07</span> Before you make a move</p>
+            <h2 id="separation-final-title">Know what remains.</h2>
+            <p>Contact Toza through WhatsApp or Signal with a short, neutral first message.</p>
+        </div>
+        {% include "components/private-conversation-cta.njk" %}
     </div>
 </section>

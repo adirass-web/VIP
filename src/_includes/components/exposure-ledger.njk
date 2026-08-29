@@ -1,0 +1,15 @@
+<article class="exposure-ledger" aria-labelledby="ledger-{{ ledgerIndex }}-title">
+    <header class="ledger-header">
+        <span class="ledger-index" aria-hidden="true">{{ ledgerIndex }}</span>
+        <p class="ledger-family">{{ ledgerLabel }}</p>
+        <h3 id="ledger-{{ ledgerIndex }}-title">{{ ledgerConsequence }}</h3>
+    </header>
+    <div class="ledger-path">
+        <ol class="ledger-inputs">
+            {% for item in ledgerItems %}
+            <li><span>{{ item }}</span></li>
+            {% endfor %}
+        </ol>
+        <p class="ledger-result"><span>Consequence</span><strong>{{ ledgerConsequence }}</strong></p>
+    </div>
+</article>

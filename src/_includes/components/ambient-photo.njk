@@ -1,0 +1,14 @@
+{#
+  Ambient photography slot — Emergence dimming signature.
+  Renders ONLY when ambientSrc is set (licensed asset in /assets/img/).
+  Licensing gate (WP10): provenance, AI status, advertising use, releases,
+  territory, duration and crop rights confirmed in writing before any src
+  is wired. No AI-generated imagery, ever. Decorative; never carries text.
+  Params: ambientSrc, ambientAlt (empty string — decorative), ambientCaption (optional)
+#}
+{% if ambientSrc %}
+<figure class="ambient-photo" data-dimmable>
+    <img src="{{ ambientSrc }}" alt="{{ ambientAlt or '' }}" loading="lazy" decoding="async">
+    {% if ambientCaption %}<figcaption>{{ ambientCaption }}</figcaption>{% endif %}
+</figure>
+{% endif %}
