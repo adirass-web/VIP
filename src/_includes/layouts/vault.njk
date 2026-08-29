@@ -82,7 +82,7 @@
     </main>
 
     <footer class="site-footer">
-        <section class="foot-contact" id="contact">
+        <section class="foot-contact" id="contact"{% if visual_system == "controlled-clarity" %} data-field="mist"{% endif %}>
             <div class="wrap">
                 {% if visual_system != "controlled-clarity" %}<div class="seal-lg">
                     <svg class="seal" width="56" height="56" viewBox="0 0 100 100" aria-hidden="true">
@@ -164,23 +164,20 @@
     {% if visual_system != "controlled-clarity" %}<script src="../assets/js/guilloche.js" defer></script>{% endif %}
     {% if visual_system == "controlled-clarity" and page_id == "index" %}
     <script>
-    /* Controlled Clarity (Home): scroll-driven field transitions + dimming motif.
-       Colour only — never text, never layout. Disabled under prefers-reduced-motion. */
+    /* Controlled Clarity (Home): whole-field background transitions.
+       The field colour lives on the page body and animates as the dominant
+       section changes (DSDHA device, Direction A palette). Colour only —
+       never text, never layout. Static under prefers-reduced-motion. */
     (function(){
       if(!window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
-      var body=document.body;
-      body.classList.add('js-fields');
-      var targets=document.querySelectorAll('[data-field],[data-dimmable]');
-      if(!('IntersectionObserver' in window)||!targets.length){
-        targets.forEach(function(el){el.classList.add('is-inview');});
-        return;
-      }
+      var fields=document.querySelectorAll('[data-field]');
+      if(!('IntersectionObserver' in window)||!fields.length){return;}
       var observer=new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
-          entry.target.classList.toggle('is-inview',entry.isIntersecting);
+          if(entry.isIntersecting){document.body.dataset.activeField=entry.target.dataset.field;}
         });
-      },{rootMargin:'-18% 0px -18% 0px',threshold:0});
-      targets.forEach(function(el){observer.observe(el);});
+      },{rootMargin:'-40% 0px -40% 0px',threshold:0});
+      fields.forEach(function(el){observer.observe(el);});
     })();
     </script>
     {% endif %}
