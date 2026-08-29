@@ -54,7 +54,15 @@ for (const family of ["Identity convergence", "Trust residue", "Personal/work cr
   assertIncludes(home, family, `Home compound exposure: ${family}`);
 }
 assert(!home.includes("devices-test"), "Home: devices-test prototypes rejected at Gate 2");
-assert(!home.includes('class="ambient-photo"'), "Home: ambient slot inert until licensed imagery is wired (WP10)");
+const ambientFigures = countMatches(home, /<figure class="ambient-photo"/g);
+const credits = readText("assets/img/CREDITS.md");
+for (const m of home.matchAll(/<figure class="ambient-photo"[\s\S]*?<img src="([^"]+)"/g)) {
+  const src = m[1];
+  assert(src.startsWith("/assets/img/"), "Ambient image must be a local licensed asset, got " + src);
+  const fileName = src.split("/").pop();
+  assert(credits.includes(fileName), "Ambient image " + fileName + " must be credited/licensed in assets/img/CREDITS.md");
+}
+assert(ambientFigures <= 3, "Home carries at most 3 ambient images (spec cap)");
 assertIncludes(home, 'data-field="mist"', "Home: exposure section mapped to mist field");
 assertIncludes(home, 'data-field="sand"', "Home: method section mapped to sand field");
 assertIncludes(home, 'data-field="pebble"', "Home: final conversion mapped to pebble field");
