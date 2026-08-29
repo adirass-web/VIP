@@ -1,3 +1,5 @@
+> SUPERSEDED 2026-08-29: Evidence Ledger visual system replaced by Controlled Clarity per decision-register addendum; this document retained for its copy/component architecture.
+
 # Toza Evidence Ledger: Production Implementation Specification
 
 Status: **APPROVED FOR PHASE-ONE IMPLEMENTATION — 2026-08-28**
