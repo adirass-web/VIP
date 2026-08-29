@@ -54,7 +54,7 @@ for (const family of ["Identity convergence", "Trust residue", "Personal/work cr
   assertIncludes(home, family, `Home compound exposure: ${family}`);
 }
 assert(!home.includes("devices-test"), "Home: devices-test prototypes rejected at Gate 2");
-assert(!home.includes("data-dimmable"), "Home: ambient dimming stand-in removed; dimming deferred to licensed photography");
+assert(!home.includes('class="ambient-photo"'), "Home: ambient slot inert until licensed imagery is wired (WP10)");
 assertIncludes(home, 'data-field="mist"', "Home: exposure section mapped to mist field");
 assertIncludes(home, 'data-field="sand"', "Home: method section mapped to sand field");
 assertIncludes(home, 'data-field="pebble"', "Home: final conversion mapped to pebble field");
@@ -81,8 +81,12 @@ assert(
   /@media\s*\(prefers-reduced-motion\s*:\s*reduce\)/.test(clarityCss),
   "Clarity stylesheet must include a prefers-reduced-motion block",
 );
-assert(!/data-dimmable|ambient-field/.test(clarityCss),
-  "Dimming stand-in selectors must be removed from clarity.css",
+assert(!/ambient-field/.test(clarityCss),
+  "Tonal stand-in selectors must stay removed from clarity.css",
+);
+assert(/\.ambient-photo img/.test(clarityCss), "Ambient photo slot styles present for licensed imagery");
+assert(!/data-dimmable[^\n{]*\b(h1|h2|h3|hero-portrait)\b/.test(clarityCss),
+  "Dimming must never target headings or the founder portrait",
 );
 
 console.log("CLARITY BUILD VERIFIED");
