@@ -8,7 +8,7 @@ for (const script of [
   "verify:rtl",
   "verify:he-links",
   "verify:ci-contract",
-  "verify:dossier",
+  "verify:clarity",
   "verify:all",
   "test:rtl-visual",
 ]) {
