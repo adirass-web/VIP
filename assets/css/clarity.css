@@ -48,7 +48,7 @@
 .clarity-wrap{width:calc(100% - 40px);max-width:1200px;margin-inline:auto}
 
 /* Whole-field sections: transparent; the page body carries the field colour. */
-.clarity-section{padding-block:clamp(4rem,8vw,8rem)}
+.clarity-section{padding-block:clamp(3.25rem,6.5vw,6.5rem)}
 /* Whole-field mapping (DSDHA device, Direction A): sections are transparent;
    the page background itself carries the field colour. JS sets
    data-active-field from the dominant section; chalk is the no-JS /
@@ -107,7 +107,7 @@
 .clarity-page .nav-toggle{border-color:var(--line-strong);border-radius:2px;color:var(--ink);font:600 .78rem var(--font-body)}
 
 /* Hero */
-.clarity-hero{padding-block:clamp(3.5rem,8vw,7rem)}
+.clarity-hero{padding-block:clamp(3.5rem,7vw,6rem) clamp(2rem,4vw,3.5rem)}
 .clarity-hero-grid{display:grid;gap:clamp(2.5rem,6vw,6rem);align-items:end}
 .clarity-hero-copy{min-width:0}
 .clarity-kicker{
@@ -128,7 +128,7 @@
 .hero-portrait figcaption{padding-block-start:.65rem;color:var(--ink-muted);font-size:.75rem}
 
 /* Exposure ledgers — plain ruled rows; no junction marks or connectors. */
-.exposure-intro-grid{display:grid;gap:2.5rem;margin-block-end:clamp(3rem,6vw,6rem)}
+.exposure-intro-grid{display:grid;gap:2.5rem;margin-block-end:clamp(2.5rem,5vw,4.5rem)}
 .exposure-intro-grid h2{margin-block-end:1.4rem}
 .exposure-intro-note{align-self:end;border-block-start:2px solid var(--abyss);padding-block-start:1rem;font:500 clamp(1.2rem,2vw,1.55rem)/1.35 var(--font-display)} /* role: sub-title */
 .ledger-stack{border-block-start:1px solid var(--line-strong)}
@@ -218,7 +218,7 @@
 .situation-method-close{color:var(--ink-muted);max-width:850px}
 
 /* Final conversion — the ONE dark field (pebble), ink text. */
-.final-conversion{padding-block:clamp(4rem,8vw,7rem);color:var(--ink)}
+.final-conversion{padding-block:clamp(3rem,6vw,5rem);color:var(--ink)}
 .final-conversion .clarity-wrap{display:grid;gap:1.5rem}
 .final-conversion h2{font-size:clamp(2.3rem,5vw,4.2rem);line-height:1.02;color:var(--ink);max-width:19ch}
 .final-conversion p{color:var(--ink)}
@@ -227,9 +227,23 @@
 .final-conversion .clarity-button:hover{background:#0F272C;border-color:#0F272C;color:var(--chalk)}
 .final-conversion .clarity-reassurance{color:var(--ink)}
 
+/* Ambient photography — Emergence dimming signature (locked).
+   Applies ONLY to ambient imagery; never text, headings, founder portrait.
+   Direction: resolves INTO clarity. Static without JS / reduced motion.
+   No image ships until licensing clears (docs shortlist, WP10). */
+.ambient-photo{margin:0;overflow:hidden}
+.ambient-photo img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover}
+.clarity-page.js-dim .ambient-photo img{
+  opacity:.55;
+  filter:saturate(.7);
+  transition:opacity 400ms ease,filter 400ms ease;
+}
+.clarity-page.js-dim .ambient-photo.is-inview img{opacity:1;filter:none}
+.ambient-photo figcaption{padding-block-start:.65rem;color:var(--ink-muted);font-size:.75rem}
+
 /* Footer */
 .clarity-page .site-footer{background:transparent;color:var(--ink)}
-.clarity-page .foot-contact{padding-block:clamp(4rem,8vw,7rem)}
+.clarity-page .foot-contact{padding-block:clamp(3rem,6vw,5rem)}
 .clarity-page .foot-contact .eyebrow{font-family:var(--font-body);font-style:normal;color:var(--abyss);letter-spacing:.12em}
 .clarity-page .foot-contact .eyebrow::before{display:none}
 .clarity-page .foot-contact h2{font-size:clamp(2.2rem,5vw,4rem);max-width:16ch;margin-inline:auto}
@@ -298,4 +312,5 @@
   .clarity-page *,
   .clarity-page *::before,
   .clarity-page *::after{scroll-behavior:auto!important;transition-duration:.01ms!important}
+  .clarity-page .ambient-photo img{opacity:1!important;filter:none!important}
 }
