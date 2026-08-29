@@ -1,3 +1,5 @@
+> SUPERSEDED 2026-08-29: Evidence Ledger visual system replaced by Controlled Clarity per decision-register addendum; this document retained for its copy/component architecture.
+
 # Toza Visual Reference Shortlist
 
 Status: **DIRECTION SELECTED — Evidence Ledger approved 2026-08-28; photography rights clearance remains open**  
