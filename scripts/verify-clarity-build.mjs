@@ -53,9 +53,12 @@ const home = htmlFor("en", "index");
 for (const family of ["Identity convergence", "Trust residue", "Personal/work crossover"]) {
   assertIncludes(home, family, `Home compound exposure: ${family}`);
 }
-assertIncludes(home, "devices-test", "Home: devices-test prototype flag active for Gate 2");
-assertIncludes(home, "data-dimmable", "Home: ambient dimming stand-in present");
-assertIncludes(home, 'data-field="mist"', "Home: exposure field transition (chalk to mist)");
+assert(!home.includes("devices-test"), "Home: devices-test prototypes rejected at Gate 2");
+assert(!home.includes("data-dimmable"), "Home: ambient dimming stand-in removed; dimming deferred to licensed photography");
+assertIncludes(home, 'data-field="mist"', "Home: exposure section mapped to mist field");
+assertIncludes(home, 'data-field="sand"', "Home: method section mapped to sand field");
+assertIncludes(home, 'data-field="pebble"', "Home: final conversion mapped to pebble field");
+assertIncludes(home, "dataset.activeField", "Home: whole-field scroll observer present");
 
 const separation = htmlFor("en", "separation-divorce");
 assert(!separation.includes("Personal/work crossover"), "Separation page must not repeat the business exposure family");
@@ -78,9 +81,8 @@ assert(
   /@media\s*\(prefers-reduced-motion\s*:\s*reduce\)/.test(clarityCss),
   "Clarity stylesheet must include a prefers-reduced-motion block",
 );
-assert(
-  !/\[data-dimmable\][^\n{]*\b(h1|h2|h3|p|hero-portrait)\b/.test(clarityCss),
-  "Dimming selectors must never target headings, paragraphs or the founder portrait",
+assert(!/data-dimmable|ambient-field/.test(clarityCss),
+  "Dimming stand-in selectors must be removed from clarity.css",
 );
 
 console.log("CLARITY BUILD VERIFIED");

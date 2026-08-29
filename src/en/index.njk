@@ -5,7 +5,6 @@ slug: ""
 page_id: "index"
 visual_system: "controlled-clarity"
 body_class: "clarity-page"
-devices_test: true
 title: "Toza | Personal Digital Protection"
 description: "Before a separation or business dispute moves, Toza shows you what your digital life reveals, fixes urgent exposure and hardens what matters. Private, in person, in Central Israel."
 og_description: "Your ordinary digital life can reveal more than you realize. Toza finds the exposure, fixes what is urgent and hardens what matters."
@@ -40,12 +39,6 @@ canonical: "https://toza-site.pages.dev/en/"
             </div>
             <p class="exposure-intro-note">One item may look harmless. The combination is what matters.</p>
         </div>
-    </div>
-    <!-- Ambient tonal stand-in for the dimming motif (Gate 2). STAND-IN: this
-         CSS-only tonal field will be replaced by licensed ambient photography
-         once imagery is licensed. Decorative only; never carries text. -->
-    <div class="ambient-wrap" data-dimmable aria-hidden="true">
-        <div class="ambient-field"></div>
     </div>
     <div class="clarity-wrap">
         <div class="ledger-stack">
@@ -103,7 +96,7 @@ canonical: "https://toza-site.pages.dev/en/"
 
 {% include "components/founder-proof.njk" %}
 
-<section class="clarity-section" id="situations" aria-labelledby="situations-title">
+<section class="clarity-section" id="situations" data-field="chalk" aria-labelledby="situations-title">
     <div class="clarity-wrap">
         <div class="routes-heading">
             <div>
@@ -134,7 +127,7 @@ canonical: "https://toza-site.pages.dev/en/"
 {% set assessmentIndex = "06" %}
 {% include "components/assessment-offer.njk" %}
 
-<section class="final-conversion" aria-labelledby="final-title">
+<section class="final-conversion" data-field="pebble" aria-labelledby="final-title">
     <div class="clarity-wrap">
         <div>
             <p class="clarity-eyebrow"><span>07</span> Before things get out of control</p>

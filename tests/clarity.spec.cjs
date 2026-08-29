@@ -22,18 +22,16 @@ test.afterAll(async () => {
 });
 
 const clarityPages = [
-  { path: "/en/", headline: "Your digital life reveals more than you realize.", ledgers: 3, devicesTest: true },
+  { path: "/en/", headline: "Your digital life reveals more than you realize.", ledgers: 3 },
   {
     path: "/en/separation-divorce.html",
     headline: "Before separation or divorce moves, understand what your shared digital life still reveals.",
     ledgers: 1,
-    devicesTest: false,
   },
   {
     path: "/en/business-dispute.html",
     headline: "You know your legal and commercial position. Do you know your digital one?",
     ledgers: 1,
-    devicesTest: false,
   },
 ];
 
@@ -43,11 +41,7 @@ for (const clarityPage of clarityPages) {
     await page.goto(`${siteUrl}${clarityPage.path}`);
 
     await expect(page.locator("body")).toContainClass("clarity-page");
-    if (clarityPage.devicesTest) {
-      await expect(page.locator("body")).toContainClass("devices-test");
-    } else {
-      await expect(page.locator("body")).toHaveClass("clarity-page");
-    }
+    await expect(page.locator("body")).toHaveClass("clarity-page");
     await expect(page.locator("h1")).toHaveText(clarityPage.headline);
     await expect(page.locator("h1")).toHaveCount(1);
     await expect(page.locator(".exposure-ledger")).toHaveCount(clarityPage.ledgers);
