@@ -25,6 +25,7 @@
   --w-prose:66ch;
   color-scheme:light;
   background:var(--chalk);
+  transition:background-color 400ms ease; /* whole-field device */
   color:var(--ink);
   font-family:var(--font-body);
   font-size:17px; /* role: body */
@@ -46,28 +47,17 @@
 
 .clarity-wrap{width:calc(100% - 40px);max-width:1200px;margin-inline:auto}
 
-/* Whole-field sections: full-bleed backgrounds, no borders between sections. */
+/* Whole-field sections: transparent; the page body carries the field colour. */
 .clarity-section{padding-block:clamp(4rem,8vw,8rem)}
-.clarity-hero,
-.clarity-section,
-.founder-proof,
-.assessment-offer,
-.final-conversion,
-.clarity-page .foot-contact{transition:background-color 400ms ease}
-
-/* Static field mapping (also the no-JS / reduced-motion fallback). */
-[data-field="chalk"]{background-color:var(--chalk)}
-[data-field="mist"]{background-color:var(--mist)}
-[data-field="sand"]{background-color:var(--sand)}
-.final-conversion{background-color:var(--pebble)}
-.clarity-page .foot-contact{background-color:var(--mist)}
-
-/* Scroll-driven transitions (Home only): JS adds .js-fields, then sections
-   resolve INTO their field colour as they enter view. Colour only. */
-.clarity-page.js-fields [data-field]{background-color:var(--chalk)}
-.clarity-page.js-fields [data-field="chalk"].is-inview{background-color:var(--chalk)}
-.clarity-page.js-fields [data-field="mist"].is-inview{background-color:var(--mist)}
-.clarity-page.js-fields [data-field="sand"].is-inview{background-color:var(--sand)}
+/* Whole-field mapping (DSDHA device, Direction A): sections are transparent;
+   the page background itself carries the field colour. JS sets
+   data-active-field from the dominant section; chalk is the no-JS /
+   reduced-motion default. */
+[data-field]{background-color:transparent}
+.clarity-page[data-active-field="chalk"]{background-color:var(--chalk)}
+.clarity-page[data-active-field="mist"]{background-color:var(--mist)}
+.clarity-page[data-active-field="sand"]{background-color:var(--sand)}
+.clarity-page[data-active-field="pebble"]{background-color:var(--pebble)}
 
 /* Role: label — uppercase/tracking for Latin only; Hebrew labels stay plain. */
 .clarity-eyebrow{
@@ -88,7 +78,7 @@
 .clarity-lede{font-size:clamp(1.15rem,1.75vw,1.4rem);line-height:1.58;color:var(--ink-muted)} /* role: lede */
 
 /* Header */
-.clarity-page .site-header{background:var(--chalk);backdrop-filter:none;border-block-end:1px solid var(--line)}
+.clarity-page .site-header{background-color:inherit;transition:inherit;backdrop-filter:none;border-block-end:1px solid var(--line)}
 .clarity-page .nav{min-height:72px}
 .clarity-page .brand .name{font:500 1.5rem/1 var(--font-display);text-transform:lowercase;color:var(--ink)}
 .clarity-page .menu{gap:clamp(.85rem,1.6vw,1.65rem);font-size:.78rem;color:var(--ink-muted)}
@@ -136,25 +126,6 @@
 .hero-portrait::before{content:"Personal delivery";display:block;padding-block:.7rem;border-block:1px solid var(--line);color:var(--abyss);font:600 .7rem/1.2 var(--font-body);letter-spacing:.12em;text-transform:uppercase}
 .hero-portrait img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-block-end:2px solid var(--abyss)}
 .hero-portrait figcaption{padding-block-start:.65rem;color:var(--ink-muted);font-size:.75rem}
-
-/* Ambient tonal stand-in (dimming motif). STAND-IN: this CSS-only tonal
-   field will be replaced by licensed ambient photography once imagery is
-   licensed. Flat sand field with a subtle repeating 1px hairline pattern
-   (hard colour stops — no gradient shading). */
-.ambient-wrap{overflow:hidden}
-.ambient-field{
-  min-height:clamp(40vh,52vh,60vh);
-  background-color:var(--sand);
-  background-image:repeating-linear-gradient(to bottom,var(--line) 0 1px,transparent 1px 56px);
-}
-/* Dimming: peripheral field resolves INTO clarity. Never applied to text,
-   headings or the founder portrait. Static without JS / reduced motion. */
-.clarity-page.js-fields [data-dimmable]{
-  opacity:.55;
-  filter:saturate(.7);
-  transition:opacity 400ms ease,filter 400ms ease,transform 400ms ease;
-}
-.clarity-page.js-fields [data-dimmable].is-inview{opacity:1;filter:none}
 
 /* Exposure ledgers — plain ruled rows; no junction marks or connectors. */
 .exposure-intro-grid{display:grid;gap:2.5rem;margin-block-end:clamp(3rem,6vw,6rem)}
@@ -257,7 +228,7 @@
 .final-conversion .clarity-reassurance{color:var(--ink)}
 
 /* Footer */
-.clarity-page .site-footer{background:var(--chalk);color:var(--ink)}
+.clarity-page .site-footer{background:transparent;color:var(--ink)}
 .clarity-page .foot-contact{padding-block:clamp(4rem,8vw,7rem)}
 .clarity-page .foot-contact .eyebrow{font-family:var(--font-body);font-style:normal;color:var(--abyss);letter-spacing:.12em}
 .clarity-page .foot-contact .eyebrow::before{display:none}
@@ -323,32 +294,8 @@
   .clarity-reassurance{padding:0}
 }
 
-/* PROTOTYPE for Gate 2 review — candidate devices, active only behind the
-   devices-test flag (front matter devices_test: true). Fully disabled under
-   prefers-reduced-motion. */
-@media(max-width:699px){
-  .clarity-page.devices-test .situation-routes{
-    display:flex;
-    gap:1.5rem;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    padding-block-end:1rem;
-  }
-  .clarity-page.devices-test .situation-route{
-    flex:0 0 85%;
-    scroll-snap-align:start;
-  }
-}
-/* PROTOTYPE: un-crop reveal of the ambient stand-in. */
-.clarity-page.devices-test.js-fields [data-dimmable] .ambient-field{transform:scale(1.06)}
-.clarity-page.devices-test.js-fields [data-dimmable].is-inview .ambient-field{transform:none}
-.clarity-page.devices-test.js-fields .ambient-field{transition:transform 400ms ease}
-
 @media(prefers-reduced-motion:reduce){
   .clarity-page *,
   .clarity-page *::before,
   .clarity-page *::after{scroll-behavior:auto!important;transition-duration:.01ms!important}
-  .clarity-page.devices-test .situation-routes{display:grid;overflow:visible;scroll-snap-type:none}
-  .clarity-page [data-dimmable]{opacity:1!important;filter:none!important}
-  .clarity-page .ambient-field{transform:none!important}
 }
