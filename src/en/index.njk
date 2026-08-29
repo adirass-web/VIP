@@ -3,18 +3,19 @@ layout: layouts/vault.njk
 permalink: "/en/index.html"
 slug: ""
 page_id: "index"
-visual_system: "evidence-ledger"
-body_class: "dossier-page"
+visual_system: "controlled-clarity"
+body_class: "clarity-page"
+devices_test: true
 title: "Toza | Personal Digital Protection"
 description: "Before a separation or business dispute moves, Toza shows you what your digital life reveals, fixes urgent exposure and hardens what matters. Private, in person, in Central Israel."
 og_description: "Your ordinary digital life can reveal more than you realize. Toza finds the exposure, fixes what is urgent and hardens what matters."
 canonical: "https://toza-site.pages.dev/en/"
 ---
 
-<section class="dossier-hero" aria-labelledby="home-title">
-    <div class="dossier-wrap dossier-hero-grid">
-        <div class="dossier-hero-copy">
-            <p class="dossier-kicker">Personal digital protection for your close circle.</p>
+<section class="clarity-hero" data-field="chalk" aria-labelledby="home-title">
+    <div class="clarity-wrap clarity-hero-grid">
+        <div class="clarity-hero-copy">
+            <p class="clarity-kicker">Personal digital protection for your close circle.</p>
             <h1 id="home-title">Your digital life reveals more than you realize.</h1>
             <p>Before a separation, confrontation or business dispute moves, there is one position most people never examine: their digital one.</p>
             <p>Years of ordinary digital life leave behind access, permissions, identities and trails. When trust changes, that hidden exposure can become leverage.</p>
@@ -29,16 +30,24 @@ canonical: "https://toza-site.pages.dev/en/"
     </div>
 </section>
 
-<section class="dossier-section" id="exposure" aria-labelledby="exposure-title">
-    <div class="dossier-wrap">
+<section class="clarity-section" id="exposure" data-field="mist" aria-labelledby="exposure-title">
+    <div class="clarity-wrap">
         <div class="exposure-intro-grid">
             <div class="exposure-intro-copy">
-                <p class="dossier-eyebrow"><span>01</span> How exposure really happens</p>
+                <p class="clarity-eyebrow"><span>01</span> How exposure really happens</p>
                 <h2 id="exposure-title">They may not need to hack you.</h2>
-                <p class="dossier-lede">The most consequential exposure rarely announces itself as a cyberattack. It sits inside the ordinary digital life you already have: a personal email used for work, an old recovery path, a device once shared, an identity repeated across accounts, a permission that still survives.</p>
+                <p class="clarity-lede">The most consequential exposure rarely announces itself as a cyberattack. It sits inside the ordinary digital life you already have: a personal email used for work, an old recovery path, a device once shared, an identity repeated across accounts, a permission that still survives.</p>
             </div>
             <p class="exposure-intro-note">One item may look harmless. The combination is what matters.</p>
         </div>
+    </div>
+    <!-- Ambient tonal stand-in for the dimming motif (Gate 2). STAND-IN: this
+         CSS-only tonal field will be replaced by licensed ambient photography
+         once imagery is licensed. Decorative only; never carries text. -->
+    <div class="ambient-wrap" data-dimmable aria-hidden="true">
+        <div class="ambient-field"></div>
+    </div>
+    <div class="clarity-wrap">
         <div class="ledger-stack">
             {% set ledgerIndex = "01" %}
             {% set ledgerLabel = "Identity convergence" %}
@@ -73,10 +82,10 @@ canonical: "https://toza-site.pages.dev/en/"
     </div>
 </section>
 
-<section class="dossier-section dossier-section--tint" id="method" aria-labelledby="method-title">
-    <div class="dossier-wrap method-grid">
+<section class="clarity-section" id="method" data-field="sand" aria-labelledby="method-title">
+    <div class="clarity-wrap method-grid">
         <div class="method-intro">
-            <p class="dossier-eyebrow"><span>02</span> What Toza does</p>
+            <p class="clarity-eyebrow"><span>02</span> What Toza does</p>
             <h2 id="method-title">Find the whole path. Then act.</h2>
             <p>I developed a complete personal-hardening method for high-risk personal situations.</p>
             <p class="method-basis">It combines current government security standards, guidance for high-risk individuals, platform-specific protections and twenty years of field experience in one disciplined sequence.</p>
@@ -94,14 +103,14 @@ canonical: "https://toza-site.pages.dev/en/"
 
 {% include "components/founder-proof.njk" %}
 
-<section class="dossier-section" id="situations" aria-labelledby="situations-title">
-    <div class="dossier-wrap">
+<section class="clarity-section" id="situations" aria-labelledby="situations-title">
+    <div class="clarity-wrap">
         <div class="routes-heading">
             <div>
-                <p class="dossier-eyebrow"><span>05</span> Start where your life actually is</p>
+                <p class="clarity-eyebrow"><span>05</span> Start where your life actually is</p>
                 <h2 id="situations-title">Before you make a move, understand the position you cannot see.</h2>
             </div>
-            <p class="dossier-lede">Two routes into one private service. In both, the digital position should be understood before action changes it.</p>
+            <p class="clarity-lede">Two routes into one private service. In both, the digital position should be understood before action changes it.</p>
         </div>
         <div class="situation-routes">
             <article class="situation-route">
@@ -126,9 +135,9 @@ canonical: "https://toza-site.pages.dev/en/"
 {% include "components/assessment-offer.njk" %}
 
 <section class="final-conversion" aria-labelledby="final-title">
-    <div class="dossier-wrap">
+    <div class="clarity-wrap">
         <div>
-            <p class="dossier-eyebrow"><span>07</span> Before things get out of control</p>
+            <p class="clarity-eyebrow"><span>07</span> Before things get out of control</p>
             <h2 id="final-title">Act before hidden exposure starts controlling what happens next.</h2>
             <p>Request a private conversation through WhatsApp or Signal. Begin with a short, neutral message.</p>
         </div>

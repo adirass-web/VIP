@@ -31,7 +31,7 @@
 
     <title>{{ title }}</title>
 
-    {% if visual_system == "evidence-ledger" %}
+    {% if visual_system == "controlled-clarity" %}
     <link rel="preload" href="../assets/fonts/david-libre-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
     {% else %}
     <link rel="preload" href="../assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -40,18 +40,18 @@
     {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
     <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/vault.css">
-    {% if visual_system == "evidence-ledger" %}<link rel="stylesheet" href="../assets/css/dossier.css">{% endif %}
+    {% if visual_system == "controlled-clarity" %}<link rel="stylesheet" href="../assets/css/clarity.css">{% endif %}
 
     {% include "schema-org.njk" %}
 </head>
-<body{% if body_class %} class="{{ body_class }}"{% endif %}>
+<body{% if body_class %} class="{{ body_class }}{% if devices_test %} devices-test{% endif %}"{% endif %}>
 
     <a class="skip-link" href="#main-content">{{ t.skip_link or 'Skip to main content' }}</a>
 
     <header class="site-header">
         <div class="wrap nav">
             <a class="brand" href="/{{ locale }}/" aria-label="Toza — {{ t.nav_home or 'Home' }}">
-                {% if visual_system != "evidence-ledger" %}
+                {% if visual_system != "controlled-clarity" %}
                 <svg class="mark seal" viewBox="0 0 100 100" aria-hidden="true">
                     <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
                     <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
@@ -63,7 +63,7 @@
                     </g>
                 </svg>
                 {% endif %}
-                <span class="name" dir="ltr">{% if visual_system == "evidence-ledger" %}toza{% else %}Toza{% endif %}</span>
+                <span class="name" dir="ltr">{% if visual_system == "controlled-clarity" %}toza{% else %}Toza{% endif %}</span>
             </a>
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
             <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
@@ -72,7 +72,7 @@
                 <a href="/{{ locale }}/what-happens-during-the-visit.html">{{ t.nav_what_happens or 'What happens' }}</a>
                 <a href="/{{ locale }}/pricing.html">{{ t.nav_pricing or 'Pricing' }}</a>
                 <a href="/{{ locale }}/faq.html">{{ t.nav_faq or 'FAQ' }}</a>
-                <a class="btn" href="#contact">{% if visual_system == "evidence-ledger" %}Request a private conversation{% else %}{{ t.cta_speak or 'Book an assessment' }}{% endif %}</a>
+                <a class="btn" href="#contact">{% if visual_system == "controlled-clarity" %}Request a private conversation{% else %}{{ t.cta_speak or 'Book an assessment' }}{% endif %}</a>
             </nav>
         </div>
     </header>
@@ -84,7 +84,7 @@
     <footer class="site-footer">
         <section class="foot-contact" id="contact">
             <div class="wrap">
-                {% if visual_system != "evidence-ledger" %}<div class="seal-lg">
+                {% if visual_system != "controlled-clarity" %}<div class="seal-lg">
                     <svg class="seal" width="56" height="56" viewBox="0 0 100 100" aria-hidden="true">
                         <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
                         <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
@@ -96,21 +96,21 @@
                         </g>
                     </svg>
                 </div>{% endif %}
-                <span class="eyebrow" style="justify-content:center">{% if visual_system == "evidence-ledger" %}Private and confidential{% else %}{{ t.footer_eyebrow or 'Confidential' }}{% endif %}</span>
-                <h2>{% if visual_system == "evidence-ledger" %}Request a private conversation.{% else %}{{ t.footer_cta_h2 or 'Personal digital protection for your close circle.' }}{% endif %}</h2>
-                <p class="sub">{% if visual_system == "evidence-ledger" %}Begin with a short, neutral message. I handle your inquiry personally.{% else %}{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}{% endif %}</p>
+                <span class="eyebrow" style="justify-content:center">{% if visual_system == "controlled-clarity" %}Private and confidential{% else %}{{ t.footer_eyebrow or 'Confidential' }}{% endif %}</span>
+                <h2>{% if visual_system == "controlled-clarity" %}Request a private conversation.{% else %}{{ t.footer_cta_h2 or 'Personal digital protection for your close circle.' }}{% endif %}</h2>
+                <p class="sub">{% if visual_system == "controlled-clarity" %}Begin with a short, neutral message. I handle your inquiry personally.{% else %}{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}{% endif %}</p>
                 <nav class="foot-cta" aria-label="{{ t.footer_cta_nav_label or 'Direct messaging options' }}">
                     <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">{{ t.wa_label or 'WhatsApp' }}</a>
                     <a class="btn ghost" href="{{ t.signal_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">{{ t.signal_label or 'Signal' }}</a>
                 </nav>
-                {% if visual_system == "evidence-ledger" %}<p class="contact-guidance">Do not send passwords, recovery codes, screenshots, legal documents, intimate details or detailed allegations in the first message.</p>{% endif %}
+                {% if visual_system == "controlled-clarity" %}<p class="contact-guidance">Do not send passwords, recovery codes, screenshots, legal documents, intimate details or detailed allegations in the first message.</p>{% endif %}
             </div>
         </section>
 
         <div class="foot-bar">
             <div class="wrap foot-bar-inner">
                 <div class="foot-brand">
-                    {% if visual_system != "evidence-ledger" %}
+                    {% if visual_system != "controlled-clarity" %}
                     <svg class="mark seal" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
                         <circle cx="50" cy="50" r="46" fill="none" stroke-width="3"/>
                         <g fill="none" transform="translate(50 51) scale(.58) translate(-50 -55)">
@@ -121,7 +121,7 @@
                         </g>
                     </svg>
                     {% endif %}
-                    <span class="fb-name"><bdi dir="ltr">{% if visual_system == "evidence-ledger" %}toza{% else %}Toza{% endif %}</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
+                    <span class="fb-name"><bdi dir="ltr">{% if visual_system == "controlled-clarity" %}toza{% else %}Toza{% endif %}</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
                 </div>
                 <nav class="foot-col" aria-label="{{ t.footer_explore or 'Explore' }}">
                     <h3>{{ t.footer_explore or 'Explore' }}</h3>
@@ -139,7 +139,7 @@
                 </nav>
             </div>
             <div class="wrap foot-meta">
-                <span>{% if visual_system == "evidence-ledger" %}In person · With you present · No remote access · No cloud processing{% else %}{{ t.trust_line or 'In person only · No remote access · No cloud · No logs · No app' }}{% endif %}</span>
+                <span>{% if visual_system == "controlled-clarity" %}In person · With you present · No remote access · No cloud processing{% else %}{{ t.trust_line or 'In person only · No remote access · No cloud · No logs · No app' }}{% endif %}</span>
                 <span>{{ t.footer_copyright or '© 2026 Toza' }}</span>
             </div>
         </div>
@@ -161,7 +161,29 @@
       }
     })();
     </script>
-    {% if visual_system != "evidence-ledger" %}<script src="../assets/js/guilloche.js" defer></script>{% endif %}
+    {% if visual_system != "controlled-clarity" %}<script src="../assets/js/guilloche.js" defer></script>{% endif %}
+    {% if visual_system == "controlled-clarity" and page_id == "index" %}
+    <script>
+    /* Controlled Clarity (Home): scroll-driven field transitions + dimming motif.
+       Colour only — never text, never layout. Disabled under prefers-reduced-motion. */
+    (function(){
+      if(!window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+      var body=document.body;
+      body.classList.add('js-fields');
+      var targets=document.querySelectorAll('[data-field],[data-dimmable]');
+      if(!('IntersectionObserver' in window)||!targets.length){
+        targets.forEach(function(el){el.classList.add('is-inview');});
+        return;
+      }
+      var observer=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          entry.target.classList.toggle('is-inview',entry.isIntersecting);
+        });
+      },{rootMargin:'-18% 0px -18% 0px',threshold:0});
+      targets.forEach(function(el){observer.observe(el);});
+    })();
+    </script>
+    {% endif %}
 
 </body>
 </html>
