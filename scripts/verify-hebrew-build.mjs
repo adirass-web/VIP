@@ -1,57 +1,28 @@
-import {
-  assert,
-  assertIncludes,
-  assertRouteSourceSet,
-  frontmatterValue,
-  htmlFor,
-  outputFile,
-  publicPath,
-  readText,
-  routes,
-  siteUrl,
-  sourceFor,
-} from "./verify-utils.mjs";
-
-for (const locale of ["en", "he"]) {
-  assertRouteSourceSet(locale);
-
-  for (const route of routes) {
-    const source = sourceFor(locale, route);
-    const label = `${locale}/${route}`;
-    const expectedPermalink = publicPath(locale, route);
-
-    assert(
-      frontmatterValue(source, "permalink", label) === expectedPermalink,
-      `${label}: permalink must be ${expectedPermalink}`,
-    );
-    assert(
-      frontmatterValue(source, "slug", label) === (route === "index" ? "" : route),
-      `${label}: slug does not match its route`,
-    );
-    assert(
-      frontmatterValue(source, "page_id", label) === route,
-      `${label}: page_id does not match its route`,
-    );
-
-    const html = htmlFor(locale, route);
-    assertIncludes(html, `<html lang="${locale}" dir="${locale === "he" ? "rtl" : "ltr"}">`, `${label} output`);
-    assertIncludes(html, '<main id="main-content"', `${label} output`);
-    assertIncludes(
-      html,
-      `<link rel="alternate" hreflang="en" href="${siteUrl}${publicPath("en", route, { directoryForIndex: true })}">`,
-      `${label} English alternate`,
-    );
-    assertIncludes(
-      html,
-      `<link rel="alternate" hreflang="he" href="${siteUrl}${publicPath("he", route, { directoryForIndex: true })}">`,
-      `${label} Hebrew alternate`,
-    );
-    assert(outputFile(locale, route).startsWith(`_site/${locale}/`), `${label}: output path escaped its locale root`);
-  }
+// Historical command name retained for CI; D-026 changes the published route contract.
+import fs from 'node:fs';
+import { createRequire } from 'node:module';
+import { assert, readText, htmlFor } from './verify-utils.mjs';
+const require = createRequire(import.meta.url);
+const {pages, sync} = require('./accepted-copy.cjs');
+sync(true);
+const expected = pages().map(p => p.route + '.html').sort();
+const actual = fs.readdirSync('_site/en').filter(p => p.endsWith('.html')).sort();
+assert(JSON.stringify(actual) === JSON.stringify(expected), 'Published English routes differ from accepted copy');
+assert(!fs.existsSync('_site/he') && !fs.existsSync('_site/ru'), 'Unpublished locale survived clean build');
+for (const page of pages()) {
+  const html = htmlFor('en', page.route);
+  assert(html.includes('<html lang="en" dir="ltr">'), page.route + ': English document contract');
+  assert((html.match(/<h1[\s>]/g) || []).length === 1, page.route + ': expected one h1');
+  assert((html.match(/id="contact"/g) || []).length === 1, page.route + ': expected one contact destination');
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+  assert(new Set(ids).size === ids.length, page.route + ': duplicate IDs');
+  assert(!/hreflang="he" href=/.test(html), page.route + ': withdrawn Hebrew alternate');
+  assert(!/(?:3,500|38,000|"price": "3500"|"price": "38000"|No cloud processing|No cloud ·|No logs ·|Book an assessment|Portrait alt text:|Portrait caption:|\{#)/i.test(html), page.route + ': stale claim or editorial annotation');
+  const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  const offers = schema['@graph'][0].hasOfferCatalog.itemListElement;
+  assert(offers[0].price === '3600' && offers[1].price === '14000', 'Fixed schema prices');
+  assert(offers[2].price === undefined && offers[2].priceSpecification.minPrice === 42000, 'Inner Circle must retain starting-price meaning');
+  assert(offers[3].price === undefined, 'Bespoke has no public fixed price');
 }
-
-const eleventy = readText(".eleventy.js");
-assert(!eleventy.includes('ignores.add("src/he/**")'), "Eleventy still ignores src/he/**");
-assert(eleventy.includes('ignores.add("src/ru/**")'), "Russian publication guard was unexpectedly removed");
-
-console.log("HE BUILD VERIFIED");
+for (const legal of ['terms', 'privacy']) assert(readText('_site/' + legal + '.html').includes('<html lang="he" dir="rtl">'), legal + ': preserve Hebrew legal document');
+console.log('ENGLISH PUBLICATION AND ACCEPTED SOURCE CONTRACT VERIFIED');

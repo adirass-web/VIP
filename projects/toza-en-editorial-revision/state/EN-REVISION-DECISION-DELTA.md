@@ -1,6 +1,6 @@
 # Toza EN Revision Decision Delta
 
-Status: **LIVE decision register**  
+Status: **LIVE decision register**
 Purpose: record substantive decisions made during EN-02-v1 revision so the future `TOZA-EN-COPY-SPEC-v3.md` can be generated from an explicit decision trail.
 
 Do not record ordinary line edits, punctuation, or minor wording changes.
@@ -242,3 +242,13 @@ This register is the bridge between page approval and the future consolidated v3
 - **Scope:** Complete Phase 4 protected consistency and Phase 5 full-corpus editorial review, then compile Phase 6 v3 from accepted sources. Prepare a concrete publication plan; no production implementation is requested in this instruction.
 - **Result:** Independent D-009 review PASS with optional density/positioning observations and no public-promise conflict. Accepted wording remains unchanged. The consolidated spec records protected PA's permitted positioning exception. Publication design and language/route choices remain proposals.
 - **Compression note:** Report actual results honestly: situation pages are materially shorter; Home and Process have smaller reductions. Exact acceptance governs present wording and does not permit further cuts merely to meet a length target.
+
+### D-026 — Implement the accepted English site with staged release gates
+- **Date:** 2026-10-04
+- **Authority:** Owner: “Can we start Implementation and publication? step by step with quality gates”; then “Launch English first; temporarily unpublish Hebrew marketing pages”.
+- **Decision:** Begin the targeted integration described in planning/2026-10-04-publication-plan.md, preserving the existing Eleventy/Nunjucks/Cloudflare foundation and exact accepted copy. Production-source changes are now authorized for implementation; this supersedes the earlier copy-only scope for this phase.
+- **Language:** Temporarily withdraw Hebrew marketing routes and their discovery links with temporary redirects to English. Preserve Hebrew source for later adaptation and preserve the Hebrew legal documents, accurately labelled. Russian remains unpublished. This does not change service-language availability.
+- **Routes:** Implement the plan's retained English route set, three permanent replacement redirects and neutral 410 retirement response, including extensionless aliases.
+- **Branch:** Continue on editorial/toza-copy-harness and the existing unmerged PR #51, as required by project instructions. Do not alter main during implementation.
+- **Gates:** Accepted-source fingerprints and rendered-copy fidelity; clean build and publication contracts; mobile/desktop accessibility and interaction checks; independent adversarial review under D-009 and available Code Review CI diagnostics; owner preview and final release approval before main merge/deployment.
+- **Boundary:** No accepted wording changes, translation, platform migration, new tracking, payment flow or remote preview deployment is inferred. Historical source and locked harness remain immutable.

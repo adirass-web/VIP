@@ -1,7 +1,6 @@
 {% set t = i18n[locale] %}
-{% set routeSuffix = slug + ".html" if slug else "" %}
+{% set routeSuffix = slug if slug else "" %}
 {% set enLink = "/en/" + routeSuffix %}
-{% set heLink = "/he/" + routeSuffix %}
 <!DOCTYPE html>
 <html lang="{{ lang }}" dir="{{ dir }}">
 <head>
@@ -26,7 +25,6 @@
     <meta name="twitter:image" content="{{ ogImg }}">
     <link rel="canonical" href="{{ canonical | replace(site.prodUrl, site.url) }}">
     <link rel="alternate" hreflang="en" href="{{ site.url }}{{ enLink }}">
-    <link rel="alternate" hreflang="he" href="{{ site.url }}{{ heLink }}">
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enLink }}">
 
     <title>{{ title }}</title>
@@ -35,7 +33,7 @@
     <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
     <link rel="stylesheet" href="../assets/css/fonts.css">
-    <link rel="stylesheet" href="../assets/css/vault.css">
+    <link rel="stylesheet" href="/assets/css/vault.css?v=en-accepted-1">
 
     {% include "schema-org.njk" %}
 </head>
@@ -45,7 +43,7 @@
 
     <header class="site-header">
         <div class="wrap nav">
-            <a class="brand" href="/{{ locale }}/" aria-label="Toza — {{ t.nav_home or 'Home' }}">
+            <a class="brand" href="/{{ locale }}/" aria-label="Toza home">
                 <svg class="mark seal" viewBox="0 0 100 100" aria-hidden="true">
                     <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
                     <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
@@ -56,7 +54,7 @@
                         <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
                     </g>
                 </svg>
-                <span class="name" dir="ltr">Toza</span>
+                <span class="name" dir="ltr">toza</span>
             </a>
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
             <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
@@ -75,29 +73,6 @@
     </main>
 
     <footer class="site-footer">
-        <section class="foot-contact" id="contact">
-            <div class="wrap">
-                <div class="seal-lg">
-                    <svg class="seal" width="56" height="56" viewBox="0 0 100 100" aria-hidden="true">
-                        <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
-                        <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
-                        <g fill="none" transform="translate(50 51) scale(.6) translate(-50 -55)">
-                            <path d="M24 35 L50 26 L76 35" stroke-width="9"/>
-                            <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="7"/>
-                            <path d="M55 81 C48 77 43 71 40 64" stroke-width="8"/>
-                            <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
-                        </g>
-                    </svg>
-                </div>
-                <span class="eyebrow" style="justify-content:center">{{ t.footer_eyebrow or 'Confidential' }}</span>
-                <h2>{{ t.footer_cta_h2 or 'Personal digital protection for your close circle.' }}</h2>
-                <p class="sub">{{ t.footer_cta_intro or 'Reach out privately, before your private life is used against you.' }}</p>
-                <nav class="foot-cta" aria-label="{{ t.footer_cta_nav_label or 'Direct messaging options' }}">
-                    <a class="btn" href="{{ t.wa_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'whatsapp'}})}catch(e){}">{{ t.wa_label or 'WhatsApp' }}</a>
-                    <a class="btn ghost" href="{{ t.signal_url }}" target="_blank" rel="noopener noreferrer" onclick="try{window.plausible && window.plausible('CTA: Messenger Click',{props:{platform:'signal'}})}catch(e){}">{{ t.signal_label or 'Signal' }}</a>
-                </nav>
-            </div>
-        </section>
 
         <div class="foot-bar">
             <div class="wrap foot-bar-inner">
@@ -111,7 +86,7 @@
                             <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="7"/>
                         </g>
                     </svg>
-                    <span class="fb-name"><bdi dir="ltr">Toza</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
+                    <span class="fb-name"><bdi dir="ltr">toza</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
                 </div>
                 <nav class="foot-col" aria-label="{{ t.footer_explore or 'Explore' }}">
                     <h3>{{ t.footer_explore or 'Explore' }}</h3>
@@ -124,33 +99,17 @@
                 </nav>
                 <nav class="foot-col" aria-label="{{ t.footer_legal or 'Legal' }}">
                     <h3>{{ t.footer_legal or 'Legal' }}</h3>
-                    <a href="/terms.html" hreflang="en">{{ t.footer_terms or 'Terms of Use' }}</a>
-                    <a href="/privacy.html" hreflang="en">{{ t.footer_privacy or 'Privacy' }}</a>
+                    <a href="/terms.html" hreflang="he">{{ t.footer_terms or 'Terms of Use' }}</a>
+                    <a href="/privacy.html" hreflang="he">{{ t.footer_privacy or 'Privacy' }}</a>
                 </nav>
             </div>
             <div class="wrap foot-meta">
-                <span>{{ t.trust_line or 'In person only · No remote access · No cloud · No logs · No app' }}</span>
                 <span>{{ t.footer_copyright or '© 2026 Toza' }}</span>
             </div>
         </div>
     </footer>
 
-    <script>
-    (function(){
-      var b=document.querySelector('[data-nav-toggle]'),m=document.getElementById('site-menu');
-      if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);});}
-      var faqToggle=document.querySelector('[data-faq-toggle-all]');
-      if(faqToggle){
-        var details=Array.prototype.slice.call(document.querySelectorAll('.faq details'));
-        faqToggle.addEventListener('click',function(){
-          var expand=faqToggle.getAttribute('aria-expanded')!=='true';
-          details.forEach(function(item){item.open=expand;});
-          faqToggle.setAttribute('aria-expanded',String(expand));
-          faqToggle.textContent=expand?(faqToggle.dataset.closeLabel||'Collapse all'):(faqToggle.dataset.openLabel||'Expand all');
-        });
-      }
-    })();
-    </script>
+    <script src="/assets/js/site.js?v=en-accepted-1" defer></script>
     <script src="../assets/js/guilloche.js" defer></script>
 
 </body>

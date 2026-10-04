@@ -23,20 +23,27 @@ There are ten revised public pages, one protected public Assessment page and one
 
 ## Fresh review result
 
-No blocker, major public-copy defect or unresolved public-promise conflict. Optional observations: Home's Assessment repetition, Why's direct-delivery repetition and protected PA's permitted older conditional emphasis. No optional cuts were applied. The ten-sweep editor and independent D-009 red team used the actual project authority and current decisions. The Code Review plugin did not run.
+No blocker, major public-copy defect or unresolved public-promise conflict. Optional observations: Home's Assessment repetition, Why's direct-delivery repetition and protected PA's permitted older conditional emphasis. No optional cuts were applied. The ten-sweep editor and independent D-009 red team used the actual project authority and current decisions. The editorial review used the D-009 independent substitute. The later implementation gate also uses the available Code Review CI-diagnostics tool; it does not provide an adversarial review runner.
 
 Current evidence: revisions/en-02-v2/review/phase-4-5-acceptance-review.md. Earlier page gates are historical. v3 is at TOZA-EN-COPY-SPEC-v3.md; exact hashes/effective protected copy are under approved/. Source, locked instructions/harness and skills remain unchanged.
 
 ## Publication workstream
 
-Planning completed in planning/2026-10-04-publication-plan.md. Proposed approach: reuse Eleventy/Nunjucks, the existing visual system and Cloudflare Pages; target page layout, exact content/metadata, shared-contact composition and route/schema/reference consistency. Design, implementation and launch are not yet performed.
+Implementation is complete in local preview under D-026. All eleven English pages use the exact accepted copy and metadata; shared navigation/contact, current schema/reference text, responsive tables and FAQ disclosures are integrated in the existing Eleventy/Nunjucks design. The owner chose English-first launch with temporary Hebrew marketing withdrawal; source is preserved and Hebrew legal documents remain accessible and labelled.
 
-Repository inspection found older commercial claims in production templates/schema/reference text and Hebrew. README's English-only claim is stale: the build includes Hebrew. Decide how existing Hebrew marketing pages enter the release before publication; do not silently withdraw them or leave contradictory offers. Current CI route expectations must be updated with approved route changes.
+Replacement routes and the neutral retirement response are implemented, including trailing-slash aliases. Cloudflare normalizes .html addresses with 308; canonical/OG/language declarations and sitemap use the final extensionless URLs. Approved prose links remain valid .html aliases. No source/harness/skill or accepted-block changes were made.
 
-## Verification limits
+## Gates
 
-Eleven exact blocks match the accepted commit; source/harness/skills/production are unchanged. Protected effective copy has only three duration substitutions. Read-only Hebrew-copy, Leaving-alignment and CI-contract checks pass. Full build/browser/RTL verification was not completed: dependencies and built output are absent. The RTL check stopped at its missing-build prerequisite. No live deployment/visual quality claim is made.
+- Accepted-source fingerprints, generated template fidelity and current publication contracts: PASS.
+- Browser tests: 36 PASS across desktop dark/mobile light, with narrow reflow, keyboard, FAQ deep links, full accepted text/metadata, contact destinations, tables, portrait and retained legal RTL.
+- Local Cloudflare Pages runtime: 78 checks PASS.
+- Independent adversarial review: PASS after correcting six trailing-slash redirect aliases. No remaining finding from this review.
+- GitHub CI: check the implementation head in PR #51; pending at preparation of this record.
+- Owner layout preview, final release preflight/approval and production smoke checks: remaining.
 
 ## Git and next step
 
-Editorial branch editorial/toza-copy-harness, PR #51 open and unmerged. Main is untouched. Review the proposed publication plan, then authorize an implementation phase with layout review and the language/route decisions. Final production approval follows a reviewed, tested preview.
+Branch editorial/toza-copy-harness, PR #51 open and unmerged. Main remains 5f8fbb8b21563fee3c1c802fe4c9914f74ede029. The owner need not merge an editorial-only PR first. Review the local implementation preview, then complete the recorded final release gate before merging this implementation and triggering production deployment.
+
+Evidence and remaining release checks: planning/2026-10-04-implementation-gates.md.

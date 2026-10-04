@@ -47,8 +47,11 @@ for (const route of routes) {
 const mixedFixture = readText("tests/fixtures/rtl-mixed.txt").trim();
 assert(mixedFixture === "שלום John 050-1234567 ₪1,234", "RTL fixture must stay canonical and reviewable");
 
-const home = htmlFor("he", "index");
-assertIncludes(home, '<html lang="he" dir="rtl">', "Built Hebrew home");
-assertIncludes(home, 'class="bidi-ltr"', "Built Hebrew home LTR isolation");
+// D-026: archived Hebrew source safeguards above remain; legal pages remain published.
+for (const name of ["terms", "privacy"]) {
+  const legal = readText(`_site/${name}.html`);
+  assertIncludes(legal, '<html lang="he" dir="rtl">', `Built Hebrew ${name}`);
+  assertIncludes(legal, 'padding-inline-start', `${name} logical list spacing`);
+}
 
 console.log("RTL CONTRACT VERIFIED");

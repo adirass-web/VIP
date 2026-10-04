@@ -10,3 +10,5 @@ VIP/
 _pricing-preview/
 node_modules/
 node_modules
+
+.wrangler/

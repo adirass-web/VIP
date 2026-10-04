@@ -1,8 +1,12 @@
 # Toza — publication plan for the accepted English copy
 
-Date: 4 October 2026. Status: **PROPOSED PLAN — implementation and publication not started.**
+Date: 4 October 2026. Status: **IMPLEMENTED IN PREVIEW under D-026 — production release pending.**
 
 The owner accepted the copy at `aeb65a51adc3217844be9c465de69a875084b8e4` and requested a further review followed by a publishing plan. This plan preserves that wording and builds on the existing site. Design recommendations below are proposals, not recovered owner decisions. Facts about the repository are labelled separately from work still to verify.
+
+## Implementation update — 4 October 2026
+
+The owner authorized implementation and chose English-first launch with temporary withdrawal of Hebrew marketing pages. The targeted approach below is implemented on the existing branch/PR, preserving accepted copy. Local verification and independent adversarial review pass; see planning/2026-10-04-implementation-gates.md. Earlier proposal/permission language below is historical context and is superseded by D-026. Main merge/deployment still await the rendered preview and final release gate.
 
 ## 1. Recommendation and alternatives
 
