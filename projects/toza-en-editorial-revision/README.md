@@ -1,59 +1,13 @@
 # Toza English Editorial Revision Project
 
-Status: **ACTIVE**  
-Branch: `editorial/toza-copy-harness`  
-Project root: `projects/toza-en-editorial-revision/`
+Status: **COPY ACCEPTED — editorial review complete; publication plan proposed.**
 
-## Purpose
+Branch: editorial/toza-copy-harness. Accepted wording baseline: aeb65a51adc3217844be9c465de69a875084b8e4.
 
-Create exact owner-reviewable revisions of the 11 unapproved English marketing pages in EN-02-v1 while keeping the approved Initial Paid Visit / PA-01-v2 protected.
+[Current numbered-plan status](state/CURRENT-STATUS.md) · [Consolidated v3](TOZA-EN-COPY-SPEC-v3.md) · [Fresh review](revisions/en-02-v2/review/phase-4-5-acceptance-review.md) · [Publication plan](planning/2026-10-04-publication-plan.md)
 
-This project is self-contained. Use the files in this tree as the working package for editorial revision.
+The original architecture, doctrine, source adoption matrix, calibration and four project skills remain under instructions/, harness/ and skills/. Read them with the live decision register; historical facts superseded by later owner decisions must not be restored. Source snapshots remain immutable.
 
-## Current phase
+All eleven candidate blocks are accepted, including Shared Copy and metadata. Protected PA receives only its three approved duration substitutions. The fresh whole-corpus review passed with optional observations; no accepted wording was rewritten. Exact source hashes are in approved/acceptance-manifest.json.
 
-**Phase 1 — establish canonical language**
-
-Execution order:
-1. Why Toza
-2. Pricing
-3. FAQ
-4. What Happens
-5. Shared Copy System
-6. Home
-7. Separation and Divorce
-8. Business and Founder Dispute
-9. They Know Something
-10. Inheritance Conflict
-11. For Attorneys
-12. Why This Is Not IT Support
-13. PA-01-v2 consistency check
-14. Full-corpus red team
-15. TOZA-EN-COPY-SPEC-v3
-
-## Mandatory read order
-
-1. `AGENTS.md`
-2. `instructions/TOZA-EN-REVISION-ARCHITECTURE-LOCKED.md`
-3. `harness/TOZA-EDITORIAL-DOCTRINE.md`
-4. `state/EN-REVISION-DECISION-DELTA.md`
-5. `instructions/EN-REVISION-EXECUTION-INSTRUCTIONS.md`
-6. `source/TOZA_EN_COPY_REVIEW.md`
-7. `harness/PAGE-BY-PAGE-CALIBRATION-EN-02-v1.md`
-8. the relevant skill files under `skills/`
-
-## Source-of-truth rules
-
-- Current owner decisions outrank older specifications.
-- The August revised-v2 spec is retained only as a historical/reference source where not superseded.
-- PA-01-v2 is protected approved copy.
-- Production templates are out of scope until exact copy is approved.
-- Substantive new decisions must be recorded in `state/EN-REVISION-DECISION-DELTA.md`.
-
-## Output location
-
-Put exact revision candidates under:
-
-`revisions/en-02-v2/`
-
-Do not edit production Nunjucks during the editorial phase.
+The original numbered editorial plan is complete through consolidation, with the review's optional density observations and protected wording exception explicitly recorded. Publishing is a separate planned workstream. No production templates, main branch or live site were changed.

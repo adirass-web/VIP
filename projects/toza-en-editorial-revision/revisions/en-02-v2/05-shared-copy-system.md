@@ -4,7 +4,7 @@ Source: reviewed EN-02-v2 at 787a5b9; warmth and paid-work round, 4 October 2026
 
 Intervention: **Component review / structure and copy revision — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — D-021/D-022/D-023 independent gate PASS; shared system provisional**
+Status: **APPROVED — exact copy accepted at aeb65a5; Phase 4/5 editorial review PASS**
 
 ## What changed
 
@@ -270,12 +270,14 @@ Anchor and endpoint checks remain part of later integration: retain one actual c
 
 ## Unresolved red-team issues
 
-None requiring correction in this round. The complete page and final eleven-candidate consistency gates passed under D-009.
+No blocker or major public-copy defect. Optional observations are recorded in review/phase-4-5-acceptance-review.md; no accepted wording was changed.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW — shared system provisional.** D-021 records approval of the previous discussion and excerpts. This assembled replacement and its metadata remain for exact owner review. No production integration is authorized.
+**APPROVED.** Owner accepted this exact-copy block and metadata at aeb65a51adc3217844be9c465de69a875084b8e4 (D-024). Shared Copy is accepted where applicable. The post-acceptance review introduced no prose changes. Publication planning is authorized; implementation, main merge and deployment have not been authorized by this record.
 
 ## Provenance and metadata
 
 Owner-authorized warmth, stage-clarity and presentation update under D-021–D-023. Page role and protected commercial facts retained; D-020 duration remains Typically four hours. Inspection concerns relevant devices and authorized access, not unrestricted private-content review. Approved urgent first aid remains within agreed scope where safely possible; full hardening is separately purchased. No new confidentiality guarantee, exclusive expertise claim or product inclusion. All four project skills applied, ten author sweeps and metadata review complete; independent page and current-candidate consistency gates PASS under D-009. Current review: review/owner-feedback-05-warmth.md. Source corpus, protected PA-01-v2 and locked harness remain unchanged; the earlier duration amendment remains separate.
+
+Post-acceptance state: D-024/D-025. Exact block hash recorded in approved/acceptance-manifest.json. Phase 4/5 review: review/phase-4-5-acceptance-review.md.

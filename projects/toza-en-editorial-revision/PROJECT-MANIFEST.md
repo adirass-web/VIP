@@ -31,3 +31,12 @@
 
 ## Final planned output
 - `TOZA-EN-COPY-SPEC-v3.md` — created only after exact approval of the 11 revised pages, shared copy, and PA-01-v2 consistency check.
+
+## Accepted and consolidated outputs — 4 October 2026
+- `TOZA-EN-COPY-SPEC-v3.md` — consolidated source/fact authority, created after acceptance and Phase 4/5 review.
+- `approved/acceptance-manifest.json` — exact accepted block hashes and immutable source fingerprints.
+- `approved/pa-01-v2-effective.md` — protected copy with the three approved duration substitutions only.
+- `revisions/en-02-v2/review/phase-4-5-acceptance-review.md` — new full review, findings and disposition.
+- `planning/2026-10-04-publication-plan.md` — proposed design/layout/integration/release plan grounded in existing source.
+
+The original planned-output entry above is fulfilled. Publication implementation is not started.

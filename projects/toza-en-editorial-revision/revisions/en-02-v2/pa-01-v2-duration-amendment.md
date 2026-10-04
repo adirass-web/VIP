@@ -2,7 +2,7 @@
 
 Date: 4 October 2026. Authority: D-020, explicit later owner instruction.
 
-Status: **READY FOR OWNER REVIEW — duration-only amendment independently passed**
+Status: **APPROVED D-020/D-024 — three exact duration substitutions; Phase 4 protected consistency PASS**
 
 ## What changed
 
@@ -50,4 +50,4 @@ Apply only these three substitutions when preparing the approved integration cop
 
 ## Approval and review state
 
-The owner approved the shorter public duration wording. Independent review of these three exact placements passed. No production integration, main merge or deployment is authorized. The full protected-page consistency review remains outstanding.
+The owner approved the shorter public duration wording. Independent review of these three exact placements passed. No production integration, main merge or deployment is authorized. The full protected-page consistency review is now complete; see review/phase-4-5-acceptance-review.md. No additional protected wording changed.

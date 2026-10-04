@@ -2,46 +2,41 @@
 
 Date: 4 October 2026
 
-## State
+## Accepted baseline
 
-All eleven candidates have received the D-021/D-022/D-023 warmth, hands-on-work and short-card revision through all four project skills and sequential independent gates under D-009. Each page and final current-candidate consistency passed. Prior discussion and excerpts are approved; exact approval of the newly assembled complete copy remains pending. Shared Copy remains provisional.
+The owner accepted all eleven candidate exact-copy blocks, including Shared Copy and metadata, at aeb65a51adc3217844be9c465de69a875084b8e4. D-024 records exact acceptance; Shared Copy is no longer provisional. The blocks are unchanged and hash-recorded in approved/acceptance-manifest.json. The protected Assessment incorporates only the already approved three D-020 duration substitutions.
 
-| Candidate | Intervention | Independent gate | Owner state |
-|---|---|---|---|
-| [Why Toza](../revisions/en-02-v2/01-why-toza.md) | S2/C2 | PASS | Exact review pending |
-| [Pricing](../revisions/en-02-v2/02-pricing.md) | S2/C2 | PASS | Exact review pending |
-| [FAQ](../revisions/en-02-v2/03-faq.md) | S2/C2 | PASS | Exact review pending |
-| [How Toza helps](../revisions/en-02-v2/04-what-happens.md) | S3/C2 | PASS | Exact review pending |
-| [Shared Copy System](../revisions/en-02-v2/05-shared-copy-system.md) | Component review | PASS | Provisional; exact review pending |
-| [Home](../revisions/en-02-v2/06-home.md) | S3/C3 | PASS | Exact review pending |
-| [Separation and Divorce](../revisions/en-02-v2/07-separation-divorce.md) | S2/C2 | PASS | Exact review pending |
-| [Business and Founder Dispute](../revisions/en-02-v2/08-business-founder-dispute.md) | S2/C2 | PASS | Exact review pending |
-| [They Know Something](../revisions/en-02-v2/09-they-know-something.md) | S2/C2 | PASS | Exact review pending |
-| [Inheritance Conflict](../revisions/en-02-v2/10-inheritance-conflict.md) | S2/C2 | PASS | Exact review pending |
-| [For Attorneys](../revisions/en-02-v2/11-for-attorneys.md) | S1/C2 | PASS | Exact review pending |
+## Original numbered plan
 
-## Current authority
+| Phase | Work | Status |
+|---|---|---|
+| 0 | Editorial system, framework adoption, calibration and four skills | Complete |
+| 1 | Why Toza, Pricing, FAQ, How Toza helps | Accepted |
+| 1.5 | Shared Copy including short cards and placement | Accepted |
+| 2 | Home and four situation pages | Accepted |
+| 3 | Attorneys; Not IT Support absorbed under D-016 | Complete / accepted |
+| 4 | Protected PA consistency | Complete; no factual contradiction |
+| 5 | Full-corpus editorial red team | PASS with optional observations |
+| 6 | Consolidated v3 source/fact specification | Created from accepted sources |
 
-D-014/D-016 govern settings hardening, practical security habits and teaching, including relevant identities/data/access arrangements within agreed scope. No device monitoring or security-software installation. No device, migration or deliverable expansion is inferred. Benefits remain attached to the purchased stage.
+There are ten revised public pages, one protected public Assessment page and one shared component system. The eleven numbered candidate files include Shared Copy.
 
-D-016 keeps service names and Request a private conversation, uses How Toza helps at the existing process URL, and assigns category explanation/comparison to FAQ with a short Why Toza explanation. Standalone Not IT Support is absorbed. D-016 reopens FAQ's earlier qualified acceptance. The locked architecture remains a historical baseline read with this explicit override. PA-01-v2 stays protected.
+## Fresh review result
 
-D-017 records the owner's brand rules: Latin-only toza wordmark and Toza running text, TOH-zah pronunciation across English/Hebrew/Russian, owner-supplied Japanese origin. No all-capitals, translated or transliterated brand. Historical technical filenames and source titles are not renamed. D-018 authorizes continuing the six texts, not exact approval or production integration.
+No blocker, major public-copy defect or unresolved public-promise conflict. Optional observations: Home's Assessment repetition, Why's direct-delivery repetition and protected PA's permitted older conditional emphasis. No optional cuts were applied. The ten-sweep editor and independent D-009 red team used the actual project authority and current decisions. The Code Review plugin did not run.
 
-D-019 removes incident-dependent sales framing and emphasizes expert connected-access interpretation and implementation. Assessment findings and recommended next steps remain open, with no predetermined second purchase. D-020 supersedes earlier public duration wording: Typically four hours. It changes no scope, price, in-person delivery, outcome-based completion, operational minimum or urgent-arrival term. The separate pa-01-v2-duration-amendment.md records three exact substitutions without changing the protected source.
+Current evidence: revisions/en-02-v2/review/phase-4-5-acceptance-review.md. Earlier page gates are historical. v3 is at TOZA-EN-COPY-SPEC-v3.md; exact hashes/effective protected copy are under approved/. Source, locked instructions/harness and skills remain unchanged.
 
-D-021 records approval of the preceding founder, privacy, positioning, naming and stage-clarity recommendations and excerpts. D-022 requires warmer, more engaging copy throughout, with inspection, diagnosis and approved urgent first aid explicit in the paid visit. D-023 adds short action/benefit cards with essential scope, price and detail links, while retaining complete reference descriptions. No new commercial scope, guarantee or institutional endorsement is inferred.
+## Publication workstream
 
-## Review evidence and checks
+Planning completed in planning/2026-10-04-publication-plan.md. Proposed approach: reuse Eleventy/Nunjucks, the existing visual system and Cloudflare Pages; target page layout, exact content/metadata, shared-contact composition and route/schema/reference consistency. Design, implementation and launch are not yet performed.
 
-Current record: revisions/en-02-v2/review/owner-feedback-05-warmth.md. The prior positioning, benefits and continuation records describe historical versions. All eleven page gates and final candidate consistency passed under D-009. The Code Review plugin did not run.
+Repository inspection found older commercial claims in production templates/schema/reference text and Hebrew. README's English-only claim is stale: the build includes Hebrew. Decide how existing Hebrew marketing pages enter the release before publication; do not silently withdraw them or leave contradictory offers. Current CI route expectations must be updated with approved route changes.
 
-All four Pricing tables and FAQ questions/comparison match 787a5b9. Original page currency values are retained; Shared adds the short-card prices. Pricing visibly separates pre-booking qualification from paid inspection, diagnosis and approved urgent first aid. Six presentation cards are 35–72 words including headings, essential scope, price and detail links. Current duration, brand, routes, declared anchors, contact, service model and diff checks pass. Source, protected source, instructions, doctrine/harness, skills and production remain unchanged. The duration-only PA amendment passed separately.
+## Verification limits
 
-## Next work
+Eleven exact blocks match the accepted commit; source/harness/skills/production are unchanged. Protected effective copy has only three duration substitutions. Read-only Hebrew-copy, Leaving-alignment and CI-contract checks pass. Full build/browser/RTL verification was not completed: dependencies and built output are absent. The RTL check stopped at its missing-build prerequisite. No live deployment/visual quality claim is made.
 
-Exact owner review of the eleven complete candidates and metadata; Shared Copy stays provisional until reviewed. Later protected PA-01-v2 consistency review, Phase 5 full-corpus audit and consolidated v3 specification after exact approval remain outstanding. No silently approved wording.
+## Git and next step
 
-## Production status
-
-Editorial branch editorial/toza-copy-harness; PR #51 remains open for review. No production-template changes, live route deletion/redirect, main merge, integration or deployment. Later technical integration must handle the former category route and live inbound links using the approved FAQ destination.
+Editorial branch editorial/toza-copy-harness, PR #51 open and unmerged. Main is untouched. Review the proposed publication plan, then authorize an implementation phase with layout review and the language/route decisions. Final production approval follows a reviewed, tested preview.

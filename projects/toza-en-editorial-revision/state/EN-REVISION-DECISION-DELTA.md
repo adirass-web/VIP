@@ -224,3 +224,21 @@ This register is the bridge between page approval and the future consolidated v3
 - **Affected pages/components:** Shared Copy System, future presentation cards and their placement instructions.
 - **Status:** Approved component direction; exact cards pending review.
 - **Boundaries:** Cards are not substitutes for canonical Pricing or written terms. No automatic deployment, generated schema publication, changed prices or new inclusions. The existing shared system remains provisional until exact approval.
+
+### D-024 — Exact acceptance of the current English copy
+- **Date:** 2026-10-04
+- **Category:** Workflow / exact copy approval
+- **Decision:** The owner accepts all eleven current candidate exact-copy blocks, including metadata and Shared Copy, at commit aeb65a51adc3217844be9c465de69a875084b8e4. Shared Copy is no longer provisional. The already authorized three-substitution protected duration amendment is retained; no other PA rewrite is inferred.
+- **Authority:** Owner: “I accept the copy.”
+- **Supersedes:** Pending exact-review/provisional status of this accepted version and its incorporated direction/excerpts. Historical review records describe their own earlier state.
+- **Status:** APPROVED exact copy. Hashes and sources are recorded in approved/acceptance-manifest.json.
+- **Boundaries:** Acceptance does not authorize unrequested stylistic cuts, protected PA reopening, translation, production-template edits, main merge or deployment. Non-public implementation annotations inside Shared Copy are not webpage text; their former pending labels are superseded by this acceptance.
+
+### D-025 — Post-acceptance full review and publication planning
+- **Date:** 2026-10-04
+- **Category:** Workflow
+- **Decision:** Locate and use today's actual specifications and adapted skills for another review; after copy acceptance, plan publication, including design, layout and technical steps, using the existing solid foundation.
+- **Authority:** Explicit owner instruction following acceptance; later status question asks where the original numbered plan stands.
+- **Scope:** Complete Phase 4 protected consistency and Phase 5 full-corpus editorial review, then compile Phase 6 v3 from accepted sources. Prepare a concrete publication plan; no production implementation is requested in this instruction.
+- **Result:** Independent D-009 review PASS with optional density/positioning observations and no public-promise conflict. Accepted wording remains unchanged. The consolidated spec records protected PA's permitted positioning exception. Publication design and language/route choices remain proposals.
+- **Compression note:** Report actual results honestly: situation pages are materially shorter; Home and Process have smaller reductions. Exact acceptance governs present wording and does not permit further cuts merely to meet a length target.
