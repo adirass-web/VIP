@@ -121,11 +121,16 @@ When editing against multiple documents:
 
 If a later approved artifact conflicts with an older spec, flag **authority conflict / spec stale**. Do not “correct” the newer approved copy back to the older fact.
 
-Example calibration conflict:
-- older strategic spec: Assessment ₪3,500; one phone + one computer; no fixed duration;
-- EN-02-v1/approved PA-01-v2: Assessment ₪3,600 including VAT; one main phone + one PC/iPad/second phone; at least two hours, typically four.
+Current governing commercial decisions, confirmed by the owner on 4 October 2026:
+- Private Exposure Assessment: **₪3,600 including VAT**.
+- Assessment scope: **one main phone + one other device: a PC, iPad or second phone**.
+- Public duration language: **at least two hours in person; typically four**, while completion remains outcome-based around the agreed intake, mapping, diagnosis and approved urgent first aid.
+- **Inner Circle Shield** is approved product architecture, starting at **₪42,000 including VAT**, with the current EN-02-v1 scope.
+- The full eligible Assessment fee may be credited toward **Personal Shield, Inner Circle Shield or Bespoke Private Protection** when the current credit conditions are met.
 
-The harness must escalate the documentation mismatch rather than overwrite approved commercial copy.
+These five decisions supersede conflicting language in the August strategic specification. Treat the older specification as stale on those points. Do not reopen them as authority conflicts unless a later owner decision changes them.
+
+A consolidated replacement specification should be created later so the strategic spec and current commercial authority no longer diverge.
 
 ## 10. Repetition policy
 
