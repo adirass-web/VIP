@@ -18,6 +18,15 @@ Before any copy work:
 
 If sources conflict, create an **Authority Conflict** finding. Do not silently reconcile.
 
+Current ratified facts override the older August specification where they differ:
+- Assessment ₪3,600 including VAT;
+- one main phone + one PC/iPad/second phone;
+- at least two hours in person, typically four, with outcome-based completion preserved;
+- Inner Circle Shield approved at its current EN-02-v1 architecture, from ₪42,000 including VAT;
+- eligible Assessment credit may apply to Personal Shield, Inner Circle Shield or Bespoke Private Protection under the current conditions.
+
+Do not flag these five as unresolved unless a later owner decision changes them.
+
 ## Workflow
 
 ### Gate 0 — Corpus and authority lock
