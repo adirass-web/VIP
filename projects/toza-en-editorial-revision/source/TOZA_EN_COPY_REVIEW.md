@@ -997,3 +997,477 @@ We examine the relevant connections together, identify what needs attention and 
 ## A practical first step
 
 **Private Exposure Assessment: ₪3,600 including VAT.**
+
+**At least two hours in person. Typically four.**
+
+The initial visit covers one main phone and one other device: a PC, iPad or second phone. We review the relevant identities, accounts, apps, recovery routes, permissions and private information connected to them within the agreed scope.
+
+We start with your situation, map the relevant access and explain the findings. We carry out approved urgent first aid where it can be done safely within scope. Any expansion of work or price needs your agreement before we proceed.
+
+You receive a clear summary of what was reviewed, what urgent exposure was found, what changed, what remains, whether broader work is justified and what to do next. The summary is yours even if you do not continue to another service.
+
+[See the initial visit in detail](/en/private-exposure-assessment.html) · [How the work proceeds](/en/what-happens-during-the-visit.html)
+
+## Broader protection is a separate decision
+
+Personal Shield provides broader device and account protection, essential migration, security-key setup, training and verification. If that work is justified, we explain the recommendation and set out its scope and price before you decide. Additional people or a more complex environment may need a different service, with the scope set out in writing.
+
+The full ₪3,600 initial fee is credited toward Personal Shield, Inner Circle Shield or Bespoke Private Protection when the selected engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. Extras and optional follow-up services are quoted individually.
+
+[Compare the services and full prices](/en/pricing.html)
+
+## Your information and your attorney
+
+You remain present and keep control of your credentials. We work only with what is disclosed, observable or otherwise lawfully accessible within the agreed scope. A family connection does not authorize work on someone else's account or device.
+
+With your authorization, an attorney-friendly summary can describe the work performed and remaining issues. A referral does not automatically give your attorney access to findings or personal information.
+
+We do not investigate relatives, reconstruct who accessed something in the past, collect evidence or provide legal advice. Toza does not determine who is entitled to an account, document or asset. Our summary is not a forensic report or evidence document.
+
+[Read the service boundaries](/en/faq.html#boundaries) · [Information for attorneys](/en/attorneys.html)
+
+## Request a private conversation
+
+Start with a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. The first conversation checks fit and urgency without device inspection, mapping, diagnosis or technical work. Contacting Toza does not commit you to purchase.
+
+If the service fits, you receive a written scope and price. The paid visit is scheduled after your explicit acceptance and receipt of payment.
+
+Suggested message: **“I'd like a private conversation. Please let me know the next step.”**
+
+Do not send passwords, recovery codes, screenshots, estate or legal documents, intimate material or details, or detailed allegations in the first message.
+
+[Request a private conversation](#contact)
+
+---
+
+# For Attorneys
+
+## Metadata
+
+Title: Personal Digital Protection for Your Clients | Toza
+
+Description: Refer clients for in-person work on current digital exposure, with client authorization. Approved urgent fixes and separately agreed broader protection.
+
+Social description: When your client's digital life may become leverage. Direct expert work on their own accounts and devices, with clear scope and client control.
+
+## Hero
+
+For attorneys
+
+# When your client's digital life may become leverage.
+
+Shared access can remain relevant long after a personal or business relationship changes. A client may know the dispute well and still be unsure who can reach their accounts, devices or private information.
+
+Toza works on the client's current digital exposure. Dr. Lior Tabansky reviews the relevant access in person, explains what matters and makes approved urgent changes that can be carried out safely within the agreed scope. Broader protection is a separate engagement.
+
+[Request a private conversation](#contact)
+
+In person · With the client present · The client controls their credentials
+
+## When a referral may help
+
+Consider Toza when a client:
+
+- Says the other side appears to know private information, without knowing how.
+- Is unsure which devices, accounts or apps remain connected to a former partner, colleague or relative.
+- Has changed passwords but still has questions about recovery settings or shared services.
+- Is entering a separation, business dispute or inheritance conflict in which personal digital access matters.
+- Needs to understand the consequences and sequence of account changes before making them.
+
+These are reasons to review the client's environment. They are not proof of unauthorized access or another person's conduct.
+
+## Client authority comes first
+
+A referral opens a conversation about fit. It does not authorize device access, technical work or disclosure of findings. We obtain the client's authorization independently of the referral and work within the agreed scope of their own authorized digital environment.
+
+The client stays present and controls passwords, recovery codes and authentication. Material changes are explained and require approval. We do not take remote control of devices or keep the client's credentials for ongoing use.
+
+If coordination with counsel would help sequence the work, we agree it with the client. A referral does not make the attorney the automatic recipient of the client's information.
+
+## The first paid visit
+
+**Private Exposure Assessment: ₪3,600 including VAT.**
+
+**At least two hours in person. Typically four.**
+
+The initial visit covers one main phone and one other device: a PC, iPad or second phone. It includes relevant identities, accounts, apps, permissions, recovery routes and access to private information within the agreed scope.
+
+We begin with the client's situation, trace the relevant connections and diagnose what needs attention. We carry out approved urgent first aid where it is safely possible within scope. Work that expands the scope or price requires fresh agreement.
+
+The client receives a practical summary of what was reviewed, urgent exposure found, changes made, what remains, whether broader protection is justified and the next steps. That summary is included even when the client buys no further service.
+
+[See the initial visit in detail](/en/private-exposure-assessment.html) · [How the work proceeds](/en/what-happens-during-the-visit.html)
+
+## Further work requires a separate decision
+
+When the work needed extends beyond the initial visit, we explain the recommendation and set out a separate scope and price. Personal Shield carries out broader device and account protection, essential migration, security-key setup, training and verification. Inner Circle Shield coordinates protection for four people on the client's side. Bespoke Private Protection addresses individually agreed requirements in severe, unusual or highly complex situations.
+
+There is no automatic continuation. The full ₪3,600 initial fee is credited toward any of these three services if the engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. Extras and optional follow-up services are quoted individually.
+
+[Compare the services and full prices](/en/pricing.html)
+
+## A clear summary, shared only with permission
+
+With the client's explicit authorization, we can prepare or share an attorney-friendly summary describing the work performed and relevant remaining issues. We confirm what the client authorizes us to disclose. The initial summary and a full engagement's private dated record serve as practical references for the client; they do not establish what another person did.
+
+Toza does not investigate the other side, reconstruct past events forensically, preserve chain of custody, collect legal evidence or provide legal conclusions. The work and records do not guarantee that every exposure has been found or removed.
+
+[Read the service boundaries](/en/faq.html#boundaries)
+
+## Thoughtful sequencing, with the client
+
+Changing a recovery route or shared service can affect access the client still uses. Some changes also generate notifications. We explain those implications and agree the work with the client rather than assuming that every setting should be changed immediately.
+
+With the client's permission, we can coordinate relevant timing with counsel. Legal strategy remains with the attorney; technical changes still require the client's authorization.
+
+## Request a private conversation
+
+Attorneys can ask about service fit and the referral process through WhatsApp or Signal. Keep the first message short and neutral, without identifying case details. Dr. Tabansky replies personally as soon as possible. The first conversation includes no review of a client's devices or documents, mapping, diagnosis or technical work.
+
+Suggested message: **“I'd like a private conversation about a possible referral. Please let me know the next step.”**
+
+Please do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations. A private conversation does not commit the client to purchase.
+
+If the service fits, the client receives a written scope and price. The paid visit is scheduled after the client's explicit acceptance and receipt of payment. Client authorization remains necessary whether the introduction comes from counsel or directly from the client.
+
+[Request a private conversation](#contact)
+
+---
+
+# Why This Is Not IT Support
+
+## Metadata
+
+Title: Why This Is Not IT Support
+
+Description: Toza addresses personal digital exposure across devices, accounts and recovery routes. See how the service differs from routine support and individual tools.
+
+Social description: A working device can still expose private information. Toza connects the account, access and situation details, then carries out the work you approve.
+
+## Hero
+
+Why This Is Not IT Support
+
+# A working device can still expose private information.
+
+Your phone may work perfectly while an old device receives messages, a recovery address permits account access or a shared app reveals your location. In a separation or dispute, the question is what those connections expose and which changes should come first.
+
+Toza works across the relevant devices, identities, accounts and apps, with you present. Dr. Lior Tabansky explains the access that matters and carries out the agreed protection work with your approval.
+
+**[Request a private conversation](#contact)**
+
+In person · With you present · Your credentials remain under your control
+
+## The situation changes the work
+
+Someone may have had legitimate access for years. That access can remain after trust breaks down, even if a device shows no fault. A change to one account may depend on another account, a shared service or a recovery method.
+
+We start with your situation, trace the relevant connections and explain what each change will do. The work draws on both technical knowledge and judgment about scope, timing and privacy. We agree material changes with you before acting.
+
+## Choose help that matches the task
+
+Routine support, individual security tools and help from someone you know can all be useful. What matters is whether the service you choose covers the work you need, who will see your information and what result you can expect.
+
+| Option | Useful for | Check when your concern is personal exposure |
+|---|---|---|
+| Someone you know | Familiar help with setup or a specific problem | Whether you want to share the personal context, and whether the person can follow access across devices and accounts |
+| IT support | Device faults, setup, maintenance and agreed technical work | Whether the agreed scope includes your personal situation, connected access, change sequencing and verification |
+| Apple, Google or Microsoft support | Questions or access problems within that provider's products and services | Which cross-provider connections and personal circumstances fall outside the support request |
+| A password manager | Creating and managing credentials | Which signed-in devices, recovery methods and sharing permissions still need separate attention |
+| Antivirus or endpoint protection | Detecting threats covered by the product's capabilities | Whether the concern is malicious software or legitimate access that is no longer appropriate |
+| A private investigator | Investigative work within an agreed lawful scope | Whether you need investigation or protection of your own digital environment; Toza provides the latter |
+| Your own changes | Steps you understand and can carry out confidently | Whether you know the effects on other accounts, recovery and shared access before changing them |
+
+An existing adviser or IT provider may already cover part of the work. We explain Toza's scope so you can make an informed choice, without assuming other help is inadequate.
+
+## What you receive from Toza
+
+**A practical initial visit.** Private Exposure Assessment costs **₪3,600 including VAT** and involves at least two hours in person, typically four. It covers one main phone and one other device: a PC, iPad or second phone, with the relevant identities, accounts, apps, permissions and recovery routes.
+
+We trace the access, diagnose what matters and address urgent exposure that can safely be fixed within the agreed scope, with your approval. You receive a clear summary of what was reviewed, what was found, what changed, what remains, whether broader protection is justified and the next steps. You receive it even if you buy nothing further.
+
+**Broader protection when needed.** Personal Shield is a separately purchased service. It carries out agreed device and account hardening, essential migration, security-key setup, training and verification. You receive a private dated record and the included limited adjustment support. We explain the recommendation, scope and price before you decide.
+
+[What the initial visit includes](/en/private-exposure-assessment.html) · [Compare services and prices](/en/pricing.html)
+
+## Privacy and clear boundaries
+
+You are present during the work and control your credentials. Toza does not keep them for ongoing use or remotely control your devices. During the core engagement, Toza does not upload a client dataset to a Toza cloud-analysis platform or retain a copy or comprehensive log of your digital life beyond agreed deliverables and ordinary lawful business records.
+
+We work within your authorized digital environment. We do not investigate another person, reconstruct events forensically, collect legal evidence or give legal advice. The dated record documents agreed work; it is not a forensic report, certification or security guarantee. We do not promise to discover every account or eliminate every exposure.
+
+[Questions and service boundaries](/en/faq.html)
+
+## Start with a private conversation {#contact}
+
+Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. The first conversation checks fit and urgency; it includes no device inspection, mapping, diagnosis or technical work.
+
+If Toza fits the task, you receive a written offer covering the scope, inclusions, exclusions, price, agreed additions and payment terms. The initial visit is scheduled after your explicit acceptance and receipt of payment. Contacting Toza does not commit you to purchase.
+
+Suggested message: **“I'd like a private conversation. Please let me know the next step.”**
+
+Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in the first message.
+
+**Request a private conversation: WhatsApp / Signal**
+
+---
+
+# Initial Paid Visit: Already Approved
+
+## Metadata
+
+Title: Private Exposure Assessment | Toza
+
+Description: In-person work on your devices and accounts: access mapping, approved urgent fixes within scope and clear next steps. ₪3,600 including VAT.
+
+Social description: Take control of your accounts, devices and private information. Hands-on work with Dr. Lior Tabansky. At least two hours in person, typically four.
+
+## Hero
+
+Private Exposure Assessment · ₪3,600 including VAT
+
+# Take control of your accounts, devices and private information.
+
+An old phone can still receive your messages. A recovery email can reopen an account after you change its password. A shared app can keep revealing your location.
+
+Dr. Lior Tabansky works with you, in person, to trace the relevant access and identify what puts you at risk. He fixes urgent problems that can be addressed safely within the agreed scope, with your approval. You keep control of your credentials.
+
+**At least two hours in person. Typically four.**
+
+**Request a private conversation**
+
+The first conversation checks fit and the next step. You pay only after accepting a written scope and price; we then schedule the visit.
+
+## Your accounts and private information, across two devices
+
+The work covers one main phone and one other device: a PC, iPad or second phone, together with the relevant:
+
+- Digital identities, such as your main email and Apple, Google or Microsoft accounts.
+- Accounts, apps, signed-in devices and permissions.
+- Recovery email addresses, phone numbers and other ways to regain account access.
+- Shared services and settings that control access to messages, photos, documents and location information.
+
+We examine access to the accounts and private information connected to those devices. We work only within your authorized environment, reviewing what is disclosed, observable or otherwise lawfully accessible within the agreed scope.
+
+## What you get for ₪3,600
+
+**Direct work with a senior expert.** We start with your situation: what changed, what concerns you, which accounts matter and who previously had legitimate access. You work directly with Dr. Tabansky throughout the visit.
+
+**Know which access matters.** We examine signed-in devices, recovery details, account permissions and shared apps. We explain what they can reveal or allow, and which problems need attention first.
+
+**Urgent fixes, with your approval.** Where we find urgent exposure that can be addressed safely within the agreed scope, we make the changes during the visit. We explain each material change before acting. If further work would expand the scope or price, we agree that with you first.
+
+**A practical summary and ordered next steps.** You receive a clear account of what we reviewed, what urgent exposure we found, what we changed, what remains, whether broader protection work is justified and what to do next. You receive this summary even if you buy nothing further. We share an attorney-friendly version only with your authorization.
+
+Plan for at least two hours of in-person work; a typical visit takes four hours. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid.
+
+## Where the first visit ends and Personal Shield begins
+
+The first paid visit traces the relevant access, completes approved urgent first aid within the agreed scope and sets the next steps.
+
+**Personal Shield carries out the broader protection work.** We tighten security across the two devices and relevant accounts, set up new core accounts where needed, migrate essential access and recovery, supply and configure two security keys, train you, test the changes and provide a private dated record. It includes one primary working day, a second if needed, and 14 days of limited support for issues arising directly from our changes.
+
+We recommend Personal Shield when the work needed goes beyond the agreed initial visit. We explain why, confirm the scope and price, and ask for your decision before starting. There is no automatic continuation.
+
+## Price and credit
+
+**Initial visit: ₪3,600 including VAT.** Scheduled after you accept the written scope and price and payment is received.
+
+The fee is credited in full toward Personal Shield, Inner Circle Shield or Bespoke Private Protection if the selected engagement begins within 14 days of completion of the initial service. Booking alone does not qualify.
+
+**Personal Shield: ₪14,000 including VAT.** With the eligible ₪3,600 credit, the remaining balance is **₪10,400 including VAT**. Agreed additions are separate.
+
+For Inner Circle, the initial visit covers the initial client's two devices and relevant accounts. Review and mapping for the remaining group are included in the separately purchased group engagement. The eligible credit is applied once to that engagement.
+
+**See pricing** · **How the work proceeds**
+
+## Urgent visits in Central Israel
+
+Request a four-hour urgent visit. We confirm availability before you pay. For an accepted four-hour booking, we arrive within four hours of both Toza's acceptance and receipt of payment. The clock starts when both conditions are met. This is an arrival commitment, not a four-hour completion promise.
+
+| Urgent booking | Surcharge, including VAT | Initial visit plus surcharge, including VAT |
+|---|---:|---:|
+| Ordinary urgent visit | ₪4,800 | ₪8,400 |
+| Weekend or holiday urgent visit | ₪6,000 | ₪9,600 |
+
+The weekend/holiday surcharge replaces the ordinary surcharge. Other charges apply only if separately agreed. Outside Central Israel, we agree the arrival time and travel terms before you accept.
+
+## Your presence. Your approval. Your credentials.
+
+You are present while we work. You control your passwords, recovery codes and authentication. Toza does not keep those credentials for ongoing use or remotely control your devices.
+
+During the core engagement, Toza does not upload a client dataset to a Toza cloud-analysis platform or retain a copy or comprehensive log of your digital life beyond agreed deliverables and ordinary lawful business records.
+
+We work on your own authorized digital environment. We do not investigate another person, reconstruct past events forensically, collect legal evidence or give legal advice.
+
+## Start with a private conversation
+
+Send a short, neutral message through WhatsApp or Signal. Dr. Tabansky replies personally as soon as possible. The first conversation checks fit and urgency; it includes no device inspection, mapping, diagnosis or technical work.
+
+If the service fits, you receive a written offer covering the work, inclusions, exclusions, price, agreed additions and payment terms. Paid work starts only after your explicit acceptance and receipt of payment. We send preparation instructions directly.
+
+Suggested message: **“I'd like a private conversation. Please let me know the next step.”**
+
+Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in the first message.
+
+**Request a private conversation**
+
+---
+
+# Shared English copy
+
+## Navigation and shared labels
+
+| Surface | Proposed text | Content destination |
+|---|---|---|
+| Brand accessible name | Toza home | /en/ |
+| Main navigation label | Main navigation | Shared navigation |
+| Mobile menu button | Menu | Existing menu control |
+| Skip link | Skip to main content | Main content |
+| Situation menu | Situations | /en/#situations |
+| Founder page | Why Toza | /en/why-us.html |
+| Process | What happens | /en/what-happens-during-the-visit.html |
+| Services | Pricing | /en/pricing.html |
+| Questions | FAQ | /en/faq.html |
+| Professional page | For attorneys | /en/attorneys.html |
+| Primary action | Request a private conversation | #contact on the current page |
+| Boundary page | Why This Is Not IT Support | /en/not-it-support.html |
+| Legal link | Privacy notice (Hebrew) | /privacy.html, actual language Hebrew |
+| Legal link | Terms of use (Hebrew) | /terms.html, actual language Hebrew |
+
+### Situation-link labels
+
+Primary: **Separation or divorce** and **Business or founder dispute**.
+
+Supporting: **Inheritance conflict** and **They know something they shouldn't**.
+
+The old Commercial Spying and Private Investigator links are replaced by the relevant retained destinations. Controlling Relationship is retired; no sales link is proposed for that old page.
+
+## Shared footer contact block
+
+Eyebrow: **Start privately**
+
+Heading: **Start with a private conversation.**
+
+Introduction:
+
+Send a short, neutral message through WhatsApp or Signal. Dr. Lior Tabansky replies personally as soon as possible. The first conversation checks fit and urgency; it includes no device inspection, mapping, diagnosis or technical work.
+
+If the service fits, you receive a written scope and price. The paid visit is scheduled after your explicit acceptance and receipt of payment. Contacting Toza does not commit you to purchase.
+
+Buttons: **Message on WhatsApp** · **Message on Signal**
+
+Accessible group label: **Private conversation messaging options**
+
+First-message guidance:
+
+Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in the first message.
+
+Neutral suggested or prefilled text:
+
+**I'd like a private conversation. Please let me know the next step.**
+
+Keep this message neutral on every situation page. Do not insert a dispute type, person, allegation, price acceptance or purchase request into it.
+
+## Short trust line and footer identity
+
+**In person · With you present · You control your credentials**
+
+Footer descriptor: **Private, in-person protection for your accounts and devices.**
+
+Footer section labels: **Explore** · **Legal**
+
+Copyright: **© 2026 Toza**
+
+Do not abbreviate the privacy explanation into no-cloud, no-logs or no-third-party claims.
+
+## Reusable full privacy and approval wording
+
+You control your passwords, recovery codes and authentication. Toza does not keep them for ongoing use or remotely control your devices.
+
+During the core engagement, Toza does not upload a client dataset to a Toza cloud-analysis platform or retain a copy or comprehensive log of your digital life beyond agreed deliverables and ordinary lawful business records.
+
+We work within your authorized digital environment. We explain material changes before acting and obtain your approval. Any change in scope or price is agreed before that additional work begins. An attorney-friendly summary is shared only with your authorization.
+
+For Inner Circle, each participant receives a private dated record and the shared-network work is recorded separately. Personal details are shared only with that participant's consent.
+
+## Reusable short service descriptions
+
+**Initial paid visit:** Direct work with Dr. Lior Tabansky on one main phone and one PC, iPad or second phone, plus relevant identities, accounts, apps, recovery and access to private information. Trace the relevant access, complete approved urgent fixes safely possible within scope, and receive a practical summary and next steps. At least two hours in person, typically four. ₪3,600 including VAT.
+
+**Personal Shield:** Broader device and account protection for one person, covering one main phone and one PC, iPad or second phone. Includes essential migration where needed, two supplied, configured and tested security keys, personal training, verification, a private dated record, one primary working day with a second included if needed, and 14 days of limited adjustment support for issues directly related to Toza's changes. Fixed ₪14,000 including VAT; a separate explicit purchase.
+
+**Inner Circle Shield:** Coordinated protection for four people, each with one main phone and one PC, iPad or second phone. Each receives the same standard of device and account protection, essential migration, training and verification as Personal Shield, plus two supplied, configured and tested security keys per person, eight total. Includes one shared home/home-office network and router in addition to the eight personal devices, private individual records and a separate shared-network record. Typically 2–4 working days in person. Includes 14 days of limited adjustment support for all four and the network from completion of the group's protection work, for issues directly related to Toza's changes. From ₪42,000 including VAT; scope, schedule and total agreed in writing. The initial paid visit covers the initial client; remaining-group review and mapping are included in the separately purchased group engagement.
+
+**Bespoke Private Protection:** Individually agreed scope and price for unusual or highly complex situations requiring different work. A separate decision after the initial visit.
+
+**Extras and follow-up:** Quoted individually. Extra people/devices, separately scoped network work and vehicle access reviews require agreed scope and price. Annual Shield Review and Priority Retainer follow a completed full service and are separate from included adjustment support.
+
+**Credit:** The full ₪3,600 initial fee is credited toward Personal Shield, Inner Circle Shield or Bespoke Private Protection if the selected engagement begins within 14 days of completion of the initial service. Booking alone does not qualify. Apply the credit once to a group engagement; agreed additions are separate.
+
+**Urgency:** Availability is confirmed before payment. For an accepted four-hour urgent booking in Central Israel, arrival is within four hours after both Toza's acceptance and receipt of payment. Ordinary surcharge ₪4,800 including VAT; weekend/holiday surcharge ₪6,000 including VAT replaces it. This is an arrival commitment, not completion within four hours.
+
+## English descriptive structured content
+
+These proposed descriptions reflect approved service facts and remain subject to owner approval of exact copy. They are not generated JSON-LD or validation results.
+
+**Organisation description:** Toza provides private, in-person work on personal devices, accounts and digital access for consequential personal and business disputes. Clients work directly with Dr. Lior Tabansky, stay present and control their credentials.
+
+**Founder name:** Dr. Lior Tabansky
+
+**Founder role:** Senior cybersecurity expert, researcher and adviser.
+
+**Founder professional profile:** https://cyberdrtabansky.com
+
+**Offer descriptions:** Use the corresponding short service descriptions above, with the full product name Private Exposure Assessment as the initial offer label. Initial price 3600 ILS; Personal fixed 14000 ILS; Inner Circle starts at 42000 ILS and must retain the starting-price qualification; Bespoke and extras have individually agreed prices. All public amounts include VAT.
+
+**FAQ descriptions:** Match the final visible English FAQ questions and answers. Do not add unseen guarantees, availability, legal claims or retired service categories.
+
+**Language statement:** The historical site includes English and Hebrew. Current content drafting is English only; Hebrew adaptation is deferred. Do not change public service-language availability simply because drafting is phased.
+
+## Proposed English service summary for LLMS/reference content
+
+### Toza
+
+Toza provides private, in-person protection for personal accounts, devices and digital access. Clients work directly with Dr. Lior Tabansky within their authorized environment, stay present and control their credentials. The service addresses exposure that can matter in separation, business or inheritance disputes and uncertainty about private information.
+
+Start with a private conversation through WhatsApp or Signal. Qualification includes no device inspection, mapping, diagnosis or technical work. Paid work requires a written scope and price, explicit acceptance and receipt of payment.
+
+The initial Private Exposure Assessment costs ₪3,600 including VAT. It covers one main phone and one PC, iPad or second phone, relevant access mapping and diagnosis, approved urgent first aid safely possible within scope, and a useful summary even without further purchase. It takes at least two hours in person, typically four.
+
+Personal Shield costs ₪14,000 including VAT for one person with the same two-device allowance. Inner Circle Shield starts at ₪42,000 including VAT for four people, eight personal devices, eight security keys and one included shared home/home-office network and router. Full-service inclusions and limits are set out on Pricing. Bespoke Private Protection, extras and optional follow-up are individually scoped and priced. Continuity follows a completed full service.
+
+The full ₪3,600 initial fee is credited once toward Personal Shield, Inner Circle Shield or Bespoke when the selected engagement begins within 14 days of initial-service completion. Booking alone does not qualify.
+
+For accepted four-hour urgent bookings in Central Israel, availability is confirmed before payment and the arrival clock starts after both acceptance and payment receipt. The ordinary VAT-inclusive surcharge is ₪4,800; weekends or holidays cost ₪6,000 instead. Arrival is not a completion promise.
+
+Toza does not upload a client dataset to a Toza cloud-analysis platform during the core engagement or retain a copy or comprehensive log of a client's digital life beyond agreed deliverables and ordinary lawful business records. The service does not include remote device control, investigation of another person, forensic reconstruction, evidence collection or legal advice.
+
+### English page directory
+
+- Home: /en/
+- Why Toza: /en/why-us.html
+- Initial paid visit: /en/private-exposure-assessment.html
+- What Happens: /en/what-happens-during-the-visit.html
+- Pricing: /en/pricing.html
+- FAQ: /en/faq.html
+- Separation/Divorce: /en/separation-divorce.html
+- Business/Founder Dispute: /en/business-dispute.html
+- Inheritance Conflict: /en/inheritance-clash.html
+- They Know Something: /en/they-know-something.html
+- Attorneys: /en/attorneys.html
+- Why This Is Not IT Support: /en/not-it-support.html
+
+## Retirement response: proposed English wording
+
+**This page has been retired.**
+
+This service page is no longer available.
+
+This neutral text is a proposal for the retired Controlling Relationship route if a response body is needed. No CTA or unrelated sales redirect is proposed. Actual response status and delivery belong to the later technical phase.
+
+---
+
+## Review status
+
+This complete English set has undergone commercial, clarity and source review. New page wording is pending owner approval. The proposed retirement response is pending wording approval. Operational questions about exceptional completion, urgent-fee credit/repeats, provider-delay credit and payment/cancellation/retention practices remain tracked in the review pack rather than answered by invention. Hebrew adaptation is deferred. This document is not a live website or a release authorization.
