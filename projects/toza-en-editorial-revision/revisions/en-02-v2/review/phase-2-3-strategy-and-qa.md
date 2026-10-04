@@ -82,7 +82,7 @@ Started after Inheritance passed. Ten sweeps: professional referral value leads;
 
 One minor required correction, A-RT-01, accepted: the first and only shortened “Bespoke work” reference became the approved product name “Bespoke Private Protection.” This is consistent with D-016/current service names. The separate reviewer rechecked the correction and passed the complete candidate. No factual decision was needed and no substantive authority conflict remains.
 
-Initial scores: clarity 4.8, differentiation 4.9, premium 4.7, human credibility 4.8, emotional precision 4.6, restraint 4.8, proof 4.8, density 4.6, next step 4.9, consistency 4.8 before the naming correction. These are qualitative editorial judgments, not measured audience results.
+Initial scores: clarity 4.8, differentiation 4.9, premium 4.7, human credibility 4.8, emotional precision 4.6, restraint 4.8, proof 4.8, density 4.6, next step 4.9, consistency 4.8 before the naming correction, rising to 5.0 after the independent recheck. These are qualitative editorial judgments, not measured audience results.
 
 ## Final candidate-consistency gate
 
@@ -99,4 +99,3 @@ This is the authorized D-009 independent-review substitute. The Code Review plug
 - Diff/whitespace checks pass. Exported candidate files match the repository candidates. No application build, live routing or rendered-template validation is claimed for Markdown-only editorial work.
 
 All eleven candidates are ready for exact owner review; Shared Copy remains provisional until that review. Continued drafting is not exact approval. Keep PR #51 open and unmerged. Protected-page consistency, full-corpus audit and a consolidated v3 specification after exact approval remain next-stage work.
-
