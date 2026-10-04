@@ -16,6 +16,9 @@ Phase 1 owner feedback incorporated into replacement Why Toza and Pricing candid
 
 ## Current authority and review evidence
 
+- Subsequent owner discussion: D-014 confirms settings hardening, operational security practices and teaching, no device monitoring and no security-software installation. These facts need clearer treatment in the next controlled copy revision; earlier review passes do not constitute review of that future wording.
+- D-015 records proposals on process benefits, merging Not IT Support content, contact framing and Cyber in service names. Discussion only: the five exact-copy blocks, routes, names, locked primary action and architecture are unchanged in this turn. Evidence: revisions/en-02-v2/review/owner-feedback-02-discussion.md.
+
 - D-011: personal situations, deliberate choices versus inherited digital arrangements, and readers who may have only a hunch. Exact replacement wording remains for review.
 - D-012: FAQ accepted “for now,” preserving that qualification; no production authorization inferred.
 - D-013: terminology and optional-follow-up presentation recommendations remain Proposed. Protection is not globally banned; approved service names remain. No distinct formal threat-model artifact or undefined highest-commercial-standard claim was added.

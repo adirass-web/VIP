@@ -116,3 +116,25 @@ This register is the bridge between page approval and the future consolidated v3
 - **Supersedes:** No approved service name or fact. In particular Bespoke Private Protection remains the named offer.
 - **Status:** Proposed
 - **Notes for v3 spec:** Owner has described threat assessment/modeling and a plan as service value. Translate the supported assessment, priorities and next steps into public copy; do not invent a separate written threat-model deliverable or move full hardening into the Assessment. “Highest possible standard in the commercial realm” is an unresolved proposed claim: its benchmark, scope and verification criteria are not defined. No such superlative is placed in candidate copy. A whole-digital-life or all-exposures promise is not implied by tailored work.
+
+### D-014 — Settings, operational practices and teaching; no monitoring or security-software installation
+- **Date:** 2026-10-04
+- **Category:** Service architecture
+- **Decision:** Toza's work includes hardening through settings, operational security practices and teaching the client. Toza does not monitor clients' devices and does not install security software on them.
+- **Reason:** Owner explicitly identified these characteristics as important and asked whether they come through across the five candidates.
+- **Authority:** Direct owner service clarification: “we do hardening in settings and OpSec and teach you. we don't monitor your device. we don't install any security software.”
+- **Affected pages/components:** All five canonical/shared candidates, later pages, reference descriptions and future consolidated specification.
+- **Supersedes:** Any assumption that the support-only no-monitoring sentence adequately expresses the service-wide fact, or that training only means operating a changed sign-in/recovery setup.
+- **Status:** Approved service clarification; wording and placement pending revision
+- **Notes for v3 spec:** Explain OpSec in ordinary language such as practical security habits, with supported examples. Keep security software specific; do not infer a prohibition on every installation, update, migration tool or diagnostic operation. Device examination during the authorized Assessment remains in scope. Do not invent a separate coaching product or shift full hardening into the Assessment. FAQ's accepted wording and PA-01-v2 remain unchanged pending separately identified amendments/consistency review.
+
+### D-015 — Discussion of outcome framing, category explanation, contact and names
+- **Date:** 2026-10-04
+- **Category:** Page role
+- **Decision:** Proposed for discussion: frame the process page around what the client gains, supported by its staged sequence; consolidate the strongest Not IT Support explanation into FAQ, with a short positive service explanation on Why Toza; replace redundant contact eyebrow/heading with a reason to act while retaining the current primary action; keep Personal Shield and Inner Circle Shield and clarify cybersecurity through nearby descriptors rather than renaming by default.
+- **Reason:** Owner asked to discuss these four questions, including whether Cyber belongs in the names. These are questions, not final naming or architecture decisions.
+- **Authority:** Editorial recommendations following owner questions and an independent read-only strategy critique.
+- **Affected pages/components:** Shared navigation and contact, What Happens, FAQ, Why Toza, Not IT Support, service/reference naming.
+- **Supersedes:** Nothing locked or approved. Request a private conversation remains the locked primary action. Current routes and service names remain.
+- **Status:** Proposed
+- **Notes for v3 spec:** No page merger, route retirement/redirect, product rename or locked architecture change is approved by this discussion. Preserve useful fair-comparison content if a merger is later chosen. Keep qualification separate from paid assessment; do not promise findings or fixes during free contact. See revisions/en-02-v2/review/owner-feedback-02-discussion.md.
