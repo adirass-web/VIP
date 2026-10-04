@@ -9,16 +9,18 @@ Status: **INTERNAL DRAFT — Code Review gate pending**
 - Preserved the founder note and first-person voice; tightened only minor repetition and syntax.
 - Made direct senior delivery more explicit as the service-design proof.
 - Shortened the lower service explanation so this page does not duplicate Pricing or the Assessment page.
-- Reduced legalistic privacy detail and routed detailed boundaries to FAQ.
+- Removed duplicate credential reassurance and routed detailed privacy and boundaries to FAQ.
 - Kept the contact/purchase boundary clear without turning the page into a process page.
 
 ## Exact revised copy
 
 ### Metadata
 
+**Route:** `/en/why-us.html`
+
 **Title:** Why Toza | A note from Dr. Lior Tabansky
 
-**Description:** Why Dr. Lior Tabansky created Toza: private, in-person digital protection delivered directly by one senior cybersecurity expert when ordinary digital access can suddenly matter.
+**Description:** Why Dr. Lior Tabansky created Toza: private, in-person digital protection with one senior expert, where personal judgment shapes the work.
 
 **Social description:** Why I created Toza, and why you work with me directly, in person and with control over the changes we make.
 
@@ -54,7 +56,7 @@ Portrait alt text: Portrait of Dr. Lior Tabansky
 
 **We work in person, with you present.** You see what is reviewed. I explain material changes and ask for your approval before making them. You control your passwords, recovery codes and authentication.
 
-**The first visit includes practical work.** We trace the relevant device and account access, identify what needs attention first and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary even if you decide not to continue.
+**The first paid visit includes practical work.** During the [Private Exposure Assessment](/en/private-exposure-assessment.html), we trace the relevant device and account access, identify what needs attention first and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary even if you decide not to continue.
 
 **Broader protection remains a separate decision.** If broader hardening is justified, I explain why, the scope and the price before you decide. There is no automatic continuation.
 
@@ -62,7 +64,7 @@ Portrait alt text: Portrait of Dr. Lior Tabansky
 
 ## Privacy in the work itself
 
-You remain in control of your passwords, recovery codes and authentication. I do not remotely control your devices or keep your credentials for ongoing use.
+I do not remotely control your devices or keep your credentials for ongoing use.
 
 [How the work proceeds](/en/what-happens-during-the-visit.html) · [Services and pricing](/en/pricing.html) · [Questions and service boundaries](/en/faq.html)
 
@@ -84,17 +86,18 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 **Request a private conversation: WhatsApp / Signal**
 
-## Internal red-team result
+## Unresolved red-team issues
 
-### Blockers
-None from the Toza harness.
-
-### Remaining issue
-- **Code Review gate pending.** The required Code Review plugin is available but is not yet connected.
+- **Code Review gate pending.** The installed plugin's available tool reports CI diagnostics only. The adversarial review has not run; CI success does not satisfy this gate.
 - The closing contact block may receive a later normalization pass during mandatory Phase 1.5 Shared Copy System review; no change should be made now merely for uniformity.
 
-### Fact-change check
-No Class A factual/commercial change introduced.
+## Approval state
+
+**INTERNAL DRAFT — Code Review gate pending.** Not yet ready for exact owner approval. No production integration is authorized.
+
+## Provenance
+
+Source EN-02-v1; S1/C1. Founder note, portrait, professional-profile link and locked CTA preserved from the resumed candidate. Broader-service detail stays linked to Pricing; full privacy detail stays in FAQ. The paid Assessment now links directly to PA-01-v2. Duplicate credential reassurance removed. No Class A factual/commercial change or new copy approval introduced. Workflow decision: D-008. Internal findings and review evidence are in `review/01-why-toza-editorial-record.md`.
 
 ### Metadata status
 Revised and internally checked; Code Review gate pending.

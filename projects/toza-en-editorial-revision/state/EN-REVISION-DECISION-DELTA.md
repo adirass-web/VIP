@@ -49,3 +49,14 @@ Use one:
 A substantive owner decision made during page review must be entered here before the affected page is considered fully locked.
 
 This register is the bridge between page approval and the future consolidated v3 specification.
+
+### D-008 — Required Code Review adversarial gate
+- **Date:** 2026-10-04
+- **Category:** Workflow
+- **Decision:** Run Code Review as a required adversarial gate. Incorporate only findings consistent with current Toza authority and the locked harness. Resume at Why Toza; after it passes, continue Pricing → FAQ → What Happens → Shared Copy System.
+- **Reason:** Keep an external adversarial check between the editorial candidate and further Phase 1 progression.
+- **Authority:** Explicit owner instruction in the continuation request.
+- **Affected pages/components:** Phase 1 revision candidates and Shared Copy System.
+- **Supersedes:** Any assumption that internal editorial checks or CI success alone satisfy the required gate.
+- **Status:** Locked
+- **Notes for v3 spec:** A review pass is not owner approval of exact copy. Main and production templates remain out of scope.

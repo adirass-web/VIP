@@ -3,7 +3,7 @@
 Date: 4 October 2026
 
 ## State
-Project package initialized.
+Project package initialized; Why Toza candidate resumed and locally tightened.
 
 ### Completed
 - source corpus locked;
@@ -21,8 +21,18 @@ Project package initialized.
 ### Current phase
 **Phase 1 — canonical language**
 
-### Next page
+### Current page and gate
 **Why Toza**
+
+Candidate: `revisions/en-02-v2/01-why-toza.md`.
+
+Status: **INTERNAL DRAFT — required Code Review adversarial gate pending**.
+
+The installed Code Review plugin's available CI-read tool reports successful checks on the resumed PR #51 head, `90c7054f1fcd476bc214e6a2dbbd736409ffd74a`. No adversarial review result has been obtained. The review app was not present in the accessible side-panel inventory; the owner was asked to open it. This is an access prerequisite, not a request to reapprove the revision scope. CI results do not count as a review pass.
+
+The candidate now removes duplicate credential reassurance, names and links the paid Assessment, and tightens its metadata. The founder note and profile proof remain intact. Internal findings, provenance and the required external review brief are in `revisions/en-02-v2/review/01-why-toza-editorial-record.md`.
+
+Do not advance to Pricing until Why Toza passes the required gate. No page has been marked APPROVED, and no Class A commercial decision has been invented. Owner workflow instruction D-008 is recorded in the decision delta.
 
 Intervention rating:
 - Structure: S1
