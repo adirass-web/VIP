@@ -20,6 +20,7 @@ Status: **READY FOR OWNER REVIEW — benefits revision independently passed unde
 
 | Surface | Proposed text | Content destination |
 |---|---|---|
+| Wordmark | toza | Brand artwork; Latin lowercase |
 | Brand accessible name | Toza home | /en/ |
 | Main navigation label | Main navigation | Shared navigation |
 | Mobile menu button | Menu | Existing menu control |
@@ -218,3 +219,5 @@ None. Independent review of the complete replacement and the final five-candidat
 ## Provenance and metadata
 
 Shared contact direction and service facts are approved under D-016; complete replacement variants remain subject to exact review. Current names, legal-language labels, neutral first message and all commercial rules retained. The standalone category destination is removed from candidate navigation/reference directory; FAQ is now canonical. No live route or template change. Reusable service-model wording is scoped to named full services and links Pricing. Navigation, footer, structured/reference descriptions and anchor dependencies included in metadata sweep; this is a component library, not a new public page or generated schema. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.
+
+D-017 adds the Latin lowercase wordmark specification; running text remains Toza. The addition passed the Home gate and the eleven-candidate consistency review recorded in review/phase-2-3-strategy-and-qa.md. No other shared public copy changed in this continuation.

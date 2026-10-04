@@ -151,3 +151,25 @@ This register is the bridge between page approval and the future consolidated v3
 - **Implementation:** Use How Toza helps as the process display label, retaining /en/what-happens-during-the-visit.html. Consolidate category explanation and fair comparison in FAQ, remove standalone Not IT Support from candidate navigation/reference directory, and record route integration separately. Keep Personal Shield and Inner Circle Shield, adding descriptive cybersecurity language rather than Cyber to the names. Strengthen the contact heading/reason to act while retaining Request a private conversation. No live routing, production or deployment changes are authorized.
 - **Scope guardrail:** Identities/data make the service description complete; they do not create unlimited coverage, new forensic/data-recovery services, bulk migration, a formal threat-model artifact or additional devices. Service benefits must remain attached to their purchased stage. PA-01-v2 remains protected.
 - **Notes for v3 spec:** Record settings, practical security habits and teaching as the intervention, with no device monitoring and no installation of security software. Explain practical gain before procedure. Preserve exact current commercial rules and factual boundaries. Previous candidate passes are historical; independently review the complete replacements under D-009.
+
+### D-017 — Brand name, writing and pronunciation
+- **Date:** 2026-10-04
+- **Category:** Protected phrase
+- **Decision:** Name: Toza. Owner-supplied origin: Japanese 閉ざす (tozasu), “to close shut.” Pronunciation: TOH-zah, identical in English, Hebrew and Russian. Latin-only writing: toza for the wordmark, Toza in running text. Never capitalize the entire brand name, transliterate it, translate it or use Hebrew/Russian brand forms in a lockup.
+- **Reason:** Owner supplied the binding brand reference while authorizing the next texts.
+- **Authority:** Explicit owner brand instructions.
+- **Affected pages/components:** All visible copy, metadata, wordmark specifications, accessible naming and future language adaptation.
+- **Supersedes:** Any inconsistent brand styling in unapproved copy or future artwork.
+- **Status:** Approved
+- **Notes for v3 spec:** Keep the name in Latin across languages. Record the supplied origin as brand background; it need not become a marketing claim or imply complete closure of every exposure. Existing technical filenames, source snapshots and locked historical document titles are not renamed. Pronunciation notation is not an uppercase brand wordmark.
+
+### D-018 — Continue the remaining editorial texts
+- **Date:** 2026-10-04
+- **Category:** Workflow
+- **Decision:** Proceed to the next texts using the current canonical candidates and provisional Shared Copy: Home → Separation and Divorce → Business and Founder Dispute → They Know Something → Inheritance Conflict → For Attorneys. Apply current client-gain/service-model/brand direction and independent review under D-009.
+- **Reason:** Owner instructed “Proceed to next texts.”
+- **Authority:** Explicit continuation request.
+- **Affected pages/components:** Remaining Phase 2/3 texts and consistency checks.
+- **Supersedes:** Waiting for another instruction to begin those texts. Does not imply exact approval of previously unseen wording.
+- **Status:** Approved workflow
+- **Notes for v3 spec:** Keep PR #51 open for editorial review. No merge, main change, production integration or deployment. Not IT Support is already absorbed under D-016. Exact complete-copy approval still precedes the consolidated replacement specification.
