@@ -1,18 +1,17 @@
 # FAQ — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2, benefits round of 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S2 / C2 — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — benefits revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Opened with fit and client value, including a starting point for people who cannot name the problem.
-- Merged the useful Not IT Support explanation and its complete fair-comparison table into FAQ.
-- Added a direct answer confirming no device monitoring or installation of security software.
-- Expanded full-service detail to agreed identities, apps, data-access arrangements, practical habits and teaching.
-- Retained every previous question and material operational answer; updated headings, metadata and contact framing.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -46,9 +45,9 @@ No. You can have a concern, a hunch, or a wish to take a more deliberate approac
 
 ### How is this different from IT support or help from someone I know?
 
-A working device can still expose private information. An old device may remain signed in, a recovery address may reopen an account, or a shared service may reveal information you now need to keep private.
+A working device can still expose private information through connections with other accounts, apps or services. A sharing permission or recovery setting is one part of that picture. Its significance depends on what it connects to and your circumstances.
 
-Toza connects those arrangements to your circumstances. Dr. Tabansky explains what relevant access allows and which changes should come first. Separately purchased hardening addresses the agreed setup and the practical security habits you use with it. You learn how to manage the changed arrangements, with material changes made only with your approval.
+General advice can explain a setting. Toza applies expert judgment to your actual setup: tracing relevant connections, explaining what they allow and selecting changes in a considered sequence. Dr. Tabansky carries out the agreed technical work with you. Separately purchased hardening includes practical security habits and personal teaching; material changes require your approval.
 
 Routine support, individual security tools and help from someone you know can all be useful. Use the comparison below to consider the scope you need.
 
@@ -100,11 +99,11 @@ Where urgent exposure can be addressed safely within the agreed scope, we make t
 
 ### How long should I allow?
 
-At least two hours in person. A typical visit takes four hours. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid. Four hours is a typical duration, not an automatic cutoff or a trigger for purchasing another service.
+**Typically four hours.** We complete the agreed intake, access mapping, diagnosis and approved urgent first aid. Four hours is a typical duration, not an automatic cutoff or a trigger for purchasing another service.
 
 ### What do I receive if I decide not to continue?
 
-A clear summary of what we reviewed, what urgent exposure we found, what we changed, what remains, whether broader protection work is justified and what to do next. You receive it even if you buy nothing further. There is no automatic continuation to Personal Shield or another service.
+A clear summary of what we reviewed, what urgent exposure we found, what we changed, what remains and the recommended next steps. You receive it even if you buy nothing further. There is no automatic continuation to Personal Shield or another service.
 
 [Read about the initial visit](/en/private-exposure-assessment.html)
 
@@ -128,7 +127,7 @@ We harden the settings and access arrangements for the agreed devices, digital i
 - One primary working day, with a second day included if needed at no extra charge.
 - Fourteen days of limited adjustment support for issues directly related to Toza's changes.
 
-We explain why this broader work is recommended and confirm its scope and price before you decide to purchase it.
+You do not need a known intrusion to want a setup fitted to your life. We explain the proposed hardening and confirm its scope and price before you decide to purchase it.
 
 ### Does migration include all my files and old accounts?
 
@@ -234,12 +233,12 @@ Send a short, neutral message through WhatsApp or Signal. Dr. Tabansky replies p
 
 ## Unresolved red-team issues
 
-None. Independent review of the complete replacement and the final five-candidate consistency check passed under D-009. Findings and dispositions are recorded in review/owner-feedback-03-benefits.md.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The owner approved the discussed changes and requested this further pass. The complete replacement and its metadata passed independent review; exact approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-D-016 reopens the formerly accepted FAQ for these approved additions and structure/copy review. All previous question titles are retained, including the category question moved to the opening fit section. Full comparison table imported intact from the source Not IT Support page; repeated product/catalog/contact sections from that page are absorbed by existing FAQ answers. New category anchor: how-toza-differs; privacy/boundaries/contact anchors retained. Current commercial/privacy answers remain, with service-model amendments identified here. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

@@ -1,18 +1,17 @@
 # Separation and Divorce — EN-02-v2 candidate
 
-Source: EN-02-v1, calibrated against reviewed canonical candidates 01–05; 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S2 / C2**
 
-Status: **READY FOR OWNER REVIEW — independent page and candidate-consistency gates passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Preserved the trust/access opening and the page-specific shared-life mechanisms.
-- Connected the review to informed choices about remaining access and the effects of changes.
-- Shortened the commercial tail while retaining first-visit facts and separate hardening.
-- Made practical teaching and the no-monitoring/no-security-software model explicit.
-- Kept visibility, authorization, counsel and non-investigative boundaries; aligned metadata and contact.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -24,7 +23,7 @@ Title: Digital Exposure During Separation or Divorce | Toza
 
 Description: Understand what still connects your digital lives before making changes. In-person work with Dr. Lior Tabansky. Initial visit ₪3,600 including VAT.
 
-Social description: Trust can end before access does. Review shared services, recovery routes and old sessions, and decide which changes fit your circumstances.
+Social description: Understand what still connects your digital lives. Have relevant access examined and choose a setup and practical habits suited to your changed circumstances.
 
 ## Hero
 
@@ -32,7 +31,7 @@ Separation and divorce
 
 # Trust can end before access does.
 
-Two lives can remain connected through devices, accounts and family services long after a relationship changes. A signed-in phone, shared folder or recovery contact can still provide access to private information.
+Two lives can remain connected through devices, accounts and family services long after a relationship changes. Arrangements made for a shared life can leave private information accessible in ways neither person has considered.
 
 Dr. Lior Tabansky works with you, in person, to understand which connections matter and what changing them would mean. You do not need to know which account or setting is responsible before approaching Toza.
 
@@ -42,14 +41,11 @@ In person · With you present · You control your credentials
 
 ## Understand what still connects your digital lives
 
-You may have changed a password and still be unsure what someone else can see. We examine relevant arrangements such as:
+You may have changed a password and still be unsure where access ends. A device, family service or recovery arrangement can connect otherwise separate parts of your digital life.
 
-- Accounts still signed in on devices used during the relationship.
-- Recovery addresses, phone numbers and trusted devices that can restore access.
-- Family services, shared storage and permissions connecting otherwise separate accounts.
-- Settings that govern access to messages, photos, documents or location information.
+Dr. Tabansky examines those connections within the agreed scope, including what may still expose private messages, photos, documents or location information. He explains how relevant access persists and which changes need to be considered together. You do not have to uncover those dependencies yourself.
 
-These connections can exist without a new intrusion. Their presence does not establish that your spouse has used them or explain how someone learned a particular fact.
+Such access can remain without a new intrusion. Its presence does not establish that your spouse has used it or explain how someone learned a particular fact.
 
 ## Make changes with their consequences in view
 
@@ -59,9 +55,9 @@ We explain what the relevant access allows and agree the sequence with you. You 
 
 ## Start with your own accounts and information
 
-**Private Exposure Assessment · ₪3,600 including VAT**
+**Private Exposure Assessment · Typically four hours**
 
-**At least two hours in person. Typically four.**
+**₪3,600 including VAT**
 
 The visit covers one main phone and one PC, iPad or second phone, with relevant digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
 
@@ -69,9 +65,9 @@ You receive a practical summary of what was reviewed, found and changed, what re
 
 [What the initial visit includes](/en/private-exposure-assessment.html)
 
-## Build practical security habits around the changed situation
+## A setup for the life you are moving into
 
-If broader work is justified, Personal Shield hardens the agreed settings and access arrangements and includes personal teaching, verification and a dated record. You learn how to grant access, share information and recover accounts in the resulting setup. Scope and price are agreed separately; there is no automatic continuation.
+Personal Shield hardens the agreed settings and access arrangements around your changed circumstances. It includes personal teaching, verification and a dated record. You learn how to grant access, share information and recover accounts in the resulting setup. Scope and price are agreed separately; there is no automatic continuation.
 
 [Full services, prices and credit conditions](/en/pricing.html) · [How Toza helps](/en/what-happens-during-the-visit.html)
 
@@ -97,12 +93,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. The page gate and final eleven-candidate consistency review passed under D-009. See review/phase-2-3-strategy-and-qa.md for findings and dispositions.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The complete candidate and metadata passed independent review. D-018 authorizes drafting, not exact approval of unseen wording; exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Source opening, mechanisms, non-accusation and change-visibility caveat retained. Repeated full credit/privacy catalogue replaced with canonical links; no partial credit promise remains. Personal Shield bridge is specific to the changed personal situation and separate purchase. Attorney involvement remains client-authorized. Source commercial facts and protected PA-01-v2 are unchanged. Current authority: D-011, D-014, D-016, D-017 and D-018. All four skills applied; author metadata sweep complete. Independent review complete; exact owner approval pending. Evidence: review/phase-2-3-strategy-and-qa.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

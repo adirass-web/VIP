@@ -1,18 +1,17 @@
 # For Attorneys — EN-02-v2 candidate
 
-Source: EN-02-v1, calibrated against reviewed canonical candidates 01–05; 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S1 / C2**
 
-Status: **READY FOR OWNER REVIEW — independent page and candidate-consistency gates passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Led with the practical value of referral while retaining the professional page structure.
-- Kept recognizable referral situations without treating concern as evidence of wrongdoing.
-- Separated client authority, technical work and permission to disclose findings to counsel.
-- Made settings hardening, practical habits and teaching clear; linked detailed package and credit terms.
-- Retained sequencing, evidentiary limits and a neutral referral-specific contact route.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Kept stage-specific service value and current names aligned with the revised positioning.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -34,7 +33,7 @@ For attorneys
 
 Separation, a business dispute or an inheritance conflict can leave a client unsure who still has access to their private information. They may sense a problem without knowing which account, device or past arrangement matters.
 
-Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain what further work is justified. The client gains a practical basis for deciding what to change.
+Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain the priorities and recommended next steps. The client gains a practical basis for deciding what to change.
 
 [Request a private conversation](#contact)
 
@@ -56,9 +55,9 @@ Toza does not keep credentials for ongoing use, remotely control or monitor devi
 
 ## A defined first step, with a useful result
 
-**Private Exposure Assessment · ₪3,600 including VAT**
+**Private Exposure Assessment · Typically four hours**
 
-**At least two hours in person. Typically four.**
+**₪3,600 including VAT**
 
 The scope is one main phone and one PC, iPad or second phone, with relevant digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
 
@@ -66,9 +65,9 @@ The client receives a practical summary of what was reviewed, found and changed,
 
 [What the initial visit includes](/en/private-exposure-assessment.html)
 
-## Broader hardening, when justified
+## A setup fitted to the client's circumstances
 
-Personal Shield combines hardening of agreed device, identity, account and data-access settings with practical security habits and personal teaching. Verification and a private dated record help the client understand the resulting setup and what changed. Inner Circle Shield extends the separately agreed work to a defined four-person group; more complex requirements may call for Bespoke Private Protection.
+The client can choose tailored hardening without an established intrusion. Personal Shield combines hardening of agreed device, identity, account and data-access settings with practical security habits and personal teaching. Verification and a private dated record help the client understand the resulting setup and what changed. Inner Circle Shield extends the separately agreed work to a defined four-person group; more complex requirements may call for Bespoke Private Protection.
 
 Full engagements have their own scope and price. The assessment does not commit the client to continuing.
 
@@ -100,12 +99,12 @@ Keep identifying case details out of the first message. Do not send passwords, r
 
 ## Unresolved red-team issues
 
-None. The page gate and final eleven-candidate consistency review passed under D-009. See review/phase-2-3-strategy-and-qa.md for findings and dispositions.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The complete candidate and metadata passed independent review. D-018 authorizes drafting, not exact approval of unseen wording; exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Referral triggers, client authority, sequencing and professional limits remain central. The page distinguishes technical authorization from disclosure, and practical records from evidence. Full package/credit terms are linked rather than partially restated. No legal, investigative, corporate-security or automatic counsel-reporting service is introduced. Source commercial facts and protected PA-01-v2 are unchanged. Current authority: D-011, D-014, D-016, D-017 and D-018. All four skills applied; author metadata sweep complete. Independent review complete; exact owner approval pending. Evidence: review/phase-2-3-strategy-and-qa.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

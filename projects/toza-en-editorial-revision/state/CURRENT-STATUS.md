@@ -4,7 +4,7 @@ Date: 4 October 2026
 
 ## State
 
-The six remaining page candidates are complete in order under D-018, using all four project skills and independent gates under D-009. All eleven candidates passed a final consistency review. Complete wording and metadata await exact owner review; Shared Copy remains provisional.
+All eleven candidates have received a targeted D-019/D-020 revision through the four project skills and sequential independent gates under D-009. Positive tailored-hardening value, expert interpretation/intervention and shorter public duration are applied. Page gates, final candidate consistency and the separate protected duration amendment passed. Exact complete-copy approval remains pending; Shared Copy remains provisional.
 
 | Candidate | Intervention | Independent gate | Owner state |
 |---|---|---|---|
@@ -28,11 +28,13 @@ D-016 keeps service names and Request a private conversation, uses How Toza help
 
 D-017 records the owner's brand rules: Latin-only toza wordmark and Toza running text, TOH-zah pronunciation across English/Hebrew/Russian, owner-supplied Japanese origin. No all-capitals, translated or transliterated brand. Historical technical filenames and source titles are not renamed. D-018 authorizes continuing the six texts, not exact approval or production integration.
 
+D-019 removes incident-dependent sales framing and emphasizes expert connected-access interpretation and implementation. Assessment findings and recommended next steps remain open, with no predetermined second purchase. D-020 supersedes earlier public duration wording: Typically four hours. It changes no scope, price, in-person delivery, outcome-based completion, operational minimum or urgent-arrival term. The separate pa-01-v2-duration-amendment.md records three exact substitutions without changing the protected source.
+
 ## Review evidence and checks
 
-Current continuation record: revisions/en-02-v2/review/phase-2-3-strategy-and-qa.md. Prior canonical benefits record: revisions/en-02-v2/review/owner-feedback-03-benefits.md. Each new page passed sequentially. The attorney product-name finding was corrected and rechecked; final eleven-candidate consistency passed. The Code Review plugin did not run; the owner-authorized D-009 substitute did.
+Current record: revisions/en-02-v2/review/owner-feedback-04-positioning.md. The prior benefits and continuation records describe historical versions. All eleven page gates and final candidate consistency passed under D-009. The Code Review plugin did not run.
 
-Canonical 01–04 are unchanged from 162209a, including Pricing tables and FAQ questions. Shared public copy adds only the lowercase wordmark row. Brand, routes, declared anchors, contact, service model and diff checks pass. All six new texts are shorter than their source counterparts. Source, protected copy, instructions, doctrine/harness, skills and production remain unchanged.
+All four Pricing tables, FAQ questions/comparison and per-page currency amounts match d1c2e98. Current duration, brand, routes, declared anchors, contact, service model and diff checks pass. Source, protected source, instructions, doctrine/harness, skills and production remain unchanged. The duration-only PA amendment passed separately.
 
 ## Next work
 

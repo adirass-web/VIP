@@ -1,18 +1,17 @@
 # How Toza helps — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2, benefits round of 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S3 / C2 — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — benefits revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Changed the display title, hero and metadata to explain the gains at each stage; retained the existing URL.
-- Reframed the sequence around fit, informed decisions, urgent action and priorities.
-- Gave the full engagement separate sections for changing the setup and learning to use it.
-- Made identities, data, practical security habits and the no-monitoring/no-security-software model explicit.
-- Preserved current scope, purchase stages, credit, consent, support and urgent-arrival conditions.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -56,15 +55,15 @@ If the service fits, we send a written offer setting out the work, inclusions, e
 
 ## Understand what matters in your situation
 
-**Private Exposure Assessment · ₪3,600 including VAT**
+**Private Exposure Assessment · Typically four hours**
 
-**At least two hours in person. Typically four.**
+**₪3,600 including VAT**
 
 ### 3. See how your devices, identities and data are connected
 
 We start with what changed, what concerns you, which accounts matter and who previously had legitimate access. The work covers one main phone and one other device: a PC, iPad or second phone, together with relevant identities, accounts, apps, permissions, recovery routes and connected services.
 
-We examine what those connections allow, including access to relevant messages, photos, documents and location information. You learn what could reveal information or permit access in your circumstances. The review uses what is disclosed, observable or otherwise lawfully accessible within your authorized environment and agreed scope.
+We examine how those connections work together and what they allow, including access to relevant messages, photos, documents and location information. You do not have to arrive with a list of suspected weaknesses. Dr. Tabansky interprets the relevant access in the context of your life and explains what deserves attention. The review uses what is disclosed, observable or otherwise lawfully accessible within your authorized environment and agreed scope.
 
 ### 4. Have urgent problems addressed with your approval
 
@@ -74,13 +73,13 @@ Changing access can affect another device, a shared service or a recovery route.
 
 ### 5. Leave with priorities you can act on
 
-You receive a clear summary of what was reviewed, what urgent exposure was found, what we changed, what remains, whether broader hardening is justified and the next responsible step. You receive it even if you buy nothing further.
+You receive a clear summary of what was reviewed, what urgent exposure was found, what we changed, what remains, the priorities and recommended next steps. You receive it even if you buy nothing further.
 
 The initial visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. Broader hardening is a separate purchase decision. We explain the work needed and its scope and price; you choose whether to continue.
 
 [See the first visit in detail](/en/private-exposure-assessment.html)
 
-## Put the findings into practice through a full engagement
+## Have the agreed setup hardened around your life
 
 ### 6. Choose the scope that suits your situation
 
@@ -90,9 +89,9 @@ We explain the recommendation and set out the work and price in writing before y
 
 [Compare services, inclusions and prices](/en/pricing.html)
 
-### 7. Change the settings and access that need attention
+### 7. Replace accumulated arrangements with deliberate choices
 
-Personal Shield and Inner Circle Shield harden the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data. The work can include closing unwanted access, strengthening sign-in and recovery, and changing sharing permissions. Both services include essential migration where needed and physical security-key setup.
+Personal Shield and Inner Circle Shield harden the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data around your circumstances. A known intrusion is not required to choose this work. The work can include closing unwanted access, strengthening sign-in and recovery, and changing sharing permissions. Both services include essential migration where needed and physical security-key setup.
 
 We explain material changes and their effects before you approve them, then test the changes and verify the applicable work against the checklist. Historical archives and bulk data migration require a separately agreed scope. A technically blocked or declined action is not presented as a completed change.
 
@@ -130,12 +129,12 @@ Send a short, neutral message through WhatsApp or Signal. We will confirm fit an
 
 ## Unresolved red-team issues
 
-None. Independent review of the complete replacement and the final five-candidate consistency check passed under D-009. Findings and dispositions are recorded in review/owner-feedback-03-benefits.md.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The owner approved the discussed changes and requested this further pass. The complete replacement and its metadata passed independent review; exact approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Process file and route retained; display name becomes How Toza helps under D-016. Reorganized headings and full-service implementation/teaching sequence; qualification and Assessment commercial details retained. Named full-service inclusions remain specific to Personal Shield/Inner Circle; Bespoke is individually scoped. Metadata fully revised around client gains. Product detail and detailed privacy remain linked. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

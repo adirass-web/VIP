@@ -1,18 +1,17 @@
 # Business and Founder Dispute — EN-02-v2 candidate
 
-Source: EN-02-v1, calibrated against reviewed canonical candidates 01–05; 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S2 / C2**
 
-Status: **READY FOR OWNER REVIEW — independent page and candidate-consistency gates passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Kept personal/work crossover as the central mechanism and preserved the source headline.
-- Connected technical review to understanding the effects of changes before approving them.
-- Compressed repeated service/credit details while retaining current first-step facts.
-- Explained tailored hardening and practical habits without suggesting a corporate security engagement.
-- Preserved lawful-access, client-authority and non-evidentiary boundaries; aligned metadata and contact.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -42,14 +41,11 @@ In person · With you present · You control your credentials
 
 ## See where personal and business access still meet
 
-Arrangements made during a partnership may remain after interests separate. We examine relevant paths such as:
+A personal identity may control business access while a work service exposes private information. Looking at either account alone can miss the relationship between them.
 
-- Your personal email or phone still controlling recovery for a business service.
-- A former colleague or adviser remaining in a recovery or sharing arrangement.
-- Private and business accounts staying signed in on the same device.
-- Shared folders, calendars or connected apps revealing documents, meetings or travel plans.
+Dr. Tabansky examines the relevant connections across your devices, identities and services, including what they permit and what depends on them. The work gives you a basis for separating access deliberately while accounting for services you still need. It stays within your lawful authority and agreed scope.
 
-These are reasons to review your own environment. They do not establish that a partner, competitor or adviser has used access improperly.
+A connection does not establish that a partner, competitor or adviser has used access improperly.
 
 ## Understand what a change will affect before you approve it
 
@@ -59,15 +55,15 @@ We trace the relevant identities, permissions and recovery routes, explain what 
 
 ## A defined first step for your own environment
 
-**Private Exposure Assessment · ₪3,600 including VAT**
+**Private Exposure Assessment · Typically four hours**
 
-**At least two hours in person. Typically four.**
+**₪3,600 including VAT**
 
 One main phone and one PC, iPad or second phone, with relevant identities, accounts, apps and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope. Review is limited to what is disclosed, observable or otherwise lawfully accessible in your authorized environment.
 
 You receive a summary of what was reviewed, found and changed, what remains and the next steps, even if you buy nothing further. The initial visit does not automatically expand into group or company-wide work.
 
-If broader work is justified, Personal Shield hardens the agreed settings and access arrangements, with practical security habits, teaching and verification. You learn how to manage the changed setup. Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service.
+Personal Shield hardens the agreed settings and access arrangements around your personal and professional circumstances, with practical security habits, teaching and verification. You learn how to manage the changed setup. Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service.
 
 [Initial visit details](/en/private-exposure-assessment.html) · [Full services, prices and credit conditions](/en/pricing.html)
 
@@ -95,12 +91,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. The page gate and final eleven-candidate consistency review passed under D-009. See review/phase-2-3-strategy-and-qa.md for findings and dispositions.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The complete candidate and metadata passed independent review. D-018 authorizes drafting, not exact approval of unseen wording; exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Personal-account/business-access mechanisms and the specific company-authority restriction are retained. Repeated credit, full retention wording and urgent detail route to canonical pages; the page makes no partial fee-credit or urgent-arrival promise. Technical work remains personal, authorized and explicitly scoped. Source commercial facts and protected PA-01-v2 are unchanged. Current authority: D-011, D-014, D-016, D-017 and D-018. All four skills applied; author metadata sweep complete. Independent review complete; exact owner approval pending. Evidence: review/phase-2-3-strategy-and-qa.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

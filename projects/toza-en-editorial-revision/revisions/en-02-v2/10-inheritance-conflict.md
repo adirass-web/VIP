@@ -1,18 +1,17 @@
 # Inheritance Conflict — EN-02-v2 candidate
 
-Source: EN-02-v1, calibrated against reviewed canonical candidates 01–05; 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S2 / C2**
 
-Status: **READY FOR OWNER REVIEW — independent page and candidate-consistency gates passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Kept the family-help mechanism and distinguished remaining access from misconduct.
-- Explained the gain from understanding shared and recovery arrangements before changing them.
-- Shortened repeated service/credit detail while retaining the initial paid step and separate hardening.
-- Made practical habits and teaching relevant to managing family-linked accounts.
-- Preserved entitlement, authorization and adviser-disclosure boundaries; aligned metadata and contact.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -42,14 +41,11 @@ In person · With you present · You control your credentials
 
 ## Access shared in good faith can still matter
 
-Family members often help one another set up devices, recover accounts or share documents. Those arrangements can outlast their original purpose:
+Help with an account or a shared family service can connect several parts of your digital life. The effects may extend beyond the arrangement you remember making.
 
-- Your account may remain signed in on a device someone helped you use.
-- A relative's email or phone number may still be part of your recovery arrangements.
-- Shared storage or permissions may allow access to documents and other private data.
-- A family service may connect accounts you now want to manage separately.
+Dr. Tabansky examines the relevant connections within your authorized environment and agreed scope, including access to private data and the arrangements you depend on to manage your accounts. You gain an explanation of what remains connected and what separating it would mean.
 
-These are reasons to review your own access. They do not establish that a relative has used it or acted improperly.
+Remaining access does not establish that a relative has used it or acted improperly.
 
 ## Understand the connections before changing them
 
@@ -59,9 +55,9 @@ We explain the relevant connections and the effects of proposed changes. You dec
 
 ## Start with a clear account of your current exposure
 
-**Private Exposure Assessment · ₪3,600 including VAT**
+**Private Exposure Assessment · Typically four hours**
 
-**At least two hours in person. Typically four.**
+**₪3,600 including VAT**
 
 One main phone and one PC, iPad or second phone, with relevant digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
 
@@ -71,7 +67,7 @@ You receive a practical summary of what was reviewed, found and changed, what re
 
 ## Make deliberate choices about future access
 
-If broader work is justified, Personal Shield hardens the agreed settings and access arrangements and includes personal teaching and verification. You learn practical habits for granting access, sharing information and recovering accounts in the resulting setup. The scope and price are agreed separately; additional people or a different environment require their own agreed scope.
+Personal Shield hardens the agreed settings and access arrangements to reflect your current circumstances. It includes personal teaching and verification. You learn practical habits for granting access, sharing information and recovering accounts in the resulting setup. The scope and price are agreed separately; additional people or a different environment require their own agreed scope.
 
 [Full services, prices and credit conditions](/en/pricing.html) · [How Toza helps](/en/what-happens-during-the-visit.html)
 
@@ -99,12 +95,12 @@ Do not send passwords, recovery codes, screenshots, estate or legal documents, i
 
 ## Unresolved red-team issues
 
-None. The page gate and final eleven-candidate consistency review passed under D-009. See review/phase-2-3-strategy-and-qa.md for findings and dispositions.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The complete candidate and metadata passed independent review. D-018 authorizes drafting, not exact approval of unseen wording; exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Family-help residue and account/asset entitlement limits remain the distinctive argument. Repeated full credit/catalogue detail is linked to Pricing, while personal and legal authority stays local. Attorney summary remains conditional on client authorization; no estate-access, forensic-recovery or ownership service is introduced. Source commercial facts and protected PA-01-v2 are unchanged. Current authority: D-011, D-014, D-016, D-017 and D-018. All four skills applied; author metadata sweep complete. Independent review complete; exact owner approval pending. Evidence: review/phase-2-3-strategy-and-qa.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

@@ -1,6 +1,6 @@
 # EN-02-v2 Revision Candidates
 
-All eleven candidates are **READY FOR OWNER REVIEW** after the current four-skill rounds and separate independent gates. Shared Copy remains **PROVISIONAL** pending exact approval. Direction and continuation approvals do not approve unseen replacement wording.
+All eleven candidates are **READY FOR OWNER REVIEW** after the D-019/D-020 positioning/duration round and separate independent gates. Shared Copy remains **PROVISIONAL** pending exact approval. Direction and continuation approvals do not approve unseen replacement wording.
 
 ## Read in order
 
@@ -18,7 +18,13 @@ All eleven candidates are **READY FOR OWNER REVIEW** after the current four-skil
 
 Each packet includes at most five change bullets, complete copy and metadata, unresolved-issue status, approval state and provenance. D-016 reopens FAQ and absorbs the standalone Not IT Support work into FAQ/Why; its former route requires later integration handling. D-017 supplies the brand rules; D-018 authorizes the six-page continuation.
 
+## Current change
+
+D-019 presents full hardening as deliberate choices fitted to the client, without requiring a known incident. Expert value is interpretation and implementation on the actual setup. D-020 uses Typically four hours across the current public candidates; commercial scope and completion remain. [Protected duration-only amendment](pa-01-v2-duration-amendment.md) records three exact substitutions, with the source unchanged.
+
 ## Review evidence
+
+[Current positioning/duration strategy and gates](review/owner-feedback-04-positioning.md). All eleven replacements and the separate duration amendment passed; earlier records below are historical.
 
 [Canonical benefits round](review/owner-feedback-03-benefits.md) and [next texts and eleven-candidate consistency](review/phase-2-3-strategy-and-qa.md). The separate reviewer passed each page in sequence, rechecked the attorney naming correction and passed the final consistency check. This is the D-009 substitute, not a Code Review plugin result or the later Phase 5 full-corpus gate.
 

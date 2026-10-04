@@ -1,18 +1,17 @@
 # They Know Something — EN-02-v2 candidate
 
-Source: EN-02-v1, calibrated against reviewed canonical candidates 01–05; 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S2 / C2**
 
-Status: **READY FOR OWNER REVIEW — independent page and candidate-consistency gates passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Preserved the uncertainty-led opening and Start with what can be checked.
-- Made the gain a clearer account of current access and practical next steps, without promising attribution.
-- Compressed the first-step explanation and linked full credit/urgent pricing detail.
-- Explained separate hardening and teaching alongside the current service model.
-- Kept visibility, first-contact privacy and page-specific investigative/evidentiary limits.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -44,9 +43,9 @@ In person · With you present · You control your credentials
 
 An unfamiliar sign-in alert, an old device in an account or something another person says may leave you uncertain. None establishes, by itself, who accessed information or how.
 
-We review relevant signed-in devices and sessions, recovery addresses, permissions, shared services and access to data. Location settings, public information and online trails may also matter within the agreed review of your own environment.
+Relevant exposure may involve several connected devices, identities or services, rather than the account you first suspect. Dr. Tabansky examines those relationships and explains what they can reveal or allow. Location settings, public information and online trails may also matter within the agreed review of your own environment.
 
-You learn what the relevant paths can reveal or allow. A current access path can deserve attention even when it does not explain the original concern.
+You receive an expert interpretation of current access without having to identify its technical cause first. That review can guide useful changes even when it cannot explain how the original information surfaced.
 
 ## Understand the effects before making isolated changes
 
@@ -56,15 +55,15 @@ Some changes can be noticed, such as a signed-in device being disconnected. We d
 
 ## A first visit with findings you can act on
 
-**Private Exposure Assessment · ₪3,600 including VAT**
+**Private Exposure Assessment · Typically four hours**
 
-**At least two hours in person. Typically four.**
+**₪3,600 including VAT**
 
 The visit covers one main phone and one PC, iPad or second phone, with relevant digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
 
 You receive a practical summary of what was reviewed, found and changed, what remains and the next steps, even if you buy nothing further. Any expansion of scope or price needs your agreement before work begins.
 
-If broader work is justified, Personal Shield hardens the agreed settings and access arrangements and teaches practical security habits. You learn to use the resulting setup; material changes are verified. This requires a separate agreed scope, price and purchase.
+Personal Shield gives deliberate attention to your future setup through hardening of the agreed settings and access arrangements and teaching practical security habits. You can choose that work even if the original concern remains unexplained. You learn to use the resulting setup; material changes are verified. This requires a separate agreed scope, price and purchase.
 
 [Initial visit details](/en/private-exposure-assessment.html) · [Full services, prices and credit conditions](/en/pricing.html)
 
@@ -94,12 +93,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. The page gate and final eleven-candidate consistency review passed under D-009. See review/phase-2-3-strategy-and-qa.md for findings and dispositions.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The complete candidate and metadata passed independent review. D-018 authorizes drafting, not exact approval of unseen wording; exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Non-attribution is retained at recognition, interpretation and boundary points; current access is never presented as the explanation for the original concern. Visibility and copies-already-shared limits retained. The full urgent-fee section is replaced by a conditional availability link, without making an arrival promise. Source commercial facts and protected PA-01-v2 are unchanged. Current authority: D-011, D-014, D-016, D-017 and D-018. All four skills applied; author metadata sweep complete. Independent review complete; exact owner approval pending. Evidence: review/phase-2-3-strategy-and-qa.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

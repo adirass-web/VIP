@@ -173,3 +173,26 @@ This register is the bridge between page approval and the future consolidated v3
 - **Supersedes:** Waiting for another instruction to begin those texts. Does not imply exact approval of previously unseen wording.
 - **Status:** Approved workflow
 - **Notes for v3 spec:** Keep PR #51 open for editorial review. No merge, main change, production integration or deployment. Not IT Support is already absorbed under D-016. Exact complete-copy approval still precedes the consolidated replacement specification.
+
+### D-019 — Deliberate hardening as positive value; demonstrate expert intervention
+- **Date:** 2026-10-04
+- **Category:** Positioning
+- **Decision:** Remove “If broader work is justified” as the sales premise for full hardening. Present a setup deliberately fitted to the client's circumstances as valuable without a known incident or urgent finding. Show expert interpretation of interconnected access and hands-on changes; examples illustrate the need without becoming an attack guide.
+- **Reason:** Owner says people deserve better than defaults and the current simple examples understate Toza's expertise. Prospects may not imagine or be able to describe the underlying issue.
+- **Authority:** Direct owner editorial feedback and revision instruction in the ongoing review.
+- **Affected pages/components:** Eleven current candidates, shared descriptions and future consolidation.
+- **Supersedes:** Conditional value framing in unapproved candidates, including doctrine/spec language where it makes full-service value depend on finding a fault. Locked files remain historical and are read with this explicit override.
+- **Status:** Approved direction; exact replacement wording pending review.
+- **Boundaries:** A value proposition is not a finding that every client is compromised or requires another purchase. Assessment conclusions remain open; describe priorities and recommended next steps, not a predetermined sale. Defaults are not universally unsafe. No exclusive-secret/no-search-can-find-it claim, guaranteed hidden finding, attack recipe, new deliverable or broader device/data scope. Separate agreed scope, price and voluntary purchase remain. Protected PA-01-v2 is not reopened for positioning changes.
+
+### D-020 — Shorter public Assessment duration wording
+- **Date:** 2026-10-04
+- **Category:** Duration / Class A public-service statement
+- **Decision:** Use “Typically four hours” as the public Assessment duration, paired with the Private Exposure Assessment name where appropriate. Remove the public “at least two hours” formulation from revised body, metadata, reusable descriptions and reference copy.
+- **Reason:** Owner explicitly requested shortening “At least two hours in person. Typically four.” to “Private Exposure Assessment, Typically four hours.”
+- **Authority:** Explicit later owner instruction.
+- **Affected pages/components:** All candidate duration occurrences and a separately identified duration-only amendment for the three protected PA-01-v2 occurrences.
+- **Supersedes:** D-003 and locked architecture/doctrine/AGENTS public-duration wording only. These historical files and the source snapshot remain unchanged.
+- **Status:** Approved public wording; exact placement pending candidate review.
+- **Commercial interpretation:** The typical duration is not a fixed cap, hourly purchase or trigger for an extra charge. Agreed intake, mapping, diagnosis and approved urgent first aid still define completion. This shortening does not change the operational minimum, price, scope, in-person delivery or urgent-arrival terms. No overtime policy is invented.
+- **Protected-copy treatment:** Record the three exact duration substitutions separately; do not structurally or stylistically rewrite PA-01-v2 or mutate the source corpus. Other protected wording remains for the later consistency gate.

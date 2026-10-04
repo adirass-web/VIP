@@ -1,18 +1,17 @@
 # Why Toza — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2, benefits round of 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S2 / C2 — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — benefits revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Organized the lower page around informed decisions, a tailored setup and the ability to use it.
-- Made identities, apps, data and their access arrangements explicit within agreed scope.
-- Explained practical security habits and personal teaching alongside settings hardening.
-- Added the service-wide no-monitoring/no-security-software facts and a positive category explanation.
-- Retained the personal note; strengthened the contact heading and aligned metadata.
+- Strengthened deliberate digital choices as the reason for full-service hardening.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Retained the founder voice, client control and scoped implementation/teaching.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -42,7 +41,7 @@ One senior expert · In person · With you present · Your credentials remain un
 
 Even careful, exacting people who accept no default choice in the important parts of their lives often live with decisions made for them by their phones and platforms.
 
-Much of that digital life has accumulated over time. A device remains signed in after it is put aside. Account recovery still depends on an old email address. Sharing continues after the relationship that made it useful has changed. These arrangements can be hard to see together, let alone judge against your circumstances today.
+Your devices, digital identities, accounts and apps can create many routes to information you intend to keep private. Some rely on ordinary features, without a new break-in. A forgotten connection or permission is only one part of the picture. Understanding how those arrangements work together, what they allow and what to change takes work on your actual setup.
 
 You may have only a hunch that something is off. You may simply want a more deliberate approach to your privacy. You should not have to identify the problem, or know which technical questions to ask, before seeking expert help.
 
@@ -62,9 +61,9 @@ Portrait alt text: Portrait of Dr. Lior Tabansky
 
 During the [Private Exposure Assessment](/en/private-exposure-assessment.html), I examine the relevant devices, digital identities, accounts and access to your data in the context of your situation. I explain which risks matter and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary of what was found, what changed and what should happen next, even if you decide not to continue.
 
-### Your setup reflects your circumstances
+### Your setup reflects choices made for your life
 
-If broader work is justified, we agree its scope and price separately. Through Personal Shield or Inner Circle Shield, I harden the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data. This can include closing unwanted access, strengthening sign-in and recovery, and changing how information is shared. Material changes are tested. There is no automatic continuation from the Assessment.
+You should not have to wait for a known intrusion to choose a more carefully configured digital life. Through Personal Shield or Inner Circle Shield, I harden the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data around your circumstances. We agree the scope and price separately, and you decide whether to proceed. This can include closing unwanted access, strengthening sign-in and recovery, and changing how information is shared. Material changes are tested. There is no automatic continuation from the Assessment.
 
 ### You know how to use what has changed
 
@@ -104,12 +103,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. Independent review of the complete replacement and the final five-candidate consistency check passed under D-009. Findings and dispositions are recorded in review/owner-feedback-03-benefits.md.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The owner approved the discussed changes and requested this further pass. The complete replacement and its metadata passed independent review; exact approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Founder note, portrait, experience and profile preserved from the previous candidate. The lower page is reorganized by client gain, with full-service results tied to Personal Shield/Inner Circle and their separate purchase. Category detail is linked to the newly merged FAQ section. Identities/data wording describes the agreed environment, not unlimited data work. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.

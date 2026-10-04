@@ -1,18 +1,17 @@
 # Home — EN-02-v2 candidate
 
-Source: EN-02-v1, calibrated against reviewed canonical candidates 01–05; 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
 
 Intervention: **S3 / C3**
 
-Status: **READY FOR OWNER REVIEW — independent page and candidate-consistency gates passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
 
 ## What changed
 
-- Led with personal relevance and direct senior judgment for readers who may have only a hunch.
-- Explained the gains from Assessment and separately purchased hardening without a full service catalogue.
-- Made settings, identities/data access, practical habits and teaching explicit.
-- Kept distinct primary and supporting situation routes; linked detailed commercial/privacy information.
-- Applied Latin brand styling and the benefit-led contact system; revised metadata.
+- Presented tailored hardening positively while retaining a separate, voluntary purchase.
+- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
+- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
+- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
 
 ## Exact revised copy
 
@@ -22,17 +21,17 @@ Route: /en/
 
 Title: Toza | Personal Cybersecurity, In Person
 
-Description: Understand your digital exposure and make informed changes with Dr. Lior Tabansky. In-person assessment, tailored hardening and practical security habits.
+Description: A digital setup fitted to your life. Work directly with Dr. Lior Tabansky for in-person assessment, tailored hardening and practical security habits.
 
-Social description: You may have only a hunch. Toza helps you understand relevant access to your digital life, decide what needs changing and learn to use a hardened setup.
+Social description: You do not need to diagnose a problem or wait for an incident. Understand your exposure and choose expert hardening and teaching around your circumstances.
 
 ## Hero
 
 Personal cybersecurity, in person
 
-# Understand your digital exposure. Make informed changes.
+# Your digital setup should fit your life.
 
-Much of your digital life has accumulated through settings and arrangements you rarely revisit. A relationship changes, private information surfaces, or you simply want to know whether those arrangements still suit your life.
+You make deliberate choices about important parts of your life. Your digital setup often grows around platform defaults and arrangements made years ago. You can choose to have it examined and hardened around your circumstances, before a problem is known or when something feels wrong.
 
 Dr. Lior Tabansky works with you to understand the relevant access and carry out the changes you agree to. You do not need to identify the technical problem before seeking help.
 
@@ -42,15 +41,15 @@ In person · With you present · One senior expert, start to finish
 
 ## They may not need to hack you.
 
-An old phone may still receive messages. A recovery address can reopen an account. A shared app may reveal your location. These ordinary connections can remain after you thought access had ended; their presence does not establish that anyone has used them improperly.
+There are many ways for someone to reach private information without your permission. Some use ordinary device and account features, without a new break-in. Access left on an old device or information shared between services can be part of a wider set of connections you have never reviewed together. Their presence does not establish that anyone has misused them.
 
-Toza examines how your relevant devices, digital identities, accounts, apps and data are connected. You learn what those arrangements allow and which changes deserve attention.
+Toza examines how your relevant devices, digital identities, accounts, apps and data are connected. Dr. Tabansky interprets what that access allows in your circumstances and carries out the changes you agree to. You do not need to know which questions to ask or work out the technical changes yourself.
 
 ## Expert judgment, followed by work you can use
 
 The paid Assessment establishes what matters in your situation, includes approved urgent fixes where safely possible within scope, and gives you a practical summary and ordered next steps.
 
-If broader work is justified, Personal Shield or Inner Circle Shield combines hardening of the agreed settings and access arrangements with practical security habits and personal teaching. Material changes are tested. You learn how to grant access, share information, sign in and recover accounts in the resulting setup. Broader work requires a separate agreed scope, price and purchase.
+Personal Shield and Inner Circle Shield provide a hardened setup fitted to your circumstances. They combine changes to the agreed settings and access arrangements with practical security habits and personal teaching. Material changes are tested. You learn how to grant access, share information, sign in and recover accounts in the resulting setup. Broader work requires a separate agreed scope, price and purchase.
 
 Toza does not monitor your devices or install security software on them.
 
@@ -70,9 +69,9 @@ Also relevant: [Private information has surfaced](/en/they-know-something.html) 
 
 ## A first paid visit with a useful result
 
-**Private Exposure Assessment · ₪3,600 including VAT**
+**Private Exposure Assessment · Typically four hours**
 
-**At least two hours in person. Typically four.**
+**₪3,600 including VAT**
 
 One main phone and one other device: a PC, iPad or second phone, with relevant identities, accounts and data access. The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid. You receive a summary of what was reviewed, found and changed, what remains and the next steps, even if you buy nothing further.
 
@@ -98,12 +97,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. The page gate and final eleven-candidate consistency review passed under D-009. See review/phase-2-3-strategy-and-qa.md for findings and dispositions.
+None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** The complete candidate and metadata passed independent review. D-018 authorizes drafting, not exact approval of unseen wording; exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Home is rebuilt around recognition, direct founder delivery, staged gains and situation routes. Full credit and privacy detail is linked rather than abbreviated into new claims. Former standalone category link routes to the merged FAQ. Wordmark styling is specified in Shared Copy; running text uses Toza. Source commercial facts and protected PA-01-v2 are unchanged. Current authority: D-011, D-014, D-016, D-017 and D-018. All four skills applied; author metadata sweep complete. Independent review complete; exact owner approval pending. Evidence: review/phase-2-3-strategy-and-qa.md.
+Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.
