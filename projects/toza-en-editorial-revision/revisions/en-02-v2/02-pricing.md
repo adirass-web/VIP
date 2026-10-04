@@ -2,17 +2,17 @@
 
 Source: EN-02-v1, 4 October 2026
 
-Intervention: **S1 / C1**
+Intervention: **S1 / C2 — selective outcome-language revision after owner feedback**
 
-Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
+Status: **READY FOR OWNER REVIEW — replacement independently reviewed under D-009**
 
 ## What changed
 
-- Preserved the complete service-comparison, credit and urgent-fee tables.
-- Made outcome-based Assessment completion explicit alongside its typical duration.
-- Clarified coordinated Inner Circle delivery and each participant’s privacy.
-- Removed the extra mid-page CTA and linked full privacy detail to FAQ.
-- Kept written scope, purchase separation and all material limits visible.
+- Replaced vague exposure-reduction and protection language with concrete work and explained hardening.
+- Made clear that clients need not identify a technical problem before contact.
+- Explained situational risk and priorities while preserving the Assessment's approved completion boundary.
+- Added a visible optional-follow-up table beside the main service descriptions.
+- Preserved all existing commercial tables, service names, prices and the accepted scope/privacy block.
 
 ## Exact revised copy
 
@@ -22,17 +22,17 @@ Route: `/en/pricing.html`
 
 Title: Pricing | Toza
 
-Description: Private, in-person protection for your accounts and devices. Initial visit ₪3,600. Personal Shield ₪14,000. Inner Circle Shield from ₪42,000. VAT included.
+Description: Personal digital security with Dr. Tabansky, in person. Assessment ₪3,600. Personal Shield ₪14,000. Inner Circle Shield from ₪42,000. VAT included.
 
-Social description: See what Toza includes: direct expert work, practical protection, training and clear next steps. Start with a private conversation.
+Social description: Understand the first visit, separately agreed device and account hardening, and optional follow-up. Work directly with Dr. Lior Tabansky, in person.
 
 ## Hero
 
 Pricing
 
-# One clear first step. Then the protection your situation needs.
+# Understand what needs attention. Have the right changes made.
 
-Work directly with Dr. Lior Tabansky to reduce exposure through your devices, accounts and shared services. Start with a private conversation, then a paid in-person visit. If broader work is needed, you decide whether to proceed with a separate protection service.
+You do not need to identify a technical problem before contacting Toza. The paid first visit examines your devices, accounts and relevant access in the context of your situation, carries out approved urgent fixes and sets out the next steps. If broader work is needed, you can separately engage Dr. Lior Tabansky to harden the agreed setup: close unwanted access where possible, strengthen sign-in and recovery, and test the changes.
 
 **All prices include VAT.**
 
@@ -40,7 +40,7 @@ Work directly with Dr. Lior Tabansky to reduce exposure through your devices, ac
 
 In person · With you present · You control your credentials
 
-## First: address urgent exposure and establish the next steps
+## First: understand your current exposure and act on what is urgent
 
 **Private Exposure Assessment · ₪3,600 including VAT**
 
@@ -50,7 +50,7 @@ The visit completes the agreed intake, access mapping, diagnosis and approved ur
 
 The first visit covers one main phone and one other device: a PC, iPad or second phone. We work on the relevant identities, accounts, apps, permissions and recovery routes, including access to messages, photos, documents and location information.
 
-- **Trace the access that matters.** Examine signed-in devices, recovery details and sharing arrangements with Dr. Tabansky, and understand what they allow.
+- **Understand which access matters in your situation.** Examine signed-in devices, recovery details and sharing arrangements with Dr. Tabansky. Learn what they could reveal or allow, how that relates to your concerns and which changes should come first.
 - **Make approved urgent changes.** Address urgent exposure that can safely be fixed within the agreed scope, with your approval.
 - **Receive a practical summary.** See what was reviewed, what was found, what changed, what remains, whether broader work is justified and what to do next. You receive this even if you buy nothing further.
 
@@ -58,9 +58,9 @@ The first conversation checks fit and urgency. It includes no device inspection,
 
 **[See the initial visit in detail](/en/private-exposure-assessment.html)**
 
-## Next: carry out the broader protection work
+## Next: harden the agreed devices and accounts
 
-The initial visit includes approved urgent first aid. Personal Shield and Inner Circle Shield carry out the broader device and account protection, essential migration, security-key setup, training and verification. We explain the work needed and set out the scope and price. You decide whether to continue. There is no automatic continuation.
+The initial visit includes approved urgent first aid. Personal Shield and Inner Circle Shield carry out broader hardening: changing the agreed setup to make unwanted access more difficult, with essential migration where needed, physical security-key setup, training and verification. We explain the work needed and set out the scope and price. You decide whether to continue. There is no automatic continuation.
 
 ### Compare the full services
 
@@ -80,13 +80,13 @@ The initial visit includes approved urgent first aid. Personal Shield and Inner 
 
 ### Personal Shield: put the changes into practice
 
-We tighten security across the agreed devices and accounts and show you how to use the changed setup, sign in and recover access.
+Dr. Tabansky carries out the hardening across your agreed devices and accounts, tests material changes and shows you how to use the resulting setup, sign in and recover access. The work follows your situation and the findings of the Assessment.
 
 The included adjustment support covers issues directly related to our changes through WhatsApp, Signal and scheduled calls. It does not involve remote control of your devices.
 
-### Inner Circle Shield: coordinated protection for four
+### Inner Circle Shield: coordinated hardening for four
 
-Four people receive coordinated protection under one agreed engagement, with the same standard of device and account protection, essential migration, training and verification as Personal Shield for each person. The initial ₪3,600 visit covers the initial client's two devices and relevant accounts. Review and mapping for the remaining group are included in the separately purchased Inner Circle engagement.
+Four people receive coordinated hardening under one agreed engagement, with the same standard of device and account hardening, essential migration, training and verification as Personal Shield for each person. The initial ₪3,600 visit covers the initial client's two devices and relevant accounts. Review and mapping for the remaining group are included in the separately purchased Inner Circle engagement.
 
 The included shared network and router receive review and hardening of accessible settings and authorized administration. Replacement hardware, work on additional connected devices and additional locations are quoted separately. We agree the scope, schedule and total price in writing before you accept.
 
@@ -97,6 +97,15 @@ Each participant receives a private dated record. The shared-network work is doc
 **Individually agreed scope and price.**
 
 For severe, unusual or highly complex situations that require a different scope. After the initial visit, we define the work and price in writing for your decision.
+
+### Optional follow-up after a completed full service
+
+| Service | What it covers | Price |
+|---|---|---|
+| Annual Shield Review | Review of changes in devices, accounts and access | Quoted individually after scope is agreed |
+| Priority Retainer | Priority scheduling and advice within an agreed scope | Quoted individually after scope is agreed |
+
+Both are available after a completed full service, not after the initial visit alone. They are separate from the 14-day adjustment support included with Personal Shield and Inner Circle Shield.
 
 ## Your initial fee counts toward the full service
 
@@ -120,11 +129,9 @@ Request a four-hour urgent visit. We confirm availability before you pay. For an
 
 The weekend/holiday surcharge replaces the ordinary surcharge. Other charges apply only if separately agreed. Outside Central Israel, we agree the arrival time and travel terms before you accept.
 
-## Additional work and optional follow-up
+## Additional work
 
 Extra people or devices, network work beyond the included scope and vehicle access reviews are **quoted individually** after scope is agreed. An expansion needs your approval before work begins.
-
-After a completed full service, Annual Shield Review reviews changes in devices, accounts and access. Priority Retainer provides priority scheduling and advice within an agreed scope. Both are **quoted individually** after scope is agreed and are separate from the included adjustment support.
 
 ## What the service covers
 
@@ -148,12 +155,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. Independent Toza red-team review passed under D-009; findings and dispositions are recorded in `review/phase-1-strategy-and-qa.md`.
+None in the candidate. Independent re-review passed after the optional-support reference was tied to Personal Shield and Inner Circle Shield and the urgent-fix wording was clarified. No prices, service names or commercial scope have changed. Proposed terminology guidance is recorded under D-013.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Exact owner approval is pending; no production integration is authorized.
+**READY FOR OWNER REVIEW.** Replacement wording passed independent re-review under D-009. Exact owner approval is pending; no production integration is authorized.
 
 ## Provenance and metadata
 
-Service order and all three tables retained. Privacy detail linked, not replaced by an absolute assurance. Current prices, VAT, scope, equipment, days, support, network limits, credit and urgent terms preserved. Completion language comes from protected PA-01-v2; participant consent clarification comes from the source FAQ. No new Class A fact or owner copy approval. Workflow: D-009. Strategy and review evidence: `review/phase-1-strategy-and-qa.md`. Title, description, social description and route checked against the body; independent metadata review passed; exact owner approval pending.
+Source EN-02-v1 and reviewed candidate at 22c9c4b; selective outcome-language revision under owner feedback D-011/D-013, S1/C2. All three original commercial tables retained exactly. Optional follow-up moved from prose to a separate table beside service descriptions; names, individually quoted price/scope, eligibility and support separation are unchanged. The owner's accepted service-boundary block is unchanged. Assessment completion remains intake, access mapping, diagnosis and approved urgent first aid; explanatory wording describes current situational interpretation without adding a formal threat-model artifact. Full hardening remains a separate purchase. Current prices, VAT, devices, equipment, days, support, network limits, credit and urgent terms preserved. Bespoke Private Protection keeps its approved name and individual scope. No new Class A fact or exact copy approval. Title and route retained; description and social description revised and checked against body. Independent re-review passed; exact owner approval pending. Review evidence: review/owner-feedback-01.md.

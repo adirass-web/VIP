@@ -1,5 +1,7 @@
 # Why Toza — editorial record
 
+**Historical baseline review:** the owner subsequently reopened Why Toza and Pricing and accepted FAQ for now. Current replacement reviews and dispositions are in [owner feedback 01](owner-feedback-01.md); decisions D-011–D-013 supersede baseline status where stated.
+
 Date: 4 October 2026  
 Source: EN-02-v1 in `source/TOZA_EN_COPY_REVIEW.md`  
 Resumed candidate: `90c7054f1fcd476bc214e6a2dbbd736409ffd74a`  

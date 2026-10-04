@@ -83,3 +83,36 @@ This register is the bridge between page approval and the future consolidated v3
 - **Supersedes:** Nothing approved; replaces no production content.
 - **Status:** Proposed
 - **Notes for v3 spec:** Incorporate only after exact approval of `05-shared-copy-system.md` and its placement map. Shared copy remains explicitly provisional. No change to service facts, contact destinations or public language availability is authorized.
+
+### D-011 — Personal recognition before technical problem awareness
+- **Date:** 2026-10-04
+- **Category:** Editorial doctrine
+- **Decision:** Why Toza must center personal situations. The gap between deliberate choices elsewhere in life and inherited phone/platform arrangements is a central premium insight. Potential clients may not understand that they need this unfamiliar service; they may have only a hunch and cannot be expected to identify or describe the underlying problem. Explain Toza's discovery, interpretation and intervention, with tangible tailored hardening and clear next steps.
+- **Reason:** Owner feedback on Why Toza and Pricing, followed by the explicit reminder that Toza uncovers issues clients do not imagine and fixes problems they cannot describe.
+- **Authority:** Direct owner instruction in this review.
+- **Affected pages/components:** Why Toza, Pricing, later Home and situation pages; future shared language and consolidated specification.
+- **Supersedes:** Draft emphasis on organizational crises and any assumption that the reader already recognizes a technical need. Refines the internal situation-aware/exposure-blind model; no change to the intended private-client market.
+- **Status:** Approved direction; exact replacement wording pending
+- **Notes for v3 spec:** Recognize uncertainty without treating it as evidence of compromise. Defaults are not inherently unsafe. Demonstrate discovery through ordinary access/recovery/sharing mechanisms without guaranteeing hidden findings. Owner feedback reopens the Why Toza note for selective rewriting (S1/C2); retain its personal voice. Assessment and separately accepted full-service hardening remain distinct.
+
+### D-012 — FAQ accepted for now
+- **Date:** 2026-10-04
+- **Category:** Page role
+- **Decision:** Preserve the current EN-02-v2 FAQ wording and length. Owner said: “FAQ is long, but let's accept it for now.”
+- **Reason:** Accept the current detailed treatment rather than continuing compression.
+- **Authority:** Direct owner review of the Phase 1 candidate.
+- **Affected pages/components:** revisions/en-02-v2/03-faq.md, exact-copy block as present at commit 22c9c4bc2df92a232adf925989ef284a3a9e34b4.
+- **Supersedes:** Pending owner review of that current FAQ candidate.
+- **Status:** Approved for now, preserving the owner's qualification
+- **Notes for v3 spec:** No change to body or metadata in this response. Later terminology recommendations do not silently reopen this accepted wording. No production integration, main merge or deployment authorization is inferred.
+
+### D-013 — Outcome terminology and service presentation recommendations
+- **Date:** 2026-10-04
+- **Category:** Terminology
+- **Decision:** Proposed: use concrete intervention verbs and explain hardening; use protection sparingly as purpose language, retain approved service names, and do not impose a corpus-wide ban. Make the optional Annual Shield Review and Priority Retainer visible in a separate pricing table. Keep material scope boundaries on Pricing with comprehensive detail in FAQ; identical facts do not require identical paragraphs.
+- **Reason:** Owner questions 3–8 call for stronger outcomes, threat-modeling clarity, less vague protection language, visible annual review and a deliberate repetition policy.
+- **Authority:** Editorial recommendations in response to owner questions; not approval of new commercial terms or final wording.
+- **Affected pages/components:** Why Toza, Pricing and later shared-copy/terminology review.
+- **Supersedes:** No approved service name or fact. In particular Bespoke Private Protection remains the named offer.
+- **Status:** Proposed
+- **Notes for v3 spec:** Owner has described threat assessment/modeling and a plan as service value. Translate the supported assessment, priorities and next steps into public copy; do not invent a separate written threat-model deliverable or move full hardening into the Assessment. “Highest possible standard in the commercial realm” is an unresolved proposed claim: its benchmark, scope and verification criteria are not defined. No such superlative is placed in candidate copy. A whole-digital-life or all-exposures promise is not implied by tailored work.

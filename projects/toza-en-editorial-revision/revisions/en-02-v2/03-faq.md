@@ -4,7 +4,7 @@ Source: EN-02-v1, 4 October 2026
 
 Intervention: **S1 / C1**
 
-Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
+Status: **APPROVED FOR NOW — owner acceptance recorded in D-012; exact copy unchanged**
 
 ## What changed
 
@@ -216,8 +216,8 @@ None. Independent Toza red-team review passed under D-009; findings and disposit
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Exact owner approval is pending; no production integration is authorized.
+**APPROVED FOR NOW.** Owner: “FAQ is long, but let's accept it for now.” The exact-copy block, including metadata, is unchanged from 22c9c4b. No production integration is authorized.
 
 ## Provenance and metadata
 
-All source questions retained. Credit calculations linked to Pricing; current prices, device scope, support, urgent terms, credential control, disclosure and non-forensic limits preserved. The blocked/declined-action caveat comes from source What Happens, not a new completion policy. First-message and visibility answers remain canonical. No new Class A fact or owner copy approval. Workflow: D-009. Strategy and review evidence: `review/phase-1-strategy-and-qa.md`. Title, description, social description and route checked against the body; independent metadata review passed; exact owner approval pending.
+All source questions retained. Credit calculations linked to Pricing; current prices, device scope, support, urgent terms, credential control, disclosure and non-forensic limits preserved. The blocked/declined-action caveat comes from source What Happens, not a new completion policy. First-message and visibility answers remain canonical. No new Class A fact. Owner acceptance of the current wording and length is recorded with its “for now” qualification in D-012. Workflow: D-009. Strategy and review evidence: `review/phase-1-strategy-and-qa.md`. Title, description, social description and route checked against the body; independent metadata review passed; current candidate accepted for now under D-012.

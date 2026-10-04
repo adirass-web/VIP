@@ -1,5 +1,7 @@
 # Phase 1 and Shared Copy System — strategy and QA
 
+**Historical baseline review:** the owner subsequently reopened Why Toza and Pricing and accepted FAQ for now. Current replacement reviews and dispositions are in [owner feedback 01](owner-feedback-01.md); decisions D-011–D-013 supersede baseline status where stated.
+
 Date: 4 October 2026. Source: EN-02-v1. Workflow: D-009.
 
 The author and independent reviewer are separate. The reviewer reads current Toza authority and diagnoses before corrections. A PASS below means READY FOR OWNER REVIEW, never exact owner approval. All candidates remain outside production.

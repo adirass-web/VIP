@@ -1,10 +1,10 @@
 # EN-02-v2 Revision Candidates
 
-Candidates 01–05 are **READY FOR OWNER REVIEW** after sequential independent Toza red-team review under D-009. Shared Copy System is explicitly **PROVISIONAL**, and its placement proposal D-010 is not owner-approved. No candidate is authorized for production integration.
+Why Toza and Pricing have replacement candidates after owner feedback, independently re-reviewed under D-009 and **READY FOR OWNER REVIEW**. FAQ is **APPROVED FOR NOW** under D-012, with its exact copy unchanged. What Happens remains ready for owner review. Shared Copy System is explicitly **PROVISIONAL**, and D-010/D-013 placement/terminology recommendations remain proposed. No candidate is authorized for production integration.
 
 Start with [Why Toza](01-why-toza.md), then [Pricing](02-pricing.md), [FAQ](03-faq.md), [What Happens](04-what-happens.md) and [Shared Copy System](05-shared-copy-system.md). Each packet contains complete exact copy and metadata where applicable.
 
-Findings, dispositions and guardrail evidence are in [the Phase 1 review record](review/phase-1-strategy-and-qa.md) and [Why Toza's record](review/01-why-toza-editorial-record.md). The Code Review plugin was not used; the owner authorized the independent-review substitution. Phases 2–6 remain outstanding.
+Current replacement findings and guardrails are in [owner feedback 01](review/owner-feedback-01.md). Baseline findings, dispositions and guardrail evidence are in [the Phase 1 review record](review/phase-1-strategy-and-qa.md) and [Why Toza's record](review/01-why-toza-editorial-record.md). The Code Review plugin was not used; the owner authorized the independent-review substitution. Phases 2–6 remain outstanding.
 
 Locked sequence and filenames (01–05 exist; later files remain planned):
 1. `01-why-toza.md`

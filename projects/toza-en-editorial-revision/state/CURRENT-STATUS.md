@@ -3,50 +3,34 @@
 Date: 4 October 2026
 
 ## State
-Phase 1 and Phase 1.5 candidates prepared, independently reviewed and ready for exact owner review. Shared Copy System remains provisional.
 
-### Completed
-- source corpus locked;
-- current five commercial decisions ratified;
-- PA-01-v2 protected;
-- copywriting/editorial source review completed;
-- Toza editorial doctrine created;
-- four Toza skills created;
-- ten-sweep editor and red-team calibrated;
-- 12-page page-by-page calibration completed;
-- stress-tested revision architecture locked;
-- Shared Copy System workstream added;
-- live decision-delta register added.
-- Why Toza → Pricing → FAQ → What Happens → Shared Copy System drafted/edited and reviewed in order;
-- independent Toza red-team gate substituted for the Code Review plugin by owner authorization D-009;
-- What Happens no-remote-control finding corrected and independently rechecked;
-- five-candidate consistency review passed;
-- source/harness integrity, founder-note preservation, Pricing tables, FAQ question coverage and candidate route/anchor checks passed.
+Phase 1 owner feedback incorporated into replacement Why Toza and Pricing candidates. Both passed separate independent Toza red-team review after corrections under D-009. FAQ is accepted for now with its exact wording and metadata unchanged. What Happens and provisional Shared Copy remain as previously reviewed.
 
-### Current phase
-**Phase 1 + Phase 1.5 — READY FOR OWNER REVIEW**
-
-### Candidate status
-
-| Candidate | Intervention | Independent gate | Exact owner approval |
+| Candidate | Intervention | Independent gate | Owner state |
 |---|---|---|---|
-| `revisions/en-02-v2/01-why-toza.md` | S1/C1 | PASS | Pending |
-| `revisions/en-02-v2/02-pricing.md` | S1/C1 | PASS | Pending |
-| `revisions/en-02-v2/03-faq.md` | S1/C1 | PASS | Pending |
-| `revisions/en-02-v2/04-what-happens.md` | S3/C2 | PASS after correction | Pending |
-| `revisions/en-02-v2/05-shared-copy-system.md` | Component review | PASS; provisional | Pending |
+| revisions/en-02-v2/01-why-toza.md | S1/C2, owner-reopened founder note | Replacement PASS after correction | Exact replacement approval pending |
+| revisions/en-02-v2/02-pricing.md | S1/C2, selective outcome-language revision | Replacement PASS after correction | Exact replacement approval pending |
+| revisions/en-02-v2/03-faq.md | S1/C1 | Prior PASS; exact copy unchanged | Approved for now, D-012 |
+| revisions/en-02-v2/04-what-happens.md | S3/C2 | Prior PASS after correction; unchanged | Pending |
+| revisions/en-02-v2/05-shared-copy-system.md | Component review | Prior PASS; unchanged, provisional | Pending |
 
-The Code Review plugin did not run; D-009 supersedes D-008's plugin requirement. The separate read-only reviewer applied the Toza red-team skill and current authority. No self-review or CI result was substituted for that independent gate.
+## Current authority and review evidence
 
-Review evidence: `revisions/en-02-v2/review/01-why-toza-editorial-record.md` and `revisions/en-02-v2/review/phase-1-strategy-and-qa.md`. All required findings are resolved. There are no new Class A commercial decisions. D-010 records shared placement as an editorial proposal, not owner approval.
+- D-011: personal situations, deliberate choices versus inherited digital arrangements, and readers who may have only a hunch. Exact replacement wording remains for review.
+- D-012: FAQ accepted “for now,” preserving that qualification; no production authorization inferred.
+- D-013: terminology and optional-follow-up presentation recommendations remain Proposed. Protection is not globally banned; approved service names remain. No distinct formal threat-model artifact or undefined highest-commercial-standard claim was added.
+- Current review: revisions/en-02-v2/review/owner-feedback-01.md. Earlier review records remain historical evidence, labeled accordingly.
+- W2-RT-01 corrected full-service inclusion scope; P2-RT-01 corrected optional-support scope; P2-RT-02 clarified urgent-fix wording. Exact corrections independently rechecked. No remaining candidate finding.
+- Code Review plugin did not run. D-009 explicitly substitutes a separate read-only Toza reviewer; no CI or self-review is represented as that gate.
 
-### Next work
+## Checks and preserved material
 
-Exact owner review covers complete wording and metadata in each packet. Shared placement/variants remain Proposed under D-010. Home is the next page in the locked sequence, followed by the situation pages; those phases were not started in this request. Shared copy is explicitly provisional for later drafting and still requires exact approval before integration.
+All three original Pricing tables and the accepted Pricing boundary block remain exact; annual review/retainer now have a separate table beside the service descriptions. FAQ exact-copy block and metadata remain unchanged from 22c9c4b. What Happens and Shared Copy remain unchanged. Routes, declared anchors and diff checks pass. Source corpus, protected PA-01-v2, locked architecture/instructions, doctrine, skills and production templates remain unchanged.
 
-The later full-corpus Phase 5 audit and consolidated v3 specification remain outstanding. Existing operational edge cases identified by the source corpus remain quarantined; this revision does not invent their policies.
+## Next work
+
+Owner review of the complete replacement Why Toza and Pricing wording, including metadata. What Happens and provisional Shared Copy still require exact approval; D-010/D-013 terminology/placement proposals are not final corpus rules. Home and subsequent locked phases have not begun. Phase 5 full-corpus audit and consolidated v3 specification remain outstanding. Existing unresolved operational policies remain quarantined.
 
 ## Production status
-No production-template change was made or authorized. The source corpus, protected PA-01-v2, locked instructions, doctrine and skills remain unchanged. The founder note is unchanged from the resumed candidate; all Pricing tables match the source and all FAQ questions remain.
 
-`main` remains outside the revision work until exact copy approval and later integration.
+No main changes, production-template edits, integration, merge or deployment. Work remains on editorial/toza-copy-harness and PR #51. Candidate readiness is not integration authorization.

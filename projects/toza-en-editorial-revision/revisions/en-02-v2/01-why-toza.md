@@ -1,16 +1,16 @@
 # Why Toza — EN-02-v2 candidate
 
 Source: EN-02-v1, 4 October 2026  
-Intervention: **S1 / C1**  
-Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
+Intervention: **S1 / C2 — founder note reopened by owner feedback D-011**
+Status: **READY FOR OWNER REVIEW — replacement independently reviewed under D-009**
 
 ## What changed
 
-- Preserved the founder note and first-person voice; tightened only minor repetition and syntax.
-- Made direct senior delivery more explicit as the service-design proof.
-- Shortened the lower service explanation so this page does not duplicate Pricing or the Assessment page.
-- Removed duplicate credential reassurance and routed detailed privacy and boundaries to FAQ.
-- Kept the contact/purchase boundary clear without turning the page into a process page.
+- Centered the personal choices/defaults insight in the founder note.
+- Made room for readers who have only a hunch and cannot identify a technical problem.
+- Explained the Assessment's practical clarity and the tangible result of separately agreed hardening.
+- Replaced vague outcome language with work on access, recovery and the resulting setup.
+- Preserved founder delivery, client control, purchase boundaries and the route to detailed scope.
 
 ## Exact revised copy
 
@@ -20,7 +20,7 @@ Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
 
 **Title:** Why Toza | A note from Dr. Lior Tabansky
 
-**Description:** Why Dr. Lior Tabansky created Toza: private, in-person digital protection with one senior expert, where personal judgment shapes the work.
+**Description:** Why Dr. Lior Tabansky created Toza: personal judgment for your digital life, from understanding unfamiliar risks to tailored, in-person hardening.
 
 **Social description:** Why I created Toza, and why you work with me directly, in person and with control over the changes we make.
 
@@ -30,7 +30,7 @@ Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
 
 # Why I created Toza.
 
-Toza exists for moments when ordinary digital life suddenly carries unusual consequences, and when careful, personal judgment matters.
+I created Toza to bring personal judgment to a part of life so often left to the choices made by phones and platforms.
 
 **[Request a private conversation](#contact)**
 
@@ -38,11 +38,15 @@ One senior expert · In person · With you present · Your credentials remain un
 
 ## A personal note
 
-In two decades of cybersecurity work, I kept seeing the same pattern. Organizational and personal crises can look very different, yet the same digital layer kept appearing: accounts, devices, permissions and the trail created by ordinary daily use suddenly mattered in ways they had not before.
+Even careful, exacting people who accept no default choice in the important parts of their lives often live with decisions made for them by their phones and platforms.
 
-Even careful, exacting people who accept no default choice in the important parts of their lives often live with decisions made for them by their phone and platforms. This is not carelessness. These systems are complex, constantly changing and spread the full picture across dozens of places. It is difficult to know what is exposed, who may still have access and what genuinely needs to change.
+Much of that digital life has accumulated over time. A device remains signed in after it is put aside. Account recovery still depends on an old email address. Sharing continues after the relationship that made it useful has changed. These arrangements can be hard to see together, let alone judge against your circumstances today.
 
-That is why I created Toza. I wanted to offer the service I believed should already exist: personal, discreet and precise work with one senior expert, before a crisis or in the middle of one. The purpose is to understand what is exposed, reduce what can be reduced and restore clarity and control. When you engage Toza, you work with me directly, from beginning to end.
+You may have only a hunch that something is off. You may simply want a more deliberate approach to your privacy. You should not have to identify the problem, or know which technical questions to ask, before seeking expert help.
+
+In two decades of cybersecurity work, I kept seeing how much personal situations could depend on this overlooked digital layer. I created Toza to offer the service I believed should already exist: one senior expert who understands your situation, examines what matters and carries out the agreed changes with you. The work can bring overlooked access to light and make clear what needs attention, before a crisis or in the middle of one.
+
+When you engage Toza, you work with me directly, from beginning to end.
 
 **Dr. Lior Tabansky**
 
@@ -56,9 +60,9 @@ Portrait alt text: Portrait of Dr. Lior Tabansky
 
 **We work in person, with you present.** You see what is reviewed. I explain material changes and ask for your approval before making them. You control your passwords, recovery codes and authentication.
 
-**The first paid visit includes practical work.** During the [Private Exposure Assessment](/en/private-exposure-assessment.html), we trace the relevant device and account access, identify what needs attention first and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary even if you decide not to continue.
+**Understand your current exposure and what to do about it.** During the [Private Exposure Assessment](/en/private-exposure-assessment.html), I examine relevant device and account access in the context of your situation, explain which risks matter and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary of what was found, what changed and what should happen next, even if you decide not to continue.
 
-**Broader protection remains a separate decision.** If broader hardening is justified, I explain why, the scope and the price before you decide. There is no automatic continuation.
+**Have the agreed devices and accounts hardened around your life.** If broader work is justified, we agree its scope and price separately. Through Personal Shield or Inner Circle Shield, I close unwanted access where possible, strengthen sign-in and recovery arrangements, and test material changes. You learn how to use the resulting setup and recover access, and receive a private dated record. There is no automatic continuation from the Assessment.
 
 **The boundaries stay clear.** Toza works only within your authorized digital environment. I do not investigate another person, reconstruct past events forensically, collect legal evidence or give legal advice.
 
@@ -88,15 +92,15 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. Independent Toza red-team review passed under D-009. The Shared Copy System will define placement so a full footer contact block does not duplicate this page's first-person contact section.
+None in the candidate. Independent re-review passed after W2-RT-01 tied full-service inclusions to Personal Shield and Inner Circle Shield. The proposed “highest possible commercial standard” claim remains outside candidate copy pending a defined basis; no new threat-model document or whole-life coverage promise has been added.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Independent review is complete; exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Replacement wording passed independent re-review under D-009. Exact owner approval remains pending. No production integration is authorized.
 
 ## Provenance
 
-Source EN-02-v1; S1/C1. Founder note, portrait, professional-profile link and locked CTA preserved from the resumed candidate. Broader-service detail stays linked to Pricing; full privacy detail stays in FAQ. The paid Assessment now links directly to PA-01-v2. Duplicate credential reassurance removed. No Class A factual/commercial change or new copy approval introduced. Workflow decision: D-009 supersedes D-008's plugin requirement. Findings and review evidence are in `review/01-why-toza-editorial-record.md`.
+Source EN-02-v1 and reviewed candidate at 22c9c4b; S1/C2 under the owner's explicit reopening in D-011. The founder note now centers personal situations, inherited digital arrangements and unfamiliar needs. Direct delivery, portrait, professional-profile link, locked CTA, authorized scope and client control remain. Assessment clarity and urgent first aid stay separate from the full service's hardening, verification, training and dated record. Prices and other commercial rules are unchanged; no new artifact or coverage guarantee is introduced. Terminology proposals and unresolved standards wording: D-013. Review evidence: review/owner-feedback-01.md.
 
 ### Metadata status
-Title, description, social description and route checked by the author and independent reviewer; exact owner approval pending.
+Title and route retained. Description revised to match the personal rationale and staged service value; social description retained. Independent re-review passed; exact owner approval pending.
