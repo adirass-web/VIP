@@ -1,18 +1,18 @@
 # FAQ — EN-02-v2 candidate
 
-Source: EN-02-v1, 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2, benefits round of 4 October 2026
 
-Intervention: **S1 / C1**
+Intervention: **S2 / C2 — owner-authorized under D-016**
 
-Status: **APPROVED FOR NOW — owner acceptance recorded in D-012; exact copy unchanged**
+Status: **READY FOR OWNER REVIEW — benefits revision independently passed under D-009**
 
 ## What changed
 
-- Preserved all question groups and the detailed scope, privacy and service-boundary answers.
-- Linked repeated balance calculations to Pricing while retaining full credit eligibility.
-- Made the once-per-group credit rule visible in the credit answer.
-- Carried the existing blocked-or-declined-work caveat into the record answer.
-- Marked privacy, boundaries and contact destinations for later integration.
+- Opened with fit and client value, including a starting point for people who cannot name the problem.
+- Merged the useful Not IT Support explanation and its complete fair-comparison table into FAQ.
+- Added a direct answer confirming no device monitoring or installation of security software.
+- Expanded full-service detail to agreed identities, apps, data-access arrangements, practical habits and teaching.
+- Retained every previous question and material operational answer; updated headings, metadata and contact framing.
 
 ## Exact revised copy
 
@@ -20,23 +20,53 @@ Status: **APPROVED FOR NOW — owner acceptance recorded in D-012; exact copy un
 
 Route: `/en/faq.html`
 
-Title: Questions about Toza | Pricing, Privacy and Scope
+Title: Is Toza Right for Me? | Services, Privacy and Pricing
 
-Description: Clear answers about Toza's first visit, protection services, prices, urgent availability, privacy and client control. Start with a private conversation.
+Description: Understand what Toza changes, what you learn, and how the service differs from IT support or security software. Clear answers on scope, prices and privacy.
 
-Social description: Know what happens before you pay, what each service includes, and how your information and credentials are handled.
+Social description: You do not need to diagnose a problem before asking about Toza. Understand the work, its limits and your choices before deciding.
 
 ## Hero
 
 Questions, answered plainly
 
-# The questions people ask before they reach out.
+# Understand what Toza can do for you.
 
-Understand the first step, what the work includes and what remains your decision. Dr. Lior Tabansky works with you in person, explains the changes and keeps you in control of your credentials.
+Start with the kind of help you need, even if you cannot yet name the problem. These answers explain what you can gain from the work, what each stage includes and what remains your decision.
 
 [Request a private conversation](#contact)
 
 In person · With you present · No remote control
+
+## Is Toza the right kind of help? {#how-toza-differs}
+
+### Do I need to know what is wrong before contacting you?
+
+No. You can have a concern, a hunch, or a wish to take a more deliberate approach to your digital life. You do not need to identify an account, setting or technical fault. The first conversation checks whether Toza fits; examining your digital environment belongs to the paid Assessment. A concern alone does not establish that someone has accessed your information.
+
+### How is this different from IT support or help from someone I know?
+
+A working device can still expose private information. An old device may remain signed in, a recovery address may reopen an account, or a shared service may reveal information you now need to keep private.
+
+Toza connects those arrangements to your circumstances. Dr. Tabansky explains what relevant access allows and which changes should come first. Separately purchased hardening addresses the agreed setup and the practical security habits you use with it. You learn how to manage the changed arrangements, with material changes made only with your approval.
+
+Routine support, individual security tools and help from someone you know can all be useful. Use the comparison below to consider the scope you need.
+
+| Option | Useful for | Check when your concern is personal exposure |
+|---|---|---|
+| Someone you know | Familiar help with setup or a specific problem | Whether you want to share the personal context, and whether the person can follow access across devices and accounts |
+| IT support | Device faults, setup, maintenance and agreed technical work | Whether the agreed scope includes your personal situation, connected access, change sequencing and verification |
+| Apple, Google or Microsoft support | Questions or access problems within that provider's products and services | Which cross-provider connections and personal circumstances fall outside the support request |
+| A password manager | Creating and managing credentials | Which signed-in devices, recovery methods and sharing permissions still need separate attention |
+| Antivirus or endpoint protection | Detecting threats covered by the product's capabilities | Whether the concern is malicious software or legitimate access that is no longer appropriate |
+| A private investigator | Investigative work within an agreed lawful scope | Whether you need investigation or protection of your own digital environment; Toza provides the latter |
+| Your own changes | Steps you understand and can carry out confidently | Whether you know the effects on other accounts, recovery and shared access before changing them |
+
+An existing adviser or IT provider may already cover part of the work. We explain Toza's scope so you can make an informed choice, without assuming other help is inadequate.
+
+### Do you monitor my devices or install security software?
+
+No. Toza does not monitor your devices or install security software on them. The work focuses on the settings and access arrangements within your authorized environment. Personal Shield and Inner Circle Shield also include practical security habits and personal teaching so you understand how to use the resulting setup.
 
 ## Getting started
 
@@ -54,7 +84,7 @@ Send a short, neutral message through WhatsApp or Signal, such as: **“I'd like
 
 Do not send passwords, recovery codes, screenshots, legal documents, intimate material or details, or detailed allegations in that first message.
 
-## The initial paid visit
+## What you gain from the first paid visit
 
 ### What does the first visit cover?
 
@@ -82,17 +112,17 @@ A clear summary of what we reviewed, what urgent exposure we found, what we chan
 
 We explain it and obtain your approval before addressing it. If the proposed work expands the scope or price, we agree that with you first. Finding an urgent problem does not authorize unagreed work or charges.
 
-## Personal Shield and group protection
+## Hardening and teaching for you or your close circle
 
 ### What does Personal Shield include?
 
 **Personal Shield costs ₪14,000 including VAT** for one person, one main phone and one other device: a PC, iPad or second phone.
 
-We tighten security across the agreed devices and relevant identities, accounts and apps. The work follows a defined baseline with additional checks and changes relevant to your devices and situation. It includes:
+We harden the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data. Practical security habits and personal teaching help you use the resulting setup. The work follows a defined baseline with additional checks and changes relevant to your devices and situation. It includes:
 
 - New core accounts where needed, and essential migration of identity, recovery and critical-service access.
 - Two compatible physical security keys, selected, supplied, configured and tested.
-- Training in the changed setup, signing in and recovering access.
+- Personal teaching in the changed setup and practical security habits, including granting access, sharing information, signing in and recovering accounts.
 - Verification against the applicable checklist and testing of material changes.
 - A private dated record of the work.
 - One primary working day, with a second day included if needed at no extra charge.
@@ -112,7 +142,7 @@ Issues directly related to changes Toza made. For Personal Shield, the included 
 
 **Inner Circle Shield starts at ₪42,000 including VAT** for four people. Each person has one main phone plus one PC, iPad or second phone, making eight personal devices in total. One shared home/home-office network and router are included in addition to those devices.
 
-Each person receives the same standard of device and account protection, essential migration, training and verification as Personal Shield. Two compatible security keys per person are supplied, configured and tested, eight keys in total. The scope, schedule and final price are agreed in writing before acceptance.
+Each person receives the same standard of hardening, essential migration, practical security habits, personal teaching and verification as Personal Shield. Two compatible security keys per person are supplied, configured and tested, eight keys in total. The scope, schedule and final price are agreed in writing before acceptance.
 
 ### Does each person need a separate paid initial visit?
 
@@ -196,15 +226,7 @@ No. It is a practical, dated account of the work performed, not a forensic repor
 
 Yes, with your authorization. An attorney-friendly summary can be provided where useful, including after the initial service. An attorney's referral does not itself authorize access to your accounts or disclosure of your information. The summary does not turn the service into legal advice or evidence collection.
 
-### How is this different from IT support or help from someone I know?
-
-Toza focuses on how devices, identities, accounts and recovery routes connect in a consequential personal or business situation. Dr. Tabansky considers what access matters, what a change could affect and the order in which to act.
-
-Someone you know may solve an individual device problem. This service provides a defined scope, direct senior work, client-controlled changes and a record or summary appropriate to the service purchased. It is not routine IT support.
-
-[Why this is not IT support](/en/not-it-support.html)
-
-## Start with a private conversation {#contact}
+## You do not need to know where to look. {#contact}
 
 Send a short, neutral message through WhatsApp or Signal. Dr. Tabansky replies personally. Contacting Toza does not commit you to purchase; paid work follows only after your explicit acceptance of the written offer and receipt of payment.
 
@@ -212,12 +234,12 @@ Send a short, neutral message through WhatsApp or Signal. Dr. Tabansky replies p
 
 ## Unresolved red-team issues
 
-None. Independent Toza red-team review passed under D-009; findings and dispositions are recorded in `review/phase-1-strategy-and-qa.md`.
+None. Independent review of the complete replacement and the final five-candidate consistency check passed under D-009. Findings and dispositions are recorded in review/owner-feedback-03-benefits.md.
 
 ## Approval state
 
-**APPROVED FOR NOW.** Owner: “FAQ is long, but let's accept it for now.” The exact-copy block, including metadata, is unchanged from 22c9c4b. No production integration is authorized.
+**READY FOR OWNER REVIEW.** The owner approved the discussed changes and requested this further pass. The complete replacement and its metadata passed independent review; exact approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-All source questions retained. Credit calculations linked to Pricing; current prices, device scope, support, urgent terms, credential control, disclosure and non-forensic limits preserved. The blocked/declined-action caveat comes from source What Happens, not a new completion policy. First-message and visibility answers remain canonical. No new Class A fact. Owner acceptance of the current wording and length is recorded with its “for now” qualification in D-012. Workflow: D-009. Strategy and review evidence: `review/phase-1-strategy-and-qa.md`. Title, description, social description and route checked against the body; independent metadata review passed; current candidate accepted for now under D-012.
+D-016 reopens the formerly accepted FAQ for these approved additions and structure/copy review. All previous question titles are retained, including the category question moved to the opening fit section. Full comparison table imported intact from the source Not IT Support page; repeated product/catalog/contact sections from that page are absorbed by existing FAQ answers. New category anchor: how-toza-differs; privacy/boundaries/contact anchors retained. Current commercial/privacy answers remain, with service-model amendments identified here. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.

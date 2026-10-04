@@ -1,18 +1,18 @@
 # Pricing — EN-02-v2 candidate
 
-Source: EN-02-v1, 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2, benefits round of 4 October 2026
 
-Intervention: **S1 / C2 — selective outcome-language revision after owner feedback**
+Intervention: **S2 / C2 — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — replacement independently reviewed under D-009**
+Status: **READY FOR OWNER REVIEW — benefits revision independently passed under D-009**
 
 ## What changed
 
-- Replaced vague exposure-reduction and protection language with concrete work and explained hardening.
-- Made clear that clients need not identify a technical problem before contact.
-- Explained situational risk and priorities while preserving the Assessment's approved completion boundary.
-- Added a visible optional-follow-up table beside the main service descriptions.
-- Preserved all existing commercial tables, service names, prices and the accepted scope/privacy block.
+- Put the gain from each paid stage before its procedure, retaining separate purchase decisions.
+- Explained hardening across agreed devices, identities, accounts, apps and data-access arrangements.
+- Made practical security habits, personal teaching and the service-wide software/monitoring exclusions visible.
+- Kept Shield names and added cybersecurity descriptors; strengthened service and contact headings.
+- Preserved all four commercial tables, current scope/terms and the material boundary block.
 
 ## Exact revised copy
 
@@ -24,7 +24,7 @@ Title: Pricing | Toza
 
 Description: Personal digital security with Dr. Tabansky, in person. Assessment ₪3,600. Personal Shield ₪14,000. Inner Circle Shield from ₪42,000. VAT included.
 
-Social description: Understand the first visit, separately agreed device and account hardening, and optional follow-up. Work directly with Dr. Lior Tabansky, in person.
+Social description: Know what the first visit gives you, what full hardening changes and how you learn to use the resulting setup. Clear scope and prices, with direct expert work.
 
 ## Hero
 
@@ -32,7 +32,7 @@ Pricing
 
 # Understand what needs attention. Have the right changes made.
 
-You do not need to identify a technical problem before contacting Toza. The paid first visit examines your devices, accounts and relevant access in the context of your situation, carries out approved urgent fixes and sets out the next steps. If broader work is needed, you can separately engage Dr. Lior Tabansky to harden the agreed setup: close unwanted access where possible, strengthen sign-in and recovery, and test the changes.
+The first paid visit gives you a clearer picture of your digital exposure, approved urgent fixes where safely possible within scope, and ordered next steps. If broader work is justified, Personal Shield or Inner Circle Shield provides tailored hardening and personal teaching so you understand how to use the resulting setup. You work directly with Dr. Lior Tabansky, in person, at each stage.
 
 **All prices include VAT.**
 
@@ -40,13 +40,11 @@ You do not need to identify a technical problem before contacting Toza. The paid
 
 In person · With you present · You control your credentials
 
-## First: understand your current exposure and act on what is urgent
+## First: leave with a clearer picture and a plan for what comes next
 
 **Private Exposure Assessment · ₪3,600 including VAT**
 
 **At least two hours in person. Typically four.**
-
-The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid.
 
 The first visit covers one main phone and one other device: a PC, iPad or second phone. We work on the relevant identities, accounts, apps, permissions and recovery routes, including access to messages, photos, documents and location information.
 
@@ -54,15 +52,21 @@ The first visit covers one main phone and one other device: a PC, iPad or second
 - **Make approved urgent changes.** Address urgent exposure that can safely be fixed within the agreed scope, with your approval.
 - **Receive a practical summary.** See what was reviewed, what was found, what changed, what remains, whether broader work is justified and what to do next. You receive this even if you buy nothing further.
 
+The visit completes the agreed intake, access mapping, diagnosis and approved urgent first aid.
+
 The first conversation checks fit and urgency. It includes no device inspection, mapping, diagnosis or technical work. Contacting Toza does not commit you to purchase. We send a written scope and price; after your acceptance and receipt of payment, we schedule the visit.
 
 **[See the initial visit in detail](/en/private-exposure-assessment.html)**
 
-## Next: harden the agreed devices and accounts
+## Then: a hardened setup you know how to use
 
-The initial visit includes approved urgent first aid. Personal Shield and Inner Circle Shield carry out broader hardening: changing the agreed setup to make unwanted access more difficult, with essential migration where needed, physical security-key setup, training and verification. We explain the work needed and set out the scope and price. You decide whether to continue. There is no automatic continuation.
+Personal Shield and Inner Circle Shield combine hardening of the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data with practical security habits tailored to your situation. Dr. Tabansky works with you on how you grant access, share information, sign in and recover accounts, and teaches you how to use the resulting setup.
 
-### Compare the full services
+Both services include essential migration where needed, physical security-key setup and verification. The work goes beyond the Assessment's urgent first aid. We explain why it is recommended and set out a separate scope and price; you decide whether to continue. There is no automatic continuation.
+
+Toza does not monitor your devices or install security software on them.
+
+### Choose the scope that fits your life
 
 | Service details | Personal Shield | Inner Circle Shield |
 |---|---|---|
@@ -78,13 +82,13 @@ The initial visit includes approved urgent first aid. Personal Shield and Inner 
 | Record of work | A private dated record | A private dated record per person and a separate shared-network record |
 | Adjustment support | 14 days for issues directly related to Toza's changes | 14 days for all four people and the included network, starting when the group engagement is complete, for issues directly related to Toza's changes |
 
-### Personal Shield: put the changes into practice
+### Personal Shield: personal cybersecurity, tailored to your situation
 
-Dr. Tabansky carries out the hardening across your agreed devices and accounts, tests material changes and shows you how to use the resulting setup, sign in and recover access. The work follows your situation and the findings of the Assessment.
+The Assessment findings guide the work on your agreed setup. Dr. Tabansky tests material changes and works through the relevant security practices with you, so you can use what has changed and know how to recover access. Your private dated record gives you a reference for the work performed.
 
 The included adjustment support covers issues directly related to our changes through WhatsApp, Signal and scheduled calls. It does not involve remote control of your devices.
 
-### Inner Circle Shield: coordinated hardening for four
+### Inner Circle Shield: cybersecurity for four, with individual privacy
 
 Four people receive coordinated hardening under one agreed engagement, with the same standard of device and account hardening, essential migration, training and verification as Personal Shield for each person. The initial ₪3,600 visit covers the initial client's two devices and relevant accounts. Review and mapping for the remaining group are included in the separately purchased Inner Circle engagement.
 
@@ -98,7 +102,7 @@ Each participant receives a private dated record. The shared-network work is doc
 
 For severe, unusual or highly complex situations that require a different scope. After the initial visit, we define the work and price in writing for your decision.
 
-### Optional follow-up after a completed full service
+### Revisit changes after the full engagement
 
 | Service | What it covers | Price |
 |---|---|---|
@@ -143,9 +147,9 @@ You are present and control your credentials. Toza does not keep them for ongoin
 
 **[See the service boundaries](/en/faq.html#boundaries)**
 
-## Start with a private conversation {#contact}
+## You do not need to know where to look. {#contact}
 
-Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. If the service fits, you receive a written offer with the work, inclusions, exclusions, price, agreed additions and payment terms. Paid work starts only after your explicit acceptance and receipt of payment.
+You can start with a concern, a hunch, or a wish to take a more deliberate approach to your digital life. Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. If the service fits, you receive a written offer with the work, inclusions, exclusions, price, agreed additions and payment terms. Paid work starts only after your explicit acceptance and receipt of payment.
 
 Suggested message: **“I'd like a private conversation. Please let me know the next step.”**
 
@@ -155,12 +159,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None in the candidate. Independent re-review passed after the optional-support reference was tied to Personal Shield and Inner Circle Shield and the urgent-fix wording was clarified. No prices, service names or commercial scope have changed. Proposed terminology guidance is recorded under D-013.
+None. Independent review of the complete replacement and the final five-candidate consistency check passed under D-009. Findings and dispositions are recorded in review/owner-feedback-03-benefits.md.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Replacement wording passed independent re-review under D-009. Exact owner approval is pending; no production integration is authorized.
+**READY FOR OWNER REVIEW.** The owner approved the discussed changes and requested this further pass. The complete replacement and its metadata passed independent review; exact approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Source EN-02-v1 and reviewed candidate at 22c9c4b; selective outcome-language revision under owner feedback D-011/D-013, S1/C2. All three original commercial tables retained exactly. Optional follow-up moved from prose to a separate table beside service descriptions; names, individually quoted price/scope, eligibility and support separation are unchanged. The owner's accepted service-boundary block is unchanged. Assessment completion remains intake, access mapping, diagnosis and approved urgent first aid; explanatory wording describes current situational interpretation without adding a formal threat-model artifact. Full hardening remains a separate purchase. Current prices, VAT, devices, equipment, days, support, network limits, credit and urgent terms preserved. Bespoke Private Protection keeps its approved name and individual scope. No new Class A fact or exact copy approval. Title and route retained; description and social description revised and checked against body. Independent re-review passed; exact owner approval pending. Review evidence: review/owner-feedback-01.md.
+Reorganized Assessment completion detail below client outcomes; all previous commercial tables retained. Full-service teaching and verification attach to Personal Shield/Inner Circle, with Bespoke still individually scoped. Original Pricing boundary block remains exact. Outcome headings and social metadata updated; title, description, route and prices retained. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.

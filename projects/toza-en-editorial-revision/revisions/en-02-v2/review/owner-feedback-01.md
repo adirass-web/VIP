@@ -1,5 +1,7 @@
 # Owner feedback 01 — personal relevance and tangible outcomes
 
+**Historical record:** D-016 subsequently approved applying the discussed changes and another benefits round. Current complete replacements and review results are documented in [owner feedback 03](owner-feedback-03-benefits.md).
+
 Date: 4 October 2026. Baseline: 22c9c4bc2df92a232adf925989ef284a3a9e34b4.
 
 ## Authority and strategy before drafting

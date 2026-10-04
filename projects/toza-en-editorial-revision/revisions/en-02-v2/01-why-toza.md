@@ -1,16 +1,18 @@
 # Why Toza — EN-02-v2 candidate
 
-Source: EN-02-v1, 4 October 2026  
-Intervention: **S1 / C2 — founder note reopened by owner feedback D-011**
-Status: **READY FOR OWNER REVIEW — replacement independently reviewed under D-009**
+Source: EN-02-v1 and reviewed EN-02-v2, benefits round of 4 October 2026
+
+Intervention: **S2 / C2 — owner-authorized under D-016**
+
+Status: **READY FOR OWNER REVIEW — benefits revision independently passed under D-009**
 
 ## What changed
 
-- Centered the personal choices/defaults insight in the founder note.
-- Made room for readers who have only a hunch and cannot identify a technical problem.
-- Explained the Assessment's practical clarity and the tangible result of separately agreed hardening.
-- Replaced vague outcome language with work on access, recovery and the resulting setup.
-- Preserved founder delivery, client control, purchase boundaries and the route to detailed scope.
+- Organized the lower page around informed decisions, a tailored setup and the ability to use it.
+- Made identities, apps, data and their access arrangements explicit within agreed scope.
+- Explained practical security habits and personal teaching alongside settings hardening.
+- Added the service-wide no-monitoring/no-security-software facts and a positive category explanation.
+- Retained the personal note; strengthened the contact heading and aligned metadata.
 
 ## Exact revised copy
 
@@ -20,9 +22,9 @@ Status: **READY FOR OWNER REVIEW — replacement independently reviewed under D-
 
 **Title:** Why Toza | A note from Dr. Lior Tabansky
 
-**Description:** Why Dr. Lior Tabansky created Toza: personal judgment for your digital life, from understanding unfamiliar risks to tailored, in-person hardening.
+**Description:** Why Dr. Lior Tabansky created Toza: understand your digital exposure, make deliberate changes and learn to use a setup tailored to your situation.
 
-**Social description:** Why I created Toza, and why you work with me directly, in person and with control over the changes we make.
+**Social description:** Bring personal judgment to your digital life. Work directly with me to understand what matters, agree the changes and learn how to use the resulting setup.
 
 ### Hero
 
@@ -54,23 +56,33 @@ Portrait caption: Dr. Lior Tabansky, founder of Toza
 
 Portrait alt text: Portrait of Dr. Lior Tabansky
 
-## What that means for you
+## What becomes different for you
 
-**You work with me directly.** I learn your situation and carry out the technical work with you. You do not have to retell a sensitive situation to a succession of people.
+### You can make informed decisions about your digital life
 
-**We work in person, with you present.** You see what is reviewed. I explain material changes and ask for your approval before making them. You control your passwords, recovery codes and authentication.
+During the [Private Exposure Assessment](/en/private-exposure-assessment.html), I examine the relevant devices, digital identities, accounts and access to your data in the context of your situation. I explain which risks matter and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary of what was found, what changed and what should happen next, even if you decide not to continue.
 
-**Understand your current exposure and what to do about it.** During the [Private Exposure Assessment](/en/private-exposure-assessment.html), I examine relevant device and account access in the context of your situation, explain which risks matter and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary of what was found, what changed and what should happen next, even if you decide not to continue.
+### Your setup reflects your circumstances
 
-**Have the agreed devices and accounts hardened around your life.** If broader work is justified, we agree its scope and price separately. Through Personal Shield or Inner Circle Shield, I close unwanted access where possible, strengthen sign-in and recovery arrangements, and test material changes. You learn how to use the resulting setup and recover access, and receive a private dated record. There is no automatic continuation from the Assessment.
+If broader work is justified, we agree its scope and price separately. Through Personal Shield or Inner Circle Shield, I harden the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data. This can include closing unwanted access, strengthening sign-in and recovery, and changing how information is shared. Material changes are tested. There is no automatic continuation from the Assessment.
 
-**The boundaries stay clear.** Toza works only within your authorized digital environment. I do not investigate another person, reconstruct past events forensically, collect legal evidence or give legal advice.
+### You know how to use what has changed
 
-## Privacy in the work itself
+Both services include practical security habits tailored to your situation and personal teaching. We work on how you grant access, share information, sign in and recover accounts. You learn to use the resulting setup and receive a private dated record of the work. The aim is to make deliberate choices easier in daily life.
 
-I do not remotely control your devices or keep your credentials for ongoing use.
+## One person understands your situation and does the work
 
-[How the work proceeds](/en/what-happens-during-the-visit.html) · [Services and pricing](/en/pricing.html) · [Questions and service boundaries](/en/faq.html)
+I learn your circumstances and carry out the technical work with you, in person. You do not have to retell a sensitive situation to a succession of people. A working phone can still leave private information accessible through arrangements that no longer suit your life; my work connects that personal context to the changes we make.
+
+[How Toza differs from other help](/en/faq.html#how-toza-differs)
+
+## You remain in control of the work
+
+You see what is reviewed, approve material changes and control your passwords, recovery codes and authentication. I do not keep your credentials for ongoing use or remotely control your devices. Toza does not monitor your devices or install security software on them.
+
+I work only within your authorized digital environment. I do not investigate another person, reconstruct past events forensically, collect legal evidence or give legal advice.
+
+[How Toza helps](/en/what-happens-during-the-visit.html) · [Services and pricing](/en/pricing.html) · [Privacy and service boundaries](/en/faq.html)
 
 ## The professional experience behind this work
 
@@ -78,9 +90,9 @@ I do not remotely control your devices or keep your credentials for ongoing use.
 
 External link to cyberdrtabansky.com.
 
-## Start with a private conversation {#contact}
+## You do not need to know where to look. {#contact}
 
-Send a short, neutral WhatsApp or Signal message. I reply personally as soon as possible. Our first conversation checks whether Toza fits your situation and whether anything appears urgent. It includes no device inspection, mapping, diagnosis or technical work.
+You can start with a concern, a hunch, or a wish to take a more deliberate approach to your digital life. Send a short, neutral WhatsApp or Signal message. I reply personally as soon as possible. Our first conversation checks whether Toza fits your situation and whether anything appears urgent. It includes no device inspection, mapping, diagnosis or technical work.
 
 If the service fits, you receive a written scope and price before paying. The initial visit is scheduled only after your explicit acceptance and receipt of payment. Contacting me does not commit you to purchase.
 
@@ -92,15 +104,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None in the candidate. Independent re-review passed after W2-RT-01 tied full-service inclusions to Personal Shield and Inner Circle Shield. The proposed “highest possible commercial standard” claim remains outside candidate copy pending a defined basis; no new threat-model document or whole-life coverage promise has been added.
+None. Independent review of the complete replacement and the final five-candidate consistency check passed under D-009. Findings and dispositions are recorded in review/owner-feedback-03-benefits.md.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Replacement wording passed independent re-review under D-009. Exact owner approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** The owner approved the discussed changes and requested this further pass. The complete replacement and its metadata passed independent review; exact approval remains pending. No production integration is authorized.
 
-## Provenance
+## Provenance and metadata
 
-Source EN-02-v1 and reviewed candidate at 22c9c4b; S1/C2 under the owner's explicit reopening in D-011. The founder note now centers personal situations, inherited digital arrangements and unfamiliar needs. Direct delivery, portrait, professional-profile link, locked CTA, authorized scope and client control remain. Assessment clarity and urgent first aid stay separate from the full service's hardening, verification, training and dated record. Prices and other commercial rules are unchanged; no new artifact or coverage guarantee is introduced. Terminology proposals and unresolved standards wording: D-013. Review evidence: review/owner-feedback-01.md.
-
-### Metadata status
-Title and route retained. Description revised to match the personal rationale and staged service value; social description retained. Independent re-review passed; exact owner approval pending.
+Founder note, portrait, experience and profile preserved from the previous candidate. The lower page is reorganized by client gain, with full-service results tied to Personal Shield/Inner Circle and their separate purchase. Category detail is linked to the newly merged FAQ section. Identities/data wording describes the agreed environment, not unlimited data work. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.

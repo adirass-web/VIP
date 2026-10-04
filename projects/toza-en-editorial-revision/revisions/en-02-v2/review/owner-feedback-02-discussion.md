@@ -1,5 +1,7 @@
 # Owner feedback 02 — discussion, not replacement copy
 
+**Historical record:** D-016 subsequently approved applying the discussed changes and another benefits round. Current complete replacements and review results are documented in [owner feedback 03](owner-feedback-03-benefits.md).
+
 Date: 4 October 2026. Baseline: e1c1670e6fcf2b3e21bcfc8336b5a83259229def.
 
 The owner requested discussion of the five canonical/shared candidates. No exact-copy block was edited. D-014 records the owner's service clarification; D-015 records proposals without treating questions as approvals.

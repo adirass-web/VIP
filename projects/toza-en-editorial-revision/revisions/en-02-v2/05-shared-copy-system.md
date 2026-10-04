@@ -1,18 +1,18 @@
 # Shared Copy System — EN-02-v2 candidate
 
-Source: EN-02-v1, 4 October 2026
+Source: EN-02-v1 and reviewed EN-02-v2, benefits round of 4 October 2026
 
-Intervention: **Component review / selective compression**
+Intervention: **Component review / structure and copy revision — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
+Status: **READY FOR OWNER REVIEW — benefits revision independently passed under D-009; provisional shared packet**
 
 ## What changed
 
-- Kept navigation, the locked primary CTA, neutral first message, trust line and footer identity.
-- Tightened the standard contact module while preserving qualification and purchase boundaries.
-- Added a short linked privacy variant alongside the precise full version.
-- Aligned service and reference descriptions with current completion, consent, credit and urgent conditions.
-- Specified one contact destination per page so shared components do not duplicate reviewed endings.
+- Applied the approved low-barrier contact heading and removed the redundant eyebrow.
+- Added the full-engagement explanation covering identities, data, settings, practical habits and teaching.
+- Led reusable service descriptions with client gains while keeping current scope, prices and limits.
+- Aligned navigation and the reference directory with How Toza helps and the merged FAQ category section.
+- Updated footer/structured/reference descriptions and the placement rules to prevent duplicate explanations.
 
 ## Exact revised copy
 
@@ -26,12 +26,11 @@ Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
 | Skip link | Skip to main content | Main content |
 | Situation menu | Situations | /en/#situations |
 | Founder page | Why Toza | /en/why-us.html |
-| Process | What happens | /en/what-happens-during-the-visit.html |
+| Process and gains | How Toza helps | /en/what-happens-during-the-visit.html |
 | Services | Pricing | /en/pricing.html |
 | Questions | FAQ | /en/faq.html |
 | Professional page | For attorneys | /en/attorneys.html |
 | Primary action | Request a private conversation | #contact on the current page |
-| Boundary page | Why This Is Not IT Support | /en/not-it-support.html |
 | Legal link | Privacy notice (Hebrew) | /privacy.html, actual language Hebrew |
 | Legal link | Terms of use (Hebrew) | /terms.html, actual language Hebrew |
 
@@ -45,13 +44,13 @@ The old Commercial Spying and Private Investigator links are replaced by the rel
 
 ## Shared footer contact block {#contact}
 
-Eyebrow: **Start privately**
-
-Heading: **Start with a private conversation.**
+Heading: **You do not need to know where to look.**
 
 Introduction:
 
-Send a short, neutral WhatsApp or Signal message. Dr. Lior Tabansky replies personally as soon as possible. The first conversation checks fit and urgency, without device inspection, mapping, diagnosis or technical work.
+You can start with a concern, a hunch, or a wish to take a more deliberate approach to your digital life. Speak directly with Dr. Lior Tabansky about whether Toza fits your situation and what the first paid visit would involve.
+
+Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. The first conversation checks fit and urgency; it includes no device inspection, mapping, diagnosis or technical work.
 
 Contacting Toza does not commit you to purchase. If the service fits, you receive a written scope and price before paying. The paid visit is scheduled only after your explicit acceptance and receipt of payment.
 
@@ -73,13 +72,23 @@ Keep this message neutral on every situation page. Do not insert a dispute type,
 
 **In person · With you present · You control your credentials**
 
-Footer descriptor: **Private, in-person protection for your accounts and devices.**
+Footer descriptor: **Personal cybersecurity through in-person hardening and teaching.**
 
 Footer section labels: **Explore** · **Legal**
 
 Copyright: **© 2026 Toza**
 
 Do not abbreviate the privacy explanation into no-cloud, no-logs or no-third-party claims.
+
+## Reusable full-engagement explanation
+
+### A setup you understand how to use
+
+Personal Shield and Inner Circle Shield combine hardening of the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data with practical security habits tailored to your situation. We work with you on how you grant access, share information, sign in and recover accounts, and teach you how to use the resulting setup.
+
+Toza does not monitor your devices or install security software on them.
+
+Broader hardening follows a separate scope, price and purchase decision after the Assessment. [See the full services and their limits](/en/pricing.html).
 
 ## Reusable short privacy and approval wording
 
@@ -99,11 +108,11 @@ For Inner Circle, each participant receives a private dated record and the share
 
 ## Reusable short service descriptions
 
-**Private Exposure Assessment:** Direct work with Dr. Lior Tabansky on one main phone and one PC, iPad or second phone, plus relevant identities, accounts, apps, recovery and access to private information. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid safely possible within scope. You receive a practical summary and next steps even if you buy nothing further. At least two hours in person, typically four. ₪3,600 including VAT. [See the initial visit](/en/private-exposure-assessment.html).
+**Private Exposure Assessment:** Understand relevant access to your digital life, address urgent exposure where safely possible within scope, and leave with a practical summary and ordered next steps even if you buy nothing further. Work directly with Dr. Tabansky on one main phone and one PC, iPad or second phone, plus relevant identities, accounts, apps, recovery routes and access to data. Completion covers the agreed intake, access mapping, diagnosis and approved urgent first aid. At least two hours in person, typically four. ₪3,600 including VAT. [See the initial visit](/en/private-exposure-assessment.html).
 
-**Personal Shield:** Broader device and account protection for one person, covering one main phone and one PC, iPad or second phone. Includes essential migration where needed, two compatible physical security keys, supplied, configured and tested, personal training, verification, a private dated record, one primary working day with a second included if needed, and 14 days of limited adjustment support for issues directly related to Toza's changes. Fixed ₪14,000 including VAT; a separate explicit purchase. [Full inclusions and limits](/en/pricing.html).
+**Personal Shield:** Personal cybersecurity hardening and teaching for one person: have your agreed setup strengthened and learn how to use it. Covers one main phone and one PC, iPad or second phone with relevant identities, accounts, apps and data-access arrangements. Includes practical security habits, essential migration where needed, two compatible physical security keys supplied, configured and tested, personal teaching, verification and a private dated record. One primary working day, with a second included if needed, plus 14 days of limited adjustment support for issues directly related to Toza's changes. Fixed ₪14,000 including VAT; a separate explicit purchase. [Full inclusions and limits](/en/pricing.html).
 
-**Inner Circle Shield:** Coordinated protection for four people, each with one main phone and one PC, iPad or second phone. Each receives the same standard of device and account protection, essential migration, training and verification as Personal Shield, plus two compatible physical security keys, supplied, configured and tested per person, eight total. Includes one shared home/home-office network and router in addition to the eight personal devices, private individual records and a separate shared-network record. Typically 2–4 working days in person. Includes 14 days of limited adjustment support for all four and the network from completion of the group's protection work, for issues directly related to Toza's changes. From ₪42,000 including VAT; scope, schedule and total agreed in writing. The initial paid visit covers the initial client; remaining-group review and mapping are included in the separately purchased group engagement. Personal details are shared only with that participant’s consent. [Full inclusions and network limits](/en/pricing.html).
+**Inner Circle Shield:** Coordinate cybersecurity hardening and teaching for four people, with individual records and consent before sharing personal details. Each person has one main phone and one PC, iPad or second phone, with relevant identities, accounts, apps and data-access arrangements. Each receives the same hardening, practical security habits, essential migration, teaching and verification as Personal Shield, plus two compatible physical security keys supplied, configured and tested per person, eight total. Includes one shared home/home-office network and router in addition to the eight personal devices, private individual records and a separate shared-network record. Typically 2–4 working days in person. Includes 14 days of limited adjustment support for all four and the network from completion of the group engagement, for issues directly related to Toza's changes. From ₪42,000 including VAT; scope, schedule and total agreed in writing. The initial paid visit covers the initial client; remaining-group review and mapping are included in the separately purchased group engagement. [Full inclusions and network limits](/en/pricing.html).
 
 **Bespoke Private Protection:** Individually agreed scope and price for severe, unusual or highly complex situations requiring different work. A separate decision after the initial visit.
 
@@ -117,7 +126,7 @@ For Inner Circle, each participant receives a private dated record and the share
 
 These proposed descriptions reflect approved service facts and remain subject to owner approval of exact copy. They are not generated JSON-LD or validation results. Keep structured descriptions synchronized with the exact visible copy approved for integration; these provisional candidates do not authorize publishing structured content.
 
-**Organisation description:** Toza provides private, in-person work on personal devices, accounts and digital access for consequential personal and business disputes. Clients work directly with Dr. Lior Tabansky, stay present and control their credentials.
+**Organisation description:** Toza provides private, in-person assessment and hardening of agreed personal devices, digital identities, accounts and data-access arrangements. Clients work directly with Dr. Lior Tabansky to understand relevant exposure, approve changes and learn practical security habits. The Assessment and broader hardening are separate paid stages.
 
 **Founder name:** Dr. Lior Tabansky
 
@@ -135,7 +144,9 @@ These proposed descriptions reflect approved service facts and remain subject to
 
 ### Toza
 
-Toza provides private, in-person protection for personal accounts, devices and digital access. Clients work directly with Dr. Lior Tabansky within their authorized environment, stay present and control their credentials. The service addresses exposure that can matter in separation, business or inheritance disputes and uncertainty about private information. Material changes require the client’s approval; additional scope or price is agreed before that work begins.
+Toza provides private, in-person assessment and hardening of agreed personal devices, digital identities, accounts, apps and data-access arrangements. Clients work directly with Dr. Lior Tabansky to understand relevant exposure and, through separately purchased hardening, improve the setup and learn how to use it. The work combines settings and access changes with practical security habits and personal teaching. Toza does not monitor your devices or install security software on them.
+
+The service addresses exposure that can matter in separation, business or inheritance disputes and uncertainty about private information. A client need not identify a technical problem before making contact. Work remains within the client’s authorized environment, with the client present and controlling credentials. Material changes require approval; additional scope or price is agreed before that work begins.
 
 Start with a private conversation through WhatsApp or Signal. Qualification includes no device inspection, mapping, diagnosis or technical work. Paid work requires a written scope and price, explicit acceptance and receipt of payment.
 
@@ -154,7 +165,7 @@ Toza does not upload a client dataset to a Toza cloud-analysis platform during t
 - Home: /en/
 - Why Toza: /en/why-us.html
 - Initial paid visit: /en/private-exposure-assessment.html
-- What Happens: /en/what-happens-during-the-visit.html
+- How Toza helps: /en/what-happens-during-the-visit.html
 - Pricing: /en/pricing.html
 - FAQ: /en/faq.html
 - Separation/Divorce: /en/separation-divorce.html
@@ -162,7 +173,6 @@ Toza does not upload a client dataset to a Toza cloud-analysis platform during t
 - Inheritance Conflict: /en/inheritance-clash.html
 - They Know Something: /en/they-know-something.html
 - Attorneys: /en/attorneys.html
-- Why This Is Not IT Support: /en/not-it-support.html
 
 ## Retirement response: proposed English wording
 
@@ -175,7 +185,7 @@ This neutral text is a proposal for the retired Controlling Relationship route i
 
 ## Placement and duplication map — internal proposal
 
-**PROVISIONAL pending exact owner approval (D-010).** These are placement instructions for later integration, not additional customer-facing paragraphs. No template edits are authorized now.
+**PROVISIONAL complete packet pending exact review.** D-016 approves the discussed contact/service-model/navigation changes. The complete placement library still requires exact review. These are placement instructions for later integration, not additional customer-facing paragraphs. No template edits are authorized now.
 
 Use one contact destination per page. Where the page already contains its own complete contact sequence, retain that copy and attach the shared channel buttons; do not append the full standard module as a second ending. Preserve the locked primary CTA label. “Message on WhatsApp” and “Message on Signal” are channel-button labels, not replacement primary CTAs. Contact markers in the page packets map to those existing channel destinations during later integration. Do not invent a phone number or messaging address.
 
@@ -184,25 +194,27 @@ Use one contact destination per page. Where the page already contains its own co
 | Why Toza | First-person closing section, neutral message, exclusions and purchase boundary | Full third-person footer contact block; extra full privacy paragraph |
 | Pricing | Its written-offer closing, first-message guidance and commercial tables | Full standard contact module after the existing closing; detailed retention paragraph (FAQ) |
 | FAQ | Canonical first-message answer, privacy/visibility answers, short closing and channel buttons | A second full contact block or repeated balance calculations (Pricing) |
-| What Happens | Step 1 first-message guidance, step 2 purchase boundary, brief closing and channel buttons | A full footer repetition of steps 1–2; product catalogue (Pricing); full privacy paragraph (FAQ) |
+| How Toza helps | Step 1 first-message guidance, step 2 purchase boundary, implementation/teaching sequence, brief closing and channel buttons | A full footer repetition of steps 1–2; product catalogue (Pricing); full privacy paragraph (FAQ) |
 | Future Home/situation pages | Minimum local trust payload and page-specific boundaries; one standard contact module where no complete closing exists | Separate complete closing plus standard module; mechanical repetition of all service summaries |
 | Trust line | One relevant hero occurrence; approved page-specific variants may remain | A second identical trust line in the footer |
 | Privacy wording | Full version on canonical FAQ or where required; short linked version elsewhere | Absolute “no cloud,” “no logs,” “no third parties” or invisible-contact claims |
-| Service descriptions | Use the relevant description with its canonical detail link | All service descriptions beneath every page |
+| Full-engagement explanation | Use where the settings/practices/teaching model is otherwise missing; retain stage and scope | Adding it after a page already explains the same gain; placing full hardening inside Assessment copy |
+| Service descriptions | Lead with the relevant gain and retain its canonical detail link | All service descriptions beneath every page |
+| Category distinction | FAQ owns the full explanation and fair comparison at #how-toza-differs; Why Toza carries a short positive rationale | A second standalone category page or duplicate comparison table on Why Toza |
 | Structured/reference descriptions | Exact approved visible facts and current names/prices | Unseen guarantees, retired categories, or publication ahead of visible-copy approval |
 
-The standard contact module is the default for later pages, not an instruction to overwrite the reviewed Why Toza voice. FAQ and What Happens already carry first-message guidance earlier on the same page; their contact destination must retain access to that guidance. Context-sensitive service/legal boundaries stay with their page even when shared contact is present.
+The standard contact module is the default for later pages, not an instruction to overwrite the reviewed Why Toza voice. FAQ and How Toza helps already carry first-message guidance earlier on the same page; their contact destination must retain access to that guidance. Context-sensitive service/legal boundaries stay with their page even when shared contact is present.
 
 Anchor and endpoint checks remain part of later integration: retain one actual contact target, FAQ privacy/boundaries targets, the existing WhatsApp/Signal destinations and neutral prefill. Markdown markers in these packets are copy specifications, not proof that live templates already implement them.
 
 ## Unresolved red-team issues
 
-None. Independent Toza red-team review passed under D-009; findings and dispositions are recorded in `review/phase-1-strategy-and-qa.md`.
+None. Independent review of the complete replacement and the final five-candidate consistency check passed under D-009. Findings and dispositions are recorded in review/owner-feedback-03-benefits.md.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW — PROVISIONAL SHARED SYSTEM.** Exact owner approval is pending; no production integration is authorized.
+**READY FOR OWNER REVIEW — PROVISIONAL SHARED SYSTEM.** The owner approved the discussed changes and requested this further pass. The complete replacement and its metadata passed independent review; exact approval remains pending. No production integration is authorized.
 
 ## Provenance and metadata
 
-Navigation/route labels and founder reference retained from EN-02-v1. Core contact and privacy facts preserved; added clarifications come from PA-01-v2, canonical Pricing/FAQ and source Process. Exact structured/reference descriptions remain provisional, not generated code. Shared placement proposal: D-010. No new Class A fact or owner copy approval. Workflow: D-009. Strategy and review evidence: `review/phase-1-strategy-and-qa.md`. Navigation, route labels, service and structured descriptions, and the reference summary checked against visible source facts by the author and independent reviewer. This component packet has no standalone page title or meta description. Exact owner approval remains pending.
+Shared contact direction and service facts are approved under D-016; complete replacement variants remain subject to exact review. Current names, legal-language labels, neutral first message and all commercial rules retained. The standalone category destination is removed from candidate navigation/reference directory; FAQ is now canonical. No live route or template change. Reusable service-model wording is scoped to named full services and links Pricing. Navigation, footer, structured/reference descriptions and anchor dependencies included in metadata sweep; this is a component library, not a new public page or generated schema. Current commercial rules, locked primary action and protected PA-01-v2 preserved. Owner authority: D-014/D-016; historical discussion D-015. All four project skills applied. Author metadata sweep and independent review complete; exact replacement approval pending. Review record: review/owner-feedback-03-benefits.md.
