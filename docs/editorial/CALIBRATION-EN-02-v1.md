@@ -22,7 +22,9 @@ The harness must therefore distinguish:
 
 Those distinctions have been added to the doctrine/editor/red-team skills.
 
-## 1. Authority conflicts — blocker until documentation is reconciled
+## 1. Authority reconciliation — resolved by owner decision
+
+On 4 October 2026, the owner confirmed that all five newer commercial decisions in EN-02-v1 / PA-01-v2 are current authority. They are no longer blockers. The August spec is stale where it conflicts with them.
 
 ### A. Assessment price
 Older spec:
@@ -31,10 +33,10 @@ Older spec:
 EN-02-v1 / protected PA-01-v2:
 - ₪3,600 including VAT.
 
-Action:
-- treat ₪3,600 as newer approved copy for calibration;
-- mark the older spec stale on price;
-- do not rewrite approved copy back to ₪3,500.
+Resolution:
+- **₪3,600 including VAT is current authority**.
+- Mark the older spec stale on price.
+- Do not rewrite approved copy back to ₪3,500.
 
 ### B. Assessment device scope
 Older spec:
@@ -43,9 +45,9 @@ Older spec:
 EN-02-v1 / protected PA-01-v2:
 - one main phone + one other device: PC, iPad or second phone.
 
-Action:
-- treat current approved PA-01-v2 as newer authority unless owner says otherwise;
-- update governing product facts/spec before release.
+Resolution:
+- **one main phone + one PC/iPad/second phone is current authority**.
+- Mark the older spec stale on device scope.
 
 ### C. Assessment duration
 Older spec:
@@ -55,10 +57,10 @@ EN-02-v1 / protected PA-01-v2:
 - at least two hours in person; typically four;
 - still states completion of agreed intake, mapping, diagnosis and urgent first aid.
 
-Action:
-- do not label this copy error;
-- mark spec stale / policy changed;
-- preserve outcome completion language so “typically four” is not interpreted as a hard cutoff.
+Resolution:
+- **“at least two hours in person; typically four” is current public authority**.
+- Preserve the outcome-based completion condition so “typically four” is not a hard cutoff.
+- Mark the older no-fixed-duration-only instruction stale.
 
 ### D. Assessment credit destination
 Older spec:
@@ -67,8 +69,8 @@ Older spec:
 EN-02-v1:
 - credit toward Personal Shield, Inner Circle Shield or Bespoke Private Protection.
 
-Action:
-- newer commercial architecture must be reconciled into the governing spec.
+Resolution:
+- credit toward **Personal Shield, Inner Circle Shield or Bespoke Private Protection** is current authority, subject to the current EN-02-v1 credit conditions.
 
 ### E. New product architecture
 Older spec:
@@ -83,9 +85,10 @@ EN-02-v1:
 - 2–4 working days;
 - group support and records.
 
-Action:
-- do not treat as editorial invention if separately approved;
-- require current product authority in the final doctrine/spec.
+Resolution:
+- **Inner Circle Shield is approved current product architecture**.
+- Current authority includes the EN-02-v1 starting price and group scope.
+- The older spec is stale by omission on this product.
 
 ## 2. Strong alignment with the spec
 
@@ -215,11 +218,13 @@ The harness passed conceptually only after adding:
 
 ## 9. Next editorial gate
 
-Before rewriting EN-02-v1:
-1. reconcile the governing spec with PA-01-v2/current commercial facts;
-2. confirm whether Inner Circle Shield is now approved product architecture;
-3. confirm current Assessment price/scope/duration as product authority;
-4. then run page-by-page compression and red-team passes;
-5. leave the approved Initial Paid Visit unchanged unless an explicit owner decision reopens it.
+Authority Gate 0 is now passed for the five previously disputed commercial facts.
+
+Next:
+1. run page-by-page strategy, compression and red-team passes across the 11 unapproved pages;
+2. treat PA-01-v2 / Initial Paid Visit as protected approved copy;
+3. use Pricing and FAQ as canonical homes for exhaustive commercial and boundary detail;
+4. reduce unnecessary duplication on Home and situation pages;
+5. later create a consolidated newer Toza specification that incorporates the ratified commercial architecture and supersedes the stale August facts.
 
 No production templates should be changed from this calibration report.
