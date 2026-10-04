@@ -1,17 +1,17 @@
 # FAQ — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
+Source: reviewed EN-02-v2 at 787a5b9; warmth and paid-work round, 4 October 2026
 
 Intervention: **S2 / C2 — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-021/D-022/D-023 independent gate PASS**
 
 ## What changed
 
-- Presented tailored hardening positively while retaining a separate, voluntary purchase.
-- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
-- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
-- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
+- Made the page-specific opening or explanation warmer and more personal.
+- Clarified hands-on inspection and diagnosis with approved urgent first aid in the paid visit.
+- Kept the situation-specific authority, consent and service boundaries.
+- Checked metadata, names and the separate conversation/Assessment/full-engagement stages.
 
 ## Exact revised copy
 
@@ -31,7 +31,7 @@ Questions, answered plainly
 
 # Understand what Toza can do for you.
 
-Start with the kind of help you need, even if you cannot yet name the problem. These answers explain what you can gain from the work, what each stage includes and what remains your decision.
+You do not need to know the technical terms or be certain that something is wrong. These answers explain how we can help, what happens when you get in touch and what each paid service includes.
 
 [Request a private conversation](#contact)
 
@@ -47,7 +47,7 @@ No. You can have a concern, a hunch, or a wish to take a more deliberate approac
 
 A working device can still expose private information through connections with other accounts, apps or services. A sharing permission or recovery setting is one part of that picture. Its significance depends on what it connects to and your circumstances.
 
-General advice can explain a setting. Toza applies expert judgment to your actual setup: tracing relevant connections, explaining what they allow and selecting changes in a considered sequence. Dr. Tabansky carries out the agreed technical work with you. Separately purchased hardening includes practical security habits and personal teaching; material changes require your approval.
+General advice can explain a setting. Toza applies expert judgment to your actual setup: tracing relevant connections, explaining what they allow and selecting changes in a considered sequence. Dr. Lior Tabansky carries out the agreed technical work with you. Separately purchased hardening includes practical security habits and personal teaching; material changes require your approval.
 
 Routine support, individual security tools and help from someone you know can all be useful. Use the comparison below to consider the scope you need.
 
@@ -93,7 +93,7 @@ We work only within your authorized digital environment, reviewing what is discl
 
 ### What do I get for ₪3,600?
 
-The price includes VAT and direct, in-person work with Dr. Tabansky. We discuss your situation, trace the access that matters, explain what it allows and identify what needs attention first.
+The price includes VAT and direct, in-person work with Dr. Tabansky. We listen to your concerns, inspect the relevant devices, accounts and access, and diagnose what needs attention. You can ask questions as we go; we explain what the findings mean for your situation.
 
 Where urgent exposure can be addressed safely within the agreed scope, we make the changes with your approval. You also receive a practical summary and ordered next steps. The work includes approved urgent fixes; broader protection work is a separate decision.
 
@@ -203,7 +203,7 @@ Some information may be visible on your own screen where it is necessary for the
 
 ### Is cloud processing involved, and do you keep records?
 
-Your accounts and shared services may themselves use cloud systems. During the core engagement, Toza does not upload a client dataset to a Toza cloud-analysis platform or retain a copy or comprehensive log of your digital life beyond agreed deliverables and ordinary lawful business records. This does not mean that no cloud services or administrative records exist.
+Your situation and the information you share are handled confidentially. Your accounts and shared services may themselves use cloud systems. During the core engagement, Toza does not upload a client dataset to a Toza cloud-analysis platform or retain a copy or comprehensive log of your digital life beyond agreed deliverables and ordinary lawful business records. This does not mean that no cloud services or administrative records exist.
 
 ### Can someone notice my contact with Toza or the changes we make?
 
@@ -233,12 +233,12 @@ Send a short, neutral message through WhatsApp or Signal. Dr. Tabansky replies p
 
 ## Unresolved red-team issues
 
-None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
+None requiring correction in this round. The complete page and final eleven-candidate consistency gates passed under D-009.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** D-021 records approval of the previous discussion and excerpts. This assembled replacement and its metadata remain for exact owner review. No production integration is authorized.
 
 ## Provenance and metadata
 
-Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.
+Owner-authorized warmth, stage-clarity and presentation update under D-021–D-023. Page role and protected commercial facts retained; D-020 duration remains Typically four hours. Inspection concerns relevant devices and authorized access, not unrestricted private-content review. Approved urgent first aid remains within agreed scope where safely possible; full hardening is separately purchased. No new confidentiality guarantee, exclusive expertise claim or product inclusion. All four project skills applied, ten author sweeps and metadata review complete; independent page and current-candidate consistency gates PASS under D-009. Current review: review/owner-feedback-05-warmth.md. Source corpus, protected PA-01-v2 and locked harness remain unchanged; the earlier duration amendment remains separate.

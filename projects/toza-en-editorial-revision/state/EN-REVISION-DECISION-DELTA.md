@@ -196,3 +196,31 @@ This register is the bridge between page approval and the future consolidated v3
 - **Status:** Approved public wording; exact placement pending candidate review.
 - **Commercial interpretation:** The typical duration is not a fixed cap, hourly purchase or trigger for an extra charge. Agreed intake, mapping, diagnosis and approved urgent first aid still define completion. This shortening does not change the operational minimum, price, scope, in-person delivery or urgent-arrival terms. No overtime policy is invented.
 - **Protected-copy treatment:** Record the three exact duration substitutions separately; do not structurally or stylistically rewrite PA-01-v2 or mutate the source corpus. Other protected wording remains for the later consistency gate.
+
+### D-021 — Apply the approved founder, privacy, trust and naming recommendations
+- **Date:** 2026-10-04
+- **Category:** Editorial direction and shared copy
+- **Decision:** Apply the preceding discussion's recommendations and supplied examples: warmer founder hero/note, digital security and privacy, active service language, purpose followed by non-exhaustive situation examples, confidential handling with verified founder background, and full-name-first/short-name-later usage. Separate pre-booking qualification from the paid Assessment in Pricing.
+- **Authority:** Owner: “All the rest - approved,” alongside explicit requests for further warmth, paid-visit clarity and genuinely short cards.
+- **Supersedes:** Discussion-only status of those recommendations; current unapproved wording where it conflicts. This is not blanket approval of future unseen replacements.
+- **Status:** Approved recommendations and presented excerpts; assembled replacements await exact review.
+- **Boundaries:** No highest-level or absolute-confidentiality guarantee. Professional background belongs to Dr. Tabansky, not a claimed global Toza client history. No institutional endorsement inferred. Pricing tables, product facts, full disclosure and protected-copy boundaries remain.
+
+### D-022 — Warmer, bolder voice and unmistakable hands-on Assessment
+- **Date:** 2026-10-04
+- **Category:** Positioning and page structure
+- **Decision:** Rewrite Home and the rest of the persuasive copy for warmth, empathy and engagement. Recognize private-life stakes and the burden of working out unfamiliar access; show care through direct listening, explanation and implementation. Make the paid Assessment's inspection, diagnosis and approved urgent first aid explicit.
+- **Authority:** Owner: “you must rewrite this and the rest”; the paid visit “includes inspection and often first aid fixes,” with an instruction to discuss and resolve the ambiguity.
+- **Supersedes:** Cool “digital setup should fit your life” treatment and report-only impressions of the first paid service. Does not change commercial stages.
+- **Status:** Approved revision direction; exact replacements pending.
+- **Resolution:** The free conversation has no technical inspection. The paid visit examines relevant devices, accounts and access, diagnoses and makes approved urgent fixes where safely possible within scope. Full hardening remains a separately purchased engagement. Public copy describes the actual intervention without adding an unsupported frequency statistic or promise of a fix on every visit.
+- **Guardrails:** Bolder language does not authorize invented misconduct, urgency, feelings, guaranteed privacy or universal insecurity of defaults. Inspection is not unrestricted review of private content. No new service facts or protected-page rewrite.
+
+### D-023 — Short marketing cards alongside full reference descriptions
+- **Date:** 2026-10-04
+- **Category:** Shared copy
+- **Decision:** Create genuinely short presentation versions with action, client benefit, essential scope/price and a detail link. Retain detailed descriptions as a separate reference tier. Cards include relevant “from,” separate-purchase and post-full-service eligibility qualifications.
+- **Authority:** Explicit owner instruction to create short presentation versions.
+- **Affected pages/components:** Shared Copy System, future presentation cards and their placement instructions.
+- **Status:** Approved component direction; exact cards pending review.
+- **Boundaries:** Cards are not substitutes for canonical Pricing or written terms. No automatic deployment, generated schema publication, changed prices or new inclusions. The existing shared system remains provisional until exact approval.

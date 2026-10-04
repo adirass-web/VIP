@@ -1,17 +1,17 @@
 # Separation and Divorce — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
+Source: reviewed EN-02-v2 at 787a5b9; warmth and paid-work round, 4 October 2026
 
 Intervention: **S2 / C2**
 
-Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-021/D-022/D-023 independent gate PASS**
 
 ## What changed
 
-- Presented tailored hardening positively while retaining a separate, voluntary purchase.
-- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
-- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
-- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
+- Made the page-specific opening or explanation warmer and more personal.
+- Clarified hands-on inspection and diagnosis with approved urgent first aid in the paid visit.
+- Kept the situation-specific authority, consent and service boundaries.
+- Checked metadata, names and the separate conversation/Assessment/full-engagement stages.
 
 ## Exact revised copy
 
@@ -31,9 +31,9 @@ Separation and divorce
 
 # Trust can end before access does.
 
-Two lives can remain connected through devices, accounts and family services long after a relationship changes. Arrangements made for a shared life can leave private information accessible in ways neither person has considered.
+You built parts of your life together. The devices, accounts and services you shared may still connect you, even when you want more space and privacy.
 
-Dr. Lior Tabansky works with you, in person, to understand which connections matter and what changing them would mean. You do not need to know which account or setting is responsible before approaching Toza.
+Dr. Lior Tabansky works with you, in person, to understand what remains connected and help you decide what to change. You do not have to untangle the technical details before asking for help.
 
 [Request a private conversation](#contact)
 
@@ -43,7 +43,7 @@ In person · With you present · You control your credentials
 
 You may have changed a password and still be unsure where access ends. A device, family service or recovery arrangement can connect otherwise separate parts of your digital life.
 
-Dr. Tabansky examines those connections within the agreed scope, including what may still expose private messages, photos, documents or location information. He explains how relevant access persists and which changes need to be considered together. You do not have to uncover those dependencies yourself.
+Dr. Tabansky examines those connections within the agreed scope, including what may still expose private messages, photos, documents or location information. He explains how relevant access persists and which changes need to be considered together. You have someone to work through those connections with you.
 
 Such access can remain without a new intrusion. Its presence does not establish that your spouse has used it or explain how someone learned a particular fact.
 
@@ -53,13 +53,13 @@ A password change may leave another route open. Changing a family service can af
 
 We explain what the relevant access allows and agree the sequence with you. You can decide what to change with a clearer understanding of the effects. We do not promise invisible changes.
 
-## Start with your own accounts and information
+## Have your own devices and access examined, with urgent first aid
 
 **Private Exposure Assessment · Typically four hours**
 
 **₪3,600 including VAT**
 
-The visit covers one main phone and one PC, iPad or second phone, with relevant digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
+We inspect the relevant access with you on one main phone and one PC, iPad or second phone, including digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
 
 You receive a practical summary of what was reviewed, found and changed, what remains and the next steps, even if you buy nothing further. We work only with what is disclosed, observable or otherwise lawfully accessible within your authorized environment and agreed scope.
 
@@ -79,9 +79,9 @@ With your authorization, an attorney-friendly summary can explain the work and r
 
 [Privacy and service boundaries](/en/faq.html) · [Information for attorneys](/en/attorneys.html)
 
-## You do not need to know where to look. {#contact}
+## Start with what is on your mind. {#contact}
 
-Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. The first conversation checks fit and urgency; it includes no device inspection, mapping, diagnosis or technical work. Contacting Toza does not commit you to purchase.
+You do not need to explain the whole situation in a first message. Send a short, neutral WhatsApp or Signal message. Dr. Tabansky replies personally as soon as possible. The first conversation checks fit and urgency; it includes no device inspection, mapping, diagnosis or technical work. Contacting Toza does not commit you to purchase.
 
 If the service fits, you receive a written scope and price. The paid visit is scheduled after your explicit acceptance and receipt of payment.
 
@@ -93,12 +93,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
+None requiring correction in this round. The complete page and final eleven-candidate consistency gates passed under D-009.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** D-021 records approval of the previous discussion and excerpts. This assembled replacement and its metadata remain for exact owner review. No production integration is authorized.
 
 ## Provenance and metadata
 
-Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.
+Owner-authorized warmth, stage-clarity and presentation update under D-021–D-023. Page role and protected commercial facts retained; D-020 duration remains Typically four hours. Inspection concerns relevant devices and authorized access, not unrestricted private-content review. Approved urgent first aid remains within agreed scope where safely possible; full hardening is separately purchased. No new confidentiality guarantee, exclusive expertise claim or product inclusion. All four project skills applied, ten author sweeps and metadata review complete; independent page and current-candidate consistency gates PASS under D-009. Current review: review/owner-feedback-05-warmth.md. Source corpus, protected PA-01-v2 and locked harness remain unchanged; the earlier duration amendment remains separate.

@@ -1,17 +1,17 @@
 # For Attorneys — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
+Source: reviewed EN-02-v2 at 787a5b9; warmth and paid-work round, 4 October 2026
 
 Intervention: **S1 / C2**
 
-Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-021/D-022/D-023 independent gate PASS**
 
 ## What changed
 
-- Presented tailored hardening positively while retaining a separate, voluntary purchase.
-- Kept stage-specific service value and current names aligned with the revised positioning.
-- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
-- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
+- Made the page-specific opening or explanation warmer and more personal.
+- Clarified hands-on inspection and diagnosis with approved urgent first aid in the paid visit.
+- Kept the situation-specific authority, consent and service boundaries.
+- Checked metadata, names and the separate conversation/Assessment/full-engagement stages.
 
 ## Exact revised copy
 
@@ -19,7 +19,7 @@ Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed u
 
 Route: /en/attorneys.html
 
-Title: Personal Cybersecurity for Your Clients | Toza
+Title: Digital Security and Privacy for Your Clients | Toza
 
 Description: Refer clients for an in-person review of authorized digital access, approved urgent first aid and a practical summary. Broader hardening is agreed separately.
 
@@ -33,7 +33,7 @@ For attorneys
 
 Separation, a business dispute or an inheritance conflict can leave a client unsure who still has access to their private information. They may sense a problem without knowing which account, device or past arrangement matters.
 
-Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain the priorities and recommended next steps. The client gains a practical basis for deciding what to change.
+Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain the priorities and recommended next steps. The client has someone to work through the technical questions with them and explain what they can do next.
 
 [Request a private conversation](#contact)
 
@@ -53,13 +53,13 @@ A referral does not authorize access to devices, accounts or findings. The clien
 
 Toza does not keep credentials for ongoing use, remotely control or monitor devices, or install security software on them. Coordination with counsel requires the client's permission; the referring attorney is not automatically a recipient of personal information or findings.
 
-## A defined first step, with a useful result
+## Hands-on inspection, diagnosis and urgent first aid
 
 **Private Exposure Assessment · Typically four hours**
 
 **₪3,600 including VAT**
 
-The scope is one main phone and one PC, iPad or second phone, with relevant digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
+Dr. Tabansky inspects the relevant access with the client on one main phone and one PC, iPad or second phone, including digital identities, accounts, apps, recovery routes and access to data. We complete the agreed intake, access mapping, diagnosis and approved urgent first aid where safely possible within scope.
 
 The client receives a practical summary of what was reviewed, found and changed, what remains and the next steps, even if they buy nothing further. Review is limited to what is disclosed, observable or otherwise lawfully accessible within the authorized environment and agreed scope. Additional work or price requires agreement first.
 
@@ -99,12 +99,12 @@ Keep identifying case details out of the first message. Do not send passwords, r
 
 ## Unresolved red-team issues
 
-None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
+None requiring correction in this round. The complete page and final eleven-candidate consistency gates passed under D-009.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** D-021 records approval of the previous discussion and excerpts. This assembled replacement and its metadata remain for exact owner review. No production integration is authorized.
 
 ## Provenance and metadata
 
-Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.
+Owner-authorized warmth, stage-clarity and presentation update under D-021–D-023. Page role and protected commercial facts retained; D-020 duration remains Typically four hours. Inspection concerns relevant devices and authorized access, not unrestricted private-content review. Approved urgent first aid remains within agreed scope where safely possible; full hardening is separately purchased. No new confidentiality guarantee, exclusive expertise claim or product inclusion. All four project skills applied, ten author sweeps and metadata review complete; independent page and current-candidate consistency gates PASS under D-009. Current review: review/owner-feedback-05-warmth.md. Source corpus, protected PA-01-v2 and locked harness remain unchanged; the earlier duration amendment remains separate.

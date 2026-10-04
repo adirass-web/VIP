@@ -1,17 +1,17 @@
 # Shared Copy System — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
+Source: reviewed EN-02-v2 at 787a5b9; warmth and paid-work round, 4 October 2026
 
 Intervention: **Component review / structure and copy revision — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-021/D-022/D-023 independent gate PASS; shared system provisional**
 
 ## What changed
 
-- Presented tailored hardening positively while retaining a separate, voluntary purchase.
-- Kept stage-specific service value and current names aligned with the revised positioning.
-- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
-- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
+- Created six short action-and-benefit cards with essential scope, price and detail links.
+- Retained the full service specifications under a separate reference heading.
+- Added approved confidentiality and verified professional-background wording.
+- Defined full-name-first usage and aligned placement, footer and reference language.
 
 ## Exact revised copy
 
@@ -72,7 +72,7 @@ Keep this message neutral on every situation page. Do not insert a dispute type,
 
 **In person · With you present · You control your credentials**
 
-Footer descriptor: **Personal cybersecurity through in-person hardening and teaching.**
+Footer descriptor: **Strengthen your digital security and privacy through in-person hardening and teaching.**
 
 Footer section labels: **Explore** · **Legal**
 
@@ -82,7 +82,7 @@ Do not abbreviate the privacy explanation into no-cloud, no-logs or no-third-par
 
 ## Reusable full-engagement explanation
 
-### A setup you understand how to use
+### Make the changes with someone who helps you use them
 
 Personal Shield and Inner Circle Shield combine hardening of the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data with practical security habits tailored to your situation. We work with you on how you grant access, share information, sign in and recover accounts, and teach you how to use the resulting setup.
 
@@ -98,6 +98,12 @@ You remain present and control your credentials. Toza does not keep them for ong
 
 ## Reusable full privacy and approval wording
 
+### Confidential handling, direct personal responsibility
+
+Your situation and the information you share are handled confidentially. You work directly with Dr. Tabansky, whose background includes cybersecurity research at Tel Aviv University and international strategic advisory work.
+
+[View his professional background](https://cyberdrtabansky.com/en/)
+
 You control your passwords, recovery codes and authentication. Toza does not keep them for ongoing use or remotely control your devices.
 
 During the core engagement, Toza does not upload a client dataset to a Toza cloud-analysis platform or retain a copy or comprehensive log of your digital life beyond agreed deliverables and ordinary lawful business records.
@@ -106,9 +112,61 @@ We work within your authorized digital environment. We explain material changes 
 
 For Inner Circle, each participant receives a private dated record and the shared-network work is recorded separately. Personal details are shared only with that participant's consent.
 
-## Reusable short service descriptions
+## Short service cards for presentation
 
-**Private Exposure Assessment:** Understand relevant access to your digital life, address urgent exposure where safely possible within scope, and leave with a practical summary and ordered next steps even if you buy nothing further. Work directly with Dr. Tabansky on one main phone and one PC, iPad or second phone, plus relevant identities, accounts, apps, recovery routes and access to data. Completion covers the agreed intake, access mapping, diagnosis and approved urgent first aid. Typically four hours. ₪3,600 including VAT. [See the initial visit](/en/private-exposure-assessment.html).
+Use the card relevant to the page. These are concise presentation variants; full inclusions remain on Pricing and in the reference descriptions below. Each card retains its material scope, price qualification and detail link. Introduce Dr. Lior Tabansky by full name before using the short form. Do not append the reference paragraph to a card.
+
+### Private Exposure Assessment — understand what is open and address urgent problems
+
+Work in person with Dr. Tabansky to inspect relevant devices and access, diagnose what matters and make approved urgent first-aid fixes where safely possible within scope. Leave with a practical summary and next steps.
+
+One main phone plus one PC, iPad or second phone. **Typically four hours · ₪3,600 including VAT.**
+
+[What the first paid visit includes](/en/private-exposure-assessment.html)
+
+### Personal Shield — strengthen your security and privacy
+
+Have your agreed digital setup hardened in person by Dr. Tabansky, and learn practical habits for using it confidently.
+
+For one person: one main phone and one PC, iPad or second phone. **₪14,000 including VAT.** A separately agreed engagement after the Assessment.
+
+[See the full inclusions and limits](/en/pricing.html)
+
+### Inner Circle Shield — strengthen security together, keep personal information private
+
+Have the agreed devices and access hardened in person, with personal teaching for each participant. Each person controls disclosure of their information.
+
+Four people; eight personal devices, one main phone plus one PC, iPad or second phone each. One shared home/home-office network and router included. **From ₪42,000 including VAT.** A separately agreed engagement after the Assessment.
+
+[See group inclusions and limits](/en/pricing.html)
+
+### Bespoke Private Protection — agree the work your circumstances call for
+
+Work with Dr. Tabansky to define a different scope for a severe, unusual or highly complex situation.
+
+**Scope and price agreed individually after the Assessment.** A separate purchase.
+
+[Discuss the bespoke service and its terms](/en/pricing.html)
+
+### Annual Shield Review — revisit what has changed
+
+Have changes in your devices, accounts and access reviewed after a completed full service.
+
+**Scope and price agreed individually.** Separate from included adjustment support.
+
+[See follow-up options](/en/pricing.html)
+
+### Priority Retainer — arrange priority access to advice
+
+Arrange priority scheduling and advice within an agreed scope after a completed full service.
+
+**Scope and price agreed individually.** Separate from included adjustment support.
+
+[See retainer terms](/en/pricing.html)
+
+## Detailed service descriptions for reference
+
+**Private Exposure Assessment:** Have the relevant devices and access inspected and diagnosed with you, address urgent exposure where safely possible within scope, and leave with a practical summary and ordered next steps even if you buy nothing further. Work directly with Dr. Tabansky on one main phone and one PC, iPad or second phone, plus relevant identities, accounts, apps, recovery routes and access to data. Completion covers the agreed intake, access mapping, diagnosis and approved urgent first aid. Typically four hours. ₪3,600 including VAT. [See the initial visit](/en/private-exposure-assessment.html).
 
 **Personal Shield:** Personal cybersecurity hardening and teaching for one person: have your agreed setup strengthened and learn how to use it. Covers one main phone and one PC, iPad or second phone with relevant identities, accounts, apps and data-access arrangements. Includes practical security habits, essential migration where needed, two compatible physical security keys supplied, configured and tested, personal teaching, verification and a private dated record. One primary working day, with a second included if needed, plus 14 days of limited adjustment support for issues directly related to Toza's changes. Fixed ₪14,000 including VAT; a separate explicit purchase. [Full inclusions and limits](/en/pricing.html).
 
@@ -126,15 +184,17 @@ For Inner Circle, each participant receives a private dated record and the share
 
 These proposed descriptions reflect approved service facts and remain subject to owner approval of exact copy. They are not generated JSON-LD or validation results. Keep structured descriptions synchronized with the exact visible copy approved for integration; these provisional candidates do not authorize publishing structured content.
 
-**Organisation description:** Toza provides private, in-person assessment and hardening of agreed personal devices, digital identities, accounts and data-access arrangements. Clients work directly with Dr. Lior Tabansky to understand relevant exposure, approve changes and learn practical security habits. The Assessment and broader hardening are separate paid stages.
+**Organisation description:** Toza helps clients strengthen digital security and privacy through in-person assessment and hardening of agreed personal devices, digital identities, accounts and data-access arrangements. Clients work directly with Dr. Lior Tabansky to understand relevant exposure, approve changes and learn practical security habits. The Assessment and broader hardening are separate paid stages.
 
 **Founder name:** Dr. Lior Tabansky
+
+**Visible naming:** Use Dr. Lior Tabansky at the first meaningful visible introduction on each standalone page; Dr. Tabansky afterward. Keep the full name in signatures, author/entity fields and independently reused introductions. If a card or trust block is shown without a prior introduction, use the full name there. Metadata alone is not a visible introduction.
 
 **Founder role:** Senior cybersecurity expert, researcher and adviser.
 
 **Founder professional profile:** https://cyberdrtabansky.com
 
-**Offer descriptions:** Use the corresponding short service descriptions above, with the full product name Private Exposure Assessment as the initial offer label. Initial price 3600 ILS; Personal fixed 14000 ILS; Inner Circle starts at 42000 ILS and must retain the starting-price qualification; Bespoke and extras have individually agreed prices. All public amounts include VAT.
+**Offer descriptions:** Use the corresponding detailed reference descriptions above, with the full product name Private Exposure Assessment as the initial offer label. Initial price 3600 ILS; Personal fixed 14000 ILS; Inner Circle starts at 42000 ILS and must retain the starting-price qualification; Bespoke and extras have individually agreed prices. All public amounts include VAT.
 
 **FAQ descriptions:** Match the final visible English FAQ questions and answers. Do not add unseen guarantees, availability, legal claims or retired service categories.
 
@@ -146,7 +206,7 @@ These proposed descriptions reflect approved service facts and remain subject to
 
 Toza provides private, in-person assessment and hardening of agreed personal devices, digital identities, accounts, apps and data-access arrangements. Clients work directly with Dr. Lior Tabansky to understand relevant exposure and, through separately purchased hardening, build a setup fitted to their circumstances and learn how to use it. The work combines settings and access changes with practical security habits and personal teaching. Toza does not monitor your devices or install security software on them.
 
-The service addresses exposure that can matter in separation, business or inheritance disputes and uncertainty about private information. A client need not identify a technical problem or have a known incident before making contact. Work remains within the client’s authorized environment, with the client present and controlling credentials. Material changes require approval; additional scope or price is agreed before that work begins.
+The service helps clients strengthen personal digital security and privacy, proactively or when circumstances change. Separation, business or inheritance disputes and uncertainty about private information are examples. A client need not identify a technical problem or have a known incident before making contact. Work remains within the client’s authorized environment, with the client present and controlling credentials. Material changes require approval; additional scope or price is agreed before that work begins.
 
 Start with a private conversation through WhatsApp or Signal. Qualification includes no device inspection, mapping, diagnosis or technical work. Paid work requires a written scope and price, explicit acceptance and receipt of payment.
 
@@ -199,7 +259,8 @@ Use one contact destination per page. Where the page already contains its own co
 | Trust line | One relevant hero occurrence; approved page-specific variants may remain | A second identical trust line in the footer |
 | Privacy wording | Full version on canonical FAQ or where required; short linked version elsewhere | Absolute “no cloud,” “no logs,” “no third parties” or invisible-contact claims |
 | Full-engagement explanation | Use where the settings/practices/teaching model is otherwise missing; retain stage and scope | Adding it after a page already explains the same gain; placing full hardening inside Assessment copy |
-| Service descriptions | Lead with the relevant gain and retain its canonical detail link | All service descriptions beneath every page |
+| Marketing cards | Use the short presentation variant for the relevant service, preserving its scope, price qualification and detail link | Appending the full reference description to the same card or showing the entire catalogue on every page |
+| Detailed reference descriptions | Keep complete facts available for reference and structured-description work | Treating these long paragraphs as marketing cards |
 | Category distinction | FAQ owns the full explanation and fair comparison at #how-toza-differs; Why Toza carries a short positive rationale | A second standalone category page or duplicate comparison table on Why Toza |
 | Structured/reference descriptions | Exact approved visible facts and current names/prices | Unseen guarantees, retired categories, or publication ahead of visible-copy approval |
 
@@ -209,12 +270,12 @@ Anchor and endpoint checks remain part of later integration: retain one actual c
 
 ## Unresolved red-team issues
 
-None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
+None requiring correction in this round. The complete page and final eleven-candidate consistency gates passed under D-009.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW — PROVISIONAL SHARED SYSTEM.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW — shared system provisional.** D-021 records approval of the previous discussion and excerpts. This assembled replacement and its metadata remain for exact owner review. No production integration is authorized.
 
 ## Provenance and metadata
 
-Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.
+Owner-authorized warmth, stage-clarity and presentation update under D-021–D-023. Page role and protected commercial facts retained; D-020 duration remains Typically four hours. Inspection concerns relevant devices and authorized access, not unrestricted private-content review. Approved urgent first aid remains within agreed scope where safely possible; full hardening is separately purchased. No new confidentiality guarantee, exclusive expertise claim or product inclusion. All four project skills applied, ten author sweeps and metadata review complete; independent page and current-candidate consistency gates PASS under D-009. Current review: review/owner-feedback-05-warmth.md. Source corpus, protected PA-01-v2 and locked harness remain unchanged; the earlier duration amendment remains separate.

@@ -4,7 +4,7 @@ Date: 4 October 2026
 
 ## State
 
-All eleven candidates have received a targeted D-019/D-020 revision through the four project skills and sequential independent gates under D-009. Positive tailored-hardening value, expert interpretation/intervention and shorter public duration are applied. Page gates, final candidate consistency and the separate protected duration amendment passed. Exact complete-copy approval remains pending; Shared Copy remains provisional.
+All eleven candidates have received the D-021/D-022/D-023 warmth, hands-on-work and short-card revision through all four project skills and sequential independent gates under D-009. Each page and final current-candidate consistency passed. Prior discussion and excerpts are approved; exact approval of the newly assembled complete copy remains pending. Shared Copy remains provisional.
 
 | Candidate | Intervention | Independent gate | Owner state |
 |---|---|---|---|
@@ -30,11 +30,13 @@ D-017 records the owner's brand rules: Latin-only toza wordmark and Toza running
 
 D-019 removes incident-dependent sales framing and emphasizes expert connected-access interpretation and implementation. Assessment findings and recommended next steps remain open, with no predetermined second purchase. D-020 supersedes earlier public duration wording: Typically four hours. It changes no scope, price, in-person delivery, outcome-based completion, operational minimum or urgent-arrival term. The separate pa-01-v2-duration-amendment.md records three exact substitutions without changing the protected source.
 
+D-021 records approval of the preceding founder, privacy, positioning, naming and stage-clarity recommendations and excerpts. D-022 requires warmer, more engaging copy throughout, with inspection, diagnosis and approved urgent first aid explicit in the paid visit. D-023 adds short action/benefit cards with essential scope, price and detail links, while retaining complete reference descriptions. No new commercial scope, guarantee or institutional endorsement is inferred.
+
 ## Review evidence and checks
 
-Current record: revisions/en-02-v2/review/owner-feedback-04-positioning.md. The prior benefits and continuation records describe historical versions. All eleven page gates and final candidate consistency passed under D-009. The Code Review plugin did not run.
+Current record: revisions/en-02-v2/review/owner-feedback-05-warmth.md. The prior positioning, benefits and continuation records describe historical versions. All eleven page gates and final candidate consistency passed under D-009. The Code Review plugin did not run.
 
-All four Pricing tables, FAQ questions/comparison and per-page currency amounts match d1c2e98. Current duration, brand, routes, declared anchors, contact, service model and diff checks pass. Source, protected source, instructions, doctrine/harness, skills and production remain unchanged. The duration-only PA amendment passed separately.
+All four Pricing tables and FAQ questions/comparison match 787a5b9. Original page currency values are retained; Shared adds the short-card prices. Pricing visibly separates pre-booking qualification from paid inspection, diagnosis and approved urgent first aid. Six presentation cards are 35–72 words including headings, essential scope, price and detail links. Current duration, brand, routes, declared anchors, contact, service model and diff checks pass. Source, protected source, instructions, doctrine/harness, skills and production remain unchanged. The duration-only PA amendment passed separately.
 
 ## Next work
 

@@ -1,17 +1,17 @@
 # Why Toza — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
+Source: reviewed EN-02-v2 at 787a5b9; warmth and paid-work round, 4 October 2026
 
 Intervention: **S2 / C2 — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-021/D-022/D-023 independent gate PASS**
 
 ## What changed
 
-- Strengthened deliberate digital choices as the reason for full-service hardening.
-- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
-- Retained the founder voice, client control and scoped implementation/teaching.
-- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
+- Applied the approved founder hero and conversational opening.
+- Made personal help, privacy and practical expert work warmer and more explicit.
+- Clarified paid inspection, diagnosis and approved first aid; retained separate full hardening.
+- Added confidential handling and aligned metadata without adding an absolute promise.
 
 ## Exact revised copy
 
@@ -21,9 +21,9 @@ Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed u
 
 **Title:** Why Toza | A note from Dr. Lior Tabansky
 
-**Description:** Why Dr. Lior Tabansky created Toza: understand your digital exposure, make deliberate changes and learn to use a setup tailored to your situation.
+**Description:** Why Dr. Lior Tabansky created Toza: personal help to strengthen your digital security and privacy, make agreed changes and learn to use them.
 
-**Social description:** Bring personal judgment to your digital life. Work directly with me to understand what matters, agree the changes and learn how to use the resulting setup.
+**Social description:** You do not need the right technical question to ask for help. Work directly with me to understand your exposure and strengthen your security and privacy.
 
 ### Hero
 
@@ -31,7 +31,7 @@ Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed u
 
 # Why I created Toza.
 
-I created Toza to bring personal judgment to a part of life so often left to the choices made by phones and platforms.
+I created Toza to put my cybersecurity experience to work for people who want a more secure, more private digital life.
 
 **[Request a private conversation](#contact)**
 
@@ -39,11 +39,13 @@ One senior expert · In person · With you present · Your credentials remain un
 
 ## A personal note
 
-Even careful, exacting people who accept no default choice in the important parts of their lives often live with decisions made for them by their phones and platforms.
+Have you noticed how much care we give to important choices in our lives, while leaving so much of our digital lives to defaults chosen by Apple, Facebook and other platforms?
 
-Your devices, digital identities, accounts and apps can create many routes to information you intend to keep private. Some rely on ordinary features, without a new break-in. A forgotten connection or permission is only one part of the picture. Understanding how those arrangements work together, what they allow and what to change takes work on your actual setup.
+Those arrangements may no longer suit your circumstances. You should be able to have them examined, understood and changed with expert help.
 
-You may have only a hunch that something is off. You may simply want a more deliberate approach to your privacy. You should not have to identify the problem, or know which technical questions to ask, before seeking expert help.
+A conversation you thought was private, an account someone once helped you set up, a service your family shares: each can connect to more of your life than you realize. I look at how the relevant devices, identities, accounts and apps work together, and what their access to your data means for you.
+
+You may have only a hunch that something is off. Or you may simply want to give your privacy more care. You do not need to arrive with the right technical question. Helping you work out what matters is part of my job.
 
 In two decades of cybersecurity work, I kept seeing how much personal situations could depend on this overlooked digital layer. I created Toza to offer the service I believed should already exist: one senior expert who understands your situation, examines what matters and carries out the agreed changes with you. The work can bring overlooked access to light and make clear what needs attention, before a crisis or in the middle of one.
 
@@ -57,15 +59,15 @@ Portrait alt text: Portrait of Dr. Lior Tabansky
 
 ## What becomes different for you
 
-### You can make informed decisions about your digital life
+### You have someone to help you make sense of it
 
-During the [Private Exposure Assessment](/en/private-exposure-assessment.html), I examine the relevant devices, digital identities, accounts and access to your data in the context of your situation. I explain which risks matter and address urgent exposure that can safely be fixed within the agreed scope. You receive a clear summary of what was found, what changed and what should happen next, even if you decide not to continue.
+During the [Private Exposure Assessment](/en/private-exposure-assessment.html), I inspect the relevant devices, digital identities, accounts and access to your data with you. We begin with your situation, then I diagnose what needs attention and make approved urgent first-aid fixes where safely possible within the agreed scope. I explain what I find and what each proposed change means. You receive a clear summary of what was found, what changed and what should happen next, even if you decide not to continue.
 
-### Your setup reflects choices made for your life
+### Your security and privacy get personal attention
 
 You should not have to wait for a known intrusion to choose a more carefully configured digital life. Through Personal Shield or Inner Circle Shield, I harden the settings and access arrangements for the agreed devices, digital identities, accounts, apps and data around your circumstances. We agree the scope and price separately, and you decide whether to proceed. This can include closing unwanted access, strengthening sign-in and recovery, and changing how information is shared. Material changes are tested. There is no automatic continuation from the Assessment.
 
-### You know how to use what has changed
+### You can use the changes with confidence
 
 Both services include practical security habits tailored to your situation and personal teaching. We work on how you grant access, share information, sign in and recover accounts. You learn to use the resulting setup and receive a private dated record of the work. The aim is to make deliberate choices easier in daily life.
 
@@ -77,7 +79,7 @@ I learn your circumstances and carry out the technical work with you, in person.
 
 ## You remain in control of the work
 
-You see what is reviewed, approve material changes and control your passwords, recovery codes and authentication. I do not keep your credentials for ongoing use or remotely control your devices. Toza does not monitor your devices or install security software on them.
+What you tell me about your situation is handled confidentially. You see what is reviewed, approve material changes and control your passwords, recovery codes and authentication. I do not keep your credentials for ongoing use or remotely control your devices. Toza does not monitor your devices or install security software on them.
 
 I work only within your authorized digital environment. I do not investigate another person, reconstruct past events forensically, collect legal evidence or give legal advice.
 
@@ -103,12 +105,12 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
+None requiring correction in this round. The complete page and final eleven-candidate consistency gates passed under D-009.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** D-021 records approval of the previous discussion and excerpts. This assembled replacement and its metadata remain for exact owner review. No production integration is authorized.
 
 ## Provenance and metadata
 
-Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.
+Owner-authorized warmth, stage-clarity and presentation update under D-021–D-023. Page role and protected commercial facts retained; D-020 duration remains Typically four hours. Inspection concerns relevant devices and authorized access, not unrestricted private-content review. Approved urgent first aid remains within agreed scope where safely possible; full hardening is separately purchased. No new confidentiality guarantee, exclusive expertise claim or product inclusion. All four project skills applied, ten author sweeps and metadata review complete; independent page and current-candidate consistency gates PASS under D-009. Current review: review/owner-feedback-05-warmth.md. Source corpus, protected PA-01-v2 and locked harness remain unchanged; the earlier duration amendment remains separate.

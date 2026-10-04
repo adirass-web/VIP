@@ -1,17 +1,17 @@
 # How Toza helps — EN-02-v2 candidate
 
-Source: EN-02-v1 and reviewed EN-02-v2; owner positioning/duration round, 4 October 2026
+Source: reviewed EN-02-v2 at 787a5b9; warmth and paid-work round, 4 October 2026
 
 Intervention: **S3 / C2 — owner-authorized under D-016**
 
-Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed under D-009**
+Status: **READY FOR OWNER REVIEW — D-021/D-022/D-023 independent gate PASS**
 
 ## What changed
 
-- Presented tailored hardening positively while retaining a separate, voluntary purchase.
-- Explained expert interpretation of connected access and the agreed work, without access recipes or exclusive-knowledge claims.
-- Shortened public Assessment duration to Typically four hours under D-020; retained completion and current price/scope.
-- Checked the complete page and metadata; preserved consent, privacy, legal and commercial boundaries.
+- Made the page-specific opening or explanation warmer and more personal.
+- Clarified hands-on inspection and diagnosis with approved urgent first aid in the paid visit.
+- Kept the situation-specific authority, consent and service boundaries.
+- Checked metadata, names and the separate conversation/Assessment/full-engagement stages.
 
 ## Exact revised copy
 
@@ -19,9 +19,9 @@ Status: **READY FOR OWNER REVIEW — D-019/D-020 revision independently passed u
 
 Route: `/en/what-happens-during-the-visit.html`
 
-Title: How Toza Helps | Understand, Harden and Learn
+Title: How Toza Helps | Personal Security and Privacy
 
-Description: Understand your digital exposure, address urgent problems and decide on tailored hardening. See how Toza makes changes with you and teaches you to use the setup.
+Description: Work directly with Dr. Tabansky, from hands-on inspection and approved urgent fixes to separately agreed hardening and personal teaching.
 
 Social description: From a clearer picture of your exposure to agreed changes and practical security habits. See what you gain at each stage of Toza’s in-person work.
 
@@ -29,9 +29,9 @@ Social description: From a clearer picture of your exposure to agreed changes an
 
 How Toza helps
 
-# Understand your exposure. Learn to use a hardened setup.
+# Work through your concerns with the person who makes the changes.
 
-The first paid visit helps you understand the relevant access to your digital life, addresses approved urgent problems where safely possible within scope, and gives you ordered next steps. If you choose a full engagement, Dr. Lior Tabansky hardens the agreed setup with you and teaches you how to use it.
+You do not have to work out what is wrong before we meet. During the paid Assessment, Dr. Lior Tabansky listens to your concerns, inspects relevant devices and access, diagnoses what needs attention and makes approved urgent first-aid fixes where safely possible within scope. If you choose a full engagement, he hardens the agreed setup with you and teaches you how to use it.
 
 You work with him directly, in person. You control your credentials and approve material changes. The Assessment and broader hardening are separate purchases; each stage has its own result.
 
@@ -53,7 +53,7 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 If the service fits, we send a written offer setting out the work, inclusions, exclusions, price, agreed additions and payment terms. The initial visit is scheduled after you explicitly accept and payment is received. Preparation instructions come directly from us.
 
-## Understand what matters in your situation
+## Your paid Assessment: inspection, diagnosis and urgent first aid
 
 **Private Exposure Assessment · Typically four hours**
 
@@ -61,11 +61,11 @@ If the service fits, we send a written offer setting out the work, inclusions, e
 
 ### 3. See how your devices, identities and data are connected
 
-We start with what changed, what concerns you, which accounts matter and who previously had legitimate access. The work covers one main phone and one other device: a PC, iPad or second phone, together with relevant identities, accounts, apps, permissions, recovery routes and connected services.
+We start by listening: what brought you here, what you want to keep private and what you are unsure about. We also discuss which accounts matter and who previously had legitimate access. The work covers one main phone and one other device: a PC, iPad or second phone, together with relevant identities, accounts, apps, permissions, recovery routes and connected services.
 
 We examine how those connections work together and what they allow, including access to relevant messages, photos, documents and location information. You do not have to arrive with a list of suspected weaknesses. Dr. Tabansky interprets the relevant access in the context of your life and explains what deserves attention. The review uses what is disclosed, observable or otherwise lawfully accessible within your authorized environment and agreed scope.
 
-### 4. Have urgent problems addressed with your approval
+### 4. Have approved first-aid fixes made during the visit
 
 Where we find urgent exposure that can be addressed safely within the agreed scope, we make the approved changes during the visit. We explain what a material change does before acting.
 
@@ -129,12 +129,12 @@ Send a short, neutral message through WhatsApp or Signal. We will confirm fit an
 
 ## Unresolved red-team issues
 
-None. This complete targeted replacement and the final eleven-candidate consistency check passed under D-009. Current evidence: review/owner-feedback-04-positioning.md. Earlier passes are historical.
+None requiring correction in this round. The complete page and final eleven-candidate consistency gates passed under D-009.
 
 ## Approval state
 
-**READY FOR OWNER REVIEW.** Owner direction and D-020 public duration wording are recorded; exact complete candidate approval remains pending. No production integration is authorized.
+**READY FOR OWNER REVIEW.** D-021 records approval of the previous discussion and excerpts. This assembled replacement and its metadata remain for exact owner review. No production integration is authorized.
 
 ## Provenance and metadata
 
-Targeted D-019/D-020 update to the reviewed EN-02-v2 candidate at d1c2e98. Existing page role, routes, locked action, current prices, scope, credit, urgent terms and applicable service boundaries remain. Public Assessment duration follows the later owner instruction; outcome-based completion and commercial terms are unchanged. Source corpus, locked harness and protected PA-01-v2 are immutable; its duration-only amendment is separate. All four project skills applied. Ten author sweeps and body/metadata review complete; independent page and candidate-consistency gates passed. Review record: review/owner-feedback-04-positioning.md. Shared Copy remains provisional until exact approval.
+Owner-authorized warmth, stage-clarity and presentation update under D-021–D-023. Page role and protected commercial facts retained; D-020 duration remains Typically four hours. Inspection concerns relevant devices and authorized access, not unrestricted private-content review. Approved urgent first aid remains within agreed scope where safely possible; full hardening is separately purchased. No new confidentiality guarantee, exclusive expertise claim or product inclusion. All four project skills applied, ten author sweeps and metadata review complete; independent page and current-candidate consistency gates PASS under D-009. Current review: review/owner-feedback-05-warmth.md. Source corpus, protected PA-01-v2 and locked harness remain unchanged; the earlier duration amendment remains separate.

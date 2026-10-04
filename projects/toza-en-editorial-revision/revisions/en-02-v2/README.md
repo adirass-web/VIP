@@ -1,6 +1,6 @@
 # EN-02-v2 Revision Candidates
 
-All eleven candidates are **READY FOR OWNER REVIEW** after the D-019/D-020 positioning/duration round and separate independent gates. Shared Copy remains **PROVISIONAL** pending exact approval. Direction and continuation approvals do not approve unseen replacement wording.
+All eleven candidates are **READY FOR OWNER REVIEW** after the D-021/D-022/D-023 warmth, paid-work clarity and short-card round and separate independent gates. Shared Copy remains **PROVISIONAL** pending exact approval. Direction and continuation approvals do not approve unseen replacement wording.
 
 ## Read in order
 
@@ -20,11 +20,13 @@ Each packet includes at most five change bullets, complete copy and metadata, un
 
 ## Current change
 
+D-021 applies the approved founder, privacy, trust, naming and stage recommendations. D-022 rewrites Home and warms all eleven candidates, with hands-on paid inspection, diagnosis and approved urgent first aid clear. D-023 adds six short presentation cards, separate from detailed reference descriptions.
+
 D-019 presents full hardening as deliberate choices fitted to the client, without requiring a known incident. Expert value is interpretation and implementation on the actual setup. D-020 uses Typically four hours across the current public candidates; commercial scope and completion remain. [Protected duration-only amendment](pa-01-v2-duration-amendment.md) records three exact substitutions, with the source unchanged.
 
 ## Review evidence
 
-[Current positioning/duration strategy and gates](review/owner-feedback-04-positioning.md). All eleven replacements and the separate duration amendment passed; earlier records below are historical.
+[Current warmth, paid-work and short-card strategy and gates](review/owner-feedback-05-warmth.md). All eleven replacements and current-candidate consistency passed. [Prior positioning/duration record](review/owner-feedback-04-positioning.md) includes the earlier separate duration amendment; that amendment remains unchanged.
 
 [Canonical benefits round](review/owner-feedback-03-benefits.md) and [next texts and eleven-candidate consistency](review/phase-2-3-strategy-and-qa.md). The separate reviewer passed each page in sequence, rechecked the attorney naming correction and passed the final consistency check. This is the D-009 substitute, not a Code Review plugin result or the later Phase 5 full-corpus gate.
 
