@@ -58,5 +58,28 @@ This register is the bridge between page approval and the future consolidated v3
 - **Authority:** Explicit owner instruction in the continuation request.
 - **Affected pages/components:** Phase 1 revision candidates and Shared Copy System.
 - **Supersedes:** Any assumption that internal editorial checks or CI success alone satisfy the required gate.
-- **Status:** Locked
+- **Status:** Historical locked decision; plugin-specific requirement superseded by D-009. Authority guardrails remain.
 - **Notes for v3 spec:** A review pass is not owner approval of exact copy. Main and production templates remain out of scope.
+
+### D-009 — Independent Toza red-team review replaces plugin gate
+- **Date:** 2026-10-04
+- **Category:** Workflow
+- **Decision:** Proceed without the Code Review plugin. Use a separate reviewer applying the Toza red-team skill against current authority and the locked harness; document findings and their disposition before advancing through Why Toza → Pricing → FAQ → What Happens → Shared Copy System.
+- **Reason:** The owner accepted the proposed independent-review substitution and instructed “proceed without it with guardrails.”
+- **Authority:** Explicit owner continuation authorization following the proposed substitution.
+- **Affected pages/components:** Phase 1 candidates and Phase 1.5 Shared Copy System.
+- **Supersedes:** D-008's plugin-specific requirement only. D-008 remains a historical decision, superseded on that point.
+- **Status:** Locked
+- **Guardrails:** Current commercial authority and PA-01-v2 remain protected; no invented claims or Class A changes; preserve minimum trust payload; review metadata; record accepted/rejected findings; no self-approval, production-template edits, merge to main or deployment. Exact owner approval is still required before integration. Shared copy remains provisional until exact owner approval.
+- **Notes for v3 spec:** An independent editorial pass makes a candidate READY FOR OWNER REVIEW, not APPROVED. It is not a Code Review plugin result.
+
+### D-010 — Shared contact placement and reusable variants
+- **Date:** 2026-10-04
+- **Category:** Shared copy
+- **Decision:** Proposed: use one contact destination per page; preserve the reviewed page-specific closing when it already carries the contact sequence; do not append a second full standard module. Use short linked or full privacy wording according to page role. Preserve neutral prefill, channel labels, minimum trust and page-specific boundaries.
+- **Reason:** Prevent shared components from reversing the locked harness's page-level compression.
+- **Authority:** Editorial proposal under the locked Shared Copy System brief; not an owner decision or approval of exact wording.
+- **Affected pages/components:** Shared contact/footer, privacy variants, service/structured/reference descriptions and future page integration.
+- **Supersedes:** Nothing approved; replaces no production content.
+- **Status:** Proposed
+- **Notes for v3 spec:** Incorporate only after exact approval of `05-shared-copy-system.md` and its placement map. Shared copy remains explicitly provisional. No change to service facts, contact destinations or public language availability is authorized.

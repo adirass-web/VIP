@@ -74,6 +74,19 @@ Internal scores, 1–5: clarity 4.7; differentiation 4.7; premium signal 4.8; hu
 
 Title and social description retained. Description shortened without adding a promise. Route recorded as `/en/why-us.html`, matching the source directory. The founder note, portrait text and external-profile destination remain unchanged from the resumed candidate. PA-01-v2, the source corpus, locked instructions and production templates were not edited.
 
-## Gate status
+## Historical gate status before D-009
 
 **Code Review: PENDING.** No external review verdict has been inferred from CI, self-review or the absence of comments. Pricing, FAQ, What Happens and Shared Copy System remain next, in that order, after Why Toza passes.
+
+## Current gate — D-009 independent review
+
+**PASS — READY FOR OWNER REVIEW**, 4 October 2026. Reviewer: separate `toza_reviewer` agent, read-only; applied the project red-team skill and current authority. The Code Review plugin was not run. Exact owner approval remains pending.
+
+- **W-RT-01 (minor): accepted and resolved.** Replace obsolete plugin-gate status/provenance with D-009 independent-review status. Historical evidence above remains labeled historical.
+- **Public-copy findings:** no blockers, major defects, authority conflicts or required corrections. No owner factual decision needed.
+- **Proof/voice:** founder note and senior technical delivery preserved; experience/profile remain source-backed and were not independently externally reverified.
+- **Repetition:** senior-access statements progress from promise to consequence; source detail is linked to Assessment, Pricing, FAQ and Process. Shared-contact placement remains a Phase 1.5 task.
+- **Metadata:** title, description, social description and route match body and source.
+- **Reviewer scores (1–5):** clarity 4.7, differentiation 4.8, premium signal 4.8, human credibility 4.9, emotional precision 4.5, restraint 4.7, proof 4.3, density 4.5, next-step clarity 4.8, consistency 5.0.
+
+Disposition: accepted the administrative finding; no copy changes were requested or made following this independent pass. Advance to Pricing under D-009.

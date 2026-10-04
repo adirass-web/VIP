@@ -3,7 +3,7 @@
 Date: 4 October 2026
 
 ## State
-Project package initialized; Why Toza candidate resumed and locally tightened.
+Phase 1 and Phase 1.5 candidates prepared, independently reviewed and ready for exact owner review. Shared Copy System remains provisional.
 
 ### Completed
 - source corpus locked;
@@ -17,38 +17,36 @@ Project package initialized; Why Toza candidate resumed and locally tightened.
 - stress-tested revision architecture locked;
 - Shared Copy System workstream added;
 - live decision-delta register added.
+- Why Toza → Pricing → FAQ → What Happens → Shared Copy System drafted/edited and reviewed in order;
+- independent Toza red-team gate substituted for the Code Review plugin by owner authorization D-009;
+- What Happens no-remote-control finding corrected and independently rechecked;
+- five-candidate consistency review passed;
+- source/harness integrity, founder-note preservation, Pricing tables, FAQ question coverage and candidate route/anchor checks passed.
 
 ### Current phase
-**Phase 1 — canonical language**
+**Phase 1 + Phase 1.5 — READY FOR OWNER REVIEW**
 
-### Current page and gate
-**Why Toza**
+### Candidate status
 
-Candidate: `revisions/en-02-v2/01-why-toza.md`.
+| Candidate | Intervention | Independent gate | Exact owner approval |
+|---|---|---|---|
+| `revisions/en-02-v2/01-why-toza.md` | S1/C1 | PASS | Pending |
+| `revisions/en-02-v2/02-pricing.md` | S1/C1 | PASS | Pending |
+| `revisions/en-02-v2/03-faq.md` | S1/C1 | PASS | Pending |
+| `revisions/en-02-v2/04-what-happens.md` | S3/C2 | PASS after correction | Pending |
+| `revisions/en-02-v2/05-shared-copy-system.md` | Component review | PASS; provisional | Pending |
 
-Status: **INTERNAL DRAFT — required Code Review adversarial gate pending**.
+The Code Review plugin did not run; D-009 supersedes D-008's plugin requirement. The separate read-only reviewer applied the Toza red-team skill and current authority. No self-review or CI result was substituted for that independent gate.
 
-The installed Code Review plugin's available CI-read tool reports successful checks on the resumed PR #51 head, `90c7054f1fcd476bc214e6a2dbbd736409ffd74a`. No adversarial review result has been obtained. The review app was not present in the accessible side-panel inventory; the owner was asked to open it. This is an access prerequisite, not a request to reapprove the revision scope. CI results do not count as a review pass.
+Review evidence: `revisions/en-02-v2/review/01-why-toza-editorial-record.md` and `revisions/en-02-v2/review/phase-1-strategy-and-qa.md`. All required findings are resolved. There are no new Class A commercial decisions. D-010 records shared placement as an editorial proposal, not owner approval.
 
-The candidate now removes duplicate credential reassurance, names and links the paid Assessment, and tightens its metadata. The founder note and profile proof remain intact. Internal findings, provenance and the required external review brief are in `revisions/en-02-v2/review/01-why-toza-editorial-record.md`.
+### Next work
 
-Do not advance to Pricing until Why Toza passes the required gate. No page has been marked APPROVED, and no Class A commercial decision has been invented. Owner workflow instruction D-008 is recorded in the decision delta.
+Exact owner review covers complete wording and metadata in each packet. Shared placement/variants remain Proposed under D-010. Home is the next page in the locked sequence, followed by the situation pages; those phases were not started in this request. Shared copy is explicitly provisional for later drafting and still requires exact approval before integration.
 
-Intervention rating:
-- Structure: S1
-- Copy: C1
-
-Objective:
-- preserve the founder note substantially;
-- use it as the premium/human voice benchmark;
-- reduce service-manual repetition in the lower half;
-- strengthen the relationship between direct senior access and client value;
-- preserve the external professional-profile proof.
-
-### After Why Toza
-Pricing → FAQ → What Happens → Shared Copy System.
+The later full-corpus Phase 5 audit and consolidated v3 specification remain outstanding. Existing operational edge cases identified by the source corpus remain quarantined; this revision does not invent their policies.
 
 ## Production status
-No production-template change is authorized by this project.
+No production-template change was made or authorized. The source corpus, protected PA-01-v2, locked instructions, doctrine and skills remain unchanged. The founder note is unchanged from the resumed candidate; all Pricing tables match the source and all FAQ questions remain.
 
 `main` remains outside the revision work until exact copy approval and later integration.

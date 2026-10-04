@@ -2,7 +2,7 @@
 
 Source: EN-02-v1, 4 October 2026  
 Intervention: **S1 / C1**  
-Status: **INTERNAL DRAFT — Code Review gate pending**
+Status: **READY FOR OWNER REVIEW — independent review passed under D-009**
 
 ## What changed
 
@@ -88,16 +88,15 @@ Do not send passwords, recovery codes, screenshots, legal documents, intimate ma
 
 ## Unresolved red-team issues
 
-- **Code Review gate pending.** The installed plugin's available tool reports CI diagnostics only. The adversarial review has not run; CI success does not satisfy this gate.
-- The closing contact block may receive a later normalization pass during mandatory Phase 1.5 Shared Copy System review; no change should be made now merely for uniformity.
+None. Independent Toza red-team review passed under D-009. The Shared Copy System will define placement so a full footer contact block does not duplicate this page's first-person contact section.
 
 ## Approval state
 
-**INTERNAL DRAFT — Code Review gate pending.** Not yet ready for exact owner approval. No production integration is authorized.
+**READY FOR OWNER REVIEW.** Independent review is complete; exact owner approval remains pending. No production integration is authorized.
 
 ## Provenance
 
-Source EN-02-v1; S1/C1. Founder note, portrait, professional-profile link and locked CTA preserved from the resumed candidate. Broader-service detail stays linked to Pricing; full privacy detail stays in FAQ. The paid Assessment now links directly to PA-01-v2. Duplicate credential reassurance removed. No Class A factual/commercial change or new copy approval introduced. Workflow decision: D-008. Internal findings and review evidence are in `review/01-why-toza-editorial-record.md`.
+Source EN-02-v1; S1/C1. Founder note, portrait, professional-profile link and locked CTA preserved from the resumed candidate. Broader-service detail stays linked to Pricing; full privacy detail stays in FAQ. The paid Assessment now links directly to PA-01-v2. Duplicate credential reassurance removed. No Class A factual/commercial change or new copy approval introduced. Workflow decision: D-009 supersedes D-008's plugin requirement. Findings and review evidence are in `review/01-why-toza-editorial-record.md`.
 
 ### Metadata status
-Revised and internally checked; Code Review gate pending.
+Title, description, social description and route checked by the author and independent reviewer; exact owner approval pending.
