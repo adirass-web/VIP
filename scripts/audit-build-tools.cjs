@@ -24,7 +24,11 @@ function assess(report, lock) {
       }
       const known = residuals[cause.url];
       assert(known && known.name === name && known.name === cause.name && known.severity === cause.severity, `New or changed advisory: ${cause.url}`);
-      assert.equal(lock.packages['node_modules/' + name]?.version, known.version, `Reassess changed residual version: ${name}`);
+      assert(Array.isArray(entry.nodes) && entry.nodes.length > 0, `Missing affected package paths: ${name}`);
+      for (const node of entry.nodes) {
+        assert(typeof node === 'string' && (node === 'node_modules/' + name || node.endsWith('/node_modules/' + name)), `Unexpected affected package path: ${node}`);
+        assert.equal(lock.packages[node]?.version, known.version, `Reassess changed residual version: ${node}`);
+      }
       found.add(cause.url);
     }
   }

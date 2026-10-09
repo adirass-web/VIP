@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const {assess} = require('./audit-build-tools.cjs');
 const url = 'https://github.com/advisories/GHSA-vfj7-8cjw-p6xm';
 const lock = {packages: {'node_modules/braces': {version: '3.0.3'}}};
-const report = () => ({auditReportVersion: 2, metadata: {vulnerabilities: {total: 1, critical: 0}}, vulnerabilities: {braces: {via: [{name: 'braces', url, severity: 'high'}]}}});
+const report = () => ({auditReportVersion: 2, metadata: {vulnerabilities: {total: 1, critical: 0}}, vulnerabilities: {braces: {nodes: ['node_modules/braces'], via: [{name: 'braces', url, severity: 'high'}]}}});
 test('documented upstream residual is visible in the result', () => {
   assert.deepEqual(assess(report(), lock), {affectedPackages: 1, advisories: [url]});
 });
@@ -24,4 +24,13 @@ test('failed or incomplete audit fails closed', () => {
 test('new affected dependency fails even if it links to an existing advisory', () => {
   const extra = report(); extra.vulnerabilities.unreviewed = {via: ['braces']}; extra.metadata.vulnerabilities.total = 2;
   assert.throws(() => assess(extra, lock), /New affected/);
+});
+test('nested vulnerable copies and omitted package paths cannot bypass version review', () => {
+  const nested = report(); nested.vulnerabilities.braces.nodes.push('node_modules/chokidar/node_modules/braces');
+  const nestedLock = {packages: {...lock.packages, 'node_modules/chokidar/node_modules/braces': {version: '3.0.2'}}};
+  assert.throws(() => assess(nested, nestedLock), /Reassess/);
+  const missing = report(); delete missing.vulnerabilities.braces.nodes;
+  assert.throws(() => assess(missing, lock), /Missing affected package paths/);
+  const absent = report(); absent.vulnerabilities.braces.nodes = ['node_modules/not-braces'];
+  assert.throws(() => assess(absent, lock), /Unexpected affected package path/);
 });
