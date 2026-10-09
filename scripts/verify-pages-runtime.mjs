@@ -47,7 +47,7 @@ for(const p of ['terms','privacy']) {
   const response=await fetchPath('/'+p+'.html');assert.equal(response.status,200);
   assert((await response.text()).includes('<html lang="he" dir="rtl">'));count++;
 }
-const css=await fetchPath('/assets/css/vault.css?v=en-accepted-1');assert.equal(css.status,200);
+const css=await fetchPath('/assets/css/clear-practice.css?v=clear-practice-1');assert.equal(css.status,200);
 assert((await css.text()).includes('.copy-table'));count++;
 assert.equal((await fetchPath('/missing-route-for-quality-gate',{redirect:'manual'})).status,404);count++;
 console.log('PAGES RUNTIME VERIFIED: '+count+' route, status, content and asset checks');
