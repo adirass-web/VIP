@@ -1,39 +1,17 @@
-import { assertBanned, assertIncludes, sourceFor } from "./verify-utils.mjs";
-
-const englishLeaving = sourceFor("en", "leaving-controlling-relationship");
-const hebrewLeaving = sourceFor("he", "leaving-controlling-relationship");
-const englishHome = sourceFor("en", "index");
-const hebrewHome = sourceFor("he", "index");
-
-assertIncludes(
-  englishLeaving,
-  "If you think he sees more than he should, do not rush to change everything.",
-  "English Leaving headline",
-);
-assertIncludes(englishLeaving, "Access, visibility, and control", "English Leaving scope");
-assertIncludes(englishLeaving, "Private Exposure Assessment", "English Leaving service framing");
-assertIncludes(
-  hebrewLeaving,
-  "אם את חוששת שהוא רואה יותר ממה שהוא אמור לראות, אל תמהרי לשנות הכול.",
-  "Hebrew Leaving headline",
-);
-assertIncludes(hebrewLeaving, "גישה, נראות ושליטה", "Hebrew Leaving scope");
-assertIncludes(hebrewLeaving, "חשיפה דיגיטלית", "Hebrew Leaving service framing");
-assertIncludes(
-  englishHome,
-  "If you think they see more than they should, do not rush to change everything.",
-  "English home Leaving card",
-);
-assertIncludes(
-  hebrewHome,
-  "אם את חוששת שהוא רואה יותר ממה שהוא אמור לראות, אל תמהרי לשנות הכול.",
-  "Hebrew home Leaving card",
-);
-
-const retiredEnglishScope = /(?:safety|safe|danger|hotline|domestic|abuse|police|advocate|housing|clean ground|emergency|shelter|crisis|violence)/i;
-const retiredHebrewScope = /(?:בטיחות|בטוח|סכנה|קו חירום|שירות חירום|אלימות|התעללות|משטרה|מקלט|עו[״"]ס|118|100)/;
-
-assertBanned(retiredEnglishScope, englishLeaving, "English Leaving scope");
-assertBanned(retiredHebrewScope, hebrewLeaving, "Hebrew Leaving scope");
-
-console.log("LEAVING ALIGNMENT VERIFIED");
+import { assert, readText } from './verify-utils.mjs';
+// Exercise the actual Pages Function without changing the repository's CJS convention.
+const {onRequest} = await import('data:text/javascript;base64,' + Buffer.from(readText('functions/en/[[retired]].js')).toString('base64'));
+for (const suffix of ['', '/', '.html', '.html/']) {
+  for (const method of ['GET', 'HEAD']) {
+    const response = await onRequest({request:new Request('https://toza-site.pages.dev/en/leaving-controlling-relationship' + suffix, {method}),next:()=>{throw Error('Retired route fell through');}});
+    assert(response.status === 410, 'Retired route must return 410');
+    assert(response.headers.get('x-robots-tag') === 'noindex', 'Retirement indexing guard');
+    const body = await response.text();
+    assert(method === 'HEAD' ? body === '' : body.includes('This page has been retired.') && body.includes('This service page is no longer available.'), 'Retirement response wording');
+    assert(!/href=|contact|WhatsApp|Signal/.test(body), 'Retired response must have no sales CTA');
+  }
+}
+assert(await onRequest({request:new Request('https://toza-site.pages.dev/en/pricing.html'),next:()=> 'static'}) === 'static', 'Function intercepted retained page');
+const routes = JSON.parse(readText('_routes.json'));
+assert(!routes.include.includes('/*') && !routes.include.includes('/en/*'), 'Functions must not swallow static redirect rules');
+console.log('RETIREMENT RESPONSE VERIFIED; EDGE ROUTING REQUIRES RUNTIME GATE');

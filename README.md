@@ -1,23 +1,24 @@
 # Toza
 
-Production Eleventy/Nunjucks marketing site.
+Eleventy/Nunjucks marketing site deployed to the existing Cloudflare Pages project toza-site.
 
-## Current release
+## English edition
 
-- Brand: Toza.
-- Working descriptor: Personal digital protection for your close circle.
-- Public language: English only (`src/en/`).
-- Primary layout: `src/_includes/layouts/vault.njk`.
-- Current contact path: WhatsApp / Signal.
-- `Why Toza` is a bilingual local founder note; its explicit external link opens the founder's professional site at https://cyberdrtabansky.com.
-- Deployment target: separate Cloudflare Pages project `toza-site`; no custom canonical domain yet.
-- Hebrew and Russian production pages are intentionally absent until fresh translations are supplied.
+The accepted English copy, authority and release gates live in projects/toza-en-editorial-revision/. The D-026 release publishes eleven English marketing pages. Hebrew marketing source is preserved but temporarily unpublished; Russian remains unpublished. Hebrew terms/privacy documents remain at the root and are labelled as Hebrew. This publication choice does not change service-language availability.
 
-## Planned sequence
+The existing visual system, fonts, portrait and contact channels are retained. Wordmark: toza; running text: Toza. No new intake or payment system is part of this release.
 
-1. Keep the English site as the content source of truth.
-2. Add a mirrored Hebrew version from supplied Hebrew copy, with full RTL QA.
-3. Add a mirrored Russian version from supplied Russian copy.
-4. Add a minimal normal intake flow; evaluate chatbot-assisted intake as a separate implementation step.
+## Development and checks
 
-Historical strategy decks, copy-production workspaces, ZIP snapshots, and superseded translations do not belong on the production branch; Git history remains the archive.
+- npm ci installs the locked tools.
+- npm run sync:copy reproduces the accepted English templates. Change presentation in scripts/accepted-copy.cjs; do not hand-edit generated copy or alter accepted blocks without owner approval.
+- npm run build cleans only generated _site before building, preventing unpublished files surviving a rebuild.
+- npm run verify:all checks accepted-source fingerprints, generated templates, published routes, links, schema facts, retained Hebrew source and legal RTL, and CI/deploy constraints. Historical he-* command names are retained for workflow compatibility.
+- Install the pinned Playwright Chromium browsers, then npm run test:rtl-visual runs desktop/mobile English and retained legal checks.
+- Start a local Pages runtime with the existing Wrangler 4 tooling, then node scripts/verify-pages-runtime.mjs checks actual redirects/statuses. Default address: http://127.0.0.1:8788; override TOZA_RUNTIME_URL for release smoke checks.
+
+Pages normalizes .html aliases to extensionless URLs; canonicals and sitemap follow those final URLs. Shared CSS/JS URLs are versioned because assets have long immutable cache lifetimes.
+
+## Release
+
+PR verification does not deploy previews. A reviewed merge to main triggers production deployment. Follow planning/2026-10-04-implementation-gates.md inside the editorial project: owner preview, final-head checks, verified production/rollback details, final publication approval, deployment and live smoke checks.

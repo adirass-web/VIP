@@ -1,69 +1,30 @@
-import path from "node:path";
-import {
-  assert,
-  assertIncludes,
-  fileExists,
-  htmlFor,
-  publicPath,
-  readText,
-  routes,
-  siteUrl,
-} from "./verify-utils.mjs";
-
-function anchors(html) {
-  return [...html.matchAll(/<a\b[^>]*\bhref=(?:"([^"]*)"|'([^']*)')/gi)].map((match) => match[1] || match[2]);
-}
-
-function assertHebrewTargetExists(href, label) {
-  const target = href.split(/[?#]/, 1)[0];
-  if (!target.startsWith("/he/")) return;
-
-  const output = target.endsWith("/")
-    ? path.join("_site", target.slice(1), "index.html")
-    : path.join("_site", target.slice(1));
-  assert(fileExists(output), `${label}: Hebrew href ${href} has no built target ${output}`);
-}
-
-for (const route of routes) {
-  const html = htmlFor("he", route);
-  const label = `he/${route}`;
-  const hrefs = anchors(html);
-
-  assert(hrefs.some((href) => href === "/he/"), `${label}: brand/home link is not localized`);
-  assert(!hrefs.some((href) => href.startsWith("/en/")), `${label}: visible anchor incorrectly points to English`);
-  hrefs.forEach((href) => assertHebrewTargetExists(href, label));
-
-  assertIncludes(
-    html,
-    `<link rel="alternate" hreflang="en" href="${siteUrl}${publicPath("en", route, { directoryForIndex: true })}">`,
-    `${label} English alternate`,
-  );
-  assertIncludes(
-    html,
-    `<link rel="alternate" hreflang="he" href="${siteUrl}${publicPath("he", route, { directoryForIndex: true })}">`,
-    `${label} Hebrew alternate`,
-  );
-  assertIncludes(html, 'href="/terms.html" hreflang="en"', `${label} terms-language hint`);
-  assertIncludes(html, 'href="/privacy.html" hreflang="en"', `${label} privacy-language hint`);
-  assertIncludes(html, '"availableLanguage": ["English", "Hebrew"]', `${label} schema language list`);
-}
-
-const sitemap = readText("sitemap.xml");
-for (const locale of ["en", "he"]) {
-  for (const route of routes) {
-    const href = `${siteUrl}${publicPath(locale, route, { directoryForIndex: true })}`;
-    assertIncludes(sitemap, `<loc>${href}</loc>`, `Sitemap ${locale}/${route}`);
+// D-026 English-first publication, with Hebrew legal documents retained.
+import fs from 'node:fs';
+import { createRequire } from 'node:module';
+import { assert, readText, htmlFor, siteUrl } from './verify-utils.mjs';
+const require = createRequire(import.meta.url);
+const {pages} = require('./accepted-copy.cjs');
+const sitemap = readText('sitemap.xml');
+assert((sitemap.match(/<loc>/g) || []).length === 11, 'Sitemap must contain eleven retained English pages');
+for (const page of pages()) {
+  const html = htmlFor('en', page.route);
+  const route = '/en/' + (page.route === 'index' ? '' : page.route);
+  assert(sitemap.includes('<loc>' + siteUrl + route + '</loc>'), 'Missing sitemap URL ' + route);
+  assert(html.includes('rel="canonical" href="' + siteUrl + route + '"'), 'Canonical mismatch ' + route);
+  assert(html.includes('href="/terms.html" hreflang="he">Terms of use (Hebrew)'), 'Terms language label');
+  assert(html.includes('href="/privacy.html" hreflang="he">Privacy notice (Hebrew)'), 'Privacy language label');
+  for (const [,href] of html.matchAll(/<a\b[^>]*href="([^"]+)"/g)) {
+    if (!href.startsWith('/') && !href.startsWith('#')) continue;
+    const url = new URL(href, siteUrl + route);
+    assert(!/^\/(he|ru)\//.test(url.pathname), 'Visible withdrawn-language link ' + href);
+    const target = '_site' + url.pathname + (url.pathname.endsWith('/') ? 'index.html' : /\.html$/.test(url.pathname) ? '' : '.html');
+    assert(fs.existsSync(target), route + ': broken link ' + href);
+    if (url.hash) assert(readText(target).includes('id="' + decodeURIComponent(url.hash.slice(1)) + '"'), route + ': broken anchor ' + href);
   }
 }
-
-const redirects = readText("_redirects");
-assert(!/^\/he\/\*/m.test(redirects), "Hebrew routes are still redirected away");
-assert(/^\/ru\/\*/m.test(redirects), "Russian publication guard was unexpectedly removed");
-assert(!/^\/en\/why-us\.html\s+/m.test(redirects), "The local English Why Toza route is still redirected away");
-
-assert(
-  routes.every((route) => fileExists(`_site/he/${route}.html`)),
-  "A Hebrew output route is missing from the build",
-);
-
-console.log("HE LINKS VERIFIED");
+for (const p of ['404.html', 'llms.txt', 'sitemap.xml']) assert(!/\/(he|ru)\//.test(readText(p)), p + ': withdrawn language discovery link');
+for (const route of ['commercial-spying', 'private-investigator', 'not-it-support', 'leaving-controlling-relationship']) {
+  for (const p of ['llms.txt', 'sitemap.xml']) assert(!readText(p).includes('/en/' + route), 'Retired route in ' + p);
+}
+assert(/^\/he\/\*\s+\/en\/\s+302$/m.test(readText('_redirects')), 'Hebrew withdrawal must remain temporary');
+console.log('PUBLIC LINKS, ANCHORS AND LANGUAGE DISCOVERY VERIFIED');

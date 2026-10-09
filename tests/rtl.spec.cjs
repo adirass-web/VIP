@@ -1,162 +1,123 @@
-const fs = require("node:fs");
-const path = require("node:path");
-const { expect, test } = require("@playwright/test");
-const { createSiteServer } = require("./helpers/site-server.cjs");
-
-const mixedFixture = fs.readFileSync(path.join(__dirname, "fixtures", "rtl-mixed.txt"), "utf8").trim();
-let server;
-let siteUrl;
-
-test.beforeAll(async () => {
-  server = createSiteServer();
-  await new Promise((resolve, reject) => {
-    server.once("error", reject);
-    server.listen(0, "127.0.0.1", () => {
-      server.off("error", reject);
-      resolve();
-    });
-  });
-  siteUrl = `http://127.0.0.1:${server.address().port}`;
+const fs = require('node:fs');
+const {expect,test} = require('@playwright/test');
+const {createSiteServer} = require('./helpers/site-server.cjs');
+const {pages,md} = require('../scripts/accepted-copy.cjs');
+let server,siteUrl;
+test.beforeAll(async()=>{
+  server=createSiteServer();
+  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
+  siteUrl='http://127.0.0.1:'+server.address().port;
 });
-
-test.afterAll(async () => {
-  if (!server) return;
-  await new Promise((resolve, reject) => server.close((error) => (error ? reject(error) : resolve())));
+test.afterAll(async()=>{if(server) await new Promise(resolve=>server.close(resolve));});
+const normalize=s=>s.replace(/\s+/g,' ').trim();
+async function noOverflow(page) {
+  const b=await page.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
+  expect(b.scroll).toBeLessThanOrEqual(b.client+1);
+}
+for(const copy of pages()) test('accepted copy, metadata and layout: '+copy.route,async({page},testInfo)=>{
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  const failures=[];page.on('response',r=>{if(r.status()>=400) failures.push(r.url());});
+  await page.goto(siteUrl+'/en/'+(copy.route==='index'?'':copy.route+'.html'));
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('#contact')).toHaveCount(1);
+  await expect(page).toHaveTitle(copy.metadata.title);
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content',copy.metadata.description);
+  await expect(page.locator('meta[property="og:description"]')).toHaveAttribute('content',copy.metadata.og_description);
+  const main=normalize(await page.locator('main').textContent());
+  // Compare every accepted inline block, in source order, independently of generated wrappers.
+  const raw=copy.source.split(/#{2,3} Hero\n\n/)[1];
+  let cursor=0;
+  for(const token of md.parse(raw,{}).filter(t=>t.type==='inline')) {
+    let text=token.children.map(t=>t.type==='text'||t.type==='code_inline'?t.content:t.type==='softbreak'?' ':'').join('').replace(/ \{#[\w-]+\}$/,'');
+    text=normalize(text);
+    if(!text || /^(Portrait caption:|Portrait alt text:|External link to cyberdrtabansky.com\.)/.test(text)) continue;
+    if(text==='Request a private conversation: WhatsApp / Signal' || text==='Request a private conversation') continue;
+    const found=main.indexOf(text,cursor);
+    expect(found,'Missing or reordered accepted text: '+text).toBeGreaterThanOrEqual(cursor);
+    cursor=found+text.length;
+  }
+  await expect(page.locator('.brand')).toHaveAttribute('aria-label','Toza home');
+  await expect(page.locator('.brand .name')).toHaveText('toza');
+  const wa=page.locator('#contact a[href^="https://wa.me/"]');
+  const signal=page.locator('#contact a[href^="https://signal.me/"]');
+  await expect(wa).toHaveText('Message on WhatsApp');
+  const url=new URL(await wa.getAttribute('href'));
+  expect(url.pathname).toBe('/972533366276');
+  expect(url.searchParams.get('text')).toBe("I'd like a private conversation. Please let me know the next step.");
+  await expect(signal).toHaveAttribute('href','https://signal.me/#p/+972533366276');
+  await noOverflow(page);
+  expect(errors).toEqual([]);expect(failures).toEqual([]);
+  if(['index','pricing','faq','why-us','private-exposure-assessment','separation-divorce'].includes(copy.route)) {
+    await page.screenshot({path:testInfo.outputPath(copy.route+'.png'),fullPage:true});
+    await page.screenshot({path:testInfo.outputPath(copy.route+'-viewport.png'),fullPage:false});
+  }
 });
-
-test("Hebrew home preserves RTL chrome and isolated mixed-direction text", async ({ page }, testInfo) => {
-  await page.goto(`${siteUrl}/he/`);
-  await expect(page.locator("html")).toHaveAttribute("lang", "he");
-  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
-  await expect(page.locator("h1")).toContainText("יש דברים בחיים הדיגיטליים שלך");
-
-  const menuButton = page.locator("[data-nav-toggle]");
-  const menu = page.locator("#site-menu");
-  const viewport = page.viewportSize();
-  if (viewport && viewport.width <= 760) {
-    await expect(menuButton).toBeVisible();
-    await menuButton.click();
-    await expect(menu).toHaveClass(/open/);
-    await menuButton.click();
-    await expect(menu).not.toHaveClass(/open/);
-  } else {
-    await expect(menuButton).toBeHidden();
-    await expect(menu).toBeVisible();
+test('mobile menu, keyboard focus and narrow reflow',async({page})=>{
+  await page.setViewportSize({width:320,height:800});
+  await page.goto(siteUrl+'/en/');
+  await page.keyboard.press('Tab');
+  await expect(page.locator('.skip-link')).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('main')).toBeFocused();
+  const toggle=page.locator('[data-nav-toggle]');
+  await toggle.click();await expect(toggle).toHaveAttribute('aria-expanded','true');
+  await page.keyboard.press('Escape');await expect(toggle).toBeFocused();
+  await expect(toggle).toHaveAttribute('aria-expanded','false');
+  await toggle.click();await page.locator('#site-menu a[href="#contact"]').click();
+  await expect(toggle).toHaveAttribute('aria-expanded','false');
+  await noOverflow(page);
+  for(const width of [640,768,1024]) {
+    await page.setViewportSize({width,height:900});await noOverflow(page);
   }
-
-  const isolatedRun = page.locator(".bidi-ltr").first();
-  await expect(isolatedRun).toBeVisible();
-  const bidiStyle = await isolatedRun.evaluate((element) => {
-    const style = window.getComputedStyle(element);
-    return { direction: style.direction, unicodeBidi: style.unicodeBidi };
-  });
-  expect(bidiStyle.direction).toBe("ltr");
-  expect(bidiStyle.unicodeBidi).toContain("isolate");
-
-  await page.locator("#main-content").evaluate((main, text) => {
-    const fixture = document.createElement("p");
-    fixture.id = "rtl-test-fixture";
-    fixture.dir = "rtl";
-    fixture.style.cssText = "max-width:none;margin:1.5rem 5%;padding:1rem;border:1px solid currentColor";
-    fixture.append(document.createTextNode("שלום "));
-    const ltr = document.createElement("bdi");
-    ltr.className = "bidi-ltr";
-    ltr.textContent = "John 050-1234567 ₪1,234";
-    fixture.append(ltr);
-    main.append(fixture);
-    if (fixture.textContent !== text) throw new Error("RTL fixture text changed while rendering");
-  }, mixedFixture);
-  await expect(page.locator("#rtl-test-fixture")).toHaveText(mixedFixture);
-
-  const bounds = await page.evaluate(() => ({
-    clientWidth: document.documentElement.clientWidth,
-    scrollWidth: document.documentElement.scrollWidth,
-    header: document.querySelector(".site-header")?.getBoundingClientRect().toJSON(),
-  }));
-  expect(bounds.scrollWidth).toBeLessThanOrEqual(bounds.clientWidth + 1);
-  expect(bounds.header.left).toBeGreaterThanOrEqual(-1);
-  expect(bounds.header.right).toBeLessThanOrEqual(bounds.clientWidth + 1);
-
-  const screenshot = testInfo.outputPath(`rtl-${testInfo.project.name}.png`);
-  await page.screenshot({ path: screenshot, fullPage: true });
-  expect(fs.existsSync(screenshot)).toBe(true);
 });
-
-test("Hebrew Leaving page remains an exposure-assessment page", async ({ page }) => {
-  await page.goto(`${siteUrl}/he/leaving-controlling-relationship.html`);
-  await expect(page.locator("h1")).toHaveText(
-    "אם את חוששת שהוא רואה יותר ממה שהוא אמור לראות, אל תמהרי לשנות הכול.",
-  );
-  const mainText = await page.locator("main").innerText();
-  expect(mainText).toContain("גישה, נראות ושליטה");
-  expect(mainText).not.toMatch(/(?:בטיחות|בטוח|סכנה|קו חירום|שירות חירום|אלימות|התעללות|משטרה|מקלט|עו[״"]ס|118|100)/);
+test('FAQ expands, collapses, opens group and question deep links',async({page})=>{
+  await page.goto(siteUrl+'/en/faq.html#privacy');
+  const privacy=page.locator('#privacy details');
+  expect(await privacy.evaluateAll(items=>items.every(i=>i.open))).toBe(true);
+  const all=page.locator('.faq details');const toggle=page.locator('[data-faq-toggle-all]');
+  await toggle.click();expect(await all.evaluateAll(items=>items.every(i=>i.open))).toBe(true);
+  await toggle.click();expect(await all.evaluateAll(items=>items.every(i=>!i.open))).toBe(true);
+  const question=await all.first().getAttribute('id');
+  await page.evaluate(id=>{location.hash=id;},question);
+  await expect(all.first()).toHaveAttribute('open','');
+  await page.evaluate(()=>{location.hash='boundaries';});
+  expect(await page.locator('#boundaries details').evaluateAll(items=>items.every(i=>i.open))).toBe(true);
+  await all.first().locator('summary').focus();await page.keyboard.press('Enter');
+  await expect(all.first()).not.toHaveAttribute('open','');
 });
-
-test("Hebrew FAQ control expands and collapses its localized answers", async ({ page }) => {
-  await page.goto(`${siteUrl}/he/faq.html`);
-  const toggle = page.locator("[data-faq-toggle-all]");
-  const answers = page.locator(".faq details");
-
-  await expect(toggle).toHaveText("פתיחת כל התשובות");
-  await toggle.click();
-  await expect(toggle).toHaveText("סגירת כל התשובות");
-  expect(await answers.evaluateAll((items) => items.every((item) => item.open))).toBe(true);
-  await toggle.click();
-  await expect(toggle).toHaveText("פתיחת כל התשובות");
-  expect(await answers.evaluateAll((items) => items.every((item) => !item.open))).toBe(true);
+test('comparison tables keep headers and support narrow-screen keyboard scrolling',async({page})=>{
+  await page.setViewportSize({width:320,height:800});
+  await page.goto(siteUrl+'/en/pricing.html');
+  const tables=page.locator('.copy-table');
+  await expect(tables).toHaveCount(4);
+  for(const table of await tables.all()) {
+    await expect(table).toHaveAttribute('tabindex','0');
+    expect(await table.locator('thead th[scope="col"]').count()).toBeGreaterThan(1);
+    expect(await table.locator('tbody th[scope="row"]').count()).toBeGreaterThan(0);
+    await table.focus();await expect(table).toBeFocused();await page.keyboard.press('ArrowRight');
+  }
+  await noOverflow(page);
 });
-
-test("Why Toza stays local before the explicit external profile link", async ({ page }, testInfo) => {
-  await page.goto(`${siteUrl}/en/why-us.html`);
-  await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
-  await expect(page.locator("h1")).toHaveText("Why I created Toza.");
-  if (await page.locator("[data-nav-toggle]").isVisible()) {
-    await page.locator("[data-nav-toggle]").click();
-  }
-  await expect(page.locator('#site-menu a[href="/en/why-us.html"]')).toBeVisible();
-  if (await page.locator("[data-nav-toggle]").isVisible()) {
-    await page.locator("[data-nav-toggle]").click();
-  }
-
-  const englishPortrait = page.locator('.portrait img[src="/assets/img/dr-tabansky-portrait-square-640.webp"]');
-  await expect(englishPortrait).toBeVisible();
-  expect(await englishPortrait.evaluate((image) => image.complete && image.naturalWidth === 640)).toBe(true);
-
-  const englishProfile = page.locator('.external-profile a[href="https://cyberdrtabansky.com"]');
-  await expect(englishProfile).toHaveAttribute("target", "_blank");
-  await expect(englishProfile).toContainText("View my professional profile");
-
-  const englishScreenshot = testInfo.outputPath(`why-toza-en-${testInfo.project.name}.png`);
-  await page.screenshot({ path: englishScreenshot, fullPage: true });
-  expect(fs.existsSync(englishScreenshot)).toBe(true);
-
-  await page.goto(`${siteUrl}/he/why-us.html`);
-  await expect(page.locator("html")).toHaveAttribute("lang", "he");
-  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
-  await expect(page.locator("h1")).toContainText("למה הקמתי את");
-  if (await page.locator("[data-nav-toggle]").isVisible()) {
-    await page.locator("[data-nav-toggle]").click();
-  }
-  await expect(page.locator('#site-menu a[href="/he/why-us.html"]')).toBeVisible();
-  if (await page.locator("[data-nav-toggle]").isVisible()) {
-    await page.locator("[data-nav-toggle]").click();
-  }
-
-  const hebrewPortrait = page.locator('.portrait img[src="/assets/img/dr-tabansky-portrait-square-640.webp"]');
-  await expect(hebrewPortrait).toBeVisible();
-  expect(await hebrewPortrait.evaluate((image) => image.complete && image.naturalWidth === 640)).toBe(true);
-
-  const hebrewProfile = page.locator('.external-profile a[href="https://cyberdrtabansky.com"]');
-  await expect(hebrewProfile).toHaveAttribute("target", "_blank");
-  await expect(hebrewProfile).toContainText("לפרופיל המקצועי שלי");
-
-  const bounds = await page.evaluate(() => ({
-    clientWidth: document.documentElement.clientWidth,
-    scrollWidth: document.documentElement.scrollWidth,
-  }));
-  expect(bounds.scrollWidth).toBeLessThanOrEqual(bounds.clientWidth + 1);
-
-  const screenshot = testInfo.outputPath(`why-toza-${testInfo.project.name}.png`);
-  await page.screenshot({ path: screenshot, fullPage: true });
-  expect(fs.existsSync(screenshot)).toBe(true);
+test('founder portrait and explicit professional link',async({page})=>{
+  await page.goto(siteUrl+'/en/why-us.html');
+  const portrait=page.locator('.portrait img');
+  await portrait.scrollIntoViewIfNeeded();
+  await expect(portrait).toHaveAttribute('alt','Portrait of Dr. Lior Tabansky');
+  await expect.poll(()=>portrait.evaluate(i=>i.complete&&i.naturalWidth===640)).toBe(true);
+  await expect(page.locator('main a[href="https://cyberdrtabansky.com"]')).toHaveAttribute('target','_blank');
+});
+for(const legal of ['terms','privacy']) test('retained Hebrew legal document: '+legal,async({page})=>{
+  await page.goto(siteUrl+'/'+legal+'.html');
+  await expect(page.locator('html')).toHaveAttribute('lang','he');
+  await expect(page.locator('html')).toHaveAttribute('dir','rtl');
+  expect(await page.locator('main').innerText()).toMatch(/[\u0590-\u05ff]/);
+  await noOverflow(page);
+});
+test('reduced motion and fresh versioned assets on repeat navigation',async({page})=>{
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.goto(siteUrl+'/en/');
+  expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');
+  await expect(page.locator('link[href="/assets/css/vault.css?v=en-accepted-1"]')).toHaveCount(1);
+  await expect(page.locator('script[src="/assets/js/site.js?v=en-accepted-1"]')).toHaveCount(1);
+  await page.reload();await expect(page.locator('h1')).toHaveText('Your private life deserves more care than a default setting.');
 });
