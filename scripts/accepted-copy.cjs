@@ -65,7 +65,7 @@ function renderTables(html, sectionId) {
     return `<p class="table-hint">Scroll to compare →</p><div class="copy-table" role="region" aria-labelledby="${sectionId}" tabindex="0" data-table="${++count}"><table>${table}</table></div>`;
   });
 }
-function renderPage(page) {
+function renderPage(page, {presentation = true} = {}) {
   const { route, metadata } = page;
   const permalink = route === 'index' ? '/en/index.html' : '/en/' + route + '.html';
   // Pages normalizes .html aliases to extensionless URLs with a 308.
@@ -103,7 +103,7 @@ function renderPage(page) {
     if (contact) html += '{% include "contact-channels.njk" %}\n';
     html += '</div></section>\n';
   }
-  return html;
+  return presentation ? require('./clear-practice.cjs').present(html, route) : html;
 }
 function sync(check = false) {
   assertAuthority();

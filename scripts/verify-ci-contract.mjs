@@ -36,3 +36,14 @@ assert(!/pull_request:/i.test(deploy), "Production deploy must not run on pull r
 assert(!/wrangler@latest/i.test(deploy), "Production deploy must not use an unpinned Wrangler tag");
 
 console.log("CI CONTRACT VERIFIED");
+const preview = readText(".github/workflows/preview.yml");
+assertIncludes(preview, "pull_request:", "Preview PR trigger");
+assert(!preview.includes("pull_request_target"), "Preview must not run in privileged PR-target context");
+assertIncludes(preview, "head.repo.full_name == github.repository", "Preview same-repository guard");
+assertIncludes(preview, "head.ref == 'codex/toza-clear-practice'", "Preview approved branch guard");
+assertIncludes(preview, "ref: ${{ github.event.pull_request.head.sha }}", "Preview exact source revision");
+assertIncludes(preview, "npm run verify:all", "Preview copy/build gates");
+assertIncludes(preview, "npm run test:rtl-visual", "Preview browser gate");
+assertIncludes(preview, "X-Robots-Tag: noindex, nofollow", "Preview indexing exclusion");
+assertIncludes(preview, "--branch design-a", "Preview isolated deployment branch");
+assert(!preview.includes("--branch main"), "Preview must not deploy production");

@@ -29,11 +29,11 @@
 
     <title>{{ title }}</title>
 
-    <link rel="preload" href="../assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/source-sans-3-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/source-sans-3-semibold.woff2" as="font" type="font/woff2" crossorigin>
     {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
-    <link rel="stylesheet" href="../assets/css/fonts.css">
-    <link rel="stylesheet" href="/assets/css/vault.css?v=en-accepted-1">
+    <link rel="stylesheet" href="/assets/css/clear-practice.css?v=clear-practice-1">
+    <link rel="icon" href="/assets/brand/toza/toza-mark-micro-ink.svg" type="image/svg+xml">
 
     {% include "schema-org.njk" %}
 </head>
@@ -44,17 +44,8 @@
     <header class="site-header">
         <div class="wrap nav">
             <a class="brand" href="/{{ locale }}/" aria-label="Toza home">
-                <svg class="mark seal" viewBox="0 0 100 100" aria-hidden="true">
-                    <circle cx="50" cy="50" r="46" fill="none" stroke-width="2"/>
-                    <circle cx="50" cy="50" r="40" fill="none" stroke-width="1" opacity=".5"/>
-                    <g fill="none" transform="translate(50 51) scale(.6) translate(-50 -55)">
-                        <path d="M24 35 L50 26 L76 35" stroke-width="9"/>
-                        <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="7"/>
-                        <path d="M55 81 C48 77 43 71 40 64" stroke-width="8"/>
-                        <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="6"/>
-                    </g>
-                </svg>
-                <span class="name" dir="ltr">toza</span>
+                <img class="brand-logo" src="/assets/brand/toza/toza-logo-ink.svg" width="421" height="154" alt="" aria-hidden="true">
+                <span class="name sr-only" dir="ltr">toza</span>
             </a>
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">{{ t.menu_label or 'Menu' }}</button>
             <nav class="menu" id="site-menu" aria-label="{{ t.main_nav_label or 'Main navigation' }}">
@@ -77,16 +68,8 @@
         <div class="foot-bar">
             <div class="wrap foot-bar-inner">
                 <div class="foot-brand">
-                    <svg class="mark seal" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
-                        <circle cx="50" cy="50" r="46" fill="none" stroke-width="3"/>
-                        <g fill="none" transform="translate(50 51) scale(.58) translate(-50 -55)">
-                            <path d="M24 35 L50 26 L76 35" stroke-width="10"/>
-                            <path d="M72 33.6 V48 C72 62 64 74 54 83" stroke-width="8"/>
-                            <path d="M55 81 C48 77 43 71 40 64" stroke-width="9"/>
-                            <path d="M30 35 V50 C30 55 28 59 26 63" stroke-width="7"/>
-                        </g>
-                    </svg>
-                    <span class="fb-name"><bdi dir="ltr">toza</bdi> <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span></span>
+                    <img class="brand-logo" src="/assets/brand/toza/toza-logo-ink.svg" width="421" height="154" alt="toza">
+                    <span class="fb-tag">{{ t.footer_tag or 'Personal digital protection for your close circle.' }}</span>
                 </div>
                 <nav class="foot-col" aria-label="{{ t.footer_explore or 'Explore' }}">
                     <h3>{{ t.footer_explore or 'Explore' }}</h3>
@@ -109,8 +92,7 @@
         </div>
     </footer>
 
-    <script src="/assets/js/site.js?v=en-accepted-1" defer></script>
-    <script src="../assets/js/guilloche.js" defer></script>
+    <script src="/assets/js/site.js?v=clear-practice-1" defer></script>
 
 </body>
 </html>

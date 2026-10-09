@@ -252,3 +252,17 @@ This register is the bridge between page approval and the future consolidated v3
 - **Branch:** Continue on editorial/toza-copy-harness and the existing unmerged PR #51, as required by project instructions. Do not alter main during implementation.
 - **Gates:** Accepted-source fingerprints and rendered-copy fidelity; clean build and publication contracts; mobile/desktop accessibility and interaction checks; independent adversarial review under D-009 and available Code Review CI diagnostics; owner preview and final release approval before main merge/deployment.
 - **Boundary:** No accepted wording changes, translation, platform migration, new tracking, payment flow or remote preview deployment is inferred. Historical source and locked harness remain immutable.
+
+### D-027 — Implement and publish the selected round 2 A design
+- **Date:** 2026-10-09
+- **Authority:** Owner preferred round 2 A and asked whether to deploy before further work; then instructed “do it” with GitHub after the proposed implementation, PR preview, quality checks and release flow.
+- **Decision:** Apply A consistently to all eleven English routes on the existing foundation, then publish through a reviewed GitHub PR after copy, responsive layout, accessibility, interaction and deployment-preview gates pass. Use codex/toza-clear-practice from deployed main; the editorial-only branch restriction no longer governs this presentation release.
+- **Scope:** Warm light visual system, stable reading layout, restrained disclosure of supporting copy, responsive semantic tables, authentic portrait and approved logo. Preserve every accepted prose block, metadata, commercial term and row association. The protected Assessment retains its block order and full visibility. No translation, new tracking, payment flow or platform migration.
+- **Release:** Same-repository branch-only noindex Cloudflare preview is now authorized. Merge through GitHub with expected-head validation; production continues to deploy only from main. User's “do it” authorizes this release after the agreed checks, without another routine confirmation.
+- **Review:** Independent adversarial review under D-009, with only findings consistent with current authority incorporated. Prior production commit 818ddbfeccad9d37f7eb310dd01b4edff581082a is the rollback reference.
+
+### D-028 — Use the approved fitted-panel Toza logo
+- **Date:** 2026-10-09
+- **Authority:** Owner in the separate brand workstream: “OK give it to the repo and brief our designers to use it”; approval verified from that task's human message.
+- **Decision:** Use the delivered outlined lowercase wordmark and fitted-panel symbol in the site header/footer, and the optical-size micro mark as favicon. Assets and designer brief reside in assets/brand/toza and this project's brand directory.
+- **Boundary:** Latin-only toza wordmark / Toza running text. Preserve the supplied geometry, font rights notice and meaningful spacing; no shield/cyber motifs or transliteration. This approval changes visual identity, not service facts or accepted body copy.
