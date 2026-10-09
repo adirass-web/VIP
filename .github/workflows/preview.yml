@@ -1,4 +1,4 @@
-name: Preview Toza direction A
+name: Preview Toza build-tool maintenance
 
 on:
   pull_request:
@@ -9,23 +9,24 @@ permissions:
   contents: read
 
 concurrency:
-  group: toza-design-preview-${{ github.event.pull_request.number }}
+  group: toza-maintenance-preview-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
   preview:
-    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'codex/toza-clear-practice'
-    runs-on: ubuntu-latest
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'codex/toza-build-tool-maintenance'
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: '20'
+          node-version-file: '.nvmrc'
           cache: npm
       - run: npm ci
+      - run: npm run test:audit-policy && npm run audit:tools
       - run: npm run verify:all
       - run: node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell
       - run: npm run test:rtl-visual
@@ -39,12 +40,12 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: cfd055f2f8175d13377bd64e9620ea36
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           PREVIEW_SHA: ${{ github.event.pull_request.head.sha }}
-        run: npx --yes wrangler@4 pages deploy _site --project-name toza-site --branch design-a --commit-hash "$PREVIEW_SHA"
+        run: npx --yes wrangler@4 pages deploy _site --project-name toza-site --branch build-tool-maintenance --commit-hash "$PREVIEW_SHA"
       - name: Upload browser evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: design-a-preview-checks
+          name: maintenance-preview-checks
           path: |
             test-results
             playwright-report

@@ -13,14 +13,19 @@
     "verify:ci-contract": "node scripts/verify-ci-contract.mjs",
     "verify:all": "npm run verify:he-build && npm run verify:he-copy && npm run verify:leaving-alignment && npm run verify:rtl && npm run verify:he-links && npm run verify:ci-contract",
     "test:rtl-visual": "node scripts/run-rtl-visual.mjs",
-    "sync:copy": "node scripts/accepted-copy.cjs"
+    "sync:copy": "node scripts/accepted-copy.cjs",
+    "audit:tools": "node scripts/audit-build-tools.cjs",
+    "test:audit-policy": "node --test scripts/audit-build-tools.test.cjs"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@playwright/test": "1.52.0",
+    "@11ty/eleventy": "3.1.6",
+    "@playwright/test": "1.64.0",
     "dom-serializer": "1.4.1",
     "domutils": "2.8.0",
     "htmlparser2": "7.2.0",
-    "markdown-it": "13.0.2"
+    "markdown-it": "15.0.2"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
