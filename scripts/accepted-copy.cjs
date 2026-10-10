@@ -9,16 +9,22 @@ const project = 'projects/toza-en-editorial-revision/';
 const read = p => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 const hash = s => crypto.createHash('sha256').update(s).digest('hex');
 const manifest = JSON.parse(read(project + 'approved/acceptance-manifest.json'));
-// D-029 approves two new exact blocks without rewriting the historical acceptance.
-const amendment = JSON.parse(read(project + 'approved/acceptance-amendment-2026-10-10.json'));
-const amendedSources = new Map(amendment.entries.map(entry => [entry.route, entry]));
+// Later approvals overlay the effective sources without replacing historical validation.
+const amendments = [
+  {path:'approved/acceptance-amendment-2026-10-10.json', routes:['index','pricing']},
+  {path:'approved/acceptance-amendment-2026-10-10-round-02.json', routes:['index','pricing','separation-divorce','they-know-something']},
+].map(record=>({...record, manifest:JSON.parse(read(project+record.path))}));
+const amendedSources = new Map(amendments.flatMap(record=>record.manifest.entries.map(entry=>[entry.route,entry])));
 const exact = p => read(project + p).split('## Exact revised copy\n\n')[1].split('\n## Unresolved red-team issues')[0].trimEnd() + '\n';
 function assertAuthority() {
   for (const entry of manifest.entries) if (hash(exact(entry.path)) !== entry.sha256) throw Error('Accepted copy changed: ' + entry.path);
   for (const entry of manifest.sourceFingerprints) if (hash(read(project + entry.path)) !== entry.sha256Lf) throw Error('Protected source changed: ' + entry.path);
   if (hash(read(project + manifest.protectedAssessment.path)) !== manifest.protectedAssessment.sha256) throw Error('Protected Assessment changed');
-  if (amendedSources.size !== 2 || !amendedSources.has('index') || !amendedSources.has('pricing') || amendment.entries.length !== 2) throw Error('Unexpected copy amendment scope');
-  for (const entry of amendment.entries) if (hash(exact(entry.path)) !== entry.sha256) throw Error('Approved amendment changed: ' + entry.path);
+  for (const amendment of amendments) {
+    const routes=amendment.manifest.entries.map(entry=>entry.route).sort();
+    if (JSON.stringify(routes)!==JSON.stringify([...amendment.routes].sort())) throw Error('Unexpected copy amendment scope: '+amendment.path);
+    for (const entry of amendment.manifest.entries) if (hash(exact(entry.path)) !== entry.sha256) throw Error('Approved amendment changed: ' + entry.path);
+  }
 }
 const mapping = [
   ['01-why-toza', 'why-us'], ['02-pricing', 'pricing'], ['03-faq', 'faq'],

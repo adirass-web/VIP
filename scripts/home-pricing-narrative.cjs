@@ -129,7 +129,11 @@ function pricing(doc) {
   const index = classes(doc, 'page-index')[0];
   const heading=tags(lead,'h1')[0];D.append(heading,index);
   const creditHeading=tags(credit,'h2')[0];creditHeading.name='h3';addClass(credit,'narrative-credit');
-  D.append(primaryTable.parent,credit);
+  const participantPrivacy=direct(fullDetail,'p').find(p=>text(p).startsWith('Each participant receives a private dated record.'));
+  if(!participantPrivacy)throw Error('Missing approved participant privacy paragraph beside the comparison');
+  addClass(participantPrivacy,'participant-privacy');
+  D.append(primaryTable.parent,participantPrivacy);
+  D.append(participantPrivacy,credit);
   const controls = classes(doc, 'detail-controls')[0];
   const urgent = section(doc, 'urgent-visits-in-central-israel');
   const additional = section(doc, 'additional-work');

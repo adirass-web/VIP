@@ -44,3 +44,7 @@ These are local engineering/editorial/design checks, not customer testing, conve
 From this checkout: `npm ci`, `npm run sync:copy`, `npm run verify:all`, `npm run test:rtl-visual`. Use `npm start` for a fresh Eleventy local server; the 8793 review server in this session serves the built `_site` directly. `node docs/approved-copy-preview/build-gallery.cjs` creates the local-only screenshot gallery after a build. A clean build removes this generated gallery; it is never part of the normal publication build.
 
 Later release work should preserve the separate dependency-maintenance flow, resolve how this new branch supersedes or stacks on PR #54, and rerun gates at the final reviewed head. No merge or deployment permission is inferred from this preview approval.
+
+## Later approved preview
+
+The subsequent owner-approved four-page copy refinement is recorded in [four-page-copy-preview](../four-page-copy-preview/README.md). This document and its images retain the earlier two-page build record. The running `/_preview/` gallery now displays the four-page version.

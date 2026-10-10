@@ -45,7 +45,7 @@ for(const copy of pages()) test('accepted copy, metadata and layout: '+copy.rout
   await expect(signal).toHaveAttribute('href','https://signal.me/#p/+972533366276');
   await noOverflow(page);
   expect(errors).toEqual([]);expect(failures).toEqual([]);
-  if(['index','pricing','faq','why-us','private-exposure-assessment','separation-divorce'].includes(copy.route)) {
+  if(['index','pricing','faq','why-us','private-exposure-assessment','separation-divorce','they-know-something'].includes(copy.route)) {
     await page.screenshot({path:testInfo.outputPath(copy.route+'.png'),fullPage:true});
     await page.screenshot({path:testInfo.outputPath(copy.route+'-viewport.png'),fullPage:false});
   }
@@ -149,7 +149,7 @@ test('supporting details, credit conditions, deep links and print retain access'
 });
 
 test('main section order and core scope remain consistent across widths',async({page})=>{
-  for(const route of ['index','pricing','separation-divorce']) {
+  for(const route of ['index','pricing','separation-divorce','they-know-something']) {
     let expected;
     for(const width of [1440,768,390,320]) {
       await page.setViewportSize({width,height:900});
@@ -172,6 +172,9 @@ test('approved narrative exposes qualified risk and independent full-service sco
   const risk=page.locator('.narrative-risk');
   const outcome=page.locator('.narrative-outcome');
   await expect(risk.locator('h2')).toBeVisible();
+  await expect(risk.getByText(/That does not establish misuse/)).toBeVisible();
+  await expect(page.locator('.narrative-method').getByText(/setting priorities around your circumstances/)).toBeVisible();
+  expect(await outcome.evaluate((element)=>Boolean(element.compareDocumentPosition(document.querySelector('.narrative-risk'))&Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
   await expect(outcome.locator('p')).toHaveCount(3);
   for(const paragraph of await outcome.locator('p').all())await expect(paragraph).toBeVisible();
   const lastOutcome=await outcome.locator('p').last().boundingBox();
@@ -182,7 +185,7 @@ test('approved narrative exposes qualified risk and independent full-service sco
   expect(await page.locator('main details').evaluateAll(items=>items.map(i=>i.open))).toEqual(before);
 });
 
-test('pricing exposes fee, six comparison rows and adjoining qualified credit',async({page})=>{
+test('pricing exposes fee, comparison privacy and adjoining qualified credit',async({page})=>{
   await page.setViewportSize({width:390,height:844});
   await page.goto(siteUrl+'/en/pricing.html');
   const fee=page.locator('.pricing-first-visit-facts .offer-price');
@@ -193,8 +196,40 @@ test('pricing exposes fee, six comparison rows and adjoining qualified credit',a
   expect(await page.locator('.primary-comparison tbody th').allTextContents()).toEqual([
     'Price, including VAT','People','Personal devices','Training and verification','In-person work','Shared home/home-office network and router'
   ]);
-  await expect(page.locator('.primary-comparison + #your-initial-fee-counts-toward-the-full-service')).toHaveCount(1);
+  const privacy=page.locator('.primary-comparison + .participant-privacy');
+  await expect(privacy).toHaveCount(1);
+  await expect(privacy).toBeVisible();
+  await expect(privacy).toContainText("Personal details are shared only with that person's consent");
+  await expect(page.locator('.participant-privacy + #your-initial-fee-counts-toward-the-full-service')).toHaveCount(1);
+  await expect(page.getByText('Each participant receives a private dated record.',{exact:false})).toHaveCount(1);
+  await expect(page.locator('.assessment-benefits').getByText('Understand the access and the consequences of changing it.',{exact:true})).toBeVisible();
   for(const selector of ['.assessment-benefits','.hardening-introduction','#before-you-book'])await expect(page.locator(selector)).toBeVisible();
+});
+
+test('situation pages keep material controls and separate purchases with their scope',async({page})=>{
+  for(const width of [1440,390,320]){
+    await page.setViewportSize({width,height:844});
+    await page.goto(siteUrl+'/en/separation-divorce.html');
+    const effects=page.locator('#make-changes-with-their-consequences-in-view');
+    await expect(effects.getByText(/We do not promise invisible changes/)).toBeVisible();
+    const later=page.locator('#a-setup-for-the-life-you-are-moving-into');
+    await expect(later.getByText(/Scope and price are agreed separately; there is no automatic continuation/)).toBeVisible();
+    await expect(page.locator('.page-index').getByRole('link',{name:'After the visit'})).toHaveAttribute('href','#a-setup-for-the-life-you-are-moving-into');
+    await noOverflow(page);
+
+    await page.goto(siteUrl+'/en/they-know-something.html');
+    const assessment=page.locator('#have-someone-examine-the-access-and-address-urgent-problems');
+    const hardening=page.locator('#hardening-beyond-the-first-visit');
+    await expect(assessment.getByText(/Any expansion of scope or price needs your agreement/)).toBeVisible();
+    await expect(assessment.getByRole('link',{name:'Initial visit details'})).toBeVisible();
+    await expect(assessment.getByRole('link',{name:'See availability, fees and arrival conditions'})).toBeVisible();
+    await expect(page.locator('#have-someone-examine-the-access-and-address-urgent-problems + #hardening-beyond-the-first-visit')).toHaveCount(1);
+    await expect(hardening.getByText(/Scope, price and purchase are agreed separately/)).toBeVisible();
+    await expect(assessment.getByText(/Personal Shield/)).toHaveCount(0);
+    await expect(page.getByText(/Recovering copies of information already shared is outside this service/)).toBeVisible();
+    await expect(page.locator('#contact').getByText(/Contact through WhatsApp or Signal is not guaranteed to be invisible/)).toBeVisible();
+    await noOverflow(page);
+  }
 });
 
 for(const route of ['index','pricing'])test('short-screen contact and responsive narrative: '+route,async({page})=>{

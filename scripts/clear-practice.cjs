@@ -47,12 +47,17 @@ function present(template,route) {
   const sections=cls(doc,'copy-section');
   const contact=sections.find(s=>s.attribs.id==='contact');
   const offer=sections.find(s=>(s.attribs.class||'').includes('copy-offer'));
+  const requiredSection=id=>{
+    const section=sections.find(s=>s.attribs.id===id);
+    if(!section)throw Error('Missing approved '+route+' section: '+id);
+    return section;
+  };
   const pricingServices=route==='pricing' ? sections.find(s=>s.attribs.id==='hardening-and-practical-security-habits-fitted-to-your-life') : null;
   if(route==='pricing'&&!pricingServices)throw Error('Missing approved Pricing full-service section');
   let links=[];
   if(route==='index')links=[[offer,'First paid visit'],[sections.find(s=>s.attribs.id==='situations'),'Your situation'],[contact,'Contact']];
   else if(route==='pricing')links=[[offer,'First paid visit'],[pricingServices,'Full services'],[contact,'Contact']];
-  else if(route==='separation-divorce')links=[[offer,'First paid visit'],[sections[3],'After the visit'],[contact,'Contact']];
+  else if(route==='separation-divorce')links=[[offer,'First paid visit'],[requiredSection('a-setup-for-the-life-you-are-moving-into'),'After the visit'],[contact,'Contact']];
   else if(route==='faq')links=sections.slice(0,-1).map((s,i)=>[s,['Service fit','Getting started','The Assessment','Full services','Pricing','Privacy','Boundaries'][i]]);
   else if(route==='why-us')links=[[sections[0],'Personal note'],[sections[4],'Professional experience'],[contact,'Contact']];
   else if(route==='what-happens-during-the-visit')links=[[sections[0],'Before you buy'],[sections[1],'The Assessment'],[sections[2],'Full engagement'],[contact,'Contact']];
@@ -99,9 +104,15 @@ function present(template,route) {
     if(!privacy)throw Error('Missing approved Home privacy section');
     const trust=detailOf(privacy);D.appendChild(trust,foldNodes(paragraphs(trust).slice(1),'Service boundaries and privacy details'));
   }else if(route==='separation-divorce') {
-    D.append(jump,offer);foldSection(sections[0]);
-    const trust=detailOf(sections[4]);D.appendChild(trust,foldNodes(paragraphs(trust).slice(1),'Coordination with counsel and service boundaries'));
-    const effects=detailOf(sections[1]);D.appendChild(effects,foldNodes([paragraphs(effects)[1]],'How we agree the sequence of changes'));
+    D.append(jump,offer);foldSection(requiredSection('choose-which-access-you-want-to-keep'));
+    const trust=detailOf(requiredSection('you-decide-what-is-changed-and-shared'));
+    D.appendChild(trust,foldNodes(paragraphs(trust).slice(1),'Coordination with counsel and service boundaries'));
+    // The effects, approval sequence and no-invisibility qualification belong together.
+    requiredSection('make-changes-with-their-consequences-in-view');
+  }else if(route==='they-know-something') {
+    // The complete first visit, including urgent arrival guidance, precedes the separate purchase.
+    const full=requiredSection('hardening-beyond-the-first-visit');
+    D.prepend(full,offer);
   }else if(route==='pricing') {
     D.append(jump,offer);
     foldInPlace(tags(detailOf(offer),'ul')[0],'What we examine, fix and record');
