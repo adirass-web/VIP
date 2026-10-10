@@ -13,6 +13,11 @@ const move = (node, parent) => { if (!node || !parent) throw Error('Missing requ
 const group = (nodes, className) => { const node = el(`<div class="${className}"></div>`); nodes.forEach(n => move(n, node)); return node; };
 const direct = (node, name) => (node.children || []).filter(n => n.name === name);
 const section = (doc, id) => find(doc, n => n.attribs?.id === id)[0];
+const requiredSection = (doc, id) => {
+  const node=section(doc,id);
+  if(!node)throw Error('Missing approved narrative section: '+id);
+  return node;
+};
 const bodyOf = node => classes(node, 'copy-body')[0];
 const detailOf = node => classes(node, 'section-detail')[0];
 
@@ -38,30 +43,30 @@ function unfoldSupporting(disclosure, className) {
 function home(doc) {
   const main=tags(doc,'main')[0],hero=classes(doc,'copy-hero')[0],heroWrap=classes(hero,'wrap')[0],lead=classes(hero,'hero-lead')[0];
   const expert=classes(hero,'expert-panel')[0],figure=tags(expert,'figure')[0],expertIntro=direct(expert,'p')[0];
-  const reassurance=direct(lead,'p').find(p=>text(p).startsWith('Perhaps something feels wrong.'));
-  const offer=classes(doc,'copy-offer')[0],explanation=section(doc,'have-someone-work-through-the-details-with-you'),full=section(doc,'stronger-security-with-help-using-it');
-  const risk=section(doc,'they-may-not-need-to-hack-you'),index=classes(doc,'page-index')[0];
+  const offer=classes(doc,'copy-offer')[0];
+  const full=requiredSection(doc,'close-unwanted-access-build-stronger-security-habits');
+  const risk=requiredSection(doc,'everyday-connections-can-reveal-more-than-you-expect');
+  const method=requiredSection(doc,'the-situation-changes-the-work');
+  const index=classes(doc,'page-index')[0];
   addClass(hero,'preview-home-hero');addClass(hero,'narrative-hero');
-  addClass(reassurance,'home-reassurance');
-  const relation=direct(detailOf(full),'p').find(p=>text(p).startsWith('The person who learns your situation'));
   const signature=group([figure],'hero-signature');move(signature,heroWrap);
-  const interpretation=direct(detailOf(risk),'p')[1];
-  const expertSection=group([group([expertIntro,interpretation],'expert-method'),relation],'narrative-expert wrap');
+  // Keep both approved opening paragraphs before the invitation to contact.
+  // The named expert and proactive eligibility are now one indivisible paragraph.
+  const action=direct(lead,'p').find(p=>classes(p,'btn').length);
+  if(!expertIntro||!action)throw Error('Missing approved Home expert introduction or action');
+  D.prepend(action,expertIntro);
   D.removeElement(expert);
-  // Keep the whole warm reassurance in the opening, before asking for contact.
-  const action=direct(lead,'p').find(p=>classes(p,'btn').length);D.prepend(action,reassurance);
   unfoldSection(risk);addClass(risk,'narrative-risk');
+  unfoldSection(full);
   addClass(full,'preview-full-service');addClass(full,'narrative-outcome');
+  addClass(method,'narrative-method');
   addClass(offer,'preview-assessment');
-  addClass(explanation,'assessment-explanation');
-  // Supporting Assessment detail stays available without repeating the main sales story in full.
-  const subheading=tags(explanation,'h2')[0];subheading.name='h3';
-  const region=group([offer,explanation],'home-first-visit');
+  const region=group([offer],'home-first-visit');
   const situations=section(doc,'situations');
-  const positive=direct(detailOf(situations),'p').find(p=>text(p).startsWith('You can also come because'));
-  D.prependChild(detailOf(situations),positive);
+  // The approved situations section already leads with proactive eligibility.
   const controls=classes(doc,'detail-controls')[0],privacy=section(doc,'your-confidence-matters-your-approval-directs-the-work'),contact=section(doc,'contact');
-  [hero,index,risk,full,expertSection,region,controls,situations,privacy,contact].forEach(n=>move(n,main));
+  // The hero establishes the stakes; show the practical outcome before the deeper mechanism.
+  [hero,index,full,risk,method,region,controls,situations,privacy,contact].forEach(n=>move(n,main));
 }
 
 function pricing(doc) {
@@ -71,9 +76,8 @@ function pricing(doc) {
   const offer = classes(doc, 'copy-offer')[0];
   const offerTitle = classes(offer, 'section-title')[0];
   const before = section(doc, 'before-you-book');
-  const full = section(doc, 'strengthen-your-security-and-privacy-with-help-using-the-changes');
+  const full = requiredSection(doc, 'hardening-and-practical-security-habits-fitted-to-your-life');
   const credit = section(doc, 'your-initial-fee-counts-toward-the-full-service');
-  const intro = direct(lead, 'p').find(p => text(p).startsWith('You can come with a concern'));
   const action = direct(lead, 'p').find(p => classes(p, 'btn').length);
   const trust = classes(lead, 'trust')[0];
   addClass(hero, 'preview-pricing-hero');
@@ -82,7 +86,10 @@ function pricing(doc) {
   const quote = group(identityAndPrice, 'pricing-first-visit-facts');
   quote.attribs['aria-labelledby'] = tags(offerTitle, 'h2')[0].attribs.id;
   const vat = direct(lead, 'p').find(p => text(p) === 'All prices include VAT.');
-  const introduction = group([intro, action, trust, vat], 'pricing-opening-copy');
+  const kicker=classes(lead,'hero-kicker')[0];
+  const intro=direct(lead,'p').filter(p=>![kicker,action,trust,vat].includes(p));
+  if(intro.length!==2)throw Error('Pricing requires both approved opening paragraphs');
+  const introduction = group([...intro, action, trust, vat], 'pricing-opening-copy');
   move(group([quote, introduction], 'pricing-opening-grid'), lead);
   const benefitDisclosure = tags(offer, 'details')[0];
   unfoldSupporting(benefitDisclosure, 'assessment-benefits');

@@ -123,7 +123,7 @@ test('reduced motion and fresh versioned assets on repeat navigation',async({pag
   expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');
   await expect(page.locator('link[href="/assets/css/clear-practice.css?v=clear-practice-1"]')).toHaveCount(1);
   await expect(page.locator('script[src="/assets/js/home-pricing.js?v=narrative-1"]')).toHaveCount(1);
-  await page.reload();await expect(page.locator('h1')).toHaveText('Your private life deserves more care than a default setting.');
+  await page.reload();await expect(page.locator('h1')).toHaveText('Private information can be used against you.');
 });
 
 test('supporting details, credit conditions, deep links and print retain access',async({page})=>{
@@ -172,7 +172,7 @@ test('approved narrative exposes qualified risk and independent full-service sco
   const risk=page.locator('.narrative-risk');
   const outcome=page.locator('.narrative-outcome');
   await expect(risk.locator('h2')).toBeVisible();
-  await expect(outcome.locator('p')).toHaveCount(2);
+  await expect(outcome.locator('p')).toHaveCount(3);
   for(const paragraph of await outcome.locator('p').all())await expect(paragraph).toBeVisible();
   const lastOutcome=await outcome.locator('p').last().boundingBox();
   expect(lastOutcome.y+lastOutcome.height).toBeLessThan(2*844);

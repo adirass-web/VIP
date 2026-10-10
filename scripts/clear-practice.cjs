@@ -47,9 +47,11 @@ function present(template,route) {
   const sections=cls(doc,'copy-section');
   const contact=sections.find(s=>s.attribs.id==='contact');
   const offer=sections.find(s=>(s.attribs.class||'').includes('copy-offer'));
+  const pricingServices=route==='pricing' ? sections.find(s=>s.attribs.id==='hardening-and-practical-security-habits-fitted-to-your-life') : null;
+  if(route==='pricing'&&!pricingServices)throw Error('Missing approved Pricing full-service section');
   let links=[];
   if(route==='index')links=[[offer,'First paid visit'],[sections.find(s=>s.attribs.id==='situations'),'Your situation'],[contact,'Contact']];
-  else if(route==='pricing')links=[[offer,'First paid visit'],[sections[2],'Full services'],[contact,'Contact']];
+  else if(route==='pricing')links=[[offer,'First paid visit'],[pricingServices,'Full services'],[contact,'Contact']];
   else if(route==='separation-divorce')links=[[offer,'First paid visit'],[sections[3],'After the visit'],[contact,'Contact']];
   else if(route==='faq')links=sections.slice(0,-1).map((s,i)=>[s,['Service fit','Getting started','The Assessment','Full services','Pricing','Privacy','Boundaries'][i]]);
   else if(route==='why-us')links=[[sections[0],'Personal note'],[sections[4],'Professional experience'],[contact,'Contact']];
@@ -90,8 +92,12 @@ function present(template,route) {
     });
   }
   if(route==='index') {
-    D.append(jump,offer);[0,1].forEach(i=>foldSection(sections[i]));
-    const trust=detailOf(sections[5]);D.appendChild(trust,foldNodes(paragraphs(trust).slice(1),'Service boundaries and privacy details'));
+    D.append(jump,offer);
+    // Home now has one consolidated Assessment and a separate expert-method section.
+    // Core outcomes must stay visible; section position no longer implies supporting detail.
+    const privacy=sections.find(s=>s.attribs.id==='your-confidence-matters-your-approval-directs-the-work');
+    if(!privacy)throw Error('Missing approved Home privacy section');
+    const trust=detailOf(privacy);D.appendChild(trust,foldNodes(paragraphs(trust).slice(1),'Service boundaries and privacy details'));
   }else if(route==='separation-divorce') {
     D.append(jump,offer);foldSection(sections[0]);
     const trust=detailOf(sections[4]);D.appendChild(trust,foldNodes(paragraphs(trust).slice(1),'Coordination with counsel and service boundaries'));
@@ -99,7 +105,7 @@ function present(template,route) {
   }else if(route==='pricing') {
     D.append(jump,offer);
     foldInPlace(tags(detailOf(offer),'ul')[0],'What we examine, fix and record');
-    const services=detailOf(sections[2]);foldInPlace(paragraphs(services)[0],'How hardening and teaching work');
+    const services=detailOf(pricingServices);foldInPlace(paragraphs(services)[0],'How hardening and teaching work');
     const table=tags(services,'table')[0],tbody=tags(table,'tbody')[0];
     const restRows=tags(tbody,'tr').filter((row,i)=>i>2&&!text(row).startsWith('Shared home/home-office network and router'));
     const continuation=element('<div class="copy-table" role="region" aria-label="Full service inclusions" tabindex="0"><table role="table"><tbody role="rowgroup"></tbody></table></div>');
@@ -112,7 +118,7 @@ function present(template,route) {
       D.prepend(heading,detail);move(heading,tags(detail,'summary')[0]);nodes.forEach(n=>move(n,cls(detail,'detail-content')[0]));
     }
     const credit=sections.find(s=>s.attribs.id==='your-initial-fee-counts-toward-the-full-service');
-    sections.forEach((s,i)=>{if(s!==offer&&i!==2&&s!==contact&&s!==credit)foldSection(s);});
+    sections.forEach(s=>{if(s!==offer&&s!==pricingServices&&s!==contact&&s!==credit)foldSection(s);});
     foldInPlace(cls(detailOf(credit),'copy-table')[0],'See balances with the eligible credit');
   }
   // Other pages adopt the common type/layout without speculative content hiding.

@@ -9,11 +9,16 @@ const project = 'projects/toza-en-editorial-revision/';
 const read = p => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 const hash = s => crypto.createHash('sha256').update(s).digest('hex');
 const manifest = JSON.parse(read(project + 'approved/acceptance-manifest.json'));
+// D-029 approves two new exact blocks without rewriting the historical acceptance.
+const amendment = JSON.parse(read(project + 'approved/acceptance-amendment-2026-10-10.json'));
+const amendedSources = new Map(amendment.entries.map(entry => [entry.route, entry]));
 const exact = p => read(project + p).split('## Exact revised copy\n\n')[1].split('\n## Unresolved red-team issues')[0].trimEnd() + '\n';
 function assertAuthority() {
   for (const entry of manifest.entries) if (hash(exact(entry.path)) !== entry.sha256) throw Error('Accepted copy changed: ' + entry.path);
   for (const entry of manifest.sourceFingerprints) if (hash(read(project + entry.path)) !== entry.sha256Lf) throw Error('Protected source changed: ' + entry.path);
   if (hash(read(project + manifest.protectedAssessment.path)) !== manifest.protectedAssessment.sha256) throw Error('Protected Assessment changed');
+  if (amendedSources.size !== 2 || !amendedSources.has('index') || !amendedSources.has('pricing') || amendment.entries.length !== 2) throw Error('Unexpected copy amendment scope');
+  for (const entry of amendment.entries) if (hash(exact(entry.path)) !== entry.sha256) throw Error('Approved amendment changed: ' + entry.path);
 }
 const mapping = [
   ['01-why-toza', 'why-us'], ['02-pricing', 'pricing'], ['03-faq', 'faq'],
@@ -26,7 +31,8 @@ const md = new MarkdownIt({ html: false, typographer: false });
 const escape = md.utils.escapeHtml;
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 function getPage(sourceName, route) {
-  const source = sourceName ? exact('revisions/en-02-v2/' + sourceName + '.md') : read(project + manifest.protectedAssessment.path);
+  const amended = amendedSources.get(route);
+  const source = amended ? exact(amended.path) : sourceName ? exact('revisions/en-02-v2/' + sourceName + '.md') : read(project + manifest.protectedAssessment.path);
   const metadata = {};
   const head = source.split(/#{2,3} Hero\n\n/)[0].replace(/\*\*/g, '');
   for (const [label, key] of [['Title', 'title'], ['Description', 'description'], ['Social description', 'og_description']]) {
@@ -112,7 +118,7 @@ function sync(check = false) {
     const target = 'src/en/' + page.route + '.njk';
     const expected = renderPage(page);
     if (check) { if (read(target) !== expected) throw Error('Rendered source drift: ' + target); }
-    else fs.writeFileSync(path.join(root, target), expected);
+    else if (!fs.existsSync(path.join(root, target)) || read(target) !== expected) fs.writeFileSync(path.join(root, target), expected);
   }
   console.log(check ? 'ACCEPTED SOURCES AND TEMPLATE FIDELITY VERIFIED' : 'Accepted English templates synchronized');
 }

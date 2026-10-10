@@ -302,3 +302,25 @@
 }
 /* Comfortable touch targets for the now-prominent page shortcuts. */
 .narrative-preview .page-index a { display: inline-flex; align-items: center; min-block-size: 44px; }
+
+/* Approved copy round: keep the new method section intact and give both outcome
+   paragraphs equal reading emphasis; only the purchase qualifier is subordinate. */
+.narrative-preview .narrative-method { padding-block: 38px; }
+.narrative-method .copy-body { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.3fr); gap: 60px; }
+.narrative-method .section-title { margin: 0; }
+.narrative-method .section-detail { max-inline-size: none; }
+.narrative-method .section-detail > p:last-child { padding-block-start: 18px; border-block-start: 1px solid var(--line); font-size: 17px; }
+.narrative-outcome .section-detail > p + p { font-size: 19px; border: 0; padding-block-start: 0; }
+.narrative-outcome .section-detail > p:last-child { font-size: 17px; border-block-start: 1px solid #6d8980; padding-block-start: 18px; }
+.narrative-preview .home-first-visit .preview-assessment { padding-block-end: 40px; }
+@media (max-width: 1000px) {
+ .narrative-method .copy-body { gap: 36px; }
+}
+@media (max-width: 760px) {
+ .narrative-preview .narrative-method { padding-block: 30px; }
+ .narrative-method .copy-body { display: block; }
+ .narrative-method .section-title { margin-block-end: 20px; }
+ .narrative-outcome .section-detail > p + p { font-size: 18px; }
+ .narrative-outcome .section-detail > p:last-child { font-size: 17px; }
+ .narrative-preview .home-first-visit .preview-assessment { padding-block-end: 32px; }
+}

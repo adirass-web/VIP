@@ -27,3 +27,4 @@ for (const page of pages()) {
 for (const legal of ['terms', 'privacy']) assert(readText('_site/' + legal + '.html').includes('<html lang="he" dir="rtl">'), legal + ': preserve Hebrew legal document');
 console.log('ENGLISH PUBLICATION AND ACCEPTED SOURCE CONTRACT VERIFIED');
 require('./verify-presentation.cjs');
+require('./verify-copy-amendment.cjs');

@@ -20,7 +20,7 @@ for(const page of pages()) {
   const html=fs.readFileSync('_site/en/'+page.route+'.html','utf8');
   const actual=parse(html);
   const expected=blocks(base).map(block=>{
-    const approvedSubheading={index:'Have someone work through the details with you',pricing:'Your initial fee counts toward the full service'}[page.route];
+    const approvedSubheading={pricing:'Your initial fee counts toward the full service'}[page.route];
     return block==='h2:'+approvedSubheading?'h3:'+approvedSubheading:block;
   });
   assert.deepEqual(blocks(actual).sort(),expected.sort(),page.route+': exact copy blocks');

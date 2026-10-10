@@ -2,6 +2,8 @@
 
 Date: 4 October 2026. **Consolidated record of owner-accepted copy and current authority.**
 
+**10 October 2026 amendment (D-029):** The owner approved stronger Home and Pricing exact copy for isolated local implementation. These two current sources are [Home EN-03](revisions/en-03/06-home.md) and [Pricing EN-03](revisions/en-03/02-pricing.md), with hashes in [the amendment manifest](approved/acceptance-amendment-2026-10-10.json). All service facts and other pages remain unchanged. The original manifest and EN-02 sources below remain the historical acceptance record. Alternatives are not selected; PR #54 and deployment remain unchanged.
+
 Acceptance baseline: `aeb65a51adc3217844be9c465de69a875084b8e4`, followed by the owner's “I accept the copy.” D-024 records that acceptance. The Phase 4/5 review passed with optional observations; no accepted prose or metadata was changed. This document consolidates existing authority; it creates no new product promise or permission to publish.
 
 ## 1. Exact-copy authority
