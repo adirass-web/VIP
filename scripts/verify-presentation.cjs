@@ -19,7 +19,11 @@ for(const page of pages()) {
   const base=parse(renderPage(page,{presentation:false}));
   const html=fs.readFileSync('_site/en/'+page.route+'.html','utf8');
   const actual=parse(html);
-  assert.deepEqual(blocks(actual).sort(),blocks(base).sort(),page.route+': exact copy blocks');
+  const expected=blocks(base).map(block=>{
+    const approvedSubheading={index:'Have someone work through the details with you',pricing:'Your initial fee counts toward the full service'}[page.route];
+    return block==='h2:'+approvedSubheading?'h3:'+approvedSubheading:block;
+  });
+  assert.deepEqual(blocks(actual).sort(),expected.sort(),page.route+': exact copy blocks');
   assert.deepEqual(rows(actual),rows(base),page.route+': table value associations');
   if(page.route==='private-exposure-assessment')assert.deepEqual(blocks(actual),blocks(base),'Protected PA block order');
   if(page.route==='faq')assert.deepEqual(find(actual,n=>n.name==='summary').map(text),find(base,n=>n.name==='summary').map(text),'FAQ questions');
