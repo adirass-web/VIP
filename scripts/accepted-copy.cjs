@@ -103,7 +103,8 @@ function renderPage(page, {presentation = true} = {}) {
     if (contact) html += '{% include "contact-channels.njk" %}\n';
     html += '</div></section>\n';
   }
-  return presentation ? require('./clear-practice.cjs').present(html, route) : html;
+  if (!presentation) return html;
+  return require('./home-pricing-narrative.cjs').present(require('./clear-practice.cjs').present(html, route), route);
 }
 function sync(check = false) {
   assertAuthority();

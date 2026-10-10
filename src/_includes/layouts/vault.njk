@@ -32,7 +32,8 @@
     <link rel="preload" href="/assets/fonts/source-sans-3-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/source-sans-3-semibold.woff2" as="font" type="font/woff2" crossorigin>
     {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
-    <link rel="stylesheet" href="/assets/css/clear-practice.css?v=clear-practice-1">
+    <link rel="stylesheet" href="/assets/css/clear-practice.css?v=clear-practice-1">{% if narrative_layout %}
+    <link rel="stylesheet" href="/assets/css/home-pricing.css?v=narrative-1">{% endif %}
     <link rel="icon" href="/assets/brand/toza/toza-mark-micro-ink.svg" type="image/svg+xml">
 
     {% include "schema-org.njk" %}
@@ -92,7 +93,7 @@
         </div>
     </footer>
 
-    <script src="/assets/js/site.js?v=clear-practice-1" defer></script>
+    <script src="/assets/js/{% if narrative_layout %}home-pricing.js?v=narrative-1{% else %}site.js?v=clear-practice-1{% endif %}" defer></script>
 
 </body>
 </html>
