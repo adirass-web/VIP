@@ -33,8 +33,7 @@ jobs:
         env:
           CI: true
       - name: Exclude preview from indexing
-        run: |
-          printf '\n/*\n  X-Robots-Tag: noindex, nofollow\n' >> _site/_headers
+        run: node scripts/prepare-preview.cjs
       - name: Deploy reviewed branch preview
         env:
           CLOUDFLARE_ACCOUNT_ID: cfd055f2f8175d13377bd64e9620ea36

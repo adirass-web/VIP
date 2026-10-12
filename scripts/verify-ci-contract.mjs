@@ -43,7 +43,9 @@ assertIncludes(preview, "head.ref == 'codex/toza-approved-copy-preview'", "Previ
 assertIncludes(preview, "ref: ${{ github.event.pull_request.head.sha }}", "Preview exact source revision");
 assertIncludes(preview, "npm run verify:all", "Preview copy/build gates");
 assertIncludes(preview, "npm run test:rtl-visual", "Preview browser gate");
-assertIncludes(preview, "X-Robots-Tag: noindex, nofollow", "Preview indexing exclusion");
+assertIncludes(preview, "node scripts/prepare-preview.cjs", "Preview indexing without duplicate global header rules");
+assertIncludes(readText('scripts/prepare-preview.cjs'), 'X-Robots-Tag: noindex, nofollow', 'Preview indexing exclusion');
+assert(!preview.includes('>> _site/_headers'), 'Preview must not append a duplicate global header rule');
 assertIncludes(preview, "--branch four-page-release", "Preview isolated deployment branch");
 assert(!preview.includes("--branch main"), "Preview must not deploy production");
 assert(readText('.nvmrc').trim() === '24' && pkg.engines.node === '24.x', 'Build runtime must use supported Node 24');

@@ -34,6 +34,7 @@ const files = pages().map(p => 'en/' + p.route + '.html').concat([
       const robots = response.headers.get('x-robots-tag') || '';
       assert.equal(robots.includes('noindex'), mode === 'preview', file + ': indexing');
       assert.equal(response.headers.get('x-frame-options'), 'DENY', file + ': frame header');
+      assert.equal(response.headers.get('permissions-policy'), 'geolocation=(), camera=(), microphone=(), payment=()', file + ': permissions header');
     }
     parity.push({ file, sha256: digest(remote), bytes: remote.length });
   }
