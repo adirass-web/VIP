@@ -1,13 +1,20 @@
 # Toza English Editorial Revision Project
 
-Status: **COPY ACCEPTED — editorial review complete; publication plan proposed.**
+Status: **PUBLISHED — maintenance #53 and approved four-page release #55 are merged.**
 
-Branch: editorial/toza-copy-harness. Accepted wording baseline: aeb65a51adc3217844be9c465de69a875084b8e4.
+Released main: `6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f` (12 October 2026). See [current status](state/CURRENT-STATUS.md) and the [release record](../../docs/four-page-copy-preview/RELEASE.md). The release thread records completed production verification; older local-only review packets describe their historical stage.
 
-[Current numbered-plan status](state/CURRENT-STATUS.md) · [Consolidated v3](TOZA-EN-COPY-SPEC-v3.md) · [Fresh review](revisions/en-02-v2/review/phase-4-5-acceptance-review.md) · [Publication plan](planning/2026-10-04-publication-plan.md)
+## Current authority
 
-The original architecture, doctrine, source adoption matrix, calibration and four project skills remain under instructions/, harness/ and skills/. Read them with the live decision register; historical facts superseded by later owner decisions must not be restored. Source snapshots remain immutable.
+- The original accepted EN-02 baseline and protected Assessment remain fingerprinted in [acceptance-manifest.json](approved/acceptance-manifest.json).
+- The [first 10 October amendment](approved/acceptance-amendment-2026-10-10.json) records EN-03 Home/Pricing approval.
+- The [round-02 amendment](approved/acceptance-amendment-2026-10-10-round-02.json) supplies the effective EN-04 Home, Pricing, Separation and Divorce, and They Know Something copy. Other pages retain their previously accepted authority.
+- Read the [live decision register](state/EN-REVISION-DECISION-DELTA.md) with the locked instructions and source manifests. Later decisions supersede conflicting historical wording; do not edit old approvals to make them look current.
 
-All eleven candidate blocks are accepted, including Shared Copy and metadata. Protected PA receives only its three approved duration substitutions. The fresh whole-corpus review passed with optional observations; no accepted wording was rewritten. Exact source hashes are in approved/acceptance-manifest.json.
+The protected Assessment, source snapshots, original manifests and approved amendment blocks remain unchanged. Eleven English marketing pages are published; Hebrew marketing is retained but unpublished, Russian remains unpublished, and Hebrew legal documents remain accessible.
 
-The original numbered editorial plan is complete through consolidation, with the review's optional density observations and protected wording exception explicitly recorded. Publishing is a separate planned workstream. No production templates, main branch or live site were changed.
+## Canonical instructions and history
+
+The canonical architecture/execution instructions are in instructions/, doctrine and workflow in harness/, and all four canonical project skills in skills/. Compatibility entry points under docs/editorial and root skills link here. These canonical files, including AGENTS.md, are fingerprint-protected; cleanup must not rewrite them. Their historical editorial-branch restriction is not a request to resume the completed release. Use an explicitly authorized branch for subsequent maintenance, following the repository contribution workflow.
+
+The [consolidated v3 specification](TOZA-EN-COPY-SPEC-v3.md), original [acceptance review](revisions/en-02-v2/review/phase-4-5-acceptance-review.md), and [October 4 publication plan](planning/2026-10-04-publication-plan.md) remain provenance. Current operational next steps are in [post-release maintenance](../../docs/post-release-maintenance.md), not in historical instructions to merge #51. PR #54 remains untouched; Hebrew adaptation is deferred.

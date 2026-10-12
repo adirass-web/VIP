@@ -45,6 +45,9 @@ jobs:
       - name: Verify route, copy, RTL, links, and CI contracts
         run: npm run verify:all
 
+      - name: Verify local Pages routing
+        run: npm run verify:pages
+
       - name: Install Chromium for RTL visual checks
         run: node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell
 
@@ -59,4 +62,6 @@ jobs:
           path: |
             test-results
             playwright-report
+            .wrangler/pages-runtime-check.log
+          include-hidden-files: true
           if-no-files-found: ignore

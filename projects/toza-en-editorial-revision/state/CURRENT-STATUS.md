@@ -1,49 +1,35 @@
 # Current Project Status
 
-Date: 4 October 2026
+Updated: 12 October 2026. **The English release is published. No additional merge is required to publish the four pages.**
 
-## Accepted baseline
+## Released baseline
 
-The owner accepted all eleven candidate exact-copy blocks, including Shared Copy and metadata, at aeb65a51adc3217844be9c465de69a875084b8e4. D-024 records exact acceptance; Shared Copy is no longer provisional. The blocks are unchanged and hash-recorded in approved/acceptance-manifest.json. The protected Assessment incorporates only the already approved three D-020 duration substitutions.
-
-## Original numbered plan
-
-| Phase | Work | Status |
+| Release | Main commit | Scope |
 |---|---|---|
-| 0 | Editorial system, framework adoption, calibration and four skills | Complete |
-| 1 | Why Toza, Pricing, FAQ, How Toza helps | Accepted |
-| 1.5 | Shared Copy including short cards and placement | Accepted |
-| 2 | Home and four situation pages | Accepted |
-| 3 | Attorneys; Not IT Support absorbed under D-016 | Complete / accepted |
-| 4 | Protected PA consistency | Complete; no factual contradiction |
-| 5 | Full-corpus editorial red team | PASS with optional observations |
-| 6 | Consolidated v3 source/fact specification | Created from accepted sources |
+| [#52](https://github.com/adirass-web/VIP/pull/52) | ed8d06aba134132b9832e46df2771fb0aaecbdba | Approved Clear Practice design and logo |
+| [#53](https://github.com/adirass-web/VIP/pull/53) | e78a85c66ac001455ae7759e5346c3a14f6113d6 | Node 24, Eleventy 3, Playwright 1.64 and build-tool maintenance |
+| [#55](https://github.com/adirass-web/VIP/pull/55) | 6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f | Approved Home, Pricing, Separation and Divorce, and They Know Something refinements |
 
-There are ten revised public pages, one protected public Assessment page and one shared component system. The eleven numbered candidate files include Shared Copy.
+Main contains all three releases. #51 was merged earlier; the previous record describing it as open was stale. PR #54 remains untouched and is not another required release step.
 
-## Fresh review result
+## Accepted copy
 
-No blocker, major public-copy defect or unresolved public-promise conflict. Optional observations: Home's Assessment repetition, Why's direct-delivery repetition and protected PA's permitted older conditional emphasis. No optional cuts were applied. The ten-sweep editor and independent D-009 red team used the actual project authority and current decisions. The editorial review used the D-009 independent substitute. The later implementation gate also uses the available Code Review CI-diagnostics tool; it does not provide an adversarial review runner.
+The original EN-02 exact-copy acceptance remains recorded at aeb65a51adc3217844be9c465de69a875084b8e4 and in approved/acceptance-manifest.json. Original source fingerprints and protected Assessment authority remain immutable.
 
-Current evidence: revisions/en-02-v2/review/phase-4-5-acceptance-review.md. Earlier page gates are historical. v3 is at TOZA-EN-COPY-SPEC-v3.md; exact hashes/effective protected copy are under approved/. Source, locked instructions/harness and skills remain unchanged.
+Effective authority is applied in order: original acceptance, approved/acceptance-amendment-2026-10-10.json (EN-03), then approved/acceptance-amendment-2026-10-10-round-02.json (EN-04). EN-04 governs the four pages released in #55. The other seven English pages and service facts were preserved by that release. The live decision register remains EN-REVISION-DECISION-DELTA.md in this directory.
 
-## Publication workstream
+The original editorial phases through consolidation are complete. Eleven English marketing pages are published. Hebrew marketing source is retained but unpublished; Hebrew terms/privacy documents remain accessible. Hebrew adaptation and Russian publication remain deferred.
 
-Implementation is complete in local preview under D-026. All eleven English pages use the exact accepted copy and metadata; shared navigation/contact, current schema/reference text, responsive tables and FAQ disclosures are integrated in the existing Eleventy/Nunjucks design. The owner chose English-first launch with temporary Hebrew marketing withdrawal; source is preserved and Hebrew legal documents remain accessible and labelled.
+## Release evidence and limits
 
-Replacement routes and the neutral retirement response are implemented, including trailing-slash aliases. Cloudflare normalizes .html addresses with 308; canonical/OG/language declarations and sitemap use the final extensionless URLs. Approved prose links remain valid .html aliases. No source/harness/skill or accepted-block changes were made.
+The completed Business site thread, “Continue Toza editorial revision,” records successful #53 and #55 deployments, independent reviews, 52 browser tests, 78 live route checks, exact hosted content/assets, indexing/security headers and desktop/mobile verification. The final workflow and deployment evidence is recorded in [PR #55](https://github.com/adirass-web/VIP/pull/55), including the successful [production workflow](https://github.com/adirass-web/VIP/actions/runs/38241020823). This status reconciliation did not independently repeat production checks.
 
-## Gates
+See [the committed release record](../../../docs/four-page-copy-preview/RELEASE.md) for scope, review gates, the corrected preview-header preparation and rollback procedure. Older local-preview READMEs, October 4 planning documents and approval packets remain historical evidence. Their then-pending merge/deployment instructions do not describe current release status.
 
-- Accepted-source fingerprints, generated template fidelity and current publication contracts: PASS.
-- Browser tests: 36 PASS across desktop dark/mobile light, with narrow reflow, keyboard, FAQ deep links, full accepted text/metadata, contact destinations, tables, portrait and retained legal RTL.
-- Local Cloudflare Pages runtime: 78 checks PASS.
-- Independent adversarial review: PASS after correcting six trailing-slash redirect aliases. No remaining finding from this review.
-- GitHub CI: check the implementation head in PR #51; pending at preparation of this record.
-- Owner layout preview, final release preflight/approval and production smoke checks: remaining.
+Two documented upstream build-tool advisories remain under the reviewed audit policy: nine affected dependency nodes, no critical findings at the reviewed baseline. This is not a clean npm audit. See [build-tool maintenance](../../../docs/build-tool-maintenance.md).
 
-## Git and next step
+## Remaining work
 
-Branch editorial/toza-copy-harness, PR #51 open and unmerged. Main remains 5f8fbb8b21563fee3c1c802fe4c9914f74ede029. The owner need not merge an editorial-only PR first. Review the local implementation preview, then complete the recorded final release gate before merging this implementation and triggering production deployment.
+Align reusable cloud setup with the released toolchain; consolidate duplicate guidance through canonical links; inventory branch and asset cleanup; and automate local Pages routing checks with pinned Wrangler. Track execution and preserved items in [post-release maintenance](../../../docs/post-release-maintenance.md). No service-fact, protected-copy, translation, PR #54 or production change is part of that cleanup.
 
-Evidence and remaining release checks: planning/2026-10-04-implementation-gates.md.
+If #55 needs rollback, revert only that release through a reviewed PR, preserving #53 maintenance. Do not force-reset main.

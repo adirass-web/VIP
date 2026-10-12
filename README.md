@@ -16,10 +16,15 @@ The Clear Practice visual system, approved logo and self-hosted Source Sans 3 im
 - npm run build cleans only generated _site before building, preventing unpublished files surviving a rebuild.
 - npm run verify:all checks accepted-source fingerprints, generated templates, published routes, links, schema facts, retained Hebrew source and legal RTL, and CI/deploy constraints. Historical he-* command names are retained for workflow compatibility.
 - Install the pinned Playwright Chromium browsers, then npm run test:rtl-visual runs desktop/mobile English and retained legal checks.
-- Start a local Pages runtime with the existing Wrangler 4 tooling, then node scripts/verify-pages-runtime.mjs checks actual redirects/statuses. Default address: http://127.0.0.1:8788; override TOZA_RUNTIME_URL for release smoke checks.
+- npm run verify:pages starts lockfile-pinned Wrangler 4.149.0 on an available loopback port, runs all 78 Pages route/status/content checks, and stops its process tree. Run after a build; CI runs this gate before deployment. Diagnostics are saved to .wrangler/pages-runtime-check.log.
+- npm run pages:dev starts a persistent local Pages runtime on port 8788. For an existing or hosted runtime, node scripts/verify-pages-runtime.mjs uses TOZA_RUNTIME_URL (default http://127.0.0.1:8788).
 
 Pages normalizes .html aliases to extensionless URLs; canonicals and sitemap follow those final URLs. Shared CSS/JS URLs are versioned because assets have long immutable cache lifetimes.
 
 ## Release
 
-General PR verification does not deploy. A separate preview workflow is restricted to the same-repository codex/toza-build-tool-maintenance branch and deploys only the noindex build-tool-maintenance preview after all checks pass. A reviewed merge to main triggers the existing production deployment. The maintenance scope and unchanged-site gate are recorded in docs/build-tool-maintenance.md. Verify production routes and rollback details after any deployment.
+Maintenance PR #53 and the approved four-page release #55 are merged. The released baseline is 6c525f8; see [current project status](projects/toza-en-editorial-revision/state/CURRENT-STATUS.md) and the [release record](docs/four-page-copy-preview/RELEASE.md). PR #54 remains untouched.
+
+General PR verification does not deploy. The separate preview workflow remains restricted to the same-repository codex/toza-approved-copy-preview branch and its noindex four-page-release deployment; this maintenance branch has no preview deployment authorization. A reviewed merge to main triggers production deployment using the installed, lockfile-pinned Wrangler. Verify production routes and rollback details after any deployment.
+
+Canonical editorial instructions and skills live in the [editorial project](projects/toza-en-editorial-revision/README.md); docs/editorial and root skills provide compatibility links. See the [post-release maintenance record](docs/post-release-maintenance.md) for cleanup disposition and remaining upstream advisories.
