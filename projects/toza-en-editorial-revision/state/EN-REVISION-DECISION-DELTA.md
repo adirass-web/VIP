@@ -329,3 +329,10 @@ This register is the bridge between page approval and the future consolidated v3
 - **Decision:** Integrate the three exact approved EN-06 payloads through the additive Batch B amendment and acceptance loader on codex/toza-trust-process-refinement. Generate only Business, Inheritance and Attorneys templates. Preserve the existing design, accepted Batch A implementation, all service facts and protected Assessment.
 - **Gates:** Exact approved fingerprints and body/metadata/link fidelity; eight other English routes unchanged; audit policy, build and verification contracts; browser/responsive/contact/keyboard/print checks; fresh independent source and actual-render reviews; desktop/mobile local evidence.
 - **Boundary:** Local implementation only. No PR #54 change, push, main merge or deployment. Rendered owner review precedes a later release instruction.
+
+### D-037 — Continue to Batch C alignment review
+- **Date:** 2026-10-13
+- **Authority:** After the reviewed Batch B local preview was presented, the owner instructed: “proceed”.
+- **Decision:** Continue the approved execution plan with Batch C: FAQ, shared surfaces and the full eleven-page English corpus. Apply the Toza Editor and independent Red Team, with mechanical fact, source and link inventories. Diagnose actual inconsistencies before drafting; a no-change result is valid.
+- **Scope:** Review artifacts under revisions/en-07 on codex/toza-trust-process-refinement, based on local Batch B commit b1f88a0. Approved A/B and EN-04 wording stays fixed during review. Retain accepted FAQ length unless a specific redundant unit is justified; protected Assessment receives consistency/link checks only. Any proposed new shared or page wording awaits exact owner approval before integration.
+- **Boundary:** This advances the next alignment stage, not publication. No production-source, acceptance-manifest, asset, PR #54, main, push, merge or deployment change is authorized by this continuation. The deployment hold remains in force.
