@@ -96,8 +96,34 @@ for(const entry of batchBRoutes){
  assert.deepEqual(facts(next),facts(prior),entry.route+': numeric service facts unchanged');
  assert.deepEqual([...sections(next).keys()],[...sections(prior).keys()],entry.route+': headings and anchors unchanged');
 }
-for(const page of current.filter(p=>p.route!=='why-us'&&!approvedRoutes.some(entry=>entry.route===p.route)&&!batchBRoutes.some(entry=>entry.route===p.route))){
+// Batch C permits one exact contact-guidance link per approved route. Removing
+// only that paragraph must recover the complete original payload and metadata.
+const batchCRoutes=[
+ {route:'faq',prior:'03-faq',candidate:'04-FAQ-CANDIDATE',target:'#what-should-i-send-in-the-first-message',sha256:'1128e453d6edd13c5c9cbca026239b8c2176fbcce64db686d0b495257e1e5eea'},
+ {route:'what-happens-during-the-visit',prior:'04-what-happens',candidate:'05-PROCESS-CANDIDATE',target:'/en/faq.html#what-should-i-send-in-the-first-message',sha256:'55a6c0e3c2c26475fd843f4f822a6ff77c6798e14af28b6f821ea40d638fe8dd'},
+];
+const batchCManifest=JSON.parse(read(project+'approved/acceptance-amendment-2026-10-13-batch-c.json'));
+assert.deepEqual(batchCManifest.entries,batchCRoutes.map(entry=>({route:entry.route,path:'revisions/en-07/'+entry.candidate+'.md',sha256:entry.sha256})),'Batch C: exact approved routes, paths and hashes');
+const orderedLinks=s=>[...s.matchAll(/\]\(([^)]+)\)/g)].map(m=>m[1]);
+for(const entry of batchCRoutes){
+ const prior=exact('revisions/en-02-v2/'+entry.prior+'.md');
+ const next=current.find(page=>page.route===entry.route).source;
+ assert.equal(next,exact('revisions/en-07/'+entry.candidate+'.md'),entry.route+': approved Batch C overlay');
+ assert.equal(require('node:crypto').createHash('sha256').update(next).digest('hex'),entry.sha256,entry.route+': exact owner-approved payload hash');
+ const addition='[What should I send in the first message?]('+entry.target+')\n\n';
+ assert.equal(prior.split(addition).length,1,entry.route+': original payload has no added guidance paragraph');
+ assert.equal(next.split(addition).length,2,entry.route+': approved guidance paragraph appears exactly once');
+ assert.equal(sections(next).get('You do not need to know where to look. {#contact}').split(addition.trim()).length,2,entry.route+': added guidance stays in contact section');
+ assert.equal(next.replace(addition,''),prior,entry.route+': removal of only the approved link reconstructs all original copy and metadata');
+ assert.deepEqual(links(next),[...links(prior),entry.target].sort(),entry.route+': all old links plus exactly one approved target');
+ assert.deepEqual(orderedLinks(next).filter(target=>target!==entry.target),orderedLinks(prior),entry.route+': original link order and counts unchanged');
+ assert.deepEqual(facts(next),facts(prior),entry.route+': numeric service facts unchanged');
+ assert.deepEqual(next.match(/^#{1,6} .+$/gm),prior.match(/^#{1,6} .+$/gm),entry.route+': all headings and anchors unchanged');
+ assert.deepEqual(tables(next),tables(prior),entry.route+': table wording and associations unchanged');
+}
+assert.equal(current.find(page=>page.route==='faq').source.split('### What should I send in the first message?\n').length,2,'Batch C: existing guidance question appears exactly once');
+for(const page of current.filter(p=>p.route!=='why-us'&&!approvedRoutes.some(entry=>entry.route===p.route)&&!batchBRoutes.some(entry=>entry.route===p.route)&&!batchCRoutes.some(entry=>entry.route===p.route))){
  const prior=page.route==='private-exposure-assessment'?read(project+protectedAssessment):exact('revisions/en-02-v2/'+page.sourceName+'.md');
  assert.equal(page.source,prior,page.route+': original approved source');
 }
-console.log('COPY AMENDMENT VERIFIED: four EN-04 pages; exactly two approved Why paragraphs and four approved Batch B paragraphs; Process C0 and three original sources; historical and stage-map hashes; unchanged metadata/tables/terms/links/facts');
+console.log('COPY AMENDMENT VERIFIED: four EN-04 pages; exactly two Why and four Batch B paragraph changes; exactly two approved Batch C links; original protected Assessment; historical and unchanged Process stage-map hashes; metadata/tables/terms/link order/facts preserved');
