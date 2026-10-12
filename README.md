@@ -10,7 +10,8 @@ The Clear Practice visual system, approved logo and self-hosted Source Sans 3 im
 
 ## Development and checks
 
-- npm ci installs the locked tools.
+- Use Node 24 (.nvmrc), then npm ci installs the locked tools.
+- npm run test:audit-policy and npm run audit:tools check the build-tool audit regression policy. Two unpatched upstream advisories remain explicitly reported; see docs/build-tool-maintenance.md for their scope and upgrade rationale.
 - npm run sync:copy reproduces the accepted English templates. Change presentation in scripts/clear-practice.cjs; do not hand-edit generated copy or alter accepted blocks without owner approval.
 - npm run build cleans only generated _site before building, preventing unpublished files surviving a rebuild.
 - npm run verify:all checks accepted-source fingerprints, generated templates, published routes, links, schema facts, retained Hebrew source and legal RTL, and CI/deploy constraints. Historical he-* command names are retained for workflow compatibility.
@@ -21,4 +22,4 @@ Pages normalizes .html aliases to extensionless URLs; canonicals and sitemap fol
 
 ## Release
 
-General PR verification does not deploy. A separate preview workflow is restricted to the same-repository codex/toza-clear-practice branch and deploys only the noindex design-a preview after all checks pass. A reviewed merge to main triggers the existing production deployment. D-027 records the owner's approval to ship direction A through the preview, review and exact-head checks. Verify production routes and rollback details after deployment.
+General PR verification does not deploy. A separate preview workflow is restricted to the same-repository codex/toza-build-tool-maintenance branch and deploys only the noindex build-tool-maintenance preview after all checks pass. A reviewed merge to main triggers the existing production deployment. The maintenance scope and unchanged-site gate are recorded in docs/build-tool-maintenance.md. Verify production routes and rollback details after any deployment.
