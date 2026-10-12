@@ -6,6 +6,6 @@ const root = path.resolve(__dirname, '..');
 const output = path.resolve(root, '_site');
 if (path.dirname(output) !== root || path.basename(output) !== '_site') throw Error('Unexpected output directory');
 fs.rmSync(output, { recursive: true, force: true });
-const result = spawnSync(process.execPath, [path.join(root, 'node_modules/@11ty/eleventy/cmd.js')], {cwd:root,stdio:'inherit'});
+const result = spawnSync(process.execPath, [path.join(root, 'node_modules/@11ty/eleventy/cmd.cjs')], {cwd:root,stdio:'inherit'});
 if (result.error) throw result.error;
 process.exit(result.status || 0);
