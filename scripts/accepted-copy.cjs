@@ -14,6 +14,7 @@ const amendments = [
   {path:'approved/acceptance-amendment-2026-10-10.json', routes:['index','pricing']},
   {path:'approved/acceptance-amendment-2026-10-10-round-02.json', routes:['index','pricing','separation-divorce','they-know-something']},
   {path:'approved/acceptance-amendment-2026-10-12-batch-a.json', routes:['why-us']},
+  {path:'approved/acceptance-amendment-2026-10-12-batch-b.json', routes:['business-dispute','inheritance-clash','attorneys']},
 ].map(record=>({...record, manifest:JSON.parse(read(project+record.path))}));
 const amendedSources = new Map(amendments.flatMap(record=>record.manifest.entries.map(entry=>[entry.route,entry])));
 const exact = p => read(project + p).split('## Exact revised copy\n\n')[1].split('\n## Unresolved red-team issues')[0].trimEnd() + '\n';

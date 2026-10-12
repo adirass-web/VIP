@@ -67,8 +67,37 @@ assert.equal(reconstructed,whyPrior,'Why: only the two approved paragraphs chang
 assert.deepEqual(links(whyNext),links(whyPrior),'Why: all links and counts unchanged');
 assert.deepEqual(facts(whyNext),facts(whyPrior),'Why: numeric facts unchanged');
 assert.deepEqual([...sections(whyNext).keys()],[...sections(whyPrior).keys()],'Why: headings and anchors unchanged');
-for(const page of current.filter(p=>p.route!=='why-us'&&!approvedRoutes.some(entry=>entry.route===p.route))){
+// Batch B reverses only its four reviewed substitutions. The complete prior
+// payload must be recovered; exclusions do not weaken any unchanged-source gate.
+const batchBRoutes=[
+ {route:'business-dispute',prior:'08-business-founder-dispute',candidate:'01-BUSINESS-CANDIDATE',changes:[
+  {before:'A personal email may recover a business account. A phone may authenticate both private and work services. A folder shared during a partnership may still reveal documents after the relationship changes.',after:'A personal email may recover a business account. A phone may authenticate both private and work services. A folder shared during a partnership may still reveal confidential documents or plans you intend to keep private after the relationship changes.'},
+  {before:'Personal Shield hardens the agreed settings and access arrangements around your personal and professional circumstances, with practical security habits, teaching and verification. You learn how to manage the changed setup. Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service.',after:'Personal Shield hardens the agreed settings and access arrangements around your personal and professional circumstances, with practical security habits, teaching and verification. The work can include closing unwanted shared access and strengthening sign-in and recovery. You learn how to manage the changed setup. Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service.'}
+ ]},
+ {route:'inheritance-clash',prior:'10-inheritance-conflict',candidate:'02-INHERITANCE-CANDIDATE',changes:[
+  {before:'An estate dispute can change the meaning of arrangements made years earlier. Help with an account, a shared cloud folder or a family recovery contact may still connect someone else to your private information.',after:'An estate dispute can change the meaning of arrangements made years earlier. Help with an account, a shared cloud folder or a family recovery contact may still connect someone else to your private correspondence or financial information.'}
+ ]},
+ {route:'attorneys',prior:'11-for-attorneys',candidate:'03-ATTORNEYS-CANDIDATE',changes:[
+  {before:'Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain the priorities and recommended next steps. The client has someone to work through the technical questions with them and explain what they can do next.',after:'Dr. Lior Tabansky works directly with the client, in person, to assess relevant access within their authorized environment, address approved urgent issues where safely possible and explain the priorities and recommended next steps. The client gains a clearer basis for deciding which technical changes to authorize.'}
+ ]},
+];
+for(const entry of batchBRoutes){
+ const prior=exact('revisions/en-02-v2/'+entry.prior+'.md');
+ const next=current.find(page=>page.route===entry.route).source;
+ assert.equal(next,exact('revisions/en-06/'+entry.candidate+'.md'),entry.route+': approved Batch B overlay');
+ let restored=next;
+ for(const change of entry.changes){
+  assert.equal(prior.split(change.before).length,2,entry.route+': prior paragraph unique');
+  assert.equal(next.split(change.after).length,2,entry.route+': approved paragraph unique');
+  restored=restored.replace(change.after,change.before);
+ }
+ assert.equal(restored,prior,entry.route+': only nominated paragraphs differ; all other copy and metadata exact');
+ assert.deepEqual(links(next),links(prior),entry.route+': all links and counts unchanged');
+ assert.deepEqual(facts(next),facts(prior),entry.route+': numeric service facts unchanged');
+ assert.deepEqual([...sections(next).keys()],[...sections(prior).keys()],entry.route+': headings and anchors unchanged');
+}
+for(const page of current.filter(p=>p.route!=='why-us'&&!approvedRoutes.some(entry=>entry.route===p.route)&&!batchBRoutes.some(entry=>entry.route===p.route))){
  const prior=page.route==='private-exposure-assessment'?read(project+protectedAssessment):exact('revisions/en-02-v2/'+page.sourceName+'.md');
  assert.equal(page.source,prior,page.route+': original approved source');
 }
-console.log('COPY AMENDMENT VERIFIED: four EN-04 pages; exactly two approved Why paragraphs; Process C0 and six original sources; historical and stage-map hashes; unchanged metadata/tables/terms/links/facts');
+console.log('COPY AMENDMENT VERIFIED: four EN-04 pages; exactly two approved Why paragraphs and four approved Batch B paragraphs; Process C0 and three original sources; historical and stage-map hashes; unchanged metadata/tables/terms/links/facts');

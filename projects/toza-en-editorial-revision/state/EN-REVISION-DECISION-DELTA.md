@@ -308,3 +308,24 @@ This register is the bridge between page approval and the future consolidated v3
 - **Scope:** Continue on codex/toza-trust-process-refinement. Integrate the two approved Why paragraphs and presentation-only stage grouping for Process. Adapt the acceptance loader, generation, narrowly scoped styling and verification as needed. Preserve all service/commercial facts, historical sources/manifests and protected PA. Nine other English pages remain unchanged.
 - **Gates:** Current exact sources and reproducible templates; copy/metadata/links/table associations; protected order; unchanged other pages; existing audit/build/browser gates; focused stage visibility/order/keyboard/print checks; fresh independent implementation and rendered review; desktop/mobile local gallery.
 - **Boundary:** Local preview only. No push, PR #54 change, main merge or deployment. Later batches remain scheduled. Owner approval of the rendered result remains a later gate.
+
+### D-034 — Continue to Batch B candidate drafting
+- **Date:** 2026-10-12
+- **Authority:** After the reviewed Batch A local preview was presented, the owner instructed: “Proceed to next”.
+- **Decision:** Continue the approved 12 October execution plan with Batch B: Business and Founder Dispute → Inheritance Conflict → For Attorneys. Apply the planned model tiers and four Toza skills, preserve service facts, and present complete candidates after independent review.
+- **Scope:** New en-06 candidate artifacts on the existing isolated codex/toza-trust-process-refinement branch, based on local Batch A commit c85f7fe and deployed baseline 6c525f8. Batch A accepted copy and current local rendering remain preserved. No corporate investigation, estate entitlement, forensic/evidentiary or legal-service claim is added.
+- **Boundary:** This advances drafting/review, not publication. Batch B exact wording remains unapproved until owner review; no template/asset/acceptance-manifest, PR #54, main, merge, push or deployment change is authorized. The deployment hold persists.
+
+### D-035 — Accept the complete Batch B candidate payloads
+- **Date:** 2026-10-12
+- **Authority:** Owner: “I ,the owner approve complete candidate payloads”.
+- **Decision:** Accept the three complete EN-06 exact-copy payloads, including metadata: Business and Founder Dispute, Inheritance Conflict and For Attorneys. Additive fingerprints are recorded in approved/acceptance-amendment-2026-10-12-batch-b.json; revisions/en-06/ACCEPTANCE.md supersedes historical pending-owner labels.
+- **Facts and gates:** The reviewed four-paragraph change set is unchanged. G1 strategy, G2 ten editorial sweeps, G3 independent PASS with zero required findings and 79/79 mechanical draft checks preceded approval. All service/commercial facts, prior accepted sources and protected Assessment remain preserved.
+- **Boundary:** This records exact-copy acceptance. Runtime-loader integration and the desktop/mobile preview are subsequent implementation work; no template, asset, PR #54, main, push, merge or deployment change is made by this acceptance. Publication remains on hold.
+
+### D-036 — Build approved Batch B into the local preview
+- **Date:** 2026-10-12
+- **Authority:** Owner: “Approved. Build Batch B into the local preview using the approved copy. Keep service facts unchanged, run the quality gates and independent review, and show me desktop and mobile. Don’t change PR #54 or deploy yet.”
+- **Decision:** Integrate the three exact approved EN-06 payloads through the additive Batch B amendment and acceptance loader on codex/toza-trust-process-refinement. Generate only Business, Inheritance and Attorneys templates. Preserve the existing design, accepted Batch A implementation, all service facts and protected Assessment.
+- **Gates:** Exact approved fingerprints and body/metadata/link fidelity; eight other English routes unchanged; audit policy, build and verification contracts; browser/responsive/contact/keyboard/print checks; fresh independent source and actual-render reviews; desktop/mobile local evidence.
+- **Boundary:** Local implementation only. No PR #54 change, push, main merge or deployment. Rendered owner review precedes a later release instruction.
