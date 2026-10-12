@@ -286,3 +286,25 @@ This register is the bridge between page approval and the future consolidated v3
 - **Implementation:** Continue in codex/toza-approved-copy-preview from 09a534e. Integrate only these four approved blocks, adapt presentation and relevant validation as needed, preserve Home's benefits-before-detailed-risk order and Pricing's early fee visibility. Keep prior accepted sources, both prior manifests, locked harness and protected Assessment immutable.
 - **Gates:** Approved exact hashes and rendered body/metadata/table associations; seven other English pages unchanged; build and publication contracts; desktop/mobile reflow, contact, keyboard, disclosures and print checks; independent source/authority and rendered review.
 - **Boundary:** Local preview only. Do not change PR #54, push, merge, change main or deploy. This supersedes earlier draft-only status for these four exact blocks; it does not authorize further wording edits during implementation.
+
+### D-031 — Publish the four-page release after separate maintenance
+- **Date:** 2026-10-12
+- **Authority:** Owner authorized a separate four-page GitHub PR, review/release gates and publication if all pass; separately approved releasing maintenance PR #53 first.
+- **Result:** PR #53 merged as e78a85c66ac001455ae7759e5346c3a14f6113d6, then PR #55 as 6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f. Final source, independent review, 52 browser checks, hosted preview and 78 live edge checks passed. Production parity/indexing/security headers and eight desktop/mobile renderings passed. Evidence is recorded in PR #55 and docs/four-page-copy-preview/RELEASE.md.
+- **Boundary:** This release is complete. PR #54 remains unchanged. Known build-tool advisory residuals remain documented under the reviewed maintenance policy; no clean-audit claim. This authorization does not grant future batch publication.
+
+### D-032 — Approve the next execution plan and start Batch A candidates
+- **Date:** 2026-10-12
+- **Authority:** Owner: “Approved. Start Batch A using the planned model tiers, skills and team. Draft Why Toza and the How Toza helps stage map, keep service facts unchanged, and show me the changes after independent review. Do I need to change model tiers or you do? Don’t deploy yet.”
+- **Decision:** Use planning/2026-10-12-next-editorial-design-execution-plan.md. Start Why Toza targeted candidate drafting and the How Toza helps stage/section map. Apply the four project Toza skills; use Astra for strategy and independent review, Sol for drafting/editing and stage mapping, Luna for mechanical inventories. The orchestrator assigns the requested tiers; no user model-setting change is needed for these delegated tasks.
+- **Scope:** Draft/review only, based on deployed main 6c525f8. How Toza helps begins with C0 wording and a proposed grouping of its existing eight steps into its existing three stages. Any newly proposed public wording is identified separately. Current commercial/service facts and protected Assessment remain fixed.
+- **Branch:** Use isolated local codex/toza-trust-process-refinement for the approved batch and en-05 candidate artifacts. This explicit approval of the new plan supersedes the historical editorial-only branch restriction for this scoped work.
+- **Boundary:** New exact copy and the stage map await owner approval after independent review. No generated-template, asset, acceptance-manifest, PR #54, main, merge or deployment change is authorized. Later batches remain planned, not executed by this instruction.
+
+### D-033 — Accept Batch A copy and stage map for local implementation
+- **Date:** 2026-10-12
+- **Authority:** Owner: “Approved. Build Batch A into the local preview using this copy and stage map. Keep service facts unchanged, run the quality gates and independent review, and show me desktop and mobile. Don’t deploy yet.”
+- **Decision:** Accept the exact Why Toza candidate, including unchanged metadata, with hash 53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575. Accept the How Toza helps stage map as a C0 presentation specification; its public source remains EN-02-v2 and its wording/order/visibility are preserved. Additive approval record: approved/acceptance-amendment-2026-10-12-batch-a.json.
+- **Scope:** Continue on codex/toza-trust-process-refinement. Integrate the two approved Why paragraphs and presentation-only stage grouping for Process. Adapt the acceptance loader, generation, narrowly scoped styling and verification as needed. Preserve all service/commercial facts, historical sources/manifests and protected PA. Nine other English pages remain unchanged.
+- **Gates:** Current exact sources and reproducible templates; copy/metadata/links/table associations; protected order; unchanged other pages; existing audit/build/browser gates; focused stage visibility/order/keyboard/print checks; fresh independent implementation and rendered review; desktop/mobile local gallery.
+- **Boundary:** Local preview only. No push, PR #54 change, main merge or deployment. Later batches remain scheduled. Owner approval of the rendered result remains a later gate.

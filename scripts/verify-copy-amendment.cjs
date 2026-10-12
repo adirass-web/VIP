@@ -42,8 +42,33 @@ for(const entry of approvedRoutes){
  }
 }
 const protectedAssessment=JSON.parse(read(project+'approved/acceptance-manifest.json')).protectedAssessment.path;
-for(const page of current.filter(p=>!approvedRoutes.some(entry=>entry.route===p.route))){
+// Batch A is a narrow, additive exception: reversing exactly these two approved
+// paragraphs must reconstruct the entire prior payload, including metadata.
+const whyPrior=exact('revisions/en-02-v2/01-why-toza.md');
+const whyNext=current.find(page=>page.route==='why-us').source;
+assert.equal(whyNext,exact('revisions/en-05/01-WHY-TOZA-CANDIDATE.md'),'Why: approved Batch A overlay');
+const whyChanges=[
+ {
+  before:'A conversation you thought was private, an account someone once helped you set up, a service your family shares: each can connect to more of your life than you realize. I look at how the relevant devices, identities, accounts and apps work together, and what their access to your data means for you.',
+  after:'A conversation you thought was private, an account someone once helped you set up, a service your family shares: each can connect to more of your life than you realize. Private information can be used to pressure you, cost you money or damage your reputation. I look at how the relevant devices, identities, accounts and apps work together, and what that access means in your circumstances.'
+ },
+ {
+  before:'I learn your circumstances and carry out the technical work with you, in person. You do not have to retell a sensitive situation to a succession of people. A working phone can still leave private information accessible through arrangements that no longer suit your life; my work connects that personal context to the changes we make.',
+  after:'I learn your circumstances and carry out the technical work with you, in person. You do not have to retell a sensitive situation to a succession of people. I use that understanding to judge which access deserves attention first. Before you decide what to approve, I explain what a proposed material change could affect, including account recovery and services you still need.'
+ },
+];
+let reconstructed=whyNext;
+for(const change of whyChanges){
+ assert.equal(whyPrior.split(change.before).length,2,'Why: prior paragraph appears exactly once');
+ assert.equal(whyNext.split(change.after).length,2,'Why: approved paragraph appears exactly once');
+ reconstructed=reconstructed.replace(change.after,change.before);
+}
+assert.equal(reconstructed,whyPrior,'Why: only the two approved paragraphs change; all other blocks and metadata exact');
+assert.deepEqual(links(whyNext),links(whyPrior),'Why: all links and counts unchanged');
+assert.deepEqual(facts(whyNext),facts(whyPrior),'Why: numeric facts unchanged');
+assert.deepEqual([...sections(whyNext).keys()],[...sections(whyPrior).keys()],'Why: headings and anchors unchanged');
+for(const page of current.filter(p=>p.route!=='why-us'&&!approvedRoutes.some(entry=>entry.route===p.route))){
  const prior=page.route==='private-exposure-assessment'?read(project+protectedAssessment):exact('revisions/en-02-v2/'+page.sourceName+'.md');
  assert.equal(page.source,prior,page.route+': original approved source');
 }
-console.log('COPY AMENDMENT VERIFIED: four EN-04 pages; all historical hashes; unchanged tables/terms/links/facts; seven original source pages');
+console.log('COPY AMENDMENT VERIFIED: four EN-04 pages; exactly two approved Why paragraphs; Process C0 and six original sources; historical and stage-map hashes; unchanged metadata/tables/terms/links/facts');
