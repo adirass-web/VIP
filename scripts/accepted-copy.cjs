@@ -9,11 +9,22 @@ const project = 'projects/toza-en-editorial-revision/';
 const read = p => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 const hash = s => crypto.createHash('sha256').update(s).digest('hex');
 const manifest = JSON.parse(read(project + 'approved/acceptance-manifest.json'));
+// Later approvals overlay the effective sources without replacing historical validation.
+const amendments = [
+  {path:'approved/acceptance-amendment-2026-10-10.json', routes:['index','pricing']},
+  {path:'approved/acceptance-amendment-2026-10-10-round-02.json', routes:['index','pricing','separation-divorce','they-know-something']},
+].map(record=>({...record, manifest:JSON.parse(read(project+record.path))}));
+const amendedSources = new Map(amendments.flatMap(record=>record.manifest.entries.map(entry=>[entry.route,entry])));
 const exact = p => read(project + p).split('## Exact revised copy\n\n')[1].split('\n## Unresolved red-team issues')[0].trimEnd() + '\n';
 function assertAuthority() {
   for (const entry of manifest.entries) if (hash(exact(entry.path)) !== entry.sha256) throw Error('Accepted copy changed: ' + entry.path);
   for (const entry of manifest.sourceFingerprints) if (hash(read(project + entry.path)) !== entry.sha256Lf) throw Error('Protected source changed: ' + entry.path);
   if (hash(read(project + manifest.protectedAssessment.path)) !== manifest.protectedAssessment.sha256) throw Error('Protected Assessment changed');
+  for (const amendment of amendments) {
+    const routes=amendment.manifest.entries.map(entry=>entry.route).sort();
+    if (JSON.stringify(routes)!==JSON.stringify([...amendment.routes].sort())) throw Error('Unexpected copy amendment scope: '+amendment.path);
+    for (const entry of amendment.manifest.entries) if (hash(exact(entry.path)) !== entry.sha256) throw Error('Approved amendment changed: ' + entry.path);
+  }
 }
 const mapping = [
   ['01-why-toza', 'why-us'], ['02-pricing', 'pricing'], ['03-faq', 'faq'],
@@ -26,7 +37,8 @@ const md = new MarkdownIt({ html: false, typographer: false });
 const escape = md.utils.escapeHtml;
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 function getPage(sourceName, route) {
-  const source = sourceName ? exact('revisions/en-02-v2/' + sourceName + '.md') : read(project + manifest.protectedAssessment.path);
+  const amended = amendedSources.get(route);
+  const source = amended ? exact(amended.path) : sourceName ? exact('revisions/en-02-v2/' + sourceName + '.md') : read(project + manifest.protectedAssessment.path);
   const metadata = {};
   const head = source.split(/#{2,3} Hero\n\n/)[0].replace(/\*\*/g, '');
   for (const [label, key] of [['Title', 'title'], ['Description', 'description'], ['Social description', 'og_description']]) {
@@ -103,7 +115,8 @@ function renderPage(page, {presentation = true} = {}) {
     if (contact) html += '{% include "contact-channels.njk" %}\n';
     html += '</div></section>\n';
   }
-  return presentation ? require('./clear-practice.cjs').present(html, route) : html;
+  if (!presentation) return html;
+  return require('./home-pricing-narrative.cjs').present(require('./clear-practice.cjs').present(html, route), route);
 }
 function sync(check = false) {
   assertAuthority();
@@ -111,7 +124,7 @@ function sync(check = false) {
     const target = 'src/en/' + page.route + '.njk';
     const expected = renderPage(page);
     if (check) { if (read(target) !== expected) throw Error('Rendered source drift: ' + target); }
-    else fs.writeFileSync(path.join(root, target), expected);
+    else if (!fs.existsSync(path.join(root, target)) || read(target) !== expected) fs.writeFileSync(path.join(root, target), expected);
   }
   console.log(check ? 'ACCEPTED SOURCES AND TEMPLATE FIDELITY VERIFIED' : 'Accepted English templates synchronized');
 }
