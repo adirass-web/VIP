@@ -35,64 +35,8 @@ jobs:
       - run: npm run test:rtl-visual
         env:
           CI: true
-      - name: Verify 78 local Pages route checks
-        shell: bash
-        env:
-          TOZA_RUNTIME_URL: http://127.0.0.1:8788
-          WRANGLER_SEND_METRICS: false
-        run: |
-          set -euo pipefail
-          mkdir -p test-results
-          runtime_log=test-results/pages-runtime.log
-          runtime_checks=test-results/pages-runtime-checks.log
-          runtime_ready=test-results/pages-runtime-ready.html
-          runtime_pid=""
-          cleanup() {
-            status=$?
-            trap - EXIT INT TERM
-            if [[ -n "$runtime_pid" ]]; then
-              kill -- -"$runtime_pid" 2>/dev/null || true
-              for attempt in 1 2 3 4 5; do
-                if ! kill -0 -- -"$runtime_pid" 2>/dev/null; then break; fi
-                sleep 1
-              done
-              kill -KILL -- -"$runtime_pid" 2>/dev/null || true
-              wait "$runtime_pid" 2>/dev/null || true
-            fi
-            if [[ "$status" -ne 0 ]]; then
-              cat "$runtime_log"
-            fi
-            exit "$status"
-          }
-          trap cleanup EXIT
-          trap 'exit 130' INT
-          trap 'exit 143' TERM
-          npx --yes wrangler@4.149.0 --version >"$runtime_log" 2>&1
-          if curl --silent --max-time 2 "$TOZA_RUNTIME_URL/en/" >/dev/null; then
-            echo '::error::Local Pages runtime port is already occupied'
-            exit 1
-          fi
-          setsid npx --yes wrangler@4.149.0 pages dev _site --ip 127.0.0.1 --port 8788 --compatibility-date 2026-10-06 --show-interactive-dev-session=false >>"$runtime_log" 2>&1 &
-          runtime_pid=$!
-          runtime_is_ready=false
-          deadline=$((SECONDS + 90))
-          while [[ "$SECONDS" -lt "$deadline" ]]; do
-            if ! kill -0 "$runtime_pid" 2>/dev/null; then
-              echo '::error::Local Pages runtime exited before readiness'
-              exit 1
-            fi
-            if curl --fail --silent --max-time 2 "$TOZA_RUNTIME_URL/en/" -o "$runtime_ready" && grep -Fq '<html lang="en" dir="ltr">' "$runtime_ready" && grep -Fq 'id="main-content"' "$runtime_ready"; then
-              runtime_is_ready=true
-              break
-            fi
-            sleep 1
-          done
-          if [[ "$runtime_is_ready" != true ]]; then
-            echo '::error::Local Pages runtime did not serve the built English HTML within 90 seconds'
-            exit 1
-          fi
-          node scripts/verify-pages-runtime.mjs | tee "$runtime_checks"
-          grep -Fxq 'PAGES RUNTIME VERIFIED: 78 route, status, content and asset checks' "$runtime_checks"
+      - name: Verify local Pages routing
+        run: npm run verify:pages
       - name: Exclude preview from indexing
         run: node scripts/prepare-preview.cjs
       - name: Deploy reviewed branch preview
@@ -101,7 +45,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           PREVIEW_SHA: ${{ github.event.pull_request.head.sha }}
           PREVIEW_BRANCH: ${{ github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' && 'trust-process-release' || 'four-page-release' }}
-        run: npx --yes wrangler@4.149.0 pages deploy _site --project-name toza-site --branch "$PREVIEW_BRANCH" --commit-hash "$PREVIEW_SHA"
+        run: npm run pages:deploy -- _site --project-name toza-site --branch "$PREVIEW_BRANCH" --commit-hash "$PREVIEW_SHA"
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -110,4 +54,6 @@ jobs:
           path: |
             test-results
             playwright-report
+            .wrangler/pages-runtime-check.log
+          include-hidden-files: true
           if-no-files-found: ignore

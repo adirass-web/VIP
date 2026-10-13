@@ -21,10 +21,18 @@ for (const script of [
   "verify:ci-contract",
   "verify:all",
   "test:rtl-visual",
+  "verify:pages",
+  "pages:dev",
+  "pages:deploy",
 ]) {
   assert(typeof pkg.scripts[script] === "string", `package.json is missing the ${script} script`);
 }
 assert(pkg.devDependencies["@playwright/test"] === "1.64.0", "Playwright version must stay pinned for repeatable screenshots");
+assert(pkg.devDependencies.wrangler === '4.150.0', 'Wrangler must use the reviewed exact version');
+assert(readJson('package-lock.json').packages['node_modules/wrangler'].version === pkg.devDependencies.wrangler, 'Wrangler lockfile version must match');
+assert(pkg.scripts['pages:deploy'] === 'wrangler pages deploy', 'Deployment must use the installed Wrangler');
+assert(pkg.scripts['verify:pages'] === 'node scripts/check-pages-runtime.mjs', 'Local Pages gate must use the reusable checked wrapper');
+assert(pkg.scripts['pages:dev'] === 'wrangler pages dev _site --ip 127.0.0.1 --port 8788 --compatibility-date 2026-10-06 --show-interactive-dev-session=false', 'Manual local Pages runtime must match the release-tested compatibility date');
 
 const ci = readText(".github/workflows/ci.yml");
 assertIncludes(ci, "pull_request:", "PR CI trigger");
@@ -33,7 +41,7 @@ assertIncludes(ci, "npm run verify:all", "PR CI verification suite");
 assertIncludes(ci, "node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell", "PR CI browser install");
 assertIncludes(ci, "npm run test:rtl-visual", "PR CI visual suite");
 assertIncludes(ci, "actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9", "PR CI pinned test artifact upload");
-assert(!/wrangler|pages deploy|cloudflare/i.test(ci), "PR CI must not deploy a preview branch");
+assert(!/pages[: ]deploy|cloudflare_api_token|cloudflare_account_id/i.test(ci), "General PR CI must not deploy or receive deployment credentials");
 const ciConfig = workflow(ci), ciJob = ciConfig.jobs.verify;
 assert(ciConfig.on.pull_request.types.includes('synchronize'), 'PR CI must refresh on each new head');
 const focusedRun = 'node --test scripts/visual-refinements.test.cjs';
@@ -49,9 +57,14 @@ assertIncludes(deploy, "concurrency:", "Production deploy serialization");
 assertIncludes(deploy, "npm run verify:all", "Production deploy verification suite");
 assertIncludes(deploy, "node node_modules/@playwright/test/cli.js install --with-deps chromium chromium-headless-shell", "Production deploy browser install");
 assertIncludes(deploy, "npm run test:rtl-visual", "Production deploy visual suite");
-assertIncludes(deploy, "wrangler@4", "Production deploy pinned Wrangler major");
+assertIncludes(deploy, "npm run pages:deploy --", "Production deploy lockfile-pinned Wrangler");
 assert(!/pull_request:/i.test(deploy), "Production deploy must not run on pull requests");
-assert(!/wrangler@latest/i.test(deploy), "Production deploy must not use an unpinned Wrangler tag");
+assert(!/npx.*wrangler/i.test(deploy), "Production deploy must not download a separate Wrangler");
+const deployConfig = workflow(deploy), deployJob = deployConfig.jobs.deploy;
+assert(Object.keys(deployConfig.on).length === 1 && deployConfig.on.push.branches.length === 1 && deployConfig.on.push.branches[0] === 'main', 'Production must remain a main-only push workflow');
+assert(deployConfig.concurrency.group === 'toza-pages-production' && deployConfig.concurrency['cancel-in-progress'] === false, 'Production deployments must remain serialized');
+const productionDeploy = oneStep(deployJob, 'npm run pages:deploy -- _site --project-name "$CF_PROJECT_NAME" --branch main --commit-hash "$GITHUB_SHA"', 'Installed production deployment');
+assert(productionDeploy.if === undefined, 'Production deployment must follow successful gates');
 
 const preview = readText(".github/workflows/preview.yml");
 assertIncludes(preview, "pull_request:", "Preview PR trigger");
@@ -83,39 +96,39 @@ assert(previewFocused.if === "github.event.pull_request.head.ref == 'codex/toza-
 const previewVerification = oneStep(previewJob, 'npm run verify:all', 'Preview build verification');
 const previewBrowser = oneStep(previewJob, 'npm run test:rtl-visual', 'Preview browser suite');
 const previewPrepare = oneStep(previewJob, 'node scripts/prepare-preview.cjs', 'Preview noindex preparation');
-const previewDeploy = oneStep(previewJob, 'npx --yes wrangler@4.149.0 pages deploy _site --project-name toza-site --branch "$PREVIEW_BRANCH" --commit-hash "$PREVIEW_SHA"', 'Pinned isolated preview deployment');
+const previewDeploy = oneStep(previewJob, 'npm run pages:deploy -- _site --project-name toza-site --branch "$PREVIEW_BRANCH" --commit-hash "$PREVIEW_SHA"', 'Installed isolated preview deployment');
 for (const step of [previewVerification, previewBrowser, previewPrepare, previewDeploy]) assert(step.if === undefined, 'Required preview gates/deployment must not bypass prior success');
 assert(previewDeploy.env.PREVIEW_SHA === '${{ github.event.pull_request.head.sha }}', 'Preview deployment must record the exact reviewed SHA');
 assert(previewDeploy.env.PREVIEW_BRANCH === "${{ github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' && 'trust-process-release' || 'four-page-release' }}", 'Preview destinations must be trusted fixed literals for the two allowed branches');
 assert(previewDeploy.env.CLOUDFLARE_API_TOKEN === '${{ secrets.CLOUDFLARE_API_TOKEN }}', 'Preview deploy token must use the repository secret');
 assert(previewJob.steps.filter(step => step.env?.CLOUDFLARE_API_TOKEN !== undefined).length === 1, 'Only the preview deployment step may receive its deploy token');
 assert(previewJob.steps.every(step => !step.run?.includes('${{')), 'Untrusted event expressions must never be interpolated into shell code');
-const runtimeSteps = previewJob.steps.filter(step => step.run?.includes('node scripts/verify-pages-runtime.mjs'));
-assert(runtimeSteps.length === 1, 'Exactly one local Pages runtime gate is required');
-const runtime = runtimeSteps[0];
-assert(runtime.shell === 'bash' && runtime.if === undefined && !runtime['continue-on-error'], 'Local Pages failures must block deployment');
-assert(runtime.env.TOZA_RUNTIME_URL === 'http://127.0.0.1:8788', 'Local Pages checks must target the owned loopback runtime');
+const runtime = oneStep(previewJob, 'npm run verify:pages', 'Preview shared Pages runtime gate');
+assert(runtime.if === undefined, 'Local Pages failures must block preview deployment');
+const runtimeWrapper = readText('scripts/check-pages-runtime.mjs');
 for (const required of [
-  'set -euo pipefail',
-  'npx --yes wrangler@4.149.0 --version',
-  'setsid npx --yes wrangler@4.149.0 pages dev _site --ip 127.0.0.1 --port 8788 --compatibility-date 2026-10-06 --show-interactive-dev-session=false',
-  'runtime_pid=$!',
-  'trap cleanup EXIT',
-  "trap 'exit 130' INT",
-  "trap 'exit 143' TERM",
-  'kill -- -"$runtime_pid"',
-  'kill -KILL -- -"$runtime_pid"',
-  'wait "$runtime_pid"',
-  'cat "$runtime_log"',
-  'deadline=$((SECONDS + 90))',
-  'while [[ "$SECONDS" -lt "$deadline" ]]',
-  'curl --fail --silent --max-time 2 "$TOZA_RUNTIME_URL/en/"',
-  "grep -Fq '<html lang=\"en\" dir=\"ltr\">'",
-  "grep -Fq 'id=\"main-content\"'",
-  'node scripts/verify-pages-runtime.mjs | tee "$runtime_checks"',
-  "grep -Fxq 'PAGES RUNTIME VERIFIED: 78 route, status, content and asset checks'",
-]) assertIncludes(runtime.run, required, 'Bounded pinned local Pages gate');
-assert(!/\bpkill\b|\bkillall\b/.test(runtime.run), 'Runtime cleanup must target only the owned process group');
+  "path.join(root, 'node_modules/wrangler/bin/wrangler.js')",
+  "'pages', 'dev', '_site', '--ip', '127.0.0.1', '--port', String(port)",
+  "'--compatibility-date', '2026-10-06', '--show-interactive-dev-session=false'",
+  "detached: process.platform !== 'win32'",
+  "[['SIGINT', 130], ['SIGTERM', 143]]",
+  "gate?.kill('SIGTERM')",
+  "process.kill(-runtime.pid, 'SIGTERM')",
+  "process.kill(-runtime.pid, 'SIGKILL')",
+  "spawn('taskkill', ['/pid', String(runtime.pid), '/t', '/f']",
+  'Date.now() + 90_000',
+  "fetch(url + '/en/', { signal: AbortSignal.timeout(2_000) })",
+  "response.status === 200 && html.includes('<html lang=\"en\" dir=\"ltr\">') && html.includes('id=\"main-content\"')",
+  "['scripts/verify-pages-runtime.mjs']",
+  'TOZA_RUNTIME_URL: url',
+  'timeout: 120_000',
+  "await once(gate, 'close')",
+  'PAGES RUNTIME VERIFIED: 78 route, status, content and asset checks',
+  'process.exitCode = code ?? 1',
+  'finally {',
+  'await stopRuntime()',
+]) assertIncludes(runtimeWrapper, required, 'Shared bounded installed Pages gate');
+assert(!/\bpkill\b|\bkillall\b|\bnpx\b/.test(runtimeWrapper), 'Runtime must use the installed CLI and target only its owned process tree');
 before(previewJob, previewFocused, previewVerification, 'Preview focused regressions must precede build checks');
 before(previewJob, previewVerification, previewBrowser, 'Preview browser suite must follow build verification');
 before(previewJob, previewBrowser, runtime, 'Local Pages checks must follow the browser/build checks');
@@ -123,12 +136,19 @@ before(previewJob, runtime, previewPrepare, 'All 78 local Pages checks must run 
 before(previewJob, previewPrepare, previewDeploy, 'Noindex preparation must precede preview deployment');
 assert(!preview.includes("--branch main"), "Preview must not deploy production");
 assert(readText('.nvmrc').trim() === '24' && pkg.engines.node === '24.x', 'Build runtime must use supported Node 24');
-for (const workflow of [ci, preview, deploy]) {
-  assertIncludes(workflow, 'npm run test:audit-policy && npm run audit:tools', 'Explicit build dependency audit gate');
-  assertIncludes(workflow, 'runs-on: ubuntu-24.04', 'Stable runner image');
-  assertIncludes(workflow, "node-version-file: '.nvmrc'", 'Shared Node version');
-  assertIncludes(workflow, 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1', 'Pinned Node 24 checkout');
-  assertIncludes(workflow, 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1', 'Pinned Node 24 setup');
-  assert(!workflow.includes('ubuntu-latest') && !workflow.includes('actions/checkout@v4'), 'No deprecated runner/action defaults');
+for (const [source, job] of [[ci, ciJob], [preview, previewJob], [deploy, deployJob]]) {
+  const sharedRuntime = oneStep(job, 'npm run verify:pages', 'Shared local Pages runtime gate');
+  const verification = oneStep(job, 'npm run verify:all', 'Build/copy verification gate');
+  const audit = oneStep(job, 'npm run test:audit-policy && npm run audit:tools', 'Build-tool audit policy');
+  assert(sharedRuntime.if === undefined && verification.if === undefined && audit.if === undefined, 'Shared runtime/build/audit failures must block release');
+  assert(job.steps.filter(step => /verify:pages|check-pages-runtime|verify-pages-runtime|pages dev/.test(step.run || '')).length === 1, 'Exactly one reusable runtime gate per workflow; no duplicate inline runtime');
+  before(job, verification, sharedRuntime, 'Build must precede local Pages checks');
+  assert(!/npx.*wrangler/i.test(source), 'Use the lockfile-pinned Wrangler');
+  assertIncludes(source, 'runs-on: ubuntu-24.04', 'Stable runner image');
+  assertIncludes(source, "node-version-file: '.nvmrc'", 'Shared Node version');
+  assertIncludes(source, 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1', 'Pinned Node 24 checkout');
+  assertIncludes(source, 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1', 'Pinned Node 24 setup');
+  assert(!source.includes('ubuntu-latest') && !source.includes('actions/checkout@v4'), 'No deprecated runner/action defaults');
 }
+before(deployJob, oneStep(deployJob, 'npm run verify:pages', 'Production Pages runtime'), productionDeploy, 'Production runtime gate must precede deployment');
 console.log("CI CONTRACT VERIFIED");
