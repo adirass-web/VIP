@@ -22,6 +22,24 @@ function foldInPlace(node,label) {const marker=element('<div></div>');D.prepend(
 function detailOf(section) {return cls(section,'section-detail')[0];}
 function paragraphs(n) {return n.children.filter(c=>c.name==='p');}
 
+function presentBusinessOffer(section,detail) {
+  const ps=paragraphs(detail),blocks=detail.children.filter(n=>n.type==='tag');
+  const expectedStarts=['Private Exposure Assessment · Typically four hours','₪3,600 including VAT','The paid visit includes hands-on inspection of relevant access','You receive a summary of what was reviewed, found and changed','Personal Shield hardens the agreed settings and access arrangements'];
+  const qualifier='Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service.';
+  const finalLinks=ps[5]?tags(ps[5],'a'):[];
+  if(section.attribs.id!=='put-the-technical-questions-in-experienced-hands'||ps.length!==6||blocks.length!==6||ps.some((p,i)=>blocks[i]!==p)||expectedStarts.some((s,i)=>!text(ps[i]).startsWith(s))||text(ps[0])!==expectedStarts[0]||text(ps[1])!==expectedStarts[1]||!text(ps[4]).endsWith(qualifier)||finalLinks.length!==2||finalLinks[0].attribs.href!=='/en/private-exposure-assessment.html'||finalLinks[1].attribs.href!=='/en/pricing.html'||ps[4].children[0]?.type!=='text'||!ps[4].children[0].data.startsWith('Personal Shield ')) {
+    throw Error('Missing approved Business Assessment / Personal Shield block mapping');
+  }
+  ps[1].attribs.class='offer-price';
+  // Keep the complete scope/price qualification in its original paragraph.
+  ps[4].children[0].data=ps[4].children[0].data.slice('Personal Shield'.length);
+  D.prependChild(ps[4],element('<strong>Personal Shield</strong>'));
+  move(group(ps.slice(0,4),'business-assessment'),detail);
+  move(group([ps[4]],'business-shield'),detail);
+  move(ps[5],detail);
+  detail.attribs.class+=' business-offer-detail';
+}
+
 function present(template,route) {
   const start=template.indexOf('<section');
   const prefix=template.slice(0,start);
@@ -47,6 +65,7 @@ function present(template,route) {
   const sections=cls(doc,'copy-section');
   const contact=sections.find(s=>s.attribs.id==='contact');
   const offer=sections.find(s=>(s.attribs.class||'').includes('copy-offer'));
+  if(route==='business-dispute'&&!offer)throw Error('Missing approved Business Assessment / Personal Shield block mapping');
   const requiredSection=id=>{
     const section=sections.find(s=>s.attribs.id===id);
     if(!section)throw Error('Missing approved '+route+' section: '+id);
@@ -74,7 +93,8 @@ function present(template,route) {
     const rail=group([heading],'section-title'),detail=group(rest,'section-detail');
     D.appendChild(content,rail);D.appendChild(content,detail);
     if(section===offer&&route!=='private-exposure-assessment') {
-      const ps=paragraphs(detail);ps.slice(0,2).forEach(p=>move(p,rail));ps[1].attribs.class='offer-price';
+      if(route==='business-dispute')presentBusinessOffer(section,detail);
+      else {const ps=paragraphs(detail);ps.slice(0,2).forEach(p=>move(p,rail));ps[1].attribs.class='offer-price';}
     }
     if(tags(detail,'table').length)section.attribs.class+=' has-tables';
     if(section===contact&&route!=='private-exposure-assessment') {

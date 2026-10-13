@@ -62,7 +62,17 @@ function home(doc) {
   addClass(method,'narrative-method');
   addClass(offer,'preview-assessment');
   const region=group([offer],'home-first-visit');
-  const situations=section(doc,'situations');
+  const situations=requiredSection(doc,'situations');
+  const situationDetail=detailOf(situations),situationBlocks=situationDetail.children.filter(n=>n.type==='tag');
+  const [invitation,pair,...supporting]=situationBlocks;
+  const expectedSupporting=[
+    ['/en/they-know-something.html','Private information has surfaced — examine what your own environment may reveal, without assuming how it happened.'],
+    ['/en/inheritance-clash.html','Inheritance conflict — reconsider access arranged through family help, within your own authority.'],
+  ];
+  if(invitation?.name!=='p'||!classes(situationDetail,'situation-pair').includes(pair)||supporting.length!==2||supporting.some((p,i)=>p.name!=='p'||text(p)!==expectedSupporting[i][1]||tags(p,'a').length!==1||tags(p,'a')[0].attribs.href!==expectedSupporting[i][0])) {
+    throw Error('Missing approved Home supporting situation block mapping');
+  }
+  D.append(pair,group(supporting,'situation-secondary'));
   // The approved situations section already leads with proactive eligibility.
   const controls=classes(doc,'detail-controls')[0],privacy=section(doc,'your-confidence-matters-your-approval-directs-the-work'),contact=section(doc,'contact');
   // The hero establishes the stakes; show the practical outcome before the deeper mechanism.
