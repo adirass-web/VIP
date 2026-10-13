@@ -106,7 +106,7 @@ summary::-webkit-details-marker { display: none; }
 .portrait { margin: 0; }
 .portrait img { display: block; inline-size: 100%; block-size: auto; }
 .portrait figcaption { font-size: 12px; line-height: 1.45; padding-block-start: 10px; color: var(--muted); }
-.site-footer { padding-block: 44px 24px; font-size: 14px; }
+.site-footer { margin-block-start: 160px; padding-block: 44px 24px; font-size: 14px; }
 .foot-bar-inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 64px; }
 .foot-brand .brand-logo { margin-block-end: 18px; }
 .fb-tag { display: block; font-size: 16px; max-inline-size: 300px; }
@@ -125,6 +125,7 @@ summary::-webkit-details-marker { display: none; }
   .foot-bar-inner { gap: 32px; }
 }
 @media (max-width: 640px) {
+  .site-footer { margin-block-start: 96px; }
   body { font-size: 18px; line-height: 1.55; }
   .wrap { inline-size: calc(100% - 40px); }
   .menu { inset-inline: -20px; padding-inline: 20px; }
@@ -174,6 +175,7 @@ summary::-webkit-details-marker { display: none; }
   td, td + td { border-inline-start: 0; padding: 0; font-size: 16px; }
 }
 @media print {
+  .site-footer { margin-block-start: 0; }
   .detail-controls, .faq-tools, .nav-toggle { display: none; }
   .section-disclosure > summary::after, .supporting-detail > summary::after, .faq summary::after { display: none; }
   body { background: white; color: black; }

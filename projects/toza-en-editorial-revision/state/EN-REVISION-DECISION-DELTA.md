@@ -366,3 +366,14 @@ This register is the bridge between page approval and the future consolidated v3
 - **Maintenance:** PR #56 remains separate and deferred absent its own release instruction. Do not merge it or copy its dependency/documentation changes into this batch. Current main is 6c525f8; record the explicit preview-tool version and rerun current gates.
 - **Gates:** Final-diff independent adversarial review, unchanged protected/accepted facts, current local checks, GitHub CI/CodeQL and Code Review diagnostics on the reviewed head; hosted HTML/assets/route/header/indexing fidelity plus fresh desktop/mobile and interaction evidence. Address only findings consistent with present Toza authority.
 - **Boundary:** This advances preparation and owner review of a concrete hosted release candidate. It does not authorize main merge or production publication. PR #54 stays untouched. Present the final reviewed SHA, PR and hosted preview before the batch publication decision.
+
+### D-042 — Publish the reviewed PR #57 batch
+- **Date:** 2026-10-13
+- **Authority:** Owner: “I approve, proceed with The deployment plan”.
+- **Decision:** Publish reviewed head 62857d1 through GitHub expected-head validation. PR #57 merged as d993322, with the identical reviewed Git tree. Merge-specific production workflow 38379886644 and live content/assets/indexing/security/78-route/desktop-mobile checks passed. Full release evidence resides in V:/TOZA hardening biz/release-evidence/pr57/production. PR #54 and PR #56 were untouched.
+
+### D-043 — Lower the shared footer
+- **Date:** 2026-10-13
+- **Authority:** Owner: “make the footer much lower”.
+- **Decision:** Add space between final page content and the shared English footer: 160px desktop, 96px at the existing 640px mobile breakpoint. Preserve footer words/links and all approved main-page content, including protected Assessment. Version the changed shared stylesheet for cache freshness; retain exact asset assertions at the new version.
+- **Scope:** Local preview on codex/toza-footer-spacing from deployed d993322. No pricing/service-fact change or unrelated redesign. PR reconciliation is read-only; do not close/merge PR #54 or PR #56 through this instruction. Show desktop/mobile result before any subsequent publication stage.
