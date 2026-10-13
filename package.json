@@ -15,7 +15,10 @@
     "test:rtl-visual": "node scripts/run-rtl-visual.mjs",
     "sync:copy": "node scripts/accepted-copy.cjs",
     "audit:tools": "node scripts/audit-build-tools.cjs",
-    "test:audit-policy": "node --test scripts/audit-build-tools.test.cjs"
+    "test:audit-policy": "node --test scripts/audit-build-tools.test.cjs",
+    "verify:pages": "node scripts/check-pages-runtime.mjs",
+    "pages:dev": "wrangler pages dev _site --ip 127.0.0.1 --port 8788 --compatibility-date 2026-10-06 --show-interactive-dev-session=false",
+    "pages:deploy": "wrangler pages deploy"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
@@ -23,7 +26,8 @@
     "dom-serializer": "1.4.1",
     "domutils": "2.8.0",
     "htmlparser2": "7.2.0",
-    "markdown-it": "15.0.2"
+    "markdown-it": "15.0.2",
+    "wrangler": "4.150.0"
   },
   "engines": {
     "node": "24.x"

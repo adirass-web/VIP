@@ -366,3 +366,15 @@ This register is the bridge between page approval and the future consolidated v3
 - **Maintenance:** PR #56 remains separate and deferred absent its own release instruction. Do not merge it or copy its dependency/documentation changes into this batch. Current main is 6c525f8; record the explicit preview-tool version and rerun current gates.
 - **Gates:** Final-diff independent adversarial review, unchanged protected/accepted facts, current local checks, GitHub CI/CodeQL and Code Review diagnostics on the reviewed head; hosted HTML/assets/route/header/indexing fidelity plus fresh desktop/mobile and interaction evidence. Address only findings consistent with present Toza authority.
 - **Boundary:** This advances preparation and owner review of a concrete hosted release candidate. It does not authorize main merge or production publication. PR #54 stays untouched. Present the final reviewed SHA, PR and hosted preview before the batch publication decision.
+
+### D-042 — Publish the reviewed PR #57 batch
+- **Date:** 2026-10-13
+- **Authority:** Owner: “I approve, proceed with The deployment plan”.
+- **Decision:** Publish reviewed head 62857d1 through GitHub expected-head validation. PR #57 merged as d993322, with the identical reviewed Git tree. Merge-specific production workflow 38379886644 and live content/assets/indexing/security/78-route/desktop-mobile checks passed. Full release evidence resides in V:/TOZA hardening biz/release-evidence/pr57/production. PR #54 and PR #56 were untouched.
+
+### D-044 — Reconcile PR #56 against current main
+- **Date:** 2026-10-13
+- **Authority:** Owner: “PR #56: reconcile before merging”.
+- **Decision:** Reconcile the existing maintenance PR against published d993322, pin Wrangler 4.150.0 to match the successful production tool, retain #57 workflow safeguards, and refresh operational guidance without changing accepted authority or public output.
+- **Gates:** Fresh locked installation, audit policy/live audit, exact-copy build verification, focused regressions, browser tests, runtime success/failure checks, byte-for-byte public-output comparison and independent review. Update the existing PR through a normal push; verify exact-head GitHub checks.
+- **Boundary:** No merge, deployment, PR #54 change, footer-preview integration, branch deletion or service-fact change. D-043 belongs to the separate local footer preview and is not part of this maintenance PR.

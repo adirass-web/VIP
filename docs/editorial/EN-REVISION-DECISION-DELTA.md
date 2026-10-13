@@ -1,6 +1,6 @@
 # Toza EN Revision Decision Delta
 
-Status: **LIVE decision register**  
+Status: **HISTORICAL snapshot** — use the [live project decision register](../../projects/toza-en-editorial-revision/state/EN-REVISION-DECISION-DELTA.md). This earlier snapshot is retained for provenance.
 Purpose: record substantive decisions made during EN-02-v1 revision so the future `TOZA-EN-COPY-SPEC-v3.md` can be generated from an explicit decision trail.
 
 Do not record ordinary line edits, punctuation, or minor wording changes.
