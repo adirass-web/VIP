@@ -1,35 +1,38 @@
 # Current Project Status
 
-Updated: 12 October 2026. **The English release is published. No additional merge is required to publish the four pages.**
+Updated: 13 October 2026. **The English release is published through PR #57. PR #56 is an unmerged maintenance reconciliation.**
 
 ## Released baseline
 
 | Release | Main commit | Scope |
 |---|---|---|
 | [#52](https://github.com/adirass-web/VIP/pull/52) | ed8d06aba134132b9832e46df2771fb0aaecbdba | Approved Clear Practice design and logo |
-| [#53](https://github.com/adirass-web/VIP/pull/53) | e78a85c66ac001455ae7759e5346c3a14f6113d6 | Node 24, Eleventy 3, Playwright 1.64 and build-tool maintenance |
-| [#55](https://github.com/adirass-web/VIP/pull/55) | 6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f | Approved Home, Pricing, Separation and Divorce, and They Know Something refinements |
+| [#53](https://github.com/adirass-web/VIP/pull/53) | e78a85c66ac001455ae7759e5346c3a14f6113d6 | Node 24, Eleventy 3, Playwright 1.64 and maintenance |
+| [#55](https://github.com/adirass-web/VIP/pull/55) | 6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f | Home, Pricing, Separation and They Know Something |
+| [#57](https://github.com/adirass-web/VIP/pull/57) | d9933223984cce6a5f3c56e80e9803aa92cca788 | Batch A/B/C copy, Process stages, Home rows and Business groups |
 
-Main contains all three releases. #51 was merged earlier; the previous record describing it as open was stale. PR #54 remains untouched and is not another required release step.
+Main includes these releases. #51 merged earlier. PR #54's useful presentation is superseded by #55/#57; its open draft is not a missing release. This reconciliation does not close it. The local footer-spacing preview is separate and neither included in #56 nor deployed.
 
-## Accepted copy
+## Effective accepted authority
 
-The original EN-02 exact-copy acceptance remains recorded at aeb65a51adc3217844be9c465de69a875084b8e4 and in approved/acceptance-manifest.json. Original source fingerprints and protected Assessment authority remain immutable.
+The original EN-02 approval and protected Assessment remain fingerprinted in approved/acceptance-manifest.json. Additive authority applies in order:
 
-Effective authority is applied in order: original acceptance, approved/acceptance-amendment-2026-10-10.json (EN-03), then approved/acceptance-amendment-2026-10-10-round-02.json (EN-04). EN-04 governs the four pages released in #55. The other seven English pages and service facts were preserved by that release. The live decision register remains EN-REVISION-DECISION-DELTA.md in this directory.
+- approved/acceptance-amendment-2026-10-10.json (EN-03).
+- approved/acceptance-amendment-2026-10-10-round-02.json (EN-04: four pages).
+- approved/acceptance-amendment-2026-10-12-batch-a.json (Why Toza and Process stage map).
+- approved/acceptance-amendment-2026-10-12-batch-b.json (Business, Inheritance and Attorneys).
+- approved/acceptance-amendment-2026-10-13-batch-c.json (FAQ and Process links).
 
-The original editorial phases through consolidation are complete. Eleven English marketing pages are published. Hebrew marketing source is retained but unpublished; Hebrew terms/privacy documents remain accessible. Hebrew adaptation and Russian publication remain deferred.
+Use scripts/accepted-copy.cjs pages()/assertAuthority() to resolve effective sources. Historical packets and the v3 specification cannot undo later approvals. Service facts, original sources, manifests and protected Assessment remain unchanged. Eleven English pages are published; Hebrew marketing is retained but unpublished, legal documents remain accessible, and Hebrew/Russian localization is deferred.
 
 ## Release evidence and limits
 
-The completed Business site thread, “Continue Toza editorial revision,” records successful #53 and #55 deployments, independent reviews, 52 browser tests, 78 live route checks, exact hosted content/assets, indexing/security headers and desktop/mobile verification. The final workflow and deployment evidence is recorded in [PR #55](https://github.com/adirass-web/VIP/pull/55), including the successful [production workflow](https://github.com/adirass-web/VIP/actions/runs/38241020823). This status reconciliation did not independently repeat production checks.
+PR #57 reviewed head 62857d15331f4c06e30d12ef2ada2d9133bc6379 and merge d993322 share the identical Git tree. The [production workflow](https://github.com/adirass-web/VIP/actions/runs/38379886644) succeeded. Recorded checks include eleven-page parity, exact Git-blob CSS, indexing/security headers, 78 live routes, 56 browser tests, four focused regressions and independent desktop/mobile inspection. Evidence resides in V:/TOZA hardening biz/release-evidence/pr57/production. This records prior release evidence rather than a new live-test claim.
 
-See [the committed release record](../../../docs/four-page-copy-preview/RELEASE.md) for scope, review gates, the corrected preview-header preparation and rollback procedure. Older local-preview READMEs, October 4 planning documents and approval packets remain historical evidence. Their then-pending merge/deployment instructions do not describe current release status.
+The Code Review/GitHub 300-file PR-diff retrieval limit was recorded alongside complete local review. Two upstream advisories remain under the strict audit policy; this is not a vulnerability-free audit. Chromium checks do not establish Safari, physical-device, assistive-technology or conversion performance.
 
-Two documented upstream build-tool advisories remain under the reviewed audit policy: nine affected dependency nodes, no critical findings at the reviewed baseline. This is not a clean npm audit. See [build-tool maintenance](../../../docs/build-tool-maintenance.md).
+## PR #56 reconciliation
 
-## Remaining work
+Development tooling, one shared 78-check gate and guidance are reconciled against #57. Retain its exact preview branch/SHA restrictions, indexing and security safeguards, focused regressions and synchronize trigger. Pin Wrangler 4.150.0, matching the recorded production tool, with local compatibility date 2026-10-06; do not change the production project compatibility setting.
 
-Align reusable cloud setup with the released toolchain; consolidate duplicate guidance through canonical links; inventory branch and asset cleanup; and automate local Pages routing checks with pinned Wrangler. Track execution and preserved items in [post-release maintenance](../../../docs/post-release-maintenance.md). No service-fact, protected-copy, translation, PR #54 or production change is part of that cleanup.
-
-If #55 needs rollback, revert only that release through a reviewed PR, preserving #53 maintenance. Do not force-reset main.
+Fresh install, audit, build, browser, runtime and public-output parity gates apply to the new head. Merge/publication requires a separate owner instruction. Do not bundle footer spacing, old #54 content, translations, service-fact changes or legacy-asset cleanup. No branch or PR deletion is authorized. A reviewed release revert must preserve independent maintenance; never force-reset main.

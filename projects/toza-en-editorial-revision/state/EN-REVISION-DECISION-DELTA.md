@@ -286,3 +286,95 @@ This register is the bridge between page approval and the future consolidated v3
 - **Implementation:** Continue in codex/toza-approved-copy-preview from 09a534e. Integrate only these four approved blocks, adapt presentation and relevant validation as needed, preserve Home's benefits-before-detailed-risk order and Pricing's early fee visibility. Keep prior accepted sources, both prior manifests, locked harness and protected Assessment immutable.
 - **Gates:** Approved exact hashes and rendered body/metadata/table associations; seven other English pages unchanged; build and publication contracts; desktop/mobile reflow, contact, keyboard, disclosures and print checks; independent source/authority and rendered review.
 - **Boundary:** Local preview only. Do not change PR #54, push, merge, change main or deploy. This supersedes earlier draft-only status for these four exact blocks; it does not authorize further wording edits during implementation.
+
+### D-031 — Publish the four-page release after separate maintenance
+- **Date:** 2026-10-12
+- **Authority:** Owner authorized a separate four-page GitHub PR, review/release gates and publication if all pass; separately approved releasing maintenance PR #53 first.
+- **Result:** PR #53 merged as e78a85c66ac001455ae7759e5346c3a14f6113d6, then PR #55 as 6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f. Final source, independent review, 52 browser checks, hosted preview and 78 live edge checks passed. Production parity/indexing/security headers and eight desktop/mobile renderings passed. Evidence is recorded in PR #55 and docs/four-page-copy-preview/RELEASE.md.
+- **Boundary:** This release is complete. PR #54 remains unchanged. Known build-tool advisory residuals remain documented under the reviewed maintenance policy; no clean-audit claim. This authorization does not grant future batch publication.
+
+### D-032 — Approve the next execution plan and start Batch A candidates
+- **Date:** 2026-10-12
+- **Authority:** Owner: “Approved. Start Batch A using the planned model tiers, skills and team. Draft Why Toza and the How Toza helps stage map, keep service facts unchanged, and show me the changes after independent review. Do I need to change model tiers or you do? Don’t deploy yet.”
+- **Decision:** Use planning/2026-10-12-next-editorial-design-execution-plan.md. Start Why Toza targeted candidate drafting and the How Toza helps stage/section map. Apply the four project Toza skills; use Astra for strategy and independent review, Sol for drafting/editing and stage mapping, Luna for mechanical inventories. The orchestrator assigns the requested tiers; no user model-setting change is needed for these delegated tasks.
+- **Scope:** Draft/review only, based on deployed main 6c525f8. How Toza helps begins with C0 wording and a proposed grouping of its existing eight steps into its existing three stages. Any newly proposed public wording is identified separately. Current commercial/service facts and protected Assessment remain fixed.
+- **Branch:** Use isolated local codex/toza-trust-process-refinement for the approved batch and en-05 candidate artifacts. This explicit approval of the new plan supersedes the historical editorial-only branch restriction for this scoped work.
+- **Boundary:** New exact copy and the stage map await owner approval after independent review. No generated-template, asset, acceptance-manifest, PR #54, main, merge or deployment change is authorized. Later batches remain planned, not executed by this instruction.
+
+### D-033 — Accept Batch A copy and stage map for local implementation
+- **Date:** 2026-10-12
+- **Authority:** Owner: “Approved. Build Batch A into the local preview using this copy and stage map. Keep service facts unchanged, run the quality gates and independent review, and show me desktop and mobile. Don’t deploy yet.”
+- **Decision:** Accept the exact Why Toza candidate, including unchanged metadata, with hash 53ee848c5a5247777c51d46ac1c8a20bc6e2430abd375bfe81ede4a019cad575. Accept the How Toza helps stage map as a C0 presentation specification; its public source remains EN-02-v2 and its wording/order/visibility are preserved. Additive approval record: approved/acceptance-amendment-2026-10-12-batch-a.json.
+- **Scope:** Continue on codex/toza-trust-process-refinement. Integrate the two approved Why paragraphs and presentation-only stage grouping for Process. Adapt the acceptance loader, generation, narrowly scoped styling and verification as needed. Preserve all service/commercial facts, historical sources/manifests and protected PA. Nine other English pages remain unchanged.
+- **Gates:** Current exact sources and reproducible templates; copy/metadata/links/table associations; protected order; unchanged other pages; existing audit/build/browser gates; focused stage visibility/order/keyboard/print checks; fresh independent implementation and rendered review; desktop/mobile local gallery.
+- **Boundary:** Local preview only. No push, PR #54 change, main merge or deployment. Later batches remain scheduled. Owner approval of the rendered result remains a later gate.
+
+### D-034 — Continue to Batch B candidate drafting
+- **Date:** 2026-10-12
+- **Authority:** After the reviewed Batch A local preview was presented, the owner instructed: “Proceed to next”.
+- **Decision:** Continue the approved 12 October execution plan with Batch B: Business and Founder Dispute → Inheritance Conflict → For Attorneys. Apply the planned model tiers and four Toza skills, preserve service facts, and present complete candidates after independent review.
+- **Scope:** New en-06 candidate artifacts on the existing isolated codex/toza-trust-process-refinement branch, based on local Batch A commit c85f7fe and deployed baseline 6c525f8. Batch A accepted copy and current local rendering remain preserved. No corporate investigation, estate entitlement, forensic/evidentiary or legal-service claim is added.
+- **Boundary:** This advances drafting/review, not publication. Batch B exact wording remains unapproved until owner review; no template/asset/acceptance-manifest, PR #54, main, merge, push or deployment change is authorized. The deployment hold persists.
+
+### D-035 — Accept the complete Batch B candidate payloads
+- **Date:** 2026-10-12
+- **Authority:** Owner: “I ,the owner approve complete candidate payloads”.
+- **Decision:** Accept the three complete EN-06 exact-copy payloads, including metadata: Business and Founder Dispute, Inheritance Conflict and For Attorneys. Additive fingerprints are recorded in approved/acceptance-amendment-2026-10-12-batch-b.json; revisions/en-06/ACCEPTANCE.md supersedes historical pending-owner labels.
+- **Facts and gates:** The reviewed four-paragraph change set is unchanged. G1 strategy, G2 ten editorial sweeps, G3 independent PASS with zero required findings and 79/79 mechanical draft checks preceded approval. All service/commercial facts, prior accepted sources and protected Assessment remain preserved.
+- **Boundary:** This records exact-copy acceptance. Runtime-loader integration and the desktop/mobile preview are subsequent implementation work; no template, asset, PR #54, main, push, merge or deployment change is made by this acceptance. Publication remains on hold.
+
+### D-036 — Build approved Batch B into the local preview
+- **Date:** 2026-10-12
+- **Authority:** Owner: “Approved. Build Batch B into the local preview using the approved copy. Keep service facts unchanged, run the quality gates and independent review, and show me desktop and mobile. Don’t change PR #54 or deploy yet.”
+- **Decision:** Integrate the three exact approved EN-06 payloads through the additive Batch B amendment and acceptance loader on codex/toza-trust-process-refinement. Generate only Business, Inheritance and Attorneys templates. Preserve the existing design, accepted Batch A implementation, all service facts and protected Assessment.
+- **Gates:** Exact approved fingerprints and body/metadata/link fidelity; eight other English routes unchanged; audit policy, build and verification contracts; browser/responsive/contact/keyboard/print checks; fresh independent source and actual-render reviews; desktop/mobile local evidence.
+- **Boundary:** Local implementation only. No PR #54 change, push, main merge or deployment. Rendered owner review precedes a later release instruction.
+
+### D-037 — Continue to Batch C alignment review
+- **Date:** 2026-10-13
+- **Authority:** After the reviewed Batch B local preview was presented, the owner instructed: “proceed”.
+- **Decision:** Continue the approved execution plan with Batch C: FAQ, shared surfaces and the full eleven-page English corpus. Apply the Toza Editor and independent Red Team, with mechanical fact, source and link inventories. Diagnose actual inconsistencies before drafting; a no-change result is valid.
+- **Scope:** Review artifacts under revisions/en-07 on codex/toza-trust-process-refinement, based on local Batch B commit b1f88a0. Approved A/B and EN-04 wording stays fixed during review. Retain accepted FAQ length unless a specific redundant unit is justified; protected Assessment receives consistency/link checks only. Any proposed new shared or page wording awaits exact owner approval before integration.
+- **Boundary:** This advances the next alignment stage, not publication. No production-source, acceptance-manifest, asset, PR #54, main, push, merge or deployment change is authorized by this continuation. The deployment hold remains in force.
+
+### D-038 — Accept and locally integrate Batch C guidance links
+- **Date:** 2026-10-13
+- **Authority:** Following the complete reviewed candidate packet, the owner instructed: “approve. proceed”. The packet identified exact-copy approval followed by local integration and rendered QA as the next steps.
+- **Decision:** Accept complete EN-07 FAQ and Process payloads, including unchanged metadata and the one added contact-guidance link each. Approved hashes are recorded in approved/acceptance-amendment-2026-10-13-batch-c.json. Historical pending-owner labels are superseded by revisions/en-07/ACCEPTANCE.md.
+- **Implementation:** Continue local integration on codex/toza-trust-process-refinement from 9b12842. Add the two approved overlays, generate FAQ/Process templates, and adapt strict verification to permit only the approved additions. Preserve all existing words/facts, nine other English routes, previous approvals, shared runtime/structured/LLMS surfaces and protected Assessment. Process C0 is superseded only for its added contact link; the approved stage map and stage content stay unchanged.
+- **Gates:** Exact payload and template/metadata fidelity; removal of only the approved links reconstructs prior payloads; nine unchanged HTML routes; build/audit policy/browser suites; actual FAQ answer opening and return/contact behavior at desktop/mobile widths; fresh independent source and rendered reviews.
+- **Boundary:** Local preview only. No PR #54 change, push, main merge or deployment. Owner review of the rendered result and separate release authorization remain later gates.
+
+### D-039 — Continue to the visual-refinement gap review
+- **Date:** 2026-10-13
+- **Authority:** After the reviewed Batch C local result was presented, the owner instructed: “proceed”.
+- **Decision:** Advance the next saved-plan workstream: a fresh current-site visual-gap assessment and focused refinement plan. Apply the existing business/design brief, accepted Clear Practice system and fitted-panel identity. Use actual current local and published-baseline captures with independent art-direction and UX/CRO perspectives.
+- **Scope:** Planning/evidence under docs/visual-refinement-review from local d8a2924. Keep all approved copy, facts and protected Assessment fixed. Distinguish resolved historical findings from remaining observations; rank concrete layout/hierarchy/reading-effort/brand opportunities with responsive and approval gates. No general brand restart or new marketing wording.
+- **Boundary:** This authorizes review and a concrete proposed visual plan, not unreviewed production-layout changes or publication. No PR #54 change, push, main merge or deployment. Specific rendered refinements remain subject to the recorded design/preview gates.
+
+### D-040 — Integrate both approved visual refinements locally
+- **Date:** 2026-10-13
+- **Authority:** Owner: “Approved. Integrate both refinements into the local preview, keep the accepted copy unchanged, run the quality gates and independent review, and show me desktop and mobile. Plan deployment.”
+- **Decision:** Accept the reviewed Home supporting-row and Business purchase-group concepts in docs/visual-refinement-review at 2bc8f90. Integrate their presentation through the existing adapters on codex/toza-trust-process-refinement. Preserve primary/supporting hierarchy, all accepted words, metadata, block/link order, current palette/type, and Business's complete separate-scope/price qualification. Retain the corrected original mobile reading measures.
+- **Gates:** Exact accepted-source and rendered-copy fidelity; protected Assessment and nine unrelated English routes unchanged; reproducible sync/build, verification, audit policy and browser suites; fresh actual desktop/mobile and narrow-width interactions; independent adversarial source and rendered review.
+- **Boundary:** Local implementation and preview plus a concrete deployment plan. No PR #54 change, push, main change, merge or deployment. Prior A/B/C approvals remain in force; this decision adds no commercial facts or new wording.
+
+### D-041 — Prepare the separate reviewed batch PR and hosted preview
+- **Date:** 2026-10-13
+- **Authority:** After the integrated desktop/mobile result, passing local gates and deployment plan were presented, the owner instructed: “proceed”.
+- **Decision:** Advance the deployment plan's PR and restricted hosted-preview stage for the settled A/B/C changes plus approved Home/Business refinements, from local b81da1a on codex/toza-trust-process-refinement. Push the reviewed branch and create a separate PR targeting current main. Prepare narrowly scoped workflow/contract changes for this exact same-repository branch and PR-head checkout, noindex/security-header preservation, focused regressions and the 78 Pages checks.
+- **Maintenance:** PR #56 remains separate and deferred absent its own release instruction. Do not merge it or copy its dependency/documentation changes into this batch. Current main is 6c525f8; record the explicit preview-tool version and rerun current gates.
+- **Gates:** Final-diff independent adversarial review, unchanged protected/accepted facts, current local checks, GitHub CI/CodeQL and Code Review diagnostics on the reviewed head; hosted HTML/assets/route/header/indexing fidelity plus fresh desktop/mobile and interaction evidence. Address only findings consistent with present Toza authority.
+- **Boundary:** This advances preparation and owner review of a concrete hosted release candidate. It does not authorize main merge or production publication. PR #54 stays untouched. Present the final reviewed SHA, PR and hosted preview before the batch publication decision.
+
+### D-042 — Publish the reviewed PR #57 batch
+- **Date:** 2026-10-13
+- **Authority:** Owner: “I approve, proceed with The deployment plan”.
+- **Decision:** Publish reviewed head 62857d1 through GitHub expected-head validation. PR #57 merged as d993322, with the identical reviewed Git tree. Merge-specific production workflow 38379886644 and live content/assets/indexing/security/78-route/desktop-mobile checks passed. Full release evidence resides in V:/TOZA hardening biz/release-evidence/pr57/production. PR #54 and PR #56 were untouched.
+
+### D-044 — Reconcile PR #56 against current main
+- **Date:** 2026-10-13
+- **Authority:** Owner: “PR #56: reconcile before merging”.
+- **Decision:** Reconcile the existing maintenance PR against published d993322, pin Wrangler 4.150.0 to match the successful production tool, retain #57 workflow safeguards, and refresh operational guidance without changing accepted authority or public output.
+- **Gates:** Fresh locked installation, audit policy/live audit, exact-copy build verification, focused regressions, browser tests, runtime success/failure checks, byte-for-byte public-output comparison and independent review. Update the existing PR through a normal push; verify exact-head GitHub checks.
+- **Boundary:** No merge, deployment, PR #54 change, footer-preview integration, branch deletion or service-fact change. D-043 belongs to the separate local footer preview and is not part of this maintenance PR.

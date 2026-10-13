@@ -254,3 +254,68 @@ test('narrative assets are scoped and the script retains shared behavior',async(
   await expect(page.locator('link[href*="home-pricing.css"]')).toHaveCount(0);
   await expect(page.locator('script[src="/assets/js/site.js?v=clear-practice-1"]')).toHaveCount(1);
 });
+
+test('Process stages preserve visible order, purchase boundaries and readable headings',async({page})=>{
+  const processCopy=pages().find(copy=>copy.route==='what-happens-during-the-visit');
+  const approvedStageBlocks=processCopy.sections.slice(0,3).map(section=>md.parse(section,{}).filter(token=>token.type==='inline').map(token=>normalize(token.children.map(child=>child.type==='text'||child.type==='code_inline'?child.content:child.type==='softbreak'?' ':'').join(''))));
+  const stageIds=[
+    'decide-whether-toza-fits-before-you-buy',
+    'your-paid-assessment-inspection-diagnosis-and-urgent-first-aid',
+    'have-the-agreed-setup-hardened-around-your-life',
+  ];
+  for(const width of [1440,768,390,320]){
+    await page.setViewportSize({width,height:900});
+    await page.goto(siteUrl+'/en/what-happens-during-the-visit.html');
+    await expect(page.locator('main details')).toHaveCount(0);
+    expect(await page.locator('.process-stage').evaluateAll(items=>items.map(i=>i.id))).toEqual(stageIds);
+    expect(await page.locator('.process-stage').evaluateAll(items=>items.map(i=>i.querySelectorAll('.process-step').length))).toEqual([2,3,3]);
+    expect(await page.locator('.process-step').evaluateAll(items=>items.map(i=>Number(i.dataset.processStep)))).toEqual([1,2,3,4,5,6,7,8]);
+    const steps=await page.locator('.process-step').evaluateAll(items=>items.map(i=>({top:i.getBoundingClientRect().top,bottom:i.getBoundingClientRect().bottom})));
+    for(let i=1;i<steps.length;i++)expect(steps[i].top).toBeGreaterThanOrEqual(steps[i-1].bottom);
+    const stages=await page.locator('.process-stage').all();
+    for(const [index,stage] of stages.entries()){
+      expect((await stage.locator('h2,h3,p').allTextContents()).map(normalize)).toEqual(approvedStageBlocks[index]);
+      const heading=stage.locator('h2');await expect(heading).toBeVisible();
+      const bounds=await heading.boundingBox();
+      const stageBounds=await stage.locator('.copy-body').boundingBox();
+      expect(bounds.width).toBeGreaterThanOrEqual(stageBounds.width*.9);
+      for(const block of await stage.locator('h3,p').all())await expect(block).toBeVisible();
+    }
+    const offer=page.locator('#'+stageIds[1]+' .section-title');
+    await expect(offer).toContainText('Private Exposure Assessment · Typically four hours');
+    await expect(offer.locator('.offer-price')).toHaveText('₪3,600 including VAT');
+    const decision=page.locator('.process-decision');
+    await expect(decision).toContainText('Broader hardening is a separate purchase decision');
+    const assessment=await page.locator('#'+stageIds[1]).boundingBox();
+    const full=await page.locator('#'+stageIds[2]).boundingBox();
+    expect(full.y-(assessment.y+assessment.height)).toBeGreaterThanOrEqual(28);
+    expect(await page.locator('main>.copy-section').evaluateAll(items=>items.slice(3).map(i=>i.id))).toEqual([
+      'get-help-with-the-changes-afterward','you-approve-changes-and-decide-what-an-adviser-receives','need-an-urgent-visit','contact'
+    ]);
+    for(const block of await page.locator('main>.copy-section h2,main>.copy-section h3,main>.copy-section p').all())await expect(block).toBeVisible();
+    await noOverflow(page);
+  }
+});
+
+test('Process anchors, short-screen contact, print and CSS scope remain accessible',async({page})=>{
+  await page.setViewportSize({width:390,height:667});
+  await page.goto(siteUrl+'/en/what-happens-during-the-visit.html');
+  await expect(page.locator('link[href="/assets/css/process-stages.css?v=batch-a-1"]')).toHaveCount(1);
+  for(const label of ['Before you buy','The Assessment','Full engagement']){
+    const link=page.locator('.page-index').getByRole('link',{name:label,exact:true});
+    const target=await link.getAttribute('href');
+    await link.focus();await page.keyboard.press('Enter');
+    await expect(page.locator(target+' h2')).toBeInViewport({ratio:1});
+    expect(new URL(page.url()).hash).toBe(target);
+  }
+  await page.locator('.page-index').getByRole('link',{name:'Contact',exact:true}).click();
+  for(const channel of await page.locator('#contact .contact-channels a').all())await expect(channel).toBeInViewport({ratio:1});
+  const before=normalize(await page.locator('main').innerText());
+  await page.emulateMedia({media:'print'});
+  expect(normalize(await page.locator('main').innerText())).toBe(before);
+  for(const block of await page.locator('main h2,main h3,main p').all())await expect(block).toBeVisible();
+  await noOverflow(page);
+  await page.emulateMedia({media:'screen'});
+  await page.goto(siteUrl+'/en/why-us.html');
+  await expect(page.locator('link[href*="process-stages.css"]')).toHaveCount(0);
+});
