@@ -2,6 +2,8 @@
 
 Date: 4 October 2026. **Consolidated record of owner-accepted copy and current authority.**
 
+**12 October 2026 Batch A amendment (D-033):** The exact Why Toza candidate in `revisions/en-05/01-WHY-TOZA-CANDIDATE.md` is accepted for local implementation; the additive `approved/acceptance-amendment-2026-10-12-batch-a.json` records its hash. The accepted Process stage map in `revisions/en-05/02-HOW-TOZA-HELPS-STAGE-MAP.md` authorizes C0 presentation changes only: Process public wording remains EN-02-v2. Historical source/manifests and all service facts remain fixed. Rendered preview review precedes any later publication decision.
+
 **10 October 2026 round-02 amendment (D-030):** Current Home, Pricing, Separation and They Know Something wording is in `revisions/en-04/`, accepted for local implementation after independent review. [Round-02 manifest](approved/acceptance-amendment-2026-10-10-round-02.json) records exact hashes and supersedes the earlier exact versions for these four routes only. Service facts and the seven other pages are unchanged. Historical acceptance records remain preserved. PR #54 and deployment remain outside scope.
 
 **10 October 2026 amendment (D-029):** The owner approved stronger Home and Pricing exact copy for isolated local implementation. These two current sources are [Home EN-03](revisions/en-03/06-home.md) and [Pricing EN-03](revisions/en-03/02-pricing.md), with hashes in [the amendment manifest](approved/acceptance-amendment-2026-10-10.json). All service facts and other pages remain unchanged. The original manifest and EN-02 sources below remain the historical acceptance record. Alternatives are not selected; PR #54 and deployment remain unchanged.
