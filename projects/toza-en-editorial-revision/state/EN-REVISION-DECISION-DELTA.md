@@ -372,9 +372,28 @@ This register is the bridge between page approval and the future consolidated v3
 - **Authority:** Owner: “I approve, proceed with The deployment plan”.
 - **Decision:** Publish reviewed head 62857d1 through GitHub expected-head validation. PR #57 merged as d993322, with the identical reviewed Git tree. Merge-specific production workflow 38379886644 and live content/assets/indexing/security/78-route/desktop-mobile checks passed. Full release evidence resides in V:/TOZA hardening biz/release-evidence/pr57/production. PR #54 and PR #56 were untouched.
 
+
+### D-043 — Lower the shared footer
+- **Date:** 2026-10-13
+- **Authority:** Owner: “make the footer much lower”.
+- **Decision:** Add space between final page content and the shared English footer: 160px desktop, 96px at the existing 640px mobile breakpoint. Preserve footer words/links and all approved main-page content, including protected Assessment. Version the changed shared stylesheet for cache freshness; retain exact asset assertions at the new version.
+- **Scope:** Local preview on codex/toza-footer-spacing from deployed d993322. No pricing/service-fact change or unrelated redesign. PR reconciliation is read-only; do not close/merge PR #54 or PR #56 through this instruction. Show desktop/mobile result before any subsequent publication stage.
+
 ### D-044 — Reconcile PR #56 against current main
 - **Date:** 2026-10-13
 - **Authority:** Owner: “PR #56: reconcile before merging”.
 - **Decision:** Reconcile the existing maintenance PR against published d993322, pin Wrangler 4.150.0 to match the successful production tool, retain #57 workflow safeguards, and refresh operational guidance without changing accepted authority or public output.
 - **Gates:** Fresh locked installation, audit policy/live audit, exact-copy build verification, focused regressions, browser tests, runtime success/failure checks, byte-for-byte public-output comparison and independent review. Update the existing PR through a normal push; verify exact-head GitHub checks.
 - **Boundary:** No merge, deployment, PR #54 change, footer-preview integration, branch deletion or service-fact change. D-043 belongs to the separate local footer preview and is not part of this maintenance PR.
+
+
+### D-045 — Publish reviewed maintenance PR #56
+- **Date:** 2026-10-13
+- **Authority:** Owner: “Approved. Merge PR #56 through the GitHub flow, verify deployment and the live site, and keep PR #54 and the footer preview separate.”
+- **Decision:** Expected-head merge a70f384 as 7844b84 with identical reviewed Git tree. Production workflow 38386253114 and live eleven-page fidelity, exact CSS/JS, headers, 78 routes and desktop/mobile interactions passed. Evidence resides in V:/TOZA hardening biz/release-evidence/pr56-deployment. Public output and accepted authority remain unchanged. PR #54 and footer preview were separate.
+
+### D-046 — Publish the lower-footer change only after release gates
+- **Date:** 2026-10-13
+- **Authority:** Owner: “Now prepare a separate PR for the lower footer, run the same review and quality gates, and deploy if all pass. Keep the accepted copy unchanged and PR #54 separate.”
+- **Decision:** Advance D-043's settled 160px desktop/tablet and 96px mobile footer margin, zero added print margin, and shared CSS cache-version change in a separate PR based on published 7844b84. Preserve every accepted word, fact, metadata field, link and content order; retain #56 maintenance and #57 authority.
+- **Gates:** Fresh frozen install, strict audit, full accepted-copy/build/link/workflow contracts, focused regressions, 56 browser tests, 78 local Pages checks, footer geometry/keyboard/print and all-eleven-page fidelity, final independent adversarial review, exact-head GitHub CI/CodeQL, expected-head merge and merge-specific deployment/live verification. No PR #54 change, unrelated design or wording change.

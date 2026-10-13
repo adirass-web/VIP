@@ -121,7 +121,7 @@ test('reduced motion and fresh versioned assets on repeat navigation',async({pag
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.goto(siteUrl+'/en/');
   expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');
-  await expect(page.locator('link[href="/assets/css/clear-practice.css?v=clear-practice-1"]')).toHaveCount(1);
+  await expect(page.locator('link[href="/assets/css/clear-practice.css?v=clear-practice-2"]')).toHaveCount(1);
   await expect(page.locator('script[src="/assets/js/home-pricing.js?v=narrative-1"]')).toHaveCount(1);
   await page.reload();await expect(page.locator('h1')).toHaveText('Private information can be used against you.');
 });

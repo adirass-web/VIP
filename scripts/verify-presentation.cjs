@@ -27,7 +27,7 @@ for(const page of pages()) {
   assert.deepEqual(rows(actual),rows(base),page.route+': table value associations');
   if(page.route==='private-exposure-assessment')assert.deepEqual(blocks(actual),blocks(base),'Protected PA block order');
   if(page.route==='faq')assert.deepEqual(find(actual,n=>n.name==='summary').map(text),find(base,n=>n.name==='summary').map(text),'FAQ questions');
-  assert(html.includes('/assets/css/clear-practice.css?v=clear-practice-1'),page.route+': shared design asset');
+  assert(html.includes('/assets/css/clear-practice.css?v=clear-practice-2'),page.route+': shared design asset');
   assert(!html.includes('guilloche.js')&&!html.includes('class="mark seal"'),page.route+': retired visual decoration');
   assert(html.includes('/assets/brand/toza/toza-logo-ink.svg'),page.route+': approved logo');
 }

@@ -1,6 +1,6 @@
 # Current Project Status
 
-Updated: 13 October 2026. **The English release is published through PR #57. PR #56 is an unmerged maintenance reconciliation.**
+Updated: 13 October 2026. **The English release is published through PR #57. PR #56 maintenance is also published at 7844b84. The separate footer-spacing release is being prepared.**
 
 ## Released baseline
 
@@ -11,7 +11,7 @@ Updated: 13 October 2026. **The English release is published through PR #57. PR 
 | [#55](https://github.com/adirass-web/VIP/pull/55) | 6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f | Home, Pricing, Separation and They Know Something |
 | [#57](https://github.com/adirass-web/VIP/pull/57) | d9933223984cce6a5f3c56e80e9803aa92cca788 | Batch A/B/C copy, Process stages, Home rows and Business groups |
 
-Main includes these releases. #51 merged earlier. PR #54's useful presentation is superseded by #55/#57; its open draft is not a missing release. This reconciliation does not close it. The local footer-spacing preview is separate and neither included in #56 nor deployed.
+PR #56 merged as 7844b8406e040605bd8169c7935810ea8a6e7947 with unchanged public output. Production workflow 38386253114 and eleven-page content/header/asset, 78-route and desktop/mobile verification passed; see V:/TOZA hardening biz/release-evidence/pr56-deployment. Main includes these releases. #51 merged earlier. PR #54's useful presentation is superseded by #55/#57; its open draft is not a missing release. This reconciliation does not close it. The local footer-spacing preview is separate and neither included in #56 nor deployed.
 
 ## Effective accepted authority
 
@@ -35,4 +35,4 @@ The Code Review/GitHub 300-file PR-diff retrieval limit was recorded alongside c
 
 Development tooling, one shared 78-check gate and guidance are reconciled against #57. Retain its exact preview branch/SHA restrictions, indexing and security safeguards, focused regressions and synchronize trigger. Pin Wrangler 4.150.0, matching the recorded production tool, with local compatibility date 2026-10-06; do not change the production project compatibility setting.
 
-Fresh install, audit, build, browser, runtime and public-output parity gates apply to the new head. Merge/publication requires a separate owner instruction. Do not bundle footer spacing, old #54 content, translations, service-fact changes or legacy-asset cleanup. No branch or PR deletion is authorized. A reviewed release revert must preserve independent maintenance; never force-reset main.
+Fresh install, audit, build, browser, runtime and public-output parity gates passed on a70f384. The owner separately authorized publication; PR #56 is now merged and verified. Do not bundle footer spacing, old #54 content, translations, service-fact changes or legacy-asset cleanup. No branch or PR deletion is authorized. A reviewed release revert must preserve independent maintenance; never force-reset main.
