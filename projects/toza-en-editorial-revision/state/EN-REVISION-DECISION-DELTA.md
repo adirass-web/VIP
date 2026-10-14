@@ -443,3 +443,20 @@ This register is the bridge between page approval and the future consolidated v3
 - **Authority:** Owner screenshot and instruction: “the footer is too high. can be 1/4.”
 - **Decision:** Compress desktop footer to approximately one quarter of the screenshot's occupied height, including its preceding gap. Use wrapping horizontal navigation and tighter spacing; retain readable mobile links, all footer words and destinations. Add a separately versioned footer-only stylesheet to the shared layout.
 - **Boundary:** Supersedes the previously accepted footer dimensions only. Frozen Home, Why Toza, Pricing and protected Assessment copy remain exact; future comparison and hardening expansion stay deferred. Update PR #59 and preview for review; no production publication authorization.
+
+### D-052 — Reopen Pricing copy, then visual presentation
+
+- **Date:** 2026-10-14 (Asia/Jerusalem).
+- **Authority:** Owner: “The Pricing page is long and unclear. Call experts to work only on the pricing page copy, then layout and visual design,” with a clearer side-by-side matrix, labelled vector people/device icons and a possible prospect process diagram; modular CSS suggested for consistent change management.
+- **Decision:** Develop a new Pricing-only review proposal using separate copy and design specialists and independent review. The earlier selected purchase-decision comparison B can inform this new pass. Resolve copy and purchase logic before design. Preserve authoritative facts and all other page copy; the protected Assessment remains unchanged.
+- **Scope:** Review-only artifacts in revisions/pricing-03, including complete copy/metadata, factual trace, exact diagram microcopy, modular page-scoped CSS, responsive prototype/screenshots and review. This does not substitute new Pricing into PR #59 or production.
+- **Approval:** Exact assembled Pricing proposal remains pending owner review; no product/factual changes are authorized.
+- **Reviewed proposal:** Pricing source 6ea8ed8951d2673048300b4dca3632c4ac23c97a3be73c0659bdb8f9ab299461; diagram dd238e0735c06726feaae309d480ba56c39be694c69cababf96907736e7d64af; HTML cb543c8d6e790152b32566cabdc522917ad21853cc7aabff5cf7390f33c0e816. Independent source and rendered reviews pass. Final owner packet and prototype are stored in revisions/pricing-03; no acceptance amendment or production overlay is added.
+
+### D-053 — Publish verified PR #59
+
+- **Date:** 2026-10-14 (Asia/Jerusalem).
+- **Authority:** Owner: “publish PR #59”.
+- **Decision:** Publish the verified head 829faf7efe59bf53cc5289db884a6d0067e42126, including approved Home, Why Toza, targeted Pricing and compact footer. Fresh CI/CodeQL, 56 browser checks, 78 local/hosted routes, 11 HTML and 59 asset comparisons passed before merge.
+- **Result:** PR #59 merged as b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47; its Git tree equals the reviewed head. Production workflow 38576940753 succeeded. Read-only live verification is recorded separately in release evidence.
+- **Boundary:** The new D-052 Pricing proposal remains separate and unapproved. Publication authorizes neither its automatic integration nor further factual changes.
