@@ -44,7 +44,12 @@ async function check(file) {
   assert.equal(response.status, 200, file + ': successful response');
   assert.equal(new URL(response.url).origin, origin, file + ': retained preview origin');
   const actual = Buffer.from(await response.arrayBuffer());
-  assert.equal(hash(actual), hash(fs.readFileSync(path.join('_site', file))), file + ': exact build bytes');
+  const expected = fs.readFileSync(path.join('_site', file));
+  if (hash(actual) !== hash(expected) && file.endsWith('.html')) {
+    fs.mkdirSync('.wrangler', {recursive:true});
+    fs.writeFileSync('.wrangler/hosted-mismatch.json', JSON.stringify({file, url:response.url, expectedHtml:expected.toString('utf8'), actualHtml:actual.toString('utf8')},null,2)+'\n');
+  }
+  assert.equal(hash(actual), hash(expected), file + ': exact build bytes');
   assert.match(response.headers.get('x-robots-tag') || '', /\bnoindex\b/i, file + ': noindex');
   assert.match(response.headers.get('x-robots-tag') || '', /\bnofollow\b/i, file + ': nofollow');
   for (const [name, value] of Object.entries(securityHeaders)) assert.equal(response.headers.get(name), value, file + ': ' + name);
