@@ -30,7 +30,7 @@ const securityHeaders = {
 };
 const checked = [];
 async function fetchFile(file, targetOrigin = origin) {
-  assert([origin, productionOrigin].includes(targetOrigin), 'Fixed owned site origin');
+  assert(targetOrigin === origin || targetOrigin === productionOrigin, 'Fixed owned site origin');
   let url = new URL('/' + file, targetOrigin);
   const signal = AbortSignal.timeout(15_000);
   for (let redirects = 0; redirects <= 5; redirects++) {
