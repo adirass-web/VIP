@@ -101,6 +101,11 @@ for (const step of [previewVerification, previewBrowser, previewPrepare, preview
 assert(previewDeploy.env.PREVIEW_SHA === '${{ github.event.pull_request.head.sha }}', 'Preview deployment must record the exact reviewed SHA');
 assert(previewDeploy.env.PREVIEW_BRANCH === "${{ github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' && 'marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' && 'trust-process-release' || 'four-page-release' }}", 'Preview destinations must be trusted fixed literals for the three allowed branches');
 assert(previewDeploy.env.CLOUDFLARE_API_TOKEN === '${{ secrets.CLOUDFLARE_API_TOKEN }}', 'Preview deploy token must use the repository secret');
+const servedPreview = oneStep(previewJob, 'node scripts/verify-hosted-marketing-02.mjs', 'Hosted marketing preview fidelity gate');
+assert(servedPreview.if === "github.event.pull_request.head.ref == 'codex/toza-marketing-02-release'", 'Served preview gate is scoped to the new reviewed branch');
+assert(servedPreview.env.PREVIEW_HEAD_SHA === '${{ github.event.pull_request.head.sha }}', 'Served preview evidence identifies the exact PR head');
+assert(servedPreview.env.CLOUDFLARE_API_TOKEN === undefined, 'Hosted read-only verification receives no deployment credential');
+before(previewJob, previewDeploy, servedPreview, 'Actual hosted checks follow the deployment');
 assert(previewJob.steps.filter(step => step.env?.CLOUDFLARE_API_TOKEN !== undefined).length === 1, 'Only the preview deployment step may receive its deploy token');
 assert(previewJob.steps.every(step => !step.run?.includes('${{')), 'Untrusted event expressions must never be interpolated into shell code');
 const runtime = oneStep(previewJob, 'npm run verify:pages', 'Preview shared Pages runtime gate');
