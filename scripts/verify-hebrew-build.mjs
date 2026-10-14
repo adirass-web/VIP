@@ -28,3 +28,4 @@ for (const legal of ['terms', 'privacy']) assert(readText('_site/' + legal + '.h
 console.log('ENGLISH PUBLICATION AND ACCEPTED SOURCE CONTRACT VERIFIED');
 require('./verify-presentation.cjs');
 require('./verify-copy-amendment.cjs');
+require('./verify-marketing-02.cjs');
