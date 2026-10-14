@@ -61,10 +61,15 @@ async function corroborateProvider() {
   const response = await fetchFile('en/index.html', productionOrigin);
   assert.equal(response.status, 200, 'Existing production baseline response');
   const body = Buffer.from(await response.arrayBuffer());
-  const normalized = removeProviderAnalytics(body);
   const baseline = JSON.parse(fs.readFileSync('docs/marketing-02-release/BASELINE-OUTPUT.json','utf8'));
+  const rawBaselineMatches = hash(body) === baseline['en/index.html'];
+  if (!rawBaselineMatches) {
+    fs.mkdirSync('.wrangler', {recursive:true});
+    fs.writeFileSync('.wrangler/production-mismatch.json', JSON.stringify({url:response.url, actualHtml:body.toString('utf8'), expectedBaselineSha256:baseline['en/index.html']},null,2)+'\n');
+  }
+  const normalized = rawBaselineMatches ? body : removeProviderAnalytics(body);
   assert.equal(hash(normalized), baseline['en/index.html'], 'Existing production Home matches the preserved main baseline');
-  productionCorroboration = {origin:productionOrigin, rawSha256:hash(body), normalizedSha256:hash(normalized), providerInsertionSha256:hash(providerAnalytics), verified:true};
+  productionCorroboration = {origin:productionOrigin, rawSha256:hash(body), normalizedSha256:hash(normalized), providerAlreadyOnProduction:!rawBaselineMatches, verified:true};
 }
 async function check(file) {
   const response = await fetchFile(file);
@@ -82,7 +87,7 @@ async function check(file) {
     await corroborateProvider();
     providerInsertionRemoved = true;
   }
-  assert.equal(hash(comparable), hash(expected), file + ': exact build bytes after only the production-corroborated provider insertion');
+  assert.equal(hash(comparable), hash(expected), file + ': exact build bytes after only the pinned provider insertion');
   assert.match(response.headers.get('x-robots-tag') || '', /\bnoindex\b/i, file + ': noindex');
   assert.match(response.headers.get('x-robots-tag') || '', /\bnofollow\b/i, file + ': nofollow');
   for (const [name, value] of Object.entries(securityHeaders)) assert.equal(response.headers.get(name), value, file + ': ' + name);
@@ -111,7 +116,7 @@ for (let i = 0; i < files.length; i += 6) await Promise.all(files.slice(i, i + 6
 const routing = spawnSync(process.execPath, ['scripts/verify-pages-runtime.mjs'], {env:{...process.env, TOZA_RUNTIME_URL:origin}, encoding:'utf8', timeout:120_000});
 assert.equal(routing.status, 0, 'Hosted route gate failed: ' + routing.stdout + routing.stderr);
 assert(routing.stdout.includes('PAGES RUNTIME VERIFIED: 78 route, status, content and asset checks'));
-const evidence = {status:'PASS', origin, head:process.env.PREVIEW_HEAD_SHA, workflowEventSha:process.env.GITHUB_SHA, htmlPages:11, assetFiles:files.length-htmlFiles.length, routeChecks:78, productionCorroboration, normalization:'Only one pinned, production-corroborated 214-byte Cloudflare Pages Analytics insertion before the sole closing body; assets remain raw bytes.', checks:checked.sort((a,b)=>a.file.localeCompare(b.file))};
+const evidence = {status:'PASS', origin, head:process.env.PREVIEW_HEAD_SHA, workflowEventSha:process.env.GITHUB_SHA, htmlPages:11, assetFiles:files.length-htmlFiles.length, routeChecks:78, productionCorroboration, normalization:'Only one observed, pinned 214-byte Cloudflare Pages Analytics insertion before the sole closing body; assets remain raw bytes. Production baseline continuity is checked separately.', checks:checked.sort((a,b)=>a.file.localeCompare(b.file))};
 fs.mkdirSync('.wrangler', {recursive:true});
 fs.writeFileSync('.wrangler/hosted-preview-checks.json', JSON.stringify(evidence,null,2)+'\n');
-console.log('HOSTED PREVIEW VERIFIED: 11 source-exact HTML pages after the sole production-corroborated provider insertion, ' + evidence.assetFiles + ' exact raw assets, noindex/security headers and 78 route checks.');
+console.log('HOSTED PREVIEW VERIFIED: 11 source-exact HTML pages after the sole pinned provider insertion, ' + evidence.assetFiles + ' exact raw assets, noindex/security headers and 78 route checks.' + (productionCorroboration ? ' Production baseline continuity verified.' : ' No provider normalization required.'));

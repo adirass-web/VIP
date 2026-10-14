@@ -62,5 +62,6 @@ jobs:
             .wrangler/pages-runtime-check.log
             .wrangler/hosted-preview-checks.json
             .wrangler/hosted-mismatch.json
+            .wrangler/production-mismatch.json
           include-hidden-files: true
           if-no-files-found: ignore
