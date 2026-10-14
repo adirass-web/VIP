@@ -8,13 +8,13 @@ Home makes the personal stakes explicit and puts Personal Shield and its ₪14,0
 
 The owner approved the exact targeted Pricing candidate and explicitly selected “Home, Why Toza and Pricing” for this release. The additive acceptance amendment records all three frozen raw-source hashes, including metadata. No further editorial changes were made during integration.
 
-The existing purchase-scope table is retained. The purchase-decision alternative B is selected for a separate future pass, and the broader hardening wording/discussion stays separate. The eight supporting pages, protected Assessment, historical sources/manifests, shared identity, existing contact destinations, published maintenance/footer and PR #54 remain unchanged.
+The existing purchase-scope table is retained. The purchase-decision alternative B is selected for a separate future pass, and the broader hardening wording/discussion stays separate. The owner subsequently requested a footer approximately one quarter of its previous occupied height. A shared, versioned footer-only stylesheet reduces the preceding gap and padding, places navigation links horizontally and retains every word and destination. Mobile links retain 44px-high targets. Supporting-page content, protected Assessment, historical sources/manifests, existing contact destinations, published maintenance and PR #54 remain unchanged.
 
 ## Integration and verification
 
 The new frozen sections use a version-scoped presentation adapter. Historical adapters and their regression checks remain available; historical amendment tests continue to validate the previous narrow approvals independently of the later three-page overlay. New release checks enforce the exact three fingerprints, rendered block/link order and five complete table associations.
 
-`BASELINE-OUTPUT.json` records all 78 public files from a fresh build of the base commit. The new verification gate proves the other 75 original files byte-identical, including all eight supporting-page HTML files and every previously published asset. The new stylesheet is included only on the three revised pages. No new dependency, tracking, form or price is introduced.
+`BASELINE-OUTPUT.json` records all 78 public files from a fresh build of the base commit. The verification gate proves the other 75 original files byte-identical after removing only the exact new footer stylesheet link from the eight supporting-page HTML files. Every previously published asset remains unchanged. The marketing stylesheet is included only on the three revised pages; the footer stylesheet applies across the shared layout. No new dependency, tracking, form or price is introduced.
 
 Local evidence: passing full build/copy/link/CI contracts, six audit-policy tests and live build-tool audit with the documented upstream residuals unchanged; 56 passing desktop/mobile browser tests; 78 passing local Pages route/status/content/asset checks. Desktop/mobile screenshots and logs are stored beside this file. Independent release review is recorded in `INDEPENDENT-REVIEW.md`.
 

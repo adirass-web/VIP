@@ -436,3 +436,10 @@ This register is the bridge between page approval and the future consolidated v3
 - **Deferred:** Purchase-decision comparison B is selected for a future pass; keep the current exact scope table. Broader hardening wording/discussion stays separate. No further copy revision.
 - **Gates:** Exact source/metadata/block/link/table fidelity; all-eight-page public-output preservation; build/link/route/CI/audit/browser checks; fresh desktop/mobile/keyboard/print and independent final release review; exact-head GitHub CI and isolated noindex preview.
 - **Boundary:** Prepare and present a concrete reviewed PR/preview. No main merge or production deployment is authorized by this stage.
+
+### D-051 — Compact the shared footer
+
+- **Date:** 2026-10-14.
+- **Authority:** Owner screenshot and instruction: “the footer is too high. can be 1/4.”
+- **Decision:** Compress desktop footer to approximately one quarter of the screenshot's occupied height, including its preceding gap. Use wrapping horizontal navigation and tighter spacing; retain readable mobile links, all footer words and destinations. Add a separately versioned footer-only stylesheet to the shared layout.
+- **Boundary:** Supersedes the previously accepted footer dimensions only. Frozen Home, Why Toza, Pricing and protected Assessment copy remain exact; future comparison and hardening expansion stay deferred. Update PR #59 and preview for review; no production publication authorization.

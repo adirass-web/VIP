@@ -40,6 +40,13 @@ const changed = new Set(['en/index.html','en/why-us.html','en/pricing.html']);
 let retained = 0;
 for (const [path, fingerprint] of Object.entries(baseline)) {
   if (changed.has(path)) continue;
-  assert.equal(hash(fs.readFileSync('_site/' + path)), fingerprint, path + ': published output unchanged'); retained++;
+  let output = fs.readFileSync('_site/' + path);
+  if (path.startsWith('en/') && path.endsWith('.html')) {
+    const footerAsset = '\n    <link rel="stylesheet" href="/assets/css/footer-compact.css?v=footer-compact-1">';
+    const html = output.toString('utf8');
+    assert.equal(html.split(footerAsset).length, 2, path + ': one exact authorized footer stylesheet');
+    output = Buffer.from(html.replace(footerAsset, ''));
+  }
+  assert.equal(hash(output), fingerprint, path + ': published output unchanged apart from authorized footer stylesheet'); retained++;
 }
-console.log('MARKETING-02 VERIFIED: three frozen payloads, exact block/link order, five complete tables; ' + retained + ' prior public files unchanged, including eight supporting pages and protected Assessment.');
+console.log('MARKETING-02 VERIFIED: three frozen payloads, exact block/link order, five complete tables; ' + retained + ' prior public files unchanged apart from the exact authorized footer stylesheet link.');

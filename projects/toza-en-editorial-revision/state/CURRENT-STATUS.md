@@ -32,7 +32,7 @@ Use scripts/accepted-copy.cjs pages()/assertAuthority() to resolve effective sou
 
 The owner selected all three frozen pages for integration. Personal Shield's typical 7–14 work hours exclude the additional Assessment; included work days remain unchanged. The current purchase-scope table stays and the approved delivery matrix is added. Purchase-decision table B and broader hardening discussion are deferred. See docs/marketing-02-release for source fingerprints, local checks, independent review, screenshots, publication sequence and business measurement.
 
-Work is isolated from production, starting at current main81a11a1. The existing remote editorial/toza-copy-harness branch is preserved; the new PR uses codex/toza-marketing-02-release with its own noindex preview destination and exact-head gates. Seventy-five existing public files, including all eight supporting pages and the protected Assessment, remain byte-identical. No merge/publication is implied by copy acceptance or preview preparation.
+Work is isolated from production, starting at current main81a11a1. The existing remote editorial/toza-copy-harness branch is preserved; PR #59 uses codex/toza-marketing-02-release with its own noindex preview destination and exact-head gates. The owner subsequently reopened footer dimensions, requesting approximately one quarter of its occupied height (D-051). A new footer-only stylesheet applies across the shared layout. Seventy-five existing public files remain byte-identical after removing only its exact new stylesheet link from the eight supporting-page HTML files; their content and protected Assessment remain exact. No merge/publication is implied by copy acceptance or preview preparation.
 
 ## Release evidence and limits
 
