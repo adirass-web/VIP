@@ -6,7 +6,9 @@ const sections=s=>new Map([...s.matchAll(/^## (.+)\n([\s\S]*?)(?=^## |$(?![\s\S]
 const links=s=>[...s.matchAll(/\]\(([^)]+)\)/g)].map(m=>m[1]).sort();
 const facts=s=>s.match(/₪[\d,]+|\b\d+(?:–\d+)?\b/g);
 assertAuthority();
-const current=pages();
+// Verify prior narrowly approved exceptions against their historical overlay.
+// The later three-page marketing amendment has its own full-source/fidelity gate.
+const current=pages({historical:true});
 const approvedRoutes=[
  {route:'index',file:'06-home',previous:'en-03',fixed:['Metadata','Hero','Close unwanted access. Build stronger security habits.','The paid visit: inspection, diagnosis and urgent first aid','Your confidence matters. Your approval directs the work.','You can ask for help before you have answers. {#contact}']},
  {route:'pricing',file:'02-pricing',previous:'en-03',fixed:['Metadata','Hero','Before you book','Your initial fee counts toward the full service','Urgent visits in Central Israel','Additional work','What the service covers','You do not need to know where to look. {#contact}']},

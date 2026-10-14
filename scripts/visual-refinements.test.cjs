@@ -6,7 +6,9 @@ const D=require('domutils');
 const {pages,renderPage}=require('./accepted-copy.cjs');
 const clear=require('./clear-practice.cjs');
 const narrative=require('./home-pricing-narrative.cjs');
-const source=route=>renderPage(pages().find(p=>p.route===route),{presentation:false});
+// These regressions protect the published historical adapters, which still
+// serve the eight unchanged pages. Marketing-02 uses a separate adapter.
+const source=route=>renderPage(pages({historical:true}).find(p=>p.route===route),{presentation:false});
 const tags=(n,name)=>D.findAll(e=>e.type==='tag'&&e.name===name,n.children||[]);
 const cls=(n,name)=>D.findAll(e=>(e.attribs?.class||'').split(/\s+/).includes(name),n.children||[]);
 const text=n=>D.textContent(n).replace(/\s+/g,' ').trim();

@@ -397,3 +397,49 @@ This register is the bridge between page approval and the future consolidated v3
 - **Authority:** Owner: “Now prepare a separate PR for the lower footer, run the same review and quality gates, and deploy if all pass. Keep the accepted copy unchanged and PR #54 separate.”
 - **Decision:** Advance D-043's settled 160px desktop/tablet and 96px mobile footer margin, zero added print margin, and shared CSS cache-version change in a separate PR based on published 7844b84. Preserve every accepted word, fact, metadata field, link and content order; retain #56 maintenance and #57 authority.
 - **Gates:** Fresh frozen install, strict audit, full accepted-copy/build/link/workflow contracts, focused regressions, 56 browser tests, 78 local Pages checks, footer geometry/keyboard/print and all-eleven-page fidelity, final independent adversarial review, exact-head GitHub CI/CodeQL, expected-head merge and merge-specific deployment/live verification. No PR #54 change, unrelated design or wording change.
+
+### D-047 — Execute the reconciled marketing revision
+- **Date:** 2026-10-13
+- **Authority:** Later owner approval in chat 01a13506-1262-71f7-b131-228158262067, turn 01a13525-20e7-71d9-af0c-9dcd773c81d6, message 01a13525-24d0-7471-b630-55775410d5d7; current chat: “go do it” after reconciliation.
+- **Decision:** Keep the exact Home H1 “Private information can be used against you.” Explain uncertainty about privacy, information locations/copies, available access and inference. Preserve established international expertise as principal proof; connect it to personal judgment and implementation. Toza is new; overseas providers are category benchmarks, not established local competitors. Produce verified proof, then Home/Why Toza/Pricing together, followed by supporting alignment.
+- **Supersedes:** Historical phase ordering and Home benefits-before-detailed-risk presentation insofar as they conflict with the later stakes → uncertainty → expert judgment → agreed action progression; this chat's earlier Home/Process-first bounded prototype.
+- **Scope:** Draft/review only under revisions/marketing-01 in an isolated connector-verified partial snapshot on editorial/toza-copy-harness. Current effective main is 81a11a1 with decisions through D-046. D-047 is a local proposed register addition; recheck numbering before eventual canonical integration.
+- **Gates:** Four Toza skills, ten editorial sweeps, separate independent red-team review, complete exact-copy/metadata owner packet. Commercial facts, protected Assessment and accepted identity remain fixed.
+- **Boundary:** Strategic and drafting authorization, not approval of unseen sentences. No accepted-manifest, production-template, PR #54, main, push, merge or deployment change. New exact approval precedes integration.
+- **Status:** Approved direction and execution; candidate wording pending owner approval.
+
+
+### D-048 — Lead with Personal Shield and risk-led protection
+- **Date:** 2026-10-14
+- **Authority:** Owner's detailed current-chat criticism of marketing-01; “NCSC UK, DoD US, NSA US” source clarification; “proceed” after discussion.
+- **Decision:** Rebuild the connected Home/Why/Pricing around Personal Shield as the main offer with early ₪14,000 price. Restore discerning-client/defaults founder story and direct privacy challenge. Emphasize Assessment's personal threat model, relevant apps/devices/accounts/traces and resulting specific risk assessment/plan; urgent first aid remains included but subordinate. Use Toza and firm delivery language. Remove university-led proof and long change-order example; ground selected agency-practice claims in public guidance. Move detailed cautions into accessible supporting guidance while retaining material purchase/scope/client-control facts.
+- **Supersedes:** Marketing-01's active proposal/readiness; Assessment-led selling hierarchy and CV/long hypothetical presentation. D-047's retained H1/high stakes and underlying service facts remain.
+- **Scope:** New marketing-02 exact-copy candidates and review-only rendering, on editorial/toza-copy-harness in the isolated partial snapshot, based on main81a11a1. D-047/048 are local register additions; check numbering before canonical integration.
+- **Facts:** Personal Shield base price remains fixed; Assessment still separate paid work with summary even without continuation and conditional credit. Risk assessment/next steps explain that summary; no extra named/formatted threat-model deliverable, forensic trace reconstruction, unlimited devices or guaranteed finding is created. Agency endorsement/employment/equivalence and global/local exclusivity are not established by the source names.
+- **Gates/boundary:** Four Toza skills, ten sweeps and separate independent review; exact assembled copy/metadata acceptance precedes production integration. Protected Assessment S0/C0, accepted manifests, templates, identity, PR54 and live website remain unchanged. No publication authorization.
+- **Status:** Approved direction and drafting execution; new exact wording pending review.
+
+### D-049 — Accept the targeted Pricing candidate; select future comparison
+- **Date:** 2026-10-14 (Asia/Jerusalem)
+- **Authority:** Current-chat owner: “I approve, and the purchase-decision version as the eventual main comparison.” Owner also keeps the proposed hardening wording/discussion separate for now. Earlier explicit clarification: “Yes — Personal Shield only; Assessment is additional.”
+- **Decision:** Accept revisions/marketing-02/future-pricing-pass/PRICING-TARGETED-CANDIDATE.md, SHA-256 e416b43f5936aaf448dca0966a2bbbec337ffb491f2d46179dfb2cd4c1e74a8e. This exact Pricing payload adds the delivery matrix, states typical Personal Shield work of 7–14 hours excluding Assessment while retaining included days, corrects urgent arrival wording and shortens the Pricing closing with existing FAQ guidance links.
+- **Future selection:** Choose B, the purchase-decision version in DISCUSSION.md, for the eventual principal comparison in a separate future pass. The present scope table remains exact in the accepted Pricing payload. Selection does not apply a replacement now.
+- **Boundary:** Keep the broader hardening explanation separate. Preserve all other current copy, protected Assessment, routes, identity and PR #54. This records exact Pricing-copy acceptance, not an instruction to merge or publish; the owner's next-step question is not a production deployment command. Do not infer new acceptance of other pages from this narrow approval.
+- **Evidence:** TARGETED-PRESERVATION.json and independent REVIEW.md passed. Acceptance recorded in future-pricing-pass/OWNER-ACCEPTANCE.json. Fresh connector check found main still 81a11a12c49eefd124c54bd2da227e0f815b083b, canonical register through D-046, with production workflow 38388147576 successful. These local D-047–049 entries need numbering reconciliation during canonical integration.
+- **Status:** Exact targeted Pricing copy accepted; future comparison selected but deferred; live integration/release remains to be prepared.
+
+### D-050 — Integrate the frozen Home, Why Toza and targeted Pricing
+- **Date:** 2026-10-14 (Asia/Jerusalem)
+- **Authority:** Owner: “proceed” after the integration/preview/PR sequence; explicit release-scope reply: “Home, Why Toza and Pricing”.
+- **Decision:** Integrate exactly marketing-02 Home/Why and the accepted targeted Pricing, including their metadata, through an additive acceptance amendment. This explicitly resolves D-049's prior narrow-page acceptance scope. Full raw-source fingerprints are in approved/acceptance-amendment-2026-10-14-marketing-02.json.
+- **Scope:** Separate complete Git worktree from current main81a11a1 on local editorial/toza-copy-harness. Publish the review PR through the separate codex/toza-marketing-02-release branch, preserving the existing remote harness branch. Preserve eight supporting pages, protected Assessment, original manifests, client-controlled contact destinations, published identity/footer/maintenance and PR #54. Add only presentation mapping required by the frozen new sections and tightly scoped release checks/preview branch support.
+- **Deferred:** Purchase-decision comparison B is selected for a future pass; keep the current exact scope table. Broader hardening wording/discussion stays separate. No further copy revision.
+- **Gates:** Exact source/metadata/block/link/table fidelity; all-eight-page public-output preservation; build/link/route/CI/audit/browser checks; fresh desktop/mobile/keyboard/print and independent final release review; exact-head GitHub CI and isolated noindex preview.
+- **Boundary:** Prepare and present a concrete reviewed PR/preview. No main merge or production deployment is authorized by this stage.
+
+### D-051 — Compact the shared footer
+
+- **Date:** 2026-10-14.
+- **Authority:** Owner screenshot and instruction: “the footer is too high. can be 1/4.”
+- **Decision:** Compress desktop footer to approximately one quarter of the screenshot's occupied height, including its preceding gap. Use wrapping horizontal navigation and tighter spacing; retain readable mobile links, all footer words and destinations. Add a separately versioned footer-only stylesheet to the shared layout.
+- **Boundary:** Supersedes the previously accepted footer dimensions only. Frozen Home, Why Toza, Pricing and protected Assessment copy remain exact; future comparison and hardening expansion stay deferred. Update PR #59 and preview for review; no production publication authorization.

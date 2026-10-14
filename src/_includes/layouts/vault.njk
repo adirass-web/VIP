@@ -32,7 +32,9 @@
     <link rel="preload" href="/assets/fonts/source-sans-3-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/source-sans-3-semibold.woff2" as="font" type="font/woff2" crossorigin>
     {% if locale == "he" %}<link rel="preload" href="../assets/fonts/david-libre-hebrew-500-normal.woff2" as="font" type="font/woff2" crossorigin>{% endif %}
-    <link rel="stylesheet" href="/assets/css/clear-practice.css?v=clear-practice-2">{% if narrative_layout %}
+    <link rel="stylesheet" href="/assets/css/clear-practice.css?v=clear-practice-2">
+    <link rel="stylesheet" href="/assets/css/footer-compact.css?v=footer-compact-1">{% if marketing_layout %}
+    <link rel="stylesheet" href="/assets/css/marketing-02.css?v=marketing-02-1">{% endif %}{% if narrative_layout %}
     <link rel="stylesheet" href="/assets/css/home-pricing.css?v=approved-copy-1">{% endif %}{% if process_stages %}
     <link rel="stylesheet" href="/assets/css/process-stages.css?v=batch-a-1">{% endif %}{% if page_id == "index" or page_id == "business-dispute" %}
     <link rel="stylesheet" href="/assets/css/visual-refinements.css?v=visual-refinements-1">{% endif %}
@@ -95,7 +97,7 @@
         </div>
     </footer>
 
-    <script src="/assets/js/{% if narrative_layout %}home-pricing.js?v=narrative-1{% else %}site.js?v=clear-practice-1{% endif %}" defer></script>
+    <script src="/assets/js/{% if narrative_layout or marketing_layout %}home-pricing.js?v=narrative-1{% else %}site.js?v=clear-practice-1{% endif %}" defer></script>
 
 </body>
 </html>

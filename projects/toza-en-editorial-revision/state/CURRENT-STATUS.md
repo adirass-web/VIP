@@ -1,6 +1,6 @@
 # Current Project Status
 
-Updated: 13 October 2026. **The English release is published through PR #57. PR #56 maintenance is also published at 7844b84. The separate footer-spacing release is being prepared.**
+Updated: 14 October 2026. **Production main is 81a11a1, including PR #58's footer spacing. Owner-approved marketing-02 Home, Why Toza and targeted Pricing are integrated in a separate release candidate; production publication remains a later release decision.**
 
 ## Released baseline
 
@@ -10,8 +10,10 @@ Updated: 13 October 2026. **The English release is published through PR #57. PR 
 | [#53](https://github.com/adirass-web/VIP/pull/53) | e78a85c66ac001455ae7759e5346c3a14f6113d6 | Node 24, Eleventy 3, Playwright 1.64 and maintenance |
 | [#55](https://github.com/adirass-web/VIP/pull/55) | 6c525f8d948709e3e8b7ea6f6c75abc9d8e5e56f | Home, Pricing, Separation and They Know Something |
 | [#57](https://github.com/adirass-web/VIP/pull/57) | d9933223984cce6a5f3c56e80e9803aa92cca788 | Batch A/B/C copy, Process stages, Home rows and Business groups |
+| [#56](https://github.com/adirass-web/VIP/pull/56) | 7844b8406e040605bd8169c7935810ea8a6e7947 | Maintenance and installed Pages runtime gate |
+| [#58](https://github.com/adirass-web/VIP/pull/58) | 81a11a12c49eefd124c54bd2da227e0f815b083b | Shared footer spacing and cache version |
 
-PR #56 merged as 7844b8406e040605bd8169c7935810ea8a6e7947 with unchanged public output. Production workflow 38386253114 and eleven-page content/header/asset, 78-route and desktop/mobile verification passed; see V:/TOZA hardening biz/release-evidence/pr56-deployment. Main includes these releases. #51 merged earlier. PR #54's useful presentation is superseded by #55/#57; its open draft is not a missing release. This reconciliation does not close it. The local footer-spacing preview is separate and neither included in #56 nor deployed.
+PR #56 merged as 7844b8406e040605bd8169c7935810ea8a6e7947 with unchanged public output. Production workflow 38386253114 and eleven-page content/header/asset, 78-route and desktop/mobile verification passed; see V:/TOZA hardening biz/release-evidence/pr56-deployment. The formerly separate footer release subsequently merged through #58; its production workflow 38388147576 succeeded, confirmed against current main on 14 October. This is deployment-history evidence, not a new full live-site inspection. #51 merged earlier. PR #54's useful presentation is superseded by #55/#57; its open draft is not a missing release. This reconciliation does not close or modify it.
 
 ## Effective accepted authority
 
@@ -22,8 +24,15 @@ The original EN-02 approval and protected Assessment remain fingerprinted in app
 - approved/acceptance-amendment-2026-10-12-batch-a.json (Why Toza and Process stage map).
 - approved/acceptance-amendment-2026-10-12-batch-b.json (Business, Inheritance and Attorneys).
 - approved/acceptance-amendment-2026-10-13-batch-c.json (FAQ and Process links).
+- approved/acceptance-amendment-2026-10-14-marketing-02.json (this review branch: exact frozen Home, Why Toza and targeted Pricing; D-049/D-050).
 
 Use scripts/accepted-copy.cjs pages()/assertAuthority() to resolve effective sources. Historical packets and the v3 specification cannot undo later approvals. Service facts, original sources, manifests and protected Assessment remain unchanged. Eleven English pages are published; Hebrew marketing is retained but unpublished, legal documents remain accessible, and Hebrew/Russian localization is deferred.
+
+## Current marketing release candidate
+
+The owner selected all three frozen pages for integration. Personal Shield's typical 7–14 work hours exclude the additional Assessment; included work days remain unchanged. The current purchase-scope table stays and the approved delivery matrix is added. Purchase-decision table B and broader hardening discussion are deferred. See docs/marketing-02-release for source fingerprints, local checks, independent review, screenshots, publication sequence and business measurement.
+
+Work is isolated from production, starting at current main81a11a1. The existing remote editorial/toza-copy-harness branch is preserved; PR #59 uses codex/toza-marketing-02-release with its own noindex preview destination and exact-head gates. The owner subsequently reopened footer dimensions, requesting approximately one quarter of its occupied height (D-051). A new footer-only stylesheet applies across the shared layout. Seventy-five existing public files remain byte-identical after removing only its exact new stylesheet link from the eight supporting-page HTML files; their content and protected Assessment remain exact. No merge/publication is implied by copy acceptance or preview preparation.
 
 ## Release evidence and limits
 
