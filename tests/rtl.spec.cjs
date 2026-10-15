@@ -36,8 +36,9 @@ for(const copy of pages()) test('accepted copy, metadata and layout: '+copy.rout
   }
   await expect(page.locator('.brand')).toHaveAttribute('aria-label','Toza home');
   await expect(page.locator('.brand .name')).toHaveText('toza');
-  const wa=page.locator('#contact a[href^="https://wa.me/"]');
-  const signal=page.locator('#contact a[href^="https://signal.me/"]');
+  const contact=page.locator(copy.route==='pricing'?'.p-contact':'#contact');
+  const wa=contact.locator('a[href^="https://wa.me/"]');
+  const signal=contact.locator('a[href^="https://signal.me/"]');
   await expect(wa).toHaveText('Message on WhatsApp');
   const url=new URL(await wa.getAttribute('href'));
   expect(url.pathname).toBe('/972533366276');
@@ -89,15 +90,23 @@ test('FAQ expands, collapses, opens group and question deep links',async({page})
 test('comparison tables reflow with preserved row and column headers',async({page})=>{
   await page.setViewportSize({width:320,height:800});
   await page.goto(siteUrl+'/en/pricing.html');
-  const tables=page.locator('.copy-table');
-  await expect(tables).toHaveCount(5);
-  for(const table of await tables.all()) {
-    await expect(table).toHaveAttribute('tabindex','0');
+  const core=page.locator('.p-core');
+  await expect(core).toHaveCount(1);
+  await expect(core.locator('thead th[scope="col"]')).toHaveCount(3);
+  await expect(core.locator('tbody th[scope="row"]')).toHaveCount(7);
+  const associations=await core.locator('tbody tr').evaluateAll(rows=>rows.every((row,i)=>[...row.querySelectorAll('td')].every((cell,j)=>cell.getAttribute('headers')===`p-attribute-${i} p-product-${j+1}`)));
+  expect(associations).toBe(true);
+  for(const header of await core.locator('thead th:not(:first-child)').all())await expect(header).toBeVisible();
+  const cells=await core.locator('tbody tr').evaluateAll(rows=>rows.map(row=>[...row.querySelectorAll('td')].map(cell=>{const r=cell.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,size:parseFloat(getComputedStyle(cell).fontSize)};})));
+  for(const [personal,inner]of cells){expect(Math.abs(personal.top-inner.top)).toBeLessThanOrEqual(1);expect(personal.right).toBeLessThanOrEqual(inner.left+1);expect(personal.size).toBeGreaterThanOrEqual(16);expect(inner.size).toBeGreaterThanOrEqual(16);}
+  const urgent=page.locator('details.p-reference').filter({has:page.locator('summary',{hasText:'Urgent visits in Central Israel'})});
+  await urgent.locator('summary').focus();await page.keyboard.press('Enter');
+  await expect(urgent).toHaveAttribute('open','');
+  const tables=page.locator('main table');await expect(tables).toHaveCount(2);
+  for(const table of await tables.all()){
     expect(await table.locator('thead th[scope="col"]').count()).toBeGreaterThan(1);
     expect(await table.locator('tbody th[scope="row"]').count()).toBeGreaterThan(0);
-    await table.focus();await expect(table).toBeFocused();
-    const bounds=await table.evaluate(t=>({client:t.clientWidth,scroll:t.scrollWidth}));
-    expect(bounds.scroll).toBeLessThanOrEqual(bounds.client+1);
+    const bounds=await table.evaluate(t=>({client:t.clientWidth,scroll:t.scrollWidth}));expect(bounds.scroll).toBeLessThanOrEqual(bounds.client+1);
   }
   await noOverflow(page);
 });
@@ -127,25 +136,30 @@ test('reduced motion and fresh versioned assets on repeat navigation',async({pag
 
 test('supporting details, credit conditions, deep links and print retain access',async({page})=>{
   await page.goto(siteUrl+'/en/pricing.html');
-  const all=page.locator('main details');
+  const all=page.locator('main details');await expect(all).toHaveCount(8);
   expect(await all.evaluateAll(items=>items.every(i=>!i.open))).toBe(true);
+  const localCredit=page.locator('.p-credit-condition');await expect(localCredit).toHaveCount(2);
+  for(const condition of await localCredit.all()){
+    await expect(condition).toBeVisible();await expect(condition).toContainText('begins within 14 days of completion of the initial service');
+    await expect(condition).toContainText('Booking alone does not qualify');await expect(condition).toContainText('The credit applies once per group engagement');
+  }
   const credit=page.locator('#credit');
+  await expect(credit.getByText(/Booking alone does not qualify/)).not.toBeVisible();
+  await page.locator('.p-compare a[href="#credit"]').click();await expect(credit).toHaveAttribute('open','');
   await expect(credit.getByText(/Booking alone does not qualify/)).toBeVisible();
   await expect(credit.getByText(/The credit applies once to the group engagement/)).toBeVisible();
+  await credit.locator('summary').click();await expect(credit).not.toHaveAttribute('open','');
+  await page.locator('.p-compare a[href="#credit"]').click();await expect(credit).toHaveAttribute('open','');
   const boundaries=page.locator('#service-details summary');
-  await boundaries.focus();await page.keyboard.press('Enter');
-  await expect(page.locator('#service-details details')).toHaveAttribute('open','');
-  await boundaries.press('Enter');
-  await expect(page.locator('#service-details details')).not.toHaveAttribute('open','');
-  await page.goto(siteUrl+'/en/pricing.html#service-details');
-  await expect(page.locator('#service-details details')).toHaveAttribute('open','');
-  await page.goto(siteUrl+'/en/pricing.html#urgent-visits-in-central-israel');
-  await expect(page.locator('#urgent-visits-in-central-israel h2')).toBeInViewport({ratio:1});
+  await boundaries.focus();await page.keyboard.press('Enter');await expect(page.locator('#service-details')).toHaveAttribute('open','');
+  await boundaries.press('Enter');await expect(page.locator('#service-details')).not.toHaveAttribute('open','');
+  await page.goto(siteUrl+'/en/pricing.html#service-details');await expect(page.locator('#service-details')).toHaveAttribute('open','');
+  const urgent=page.locator('details.p-reference').filter({has:page.locator('summary',{hasText:'Urgent visits in Central Israel'})});
+  const urgentId=await urgent.getAttribute('id');await page.goto(siteUrl+'/en/pricing.html#'+urgentId);
+  await expect(urgent).toHaveAttribute('open','');await expect(urgent.locator('summary')).toBeInViewport({ratio:1});
   const before=await all.evaluateAll(items=>items.map(i=>i.open));
-  await page.evaluate(()=>dispatchEvent(new Event('beforeprint')));
-  expect(await all.evaluateAll(items=>items.every(i=>i.open))).toBe(true);
-  await page.evaluate(()=>dispatchEvent(new Event('afterprint')));
-  expect(await all.evaluateAll(items=>items.map(i=>i.open))).toEqual(before);
+  await page.evaluate(()=>dispatchEvent(new Event('beforeprint')));expect(await all.evaluateAll(items=>items.every(i=>i.open))).toBe(true);
+  await page.evaluate(()=>dispatchEvent(new Event('afterprint')));expect(await all.evaluateAll(items=>items.map(i=>i.open))).toEqual(before);
 });
 
 test('main section order and core scope remain consistent across widths',async({page})=>{
@@ -154,16 +168,19 @@ test('main section order and core scope remain consistent across widths',async({
     for(const width of [1440,768,390,320]) {
       await page.setViewportSize({width,height:900});
       await page.goto(siteUrl+'/en/'+(route==='index'?'':route+'.html'));
-      const order=await page.locator('main>section[id]').evaluateAll(items=>items.map(i=>i.id));
+      const order=await page.locator(route==='pricing'?'.pricing-04-content>section,.pricing-04-content>details':'main>section[id]').evaluateAll(items=>items.map(i=>({tag:i.tagName,id:i.id,className:i.className})));
       if(expected)expect(order).toEqual(expected);else expected=order;
       await noOverflow(page);
-      if(['index','pricing'].includes(route)) {
+      if(route==='pricing'){
+        await expect(page.locator('.p-hero')).toContainText('₪14,000 including VAT');
+        await expect(page.locator('.p-assessment-scene')).toContainText('₪3,600 including VAT');
+      }else if(route==='index'){
         await expect(page.locator('.copy-hero')).toContainText('₪14,000 including VAT');
         await expect(page.locator('#assessment')).toContainText('₪3,600 including VAT');
       } else await expect(page.locator('.copy-offer .offer-price')).toBeVisible();
       if(route==='pricing') {
         await expect(page.getByRole('cell',{name:'From ₪42,000',exact:true})).toBeVisible();
-        await expect(page.locator('#full-services').getByRole('rowheader',{name:'Shared home/home-office network and router',exact:true})).toBeVisible();
+        await expect(page.locator('.p-core').getByRole('rowheader',{name:'Shared home/home-office network and router',exact:true})).toBeVisible();
       }
     }
   }
@@ -186,25 +203,40 @@ test('marketing Home exposes stakes, full-service scope and separate Assessment'
   expect(await page.locator('main details').evaluateAll(items=>items.map(i=>i.open))).toEqual(before);
 });
 
-test('pricing exposes main offer, complete comparison, delivery matrix and qualified credit',async({page})=>{
-  await page.setViewportSize({width:390,height:844});
-  await page.goto(siteUrl+'/en/pricing.html');
-  const fee=page.locator('.copy-hero').getByText('₪14,000 including VAT · One person · Two devices',{exact:true});
-  const feeBounds=await fee.boundingBox();
-  expect(feeBounds.y+feeBounds.height).toBeLessThan(844);
-  expect(await page.locator('#full-services tbody th').allTextContents()).toEqual([
-    'Price, including VAT','People','Personal devices','Accounts and apps','Essential migration','Physical security keys','Training and verification','Shared home/home-office network and router','In-person work','Record of work','Adjustment support'
+test('pricing exposes main offer, visual comparison and separately accepted paid stages',async({page})=>{
+  await page.setViewportSize({width:390,height:844});await page.goto(siteUrl+'/en/pricing.html');
+  const fee=page.locator('.p-hero').getByText('₪14,000 including VAT · One person · Two devices',{exact:true});
+  const feeBounds=await fee.boundingBox();expect(feeBounds.y+feeBounds.height).toBeLessThan(844);
+  expect(await page.locator('.p-core tbody th').allTextContents()).toEqual([
+    'Full engagement price','People','Your devices worked on','Yubico security keys supplied','Shared home/home-office network and router','In-person protection work','Remaining payment with eligible Assessment credit'
   ]);
-  const privacy=page.locator('#full-services .copy-table + p');
-  await expect(privacy).toHaveCount(1);
-  await expect(privacy).toBeVisible();
-  await expect(privacy).toContainText("Personal details are shared only with that person's consent");
-  await expect(page.getByText('Each participant receives a private dated record.',{exact:false})).toHaveCount(1);
-  await expect(page.locator('#credit')).toContainText('begins within 14 days of completion of the initial service');
-  await expect(page.locator('#from-the-risk-assessment-to-the-hardened-setup')).toContainText('7–14 hours of in-person work, excluding the initial Assessment');
-  await expect(page.locator('#from-the-risk-assessment-to-the-hardened-setup .copy-table')).toBeVisible();
-  await expect(page.locator('#urgent-visits-in-central-israel')).toContainText('within four hours of both Toza\'s acceptance and receipt of payment');
-  for(const selector of ['#assessment','#full-services','#before-you-book'])await expect(page.locator(selector)).toBeVisible();
+  const counts=await page.evaluate(()=>({people:[...document.querySelectorAll('.p-core-row-1 td')].map(n=>n.querySelectorAll('.p-people svg').length),devices:[...document.querySelectorAll('.p-core-row-2 td')].map(n=>n.querySelectorAll('.p-device-groups svg').length),keys:[...document.querySelectorAll('.p-core-row-3 td')].map(n=>n.querySelectorAll('.p-key-groups svg').length)}));
+  expect(counts).toEqual({people:[1,4],devices:[2,8],keys:[2,8]});
+  await expect(page.locator('.p-compare')).toContainText('The same standard of individual protection');
+  await expect(page.locator('.p-compare')).toContainText('begins within 14 days of completion of the initial service');
+  await expect(page.locator('.p-core-row-5')).toContainText('Typically 7–14 hours, excluding Assessment');
+  await expect(page.locator('.p-core-row-5')).toContainText('Typically 2–4 working days');
+  await expect(page.locator('.p-method-caption')).toHaveText('Illustration of the review method. Your assessment reflects your own circumstances.');
+  for(const label of ['Sign in','Recover access','Share information','Grant permissions'])await expect(page.locator('.p-practice').getByText(label,{exact:true})).toBeVisible();
+  await expect(page.locator('.p-owner-decision')).toContainText('Full protection requires its own acceptance. There is no automatic continuation.');
+  await expect(page.locator('.p-conversation')).toContainText('explicit acceptance and receipt of payment');
+  await expect(page.locator('.p-aftercare')).toContainText("For issues directly related to Toza's changes. Inner Circle's period starts at group completion.");
+  await page.locator('#full-specification summary').click();
+  await expect(page.locator('#full-specification').getByText(/Personal details are shared only with that person's consent/)).toBeVisible();
+  await expect(page.locator('#full-specification')).toContainText('a private dated record per person and a separate shared-network record');
+  await page.goto(siteUrl+'/en/pricing.html#assessment');
+  const assessment=page.locator('.p-assessment-scene');
+  await expect(assessment.getByText(/The initial Assessment covers/)).toBeVisible();
+  await expect(assessment.getByText(/The initial Assessment covers/)).toContainText("one main phone and one PC, iPad or second phone");
+  await expect(assessment.getByText(/The initial Assessment covers/)).toContainText("Inner Circle's remaining-group review and mapping are included in the full engagement");
+  await expect(assessment.getByText(/You receive a practical summary of what was reviewed/)).toBeVisible();
+  await expect(assessment.getByText(/You receive a practical summary of what was reviewed/)).toContainText('whether or not you continue');
+  await expect(assessment.getByText(/If urgent exposure is identified/)).toBeVisible();
+  await expect(assessment.getByText(/If urgent exposure is identified/)).toContainText('approved first-aid changes that can safely be completed within the agreed scope');
+  await expect(assessment.getByText(/If urgent exposure is identified/)).toContainText('Typically four hours is not an automatic cutoff');
+  const urgent=page.locator('details.p-reference').filter({has:page.locator('summary',{hasText:'Urgent visits in Central Israel'})});
+  await urgent.locator('summary').click();await expect(urgent).toContainText("within four hours after both Toza's acceptance and receipt of payment");
+  await noOverflow(page);
 });
 
 test('situation pages keep material controls and separate purchases with their scope',async({page})=>{
@@ -237,7 +269,9 @@ for(const route of ['index','pricing'])test('short-screen contact and responsive
   await page.setViewportSize({width:390,height:667});
   await page.goto(siteUrl+'/en/'+(route==='index'?'':route+'.html'));
   await page.locator('main a[href="#contact"]').first().click();
-  for(const channel of await page.locator('#contact .contact-channels a').all()){
+  const channels=page.locator(route==='pricing'?'.p-contact .contact-channels a':'#contact .contact-channels a');
+  await expect(channels).toHaveCount(2);
+  for(const channel of await channels.all()){
     await expect(channel).toBeInViewport({ratio:1});
     const bounds=await channel.boundingBox();expect(bounds.height).toBeGreaterThanOrEqual(44);
   }

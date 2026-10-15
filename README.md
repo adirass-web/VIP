@@ -12,7 +12,7 @@ The Clear Practice visual system, approved logo and self-hosted Source Sans 3 im
 
 - Use Node 24 (.nvmrc), then npm ci installs the locked tools.
 - npm run test:audit-policy and npm run audit:tools check the build-tool audit regression policy. Two unpatched upstream advisories remain explicitly reported; see docs/build-tool-maintenance.md for their scope and upgrade rationale.
-- npm run sync:copy reproduces the accepted English templates. Change presentation in scripts/clear-practice.cjs; do not hand-edit generated copy or alter accepted blocks without owner approval.
+- npm run sync:copy reproduces the accepted English templates. Do not hand-edit generated copy or alter accepted blocks without owner approval. See presentation ownership below.
 - npm run build cleans only generated _site before building, preventing unpublished files surviving a rebuild.
 - npm run verify:all checks accepted-source fingerprints, generated templates, published routes, links, schema facts, retained Hebrew source and legal RTL, and CI/deploy constraints. Historical he-* command names are retained for workflow compatibility.
 - Install the pinned Playwright Chromium browsers, then npm run test:rtl-visual runs desktop/mobile English and retained legal checks.
@@ -21,12 +21,31 @@ The Clear Practice visual system, approved logo and self-hosted Source Sans 3 im
 
 Pages normalizes .html aliases to extensionless URLs; canonicals and sitemap follow those final URLs. Shared CSS/JS URLs are versioned because assets have long immutable cache lifetimes.
 
+## Source and presentation ownership
+
+- `scripts/accepted-copy.cjs` resolves approved sources and additive acceptance amendments, verifies authority and generates templates. Accepted Markdown and approval fingerprints control wording and metadata; presentation adapters do not supply new copy.
+- Pricing-04 uses `scripts/pricing-layout.cjs`, `assets/css/pricing-04.css` and `assets/js/pricing-04.js`. The Pricing-only adapter implements its approved comparison, labelled graphics, disclosures and contact paths.
+- Home and Why Toza use `scripts/marketing-layout.cjs` and `assets/css/marketing-02.css` for their accepted marketing-02 presentation.
+- Supporting pages retain their existing `scripts/clear-practice.cjs` / `scripts/home-pricing-narrative.cjs` adapters; Process additionally uses `scripts/process-stages.cjs`. These historical adapters remain part of the effective render path, not a reason to restyle unrelated pages.
+- Shared identity, typography and navigation remain in `src/_includes/layouts/vault.njk` and the existing shared assets. The compact footer has its own `assets/css/footer-compact.css`. Page CSS stays scoped to its page family; shared changes need cross-page verification.
+
 ## Release
 
-Maintenance PR #53, four-page release #55 and Batch A/B/C release #57 are merged. The released baseline is d993322; see [current project status](projects/toza-en-editorial-revision/state/CURRENT-STATUS.md) and the [historical #55 release record](docs/four-page-copy-preview/RELEASE.md) and [current #57 release](https://github.com/adirass-web/VIP/pull/57). PR #54 remains untouched.
+The released baseline is [PR #59](https://github.com/adirass-web/VIP/pull/59), main `b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47`: accepted marketing-02 Home, Why Toza and targeted Pricing, plus the compact shared footer. The owner has approved Pricing-04 and instructed its separate integration, review and deployment. That release is pending; an approved proposal is not evidence that production has updated. See [current project status](projects/toza-en-editorial-revision/state/CURRENT-STATUS.md) and the [Pricing-04 release guide](docs/pricing-04-release/README.md) for the eventual PR, reviewed head and deployment evidence. PR #54 remains untouched.
 
-General PR verification does not deploy. The separate preview workflow remains restricted to the same-repository codex/toza-approved-copy-preview and codex/toza-trust-process-refinement branches, exact PR-head checkout and their fixed noindex four-page-release/trust-process-release destinations; this maintenance branch has no preview deployment authorization. A reviewed merge to main triggers production deployment using the installed, lockfile-pinned Wrangler. Verify production routes and rollback details after any deployment.
+General PR verification does not deploy. The separate preview workflow permits only these same-repository branches, checked out at their exact PR head, with fixed noindex destinations:
+
+| PR branch | Preview destination |
+|---|---|
+| `codex/toza-approved-copy-preview` | `four-page-release` |
+| `codex/toza-trust-process-refinement` | `trust-process-release` |
+| `codex/toza-marketing-02-release` | `marketing-02-release` |
+| `codex/toza-pricing-04-release` | `pricing-04-release` |
+
+A reviewed merge to main triggers production deployment using the installed, lockfile-pinned Wrangler. Verify the merge-specific deployment, live content/assets, headers, routes and responsive interactions before recording a release as published. Historical branch permissions do not authorize unrelated content changes or merges.
 
 Canonical editorial instructions and skills live in the [editorial project](projects/toza-en-editorial-revision/README.md); docs/editorial and root skills provide compatibility links. See the [post-release maintenance record](docs/post-release-maintenance.md) for cleanup disposition and remaining upstream advisories.
 
-The focused presentation regressions run with node --test scripts/visual-refinements.test.cjs. CI retains the synchronize trigger. Local Pages checks use compatibility date 2026-10-06, wait for actual English HTML and require the complete 78-check success marker. Older authorized preview branches must incorporate this maintenance base to use the installed runtime; there is no floating-tool fallback or gate bypass.
+Historical approvals, reviewed alternatives, research and prototypes remain under `projects/toza-en-editorial-revision/revisions/`; release evidence remains under the corresponding `docs/*-release` and preview folders. They document provenance rather than override later acceptance amendments. In particular, Pricing-03 remains the prior reviewed proposal; Pricing-04's accepted source/visual labels and owner-review snapshot are preserved alongside its research. The [#55 release record](docs/four-page-copy-preview/RELEASE.md), [#57 PR](https://github.com/adirass-web/VIP/pull/57) and [#59 release evidence](docs/marketing-02-release/RELEASE.md) remain historical references.
+
+The focused presentation regressions run with `node --test scripts/visual-refinements.test.cjs`. CI retains the synchronize trigger. Local Pages checks use compatibility date 2026-10-06, wait for actual English HTML and require the complete 78-check success marker. Older authorized preview branches must incorporate the current maintenance base to use the installed runtime; there is no floating-tool fallback or gate bypass.

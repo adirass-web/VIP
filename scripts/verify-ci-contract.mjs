@@ -83,8 +83,8 @@ assertIncludes(preparePreview, "Exactly one global header rule required", 'Previ
 assertIncludes(preparePreview, "Preview indexing already configured", 'Preview duplicate indexing guard');
 assert(!preview.includes('>> _site/_headers'), 'Preview must not append a duplicate global header rule');
 const previewConfig = workflow(preview), previewJob = previewConfig.jobs.preview;
-const branchGuard = "github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'codex/toza-approved-copy-preview' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' || github.event.pull_request.head.ref == 'codex/toza-marketing-02-release')";
-assert(previewJob.if === branchGuard, 'Preview requires the exact same-repository three-branch allowlist');
+const branchGuard = "github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'codex/toza-approved-copy-preview' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' || github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-pricing-04-release')";
+assert(previewJob.if === branchGuard, 'Preview requires the exact same-repository four-branch allowlist');
 assert(Object.keys(previewConfig.on).length === 1 && previewConfig.on.pull_request.branches.length === 1 && previewConfig.on.pull_request.branches[0] === 'main', 'Preview may run only for PRs targeting main');
 assert(previewConfig.on.pull_request.types.includes('synchronize'), 'Preview must refresh on each new head');
 assert(JSON.stringify(previewConfig.permissions) === JSON.stringify({contents: 'read'}), 'Preview token permissions must remain read-only');
@@ -99,13 +99,18 @@ const previewPrepare = oneStep(previewJob, 'node scripts/prepare-preview.cjs', '
 const previewDeploy = oneStep(previewJob, 'npm run pages:deploy -- _site --project-name toza-site --branch "$PREVIEW_BRANCH" --commit-hash "$PREVIEW_SHA"', 'Installed isolated preview deployment');
 for (const step of [previewVerification, previewBrowser, previewPrepare, previewDeploy]) assert(step.if === undefined, 'Required preview gates/deployment must not bypass prior success');
 assert(previewDeploy.env.PREVIEW_SHA === '${{ github.event.pull_request.head.sha }}', 'Preview deployment must record the exact reviewed SHA');
-assert(previewDeploy.env.PREVIEW_BRANCH === "${{ github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' && 'marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' && 'trust-process-release' || 'four-page-release' }}", 'Preview destinations must be trusted fixed literals for the three allowed branches');
+assert(previewDeploy.env.PREVIEW_BRANCH === "${{ github.event.pull_request.head.ref == 'codex/toza-pricing-04-release' && 'pricing-04-release' || github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' && 'marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' && 'trust-process-release' || 'four-page-release' }}", 'Preview destinations must be trusted fixed literals for the four allowed branches');
 assert(previewDeploy.env.CLOUDFLARE_API_TOKEN === '${{ secrets.CLOUDFLARE_API_TOKEN }}', 'Preview deploy token must use the repository secret');
 const servedPreview = oneStep(previewJob, 'node scripts/verify-hosted-marketing-02.mjs', 'Hosted marketing preview fidelity gate');
 assert(servedPreview.if === "github.event.pull_request.head.ref == 'codex/toza-marketing-02-release'", 'Served preview gate is scoped to the new reviewed branch');
 assert(servedPreview.env.PREVIEW_HEAD_SHA === '${{ github.event.pull_request.head.sha }}', 'Served preview evidence identifies the exact PR head');
 assert(servedPreview.env.CLOUDFLARE_API_TOKEN === undefined, 'Hosted read-only verification receives no deployment credential');
 before(previewJob, previewDeploy, servedPreview, 'Actual hosted checks follow the deployment');
+const pricingPreview=oneStep(previewJob,'node scripts/verify-hosted-release.mjs','Hosted Pricing preview fidelity');
+assert(pricingPreview.if === "github.event.pull_request.head.ref == 'codex/toza-pricing-04-release'",'Pricing preview gate has its fixed reviewed branch');
+assert(pricingPreview.env.RELEASE_HEAD_SHA === '${{ github.event.pull_request.head.sha }}' && pricingPreview.env.TOZA_CHECK_MODE === 'preview','Pricing preview checks the exact source and fixed destination');
+assert(pricingPreview.env.CLOUDFLARE_API_TOKEN === undefined,'Read-only Pricing preview check has no deployment credential');
+before(previewJob,previewDeploy,pricingPreview,'Pricing hosted checks follow deployment');
 assert(previewJob.steps.filter(step => step.env?.CLOUDFLARE_API_TOKEN !== undefined).length === 1, 'Only the preview deployment step may receive its deploy token');
 assert(previewJob.steps.every(step => !step.run?.includes('${{')), 'Untrusted event expressions must never be interpolated into shell code');
 const runtime = oneStep(previewJob, 'npm run verify:pages', 'Preview shared Pages runtime gate');
@@ -156,4 +161,8 @@ for (const [source, job] of [[ci, ciJob], [preview, previewJob], [deploy, deploy
   assert(!source.includes('ubuntu-latest') && !source.includes('actions/checkout@v4'), 'No deprecated runner/action defaults');
 }
 before(deployJob, oneStep(deployJob, 'npm run verify:pages', 'Production Pages runtime'), productionDeploy, 'Production runtime gate must precede deployment');
+const publishedCheck=oneStep(deployJob,'node scripts/verify-hosted-release.mjs','Production hosted fidelity');
+assert(publishedCheck.env.RELEASE_HEAD_SHA === '${{ github.sha }}' && publishedCheck.env.TOZA_CHECK_MODE === 'production','Production checks the deployed main commit and fixed origin');
+assert(publishedCheck.env.CLOUDFLARE_API_TOKEN === '', 'Production read-only check explicitly clears the inherited deployment credential');
+before(deployJob,productionDeploy,publishedCheck,'Actual production verification follows deployment');
 console.log("CI CONTRACT VERIFIED");

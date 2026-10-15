@@ -17,9 +17,12 @@ const amendments = [
   {path:'approved/acceptance-amendment-2026-10-12-batch-b.json', routes:['business-dispute','inheritance-clash','attorneys']},
   {path:'approved/acceptance-amendment-2026-10-13-batch-c.json', routes:['faq','what-happens-during-the-visit']},
   {path:'approved/acceptance-amendment-2026-10-14-marketing-02.json', routes:['index','why-us','pricing']},
+  {path:'approved/acceptance-amendment-2026-10-15-pricing-04.json', routes:['pricing']},
 ].map(record=>({...record, manifest:JSON.parse(read(project+record.path))}));
 const amendedSources = new Map(amendments.flatMap(record=>record.manifest.entries.map(entry=>[entry.route,entry])));
-const historicalSources = new Map(amendments.slice(0,-1).flatMap(record=>record.manifest.entries.map(entry=>[entry.route,entry])));
+// Historical tests protect the approvals before marketing-02, regardless of
+// how many later exact-copy amendments are added.
+const historicalSources = new Map(amendments.slice(0,amendments.findIndex(record=>record.path==='approved/acceptance-amendment-2026-10-14-marketing-02.json')).flatMap(record=>record.manifest.entries.map(entry=>[entry.route,entry])));
 const exact = p => read(project + p).split('## Exact revised copy\n\n')[1].split('\n## Unresolved red-team issues')[0].trimEnd() + '\n';
 const sourceFor = entry => entry.format === 'raw-markdown' ? read(project + entry.path) : exact(entry.path);
 function assertAuthority() {
@@ -30,8 +33,13 @@ function assertAuthority() {
     const routes=amendment.manifest.entries.map(entry=>entry.route).sort();
     if (JSON.stringify(routes)!==JSON.stringify([...amendment.routes].sort())) throw Error('Unexpected copy amendment scope: '+amendment.path);
     for (const entry of amendment.manifest.entries) {
-      if (entry.format !== undefined && (entry.format !== 'raw-markdown' || amendment.path !== 'approved/acceptance-amendment-2026-10-14-marketing-02.json')) throw Error('Unexpected source format: ' + entry.path);
+      if (entry.format !== undefined && (entry.format !== 'raw-markdown' || !['approved/acceptance-amendment-2026-10-14-marketing-02.json','approved/acceptance-amendment-2026-10-15-pricing-04.json'].includes(amendment.path))) throw Error('Unexpected source format: ' + entry.path);
       if (hash(sourceFor(entry)) !== entry.sha256) throw Error('Approved amendment changed: ' + entry.path);
+    }
+    if (amendment.manifest.visualCopy) {
+      const entry=amendment.manifest.visualCopy;
+      if (amendment.path!=='approved/acceptance-amendment-2026-10-15-pricing-04.json' || entry.path!=='revisions/pricing-04/VISUAL-COPY.md') throw Error('Unexpected visual-copy amendment');
+      if (hash(read(project+entry.path))!==entry.sha256) throw Error('Approved visual copy changed');
     }
     if (amendment.manifest.presentation) {
       const entry = amendment.manifest.presentation;
@@ -77,7 +85,7 @@ function getPage(sourceName, route, {historical = false} = {}) {
   body = body.replace(/\n\*\*Request a private conversation: WhatsApp \/ Signal\*\*\s*$/, '');
   const parts = body.split(/\n(?=## )/);
   const hero = parts.shift();
-  return { sourceName, route, source, metadata, hero, sections: parts, marketing: amended?.format === 'raw-markdown' };
+  return { sourceName, route, source, metadata, hero, sections: parts, marketing: amended?.format === 'raw-markdown', pricing04: amended?.path === 'revisions/pricing-04/pricing.md' };
 }
 const pages = (options = {}) => mapping.map(args => getPage(...args, options));
 function renderMarkdown(markdown) {
@@ -95,6 +103,7 @@ function renderTables(html, sectionId) {
   });
 }
 function renderPage(page, {presentation = true} = {}) {
+  if (presentation && page.pricing04) return require('./pricing-layout.cjs').render(page);
   const { route, metadata } = page;
   const permalink = route === 'index' ? '/en/index.html' : '/en/' + route + '.html';
   // Pages normalizes .html aliases to extensionless URLs with a 308.

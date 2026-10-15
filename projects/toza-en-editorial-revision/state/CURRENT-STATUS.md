@@ -1,6 +1,6 @@
 # Current Project Status
 
-Updated: 14 October 2026. **PR #59 is published at production main b4e918e: approved marketing-02 Home, Why Toza, targeted Pricing and compact shared footer. The owner separately reopened Pricing for a new copy/design proposal, which remains unapproved and outside the published release.**
+Updated: 15 October 2026 (Asia/Jerusalem). **Pricing-04 is accepted and authorized for publication by D-055. Its complete copy, metadata and final visual composition are the next-release authority. PR #59 / b4e918e is the verified preceding production baseline. The current release and deployment checks are linked from docs/pricing-04-release. Later line edits will form a subsequent version.**
 
 ## Released baseline
 
@@ -26,6 +26,7 @@ The original EN-02 approval and protected Assessment remain fingerprinted in app
 - approved/acceptance-amendment-2026-10-12-batch-b.json (Business, Inheritance and Attorneys).
 - approved/acceptance-amendment-2026-10-13-batch-c.json (FAQ and Process links).
 - approved/acceptance-amendment-2026-10-14-marketing-02.json (published exact Home, Why Toza and targeted Pricing; D-049/D-050/D-053).
+- approved/acceptance-amendment-2026-10-15-pricing-04.json (exact Pricing-04 copy, metadata and visual wording; D-055).
 
 Use scripts/accepted-copy.cjs pages()/assertAuthority() to resolve effective sources. Historical packets and the v3 specification cannot undo later approvals. Service facts, original sources, manifests and protected Assessment remain unchanged. Eleven English pages are published; Hebrew marketing is retained but unpublished, legal documents remain accessible, and Hebrew/Russian localization is deferred.
 
@@ -37,9 +38,9 @@ Reviewed head 829faf7 and merge b4e918e share Git tree 1ff5011cff65a3b1798c060ba
 
 D-052 explicitly reopens Pricing only: copy specialists first, then layout/visual design, one main comparison with labelled vector icons, prospect decision diagram and modular CSS ownership. Independent source and rendered reviews pass; the complete owner packet, prototype, screenshots and immutable source fingerprints are stored in revisions/pricing-03. Exact assembled Pricing copy/metadata/design remain pending owner approval. D-053 publication of #59 does not authorize substituting that new proposal.
 
-D-054 advances that proposal into revisions/pricing-04 under the owner's “show don't tell” direction and later explicit consumer-software tier study. Official 1Password, Proton, Apple iCloud+, Adobe Photography and Bitwarden content was examined, alongside selected public UX/conversion methods and skills. Pricing-04 shows counted people/devices/supplied keys, work units, Assessment method and practical summary, then a separate implementation decision and OpSec practice. Research access limits and the length tradeoff are recorded. The exact proposal remains unpublished and awaits owner acceptance; Pricing-03 is preserved as a reviewed baseline. A fresh production build matches all eleven HTML pages and 59 assets from the verified #59 release, so the review artifacts do not affect the live-site output.
+D-054 produced the reviewed Pricing-04 proposal, following the owner's “show don't tell” direction and official consumer-software tier research. Pricing-03 and Pricing-04 review packets remain historical evidence. Their original pending-approval labels describe the review moment; D-055 now supplies exact owner acceptance and publication authority.
 
-Pricing-04's independent copy, research and final rendered reviews pass without unresolved required findings. The final HTML is 5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f, with the exact source/visual/CSS fingerprints recorded in D-054 and OWNER-REVIEW-SNAPSHOT.json. The owner packet includes complete proposed copy/metadata, actual desktop/mobile renderings, precise payment/scope facts and planned comprehension/commercial measures. No acceptance amendment or release substitution has been made.
+The accepted source hashes are recorded in the new 2026-10-15 amendment. Production uses scripts/pricing-layout.cjs, assets/css/pricing-04.css and assets/js/pricing-04.js, with existing site.js retaining navigation and print ownership. Full main-text/link parity with the accepted review composition, all 93 ordered source blocks, seven comparison rows and actual quantities are checked. The exact Assessment allowance and remaining-group mapping stay visible. All 79 prior non-Pricing output files match #59; the ten other pages and protected Assessment remain exact. Independent release review and GitHub checks belong to docs/pricing-04-release. No additional wording is authorized for this release.
 
 ## Release evidence and limits
 

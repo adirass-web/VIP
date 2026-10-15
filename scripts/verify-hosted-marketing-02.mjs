@@ -61,7 +61,9 @@ async function corroborateProvider() {
   const response = await fetchFile('en/index.html', productionOrigin);
   assert.equal(response.status, 200, 'Existing production baseline response');
   const body = Buffer.from(await response.arrayBuffer());
-  const baseline = JSON.parse(fs.readFileSync('docs/marketing-02-release/BASELINE-OUTPUT.json','utf8'));
+  // Home is unchanged since #59; the earlier #59 comparison baseline predates
+  // that release and cannot corroborate current production.
+  const baseline = JSON.parse(fs.readFileSync('docs/pricing-04-release/BASELINE-OUTPUT.json','utf8'));
   const rawBaselineMatches = hash(body) === baseline['en/index.html'];
   if (!rawBaselineMatches) {
     fs.mkdirSync('.wrangler', {recursive:true});

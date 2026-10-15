@@ -64,3 +64,21 @@ jobs:
 
       - name: Deploy to new Toza Pages project
         run: npm run pages:deploy -- _site --project-name "$CF_PROJECT_NAME" --branch main --commit-hash "$GITHUB_SHA"
+
+      - name: Verify the published release
+        env:
+          CLOUDFLARE_API_TOKEN: ''
+          RELEASE_HEAD_SHA: ${{ github.sha }}
+          TOZA_CHECK_MODE: production
+        run: node scripts/verify-hosted-release.mjs
+
+      - name: Preserve production verification evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: production-release-checks
+          path: |
+            .wrangler/hosted-release-checks.json
+            .wrangler/hosted-mismatch.json
+          include-hidden-files: true
+          if-no-files-found: ignore
