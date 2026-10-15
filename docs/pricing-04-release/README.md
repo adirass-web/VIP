@@ -1,6 +1,6 @@
 # Pricing-04 integration and release
 
-Pricing-04 is approved for a separate release. Integration and review are in progress; production publication must be established by the actual PR merge, merge-specific deployment and live checks. The preceding published baseline is [PR #59](https://github.com/adirass-web/VIP/pull/59), main `b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47`.
+Pricing-04 is published and verified through [PR #60](https://github.com/adirass-web/VIP/pull/60). See [publication record](RELEASE.md), [machine record](RELEASE.json) and [production comparisons](PRODUCTION-CHECKS.json). The preceding baseline is #59/b4e918e. Later line edits form a separate version; the historical review packets remain intact.
 
 ## Authority and scope
 

@@ -1,15 +1,15 @@
 # Toza English Editorial Revision Project
 
-Status: **PR #59 published; approved Pricing-04 integration and release pending.**
+Status: **Pricing-04 published and verified through PR #60.**
 
-Released main: `b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47` (14 October 2026), [PR #59](https://github.com/adirass-web/VIP/pull/59): marketing-02 Home, Why Toza, targeted Pricing and compact footer. See [current status](state/CURRENT-STATUS.md), [#59 release evidence](../../docs/marketing-02-release/RELEASE.md) and the [Pricing-04 release guide](../../docs/pricing-04-release/README.md). Older review packets describe their historical stage; the latest decision register and acceptance amendments determine current authority.
+Content release: `91e52ee8a8b6d9191a609c5353ac068445bc7147` (15 October 2026), [PR #60](https://github.com/adirass-web/VIP/pull/60). This replaces Pricing only; marketing-02 Home/Why, the protected Assessment, other supporting pages and the compact footer remain exact. See [current status](state/CURRENT-STATUS.md) and [publication evidence](../../docs/pricing-04-release/RELEASE.md). Older review packets describe their historical stage; the latest decisions and acceptance amendments determine current authority. Later line edits form a new revision.
 
 ## Current authority
 
 - The original accepted EN-02 baseline and protected Assessment remain fingerprinted in [acceptance-manifest.json](approved/acceptance-manifest.json).
 - The [first 10 October amendment](approved/acceptance-amendment-2026-10-10.json) records EN-03 Home/Pricing approval.
 - The [round-02 amendment](approved/acceptance-amendment-2026-10-10-round-02.json) supplies the effective EN-04 Home, Pricing, Separation and Divorce, and They Know Something copy. Later Batch A/B/C amendments govern their selected pages.
-- The [marketing-02 amendment](approved/acceptance-amendment-2026-10-14-marketing-02.json) supplies the published Home, Why Toza and targeted Pricing. The [Pricing-04 amendment](approved/acceptance-amendment-2026-10-15-pricing-04.json) supersedes Pricing only, including its exact visual labels, for the separately authorized new release. Acceptance is distinct from verified production publication.
+- The [marketing-02 amendment](approved/acceptance-amendment-2026-10-14-marketing-02.json) supplies the published Home, Why Toza and targeted Pricing. The [Pricing-04 amendment](approved/acceptance-amendment-2026-10-15-pricing-04.json) supersedes Pricing only, including its exact visual labels, for the published #60 release. Publication evidence is recorded separately from copy acceptance.
 - Read the [live decision register](state/EN-REVISION-DECISION-DELTA.md) with the locked instructions and source manifests. Later decisions supersede conflicting historical wording; do not edit old approvals to make them look current.
 
 The protected Assessment, source snapshots, original manifests and approved amendment blocks remain unchanged. Eleven English marketing pages are published; Hebrew marketing is retained but unpublished, Russian remains unpublished, and Hebrew legal documents remain accessible.

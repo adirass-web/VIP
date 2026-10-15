@@ -1,6 +1,6 @@
 # Current Project Status
 
-Updated: 15 October 2026 (Asia/Jerusalem). **Pricing-04 is accepted and authorized for publication by D-055. Its complete copy, metadata and final visual composition are the next-release authority. PR #59 / b4e918e is the verified preceding production baseline. The current release and deployment checks are linked from docs/pricing-04-release. Later line edits will form a subsequent version.**
+Updated: 15 October 2026 (Asia/Jerusalem). **Pricing-04 is published and verified through PR #60, content-release merge 91e52ee. Production workflow 38692509885 verified all 11 pages, 61 assets and 78 routes. Exact accepted Pricing-04 is the baseline for later line edits; ten other pages and the compact footer remain unchanged. Documentation-only cleanup may advance main without changing this content.**
 
 ## Released baseline
 
@@ -13,6 +13,7 @@ Updated: 15 October 2026 (Asia/Jerusalem). **Pricing-04 is accepted and authoriz
 | [#56](https://github.com/adirass-web/VIP/pull/56) | 7844b8406e040605bd8169c7935810ea8a6e7947 | Maintenance and installed Pages runtime gate |
 | [#58](https://github.com/adirass-web/VIP/pull/58) | 81a11a12c49eefd124c54bd2da227e0f815b083b | Shared footer spacing and cache version |
 | [#59](https://github.com/adirass-web/VIP/pull/59) | b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47 | Marketing-02 Home/Why/Pricing and compact shared footer |
+| [#60](https://github.com/adirass-web/VIP/pull/60) | 91e52ee8a8b6d9191a609c5353ac068445bc7147 | Approved Pricing-04 visual comparison and paid-stage journey |
 
 PR #56 merged as 7844b8406e040605bd8169c7935810ea8a6e7947 with unchanged public output. Production workflow 38386253114 and eleven-page content/header/asset, 78-route and desktop/mobile verification passed; see V:/TOZA hardening biz/release-evidence/pr56-deployment. The formerly separate footer release subsequently merged through #58; its production workflow 38388147576 succeeded, confirmed against current main on 14 October. This is deployment-history evidence, not a new full live-site inspection. #51 merged earlier. PR #54's useful presentation is superseded by #55/#57; its open draft is not a missing release. This reconciliation does not close or modify it.
 
@@ -30,17 +31,17 @@ The original EN-02 approval and protected Assessment remain fingerprinted in app
 
 Use scripts/accepted-copy.cjs pages()/assertAuthority() to resolve effective sources. Historical packets and the v3 specification cannot undo later approvals. Service facts, original sources, manifests and protected Assessment remain unchanged. Eleven English pages are published; Hebrew marketing is retained but unpublished, legal documents remain accessible, and Hebrew/Russian localization is deferred.
 
-## Published marketing-02 and current Pricing proposal
+## Published marketing-02 baseline and Pricing-04 release
 
 The owner selected all three frozen pages, requested the compact footer and then explicitly instructed “publish PR #59”. Personal Shield's typical 7–14 work hours exclude the additional Assessment; included work days remain unchanged. The published Pricing retains its purchase-scope table and approved delivery matrix. See docs/marketing-02-release for the reviewed integration and /workspace/toza-release-evidence/PR59-PRODUCTION-RELEASE.md for publication evidence.
 
 Reviewed head 829faf7 and merge b4e918e share Git tree 1ff5011cff65a3b1798c060ba31883526e0a0432. Production deployment 38576940753 and read-only live verification 38577883285 passed: eleven HTML pages, 59 assets, indexing/security headers, exact robots output and 78 routes. The footer occupied desktop area is 25.5% of its prior height. Seventy-five prior public files reconstruct their exact original hashes after removal of only the new footer stylesheet link from supporting-page HTML; main content and protected Assessment remain exact. The existing remote editorial/toza-copy-harness branch and PR #54 are preserved.
 
-D-052 explicitly reopens Pricing only: copy specialists first, then layout/visual design, one main comparison with labelled vector icons, prospect decision diagram and modular CSS ownership. Independent source and rendered reviews pass; the complete owner packet, prototype, screenshots and immutable source fingerprints are stored in revisions/pricing-03. Exact assembled Pricing copy/metadata/design remain pending owner approval. D-053 publication of #59 does not authorize substituting that new proposal.
+D-052 explicitly reopens Pricing only: copy specialists first, then layout/visual design, one main comparison with labelled vector icons, prospect decision diagram and modular CSS ownership. Independent source and rendered reviews pass; the complete owner packet, prototype, screenshots and immutable source fingerprints are stored in revisions/pricing-03. That Pricing-03 proposal awaited owner approval at D-052; D-054 and D-055 subsequently produced and accepted Pricing-04. D-053 publication of #59 did not itself substitute the then-unapproved proposal.
 
 D-054 produced the reviewed Pricing-04 proposal, following the owner's “show don't tell” direction and official consumer-software tier research. Pricing-03 and Pricing-04 review packets remain historical evidence. Their original pending-approval labels describe the review moment; D-055 now supplies exact owner acceptance and publication authority.
 
-The accepted source hashes are recorded in the new 2026-10-15 amendment. Production uses scripts/pricing-layout.cjs, assets/css/pricing-04.css and assets/js/pricing-04.js, with existing site.js retaining navigation and print ownership. Full main-text/link parity with the accepted review composition, all 93 ordered source blocks, seven comparison rows and actual quantities are checked. The exact Assessment allowance and remaining-group mapping stay visible. All 79 prior non-Pricing output files match #59; the ten other pages and protected Assessment remain exact. Independent release review and GitHub checks belong to docs/pricing-04-release. No additional wording is authorized for this release.
+The accepted source hashes are recorded in the new 2026-10-15 amendment. Production uses scripts/pricing-layout.cjs, assets/css/pricing-04.css and assets/js/pricing-04.js, with existing site.js retaining navigation and print ownership. Full main-text/link parity with the accepted review composition, all 93 ordered source blocks, seven comparison rows and actual quantities are checked. The exact Assessment allowance and remaining-group mapping stay visible. All 79 prior non-Pricing output files match #59; the ten other pages and protected Assessment remain exact. Independent release review and GitHub checks belong to docs/pricing-04-release. Reviewed head 940b182 and merge 91e52ee share tree f63a0bd74e96ac26904e238372677dd402d2354b. Hosted preview attempt 2 and merge-specific production both passed 72 file comparisons and all 78 routes; see docs/pricing-04-release/RELEASE.md. Later wording changes require a new revision.
 
 ## Release evidence and limits
 
