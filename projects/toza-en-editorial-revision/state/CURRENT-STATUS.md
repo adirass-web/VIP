@@ -1,6 +1,6 @@
 # Current Project Status
 
-Updated: 14 October 2026. **Production main is 81a11a1, including PR #58's footer spacing. Owner-approved marketing-02 Home, Why Toza and targeted Pricing are integrated in a separate release candidate; production publication remains a later release decision.**
+Updated: 15 October 2026 (Asia/Jerusalem). **Pricing-04 is accepted and authorized for publication by D-055. Its complete copy, metadata and final visual composition are the next-release authority. PR #59 / b4e918e is the verified preceding production baseline. The current release and deployment checks are linked from docs/pricing-04-release. Later line edits will form a subsequent version.**
 
 ## Released baseline
 
@@ -12,6 +12,7 @@ Updated: 14 October 2026. **Production main is 81a11a1, including PR #58's foote
 | [#57](https://github.com/adirass-web/VIP/pull/57) | d9933223984cce6a5f3c56e80e9803aa92cca788 | Batch A/B/C copy, Process stages, Home rows and Business groups |
 | [#56](https://github.com/adirass-web/VIP/pull/56) | 7844b8406e040605bd8169c7935810ea8a6e7947 | Maintenance and installed Pages runtime gate |
 | [#58](https://github.com/adirass-web/VIP/pull/58) | 81a11a12c49eefd124c54bd2da227e0f815b083b | Shared footer spacing and cache version |
+| [#59](https://github.com/adirass-web/VIP/pull/59) | b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47 | Marketing-02 Home/Why/Pricing and compact shared footer |
 
 PR #56 merged as 7844b8406e040605bd8169c7935810ea8a6e7947 with unchanged public output. Production workflow 38386253114 and eleven-page content/header/asset, 78-route and desktop/mobile verification passed; see V:/TOZA hardening biz/release-evidence/pr56-deployment. The formerly separate footer release subsequently merged through #58; its production workflow 38388147576 succeeded, confirmed against current main on 14 October. This is deployment-history evidence, not a new full live-site inspection. #51 merged earlier. PR #54's useful presentation is superseded by #55/#57; its open draft is not a missing release. This reconciliation does not close or modify it.
 
@@ -24,15 +25,22 @@ The original EN-02 approval and protected Assessment remain fingerprinted in app
 - approved/acceptance-amendment-2026-10-12-batch-a.json (Why Toza and Process stage map).
 - approved/acceptance-amendment-2026-10-12-batch-b.json (Business, Inheritance and Attorneys).
 - approved/acceptance-amendment-2026-10-13-batch-c.json (FAQ and Process links).
-- approved/acceptance-amendment-2026-10-14-marketing-02.json (this review branch: exact frozen Home, Why Toza and targeted Pricing; D-049/D-050).
+- approved/acceptance-amendment-2026-10-14-marketing-02.json (published exact Home, Why Toza and targeted Pricing; D-049/D-050/D-053).
+- approved/acceptance-amendment-2026-10-15-pricing-04.json (exact Pricing-04 copy, metadata and visual wording; D-055).
 
 Use scripts/accepted-copy.cjs pages()/assertAuthority() to resolve effective sources. Historical packets and the v3 specification cannot undo later approvals. Service facts, original sources, manifests and protected Assessment remain unchanged. Eleven English pages are published; Hebrew marketing is retained but unpublished, legal documents remain accessible, and Hebrew/Russian localization is deferred.
 
-## Current marketing release candidate
+## Published marketing-02 and current Pricing proposal
 
-The owner selected all three frozen pages for integration. Personal Shield's typical 7–14 work hours exclude the additional Assessment; included work days remain unchanged. The current purchase-scope table stays and the approved delivery matrix is added. Purchase-decision table B and broader hardening discussion are deferred. See docs/marketing-02-release for source fingerprints, local checks, independent review, screenshots, publication sequence and business measurement.
+The owner selected all three frozen pages, requested the compact footer and then explicitly instructed “publish PR #59”. Personal Shield's typical 7–14 work hours exclude the additional Assessment; included work days remain unchanged. The published Pricing retains its purchase-scope table and approved delivery matrix. See docs/marketing-02-release for the reviewed integration and /workspace/toza-release-evidence/PR59-PRODUCTION-RELEASE.md for publication evidence.
 
-Work is isolated from production, starting at current main81a11a1. The existing remote editorial/toza-copy-harness branch is preserved; PR #59 uses codex/toza-marketing-02-release with its own noindex preview destination and exact-head gates. The owner subsequently reopened footer dimensions, requesting approximately one quarter of its occupied height (D-051). A new footer-only stylesheet applies across the shared layout. Seventy-five existing public files remain byte-identical after removing only its exact new stylesheet link from the eight supporting-page HTML files; their content and protected Assessment remain exact. No merge/publication is implied by copy acceptance or preview preparation.
+Reviewed head 829faf7 and merge b4e918e share Git tree 1ff5011cff65a3b1798c060ba31883526e0a0432. Production deployment 38576940753 and read-only live verification 38577883285 passed: eleven HTML pages, 59 assets, indexing/security headers, exact robots output and 78 routes. The footer occupied desktop area is 25.5% of its prior height. Seventy-five prior public files reconstruct their exact original hashes after removal of only the new footer stylesheet link from supporting-page HTML; main content and protected Assessment remain exact. The existing remote editorial/toza-copy-harness branch and PR #54 are preserved.
+
+D-052 explicitly reopens Pricing only: copy specialists first, then layout/visual design, one main comparison with labelled vector icons, prospect decision diagram and modular CSS ownership. Independent source and rendered reviews pass; the complete owner packet, prototype, screenshots and immutable source fingerprints are stored in revisions/pricing-03. Exact assembled Pricing copy/metadata/design remain pending owner approval. D-053 publication of #59 does not authorize substituting that new proposal.
+
+D-054 produced the reviewed Pricing-04 proposal, following the owner's “show don't tell” direction and official consumer-software tier research. Pricing-03 and Pricing-04 review packets remain historical evidence. Their original pending-approval labels describe the review moment; D-055 now supplies exact owner acceptance and publication authority.
+
+The accepted source hashes are recorded in the new 2026-10-15 amendment. Production uses scripts/pricing-layout.cjs, assets/css/pricing-04.css and assets/js/pricing-04.js, with existing site.js retaining navigation and print ownership. Full main-text/link parity with the accepted review composition, all 93 ordered source blocks, seven comparison rows and actual quantities are checked. The exact Assessment allowance and remaining-group mapping stay visible. All 79 prior non-Pricing output files match #59; the ten other pages and protected Assessment remain exact. Independent release review and GitHub checks belong to docs/pricing-04-release. No additional wording is authorized for this release.
 
 ## Release evidence and limits
 

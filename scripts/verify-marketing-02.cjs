@@ -27,7 +27,11 @@ const approvedHashes = {
 assert.deepEqual(manifest.entries.map(e => e.route).sort(), Object.keys(approvedHashes).sort());
 for (const entry of manifest.entries) {
   assert.equal(entry.sha256, approvedHashes[entry.route], entry.route + ': frozen owner approval');
+  assert.equal(hash(read(project+entry.path)),entry.sha256,entry.route+': historical marketing source remains exact');
   const page = pages().find(p => p.route === entry.route);
+  // Pricing-04 is a later exact owner approval, with its own complete render
+  // and preservation gate. Marketing-02 still owns unchanged Home and Why.
+  if(page.pricing04){assert.equal(entry.route,'pricing');continue;}
   assert.equal(hash(page.source), entry.sha256, entry.route + ': exact effective source');
   const expected = content(renderPage(page, {presentation:false}));
   const actual = content(fs.readFileSync('_site/en/' + page.route + '.html', 'utf8'));
@@ -49,4 +53,4 @@ for (const [path, fingerprint] of Object.entries(baseline)) {
   }
   assert.equal(hash(output), fingerprint, path + ': published output unchanged apart from authorized footer stylesheet'); retained++;
 }
-console.log('MARKETING-02 VERIFIED: three frozen payloads, exact block/link order, five complete tables; ' + retained + ' prior public files unchanged apart from the exact authorized footer stylesheet link.');
+console.log('MARKETING-02 VERIFIED: all historical source hashes; current Home/Why exact block/link order; Pricing checked by its effective approval; ' + retained + ' prior public files unchanged apart from the exact authorized footer stylesheet link.');

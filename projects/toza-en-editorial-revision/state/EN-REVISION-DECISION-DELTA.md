@@ -443,3 +443,40 @@ This register is the bridge between page approval and the future consolidated v3
 - **Authority:** Owner screenshot and instruction: “the footer is too high. can be 1/4.”
 - **Decision:** Compress desktop footer to approximately one quarter of the screenshot's occupied height, including its preceding gap. Use wrapping horizontal navigation and tighter spacing; retain readable mobile links, all footer words and destinations. Add a separately versioned footer-only stylesheet to the shared layout.
 - **Boundary:** Supersedes the previously accepted footer dimensions only. Frozen Home, Why Toza, Pricing and protected Assessment copy remain exact; future comparison and hardening expansion stay deferred. Update PR #59 and preview for review; no production publication authorization.
+
+### D-052 — Reopen Pricing copy, then visual presentation
+
+- **Date:** 2026-10-14 (Asia/Jerusalem).
+- **Authority:** Owner: “The Pricing page is long and unclear. Call experts to work only on the pricing page copy, then layout and visual design,” with a clearer side-by-side matrix, labelled vector people/device icons and a possible prospect process diagram; modular CSS suggested for consistent change management.
+- **Decision:** Develop a new Pricing-only review proposal using separate copy and design specialists and independent review. The earlier selected purchase-decision comparison B can inform this new pass. Resolve copy and purchase logic before design. Preserve authoritative facts and all other page copy; the protected Assessment remains unchanged.
+- **Scope:** Review-only artifacts in revisions/pricing-03, including complete copy/metadata, factual trace, exact diagram microcopy, modular page-scoped CSS, responsive prototype/screenshots and review. This does not substitute new Pricing into PR #59 or production.
+- **Approval:** Exact assembled Pricing proposal remains pending owner review; no product/factual changes are authorized.
+- **Reviewed proposal:** Pricing source 6ea8ed8951d2673048300b4dca3632c4ac23c97a3be73c0659bdb8f9ab299461; diagram dd238e0735c06726feaae309d480ba56c39be694c69cababf96907736e7d64af; HTML cb543c8d6e790152b32566cabdc522917ad21853cc7aabff5cf7390f33c0e816. Independent source and rendered reviews pass. Final owner packet and prototype are stored in revisions/pricing-03; no acceptance amendment or production overlay is added.
+
+### D-053 — Publish verified PR #59
+
+- **Date:** 2026-10-14 (Asia/Jerusalem).
+- **Authority:** Owner: “publish PR #59”.
+- **Decision:** Publish the verified head 829faf7efe59bf53cc5289db884a6d0067e42126, including approved Home, Why Toza, targeted Pricing and compact footer. Fresh CI/CodeQL, 56 browser checks, 78 local/hosted routes, 11 HTML and 59 asset comparisons passed before merge.
+- **Result:** PR #59 merged as b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47; its Git tree equals the reviewed head. Production workflow 38576940753 succeeded. Read-only live verification is recorded separately in release evidence.
+- **Boundary:** The new D-052 Pricing proposal remains separate and unapproved. Publication authorizes neither its automatic integration nor further factual changes.
+
+### D-054 — Research and demonstrate Pricing value visually
+
+- **Date:** 2026-10-14 (Asia/Jerusalem).
+- **Authority:** Owner: “The direction is good. The rule: show don't tell,” asking to show devices, hours, Yubico keys, threat model and OpSec training, and to study public best practices/books/skills for lead contact, Assessment purchase and subsequent hardening.
+- **Decision:** Preserve Pricing-03 as a reviewed baseline. Research public guidance and develop Pricing-04 with visuals carrying quantities, scope, paid-stage value and the next action. Rework the four-cell process into a more tangible client journey. Use concise labels and accessible complete facts; keep Toza's quiet, precise character.
+- **Scope:** Pricing only, review prototype and exact copy/microcopy proposal. Public methods support the work but cannot change authoritative fees, device scope, credit, timing, consent, deliverables or purchase boundaries. The owner-requested Yubico naming is a proposed brand label, not confirmation of a particular SKU or capabilities.
+- **Approval:** Direction approved; exact new assembled copy/layout remains pending owner review. Published PR #59, Home, Why Toza and protected Assessment remain unchanged.
+- **Later steering:** Owner explicitly requested a study of top consumer software tier presentations, covering business logic and design execution. Official 1Password, Proton, Apple iCloud+, Adobe Photography and Bitwarden pages were read; source hierarchy supports coverage-led choices, shared value and concise comparison with full reference. External rendered access was blocked, so competitor geometry is not claimed. Apply the suitable patterns to Pricing-04 and verify Toza's actual desktop/mobile rendering; preserve one-off payment, private contact and voluntary paid-stage boundaries.
+- **Reviewed proposal:** Pricing source `7e251d413298476d566b767b2c8869b51d36c0c68032e084a9ddf72513378b25`; visual copy `b44941fd34d3101f40bdbf618bd70ff43fad66af90fbe47d73d1785e4f5cf64d`; final HTML `5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f`; CSS `a33e565682c3e63ba1053ff5e1146d143da9b49a087190f81c89e861e7bedf10`. Independent copy, research and rendered reviews pass; the exact owner packet and source/output snapshot are in revisions/pricing-04. The Assessment's precise device allowance remains visible at direct paid-stage entry. All 70 verified published HTML/asset hashes are preserved. No acceptance amendment, production integration or publication is performed.
+
+### D-055 — Accept and deploy Pricing-04, then tidy the repository
+
+- **Date:** 2026-10-15 (Asia/Jerusalem).
+- **Authority:** Owner: “ok deploy it @GitHub then clean up the repo. later will provide line edits for next version”. This follows the complete Pricing-04 owner packet and reviewed rendering.
+- **Decision:** Accept exact Pricing-04 copy/metadata, visual labels including Yubico naming, and compact final composition; integrate it into the actual site shell and publish through GitHub after release verification. Add the narrow acceptance amendment dated 2026-10-15. Future line edits belong to a later accepted version.
+- **Exact scope:** Pricing source `7e251d413298476d566b767b2c8869b51d36c0c68032e084a9ddf72513378b25`; visual source `b44941fd34d3101f40bdbf618bd70ff43fad66af90fbe47d73d1785e4f5cf64d`; reviewed HTML `5f1569faa2e8d1563310e09b5a24c0b32f5f07ae4e550177be257fe0f690606f`. Existing navigation, schema, compact footer, contact destinations, ten other pages and public assets remain exact. No model, connector or extra key capability is promised.
+- **Release safeguards:** Full reviewed main-text/link parity, 93 ordered source blocks, seven comparison rows, actual object counts, precise direct-entry Assessment scope, native disclosure/print/mobile checks and exact-head GitHub verification. Compare all 79 prior non-Pricing files against #59. Add read-only hosted checks for the fixed preview and production destinations.
+- **Cleanup:** Reconcile current documentation and stale active verification assumptions; retain historical approvals/review evidence and existing branches/worktrees. Reuse existing navigation/print ownership rather than duplicate handlers. Remove only task-owned transient output after evidence is retained.
+- **Status:** Exact copy/layout and integration/publication authorized. Release execution and verification are recorded in docs/pricing-04-release and GitHub.

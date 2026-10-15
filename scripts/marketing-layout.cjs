@@ -1,6 +1,6 @@
 'use strict';
-// Presentation mapping for the three frozen marketing-02 sources. Legacy
-// adapters remain intact; no approved paragraph, table or link is rewritten.
+// Presentation mapping for the frozen marketing-02 Home and Why sources.
+// Pricing uses its own approved adapter; historical sources remain intact.
 const {parseDocument} = require('htmlparser2');
 const D = require('domutils');
 const serialize = require('dom-serializer').default;
@@ -15,7 +15,6 @@ function group(nodes, className) { const n = element(`<div class="${className}">
 const jumps = {
   index: [['personal-shield','Personal Shield'],['assessment','Threat assessment'],['situations','Your situation'],['contact','Contact']],
   'why-us': [['experience','Experience'],['methods','Methods'],['assessment','Assessment to protection'],['contact','Contact']],
-  pricing: [['full-services','Full services'],['assessment','Assessment'],['credit','Credit conditions'],['contact','Contact']],
 };
 function present(template, route) {
   if (!jumps[route]) throw Error('Unexpected marketing route: ' + route);
