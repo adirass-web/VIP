@@ -31,7 +31,7 @@ Pages normalizes .html aliases to extensionless URLs; canonicals and sitemap fol
 
 ## Release
 
-The released baseline is [PR #59](https://github.com/adirass-web/VIP/pull/59), main `b4e918eeaa045cdeb5e9efc8be650aaef9dc1d47`: accepted marketing-02 Home, Why Toza and targeted Pricing, plus the compact shared footer. The owner has approved Pricing-04 and instructed its separate integration, review and deployment. That release is pending; an approved proposal is not evidence that production has updated. See [current project status](projects/toza-en-editorial-revision/state/CURRENT-STATUS.md) and the [Pricing-04 release guide](docs/pricing-04-release/README.md) for the eventual PR, reviewed head and deployment evidence. PR #54 remains untouched.
+The current content release is [PR #60](https://github.com/adirass-web/VIP/pull/60), published as `91e52ee8a8b6d9191a609c5353ac068445bc7147` on 15 October 2026: accepted Pricing-04, with the ten other pages and compact shared footer preserved. Merge-specific production checks verified 11 pages, 61 assets and 78 routes. See [publication evidence](docs/pricing-04-release/RELEASE.md) and [current project status](projects/toza-en-editorial-revision/state/CURRENT-STATUS.md). [PR #59](https://github.com/adirass-web/VIP/pull/59) is the preceding baseline; PR #54 remains untouched. Later line edits belong to a separate revision, preserving the accepted Pricing-04 inputs.
 
 General PR verification does not deploy. The separate preview workflow permits only these same-repository branches, checked out at their exact PR head, with fixed noindex destinations:
 
