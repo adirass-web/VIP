@@ -38,7 +38,8 @@ function verify(page){
   assert.equal(brandItems.length,12,'twelve labelled examples');
   for(const item of brandItems){
     const img=find(item,n=>n.name==='img')[0],label=find(item,n=>n.name==='span')[0];
-    assert(img?.attribs?.src?.startsWith('https://cdn.simpleicons.org/'),'Simple Icons source');
+    const iconUrl = img?.attribs?.src ? new URL(img.attribs.src) : null;
+    assert(iconUrl && iconUrl.protocol === 'https:' && iconUrl.hostname === 'cdn.simpleicons.org' && /^\/[a-z]+\/232323$/.test(iconUrl.pathname),'Simple Icons source');
     assert.equal(img.attribs.alt,'','decorative icon has no duplicate accessible label');
     assert(label&&text(label),'every icon has a visible label');
   }

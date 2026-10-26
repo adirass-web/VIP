@@ -4,6 +4,7 @@ const MarkdownIt = require('markdown-it');
 const md = new MarkdownIt({html:false,typographer:false});
 const sourceSha256 = '41ffe67ec80f33cbd0169ea3d635982bab3d508422234d974d4f1b23ed7b868f';
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
+const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const brands = {
   WhatsApp:'whatsapp', Messenger:'facebookmessenger', Outlook:'microsoftoutlook', Gmail:'gmail',
   Chrome:'googlechrome', Safari:'safari', Instagram:'instagram', Facebook:'facebook',
@@ -45,7 +46,7 @@ function render(page) {
     const name=li.replace(/<[^>]+>/g,'').trim();
     const icon=brands[name];
     if (!icon) throw Error('Unapproved brand icon: '+name);
-    return `<li><img src="https://cdn.simpleicons.org/${icon}/232323" alt="" width="20" height="20" loading="lazy"><span>${name}</span></li>`;
+    return `<li><img src="https://cdn.simpleicons.org/${icon}/232323" alt="" width="20" height="20" loading="lazy"><span>${escapeHtml(name)}</span></li>`;
   }).join('');
   const body=`<div class="wrap pricing-matrix-content">
 <header class="pricing-matrix-title">${hero.html}</header>
