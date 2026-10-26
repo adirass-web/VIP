@@ -83,6 +83,7 @@ assertIncludes(preparePreview, "Exactly one global header rule required", 'Previ
 assertIncludes(preparePreview, "Preview indexing already configured", 'Preview duplicate indexing guard');
 assert(!preview.includes('>> _site/_headers'), 'Preview must not append a duplicate global header rule');
 const previewConfig = workflow(preview), previewJob = previewConfig.jobs.preview;
+assert(previewJob['timeout-minutes'] === 30, 'Preview job allows enough time for browser installation and hosted verification');
 const branchGuard = "github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'codex/toza-approved-copy-preview' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' || github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-pricing-04-release' || github.event.pull_request.head.ref == 'codex/pricing-matrix' || github.event.pull_request.head.ref == 'codex/toza-pricing-icons')";
 assert(previewJob.if === branchGuard, 'Preview requires the exact same-repository six-branch allowlist');
 assert(Object.keys(previewConfig.on).length === 1 && previewConfig.on.pull_request.branches.length === 1 && previewConfig.on.pull_request.branches[0] === 'main', 'Preview may run only for PRs targeting main');
