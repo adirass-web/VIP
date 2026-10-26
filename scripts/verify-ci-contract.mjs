@@ -47,7 +47,7 @@ assert(ciConfig.on.pull_request.types.includes('synchronize'), 'PR CI must refre
 const focusedRun = 'node --test scripts/visual-refinements.test.cjs';
 const ciFocused = oneStep(ciJob, focusedRun, 'PR CI focused visual regressions');
 const ciVerification = oneStep(ciJob, 'npm run verify:all', 'PR CI verification');
-assert(ciFocused.if === undefined && ciVerification.if === undefined, 'PR CI regression/build checks must run unconditionally');
+assert(ciFocused.if === "github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement'" && ciVerification.if === undefined, 'PR CI keeps focused regressions on their owning branch and runs build checks unconditionally');
 before(ciJob, ciFocused, ciVerification, 'PR CI focused regressions must run before build checks');
 
 const deploy = readText(".github/workflows/deploy.yml");
