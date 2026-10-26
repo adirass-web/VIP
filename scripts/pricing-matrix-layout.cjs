@@ -27,7 +27,8 @@ function render(page) {
     const lineBreak=chunk.indexOf('\n');
     const heading=chunk.slice(0,lineBreak).replace(/^## /,'').replace(/ \{#[^}]+\}$/,'');
     const id=chunk.match(/ \{#([^}]+)\}$/m)?.[1] || heading.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-    return {heading,id,html:md.render(chunk.slice(lineBreak+1).trim())};
+    const source=chunk.slice(lineBreak+1).trim();
+    return {heading,id,source,html:md.render(source)};
   });
   const hero=sections.find(s=>s.id==='hero');
   const assessment=sections.find(s=>s.id==='assessment');
@@ -44,8 +45,7 @@ function render(page) {
   table=table.replace(/<tr>\s*<td>([\s\S]*?)<\/td>/g,(_,value)=>`<tr><th scope="row">${value}</th>`);
   table=table.replace(/<td>—<\/td>/g,'<td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>');
   table=table.replace(/<td>✓<\/td>/g,'<td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td>');
-  const appNames=apps.html.match(/<li>([\s\S]*?)<\/li>/g)||[];
-  const sourceNames=appNames.map(li=>li.replace(/<[^>]+>/g,'').trim());
+  const sourceNames=apps.source.split('\n').filter(line=>line.startsWith('- ')).map(line=>line.slice(2).trim());
   if (sourceNames.length!==brands.length || sourceNames.some((name,i)=>name!==brands[i].name)) throw Error('Unapproved brand icon list');
   const iconList=brands.map(({name,icon})=>{
     return `<li><img src="https://cdn.simpleicons.org/${icon}/232323" alt="" width="20" height="20" loading="lazy"><span>${name}</span></li>`;
@@ -64,3 +64,4 @@ function render(page) {
   return '---\n'+Object.entries(frontmatter).map(([key,value])=>key+': '+JSON.stringify(value)).join('\n')+'\n---\n{# Generated from the approved pricing matrix source. #}\n'+body+'\n';
 }
 module.exports={render,sourceSha256};
+
