@@ -16,6 +16,7 @@ function blocks(root){return find(root,n=>['p','h1','h2','h3','li','th','td','fi
 function rows(root){return find(root,n=>n.name==='tr'&&n.parent?.name==='tbody').map(row=>row.children.filter(n=>['th','td'].includes(n.name)).map(text).join('\u0000')).sort();}
 assertAuthority();
 for(const page of pages()) {
+  if(page.pricingMatrix){require('./verify-pricing-matrix.cjs').verify(page);continue;}
   if(page.pricing04){require('./verify-pricing-04.cjs').verify(page);continue;}
   const base=parse(renderPage(page,{presentation:false}));
   const html=fs.readFileSync('_site/en/'+page.route+'.html','utf8');

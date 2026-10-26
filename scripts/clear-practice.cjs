@@ -24,7 +24,7 @@ function paragraphs(n) {return n.children.filter(c=>c.name==='p');}
 
 function presentBusinessOffer(section,detail) {
   const ps=paragraphs(detail),blocks=detail.children.filter(n=>n.type==='tag');
-  const expectedStarts=['Private Exposure Assessment · Typically four hours','₪3,600 including VAT','The paid visit includes hands-on inspection of relevant access','You receive a summary of what was reviewed, found and changed','Personal Shield hardens the agreed settings and access arrangements'];
+  const expectedStarts=['Private Exposure Assessment · Typically four hours','₪4,000 including VAT','The paid visit includes hands-on inspection of relevant access','You receive a summary of what was reviewed, found and changed','Personal Shield hardens the agreed settings and access arrangements'];
   const qualifier='Its scope and price require a separate decision; a group or unusually complex situation may need a different agreed service.';
   const finalLinks=ps[5]?tags(ps[5],'a'):[];
   if(section.attribs.id!=='put-the-technical-questions-in-experienced-hands'||ps.length!==6||blocks.length!==6||ps.some((p,i)=>blocks[i]!==p)||expectedStarts.some((s,i)=>!text(ps[i]).startsWith(s))||text(ps[0])!==expectedStarts[0]||text(ps[1])!==expectedStarts[1]||!text(ps[4]).endsWith(qualifier)||finalLinks.length!==2||finalLinks[0].attribs.href!=='/en/private-exposure-assessment.html'||finalLinks[1].attribs.href!=='/en/pricing.html'||ps[4].children[0]?.type!=='text'||!ps[4].children[0].data.startsWith('Personal Shield ')) {
