@@ -135,7 +135,7 @@ test('pricing notes, credit conditions, deep links and print retain access',asyn
   const other=page.locator('#other-pricing-and-credit');await expect(other).not.toHaveAttribute('open','');
   await expect(page.locator('.pricing-notes')).toContainText('within 30 days of Assessment completion');
   await other.locator('summary').focus();await page.keyboard.press('Enter');await expect(other).toHaveAttribute('open','');
-  await expect(other).toContainText('Booking alone does not qualify');
+  await expect(other).toContainText('The credit applies once to a group engagement');
   await page.goto(siteUrl+'/en/pricing.html#other-pricing-and-credit');await expect(other).toHaveAttribute('open','');
   const before=await all.evaluateAll(items=>items.map(i=>i.open));
   await page.evaluate(()=>dispatchEvent(new Event('beforeprint')));expect(await all.evaluateAll(items=>items.every(i=>i.open))).toBe(true);
