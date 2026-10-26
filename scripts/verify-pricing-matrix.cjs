@@ -43,8 +43,14 @@ function verify(page){
     assert.equal(img.attribs.alt,'','decorative icon has no duplicate accessible label');
     assert(label&&text(label),'every icon has a visible label');
   }
-  const iconSourceLinks=find(main,n=>n.name==='a').map(link=>new URL(link.attribs.href,'https://toza.local'));
-  assert(iconSourceLinks.some(url=>url.protocol==='https:'&&url.hostname==='github.com'&&url.pathname==='/simple-icons/simple-icons')&&html.includes('CC0'),'icon source and license credited');
+  const matrixRows=find(rows,n=>n.name==='tr');
+  for(const [index,label] of [[0,'people'],[1,'devices']]){
+    const icon=find(matrixRows[index],n=>n.name==='svg'&&n.attribs?.class==='matrix-row-icon');
+    assert.equal(icon.length,1,label+' row has a single decorative icon');
+    assert.equal(icon[0].attribs['aria-hidden'],'true',label+' icon is decorative to assistive technology');
+  }
+  assert.equal(find(apps,n=>n.attribs?.class==='brand-credit').length,0,'remove icon-license boilerplate from the public page');
+  assert(!html.includes('Icons and licenses:')&&!/Product names and (?:marks|trademarks) belong to their owners\./.test(html),'no icon-license or trademark boilerplate');
   assert(html.includes('within 30 days of Assessment completion'),'credit window');
   const other=find(main,n=>n.name==='details'&&n.attribs?.class==='other-pricing')[0];
   assert(other,'secondary pricing details remain available below the compact comparison');
@@ -54,5 +60,5 @@ function verify(page){
   assert(find(main,n=>n.name==='section'&&n.attribs?.id==='contact').length===1,'one contact destination');
   return true;
 }
-if(require.main===module){const p=require('./accepted-copy.cjs');p.assertAuthority();verify(p.pages().find(x=>x.route==='pricing'));console.log('PRICING MATRIX VERIFIED: current English price source, separate Assessment, three Shield tiers, inclusions, icons and credit.');}
+if(require.main===module){const p=require('./accepted-copy.cjs');p.assertAuthority();verify(p.pages().find(x=>x.route==='pricing'));console.log('PRICING MATRIX VERIFIED: current English price source, separate Assessment, three Shield tiers, inclusions, device and people icons, no license boilerplate.');}
 module.exports={verify};
