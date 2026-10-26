@@ -5,11 +5,14 @@ const md = new MarkdownIt({html:false,typographer:false});
 const sourceSha256 = '41ffe67ec80f33cbd0169ea3d635982bab3d508422234d974d4f1b23ed7b868f';
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-const brands = {
-  WhatsApp:'whatsapp', Messenger:'facebookmessenger', Outlook:'microsoftoutlook', Gmail:'gmail',
-  Chrome:'googlechrome', Safari:'safari', Instagram:'instagram', Facebook:'facebook',
-  Photos:'googlephotos', iCloud:'icloud', Waze:'waze', Maps:'googlemaps',
-};
+const brands = [
+  {name:'WhatsApp',icon:'whatsapp'}, {name:'Messenger',icon:'facebookmessenger'},
+  {name:'Outlook',icon:'microsoftoutlook'}, {name:'Gmail',icon:'gmail'},
+  {name:'Chrome',icon:'googlechrome'}, {name:'Safari',icon:'safari'},
+  {name:'Instagram',icon:'instagram'}, {name:'Facebook',icon:'facebook'},
+  {name:'Photos',icon:'googlephotos'}, {name:'iCloud',icon:'icloud'},
+  {name:'Waze',icon:'waze'}, {name:'Maps',icon:'googlemaps'},
+];
 function render(page) {
   if (page.route !== 'pricing') throw Error('Pricing matrix layout can render only Pricing');
   if (hash(page.source) !== sourceSha256) throw Error('Pricing matrix source changed without an acceptance amendment');
@@ -42,11 +45,10 @@ function render(page) {
   table=table.replace(/<td>—<\/td>/g,'<td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>');
   table=table.replace(/<td>✓<\/td>/g,'<td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td>');
   const appNames=apps.html.match(/<li>([\s\S]*?)<\/li>/g)||[];
-  const iconList=appNames.map(li=>{
-    const name=li.replace(/<[^>]+>/g,'').trim();
-    const icon=brands[name];
-    if (!icon) throw Error('Unapproved brand icon: '+name);
-    return `<li><img src="https://cdn.simpleicons.org/${icon}/232323" alt="" width="20" height="20" loading="lazy"><span>${escapeHtml(name)}</span></li>`;
+  const sourceNames=appNames.map(li=>li.replace(/<[^>]+>/g,'').trim());
+  if (sourceNames.length!==brands.length || sourceNames.some((name,i)=>name!==brands[i].name)) throw Error('Unapproved brand icon list');
+  const iconList=brands.map(({name,icon})=>{
+    return `<li><img src="https://cdn.simpleicons.org/${icon}/232323" alt="" width="20" height="20" loading="lazy"><span>${name}</span></li>`;
   }).join('');
   const body=`<div class="wrap pricing-matrix-content">
 <header class="pricing-matrix-title">${hero.html}</header>

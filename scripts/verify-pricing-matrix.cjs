@@ -43,7 +43,8 @@ function verify(page){
     assert.equal(img.attribs.alt,'','decorative icon has no duplicate accessible label');
     assert(label&&text(label),'every icon has a visible label');
   }
-  assert(html.includes('https://github.com/simple-icons/simple-icons')&&html.includes('CC0'),'icon source and license credited');
+  const iconSourceLinks=find(main,n=>n.name==='a').map(link=>new URL(link.attribs.href,'https://toza.local'));
+  assert(iconSourceLinks.some(url=>url.protocol==='https:'&&url.hostname==='github.com'&&url.pathname==='/simple-icons/simple-icons')&&html.includes('CC0'),'icon source and license credited');
   assert(html.includes('within 30 days of Assessment completion'),'credit window');
   const other=find(main,n=>n.name==='details'&&n.attribs?.class==='other-pricing')[0];
   assert(other,'secondary pricing details remain available below the compact comparison');
