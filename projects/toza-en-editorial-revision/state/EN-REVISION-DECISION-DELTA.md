@@ -482,3 +482,15 @@ This register is the bridge between page approval and the future consolidated v3
 - **Status:** Exact copy/layout and integration/publication authorized. Release execution and verification are recorded in docs/pricing-04-release and GitHub.
 
 - **D-055 publication result:** PR #60 merged as `91e52ee8a8b6d9191a609c5353ac068445bc7147`, tree-identical to reviewed head `940b18209ae279dc807f697d70df37ac1d2ff1e3`. Production run `38692509885` passed 11-page/61-asset content/header/indexing and 78-route checks. Publication record and immutable artifact fingerprints are in docs/pricing-04-release/RELEASE.md and RELEASE.json. Post-publication cleanup reconciles current entrypoints and retains all approval/review history; no new line edits are included.
+
+### D-056 — English Pricing matrix and current price references
+
+- **Date:** 2026-10-26
+- **Category:** Commercial / Page role
+- **Decision:** Replace the English Pricing presentation with a separate Private Exposure Assessment above one three-column Shield inclusion matrix. The matrix shows Personal Shield, Personal Shield for Two and Inner Circle, their prices, people/device/key allowances, and the 12-month review included only with Inner Circle. State shared Shield inclusions once beneath it and show labelled everyday service examples. Update English price references and Assessment credit timing; leave Hebrew unchanged.
+- **Reason:** Owner-directed hierarchy is free conversation → ₪4,000 risk assessment with a jointly built threat model and safe urgent first aid within scope → separately accepted Personal Shield, extended for more people. Owner explicitly selected “Pricing + English price mentions.”
+- **Authority:** Direct owner instruction and selection; current commercial figures verified in `pricing-study/facts.md` and `pricing-study/source-manifest.json` on 25 October 2026.
+- **Affected pages/components:** English Pricing, English price mentions, English language-model reference (`llms.txt`), acceptance/generation adapter and project authority record.
+- **Supersedes:** D-001 through D-005 and older English Pricing acceptance where they conflict on Assessment and Shield prices, tier structure or credit window. Does not change Hebrew copy.
+- **Status:** Approved for English production integration; release through PR, required CI and production verification.
+- **Notes for v3 spec:** Personal Shield ₪32,000 / 1 person / up to 3 devices / 2 keys; Personal Shield for Two ₪45,000 / 2 people / up to 6 pooled devices / 4 keys; Inner Circle ₪70,000 / household up to 4 / up to 12 pooled devices / 8 keys / 12-month review. Assessment ₪4,000. Credit applies when protection work begins within 30 days of Assessment completion. Each Shield includes one home network/router within its stated limits, essential migration where needed, follow-up after about four weeks, a 60-day question line and authorized lawyer/family-office coordination. Prices include VAT. Do not infer these terms for Hebrew.

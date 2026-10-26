@@ -1,0 +1,74 @@
+{
+  "acceptedOn": "2026-10-26",
+  "authority": "Owner instruction: replace current English Pricing page with the approved revision-2 Shield matrix and update English price mentions. Current commercial authority from pricing-study/facts.md, source-manifest.json and direct owner approval; Hebrew remains untouched.",
+  "previousAmendment": "approved/acceptance-amendment-2026-10-15-pricing-04.json",
+  "scope": "Pricing page replaced by separate Assessment + three Shield comparison matrix + shared inclusions and app examples. English page price figures and 30-day Assessment credit condition updated from prior accepted copy; other page wording preserved. Direct English conflicts in allowance, follow-up and urgent totals also reconciled to the same verified ledger; Hebrew remains untouched.",
+  "entries": [
+    {
+      "route": "why-us",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/why-us.md",
+      "format": "raw-markdown",
+      "sha256": "ec698eb80df0fe573dcca40e0cfe8fdbb9da5037ff001621eaa99318ca8a41e9"
+    },
+    {
+      "route": "pricing",
+      "path": "revisions/pricing-matrix-2026-10-26/pricing.md",
+      "format": "raw-markdown",
+      "sha256": "41ffe67ec80f33cbd0169ea3d635982bab3d508422234d974d4f1b23ed7b868f"
+    },
+    {
+      "route": "faq",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/faq.md",
+      "format": "raw-markdown",
+      "sha256": "73e4c55aaed36b4b2435ff021a9f3137c1bf121378de0c39bcb26195e7d0ac26"
+    },
+    {
+      "route": "what-happens-during-the-visit",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/what-happens-during-the-visit.md",
+      "format": "raw-markdown",
+      "sha256": "c4c1ca49a349dc7032a8d472d2c436de5ef0021b2aacb40e9ee1f8d62a3bbf57"
+    },
+    {
+      "route": "index",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/index.md",
+      "format": "raw-markdown",
+      "sha256": "53d563f17fde96f3e04cbe802d120e740d8971fe6acd8eaa6f10acdd2f19ab71"
+    },
+    {
+      "route": "separation-divorce",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/separation-divorce.md",
+      "format": "raw-markdown",
+      "sha256": "df74cba5df8490529efd4989ec52b28beae7c9afac6686d63f37d2777f9d2b3d"
+    },
+    {
+      "route": "business-dispute",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/business-dispute.md",
+      "format": "raw-markdown",
+      "sha256": "f2fb0c73b4d27f059a6cf5a063a2afc1e155fdb742a9566464e5ff58ddaeff51"
+    },
+    {
+      "route": "they-know-something",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/they-know-something.md",
+      "format": "raw-markdown",
+      "sha256": "935643f8feb3d89ed57c492ad4721fe96da46e847bf57a2e8bfc9f780707eec3"
+    },
+    {
+      "route": "inheritance-clash",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/inheritance-clash.md",
+      "format": "raw-markdown",
+      "sha256": "ba28e2e6127296ead5947367938330310204fe8d76c5c9039e6d10d30f27b89a"
+    },
+    {
+      "route": "attorneys",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/attorneys.md",
+      "format": "raw-markdown",
+      "sha256": "c8008c950b01eb6d90a7ade412cca44ad8951becca4cc7497cf1dc9a15e9276a"
+    },
+    {
+      "route": "private-exposure-assessment",
+      "path": "revisions/pricing-matrix-2026-10-26/sources/private-exposure-assessment.md",
+      "format": "raw-markdown",
+      "sha256": "55073ee9ebee65b8561325bfad63a209eb01bc67d08fc2c7d5f145fd7e604d62"
+    }
+  ]
+}

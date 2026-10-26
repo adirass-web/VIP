@@ -20,9 +20,9 @@ for (const page of pages()) {
   assert(!/(?:3,500|38,000|"price": "3500"|"price": "38000"|No cloud processing|No cloud ·|No logs ·|Book an assessment|Portrait alt text:|Portrait caption:|\{#)/i.test(html), page.route + ': stale claim or editorial annotation');
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   const offers = schema['@graph'][0].hasOfferCatalog.itemListElement;
-  assert(offers[0].price === '3600' && offers[1].price === '14000', 'Fixed schema prices');
-  assert(offers[2].price === undefined && offers[2].priceSpecification.minPrice === 42000, 'Inner Circle must retain starting-price meaning');
-  assert(offers[3].price === undefined, 'Bespoke has no public fixed price');
+  assert(offers[0].price === '4000' && offers[1].price === '32000', 'Assessment and Personal Shield schema prices');
+  assert(offers[2].price === '45000' && offers[3].price === '70000', 'Two-person and Inner Circle schema prices');
+  assert(offers[4].price === undefined, 'Bespoke has no public fixed price');
 }
 for (const legal of ['terms', 'privacy']) assert(readText('_site/' + legal + '.html').includes('<html lang="he" dir="rtl">'), legal + ': preserve Hebrew legal document');
 console.log('ENGLISH PUBLICATION AND ACCEPTED SOURCE CONTRACT VERIFIED');

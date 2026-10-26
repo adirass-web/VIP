@@ -18,6 +18,7 @@ const amendments = [
   {path:'approved/acceptance-amendment-2026-10-13-batch-c.json', routes:['faq','what-happens-during-the-visit']},
   {path:'approved/acceptance-amendment-2026-10-14-marketing-02.json', routes:['index','why-us','pricing']},
   {path:'approved/acceptance-amendment-2026-10-15-pricing-04.json', routes:['pricing']},
+  {path:'approved/acceptance-amendment-2026-10-26-pricing-matrix.json', routes:['index','why-us','pricing','faq','private-exposure-assessment','what-happens-during-the-visit','separation-divorce','business-dispute','they-know-something','inheritance-clash','attorneys']},
 ].map(record=>({...record, manifest:JSON.parse(read(project+record.path))}));
 const amendedSources = new Map(amendments.flatMap(record=>record.manifest.entries.map(entry=>[entry.route,entry])));
 // Historical tests protect the approvals before marketing-02, regardless of
@@ -33,7 +34,7 @@ function assertAuthority() {
     const routes=amendment.manifest.entries.map(entry=>entry.route).sort();
     if (JSON.stringify(routes)!==JSON.stringify([...amendment.routes].sort())) throw Error('Unexpected copy amendment scope: '+amendment.path);
     for (const entry of amendment.manifest.entries) {
-      if (entry.format !== undefined && (entry.format !== 'raw-markdown' || !['approved/acceptance-amendment-2026-10-14-marketing-02.json','approved/acceptance-amendment-2026-10-15-pricing-04.json'].includes(amendment.path))) throw Error('Unexpected source format: ' + entry.path);
+      if (entry.format !== undefined && (entry.format !== 'raw-markdown' || !['approved/acceptance-amendment-2026-10-14-marketing-02.json','approved/acceptance-amendment-2026-10-15-pricing-04.json','approved/acceptance-amendment-2026-10-26-pricing-matrix.json'].includes(amendment.path))) throw Error('Unexpected source format: ' + entry.path);
       if (hash(sourceFor(entry)) !== entry.sha256) throw Error('Approved amendment changed: ' + entry.path);
     }
     if (amendment.manifest.visualCopy) {
@@ -85,7 +86,7 @@ function getPage(sourceName, route, {historical = false} = {}) {
   body = body.replace(/\n\*\*Request a private conversation: WhatsApp \/ Signal\*\*\s*$/, '');
   const parts = body.split(/\n(?=## )/);
   const hero = parts.shift();
-  return { sourceName, route, source, metadata, hero, sections: parts, marketing: amended?.format === 'raw-markdown', pricing04: amended?.path === 'revisions/pricing-04/pricing.md' };
+  return { sourceName, route, source, metadata, hero, sections: parts, marketing: route === 'index' || route === 'why-us', pricing04: amended?.path === 'revisions/pricing-04/pricing.md', pricingMatrix: amended?.path === 'revisions/pricing-matrix-2026-10-26/pricing.md' };
 }
 const pages = (options = {}) => mapping.map(args => getPage(...args, options));
 function renderMarkdown(markdown) {
@@ -103,6 +104,7 @@ function renderTables(html, sectionId) {
   });
 }
 function renderPage(page, {presentation = true} = {}) {
+  if (presentation && page.pricingMatrix) return require('./pricing-matrix-layout.cjs').render(page);
   if (presentation && page.pricing04) return require('./pricing-layout.cjs').render(page);
   const { route, metadata } = page;
   const permalink = route === 'index' ? '/en/index.html' : '/en/' + route + '.html';
@@ -133,7 +135,7 @@ function renderPage(page, {presentation = true} = {}) {
       content = content.replace(/(<h3>[\s\S]*?<\/h3>\s*<p>[\s\S]*?<\/p>)/g, '<article class="situation-card">$1</article>');
       content = content.replace(/(<article[\s\S]*<\/article>)/, '<div class="situation-pair">$1</div>');
     }
-    const offer = content.includes('₪3,600 including VAT</strong>') && content.includes('Typically four hours');
+    const offer = content.includes('₪4,000 including VAT</strong>') && content.includes('Typically four hours');
     const classes = ['copy-section', route === 'faq' && !contact ? 'faq' : '', contact ? 'copy-contact' : '', offer ? 'copy-offer' : ''].filter(Boolean).join(' ');
     if (route === 'private-exposure-assessment' && contact) content = content.replace(/<p><a href="#contact">Request a private conversation<\/a><\/p>\s*$/, '');
     html += `<section class="${classes}" id="${id}" aria-labelledby="${id}-heading"><div class="wrap copy-body"><h2 id="${id}-heading">${escape(label)}</h2>\n`;

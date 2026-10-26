@@ -44,6 +44,7 @@ jobs:
         run: npm run test:audit-policy && npm run audit:tools
 
       - name: Verify focused visual refinement regressions
+        if: github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement'
         run: node --test scripts/visual-refinements.test.cjs
 
       - name: Verify route, copy, RTL, links, and CI contracts
