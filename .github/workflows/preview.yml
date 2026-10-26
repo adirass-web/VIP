@@ -16,7 +16,7 @@ jobs:
   preview:
     if: github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'codex/toza-approved-copy-preview' || github.event.pull_request.head.ref == 'codex/toza-trust-process-refinement' || github.event.pull_request.head.ref == 'codex/toza-marketing-02-release' || github.event.pull_request.head.ref == 'codex/toza-pricing-04-release' || github.event.pull_request.head.ref == 'codex/pricing-matrix' || github.event.pull_request.head.ref == 'codex/toza-pricing-icons')
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
