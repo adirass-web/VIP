@@ -134,8 +134,8 @@ test('pricing notes, credit conditions, deep links and print retain access',asyn
   const all=page.locator('main details');await expect(all).toHaveCount(1);
   const other=page.locator('#other-pricing-and-credit');await expect(other).not.toHaveAttribute('open','');
   await expect(page.locator('.pricing-notes')).toContainText('within 30 days of Assessment completion');
-  await expect(other).toContainText('Booking alone does not qualify');
   await other.locator('summary').focus();await page.keyboard.press('Enter');await expect(other).toHaveAttribute('open','');
+  await expect(other).toContainText('Booking alone does not qualify');
   await page.goto(siteUrl+'/en/pricing.html#other-pricing-and-credit');await expect(other).toHaveAttribute('open','');
   const before=await all.evaluateAll(items=>items.map(i=>i.open));
   await page.evaluate(()=>dispatchEvent(new Event('beforeprint')));expect(await all.evaluateAll(items=>items.every(i=>i.open))).toBe(true);
@@ -233,7 +233,8 @@ test('situation pages keep material controls and separate purchases with their s
 for(const route of ['index','pricing'])test('short-screen contact and responsive narrative: '+route,async({page})=>{
   await page.setViewportSize({width:390,height:667});
   await page.goto(siteUrl+'/en/'+(route==='index'?'':route+'.html'));
-  await page.locator('main a[href="#contact"]').first().click();
+  if(route==='pricing') await page.locator('.pricing-contact').scrollIntoViewIfNeeded();
+  else await page.locator('main a[href="#contact"]').first().click();
   const channels=page.locator(route==='pricing'?'.pricing-contact .contact-channels a':'#contact .contact-channels a');
   await expect(channels).toHaveCount(2);
   for(const channel of await channels.all()){
@@ -320,4 +321,3 @@ test('Process anchors, short-screen contact, print and CSS scope remain accessib
   await page.goto(siteUrl+'/en/why-us.html');
   await expect(page.locator('link[href*="process-stages.css"]')).toHaveCount(0);
 });
-
