@@ -47,7 +47,7 @@ function render(page) {
   const devicesIcon='<svg class="matrix-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="3" width="15" height="13" rx="2"/><path d="M2 13h15M7 20h5m-2-4v4"/><rect x="17" y="8" width="5" height="12" rx="1"/><path d="M19 17h1"/></svg>';
   table=table.replace('<th scope="row">People</th>',`<th scope="row"><span class="matrix-row-label">${peopleIcon}<span>People</span></span></th>`);
   table=table.replace('<th scope="row">Everyday devices, up to</th>',`<th scope="row"><span class="matrix-row-label">${devicesIcon}<span>Everyday devices, up to</span></span></th>`);
-  table=table.replace(/<td>—<\/td>/,'<td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>');
+  table=table.replace(/<td>—<\/td>/g,'<td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td>');
   table=table.replace(/<td>✓<\/td>/g,'<td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td>');
   const sourceNames=apps.source.split('\n').filter(line=>line.startsWith('- ')).map(line=>line.slice(2).trim());
   if (sourceNames.length!==brands.length || sourceNames.some((name,i)=>name!==brands[i].name)) throw Error('Unapproved brand icon list');
