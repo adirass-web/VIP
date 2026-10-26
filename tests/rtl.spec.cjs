@@ -200,7 +200,9 @@ test('pricing exposes separate Assessment, Shield matrix and app examples',async
   await expect(matrix).toContainText('12, pooled');
   await expect(page.locator('.shared-inclusions')).toContainText('One home network and router');
   await expect(page.locator('.brand-list li')).toHaveCount(12);
-  await expect(page.locator('.brand-credit a')).toHaveAttribute('href','https://github.com/simple-icons/simple-icons');
+  await expect(page.locator('.brand-credit')).toHaveCount(0);
+  await expect(matrix.locator('tbody tr').nth(0).locator('.matrix-row-icon')).toHaveAttribute('aria-hidden','true');
+  await expect(matrix.locator('tbody tr').nth(1).locator('.matrix-row-icon')).toHaveAttribute('aria-hidden','true');
   await expect(page.locator('.pricing-contact .contact-channels a')).toHaveCount(2);
   await noOverflow(page);
 });
